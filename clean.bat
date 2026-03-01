@@ -1,4 +1,4 @@
-del /S /Q *.aux *.pytxcode *.thm *.log *.out *.toc *.lof *.lot *.nav *.snm *.synctex.gz *.bbl *.blg *.fls *.aux *.fdb_latexmk
+del /S /Q *.aux *.pytxcode *.thm *.log *.out *.toc *.lof *.lot *.nav *.snm *.synctex.gz *.bbl *.blg *.fls *.aux *.xsim *.fdb_latexmk
 
 @echo off
 setlocal enabledelayedexpansion
