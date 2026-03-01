@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.12)  1 MAR 2026 21:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.12)  1 MAR 2026 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"d:/--- LYCEE ---/ENSEIGNEMENT_G/lvh/docs/CIEL/C107-Integration/tp/C107-TP1-integration_correction.tex"
-(d:/--- LYCEE ---/ENSEIGNEMENT_G/lvh/docs/CIEL/C107-Integration/tp/C107-TP1-integration_correction.tex
+**"d:/--- LYCEE ---/ENSEIGNEMENT_G/lvh/docs/CIEL/C107-Integration/tp/C107-TP2-integration_correction.tex"
+(d:/--- LYCEE ---/ENSEIGNEMENT_G/lvh/docs/CIEL/C107-Integration/tp/C107-TP2-integration_correction.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
@@ -1203,7 +1203,7 @@ Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
 \c@currfiledepth=\count524
 )
 \pytx@codefile=\write5
-\openout5 = `C107-TP1-integration_correction.pytxcode'.
+\openout5 = `C107-TP2-integration_correction.pytxcode'.
 
 \c@pytx@FancyVerbLineTemp=\count525
 \c@pytx@py@default@default=\count526
@@ -1637,8 +1637,8 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (C107-TP1-integration_correction.aux)
-\openout1 = `C107-TP1-integration_correction.aux'.
+ (C107-TP2-integration_correction.aux)
+\openout1 = `C107-TP2-integration_correction.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -1731,14 +1731,14 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 42.
-(C107-TP1-integration_correction.out) (C107-TP1-integration_correction.out)
+(C107-TP2-integration_correction.out) (C107-TP2-integration_correction.out)
 \@outlinefile=\write7
-\openout7 = `C107-TP1-integration_correction.out'.
+\openout7 = `C107-TP2-integration_correction.out'.
 
 Package newfloat Info: Trying Plan B...
 Package newfloat Info: `float' package detected.
 
-No file pythontex-files-C107-TP1-integration_correction/C107-TP1-integration_correction.pytxmcr.
+No file pythontex-files-C107-TP2-integration_correction/C107-TP2-integration_correction.pytxmcr.
 Run PythonTeX to create it.
 (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1759,37 +1759,42 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
  (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (2.33264pt too wide) in paragraph at lines 113--113
+ [][]$\OML/cmm/m/it/10 signe f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$ 
+ []
+
+
 
 [1{C:/Users/thoma/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]
 \tf@thm=\write8
-\openout8 = `C107-TP1-integration_correction.thm'.
+\openout8 = `C107-TP2-integration_correction.thm'.
 
 
 
 [2] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
-(C107-TP1-integration_correction.aux)
+(C107-TP2-integration_correction.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `C107-TP1-integration_correction.out' has not changed.
+Package rerunfilecheck Info: File `C107-TP2-integration_correction.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 82438 strings out of 473530
- 1973312 string characters out of 5714794
- 2710626 words of memory out of 5000000
- 104530 multiletter control sequences out of 15000+600000
- 564686 words of font info for 50 fonts, out of 8000000 for 9000
+ 82743 strings out of 473530
+ 1978483 string characters out of 5714794
+ 2709626 words of memory out of 5000000
+ 104835 multiletter control sequences out of 15000+600000
+ 564874 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 147i,11n,149p,2862b,1240s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on C107-TP1-integration_correction.pdf (2 pages, 142105 bytes).
+ 147i,11n,149p,2862b,1220s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1000.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\thoma\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/thoma/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on C107-TP2-integration_correction.pdf (2 pages, 147074 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
