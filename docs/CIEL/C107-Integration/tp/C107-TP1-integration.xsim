@@ -1,0 +1,42 @@
+\providecommand\numberofexercises{}
+\XSIM{solution-body}{exercise-=={On peut conjecturer que lorsque $n$ tend vers l'infini, les valeurs de $S_{inf}$ et $S_{sup}$ convergent vers la même valeur, qui correspond à l'aire sous la courbe de $f$ entre $a$ et $b$. En d'autres termes, on peut conjecturer que: $$\lim _{n \to +\infty } S_{inf} = \lim _{n \to +\infty } S_{sup} = \text {Aire sous la courbe de } f \text { entre } a \text { et } b$$}}
+\XSIM{exercise-body}{}
+\XSIM{goal}{exercise}{points}{0}
+\XSIM{totalgoal}{points}{0}
+\XSIM{goal}{exercise}{bonus-points}{0}
+\XSIM{totalgoal}{bonus-points}{0}
+\XSIM{order}{}
+\XSIM{use}{}
+\XSIM{use!}{}
+\XSIM{used}{}
+\XSIM{print}{}
+\XSIM{print!}{}
+\XSIM{printed}{}
+\XSIM{total-number}{0}
+\XSIM{exercise}{0}
+\XSIM{types}{exercise}
+\XSIM{idtypes}{}
+\XSIM{collections}{}
+\XSIM{collection:all exercises}{}
+\setcounter{totalexerciseinall exercises}{0}
+\XSIM{id}{}
+\XSIM{ID}{}
+\XSIM{counter}{}
+\XSIM{counter-value}{}
+\XSIM{solution}{}
+\XSIM{chapter-value}{}
+\XSIM{chapter}{}
+\XSIM{section-value}{}
+\XSIM{section}{}
+\XSIM{sectioning}{}
+\XSIM{subtitle}{}
+\XSIM{points}{}
+\XSIM{bonus-points}{}
+\XSIM{page-value}{}
+\XSIM{page}{}
+\XSIM{tags}{}
+\XSIM{topics}{}
+\XSIM{userpoints}{}
+\XSIM{bodypoints}{}
+\XSIM{userbonus-points}{}
+\XSIM{bodybonus-points}{}
