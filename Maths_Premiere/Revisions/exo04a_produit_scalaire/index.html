@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://thomasricart.github.io/Maths_Premiere/Revisions/exo03b_derivation/">
+        <link rel="canonical" href="https://thomasricart.github.io/Maths_Premiere/Revisions/exo04a_produit_scalaire/">
       
       
-        <link rel="prev" href="../exo03a_derivation_correction/">
+        <link rel="prev" href="../exo03b_derivation_correction/">
       
       
-        <link rel="next" href="../exo03b_derivation_correction/">
+        <link rel="next" href="../exo04a_produit_scalaire_correction/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Exercice 3 : Dérivation et Étude de fonctions - Cours de M. Ricart</title>
+        <title>Exercice : Vecteurs et Produit Scalaire - Cours de M. Ricart</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-3-derivation-et-etude-de-fonctions" class="md-skip">
+        <a href="#exercice-vecteurs-et-produit-scalaire" class="md-skip">
           Aller au contenu
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice 3 : Dérivation et Étude de fonctions
+              Exercice : Vecteurs et Produit Scalaire
             
           </span>
         </div>
@@ -1575,10 +1575,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#partie-a-calcul-de-derivees" class="md-nav__link">
+  <a href="#partie-a-calculs-en-base-orthonormee" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie A : Calcul de dérivées
+        Partie A : Calculs en base orthonormée
       
     </span>
   </a>
@@ -1586,10 +1586,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#partie-b-etude-complete" class="md-nav__link">
+  <a href="#partie-b-projete-orthogonal-et-geometrie" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie B : Étude complète
+        Partie B : Projeté orthogonal et Géométrie
       
     </span>
   </a>
@@ -1597,10 +1597,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#partie-c-le-plaisir-de-loptimisation" class="md-nav__link">
+  <a href="#partie-c-application-theoreme-dal-kashi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie C : Le plaisir de l'optimisation
+        Partie C : Application (Théorème d'Al-Kashi)
       
     </span>
   </a>
@@ -1629,56 +1629,32 @@
 
 
 
-<h1 id="exercice-3-derivation-et-etude-de-fonctions">Exercice 3 : Dérivation et Étude de fonctions</h1>
+<h1 id="exercice-vecteurs-et-produit-scalaire">Exercice : Vecteurs et Produit Scalaire</h1>
 <p><strong>Niveau :</strong> Première Spécialité Mathématiques<br />
-<strong>Thème :</strong> Formules de dérivation, variations, tangentes et optimisation.</p>
+<strong>Thème :</strong> Calculs de produit scalaire, orthogonalité et théorème d'Al-Kashi.</p>
 <hr />
 <h2 id="enonce">Énoncé</h2>
-<h3 id="partie-a-calcul-de-derivees">Partie A : Calcul de dérivées</h3>
-<p>Calculer la dérivée <span class="arithmatex">\(f'(x)\)</span> de chacune des fonctions suivantes sur l'intervalle <span class="arithmatex">\(I\)</span> donné en utilisant les formules du cours :</p>
+<h3 id="partie-a-calculs-en-base-orthonormee">Partie A : Calculs en base orthonormée</h3>
+<p>Dans un repère orthonormé <span class="arithmatex">\((O; \vec{i}, \vec{j})\)</span>, on considère les points :
+<span class="arithmatex">\(A(-2 ; 1)\)</span>, <span class="arithmatex">\(B(4 ; 3)\)</span> et <span class="arithmatex">\(C(1 ; 5)\)</span>.</p>
 <ol>
-<li>
-<p><strong>Produit (<span class="arithmatex">\(u \cdot v\)</span>)</strong> : <span class="arithmatex">\(f(x) = (2x - 5)(x^2 + 3x)\)</span> sur <span class="arithmatex">\(I = \mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p><strong>Puissance (<span class="arithmatex">\(u^n\)</span>)</strong> : <span class="arithmatex">\(g(x) = (3x^2 - 4x + 1)^3\)</span> sur <span class="arithmatex">\(I = \mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p><strong>Inverse (<span class="arithmatex">\(1/u\)</span>)</strong> : <span class="arithmatex">\(h(x) = \frac{1}{x^2 + 4}\)</span> sur <span class="arithmatex">\(I = \mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p><strong>Somme et inverse</strong> : <span class="arithmatex">\(k(x) = x^2 + \frac{1}{2x + 1}\)</span> sur <span class="arithmatex">\(I = ]-0,5 ; +\infty[\)</span>.</p>
-</li>
+<li>Calculer les coordonnées des vecteurs <span class="arithmatex">\(\vec{AB}\)</span> et <span class="arithmatex">\(\vec{AC}\)</span>.</li>
+<li>Calculer le produit scalaire <span class="arithmatex">\(\vec{AB} \cdot \vec{AC}\)</span>.</li>
+<li>En déduire la valeur du cosinus de l'angle <span class="arithmatex">\(\widehat{BAC}\)</span>, puis une valeur approchée de l'angle au degré près.</li>
+<li>Le triangle <span class="arithmatex">\(ABC\)</span> est-il rectangle en <span class="arithmatex">\(A\)</span> ? Justifier.</li>
 </ol>
-<h3 id="partie-b-etude-complete">Partie B : Étude complète</h3>
-<p>Soit la fonction <span class="arithmatex">\(f\)</span> définie sur <span class="arithmatex">\(\mathbb{R}\)</span> par : <span class="arithmatex">\(f(x) = (x - 2)(x^2 + 2x + 4)\)</span>.</p>
+<h3 id="partie-b-projete-orthogonal-et-geometrie">Partie B : Projeté orthogonal et Géométrie</h3>
+<p>Soit <span class="arithmatex">\(ABCD\)</span> un rectangle tel que <span class="arithmatex">\(AB = 8\)</span> et <span class="arithmatex">\(AD = 4\)</span>. Soit <span class="arithmatex">\(I\)</span> le milieu du segment <span class="arithmatex">\([AB]\)</span>.</p>
 <ol>
-<li>
-<p>Déterminer la dérivée <span class="arithmatex">\(f'(x)\)</span> en utilisant la formule du produit <span class="arithmatex">\((u \cdot v)\)</span>.</p>
-</li>
-<li>
-<p>Développer l'expression de <span class="arithmatex">\(f(x)\)</span>, puis calculer à nouveau la dérivée pour vérifier votre résultat précédent.</p>
-</li>
-<li>
-<p>Étudier le signe de <span class="arithmatex">\(f'(x)\)</span> et dresser le tableau de variations complet de <span class="arithmatex">\(f\)</span> sur <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p>Déterminer l'équation de la tangente <span class="arithmatex">\((T)\)</span> à la courbe représentative de <span class="arithmatex">\(f\)</span> au point d'abscisse <span class="arithmatex">\(1\)</span>.</p>
-</li>
+<li>Exprimer le vecteur <span class="arithmatex">\(\vec{DI}\)</span> en fonction de <span class="arithmatex">\(\vec{DA}\)</span> et <span class="arithmatex">\(\vec{AB}\)</span>.</li>
+<li>Calculer le produit scalaire <span class="arithmatex">\(\vec{AC} \cdot \vec{AB}\)</span> en utilisant la projection orthogonale.</li>
+<li>Calculer <span class="arithmatex">\(\vec{DI} \cdot \vec{AC}\)</span>. Les droites <span class="arithmatex">\((DI)\)</span> et <span class="arithmatex">\((AC)\)</span> sont-elles perpendiculaires ?</li>
 </ol>
-<h3 id="partie-c-le-plaisir-de-loptimisation">Partie C : Le plaisir de l'optimisation</h3>
-<p>Un agriculteur souhaite clôturer un terrain rectangulaire adossé à un mur droit (il n'y a donc pas besoin de clôture le long du mur). Il dispose de <span class="arithmatex">\(40\)</span> mètres de grillage.
-On note <span class="arithmatex">\(x\)</span> la largeur du terrain (perpendiculaire au mur) et <span class="arithmatex">\(y\)</span> sa longueur (parallèle au mur).</p>
+<h3 id="partie-c-application-theoreme-dal-kashi">Partie C : Application (Théorème d'Al-Kashi)</h3>
+<p>Soit un triangle <span class="arithmatex">\(EFG\)</span> tel que <span class="arithmatex">\(EF = 5\)</span>, <span class="arithmatex">\(EG = 8\)</span> et <span class="arithmatex">\(\widehat{FEG} = 60^\circ\)</span>.</p>
 <ol>
-<li>
-<p>Justifier que la longueur <span class="arithmatex">\(y\)</span> s'exprime en fonction de <span class="arithmatex">\(x\)</span> par <span class="arithmatex">\(y = 40 - 2x\)</span>.</p>
-</li>
-<li>
-<p>Montrer que l'aire du terrain est donnée par la fonction <span class="arithmatex">\(A(x) = -2x^2 + 40x\)</span> pour <span class="arithmatex">\(x \in [0 ; 20]\)</span>.</p>
-</li>
-<li>
-<p>En étudiant les variations de la fonction <span class="arithmatex">\(A\)</span> (calcul de la dérivée), déterminer la valeur de <span class="arithmatex">\(x\)</span> pour laquelle l'aire du terrain est maximale. Quelle est alors cette aire ?</p>
-</li>
+<li>Calculer la longueur exacte du côté <span class="arithmatex">\(FG\)</span>.</li>
+<li>Déterminer la valeur du produit scalaire <span class="arithmatex">\(\vec{EF} \cdot \vec{EG}\)</span>.</li>
 </ol>
 
 

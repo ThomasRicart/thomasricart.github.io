@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://thomasricart.github.io/Maths_Premiere/Revisions/exo03b_derivation/">
+        <link rel="canonical" href="https://thomasricart.github.io/Maths_Premiere/Revisions/exo04b_produit_scalaire_correction/">
       
       
-        <link rel="prev" href="../exo03a_derivation_correction/">
+        <link rel="prev" href="../exo04b_produit_scalaire/">
       
       
-        <link rel="next" href="../exo03b_derivation_correction/">
+        <link rel="next" href="../../../NSI_Premiere/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Exercice 3 : Dérivation et Étude de fonctions - Cours de M. Ricart</title>
+        <title>Exercice : Géométrie analytique et Produit Scalaire - Cours de M. Ricart</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-3-derivation-et-etude-de-fonctions" class="md-skip">
+        <a href="#exercice-geometrie-analytique-et-produit-scalaire" class="md-skip">
           Aller au contenu
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice 3 : Dérivation et Étude de fonctions
+              Exercice : Géométrie analytique et Produit Scalaire
             
           </span>
         </div>
@@ -1571,45 +1571,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Énoncé">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#partie-a-calcul-de-derivees" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Partie A : Calcul de dérivées
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#partie-b-etude-complete" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Partie B : Étude complète
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#partie-c-le-plaisir-de-loptimisation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Partie C : Le plaisir de l'optimisation
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1629,57 +1590,126 @@
 
 
 
-<h1 id="exercice-3-derivation-et-etude-de-fonctions">Exercice 3 : Dérivation et Étude de fonctions</h1>
+<h1 id="exercice-geometrie-analytique-et-produit-scalaire">Exercice : Géométrie analytique et Produit Scalaire</h1>
 <p><strong>Niveau :</strong> Première Spécialité Mathématiques<br />
-<strong>Thème :</strong> Formules de dérivation, variations, tangentes et optimisation.</p>
+<strong>Thème :</strong> Coordonnées, mesure d'angles, orthogonalité et projections.</p>
 <hr />
 <h2 id="enonce">Énoncé</h2>
-<h3 id="partie-a-calcul-de-derivees">Partie A : Calcul de dérivées</h3>
-<p>Calculer la dérivée <span class="arithmatex">\(f'(x)\)</span> de chacune des fonctions suivantes sur l'intervalle <span class="arithmatex">\(I\)</span> donné en utilisant les formules du cours :</p>
+<p><strong>Exercice 1: Calculer un produit scalaire avec un angle</strong></p>
+<p>On considère un triangle <span class="arithmatex">\(ABC\)</span> tel que <span class="arithmatex">\(AB = 5\)</span>, <span class="arithmatex">\(AC = 7\)</span> et l'angle <span class="arithmatex">\(\widehat{BAC} = 60^\circ\)</span>.</p>
 <ol>
-<li>
-<p><strong>Produit (<span class="arithmatex">\(u \cdot v\)</span>)</strong> : <span class="arithmatex">\(f(x) = (2x - 5)(x^2 + 3x)\)</span> sur <span class="arithmatex">\(I = \mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p><strong>Puissance (<span class="arithmatex">\(u^n\)</span>)</strong> : <span class="arithmatex">\(g(x) = (3x^2 - 4x + 1)^3\)</span> sur <span class="arithmatex">\(I = \mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p><strong>Inverse (<span class="arithmatex">\(1/u\)</span>)</strong> : <span class="arithmatex">\(h(x) = \frac{1}{x^2 + 4}\)</span> sur <span class="arithmatex">\(I = \mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p><strong>Somme et inverse</strong> : <span class="arithmatex">\(k(x) = x^2 + \frac{1}{2x + 1}\)</span> sur <span class="arithmatex">\(I = ]-0,5 ; +\infty[\)</span>.</p>
-</li>
+<li>Calculer le produit scalaire <span class="arithmatex">\(\overrightarrow{AB} \cdot \overrightarrow{AC}\)</span>.</li>
 </ol>
-<h3 id="partie-b-etude-complete">Partie B : Étude complète</h3>
-<p>Soit la fonction <span class="arithmatex">\(f\)</span> définie sur <span class="arithmatex">\(\mathbb{R}\)</span> par : <span class="arithmatex">\(f(x) = (x - 2)(x^2 + 2x + 4)\)</span>.</p>
+<p><em>Correction :</em>
+<span class="arithmatex">\(\overrightarrow{AB} \cdot \overrightarrow{AC} = 5 \times 7 \times \cos(60^\circ) = 35 \times \frac{1}{2} = 17.5\)</span></p>
 <ol>
-<li>
-<p>Déterminer la dérivée <span class="arithmatex">\(f'(x)\)</span> en utilisant la formule du produit <span class="arithmatex">\((u \cdot v)\)</span>.</p>
-</li>
-<li>
-<p>Développer l'expression de <span class="arithmatex">\(f(x)\)</span>, puis calculer à nouveau la dérivée pour vérifier votre résultat précédent.</p>
-</li>
-<li>
-<p>Étudier le signe de <span class="arithmatex">\(f'(x)\)</span> et dresser le tableau de variations complet de <span class="arithmatex">\(f\)</span> sur <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
-</li>
-<li>
-<p>Déterminer l'équation de la tangente <span class="arithmatex">\((T)\)</span> à la courbe représentative de <span class="arithmatex">\(f\)</span> au point d'abscisse <span class="arithmatex">\(1\)</span>.</p>
-</li>
+<li>Déterminer la valeur exacte de <span class="arithmatex">\(\cos(\widehat{BAC})\)</span>.</li>
 </ol>
-<h3 id="partie-c-le-plaisir-de-loptimisation">Partie C : Le plaisir de l'optimisation</h3>
-<p>Un agriculteur souhaite clôturer un terrain rectangulaire adossé à un mur droit (il n'y a donc pas besoin de clôture le long du mur). Il dispose de <span class="arithmatex">\(40\)</span> mètres de grillage.
-On note <span class="arithmatex">\(x\)</span> la largeur du terrain (perpendiculaire au mur) et <span class="arithmatex">\(y\)</span> sa longueur (parallèle au mur).</p>
+<p><em>Correction :</em>
+<span class="arithmatex">\(\cos(\widehat{BAC}) = \dfrac{\overrightarrow{AB} \cdot \overrightarrow{AC}}{||\overrightarrow{AB}|| \times ||\overrightarrow{AC}||}\)</span></p>
+<p>Calculons les normes :<br />
+<span class="arithmatex">\(||\overrightarrow{AB}|| = \sqrt{5^2} = 5\)</span><br />
+<span class="arithmatex">\(||\overrightarrow{AC}|| = \sqrt{7^2} = 7\)</span>   </p>
+<p><span class="arithmatex">\(\cos(\widehat{BAC}) = \dfrac{17.5}{5 \times 7} = \dfrac{17.5}{35} = \dfrac{1}{2}\)</span></p>
 <ol>
-<li>
-<p>Justifier que la longueur <span class="arithmatex">\(y\)</span> s'exprime en fonction de <span class="arithmatex">\(x\)</span> par <span class="arithmatex">\(y = 40 - 2x\)</span>.</p>
-</li>
-<li>
-<p>Montrer que l'aire du terrain est donnée par la fonction <span class="arithmatex">\(A(x) = -2x^2 + 40x\)</span> pour <span class="arithmatex">\(x \in [0 ; 20]\)</span>.</p>
-</li>
-<li>
-<p>En étudiant les variations de la fonction <span class="arithmatex">\(A\)</span> (calcul de la dérivée), déterminer la valeur de <span class="arithmatex">\(x\)</span> pour laquelle l'aire du terrain est maximale. Quelle est alors cette aire ?</p>
-</li>
+<li>En déduire une mesure de l'angle <span class="arithmatex">\(\widehat{BAC}\)</span> arrondie au dixième de degré.</li>
 </ol>
+<p><span class="arithmatex">\(\widehat{BAC} = \arccos\left(\dfrac{1}{2}\right) = 60^\circ\)</span></p>
+<hr />
+<p><strong>Exercice 2: Produit scalaire et géométrie analytique</strong></p>
+<p>On considère un repère orthonormé <span class="arithmatex">\((O; \overrightarrow{i}, \overrightarrow{j})\)</span> et les points suivants :
+<span class="arithmatex">\(A(2 ; 3)\)</span>, <span class="arithmatex">\(B(5 ; 7)\)</span> et <span class="arithmatex">\(C(1 ; 2)\)</span>.</p>
+<ol>
+<li>Calculer les coordonnées des vecteurs <span class="arithmatex">\(\overrightarrow{AB}\)</span> et <span class="arithmatex">\(\overrightarrow{AC}\)</span>.</li>
+</ol>
+<p><em>Correction :</em><br />
+<span class="arithmatex">\(\overrightarrow{AB} = (5 - 2 ; 7 - 3) = (3 ; 4)\)</span><br />
+<span class="arithmatex">\(\overrightarrow{AC} = (1 - 2 ; 2 - 3) = (-1 ; -1)\)</span></p>
+<ol>
+<li>Calculer le produit scalaire <span class="arithmatex">\(\overrightarrow{AB} \cdot \overrightarrow{AC}\)</span>.</li>
+</ol>
+<p><span class="arithmatex">\(\overrightarrow{AB} \cdot \overrightarrow{AC} = 3 \times (-1) + 4 \times (-1) = -3 - 4 = -7\)</span></p>
+<ol>
+<li>Déterminer la valeur exacte de <span class="arithmatex">\(\cos(\widehat{BAC})\)</span>.</li>
+</ol>
+<p><span class="arithmatex">\(\cos(\widehat{BAC}) = \dfrac{\overrightarrow{AB} \cdot \overrightarrow{AC}}{||\overrightarrow{AB}|| \times ||\overrightarrow{AC}||}\)</span></p>
+<p>Calculons les normes :<br />
+<span class="arithmatex">\(||\overrightarrow{AB}|| = \sqrt{3^2 + 4^2} = 5\)</span><br />
+<span class="arithmatex">\(||\overrightarrow{AC}|| = \sqrt{(-1)^2 + (-1)^2} = \sqrt{2}\)</span>   </p>
+<p><span class="arithmatex">\(\cos(\widehat{BAC}) = \dfrac{-7}{5 \times \sqrt{2}} = \dfrac{-7}{5\sqrt{2}}\)</span></p>
+<ol>
+<li>En déduire une mesure de l'angle <span class="arithmatex">\(\widehat{BAC}\)</span> arrondie au dixième de degré.</li>
+</ol>
+<p><span class="arithmatex">\(\widehat{BAC} = \arccos\left(\dfrac{-7}{5\sqrt{2}}\right)\)</span>
+Calculons cette valeur :
+<span class="arithmatex">\(\widehat{BAC} \approx \arccos(-0.9899) \approx 170.5^\circ\)</span></p>
+<hr />
+<p><strong>Exercice 3: Produit scalaire et projeté orthogonal</strong></p>
+<p><img alt="alt text" src="../image.png" /></p>
+<ol>
+<li>Calculer le produit scalaire <span class="arithmatex">\(\overrightarrow{BC} \cdot \overrightarrow{BA}\)</span> </li>
+</ol>
+<p><span class="arithmatex">\(\overrightarrow{BC} \cdot \overrightarrow{BA} = \overrightarrow{BC} \cdot \overrightarrow{BH} = ||\overrightarrow{BC}|| \times ||\overrightarrow{BH}|| = 1 \times 2 = 2\)</span></p>
+<p><strong>Exercice 4: Calculs de produits scalaires et applications</strong></p>
+<p>Soit $\overrightarrow{u} $ et <span class="arithmatex">\(\overrightarrow{v}\)</span> deux vecteurs du plan de coordonnées respectives <span class="arithmatex">\((3 ; 4)\)</span> et <span class="arithmatex">\((-2 ; 5)\)</span>.</p>
+<ol>
+<li>Calculer le produit scalaire <span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v}\)</span>.</li>
+</ol>
+<p><em>Correction :</em>
+<span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = 3 \times (-2) + 4 \times 5 = -6 + 20 = 14\)</span></p>
+<ol>
+<li>Calculer les normes de <span class="arithmatex">\(\overrightarrow{u}\)</span> et <span class="arithmatex">\(\overrightarrow{v}\)</span>.</li>
+</ol>
+<p><em>Correction :</em>
+<span class="arithmatex">\(||\overrightarrow{u}|| = \sqrt{3^2 + 4^2} = 5\)</span>  </p>
+<p><span class="arithmatex">\(||\overrightarrow{v}|| = \sqrt{(-2)^2 + 5^2} = \sqrt{4 + 25} = \sqrt{29}\)</span></p>
+<ol>
+<li>Déterminer la valeur exacte de <span class="arithmatex">\(\cos(\widehat{u,v})\)</span></li>
+</ol>
+<p><em>Correction :</em></p>
+<p><span class="arithmatex">\(\cos(\widehat{u,v}) = \dfrac{\overrightarrow{u} \cdot \overrightarrow{v}}{||\overrightarrow{u}|| \times ||\overrightarrow{v}||} = \dfrac{14}{5\sqrt{29}}\)</span></p>
+<ol>
+<li>En déduire une mesure de l'angle <span class="arithmatex">\(\widehat{u,v}\)</span> arrondie au dixième de degré.</li>
+</ol>
+<p><em>Correction :</em></p>
+<p><span class="arithmatex">\(\widehat{(u,v)} = \arccos\left(\dfrac{14}{5\sqrt{29}}\right)\)</span></p>
+<p>Calculons cette valeur :</p>
+<p><span class="arithmatex">\(\widehat{(u,v)} \approx \arccos(0.822) \approx 35.1^\circ\)</span></p>
+<hr />
+<p><strong>Exercice 5: Orthogonalité et produit scalaire</strong></p>
+<p>Dans chaque cas, calculer <span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v}\)</span> en fonction de <span class="arithmatex">\(m\)</span> et déterminer les valeurs de <span class="arithmatex">\(m\)</span> pour lesquelles les vecteurs <span class="arithmatex">\(\overrightarrow{u}\)</span> et <span class="arithmatex">\(\overrightarrow{v}\)</span> sont orthogonaux.</p>
+<ol>
+<li><span class="arithmatex">\(\overrightarrow{u}\left(-5; 2)\right)\)</span> et <span class="arithmatex">\(\overrightarrow{v}\left(m; -2\right)\)</span></li>
+</ol>
+<p><em>Correction :</em></p>
+<p><span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = (-5) \times m + 2 \times (-2) = -5m - 4\)</span></p>
+<p>Pour que les vecteurs soient orthogonaux, il faut que <span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = 0\)</span> :</p>
+<p><span class="arithmatex">\(-5m - 4 = 0 \Rightarrow m = -\frac{4}{5}\)</span>  </p>
+<ol>
+<li><span class="arithmatex">\(\overrightarrow{u}\left(m-4; 2m+1\right)\)</span> et <span class="arithmatex">\(\overrightarrow{v}\left(2m; 3-m\right)\)</span></li>
+</ol>
+<p><em>Correction :</em></p>
+<p><span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = (m-4) \times 2m + (2m+1) \times (3-m)\)</span></p>
+<p><span class="arithmatex">\(= 2m^2 - 8m + 6m + 3 - m^2\)</span></p>
+<p><span class="arithmatex">\(= m^2 - 2m + 3\)</span></p>
+<p>Pour que les vecteurs soient orthogonaux, il faut que <span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = 0\)</span> :</p>
+<p><span class="arithmatex">\(m^2 - 2m + 3 = 0\)</span>  </p>
+<p>Le discriminant de cette équation est <span class="arithmatex">\(\Delta = (-2)^2 - 4 \times 1 \times 3 = 4 - 12 = -8\)</span>, qui est négatif. </p>
+<p>Il n'y a donc pas de solution réelle pour <span class="arithmatex">\(m\)</span>, ce qui signifie que les vecteurs ne sont jamais orthogonaux pour aucune valeur de <span class="arithmatex">\(m\)</span>.</p>
+<ol>
+<li><span class="arithmatex">\(\overrightarrow{u}\left(m; 3-m\right)\)</span> et <span class="arithmatex">\(\overrightarrow{v}\left(2; -m\right)\)</span></li>
+</ol>
+<p><em>Correction :</em></p>
+<p><span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = m \times 2 + (3-m) \times (-m)\)</span></p>
+<p><span class="arithmatex">\(= 2m - 3m + m^2\)</span></p>
+<p><span class="arithmatex">\(= m^2 - m\)</span>     </p>
+<p>Pour que les vecteurs soient orthogonaux, il faut que <span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = 0\)</span> :</p>
+<p><span class="arithmatex">\(m^2 - m = 0 \Rightarrow m(m - 1) = 0\)</span></p>
+<p>Les solutions sont <span class="arithmatex">\(m = 0\)</span> ou <span class="arithmatex">\(m = 1\)</span>.  </p>
+<p>Pour <span class="arithmatex">\(m = 0\)</span>, <span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = 0\)</span> et les vecteurs sont orthogonaux.  </p>
+<p>Pour <span class="arithmatex">\(m = 1\)</span>, <span class="arithmatex">\(\overrightarrow{u} \cdot \overrightarrow{v} = 0\)</span> et les vecteurs sont également orthogonaux.</p>
+<hr />
+<hr />
 
 
 

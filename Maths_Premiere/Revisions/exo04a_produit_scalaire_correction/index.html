@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://thomasricart.github.io/Maths_Premiere/Revisions/exo04_produit_scalaire/">
+        <link rel="canonical" href="https://thomasricart.github.io/Maths_Premiere/Revisions/exo04a_produit_scalaire_correction/">
       
       
-        <link rel="prev" href="../exo03b_derivation_correction/">
+        <link rel="prev" href="../exo04a_produit_scalaire/">
       
       
-        <link rel="next" href="../exo04_produit_scalaire_correction/">
+        <link rel="next" href="../exo04b_produit_scalaire/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Exercice : Vecteurs et Produit Scalaire - Cours de M. Ricart</title>
+        <title>Correction : Vecteurs et Produit Scalaire - Cours de M. Ricart</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-vecteurs-et-produit-scalaire" class="md-skip">
+        <a href="#correction-vecteurs-et-produit-scalaire" class="md-skip">
           Aller au contenu
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice : Vecteurs et Produit Scalaire
+              Correction : Vecteurs et Produit Scalaire
             
           </span>
         </div>
@@ -1563,52 +1563,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#enonce" class="md-nav__link">
+  <a href="#partie-a-repere-orthonorme" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Énoncé
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Énoncé">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#partie-a-calculs-en-base-orthonormee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Partie A : Calculs en base orthonormée
+        Partie A : Repère orthonormé
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#partie-b-projete-orthogonal-et-geometrie" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#partie-b-geometrie-plane" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie B : Projeté orthogonal et Géométrie
+        Partie B : Géométrie plane
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#partie-c-application-theoreme-dal-kashi" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#partie-c-al-kashi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie C : Application (Théorème d'Al-Kashi)
+        Partie C : Al-Kashi
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1629,33 +1612,60 @@
 
 
 
-<h1 id="exercice-vecteurs-et-produit-scalaire">Exercice : Vecteurs et Produit Scalaire</h1>
-<p><strong>Niveau :</strong> Première Spécialité Mathématiques<br />
-<strong>Thème :</strong> Calculs de produit scalaire, orthogonalité et théorème d'Al-Kashi.</p>
+<h1 id="correction-vecteurs-et-produit-scalaire">Correction : Vecteurs et Produit Scalaire</h1>
+<h2 id="partie-a-repere-orthonorme">Partie A : Repère orthonormé</h2>
+<ol>
+<li><strong>Coordonnées :</strong></li>
+</ol>
+<p><span class="arithmatex">\(\vec{AB} = (4 - (-2) ; 3 - 1) = (6 ; 2)\)</span></p>
+<p><span class="arithmatex">\(\vec{AC} = (1 - (-2) ; 5 - 1) = (3 ; 4)\)</span></p>
+<ol>
+<li><strong>Produit scalaire :</strong></li>
+</ol>
+<p><span class="arithmatex">\(\vec{AB} \cdot \vec{AC} = xx' + yy' = 6 \times 3 + 2 \times 4 = 18 + 8 = 26\)</span>.</p>
+<ol>
+<li><strong>Angle <span class="arithmatex">\(\widehat{BAC}\)</span> :</strong></li>
+</ol>
+<p>On sait que <span class="arithmatex">\(\vec{AB} \cdot \vec{AC} = AB \times AC \times \cos(\widehat{BAC})\)</span>.</p>
+<p><span class="arithmatex">\(AB = \sqrt{6^2 + 2^2} = \sqrt{40}\)</span></p>
+<p><span class="arithmatex">\(AC = \sqrt{3^2 + 4^2} = \sqrt{25} = 5\)</span></p>
+<p><span class="arithmatex">\(26 = \sqrt{40} \times 5 \times \cos(\widehat{BAC}) \Rightarrow \cos(\widehat{BAC}) = \frac{26}{5\sqrt{40}} \approx 0,822\)</span>.</p>
+<p>L'angle <span class="arithmatex">\(\widehat{BAC} \approx \arccos(0,822) \approx 35^\circ\)</span>.</p>
+<ol>
+<li><strong>Orthogonalité :</strong></li>
+</ol>
+<p><span class="arithmatex">\(\vec{AB} \cdot \vec{AC} = 26 \neq 0\)</span>, donc les vecteurs ne sont pas orthogonaux. Le triangle n'est pas rectangle en <span class="arithmatex">\(A\)</span>.</p>
 <hr />
-<h2 id="enonce">Énoncé</h2>
-<h3 id="partie-a-calculs-en-base-orthonormee">Partie A : Calculs en base orthonormée</h3>
-<p>Dans un repère orthonormé <span class="arithmatex">\((O; \vec{i}, \vec{j})\)</span>, on considère les points :
-<span class="arithmatex">\(A(-2 ; 1)\)</span>, <span class="arithmatex">\(B(4 ; 3)\)</span> et <span class="arithmatex">\(C(1 ; 5)\)</span>.</p>
+<h2 id="partie-b-geometrie-plane">Partie B : Géométrie plane</h2>
 <ol>
-<li>Calculer les coordonnées des vecteurs <span class="arithmatex">\(\vec{AB}\)</span> et <span class="arithmatex">\(\vec{AC}\)</span>.</li>
-<li>Calculer le produit scalaire <span class="arithmatex">\(\vec{AB} \cdot \vec{AC}\)</span>.</li>
-<li>En déduire la valeur du cosinus de l'angle <span class="arithmatex">\(\widehat{BAC}\)</span>, puis une valeur approchée de l'angle au degré près.</li>
-<li>Le triangle <span class="arithmatex">\(ABC\)</span> est-il rectangle en <span class="arithmatex">\(A\)</span> ? Justifier.</li>
+<li><strong>Relation de Chasles :</strong> </li>
 </ol>
-<h3 id="partie-b-projete-orthogonal-et-geometrie">Partie B : Projeté orthogonal et Géométrie</h3>
-<p>Soit <span class="arithmatex">\(ABCD\)</span> un rectangle tel que <span class="arithmatex">\(AB = 8\)</span> et <span class="arithmatex">\(AD = 4\)</span>. Soit <span class="arithmatex">\(I\)</span> le milieu du segment <span class="arithmatex">\([AB]\)</span>.</p>
+<p><span class="arithmatex">\(\vec{DI} = \vec{DA} + \vec{AI} = \vec{DA} + \frac{1}{2}\vec{AB}\)</span>.</p>
 <ol>
-<li>Exprimer le vecteur <span class="arithmatex">\(\vec{DI}\)</span> en fonction de <span class="arithmatex">\(\vec{DA}\)</span> et <span class="arithmatex">\(\vec{AB}\)</span>.</li>
-<li>Calculer le produit scalaire <span class="arithmatex">\(\vec{AC} \cdot \vec{AB}\)</span> en utilisant la projection orthogonale.</li>
-<li>Calculer <span class="arithmatex">\(\vec{DI} \cdot \vec{AC}\)</span>. Les droites <span class="arithmatex">\((DI)\)</span> et <span class="arithmatex">\((AC)\)</span> sont-elles perpendiculaires ?</li>
+<li><strong>Projection :</strong> </li>
 </ol>
-<h3 id="partie-c-application-theoreme-dal-kashi">Partie C : Application (Théorème d'Al-Kashi)</h3>
-<p>Soit un triangle <span class="arithmatex">\(EFG\)</span> tel que <span class="arithmatex">\(EF = 5\)</span>, <span class="arithmatex">\(EG = 8\)</span> et <span class="arithmatex">\(\widehat{FEG} = 60^\circ\)</span>.</p>
+<p>Pour <span class="arithmatex">\(\vec{AC} \cdot \vec{AB}\)</span>, le projeté orthogonal de <span class="arithmatex">\(C\)</span> sur <span class="arithmatex">\((AB)\)</span> est le point <span class="arithmatex">\(B\)</span>.</p>
+<p>Donc <span class="arithmatex">\(\vec{AC} \cdot \vec{AB} = \vec{AB} \cdot \vec{AB} = AB^2 = 8^2 = 64\)</span>.</p>
 <ol>
-<li>Calculer la longueur exacte du côté <span class="arithmatex">\(FG\)</span>.</li>
-<li>Déterminer la valeur du produit scalaire <span class="arithmatex">\(\vec{EF} \cdot \vec{EG}\)</span>.</li>
+<li><strong>Calcul de <span class="arithmatex">\(\vec{DI} \cdot \vec{AC}\)</span> :</strong></li>
 </ol>
+<p><span class="arithmatex">\(\vec{DI} \cdot \vec{AC} = (\vec{DA} + \frac{1}{2}\vec{AB}) \cdot (\vec{AB} + \vec{AD})\)</span></p>
+<p><span class="arithmatex">\(= \vec{DA} \cdot \vec{AB} + \vec{DA} \cdot \vec{AD} + \frac{1}{2}\vec{AB} \cdot \vec{AB} + \frac{1}{2}\vec{AB} \cdot \vec{AD}\)</span></p>
+<p>Comme <span class="arithmatex">\(ABCD\)</span> est un rectangle, les produits scalaires de vecteurs orthogonaux sont nuls.</p>
+<p><span class="arithmatex">\(= 0 - AD^2 + \frac{1}{2}AB^2 + 0 = -4^2 + \frac{1}{2}(8^2) = -16 + 32 = 16\)</span>.</p>
+<p>Le produit scalaire est non nul, donc les droites ne sont pas perpendiculaires.</p>
+<hr />
+<h2 id="partie-c-al-kashi">Partie C : Al-Kashi</h2>
+<ol>
+<li><strong>Longueur <span class="arithmatex">\(FG\)</span> :</strong></li>
+</ol>
+<p>D'après le théorème d'Al-Kashi : <span class="arithmatex">\(FG^2 = EF^2 + EG^2 - 2 \times EF \times EG \times \cos(60^\circ)\)</span>.</p>
+<p><span class="arithmatex">\(FG^2 = 5^2 + 8^2 - 2 \times 5 \times 8 \times 0,5 = 25 + 64 - 40 = 49\)</span>.</p>
+<p>Donc <strong><span class="arithmatex">\(FG = 7\)</span></strong>.</p>
+<ol>
+<li><strong>Produit scalaire :</strong></li>
+</ol>
+<p><span class="arithmatex">\(\vec{EF} \cdot \vec{EG} = 5 \times 8 \times \cos(60^\circ) = 40 \times 0,5 = 20\)</span>.</p>
 
 
 
