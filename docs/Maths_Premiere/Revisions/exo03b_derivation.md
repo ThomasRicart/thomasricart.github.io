@@ -1,4 +1,4 @@
-# Exercice 3 : Dérivation et Étude de fonctions (Variante)
+# Exercice 3 : Dérivation et Étude de fonctions 
 
 **Niveau :** Première Spécialité Mathématiques  
 **Thème :** Formules de dérivation, variations, tangentes et optimisation.

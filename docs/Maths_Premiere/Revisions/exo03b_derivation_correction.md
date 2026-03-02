@@ -1,5 +1,4 @@
-# Correction : Dérivation et Étude de fonctions (Variante)
-
+# Correction : Dérivation et Étude de fonctions 
 ---
 
 ## Partie A : Calcul de dérivées
