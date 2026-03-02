@@ -1,0 +1,25 @@
+\definecolor{block-gray}{gray}{0.95}
+\definecolor{Red}{RGB}{255,0,0}
+\definecolor{Blue}{RGB}{0,0,255}
+\definecolor{Plum}{rgb}{0.56,0.27,0.52}
+\definecolor{ForestGreen}{RGB}{34,139,34}
+\definecolor{code-gray}{gray}{0.95}
+
+% ecriture en petit
+%\newcommand{\petit}[1]{\footnotesize #1\normalsize}
+
+%%% Listes
+\newenvironment{liste}{%
+   \begin{list}
+      {$\bullet$}{%
+         \setlength\itemindent{-0.5cm}
+         \setlength{\itemsep}{0.1cm}}}
+   {\end{list}}
+   
+ % Configuration des listes
+\setlist[itemize,enumerate]{  % Puces
+  itemsep=1pt,  % Espace entre les items
+  topsep=2pt,  % Espace avant la liste   
+  parsep=3pt}  % Espace entre les paragraphes
+
+ 

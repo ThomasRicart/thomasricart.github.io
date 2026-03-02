@@ -1,0 +1,38 @@
+% Définition de la commande \titre
+\newcommand{\titre}{%
+  \begin{tcolorbox}[titrestyle] % Options bien placées
+    \begin{center}    
+      \chaptercode \, -- \chaptername
+    \end{center}  
+  \end{tcolorbox}
+}
+
+\makeatother
+% Chap, sections ...
+% Personnalisation des sections
+% Désactiver la numérotation dépendante des chapitres
+% Modifier l'espacement des sections
+\titlespacing{\section}{0pt}{3pt}{3pt}  % Section : espace avant = 5pt, après = 3pt
+\titlespacing{\subsection}{0pt}{4pt}{2pt} % Subsection : espace avant = 4pt, après = 2pt
+\titlespacing{\subsubsection}{0pt}{3pt}{1pt} % Subsubsection : espace avant = 3pt, après = 1pt
+
+\setcounter{secnumdepth}{2} % Numérotation jusqu'aux sections
+\renewcommand{\thesection}{\arabic{section}} % Numérotation simple : 1., 2., etc.
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}} % Format des sous-sections : 1.1, 1.2, ...
+
+\titleformat{\section} % Format pour \section
+  {\normalfont\bfseries\Large} % Style : gras et plus grand
+  {\hspace{1em}\thesection.} % Numérotation : "1.", "2.", etc.
+  {0.5em} % Espacement entre le numéro et le titre
+  {} % Code avant le titre (vide ici)
+\titleformat{\subsection} % Format pour \section
+  {\normalfont\bfseries\Large} % Style : gras et plus grand
+  {\hspace{1em}\thesubsection.} % Numérotation : "1.", "2.", etc.
+  {0.5em} % Espacement entre le numéro et le titre
+  {} % Code avant le titre (vide ici)
+ \titleformat{\subsubsection} % Style "runin" pour garder sur la même ligne si souhaité
+  {\normalsize\bfseries} % Gras et majuscules\MakeUppercase
+  {} % Pas de numérotation
+  {0em} % Pas d'espacement avant
+  {\hspace{2em}} % Décalage vers la droite
+  {} % Rien avant le titre

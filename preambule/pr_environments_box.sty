@@ -1,0 +1,282 @@
+\newcommand{\findemo}{\hfill\rule{1ex}{1ex}}
+
+%%%%%%%%%%%%%%%%% STYLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\tcbset{
+  commontheoremstyle/.style={
+    enhanced,
+    frame empty,
+    interior empty,
+    fonttitle=\bfseries,
+    attach boxed title to top left={yshift=-2mm},
+    boxed title style={boxrule=0.4pt},
+    varwidth boxed title
+  },
+  easyboxstyle/.style={
+	colframe=white,
+	colback = white,
+	title=,
+  },
+  emptystyle/.style={
+	colframe=white,
+	colback = white,
+	title=,
+  },
+  doubleboxstyle/.style={
+    width=1\linewidth, 
+    %height=4cm, 
+    colback=white, 
+    colframe=black, 
+    title=,
+    notitle,
+    sidebyside
+  },
+  bostyle/.style={commontheoremstyle,
+    colframe=Plum!50!white,
+    coltitle=Plum!50!black,
+    colbacktitle=Plum!15!white,
+    borderline={0.5mm}{0mm}{Plum!30!white},
+    borderline={0.5mm}{0mm}{Plum!50!white,dashed}
+  },
+  definitionstyle/.style={commontheoremstyle,  
+    colframe=ForestGreen!50!white,
+    coltitle=ForestGreen!50!black,
+    colbacktitle=ForestGreen!15!white,
+    borderline={0.5mm}{0mm}{ForestGreen!30!white},
+    borderline={0.5mm}{0mm}{ForestGreen!50!white,dashed}
+  },
+  proprietestyle/.style={commontheoremstyle,  
+    colframe=Red!50!white,
+    coltitle=Red!50!black,
+    colbacktitle=Red!15!white,
+    borderline={0.5mm}{0mm}{Red!30!white},
+    borderline={0.5mm}{0mm}{Red!50!white,dashed}
+  },
+  theoremestyle/.style={commontheoremstyle,  
+    colframe=Red!50!white,
+    coltitle=Red!50!black,
+    colbacktitle=Red!15!white,
+    borderline={0.5mm}{0mm}{Red!30!white},
+    borderline={0.5mm}{0mm}{Red!50!white,dashed}
+  },
+  demonstrationprogtyle/.style={commontheoremstyle,  
+    colframe=Plum!50!white,
+    coltitle=Plum!50!black,
+    colbacktitle=Plum!15!white,
+    borderline={0.5mm}{0mm}{Plum!30!white},
+    borderline={0.5mm}{0mm}{Plum!50!white,dashed}
+  },
+  activitestyle/.style={commontheoremstyle,
+    colframe=Blue!50!white,
+    coltitle=Blue!50!black,
+    colbacktitle=Blue!15!white,
+    borderline={0.5mm}{0mm}{Blue!30!white},
+    borderline={0.5mm}{0mm}{Blue!50!white,dashed}
+  },
+  examplestyle/.style={
+	colback=white!0,
+	grow to right by=0mm,
+	grow to left by=0mm, 
+	boxrule=0pt,
+	boxsep=0pt,
+	breakable,
+	enhanced jigsaw,
+    borderline west={0.5mm}{0mm}{black!30!white,decoration={zigzag,amplitude=0.5mm},decorate},
+    borderline west={0.5mm}{0mm}{black!50!white,decoration={zigzag,amplitude=0.5mm},decorate, dashed},
+	colbacktitle={white!0},
+	coltitle={black},
+	fonttitle={\bfseries},
+	%attach title to upper={},
+  },
+  exerciceinterrostyle/.style={
+	colback=white!0,
+	grow to right by=0mm,
+	grow to left by=0mm, 
+	boxrule=0pt,
+	boxsep=0pt,
+	breakable,
+	enhanced jigsaw,
+   % borderline west={0.5mm}{0mm}{black!30!white,decoration={zigzag,amplitude=0.5mm}},
+   % borderline west={0.5mm}{0mm}{black!50!white,decoration={zigzag,amplitude=0.5mm}, dashed},
+	colbacktitle={white!0},
+	coltitle={black},
+	fonttitle={\bfseries},
+	separator sign={\ $\blacktriangleright$}
+	%attach title to upper={},
+  },
+  demonstrationtyle/.style={
+	colback=white!0,
+	grow to right by=0mm,
+	grow to left by=0mm, 
+	boxrule=0pt,
+	boxsep=0pt,
+	breakable,
+	enhanced jigsaw,
+    borderline west={0.5mm}{0mm}{black!30!white,decoration={coil,aspect=0},decorate},
+    borderline west={0.5mm}{0mm}{black!50!white,decoration={coil,aspect=0},decorate, dashed},
+	colbacktitle={white!0},
+	coltitle={black},
+	fonttitle={\bfseries},
+	%attach title to upper={},
+  },
+  titrestyle/.style={
+	colframe=black,
+    borderline={0.5mm}{0mm}{Red!30!white},
+    borderline={0.5mm}{0mm}{Red!50!white,dashed},
+	height=1.5cm, valign=center, fontupper=\huge\bfseries,
+	title=,	
+  }	
+}
+
+%%%%%%%%%%%%%%%%% ENVIRONNEMENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newtcbtheorem[]{emptybox}{}
+{emptystyle}{de}
+\newtcbtheorem[]{easybox}{}
+{definitionstyle}{de}
+\newtcbtheorem[]{definition}{Définition}
+{definitionstyle}{de}
+\newtcbtheorem[]{remarque}{Remarque}
+{demonstrationtyle}{de}
+\newtcbtheorem[]{propriete}{Propriété}
+{proprietestyle}{pr}
+\newtcbtheorem[]{proprieteadm}{Propriété (Admise)}
+{proprietestyle}{pradm}
+\newtcbtheorem[]{lemme}{Lemme}
+{proprietestyle}{le}
+\newtcbtheorem[]{theoreme}{Théorème}
+{theoremestyle}{th}
+\newtcbtheorem[]{corollaire}{Corollaire}
+{theoremestyle}{co}
+\newtcbtheorem[]{example}{Exemple}
+{examplestyle}{ex}
+\newtcbtheorem[]{notation}{Notation}
+{activitestyle}{nt}
+\newtcbtheorem[]{exerciceinterro}{Exercice}
+{exerciceinterrostyle}{ex}
+\newtcbtheorem[]{demonstration}{Démonstration}
+{demonstrationtyle}{dm}
+\newtcbtheorem[]{demonstrationp}{Démonstration au programme}
+{demonstrationprogtyle}{dmp}
+\newtcbtheorem[]{activite}{Activité}
+{activitestyle}{ac}
+\newtcbtheorem[]{corrigeactivite}{Corrigé de l'activité}
+{activitestyle}{cac}
+\newtcbtheorem[]{methode}{Méthode}
+{activitestyle}{met}
+\newtcbtheorem[]{docressource}{Document}
+{activitestyle}{met}
+
+% Environnements
+\newenvironment{exercices}[1][Exercices :]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+%\newenvironment{exercice}[1][Exercice :]{\begin{trivlist}
+		%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{examples}[1][Exemples :]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remarque :]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{vocabulaire}[1][Vocabulaire :]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{interpretation}[1][Interprétation :]{\begin{trivlist}
+    \item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+	
+{%
+\theoremheaderfont{\sffamily\bfseries}
+\theorembodyfont{\sffamily}
+\theoremprework{\begin{leftbar} }
+    \theorempostwork{\end{leftbar} }
+\newtheorem*{repgraph}{Représentation graphique}
+}
+
+{%
+\theoremheaderfont{\sffamily\bfseries}
+\theorembodyfont{\sffamily}
+\theoremprework{\begin{leftbar} }
+    \theorempostwork{\end{leftbar}\vspace{0.5cm} }
+\newtheorem{theorem}{Théorème}
+}
+
+{%
+\theoremheaderfont{\sffamily\bfseries}
+\theorembodyfont{\sffamily}
+\theoremprework{\begin{leftbar} }
+    \theorempostwork{\end{leftbar}\vspace{0.5cm} }
+\newtheorem*{rappel}{Rappel}
+}
+
+{%
+\theoremheaderfont{\sffamily\bfseries}
+\theorembodyfont{\sffamily}
+\theoremprework{\begin{leftbar} }
+    \theorempostwork{\end{leftbar}\vspace{0.5cm} }
+\newtheorem*{enonce}{Enoncé}
+}
+
+{%
+\theoremheaderfont{\bfseries}
+\theoremseparator{:}
+\theoremprework{ }
+\theorempostwork{ \vspace{0.5cm}}
+\newtheorem{exerciceapp}{$\rightarrow$ Exercice d'application}
+}
+
+{%
+\theoremheaderfont{\bfseries}
+\theorembodyfont{\sffamily}
+\theoremseparator{:}
+\theoremprework{ }
+%\theorempostwork{\vspace{0.5cm} }
+\newtheorem{exercice}{\textnormal{\faEdit } $~$ Exercice}
+}
+
+{%
+\theoremheaderfont{\bfseries}
+\theoremseparator{:}
+\theoremprework{ }
+\theorempostwork{ }
+\newtheorem{exercicef}{$\rightarrow$ Exercice facultatif}
+}
+
+{%
+\theoremheaderfont{\sffamily\bfseries}
+\theorembodyfont{\sffamily}
+\theoremprework{\begin{leftbar} }
+    \theorempostwork{\end{leftbar} \vspace{0.5cm}}
+\newtheorem{regle}{Règle}
+}
+
+{%
+\theoremheaderfont{\sffamily\bfseries}
+\theorembodyfont{\sffamily}
+\theoremprework{\begin{leftbar} }
+    \theorempostwork{\end{leftbar}\vspace{0.5cm} }
+\newtheorem*{methode-non}{Méthode}
+}
+
+{%
+\theoremheaderfont{\bfseries}
+\theoremprework{ }
+\theorempostwork{  }
+\newtheorem*{correction}{$\hookrightarrow$ Corrigé}
+}
+{%
+\theoremheaderfont{\bfseries}
+\theoremprework{ }
+\theorempostwork{  }
+\newtheorem*{activitetice}{$\rightarrow$ Activité TICE}
+}
+
+{%
+\theoremheaderfont{\bfseries}
+\theoremprework{ }
+\theorempostwork{ }
+\newtheorem{probleme}{$\rightarrow$ Problème}
+}
+
+{%
+\theoremheaderfont{\bfseries}
+\theoremprework{ }
+\theorempostwork{\skip}
+\newtheorem{flash}{$\rightarrow$ Question flash}
+}

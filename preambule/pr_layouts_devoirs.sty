@@ -1,0 +1,261 @@
+%%% Cadre réponse
+\newenvironment{answerzone}[2]
+  {
+\begin{tcolorbox}[fonttitle=\bfseries,
+  width=#1\linewidth,
+  height=#2 cm, 
+  colback=white, 
+  colframe=black, 
+  title=Réponse,
+  adjusted title=Réponse,after={},
+  upperbox = \visibleornot]
+  }
+  {
+    \end{tcolorbox}
+  }
+  
+  \newenvironment{answer}[2]
+  {
+\begin{tcolorbox}[fonttitle=\bfseries,
+  width=#1\linewidth,
+  height=#2 cm, 
+  colback=white, 
+  colframe=black, 
+  title=,
+  %adjusted title=Réponse,after={},
+  upperbox = \visibleornot]
+  }
+  {
+    \end{tcolorbox}
+  }
+  %%%%%%%%%%%%%%%%%%%%%ùù Devoirs %%%%%%
+\newcounter{nexods}
+\setcounter{nexods}{0}
+\newcommand{\exods}[1]{
+\refstepcounter{nexods}
+  \ifthenelse{#1 = 1}{%
+    % Si le paramètre est égal à 1
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \hfill \fbox{\qquad\qquad \texttt{\textbf{/1 point}\;}}
+  }{%
+    \ifthenelse{#1 > 1}{%
+      % Si le paramètre est égal à 2
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \hfill \fbox{\qquad\qquad \texttt{\textbf{/#1 points}}}
+    }{%
+      % Sinon
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \par
+    }%
+  }%
+  \rule{0.96\linewidth}{1pt}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ùù
+\newcounter{nexodsd}
+\setcounter{nexodsd}{0}
+
+% Commande pour créer un exercice avec champ de note éditable
+\newcommand{\exodst}[1]{%
+\refstepcounter{nexodsd}%
+\edef\currentexo{\arabic{nexodsd}}%
+  \ifthenelse{#1 = 1}{%
+    % Si le paramètre est égal à 1
+    \fbox{\textbf{\texttt{Exercice \currentexo \, $\blacktriangleright$}}} 
+    \hfill 
+    \fbox{\TextField[name=note\currentexo, charsize=8pt, width=1.cm, bordercolor={0 0 0}, backgroundcolor={1 1 1}, keystroke={AFNumber_Keystroke(2, 0, 0, 0, "", true);}]{} \texttt{\textbf{/1 point}\;}}%
+  }{%
+    \ifthenelse{#1 > 1}{%
+      % Si le paramètre est supérieur à 1
+      \fbox{\textbf{\texttt{Exercice \currentexo \, $\blacktriangleright$}}} 
+      \hfill 
+      \fbox{\TextField[name=note\currentexo, charsize=8pt, width=1.cm, bordercolor={0 0 0}, backgroundcolor={1 1 1}, keystroke={AFNumber_Keystroke(2, 0, 0, 0, "", true);}]{} \texttt{\textbf{/#1 points}}}%
+    }{%
+      % Sinon (pas de note)
+      \fbox{\textbf{\texttt{Exercice \currentexo \, $\blacktriangleright$}}} \par
+    }%
+  }%
+  \par\nointerlineskip
+  \rule{0.96\linewidth}{1pt}%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Compteur pour les exercices
+\newcounter{nexods2}
+\setcounter{nexods2}{0}
+
+% Commande pour créer un exercice avec champ de note éditable
+\newcommand{\exodsc}[1]{%
+\refstepcounter{nexods2}%
+\edef\currentexo{\arabic{nexods2}}%
+  \ifthenelse{#1 = 1}{%
+    % Si le paramètre est égal à 1
+    \fbox{\textbf{\texttt{Exercice \currentexo \, $\blacktriangleright$}}} 
+    \hfill 
+    \fbox{\TextField[name=note\currentexo, width=1.cm, bordercolor={0 0 0}, backgroundcolor={1 1 1}]{} \texttt{\textbf{/1 point}\;}}%
+  }{%
+    \ifthenelse{#1 > 1}{%
+      % Si le paramètre est supérieur à 1
+      \fbox{\textbf{\texttt{Exercice \currentexo \, $\blacktriangleright$}}} 
+      \hfill 
+      \fbox{\TextField[name=note\currentexo, width=1.cm, bordercolor={0 0 0}, backgroundcolor={1 1 1}]{} \texttt{\textbf{/#1 points}}}%
+    }{%
+      % Sinon (pas de note)
+      \fbox{\textbf{\texttt{Exercice \currentexo \, $\blacktriangleright$}}} \par
+    }%
+  }%
+  \par\nointerlineskip
+  \rule{0.96\linewidth}{1pt}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\newcommand{\cadreNom}{%
+\begin{center}
+	\begin{tabular}{ccc}
+	\begin{tcolorbox}[colback=white, title=, width=6.9cm]
+	    {Nom: } \TextField[name=Nom,width=4.cm,height=1.2em, backgroundcolor={0.85 0.90 1}]{}
+	\end{tcolorbox}
+	&
+	\begin{tcolorbox}[colback=white, title=, width=6.9cm]
+	    {Prénom: } \TextField[name=Prenom,width=4.cm,height=1.2em, backgroundcolor={0.85 0.90 1}]{}
+	\end{tcolorbox}
+	&
+	\begin{tcolorbox}[colback=white, title=, width=3.9cm]
+	    {Note: } \TextField[name=Note,width=1.5cm,height=1.2em, backgroundcolor={0.85 0.90 1}]{}
+	\end{tcolorbox}
+	\\
+	\end{tabular}
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BAreme
+\newcounter{bareme}
+\setcounter{bareme}{0}
+\newcommand{\Bareme}{
+	\refstepcounter{bareme}%
+\TextField[name=B\thebareme,width=0.6cm,charsize=6pt, height=1.2em, bordercolor=black, backgroundcolor=white]{}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ùù
+\newcommand{\appreciation}{
+	\begin{center}
+			\TextField[name=APP, width=0.95\linewidth, height=2cm, multiline, bordercolor=red, backgroundcolor={0.85 0.90 1}]{}
+	\end{center}
+}
+
+\newcounter{afield}
+\setcounter{afield}{0}
+\newcommand{\longfield}[1]{
+		\refstepcounter{afield}%
+		\TextField[name=LF\theafield, width=0.95\linewidth, height=#1, multiline, bordercolor=red, backgroundcolor={0.85 0.90 1}]{}
+		}
+
+\newcounter{bfield}
+\setcounter{bfield}{0}
+\newcommand{\smallfield}{
+		\refstepcounter{bfield}%
+		\TextField[name=SF\thebfield, bordercolor=red, backgroundcolor={0.85 0.90 1}]{}
+		}
+
+\newcounter{abox}
+\setcounter{abox}{0}
+\newcommand{\checkbox}{
+	\refstepcounter{abox}%
+	\CheckBox[name=CB\theabox, backgroundcolor={0.85 0.90 1}]{}
+}
+
+\newcounter{achoice}
+\setcounter{achoice}{0}
+\newcommand{\choice}[1]{
+		\refstepcounter{achoice}%
+		\begin{Form}
+  \ChoiceMenu[combo]{}{
+    #1
+    }
+\end{Form}
+}
+
+
+% Couleur bleu clair (style champs PDF)
+\newcommand{\ChampNote}{%
+  \TextField[name=noteex\thenexods,
+             width=1.2cm,
+             height=1.1em,
+             backgroundcolor={0.85 0.90 1}]{}
+}
+
+
+
+% DEVOIRS
+\newcommand{\NomPrenom}{%
+\begin{center}
+	\begin{tabular}{cc}
+	\begin{tcolorbox}[colback=white, title=, width=9cm]	Nom: \end{tcolorbox}&
+	\begin{tcolorbox}[colback=white, title=, width=9cm]	Prénom: \end{tcolorbox}\\
+	\end{tabular}
+\end{center}
+}
+\newcommand{\NomPrenomNote}{%
+\begin{center}
+	\begin{tabular}{ccc}
+	\begin{tcolorbox}[colback=white, title=, width=6.9cm]	\footnotesize{Nom:} \end{tcolorbox}&
+	\begin{tcolorbox}[colback=white, title=, width=6.9cm] \footnotesize{Prénom}: \end{tcolorbox}&
+	\begin{tcolorbox}[colback=white, title=, width=3.9cm] \footnotesize{Note}: \end{tcolorbox}\\
+	\end{tabular}
+\end{center}
+}
+
+% BTS
+\newcommand{\appelprof}{%
+\begin{center}
+	\begin{minipage}{2cm}
+	\includegraphics[scale=0.6]{\packagepath/Images/appel_prof.png}
+\end{minipage}
+\begin{minipage}{11cm}
+	\begin{center}
+	\texttt{Appeler le professeur pour expliquer votre démarche \\ même si celle-ci est inaboutie.}
+	\end{center}
+\end{minipage}
+\end{center}
+	}
+
+
+\newcommand{\SigleAppelProf}{
+\begin{center}
+	\includegraphics[scale=0.6]{\packagepath/Images/appel_prof.png}
+\end{center}}
+
+\newcommand{\consignePlus}{
+\emph{Si vous n'avez pas assez de place dans les espaces de réponse, vous pouvez utiliser la une feuille séparée sur laquelle vous indiquerez clairement le numéro de la question et vos noms et prénoms.}
+}
+	
+%%% DS
+\fancypagestyle{DS_FP}{
+	\fancyhf{}
+	\fancyhead[L]{\level -- \course}
+	\fancyhead[C]{\eval}
+	\fancyhead[R]{\date}
+	\fancyfoot[C]{\textbf{Page \thepage/\pageref{LastPage}}}
+	\fancyfoot[R]{\textbf{Tourner la page}}}
+\fancypagestyle{DS_LP}{
+	\fancyhf{}
+	\fancyhead[L]{\level -- \course}
+	\fancyhead[C]{\eval}
+  \fancyhead[R]{\date}
+	\fancyfoot[C]{\textbf{Page \thepage/\pageref{LastPage}}}
+	\fancyfoot[R]{}}
+
+%%% CCF
+\fancypagestyle{CCF_OP}{
+	\fancyhf{}
+	\fancyhead[R]{\textbf{}}
+	\fancyhead[L]{\textbf{CCF }}
+	\fancyfoot[C]{\textbf{--~\thepage~--}}
+	\fancyfoot[R]{\textbf{Tourner la page}}}
+
+\fancypagestyle{CCF_LP}{
+	\fancyhf{}
+	\fancyhead[R]{\textbf{}}
+	\fancyhead[L]{\textbf{CCF }}
+	\fancyfoot[C]{\textbf{--~\thepage~--}}}
+

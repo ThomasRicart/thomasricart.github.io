@@ -1,0 +1,84 @@
+\usepackage{ProfLycee}
+
+\def\schoolyear{2025 -- 2026} % Année scolaire
+\def\teacher{T. Ricart}     % Professeur 
+\def\date{\today}           % Date
+
+%\RequirePackage[thmmarks,amsmath]{ntheorem}  %THEOREM DEFINITION
+\raggedbottom{}  % Permet aux pages de ne pas forcer un remplissage strict
+
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage[a4paper,left=1cm,right=1cm, bottom=1.8cm,top=1.8cm]{geometry}
+
+\setlength{\headheight}{13.59999pt}
+\addtolength{\topmargin}{-1.50993pt}
+
+\RequirePackage[thmmarks]{ntheorem}  %THEOREM DEFINITION
+\usepackage{framed}  %LEFTFRAME
+\RequirePackage{tcolorbox} % Environments
+\RequirePackage{varwidth}
+\RequirePackage{tkz-tab}
+\RequirePackage{hhline}
+\RequirePackage[shortlabels]{enumitem}
+\RequirePackage{qrcode}	
+\usepackage[hidelinks]{hyperref} % Pour les liens hypertextes
+
+\tcbuselibrary{theorems}
+\usetikzlibrary{shapes.geometric,shapes.misc,arrows,backgrounds,calc,patterns}
+\usetikzlibrary{angles,quotes}	
+\usetikzlibrary{intersections}	
+\tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+	%default radius will be 1pt.
+	cross/.default={1pt}}
+
+\usepackage{titlesec} % 🔹 Charge le package nécessaire
+
+\usepackage{moreverb}	% Pour les environnements verbatimfiles
+\usepackage[dvipsnames]{xcolor}
+\usepackage{listings}	% Pour les listings
+\usepackage{import}	% Pour les fichiers externes
+\usepackage{ifthen}	% Pour les tests
+\usepackage{changepage} % Pour ajuster les marges localement
+\usepackage{xparse}	% Pour les commandes à paramètres optionnels
+\usepackage{longtable}
+
+\graphicspath{{./Images/}}	% Définit le chemin d'accès aux images
+
+\useproflyclib{pythontex}   % Compile with pythontex
+\usepackage{lastpage}
+
+\makeatletter
+\def\@parboxrestore{\@arrayparboxrestore}   % Redéfinition de la commande \@parboxrestore
+\makeatother
+
+\usepackage{pdfpages}
+%\includepdf[pages=-]{mon_test.pdf}
+
+\usetikzlibrary{shapes.geometric, arrows}	% Algorigrammes
+
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{adjustbox}
+
+\usepackage{pgfgantt}  % Pour la frise chronologique
+\usetikzlibrary{arrows, positioning}
+\usepackage{pgf-pie}
+
+\usepackage{multicol}
+
+
+\usepackage{etoolbox}
+\newbool{afficheCorrige}
+\newcommand{\cadreCorrection}[3]{%
+    \begin{tcolorbox}[width=#1\linewidth, height=#2cm, colback=white, colframe=black, sharp corners]
+        \ifbool{afficheCorrige}{%
+            \color{black}#3
+        }{}
+    \end{tcolorbox}
+}
+
