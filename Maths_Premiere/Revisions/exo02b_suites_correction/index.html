@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://thomasricart.github.io/lvh/Maths_Premiere/Revisions/exo01_polynomes_correction/">
+        <link rel="canonical" href="https://thomasricart.github.io/lvh/Maths_Premiere/Revisions/exo02b_suites_correction/">
       
       
-        <link rel="prev" href="../exo01_polynomes/">
+        <link rel="prev" href="../exo02b_suites/">
       
       
-        <link rel="next" href="../exo02a_suites/">
+        <link rel="next" href="../exo03_derivation/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Exercice 1: Correction Détaillée : Étude de la fonction \(f(x) = 2x^2 - 8x + 6\) - Cours de M. Ricart</title>
+        <title>Correction : Étude de l'évolution d'une population (Modélisation et Sommes) - Cours de M. Ricart</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-1-correction-detaillee-etude-de-la-fonction-fx-2x2-8x-6" class="md-skip">
+        <a href="#correction-etude-de-levolution-dune-population-modelisation-et-sommes" class="md-skip">
           Aller au contenu
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice 1: Correction Détaillée : Étude de la fonction \(f(x) = 2x^2 - 8x + 6\)
+              Correction : Étude de l'évolution d'une population (Modélisation et Sommes)
             
           </span>
         </div>
@@ -1563,22 +1563,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-analyse-des-racines-et-du-signe" class="md-nav__link">
+  <a href="#partie-a-etude-dune-suite-explicite" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Analyse des racines et du signe
+        Partie A : Étude d'une suite explicite
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Analyse des racines et du signe">
+    <nav class="md-nav" aria-label="Partie A : Étude d&#39;une suite explicite">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-calcul-du-discriminant-delta" class="md-nav__link">
+  <a href="#1-calcul-des-termes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.1 Calcul du discriminant \(\Delta\)
+        1. Calcul des termes
       
     </span>
   </a>
@@ -1586,10 +1586,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-determination-des-racines" class="md-nav__link">
+  <a href="#2-variations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2 Détermination des racines
+        2. Variations
       
     </span>
   </a>
@@ -1597,10 +1597,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-tableau-de-signes" class="md-nav__link">
+  <a href="#3-recherche-de-seuil-par-le-calcul" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.3 Tableau de signes
+        3. Recherche de seuil par le calcul
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-algorithme-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Algorithme complété
       
     </span>
   </a>
@@ -1613,22 +1624,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-variations-et-geometrie" class="md-nav__link">
+  <a href="#partie-b-modelisation-dune-reserve-naturelle" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Variations et Géométrie
+        Partie B : Modélisation d'une réserve naturelle
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Variations et Géométrie">
+    <nav class="md-nav" aria-label="Partie B : Modélisation d&#39;une réserve naturelle">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-coordonnees-du-sommet-s" class="md-nav__link">
+  <a href="#1-premiers-termes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 Coordonnées du sommet \(S\)
+        1. Premiers termes
       
     </span>
   </a>
@@ -1636,10 +1647,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-tableau-de-variations" class="md-nav__link">
+  <a href="#2-relation-de-recurrence" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2 Tableau de variations
+        2. Relation de récurrence
       
     </span>
   </a>
@@ -1647,10 +1658,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-axe-de-symetrie-et-appartenance" class="md-nav__link">
+  <a href="#3-suite-auxiliaire-w_n" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3 Axe de symétrie et appartenance
+        3. Suite auxiliaire \((w_n)\)
       
     </span>
   </a>
@@ -1663,22 +1674,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-derivation-et-tangente-en-x0" class="md-nav__link">
+  <a href="#partie-c-calcul-de-somme" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Dérivation et Tangente en \(x=0\)
+        Partie C : Calcul de somme
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Dérivation et Tangente en \(x=0\)">
+    <nav class="md-nav" aria-label="Partie C : Calcul de somme">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-fonction-derivee" class="md-nav__link">
+  <a href="#1-expression-de-s" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 Fonction dérivée
+        1. Expression de \(S\)
       
     </span>
   </a>
@@ -1686,60 +1697,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-tangente-t_0" class="md-nav__link">
+  <a href="#2-calcul-final" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 Tangente \(T_0\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-question-douverture-tangente-passant-par-p15-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Question d'ouverture : Tangente passant par \(P(1,5 ; -4)\)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Question d&#39;ouverture : Tangente passant par \(P(1,5 ; -4)\)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41-equation-de-t_a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 Équation de \(T_a\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-recherche-de-a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 Recherche de \(a\)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-resolution" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.3 Résolution
+        2. Calcul final
       
     </span>
   </a>
@@ -1768,86 +1729,75 @@
 
 
 
-<h1 id="exercice-1-correction-detaillee-etude-de-la-fonction-fx-2x2-8x-6">Exercice 1: Correction Détaillée : Étude de la fonction <span class="arithmatex">\(f(x) = 2x^2 - 8x + 6\)</span></h1>
-<h2 id="1-analyse-des-racines-et-du-signe">1. Analyse des racines et du signe</h2>
-<h3 id="11-calcul-du-discriminant-delta">1.1 Calcul du discriminant <span class="arithmatex">\(\Delta\)</span></h3>
-<p>La fonction est de la forme <span class="arithmatex">\(ax^2 + bx + c\)</span> avec <span class="arithmatex">\(a=2\)</span>, <span class="arithmatex">\(b=-8\)</span> et <span class="arithmatex">\(c=6\)</span>.
-\[\Delta = b^2 - 4ac = (-8)^2 - 4(2)(6) = 64 - 48 = 16\]</p>
-<h3 id="12-determination-des-racines">1.2 Détermination des racines</h3>
-<p>Puisque <span class="arithmatex">\(\Delta &gt; 0\)</span>, l'équation <span class="arithmatex">\(f(x) = 0\)</span> admet deux racines réelles distinctes :</p>
+<h1 id="correction-etude-de-levolution-dune-population-modelisation-et-sommes">Correction : Étude de l'évolution d'une population (Modélisation et Sommes)</h1>
+<h2 id="partie-a-etude-dune-suite-explicite">Partie A : Étude d'une suite explicite</h2>
+<h3 id="1-calcul-des-termes">1. Calcul des termes</h3>
 <ul>
-<li><span class="arithmatex">\(x_1 = \frac{-b - \sqrt{\Delta}}{2a} = \frac{8 - 4}{4} = \frac{4}{4} = 1\)</span></li>
-<li><span class="arithmatex">\(x_2 = \frac{-b + \sqrt{\Delta}}{2a} = \frac{8 + 4}{4} = \frac{12}{4} = 3\)</span></li>
+<li>
+<p><span class="arithmatex">\(u_0 = \frac{4(0) + 2}{0 + 5} = \frac{2}{5} = 0,4\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u_1 = \frac{4(1) + 2}{1 + 5} = \frac{6}{6} = 1\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u_2 = \frac{4(2) + 2}{2 + 5} = \frac{10}{7} \approx 1,43\)</span></p>
+</li>
 </ul>
-<h3 id="13-tableau-de-signes">1.3 Tableau de signes</h3>
-<p>Le coefficient <span class="arithmatex">\(a=2\)</span> est positif, donc la parabole est orientée vers le haut ("en sourire"). La fonction est négative entre les racines.</p>
-<p>\[
-\begin{array}{c|ccccccc}
-x &amp; -\infty &amp; &amp; 1 &amp; &amp; 3 &amp; &amp; +\infty \\
-\hline
-f(x) &amp; &amp; + &amp; 0 &amp; - &amp; 0 &amp; + &amp; 
-\end{array}
-\]</p>
+<h3 id="2-variations">2. Variations</h3>
+<p>Soit <span class="arithmatex">\(f\)</span> la fonction définie sur <span class="arithmatex">\([0 ; +\infty[\)</span> par <span class="arithmatex">\(f(x) = \frac{4x + 2}{x + 5}\)</span>.  </p>
+<p><span class="arithmatex">\(f\)</span> est de la forme <span class="arithmatex">\(\frac{u}{v}\)</span> avec <span class="arithmatex">\(u(x) = 4x + 2\)</span> et <span class="arithmatex">\(v(x) = x + 5\)</span>.  </p>
+<p><span class="arithmatex">\(f'(x) = \frac{4(x + 5) - 1(4x + 2)}{(x + 5)^2} = \frac{4x + 20 - 4x - 2}{(x + 5)^2} = \frac{18}{(x + 5)^2}\)</span>.</p>
+<p>Comme <span class="arithmatex">\(f'(x) &gt; 0\)</span> sur <span class="arithmatex">\([0 ; +\infty[\)</span>, la fonction <span class="arithmatex">\(f\)</span> est strictement croissante. On en déduit que la suite <span class="arithmatex">\((u_n)\)</span> est <strong>croissante</strong>.</p>
+<h3 id="3-recherche-de-seuil-par-le-calcul">3. Recherche de seuil par le calcul</h3>
+<p><span class="arithmatex">\(u_n &gt; 3,8 \iff \frac{4n + 2}{n + 5} &gt; 3,8\)</span>  </p>
+<p><span class="arithmatex">\(4n + 2 &gt; 3,8(n + 5)\)</span>  </p>
+<p><span class="arithmatex">\(4n + 2 &gt; 3,8n + 19\)</span>  </p>
+<p><span class="arithmatex">\(0,2n &gt; 17 \iff n &gt; \frac{17}{0,2} \iff n &gt; 85\)</span>.  </p>
+<p>Le plus petit entier est <strong><span class="arithmatex">\(n = 86\)</span></strong>.</p>
+<h3 id="4-algorithme-complete">4. Algorithme complété</h3>
+<pre><code class="language-python">def trouve_rang(seuil):
+    n = 0
+    u = 0.4  # Valeur de u_0
+
+    while u &lt;= seuil:
+        n = n + 1
+        u = (4 * n + 2) / (n + 5)
+
+    return n
+
+</code></pre>
+<h2 id="partie-b-modelisation-dune-reserve-naturelle">Partie B : Modélisation d'une réserve naturelle</h2>
+<h3 id="1-premiers-termes">1. Premiers termes</h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(v_1 = 3\,000 \times 1,02 - 150 = 2\,910\)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\(v_2 = 2\,910 \times 1,02 - 150 = 2\,818,2\)</span></p>
+</li>
+</ul>
+<h3 id="2-relation-de-recurrence">2. Relation de récurrence</h3>
+<p>Une augmentation de <span class="arithmatex">\(2\%\)</span> correspond à un coefficient multiplicateur de <span class="arithmatex">\(1 + \frac{2}{100} = 1,02\)</span>. En retranchant les <span class="arithmatex">\(150\)</span> oiseaux qui quittent la réserve, on obtient bien : <strong><span class="arithmatex">\(v_{n+1} = 1,02v_n - 150\)</span></strong>.</p>
+<h3 id="3-suite-auxiliaire-w_n">3. Suite auxiliaire <span class="arithmatex">\((w_n)\)</span></h3>
+<p>a. <span class="arithmatex">\(w_{n+1} = v_{n+1} - 7\,500 = (1,02v_n - 150) - 7\,500 = 1,02v_n - 7\,650\)</span>.  </p>
+<p>En factorisant par <span class="arithmatex">\(1,02\)</span> : <span class="arithmatex">\(w_{n+1} = 1,02(v_n - \frac{7\,650}{1,02}) = 1,02(v_n - 7\,500) = 1,02w_n\)</span>.  </p>
+<p>La suite <span class="arithmatex">\((w_n)\)</span> est donc <strong>géométrique de raison <span class="arithmatex">\(q = 1,02\)</span></strong>.  </p>
+<p>Premier terme : <span class="arithmatex">\(w_0 = v_0 - 7\,500 = 3\,000 - 7\,500 = -4\,500\)</span>.</p>
+<p>b. Expression fonctionnelle : <strong><span class="arithmatex">\(w_n = -4\,500 \times 1,02^n\)</span></strong>.</p>
+<p>c. Comme <span class="arithmatex">\(w_n = v_n - 7\,500\)</span>, alors <span class="arithmatex">\(v_n = w_n + 7\,500\)</span>.<br />
+D'où : <strong><span class="arithmatex">\(v_n = 7\,500 - 4\,500 \times 1,02^n\)</span></strong>.</p>
 <hr />
-<h2 id="2-variations-et-geometrie">2. Variations et Géométrie</h2>
-<h3 id="21-coordonnees-du-sommet-s">2.1 Coordonnées du sommet <span class="arithmatex">\(S\)</span></h3>
-<p>L'abscisse du sommet est donnée par <span class="arithmatex">\(\alpha = -\frac{b}{2a}\)</span> :</p>
-<ul>
-<li><span class="arithmatex">\(x_S = \frac{8}{4} = 2\)</span>. 
-L'ordonnée est l'image de <span class="arithmatex">\(x_S\)</span> par <span class="arithmatex">\(f\)</span> :</li>
-<li><span class="arithmatex">\(y_S = f(2) = 2(2)^2 - 8(2) + 6 = 8 - 16 + 6 = -2\)</span>. 
-Le sommet est <strong><span class="arithmatex">\(S(2 ; -2)\)</span></strong>.</li>
-</ul>
-<h3 id="22-tableau-de-variations">2.2 Tableau de variations</h3>
-<p>Puisque <span class="arithmatex">\(a &gt; 0\)</span>, la fonction est d'abord décroissante puis croissante.</p>
-<p>\[ 
-\begin{array}{c|ccccc}
-x &amp; -\infty &amp; &amp; 2 &amp; &amp; +\infty \\
-\hline
-f'(x) &amp; &amp; - &amp; 0 &amp; + &amp; \\
-\hline
- &amp; +\infty &amp; &amp; &amp; &amp; +\infty \\
-f(x) &amp; &amp; \searrow &amp; &amp; \nearrow &amp; \\
- &amp; &amp; &amp; -2 &amp; &amp; 
-\end{array}
-    \]</p>
-<h3 id="23-axe-de-symetrie-et-appartenance">2.3 Axe de symétrie et appartenance</h3>
-<ul>
-<li><strong>Axe de symétrie :</strong> La droite d'équation <strong><span class="arithmatex">\(x = 2\)</span></strong>.</li>
-<li><strong>Point <span class="arithmatex">\(A(3 ; 0)\)</span> :</strong> On sait que <span class="arithmatex">\(3\)</span> est une racine, donc <span class="arithmatex">\(f(3)=0\)</span>. <strong><span class="arithmatex">\(A \in \mathcal{C}_f\)</span></strong>.</li>
-<li><strong>Point <span class="arithmatex">\(B(-1 ; 15)\)</span> :</strong> <span class="arithmatex">\(f(-1) = 2(-1)^2 - 8(-1) + 6 = 2 + 8 + 6 = 16\)</span>.
-    Comme <span class="arithmatex">\(16 \neq 15\)</span>, <strong><span class="arithmatex">\(B \notin \mathcal{C}_f\)</span></strong>.</li>
-</ul>
-<hr />
-<h2 id="3-derivation-et-tangente-en-x0">3. Dérivation et Tangente en <span class="arithmatex">\(x=0\)</span></h2>
-<h3 id="31-fonction-derivee">3.1 Fonction dérivée</h3>
-<p>En utilisant les règles de dérivation (<span class="arithmatex">\(x^n \to nx^{n-1}\)</span>) :
-\[f'(x) = 2(2x) - 8 = 4x - 8\]</p>
-<h3 id="32-tangente-t_0">3.2 Tangente <span class="arithmatex">\(T_0\)</span></h3>
-<p>L'équation est <span class="arithmatex">\(y = f'(0)(x - 0) + f(0)\)</span>.</p>
-<ul>
-<li><span class="arithmatex">\(f'(0) = 4(0) - 8 = -8\)</span></li>
-<li><span class="arithmatex">\(f(0) = 6\)</span></li>
-</ul>
-<p>L'équation de la tangente est <strong><span class="arithmatex">\(y = -8x + 6\)</span></strong>.</p>
-<hr />
-<h2 id="4-question-douverture-tangente-passant-par-p15-4">4. Question d'ouverture : Tangente passant par <span class="arithmatex">\(P(1,5 ; -4)\)</span></h2>
-<h3 id="41-equation-de-t_a">4.1 Équation de <span class="arithmatex">\(T_a\)</span></h3>
-<p>Pour un point d'abscisse <span class="arithmatex">\(a\)</span>, la tangente <span class="arithmatex">\(T_a\)</span> a pour équation :
-\[y = (4a - 8)(x - a) + (2a^2 - 8a + 6)\]</p>
-<h3 id="42-recherche-de-a">4.2 Recherche de <span class="arithmatex">\(a\)</span></h3>
-<p>Si <span class="arithmatex">\(P(1,5 ; -4)\)</span> appartient à <span class="arithmatex">\(T_a\)</span>, ses coordonnées vérifient l'équation :
-\[4 = (4a - 8)(1,5 - a) + 2a^2 - 8a + 6\]
-En développant :
-\[4 = 6a - 4a^2 - 12 + 8a + 2a^2 - 8a + 6\]
-\[4 = -2a^2 + 6a - 6\]
-En passant tout à gauche :
-<strong><span class="arithmatex">\(2a^2 - 6a + 2 = 0\)</span></strong> (ce qui revient à <span class="arithmatex">\(a^2 - 3a + 1 = 0\)</span> en divisant par 2).</p>
-<h3 id="43-resolution">4.3 Résolution</h3>
-<p>Pour <span class="arithmatex">\(a^2 - 3a + 1 = 0\)</span> :
-<span class="arithmatex">\(\Delta_a = (-3)^2 - 4(1)(1) = 5\)</span>.
-Les solutions sont <span class="arithmatex">\(a_1 = \frac{3 - \sqrt{5}}{2}\)</span> et <span class="arithmatex">\(a_2 = \frac{3 + \sqrt{5}}{2}\)</span>.
-<strong>Conclusion :</strong> Il existe <strong>deux</strong> tangentes à la courbe qui passent par le point <span class="arithmatex">\(P\)</span>.</p>
+<h2 id="partie-c-calcul-de-somme">Partie C : Calcul de somme</h2>
+<h3 id="1-expression-de-s">1. Expression de <span class="arithmatex">\(S\)</span></h3>
+<p><span class="arithmatex">\(S = \sum_{k=0}^{10} v_k = \sum_{k=0}^{10} (w_k + 7\,500) = \left( \sum_{k=0}^{10} w_k \right) + 11 \times 7\,500\)</span></p>
+<h3 id="2-calcul-final">2. Calcul final</h3>
+<p>Somme des termes de <span class="arithmatex">\((w_n)\)</span> :<br />
+<span class="arithmatex">\(\sum_{k=0}^{10} w_k = -4\,500 \times \frac{1 - 1,02^{11}}{1 - 1,02} = -4\,500 \times \frac{1 - 1,02^{11}}{-0,02} = 225\,000 \times (1 - 1,02^{11})\)</span></p>
+<p>Calcul de <span class="arithmatex">\(S\)</span> :  </p>
+<p><span class="arithmatex">\(S = 225\,000 \times (1 - 1,02^{11}) + 82\,500\)</span> </p>
+<p><span class="arithmatex">\(S \approx 225\,000 \times (1 - 1,24337) + 82\,500\)</span>  </p>
+<p><span class="arithmatex">\(S \approx -54\,758,25 + 82\,500\)</span>  </p>
+<p><strong><span class="arithmatex">\(S \approx 27\,742\)</span> oiseaux</strong>.</p>
 
 
 
