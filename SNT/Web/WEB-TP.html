@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP SNT : Création d'un mini-site Web</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #27ae60;
+            --accent: #e67e22;
+            --bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: var(--bg);
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--primary);
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        h1 { color: var(--primary); text-align: center; text-transform: uppercase; }
+        h2 { color: var(--secondary); margin-top: 0; }
+        
+        .code-snippet {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li::before {
+            content: "☐ ";
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .important {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🚀 Pas à Pas : Créer mon premier site Web</h1>
+
+    <p class="important">
+        <strong>Consigne générale :</strong> Vous allez réaliser un site de 2 pages sur le thème de votre choix (passion, sport, technologie, etc.). Vos fichiers doivent être parfaitement organisés pour que le site fonctionne.
+    </p>
+
+    <div class="step-card">
+        <h2><span class="step-number">1</span> Préparation du dossier</h2>
+        <p>Avant de coder, il faut organiser votre espace de travail :</p>
+        <ul>
+            <li>Créez un dossier nommé <strong>"Projet_Web_VotreNom"</strong>.</li>
+            <li>À l'intérieur, créez trois fichiers textes et renommez-les exactement ainsi :
+                <ul>
+                    <li><code>index.html</code> (Page d'accueil)</li>
+                    <li><code>page2.html</code> (Deuxième page)</li>
+                    <li><code>style.css</code> (Le design)</li>
+                </ul>
+            </li>
+            <li>Cherchez 2 images sur Internet, enregistrez-les dans ce même dossier.</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h2><span class="step-number">2</span> Structure et Contenu (HTML)</h2>
+        <p>Ouvrez <code>index.html</code> avec votre éditeur de texte. Copiez la structure de base et complétez-la :</p>
+        <div class="code-snippet">
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html&gt;<br>
+            &lt;head&gt;<br>
+            &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+            &nbsp;&nbsp;&lt;title&gt;Mon Super Site&lt;/title&gt;<br>
+            &nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            &nbsp;&nbsp;&lt;h1&gt;Bienvenue sur mon site !&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&lt;!-- Ajoutez ici vos paragraphes, images et listes --&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;
+        </div>
+        <p><strong>À faire sur vos pages :</strong></p>
+        <ul class="checklist">
+            <li>Insérer un titre principal <code>&lt;h1&gt;</code> et des sous-titres <code>&lt;h2&gt;</code>.</li>
+            <li>Rédiger un paragraphe de présentation avec <code>&lt;p&gt;</code>.</li>
+            <li>Créer une liste à puces <code>&lt;ul&gt;</code> contenant au moins 3 éléments <code>&lt;li&gt;</code>.</li>
+            <li>Afficher une image avec la balise <code>&lt;img src="nom_image.jpg"&gt;</code>.</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h2><span class="step-number">3</span> Navigation (Liens)</h2>
+        <p>Pour que l'on puisse naviguer sur votre site, ajoutez un lien vers l'autre page :</p>
+        <div class="code-snippet">
+            &lt;a href="page2.html"&gt;Consulter la page 2&lt;/a&gt;
+        </div>
+        <p>Faites de même sur <code>page2.html</code> pour revenir vers <code>index.html</code>.</p>
+    </div>
+
+    
+
+    <div class="step-card">
+        <h2><span class="step-number">4</span> Mise en forme (CSS)</h2>
+        <p>Ouvrez le fichier <code>style.css</code>. C'est ici que vous définissez l'apparence. Essayez ces commandes :</p>
+        <div class="code-snippet">
+            body {<br>
+            &nbsp;&nbsp;background-color: lightblue; /* Couleur de fond */<br>
+            &nbsp;&nbsp;font-family: sans-serif; /* Police */<br>
+            }<br><br>
+            h1 {<br>
+            &nbsp;&nbsp;color: darkblue; /* Couleur du titre */<br>
+            &nbsp;&nbsp;text-align: center; /* Centrer le titre */<br>
+            }<br><br>
+            img {<br>
+            &nbsp;&nbsp;width: 300px; /* Redimensionner les images */<br>
+            &nbsp;&nbsp;border-radius: 15px; /* Arrondir les coins */<br>
+            }
+        </div>
+    </div>
+
+    
+
+    <div class="step-card">
+        <h2><span class="step-number">5</span> Vérification finale</h2>
+        <ul class="checklist">
+            <li>Est-ce que mes images s'affichent ?</li>
+            <li>Est-ce que les liens permettent de passer d'une page à l'autre ?</li>
+            <li>Est-ce que mes couleurs et mes titres sont bien appliqués via le CSS ?</li>
+            <li>Ai-je bien enregistré tous mes fichiers avant d'ouvrir index.html dans le navigateur ?</li>
+        </ul>
+    </div>
+
+</body>
+</html>

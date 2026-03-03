@@ -1,0 +1,41 @@
+\documentclass[a4paper,10pt]{article}  % ou report, etc.
+
+\usepackage{../../../../preambule/preambule}   % ← le seul \usepackage important
+
+\newcommand{\level}{BTS}
+\newcommand{\course}{CIEL 1}
+\newcommand{\eval}{CCF Blanc -- 01}
+\newcommand{\mydate}{\today}
+\newcommand{\chaptercode}{Chap 1}
+\newcommand{\chaptername}{Test}
+
+% Redéfinir le booléen si besoin (après le chargement)
+%\boolfalse{showCorrection}
+
+\begin{document}
+
+% Exemple d'utilisation
+\begin{Correction}[width=0.9\linewidth, height=7cm]
+\textbf{Exemple de code Python dans la correction}
+% Pas de ligne vide ici
+\begin{pyverbatim}[breaklines=true, numbers=left, fontsize=\small, frame=single, rulecolor=\color{gray!50}]
+n = 0
+u = 50
+while u > 140:
+    u = 0.8 * u + 30
+    n = n + 1
+print("La pile dépasse 140 à la minute", n)
+\end{pyverbatim}
+\medskip
+\small\textit{Sortie attendue :}
+\begin{pythontex}[fontsize=\footnotesize]
+n = 0
+u = 50
+while u > 140:
+    u = 0.8 * u + 30
+    n = n + 1
+print("La pile dépasse 140 à la minute", n)
+\end{pythontex}
+\end{Correction}
+
+\end{document}
