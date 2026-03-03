@@ -1,0 +1,317 @@
+\documentclass[a4paper,10pt]{report}
+
+\def\packagepath{../../../../preambule}   % path du package principal
+\usepackage{\packagepath/preambule}    % utilisation du fichier de configuration
+
+\def\level{BTS }              % Classe
+\def\course{CIEL 1}           % Matière
+\def\eval{CCF Blanc -- 01}          % Titre de l'évaluation
+
+\def\visibleornot{visible}    % visible or invisible
+\def\documentpath{./Sources_Latex}
+\def\date{CCFB - 01 }
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableaux
+
+\def\ptsexoA{0}
+\def\ptsexoB{0}
+
+\def\ptstotal{\ptsexoA+\ptsexoB}
+
+\usepackage{hyperref}
+
+\usetikzlibrary{shapes, arrows, positioning}
+\usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing}
+
+\tikzstyle{etat} = [draw, rounded corners=15pt, minimum width=2.5cm, minimum height=1.2cm, text centered, font=\bfseries]
+\tikzstyle{fleche} = [thick, ->, >=stealth]
+
+\usepackage{float}
+\usepackage[T1]{fontenc}
+
+% --- L'INTERRUPTEUR ---
+\booltrue{afficheCorrige} % Mettez \boolfalse pour masquer le texte (le cadre reste)
+%\boolfalse{afficheCorrige} % Mettez \boolfalse pour masquer le texte (le cadre reste)
+
+% --- LA COMMANDE DE CADRE FIXE ---
+% #1: Largeur (ex: \linewidth)
+% #2: Hauteur (ex: 3cm)
+% #3: Contenu de la correction
+
+%\cadreCorrection{width \linewidth}{cm}{}
+
+%\begin{correctionEnv}
+%\begin{lstlisting}[language=Python]
+%\end{lstlisting}
+%\end{correctionEnv}
+\booltrue{afficheCorrige}   % ou \boolfalse{afficheCorrige} pour masquer
+
+% Boîte simple et robuste
+\NewTColorBox{CorrectionPython}{ O{width=0.92\linewidth} O{4.5cm} +m }{%
+    enhanced,
+    sharp corners,
+    colback=white!97!black!3,
+    colframe=black!70,
+    boxrule=0.6pt,
+    arc=2.5pt,
+    left=6pt,right=6pt,top=6pt,bottom=6pt,
+    width=#1,
+    height=#2,
+    \ifbool{afficheCorrige}{%
+        #3
+    }{%
+        \vphantom{\rule{0pt}{#2}}% garde une hauteur approximative si tu veux
+        % ou rien du tout : {}
+    }%
+}
+
+\begin{document}
+\CorrectionPython[width=0.92\linewidth,height=5cm]{%
+    \small
+    \begin{pyverbatim}[numbers=left, fontsize=\small, frame=single, rulecolor=\color{gray!50}]
+n = 0
+u = 50
+while u > 140:
+    u = 0.8 * u + 30
+    n = n + 1
+    \end{pyverbatim}
+}
+\end{document}
+\renewcommand{\labelitemi}{\textbullet}
+
+\pagestyle{DS_FP}
+\NomPrenomNote{}
+
+
+\bigskip
+
+
+\textbf{Contexte général:} Une start-up conçoit un système de capteurs connectés pour surveiller la température dans des serveurs informatiques. Le TP porte sur l'analyse de la réponse d'un capteur (Partie 1), la gestion des alertes stockées en base de données (Partie 2) et la fiabilité des composants reçus par les fournisseurs (Partie 3).
+ 
+\medskip
+
+%%=============================================================
+\textbf{PARTIE A: Analyse du système thermique}
+
+\medskip
+
+Lorsqu'un serveur s'allume, la température $T$ (en °C) captée par la sonde en fonction du temps $t$ (en secondes) est modélisée par :
+
+\[f(t)=60  - 40e^{-0,2t} \quad \text{pour } t \geq 0\]
+
+\begin{enumerate}
+    \item Déterminer $\displaystyle\lim_{t \to +\infty} e^{-0,2t}$. \hfill $\square$
+        \cadreCorrection{1}{1.5}{
+            \[\lim_{t \to +\infty} e^{-0,2t} = 0\]
+        }
+    \item En déduire $\displaystyle\lim_{t \to +\infty} f(t)$. Interpréter ce résultat dans le contexte de la surveillance de la température. \hfill $\square$
+        \cadreCorrection{1}{3}{
+            \[\lim_{t \to +\infty} f(t) = 60\]
+            Interprétation : Lorsque le temps $t$ tend vers l'infini, la température $T$ captée par la sonde tend vers 60°C. Cela signifie que le serveur atteint une température stable de 60°C après un certain temps d'allumage, ce qui est crucial pour la surveillance thermique afin d'éviter les surchauffes.
+        }
+
+    \item Calculer $f'(t)$.  
+        \cadreCorrection{1}{2}{
+            En utilisant la règle de dérivation, on trouve :
+            \[f'(t) = 0 - 40 \cdot (-0,2) e^{-0,2t} = 8 e^{-0,2t}\]
+        }
+        \item Étudier le signe de $f'(t)$ et en déduire les variations de la fonction $f$. Vous présenterez les résultats dans un tableau. \hfill $\square$
+        \cadreCorrection{1}{5}{
+            Le signe de $f'(t)$ est déterminé par le signe de $e^{-0,2t}$, qui est toujours positif pour tout $t \geq 0$. Ainsi, $f'(t) > 0$ pour tout $t \geq 0$, ce qui signifie que la fonction $f$ est strictement croissante sur l'intervalle $[0, +\infty[$.
+        }
+    \item On considère que le système est stabilisé lorsque la température atteint 55°C.
+
+    À l'aide de GeoGebra, déterminer graphiquement au bout de combien de temps (arrondi à l'unité) cette température est atteinte.
+
+    \cadreCorrection{1}{2}{
+        En utilisant GeoGebra, on peut tracer la courbe de la fonction $f(t)$ et trouver l'intersection avec la ligne horizontale $y = 55$. En observant le graphique, on trouve que la température atteint 55°C environ au bout de 8 secondes.
+    }
+    \appelprof{}
+
+\end{enumerate}
+
+\pagebreak
+
+\textbf{PARTIE B: Gestion d'une pile de messages (Buffer) }
+
+\medskip
+
+Le système de surveillance génère des logs. Initialement, il y a \textbf{50 messages} en attente.\\
+
+Chaque minute :
+\begin{itemize}
+    \item Le système traite et supprime $20 \%$ des messages présents.
+    \item 30 nouveaux messages sont générés par les capteurs.
+\end{itemize}
+
+
+On note $u_n$ le nombre de messages à la minute $n$. On a $u_0 = 50$.
+
+\begin{enumerate}[resume]
+    \item Justifier que $u_{n+1} = 0,8 u_n + 30$. \hfill $\square$
+        \cadreCorrection{1}{3}{
+            À chaque minute, le nombre de messages traités et supprimés est de $20\%$ de $u_n$, soit $0,2 u_n$. Par conséquent, le nombre de messages restant après traitement est de $u_n - 0,2 u_n = 0,8 u_n$. Ensuite, 30 nouveaux messages sont ajoutés, ce qui donne la relation de récurrence : 
+            \[u_{n+1} = 0,8 u_n + 30\]
+        }
+    \item On pose $v_n = u_n - 150$. Montrer que $(v_{n})$ est une suite gémétrique dont on déterminera les paramètres. \hfill $\square$
+        \cadreCorrection{1}{4}{
+            Pour tout $n$ entier naturel:  $v_{n+1} = u_{n+1} - 150 = 0,8 u_n + 30 - 150 = 0,8 u_n - 120$
+
+            or $u_n = v_n + 150$, donc: $v_{n+1} = 0,8 (v_n + 150) - 120 = 0,8 v_n + 120 - 120 = 0,8 v_n$
+
+            Ainsi, la suite $(v_n)$ est une suite géométrique de raison $q=0,8$ et de premier terme $v_0 = u_0 - 150 = -100$.
+        }
+
+    \item En déduire que $u_n = -100 \cdot 0,8^n + 150$. \hfill $\square$
+        \cadreCorrection{1}{3}{
+
+        $(v_n)$ est une suite géométrique de raison $q=0,8$ et de premier terme $v_0 = -100$ donc pour tout $n$ entier naturel:
+
+        \[v_n = v_0 \cdot q^n = -100 \cdot 0,8^n\]
+
+
+            or pour tout $n$ entier naturel: $u_n = v_n + 150 = -100 \cdot 0,8^n + 150$
+            }
+    \item Déterminer la limite de la suite $(u_n)$ et interpréter ce résultat dans le contexte de la gestion des messages. \hfill $\square$
+    \cadreCorrection{1}{4}{
+        \[\lim_{n \to +\infty} u_n = \lim_{n \to +\infty} (-100 \cdot 0,8^n + 150) = 150\]
+
+        Interprétation : Lorsque $n$ tend vers l'infini, le nombre de messages en attente $u_n$ tend vers 150. Cela signifie que le système de surveillance atteindra un état d'équilibre où il y aura toujours environ 150 messages en attente, ce qui peut indiquer une saturation du buffer si le nombre de messages générés dépasse la capacité de traitement du système.
+    }   
+
+    \item On souhaite savoir quand la pile dépassera 140 messages en attente. Compléter l'algorithme suivant pour trouver la minute à laquelle cela se produit.
+    
+    \begin{minipage}{0.48\textwidth}
+        \begin{answer}{1}{4}
+        \begin{verbatim}
+    n <- ......
+    u <- ......
+    Tant que ............ faire
+        u <- ............
+        n <- ............
+    Fin Tant que
+    Afficher n
+    \end{verbatim}
+        \end{answer}
+   \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+\cadreCorrection{1}{4}{
+
+    %\begin{verbatim}
+    n <- 0
+    u <- 50
+    Tant que u > 140 faire
+        u <- 0,8 * u + 30
+        n <- n + 1
+    Fin Tant que
+    Afficher n
+     %\end{verbatim}
+
+}
+
+        \end{minipage}
+    
+\end{enumerate}
+
+\end{document}
+\medskip
+
+L'objectif de cette partie est l'étude de la fonction $f$ définie sur $\R$ par:
+
+\[f(x)=-0,5x^2+2x+1\]
+
+
+\begin{enumerate}
+    \item À l'aide de Géogebra, tracer la courbe représentative de la fonction $f$.\hfill $\square$
+    \item Créer deux curseurs $a$ et $b$ compris entre 0 et 5 avec un pas de 0,1.\hfill $\square$
+    \item Donner les valeurs suivantes à $a$ et $b$: $a=1$ et $b=4$.\hfill $\square$
+    \end{enumerate}
+
+
+    \bigskip
+
+    \textbf{Partie B: Somme de Riemann (Approximation)}
+
+    \medskip
+
+    On souhaite diviser l'intervalle $[a\,;\,b]$ en $n$ sous-intervalles de même longueur. 
+
+    \begin{enumerate}
+        \item Créer un curseur $n$ compris entre 1 et 100 avec un pas de 1.\hfill $\square$
+        \item Saisissez la commande \verb|S_inf = SommeInférieure(f, a, b, n)|\hfill $\square$
+        \item Saisissez la commande \verb|S_sup = SommeSupérieure(f, a, b, n)|\hfill $\square$
+        \item Changer la courleur de $S_{inf}$ et $S_{sup}$ pour les différencier.\hfill $\square$
+        \item Observer les valeurs de $S_{inf}$ et $S_{sup}$ pour différentes valeurs de $n$. \hfill $\square$
+        \item Que peut-on conjecturer sur la valeur de l'aire sous la courbe de $f$ entre $a$ et $b$ lorsque $n$ tend vers l'infini?\hfill $\square$
+        
+        \cadreCorrection{1}{3}{
+                Lorsque $n$ tend vers l'infini, les sommes de Riemann $S_{inf}$ et $S_{sup}$ convergent vers la même valeur, qui correspond à l'aire sous la courbe de la fonction $f$ entre les points $a$ et $b$. On peut conjecturer que cette aire est égale à la limite de ces sommes lorsque $n$ tend vers l'infini.
+
+                \[\lim_{n \to \infty} S_{\inf} = \lim_{n \to \infty} S_{\sup} = \lim_{n \to \infty} \int_{a}^{b} f(x) dx= \text{Aire sous la courbe de } f \text{ entre } a \text{ et } b\]        
+                }       
+
+
+
+    \end{enumerate}
+
+
+    \bigskip
+
+    \textbf{Partie C: Calcul de l'aire sous la courbe à l'aide de primitives}
+    
+    \medskip
+
+    \begin{enumerate}
+        \item Déterminer une primitive $F$ de la fonction $f$.\hfill $\square$
+        
+            \cadreCorrection{1}{3}{
+                Pour trouver une primitive $F$ de la fonction $f(x) = -0,5x^2 + 2x + 1$, nous allons trouver une primitive de  chaque terme de la fonction séparément.
+
+                \[F(x)=-0,5 \cdot \frac{x^3}{3} + 2 \cdot \frac{x^2}{2} + 1 \cdot x + C= -\frac{x^3}{6} + x^2 + x + C, \quad C \in \R\]
+            }
+
+        \item Calculer $F(b)-F(a)$ et interpréter ce résultat.\hfill $\square$
+            \cadreCorrection{1}{3}{
+                En calculant $F(b)-F(a)$, on obtient la valeur de l'aire sous la courbe de la fonction $f$ entre les points $a$ et $b$. 
+
+                \[F(b)-F(a) = \int_{a}^{b} f(x) dx=\int_{1}^{4} f(x) dx= F(4)-F(1)=\frac{28}{3} - \frac{11}{6} = \frac{56 - 11}{6} = \frac{45}{6} = \frac{15}{2}=7,5\]
+                Cette expression représente l'aire sous la courbe de $f$ entre les points $a$ et $b$ et au dessus de l'axe des abscisses.
+            }
+
+        \item Dans Géogebra, saisir la commande \verb|Aire = Intégrale(f, a, b)|. Comparer la valeur de $F(b)-F(a)$ avec celle de l'aire calculée dans Géogebra.\hfill $\square$
+        
+        
+            \cadreCorrection{1}{3}{
+                La valeur de $F(b)-F(a)$ est égale à l'aire calculée dans Géogebra, ce qui confirme que le calcul de l'aire sous la courbe de la fonction $f$ entre les points $a$ et $b$ est correct. 
+            }
+
+        \pagebreak
+        \thispagestyle{DS_LP}
+        \item Comparer la valeur de \verb|Aire| avec celles des sommes de Riemann $S_{inf}$ et $S_{sup}$ pour différentes valeurs de $n$.\hfill $\square$
+        
+            \cadreCorrection{1}{3}{
+            
+La valeur de \texttt{Aire} est égale à l'aire calculée dans Géogebra, qui correspond à l'aire sous la courbe de la fonction $f$ entre les points $a$ et $b$. En comparant cette valeur avec celles des sommes de Riemann $S_{inf}$ et $S_{sup}$ pour différentes valeurs de $n$, on peut observer que lorsque $n$ augmente, les valeurs de $S_{inf}$ et $S_{sup}$ se rapprochent de plus en plus de la valeur de \texttt{Aire}, confirmant ainsi la conjecture faite précédemment sur la convergence des sommes de Riemann vers l'aire sous la courbe.
+             }
+
+
+        \item Calculer la valeur moyenne de la fonction $f$ sur l'intervalle $[a\,;\,b]$ et interpréter ce résultat.\hfill $\square$
+        
+            \cadreCorrection{1}{3}{
+                La valeur moyenne de la fonction $f$ sur l'intervalle $[a\,;\,b]$ est donnée par la formule :
+                \[\mu_{[a; b]}=\frac{1}{b-a} \int_{a}^{b} f(x) dx = \frac{1}{4-1} \cdot \frac{15}{2} = \frac{1}{3} \cdot \frac{15}{2} = \frac{5}{2}=2,5\]
+                Cette valeur correspond à la hauteur du rectangle dont l'aire est égale à l'aire sous la courbe de $f$ entre $a$ et $b$.
+            }
+
+        \item Créer avec Géogébra le rectangle $ABCD$ tel que $AB$ soit égal à la valeur moyenne de $f$ sur $[a\,;\,b]$ et que $AD$ soit égal à $b-a$. Vérifier que l'aire de ce rectangle est égale à l'aire sous la courbe de $f$ entre $a$ et $b$.\hfill $\square$
+    
+            \cadreCorrection{1}{4}{
+                En créant le rectangle $ABCD$ avec $AB$ égal à la valeur moyenne de $f$ sur $[a\,;\,b]$ (soit 2,5) et $AD$ égal à $b-a$ (soit 3), on obtient un rectangle dont l'aire est donnée par :
+                \[\text{Aire}_{ABCD} = AB \cdot AD = 2,5 \cdot 3 = 7,5\]
+                Cette aire est égale à l'aire sous la courbe de $f$ entre les points $a$ et $b$, confirmant ainsi que le rectangle $ABCD$ a la même aire que celle sous la courbe de la fonction $f$ sur l'intervalle $[a\,;\,b]$.
+            }
+
+    \end{enumerate}
+
+
+
+\end{document}

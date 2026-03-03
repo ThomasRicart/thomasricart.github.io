@@ -48,9 +48,9 @@
 \useproflyclib{pythontex}   % Compile with pythontex
 \usepackage{lastpage}
 
-\makeatletter
-\def\@parboxrestore{\@arrayparboxrestore}   % Redéfinition de la commande \@parboxrestore
-\makeatother
+%\makeatletter
+%\def\@parboxrestore{\@arrayparboxrestore}   % Redéfinition de la commande \@parboxrestore
+%\makeatother
 
 \usepackage{pdfpages}
 %\includepdf[pages=-]{mon_test.pdf}
@@ -73,7 +73,7 @@
 
 
 \usepackage{etoolbox}
-\newbool{afficheCorrige}
+%\newbool{afficheCorrige}
 \newcommand{\cadreCorrection}[3]{%
     \begin{tcolorbox}[width=#1\linewidth, height=#2cm, colback=white, colframe=black, sharp corners]
         \ifbool{afficheCorrige}{%

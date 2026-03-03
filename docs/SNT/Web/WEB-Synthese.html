@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthèse SNT : Structure Web (HTML & CSS)</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --bg: #f4f7f6;
+            --code-bg: #272822;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--bg);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 { 
+            color: var(--primary); 
+            border-left: 5px solid var(--accent); 
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .code-block {
+            background-color: var(--code-bg);
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
+        .table-ref {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin: 15px 0;
+        }
+
+        .table-ref th, .table-ref td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .table-ref th { background-color: var(--primary); color: white; }
+
+        .highlight { color: #a6e22e; } /* Balises */
+        .property { color: #66d9ef; }  /* Propriétés CSS */
+        .comment { color: #75715e; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fiche Synthèse : Créer une page Web</h1>
+    <p>Niveau : Seconde SNT</p>
+</header>
+
+<section>
+    <h2>1. Structure de base d'un fichier HTML</h2>
+    <p>C'est le "squelette" indispensable de toute page web. Le <strong>Head</strong> contient les réglages invisibles, le <strong>Body</strong> contient ce qui s'affiche à l'écran.</p>
+    
+    <div class="code-block">
+        &lt;!DOCTYPE html&gt; <span class="comment">&lt;!-- Indique que c'est du HTML5 --&gt;</span><br>
+        &lt;html lang="fr"&gt;<br>
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt; <span class="comment">&lt;!-- Gère les accents --&gt;</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Titre de mon onglet&lt;/title&gt;<br>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- C'est ici que l'on lie le fichier CSS --&gt;</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css"&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Ceci est un paragraphe.&lt;/p&gt;<br>
+        &lt;/body&gt;<br>
+        &lt;/html&gt;
+    </div>
+</section>
+
+
+<section>
+    <h2>2. Les balises HTML de base</h2>
+    <table class="table-ref">
+        <thead>
+            <tr>
+                <th>Balise</th>
+                <th>Rôle</th>
+                <th>Exemple de syntaxe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></td>
+                <td>Titres (h1 est le plus gros)</td>
+                <td><code>&lt;h1&gt;Titre Principal&lt;/h1&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;p&gt;</code></td>
+                <td>Paragraphe de texte</td>
+                <td><code>&lt;p&gt;Mon texte ici.&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;img&gt;</code></td>
+                <td>Insertion d'une image</td>
+                <td><code>&lt;img src="image.jpg" alt="description"&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;a&gt;</code></td>
+                <td>Lien hypertexte</td>
+                <td><code>&lt;a href="https://google.fr"&gt;Lien&lt;/a&gt;</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;ul&gt;</code> et <code>&lt;li&gt;</code></td>
+                <td>Liste à puces</td>
+                <td><code>&lt;ul&gt;&lt;li&gt;Élément&lt;/li&gt;&lt;/ul&gt;</code></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>3. Le fichier CSS : Commandes de base</h2>
+    <p>Le CSS (<em>style.css</em>) sert à mettre en forme les éléments HTML. On cible une balise et on change ses propriétés.</p>
+
+    <div class="code-block">
+        <span class="comment">/* On cible le corps de la page */</span><br>
+        <span class="highlight">body</span> {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background-color</span>: #f0f0f0; <span class="comment">/* Couleur de fond */</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-family</span>: Arial, sans-serif; <span class="comment">/* Police de texte */</span><br>
+        }<br><br>
+        
+        <span class="comment">/* On cible tous les titres h1 */</span><br>
+        <span class="highlight">h1</span> {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">color</span>: darkblue; <span class="comment">/* Couleur du texte */</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">text-align</span>: center; <span class="comment">/* Alignement au centre */</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">font-size</span>: 40px; <span class="comment">/* Taille du texte */</span><br>
+        }<br><br>
+
+        <span class="comment">/* On cible les images */</span><br>
+        <span class="highlight">img</span> {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">width</span>: 300px; <span class="comment">/* Largeur de l'image */</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">border-radius</span>: 10px; <span class="comment">/* Coins arrondis */</span><br>
+        }
+    </div>
+</section>
+
+
+<footer>
+    <p style="text-align: center; color: #888; margin-top: 40px;">Fiche récapitulative SNT - 2026</p>
+</footer>
+
+</body>
+</html>
