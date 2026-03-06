@@ -1,0 +1,110 @@
+{
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex + pythontex + pdflatex",
+            "tools": ["pdflatex", "pythontex", "pdflatex"]
+        },
+        {
+            "name": "pdflatex",
+            "tools": ["pdflatex"]
+        },
+        {
+            "name": "xelatex",
+            "tools": ["xelatex"]
+        },
+        {
+            "name": "lualatex",
+            "tools": ["lualatex"]
+        },
+        {
+            "name": "latexmk (pdflatex)",
+            "tools": ["latexmk_pdflatex"]
+        },
+        {
+            "name": "latexmk (xelatex)",
+            "tools": ["latexmk_xelatex"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk_pdflatex",
+            "command": "latexmk",
+            "args": [
+                "-pdf",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk_xelatex",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pythontex",
+            "command": "pythontex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux", "*.log", "*.out", "*.synctex.gz", "*.fls", "*.fdb_latexmk", "*.pytxcode"
+    ],
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "python.defaultInterpreterPath": "C:\\Users\\thoma\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "[latex]": {
+        "editor.defaultFormatter": "nickfode.latex-formatter"
+    },
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "latex-workshop.intellisense.biblatexJSON.replace": {},
+    "editor.dropIntoEditor.preferences": [],
+    "claudeCode.preferredLocation": "panel",
+    "github.copilot.chat.languageContext.typescript.enabled": true,
+    "geminicodeassist.inlineSuggestions.enableAuto": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    }
+}

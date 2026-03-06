@@ -1,0 +1,171 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\packagepath/cadres_cours}
+
+% On ne met pas d'options ici car ProfLycee le fait déjà
+\RequirePackage{tcolorbox}
+\RequirePackage{multicol}
+%\RequirePackage{xcolor}
+\tcbuselibrary{breakable, skins} 
+
+% --- Définition des couleurs ---
+\definecolor{monBleu}{RGB}{0, 80, 160}
+\definecolor{monVert}{RGB}{34, 139, 34}
+\definecolor{monRouge}{RGB}{180, 0, 0}
+
+% --- Commande pour le bandeau de titre (Header) ---
+
+\newcommand{\makeheader}{
+    \begin{tcolorbox}[
+        enhanced,
+        colback=white,
+        colframe=black,
+        sharp corners,
+        boxrule=1pt,
+        top=2mm, bottom=2mm,
+        left=2mm, right=2mm,
+        valign=center
+    ]
+    \parbox[c]{0.15\linewidth}{\centering\bfseries\Large \docname} % Numéro (ex: LP05)
+    \hfill
+    \parbox[c]{0.65\linewidth}{\centering\bfseries\Large \chaptername} % Titre (ex: Les fonctions)
+    \hfill
+    \parbox[c]{0.15\linewidth}{\quad} % Classe (ex: Première NSI)
+    \end{tcolorbox}
+    \vspace{10pt}
+}
+
+% --- Style de base commun ---
+\tcbset{styleBOX/.style={
+    enhanced,
+    breakable,            % Permet le passage sur plusieurs pages [cite: 21, 28]
+    sharp corners,        % Coins droits pour un aspect technique 
+    boxrule=1pt,
+    fonttitle=\bfseries,
+    attach boxed title to top left={xshift=5mm, yshift=-3mm},
+    boxed title style={
+        coltitle=black,
+        colback=white, 
+        %colframe=gray!40, 
+        sharp corners, 
+        boxrule=0.5pt
+    },
+    top=4mm,              % Espace interne pour laisser de la place au titre
+}}
+
+% --- Cadre DEFINITION ---
+\newtcolorbox[auto counter]{definition}[1][]{
+    styleBOX,
+    colframe=monBleu,
+    colback=monBleu!2,
+    coltitle=monBleu,
+    colframe=monBleu,
+    boxed title style={colframe=monBleu, colback=white, boxrule=1pt, sharp corners},
+    title=Définition \thetcbcounter\ifstrempty{#1}{}{ : #1}
+}
+
+% --- Cadre PROPRIETE ---
+\newtcolorbox[auto counter]{propriete}[1][]{
+    styleBOX,
+    colframe=monVert,
+    colback=monVert!2,
+    coltitle=monVert,
+    boxed title style={colframe=monVert, colback=white, boxrule=1pt, sharp corners},
+    title=Propriété \thetcbcounter\ifstrempty{#1}{}{ : #1}
+}
+
+% --- Cadre METHODE ---
+\newtcolorbox[auto counter]{methode}[1][]{
+    styleBOX,
+    colframe=monRouge,
+    colback=monRouge!2,
+    coltitle=monRouge,
+    boxed title style={colframe=monRouge, colback=white, boxrule=1pt, sharp corners},
+    title=Méthode \thetcbcounter\ifstrempty{#1}{}{ : #1}
+}
+
+% --- Cadre EXEMPLE (Sans bordure ni fond) ---
+% --- Cadre EXEMPLE (Sans bordure ni fond) ---
+\newtcolorbox[auto counter]{exemple}[1][]{
+    styleBOX,
+    frame hidden,           % Cache la bordure
+    colback=white,          % Fond blanc
+    coltitle=black,
+    left=0mm,               % Aligné à gauche (avec unité mm)
+    right=0mm,              % Aligné à droite
+    % On protège le titre avec des accolades pour éviter l'erreur de lecture
+    title={Exemple \noexpand\number\value{tcbcounter}\ifstrempty{#1}{}{ : #1}},
+    boxed title style={
+        colframe=gray!60, 
+        colback=white, 
+        boxrule=1pt, 
+        sharp corners
+    },
+    before skip=5pt,
+    %after skip=5pt
+}
+
+
+% --- Cadre REMARQUE ---
+\newtcolorbox{remarque}[1][]{
+    styleBOX,
+    colframe=gray!60,         % Bordure grise
+    colback=gray!5,           % Fond gris très clair
+    coltitle=black,           % Titre en noir pour la lisibilité
+    % On n'utilise pas auto counter ici pour que les remarques restent "libres"
+    % mais on garde l'encadrement du titre comme demandé précédemment
+    boxed title style={colframe=gray!60, colback=white, boxrule=1pt, sharp corners},
+    title=Remarque\ifstrempty{#1}{}{ : #1}
+}
+
+% --- Style Exercice de cours (Sans contour, barre latérale) ---
+\newtcolorbox[auto counter]{exercice_cours}[1][]{
+    enhanced,
+    breakable,
+    sharp corners,
+    boxrule=0pt,            % On enlève toutes les bordures
+    leftrule=3pt,           % On garde juste une barre à gauche
+    colframe=gray!60,       % Couleur de la barre latérale
+    colback=white,          % Fond blanc pour rester léger
+    fonttitle=\bfseries,
+    coltitle=black,
+    attach boxed title to top left={xshift=0mm, yshift=0mm},
+    boxed title style={
+        colback=gray!15, 
+        colframe=white, 
+        sharp corners, 
+        boxrule=0pt
+    },
+    % Ajout de l'icône \faPenNib ou \faEdit avant le titre
+    title={\small\faPenNib\normalsize\enskip Exercice \thetcbcounter\ifstrempty{#1}{}{ : #1}},
+    before skip=5pt,
+    after skip=10pt,
+    %top=5mm
+}
+
+% --- Cadre DEMONSTRATION (Simple avec pointillés) ---
+\newtcolorbox{demonstration}[1][]{
+    enhanced,
+    breakable,
+    sharp corners,
+    boxrule=0pt,
+    frame hidden,          % On cache le cadre
+    % On trace une ligne pointillée (dotted) à gauche
+    leftrule=4pt, % Barre plus épaisse    colback=white,
+    colframe=gray!30, % Gris très clair pour ne pas alourdir
+    coltitle=black,
+    fonttitle=\bfseries\itshape,
+    attach boxed title to top left={xshift=0mm, yshift=0mm},
+    boxed title style={
+        colback=gray!10, 
+        colframe=white, 
+        sharp corners, 
+        boxrule=0pt
+    },
+    % Icône différente (faFlask ou faLightbulb) pour varier
+    title={\small\faFlask\normalsize\enskip Démonstration\ifstrempty{#1}{}{ : #1}},
+    before skip=15pt,
+    after skip=15pt,
+    left=4mm,               % Espace entre les points et le texte
+    top=5mm
+}
+

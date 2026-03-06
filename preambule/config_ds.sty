@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+% DEVOIRS
+\newcommand{\NomPrenom}{%
+\begin{center}
+	\begin{tabular}{cc}
+	\begin{tcolorbox}[colback=white, title=, width=9cm]	Nom: \end{tcolorbox}&
+	\begin{tcolorbox}[colback=white, title=, width=9cm]	Prénom: \end{tcolorbox}\\
+	\end{tabular}
+\end{center}
+}
+\newcommand{\NomPrenomNote}{%
+\begin{center}
+	\begin{tabular}{ccc}
+	\begin{tcolorbox}[colback=white, title=, width=6.9cm]	\footnotesize{Nom:} \end{tcolorbox}&
+	\begin{tcolorbox}[colback=white, title=, width=6.9cm] \footnotesize{Prénom}: \end{tcolorbox}&
+	\begin{tcolorbox}[colback=white, title=, width=3.9cm] \footnotesize{Note}: \end{tcolorbox}\\
+	\end{tabular}
+\end{center}
+}
+
+% BTS
+\newcommand{\appelprof}{%
+\begin{center}
+	\begin{minipage}{2cm}
+	\includegraphics[scale=0.6]{\packagepath/Images/appel_prof.png}
+\end{minipage}
+\begin{minipage}{11cm}
+	\begin{center}
+	\texttt{Appeler le professeur pour expliquer votre démarche \\ même si celle-ci est inaboutie.}
+	\end{center}
+\end{minipage}
+\end{center}
+	}
+
+
+\newcommand{\SigleAppelProf}{
+\begin{center}
+	\includegraphics[scale=0.6]{\packagepath/Images/appel_prof.png}
+\end{center}}
+
+\newcommand{\consignePlus}{
+\emph{Si vous n'avez pas assez de place dans les espaces de réponse, vous pouvez utiliser la une feuille séparée sur laquelle vous indiquerez clairement le numéro de la question et vos noms et prénoms.}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%ùù Devoirs %%%%%%
+\newcounter{nexods}
+\setcounter{nexods}{0}
+\newcommand{\exods}[1]{
+\refstepcounter{nexods}
+  \ifthenelse{#1 = 1}{%
+    % Si le paramètre est égal à 1
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \hfill \fbox{\qquad\qquad \texttt{\textbf{/1 point}\;}}
+  }{%
+    \ifthenelse{#1 > 1}{%
+      % Si le paramètre est égal à 2
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \hfill \fbox{\qquad\qquad \texttt{\textbf{/#1 points}}}
+    }{%
+      % Sinon
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \par
+    }%
+  }%
+  \rule{0.96\linewidth}{1pt}
+}

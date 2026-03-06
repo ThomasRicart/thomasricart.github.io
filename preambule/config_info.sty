@@ -1,0 +1,76 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\packagepath/config_info}
+
+\RequirePackage[pythontex]{ProfLycee}
+\useproflyclib{pythontex}
+\RequirePackage{listings}
+\RequirePackage{fontawesome5}
+
+% Configuration de lstlisting pour l'informatique (Python par défaut)
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{green!50!black},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    frame=single,
+    tabsize=4,
+    breaklines=true
+}
+
+% --- Couleurs pour les langages ---
+\definecolor{delim}{RGB}{20,105,176}
+\definecolor{numb}{RGB}{106, 109, 32}
+\definecolor{stringcolor}{RGB}{0, 150, 0}
+\definecolor{commentcolor}{RGB}{100, 100, 100}
+
+% --- Style C++ ---
+\lstdefinestyle{myCPP}{
+    language=C++,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{commentcolor}\itshape,
+    stringstyle=\color{stringcolor},
+    morekeywords={std, cout, cin, endl}
+}
+
+% --- Style HTML ---
+\lstdefinestyle{myHTML}{
+    language=HTML,
+    basicstyle=\ttfamily\small,
+    tagstyle=\color{blue},
+    keywordstyle=\color{magenta},
+    stringstyle=\color{stringcolor},
+    commentstyle=\color{commentcolor}
+}
+
+% --- Style CSS ---
+\lstdefinestyle{myCSS}{
+    language=CSS,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{stringcolor},
+    commentstyle=\color{commentcolor},
+    morekeywords={color, background, margin, padding, font-size}
+}
+
+
+% --- Style JavaScript ---
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, false, finally, for, function, if, in, instanceof, new, null, return, switch, this, throw, true, try, typeof, var, void, while, with},
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]"
+}
+\lstdefinestyle{myJS}{
+    language=JavaScript,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    stringstyle=\color{stringcolor},
+    commentstyle=\color{commentcolor},
+    morekeywords={let, const, var, function, console, log}
+}

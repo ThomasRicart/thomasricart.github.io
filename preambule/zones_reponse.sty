@@ -1,0 +1,39 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\packagepath/zones_reponse}
+
+\RequirePackage{tcolorbox}
+
+% Commande : \reponse[largeur]{hauteur}
+\newcommand{\reponse}[2][\linewidth]{
+    %\begin{center}
+    \begin{tcolorbox}[
+        width=#1\linewidth,
+        height=#2cm,
+        colback=lightgray!20,
+        colframe=black,
+        rounded corners,
+        enhanced % permet des réglages avancés si besoin
+    ]
+    \end{tcolorbox}
+    %\end{center}
+}
+
+%%%%%%%%%%%%%ùùù
+%\RequirePackage{etoolbox}
+%\RequirePackage{environ} % Indispensable pour capturer le contenu
+
+% --- 1. Création du booléen avec etoolbox ---
+%\newbool{affichereponse}
+%\setbool{affichereponse}{true} % Valeur par défaut (PROFS)
+
+% Environnement pour cacher/montrer du contenu (Réponse, Correction, etc.)
+\newtcolorbox{blocvisible}[1][]{
+    \visibleornot, % Utilise votre \def\visibleornot{visible}
+    enhanced,
+    breakable,
+    colback=gray!10,
+    colframe=black,
+    rounded corners,
+    boxrule=0.5pt,
+    #1cm % Permet de passer des options locales (ex: height=3cm)
+}

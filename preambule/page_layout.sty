@@ -1,0 +1,116 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\packagepath/page_layout}
+
+\RequirePackage{etoolbox}
+\RequirePackage{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage[normalem]{ulem} %
+\RequirePackage{titlesec}       %
+
+% --- 1. Configuration de la géométrie ---
+\geometry{
+    paper=a4paper,
+    top=1.5cm,          
+    bottom=1.5cm,       
+    left=1.5cm,       
+    right=1.5cm,      
+    headheight=15pt,  
+    headsep=10pt,     
+    footskip=30pt     
+} %
+
+% --- 2. Réglages du soulignement (ulem) ---
+% On définit une épaisseur plus importante (ex: 1.5pt au lieu de 0.4pt)
+\renewcommand{\ULthickness}{1.5pt} 
+% On descend un peu le trait pour qu'il ne coupe pas les lettres
+\setlength{\ULdepth}{4pt}
+
+% --- Modification des puces pour les listes itemize ---
+\RequirePackage{enumitem}
+
+% Définit la puce par défaut pour le niveau 1
+\setlist[itemize,1]{label=$\bullet$}
+% Définit une puce différente pour le niveau 2 (optionnel)
+\setlist[itemize,2]{label=$\circ$}
+
+
+% --- 2. Configuration des entêtes et pieds de page ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small \docname \, -- \chaptername} 
+\fancyhead[R]{\small \level \, \course} 
+\fancyfoot[C]{\thepage}          
+\renewcommand{\headrulewidth}{0.4pt} %
+
+% Style spécifique pour les cours
+\fancypagestyle{cours_FP}{
+    \fancyhf{} 
+    \fancyhead[L]{\small \docname \, -- \chaptername} 
+    \fancyhead[R]{\small \level \, \course} 
+    \fancyfoot[C]{\thepage}          
+    \renewcommand{\headrulewidth}{0.4pt}
+} %
+
+% Styles pour les DS (Première et dernière page)
+\fancypagestyle{DS_FP}{
+    \fancyhf{} 
+    \fancyhead[L]{\small \docname \, -- \chaptername} 
+    \fancyhead[R]{\small \level \, \course} 
+    \fancyfoot[C]{\thepage}          
+    \fancyfoot[R]{\texttt{Tourner la page     \faHandPointRight[regular]
+}} 
+    \renewcommand{\headrulewidth}{0.4pt}
+} %
+
+\fancypagestyle{DS_LP}{
+    \fancyhf{} 
+    \fancyhead[L]{\small \docname \, -- \chaptername} 
+    \fancyhead[R]{\small \level \, \course} 
+    \fancyfoot[C]{\thepage}          
+    \renewcommand{\headrulewidth}{0.4pt}
+} %
+
+% Force le style fancy même sur les pages de chapitre
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{} %
+
+% --- 3. Formatage des Titres (Sections et Sous-sections) ---
+
+% Numérotation : I, II, III pour les sections
+\renewcommand{\thesection}{\Roman{section}} %
+% Numérotation : 1, 2, 3 pour les subsections (sans le I. devant)
+\renewcommand{\thesubsection}{\arabic{subsection}.} %
+
+% Style des SECTIONS (Soulignées)
+% Correction de l'erreur \markcase : utilisation d'une méthode compatible ulem + titlesec
+\titleformat{\section}
+  {\normalfont\Large\bfseries} 
+  {\thesection.}               
+  {1em}                        
+  {\uline}                     % Commande simple de ulem (marche si le titre n'est pas trop complexe)
+
+% Style des SOUS-SECTIONS (Décalées de 0.5cm)
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\thesubsection}
+  {1em}
+  {} %
+
+\titlespacing*{\subsection}
+  {0.5cm}          % Retrait à gauche
+  {3.5ex plus 1ex minus .2ex} 
+  {2.3ex plus .2ex} %
+
+% Style des SOUS-SOUS-SECTIONS (Décalées de 1cm)
+\titlespacing*{\subsubsection}
+  {1cm}            % Retrait à gauche
+  {3.5ex plus 1ex minus .2ex} 
+  {2.3ex plus .2ex} %
+
+% --- 4. Automatisation de la remise à zéro des compteurs ---
+% Cette partie permet que Définition 1 reparte à 1 à chaque nouvelle section
+\preto\section{%
+  \ifdefined\c@tcb@cnt@definition\setcounter{tcb@cnt@definition}{0}\fi%
+  \ifdefined\c@tcb@cnt@propriete\setcounter{tcb@cnt@propriete}{0}\fi%
+  \ifdefined\c@tcb@cnt@methode\setcounter{tcb@cnt@methode}{0}\fi%
+  \ifdefined\c@tcb@cnt@exercice_cours\setcounter{tcb@cnt@exercice_cours}{0}\fi%
+}

@@ -1,0 +1,223 @@
+% cadres-lycee.sty
+% Version prof maths + NSI – Mars 2026
+
+\ProvidesPackage{\packagepath/cadres-lycee}[2026/03/04 v2.0 Cadres lycée Maths-NSI]
+
+\RequirePackage{xcolor}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable,theorems,most,xparse}
+
+\RequirePackage{amsmath,amsthm}   % si Proflycee ne les charge pas déjà
+\RequirePackage{enumitem}         % pour listes personnalisées
+\RequirePackage{ifthen}           % pour conditions simples
+
+% ────────────────────────────────────────────────
+% Couleurs (ajustables)
+% ────────────────────────────────────────────────
+\definecolor{vertpropriete}{RGB}{0,120,60}     % vert foncé propre
+\definecolor{violetmethode}{RGB}{100,0,140}    % violet maths
+\definecolor{rougedef}{RGB}{180,0,0}           % rouge définition
+\definecolor{bleutheo}{RGB}{0,80,160}          % bleu théorème
+\definecolor{jauneremarque}{RGB}{200,140,0}    % jaune remarque
+\definecolor{grisreponse}{RGB}{60,60,60}       % gris cadre réponse
+\definecolor{violetcode}{RGB}{120,40,180}      % violet NSI code
+
+% ────────────────────────────────────────────────
+% Compteurs (choix : par section ou partagé)
+% ────────────────────────────────────────────────
+\newif\ifcompteurparsection
+\compteurparsectiontrue   % <-- change en false si tu veux un seul compteur global
+
+\ifcompteurparsection
+  \newtheoremstyle{lycee}% nom du style
+    {3mm}{3mm}% espacements
+    {\normalfont}{}% corps
+    {\bfseries}{.}{ }{}% tête
+  \theoremstyle{lycee}
+  \newtheorem{prop}{Propriété}[section]
+  \newtheorem{meth}{Méthode}[section]
+  \newtheorem{defi}{Définition}[section]
+  \newtheorem{theo}{Théorème}[section]
+  \newtheorem{coro}{Corollaire}[section]
+  \newtheorem{rem}{Remarque}[section]
+  \newtheorem{exa}{Exemple}[section]
+\else
+  \newtheorem{prop}{Propriété}
+  \newtheorem{meth}{Méthode}
+  \newtheorem{defi}{Définition}
+  \newtheorem{theo}{Théorème}
+  \newtheorem{coro}{Corollaire}
+  \newtheorem{rem}{Remarque}
+  \newtheorem{exa}{Exemple}
+\fi
+
+% ────────────────────────────────────────────────
+% Environnements tcolorbox (théorèmes-like)
+% ────────────────────────────────────────────────
+
+% Propriété – vert
+\newtcolorbox{propriete}[1][]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=vertpropriete,
+  colbacktitle=vertpropriete!10,
+  coltitle=black,
+  fonttitle=\bfseries,
+  title=Propriété \ifcompteurparsection\theprop\else\theprop\fi,
+  attach boxed title to top left={xshift=12pt,yshift*=-\tcboxedtitleheight},
+  boxed title style={colback=vertpropriete!10},
+  sharp corners=south,
+  #1
+}
+
+% Méthode – violet
+\newtcolorbox{methode}[1][]{
+  enhanced, breakable,
+  colback=white,
+  colframe=violetmethode,
+  colbacktitle=violetmethode!15,
+  title=Méthode \ifcompteurparsection\themeth\else\themeth\fi,
+  fonttitle=\bfseries,
+  attach boxed title to top left={xshift=12pt,yshift=-\tcboxedtitleheight},
+  boxed title style={colback=violetmethode!15},
+  #1
+}
+
+% Définition – rouge
+\newtcolorbox{definition}[1][]{
+  enhanced, breakable,
+  colback=white!97,
+  colframe=rougedef,
+  colbacktitle=rougedef!12,
+  title=Définition \ifcompteurparsection\thedifi\else\thedifi\fi,
+  fonttitle=\bfseries,
+  attach boxed title to top left={xshift=12pt,yshift=-\tcboxedtitleheight},
+  boxed title style={colback=rougedef!12},
+  #1
+}
+
+% Théorème – bleu
+\newtcolorbox{theoreme}[1][]{
+  enhanced, breakable,
+  colback=white,
+  colframe=bleutheo,
+  colbacktitle=bleutheo!10,
+  title=Théorème \ifcompteurparsection\thetheo\else\thetheo\fi,
+  fonttitle=\bfseries,
+  attach boxed title to top left={xshift=12pt,yshift=-\tcboxedtitleheight},
+  #1
+}
+
+% Corollaire – bleu clair
+\newtcolorbox{corollaire}[1][]{
+  enhanced,
+  colback=white,
+  colframe=bleutheo!70,
+  title=Corollaire \ifcompteurparsection\thecoro\else\thecoro\fi,
+  fonttitle=\bfseries,
+  #1
+}
+
+% Remarque – jaune discret
+\newtcolorbox{remarque}[1][]{
+  enhanced,
+  colback=yellow!5,
+  colframe=jauneremarque!70,
+  colbacktitle=jauneremarque!20,
+  title=Remarque \ifcompteurparsection\therem\else\therem\fi,
+  fonttitle=\itshape,
+  #1
+}
+
+% Exemple – gris clair
+\newtcolorbox{exemple}[1][]{
+  enhanced,
+  colback=gray!3,
+  colframe=gray!40,
+  title=Exemple \ifcompteurparsection\theexa\else\theexa\fi,
+  fonttitle=\bfseries,
+  #1
+}
+
+% ────────────────────────────────────────────────
+% Exercices (sans cadre lourd – style Proflycee-like)
+% ────────────────────────────────────────────────
+\newcounter{exercice}[section]
+\newenvironment{exercice}[1][]{% #1 = points ou titre
+  \refstepcounter{exercice}%
+  \bigskip\noindent%
+  \textbf{Exercice \theexercice\ifthenelse{\equal{#1}{}}{}{ -- #1}}\par%
+  \smallskip%
+}{\bigskip}
+
+% Variante numérotée avec points
+\newcommand{\Exercice}[2][\theexercice]{% \Exercice{énoncé}{points}
+  \refstepcounter{exercice}%
+  \noindent\textbf{Exercice \theexercice\ (#2 pts)}\par
+  #1\par\bigskip
+}
+
+% ────────────────────────────────────────────────
+% Cadre Réponse élève (très pratique !)
+% ────────────────────────────────────────────────
+\newtcolorbox{reponseeleve}[3][]{ % #1=options tcb, #2=points, #3=hauteur mini
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=grisreponse,
+  colbacktitle=gray!15,
+  title={Réponse élève \ifthenelse{\equal{#2}{}}{}{(#2 pts)}},
+  fonttitle=\bfseries,
+  sharp corners,
+  boxrule=0.6pt,
+  arc=4pt,
+  before upper={\parindent=15pt},
+  height fixed for=none,
+  min height=#3,
+  #1
+}
+
+% Variante avec lignes (style copie)
+\newenvironment{reponsecopie}[2][4cm]{% #1=hauteur, #2=points
+  \begin{reponseeleve}[#2 pts]{#1}
+    \vspace*{\stretch{1}}
+    \hrule height 0.4pt \vspace{0.6em}
+    \hrule height 0.4pt \vspace{0.6em}
+    \hrule height 0.4pt \vspace{0.6em}
+    \hrule height 0.4pt \vspace{\stretch{1}}
+  \end{reponseeleve}
+}
+
+% ────────────────────────────────────────────────
+% NSI – Cadre code & trace
+% ────────────────────────────────────────────────
+\newtcolorbox{codeNSI}[1][]{
+  enhanced,
+  colback=violetcode!5,
+  colframe=violetcode,
+  colbacktitle=violetcode!20,
+  title={Code / Algorithme},
+  fonttitle=\bfseries\ttfamily,
+  listing only,
+  listing options={language=Python,basicstyle=\small\ttfamily},
+  #1
+}
+
+\newtcolorbox{traceexec}[1][]{
+  enhanced,
+  colback=gray!8,
+  colframe=gray!60,
+  title={Trace d'exécution},
+  fonttitle=\itshape,
+  #1
+}
+
+% Macro rapide pour insérer du code Python
+\newcommand{\Python}[1]{%
+  \begin{codeNSI}
+  #1
+  \end{codeNSI}%
+}
+
+\endinput

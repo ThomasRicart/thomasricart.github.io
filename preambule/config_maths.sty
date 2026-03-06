@@ -1,0 +1,65 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{\packagepath/config_maths}
+
+% --- Packages de base pour les maths ---
+\RequirePackage{amsmath, amsfonts, amssymb, amsthm}
+\RequirePackage{mathtools} % Améliorations de amsmath
+\RequirePackage{mathrsfs}  % Pour les lettres cursives (\mathscr{L})
+\RequirePackage{numprint}  % Pour formater les nombres (ex: \numprint{10000})
+\RequirePackage{icomma}    % Gestion correcte de la virgule décimale en français
+
+% --- Tableaux de variations et signes (Essentiel BTS) ---
+\RequirePackage{tkz-tab}   % Pour les tableaux de variations complexes
+
+% --- Raccourcis pour les ensembles de nombres ---
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\E}{\mathbb{E}}
+% --- Raccourcis pour l'analyse ---
+\newcommand{\dx}{\,\mathrm{d}x} % Pour les intégrales : \int f(x) \dx
+\newcommand{\dt}{\,\mathrm{d}t} % Pour les intégrales : \int f(x) \dt
+\newcommand{\e}{\mathrm{e}}     % Pour l'exponentielle droite : \e^x
+\newcommand{\Ree}{\text{Re}}       % partie réelle
+\newcommand{\Ima}{\text{Im}}       % partie imaginaire
+\renewcommand{\i}{\mathrm {i}}     % i pour les complexes
+\renewcommand{\j}{\mathrm {j}}     % j pour les complexes
+\renewcommand{\k}{\mathrm {k}}
+\newcommand{\conj}[1]{\overline{#1}}
+\newcommand{\abs}[1]{\left \lvert#1\right \rvert} % module
+\newcommand{\di}{\, | \,}
+
+\newcommand{\fonction}[5]{\begin{array}{lrcl}
+#1: & #2 & \longrightarrow & #3 \\
+    & #4 & \longmapsto & #5 \end{array}}
+	% {Nom fonction}{Df}{D_arrivée}{variable}{fonction}
+
+\newcommand{\Oij}{$(O; \vec{i}, \vec{j})$}
+\newcommand{\Oijk}{$(O; \vec{i}, \vec{j}, \vec{k})$}
+\newcommand{\Coorp}[2]{\begin{pmatrix} #1\\#2 \end{pmatrix}} 
+\newcommand{\Coore}[3]{\begin{pmatrix} #1\\#2\\#3 \end{pmatrix}}
+
+\newcommand{\vv}[1]{\overrightarrow{#1}}
+
+% --- Style des théorèmes (si hors tcolorbox) ---
+%\theoremstyle{definition}
+%\newtheorem{remarque}{Remarque}[section]
+%\newtheorem{exemple}{Exemple}[section]
+
+% --- Configuration de numprint ---
+\addtolength{\jot}{2mm} % Espacement plus large entre les lignes de align*
+
+\newcommand{\oo}[2]{\bigl] \, #1 \, ; #2 \,\bigl[ }
+\newcommand{\fo}[2]{\bigl[ \, #1 \, ; #2 \,\bigl[ }
+\newcommand{\of}[2]{\bigl] \, #1 \, ; #2 \,\bigl] }
+\newcommand{\ff}[2]{\bigl[ \, #1 \, ; #2 \,\bigl] }
+
+
+\RequirePackage{mleftright}
+\newcommand{\interv}[2]{\mleft[ #1 \,;\, #2 \mright]}
+
+\RequirePackage{fourier} % Donne un aspect plus "épais" et pro aux maths
