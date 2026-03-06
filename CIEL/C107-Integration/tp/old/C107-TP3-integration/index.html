@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://thomasricart.github.io/CIEL/C112-Nombres_complexes/exercices/C112-TD1-complexes_correction/">
+        <link rel="canonical" href="https://thomasricart.github.io/CIEL/C107-Integration/tp/old/C107-TP3-integration/">
       
       
-        <link rel="prev" href="../../../C107-Integration/tp/old/C107-TP4-integration/">
+        <link rel="prev" href="../../C107-TP3-integration/">
       
       
-        <link rel="next" href="../../tp/C112-TP1-complexes/">
+        <link rel="next" href="../C107-TP4-integration/">
       
       
         
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>Correction : C112-TD1 – Les Nombres Complexes - Cours de M. Ricart</title>
+        <title>TP 3: Synthèse d'Analyse - Modélisation et Moyenne d'un signal exponentiel - Cours de M. Ricart</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../_environments/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../_environments/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#correction-c112-td1-les-nombres-complexes" class="md-skip">
+        <a href="#tp-3-synthese-danalyse-modelisation-et-moyenne-dun-signal-exponentiel" class="md-skip">
           Aller au contenu
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../../.." title="Cours de M. Ricart" class="md-header__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
+    <a href="../../../../.." title="Cours de M. Ricart" class="md-header__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Correction : C112-TD1 – Les Nombres Complexes
+              TP 3: Synthèse d'Analyse - Modélisation et Moyenne d'un signal exponentiel
             
           </span>
         </div>
@@ -173,7 +173,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
   
@@ -194,7 +194,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../SNT/" class="md-tabs__link">
+        <a href="../../../../../SNT/" class="md-tabs__link">
           
   
   
@@ -216,7 +216,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../NSI_Premiere/" class="md-tabs__link">
+        <a href="../../../../../NSI_Premiere/" class="md-tabs__link">
           
   
   
@@ -240,7 +240,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+        <a href="../../../../" class="md-tabs__link">
           
   
   
@@ -262,7 +262,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Maths_Premiere/" class="md-tabs__link">
+        <a href="../../../../../Maths_Premiere/" class="md-tabs__link">
           
   
   
@@ -284,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../Divers/" class="md-tabs__link">
+        <a href="../../../../../Divers/" class="md-tabs__link">
           
   
   
@@ -326,7 +326,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Cours de M. Ricart" class="md-nav__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
+    <a href="../../../../.." title="Cours de M. Ricart" class="md-nav__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -344,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -402,7 +402,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../SNT/" class="md-nav__link ">
+            <a href="../../../../../SNT/" class="md-nav__link ">
               
   
   
@@ -469,7 +469,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../SNT/Informatique_embarquee/" class="md-nav__link ">
+            <a href="../../../../../SNT/Informatique_embarquee/" class="md-nav__link ">
               
   
   
@@ -539,7 +539,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../SNT/Internet/" class="md-nav__link ">
+            <a href="../../../../../SNT/Internet/" class="md-nav__link ">
               
   
   
@@ -609,7 +609,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../SNT/Photographie_numerique/" class="md-nav__link ">
+            <a href="../../../../../SNT/Photographie_numerique/" class="md-nav__link ">
               
   
   
@@ -679,7 +679,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../SNT/Web/" class="md-nav__link ">
+            <a href="../../../../../SNT/Web/" class="md-nav__link ">
               
   
   
@@ -760,7 +760,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../NSI_Premiere/" class="md-nav__link ">
+            <a href="../../../../../NSI_Premiere/" class="md-nav__link ">
               
   
   
@@ -827,7 +827,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../NSI_Premiere/WEB_langage/" class="md-nav__link ">
+            <a href="../../../../../NSI_Premiere/WEB_langage/" class="md-nav__link ">
               
   
   
@@ -897,7 +897,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../NSI_Premiere/TC_Types_Construits/" class="md-nav__link ">
+            <a href="../../../../../NSI_Premiere/TC_Types_Construits/" class="md-nav__link ">
               
   
   
@@ -985,7 +985,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../../" class="md-nav__link ">
               
   
   
@@ -1055,7 +1055,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../TP/" class="md-nav__link ">
+            <a href="../../../../TP/" class="md-nav__link ">
               
   
   
@@ -1128,7 +1128,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../EVALS/" class="md-nav__link ">
+            <a href="../../../../EVALS/" class="md-nav__link ">
               
   
   
@@ -1201,7 +1201,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../CCF/" class="md-nav__link ">
+            <a href="../../../../CCF/" class="md-nav__link ">
               
   
   
@@ -1280,7 +1280,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Maths_Premiere/" class="md-nav__link ">
+            <a href="../../../../../Maths_Premiere/" class="md-nav__link ">
               
   
   
@@ -1347,7 +1347,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Maths_Premiere/Revisions/" class="md-nav__link ">
+            <a href="../../../../../Maths_Premiere/Revisions/" class="md-nav__link ">
               
   
   
@@ -1426,7 +1426,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Divers/" class="md-nav__link ">
+            <a href="../../../../../Divers/" class="md-nav__link ">
               
   
   
@@ -1493,7 +1493,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../Divers/NSI/" class="md-nav__link ">
+            <a href="../../../../../Divers/NSI/" class="md-nav__link ">
               
   
   
@@ -1567,10 +1567,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercice-1-comprehension-et-forme-algebrique" class="md-nav__link">
+  <a href="#partie-1-determination-experimentale-du-parametre-c" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 1 : Compréhension et Forme Algébrique
+        Partie 1 : Détermination expérimentale du paramètre \(c\)
       
     </span>
   </a>
@@ -1578,10 +1578,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-2-operations-et-puissances-de-i" class="md-nav__link">
+  <a href="#partie-2-etude-du-signal-identifie" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 2 : Opérations et Puissances de \(i\)
+        Partie 2 : Étude du signal identifié
       
     </span>
   </a>
@@ -1589,21 +1589,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-3-resolution-dequations" class="md-nav__link">
+  <a href="#partie-3-integration-et-valeur-moyenne" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercice 3 : Résolution d'Équations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercice-4-formes-trigonometrique-et-exponentielle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercice 4 : Formes Trigonométrique et Exponentielle
+        Partie 3 : Intégration et Valeur Moyenne
       
     </span>
   </a>
@@ -1627,87 +1616,60 @@
 
 
 
-<h1 id="correction-c112-td1-les-nombres-complexes">Correction : C112-TD1 – Les Nombres Complexes</h1>
-<h2 id="exercice-1-comprehension-et-forme-algebrique">Exercice 1 : Compréhension et Forme Algébrique</h2>
-<p>Soit <span class="arithmatex">\(z = 3 - 4i\)</span>.</p>
+<h1 id="tp-3-synthese-danalyse-modelisation-et-moyenne-dun-signal-exponentiel">TP 3: Synthèse d'Analyse - Modélisation et Moyenne d'un signal exponentiel</h1>
+<p><strong>Objectif :</strong> Déterminer le paramètre d'un signal amorti à partir de contraintes géométriques, puis valider son étude par la dérivation et l'intégration.</p>
+<hr />
+<h2 id="partie-1-determination-experimentale-du-parametre-c">Partie 1 : Détermination expérimentale du paramètre <span class="arithmatex">\(c\)</span></h2>
+<p>On cherche à modéliser un signal par la fonction suivante :<br />
+<span class="arithmatex">\(f(x) = x e^{-cx}\)</span> (où <span class="arithmatex">\(c &gt; 0\)</span>)</p>
+<p>Le signal doit respecter une contrainte physique précise :
+1. Présenter un <strong>maximum</strong> (tangente horizontale) à l'instant <strong><span class="arithmatex">\(x = 0,5\)</span></strong>.</p>
+<p><strong>Instructions GeoGebra :</strong></p>
 <ol>
-<li><strong>Terminologie</strong> : <ul>
-<li>La partie réelle est <span class="arithmatex">\(\text{Re}(z) = 3\)</span>.</li>
-<li>La partie imaginaire est <span class="arithmatex">\(\text{Im}(z) = -4\)</span> (attention, le <span class="arithmatex">\(i\)</span> ne fait pas partie de la valeur de la partie imaginaire).</li>
-</ul>
+<li>
+<p>Créez un curseur <strong><code>c</code></strong> allant de 0.1 à 5 (incrément 0.1).</p>
 </li>
-<li><strong>Conjugué</strong> : <ul>
-<li>Le conjugué est <span class="arithmatex">\(\overline{z} = 3 + 4i\)</span>[cite: 304].</li>
-</ul>
+<li>
+<p>Saisissez la fonction : <code>f(x) = x * exp(-c*x)</code>.</p>
 </li>
-<li><strong>Module</strong> : <ul>
-<li><span class="arithmatex">\(|z| = \sqrt{3^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)</span>.</li>
-</ul>
+<li>
+<p>Créez un point <strong><code>M</code></strong> sur la courbe, placez-le précisément à <span class="arithmatex">\(x=0,5\)</span> et tracez sa <strong>tangente</strong> (Outil Tangente).</p>
 </li>
-<li><strong>Opposé</strong> : <ul>
-<li>L'affixe du point <span class="arithmatex">\(P\)</span> symétrique par rapport à l'origine est <span class="arithmatex">\(-z = -3 + 4i\)</span>.</li>
-</ul>
+<li>
+<p><strong>Mission :</strong> Ajustez le curseur <strong><code>c</code></strong> pour que la tangente en <span class="arithmatex">\(x=0,5\)</span> soit horizontale.</p>
 </li>
+<li><em>Note : La valeur cible à trouver est <span class="arithmatex">\(c = 2\)</span>.</em></li>
 </ol>
 <hr />
-<h2 id="exercice-2-operations-et-puissances-de-i">Exercice 2 : Opérations et Puissances de <span class="arithmatex">\(i\)</span></h2>
+<h2 id="partie-2-etude-du-signal-identifie">Partie 2 : Étude du signal identifié</h2>
+<p>Utilisez maintenant la valeur trouvée (<strong><span class="arithmatex">\(c = 2\)</span></strong>) pour analyser le comportement du signal.</p>
 <ol>
-<li><strong>Puissances de <span class="arithmatex">\(i\)</span></strong> :<ul>
-<li><span class="arithmatex">\(i^2 = -1\)</span>.</li>
-<li><span class="arithmatex">\(i^3 = i^2 \times i = -1 \times i = -i\)</span>.</li>
-</ul>
+<li><strong>Étude des variations :</strong></li>
+<li>Saisissez <code>f'(x)</code> pour afficher la fonction dérivée.</li>
+<li>
+<p><em>Question :</em> Justifiez par le calcul que la fonction est croissante sur <span class="arithmatex">\([0 ; 0,5]\)</span> puis décroissante sur <span class="arithmatex">\([0,5 ; +\infty[\)</span>.</p>
 </li>
-<li><strong>Identité remarquable</strong> :<ul>
-<li><span class="arithmatex">\((1+i)^2 = 1^2 + 2i + i^2 = 1 + 2i - 1 = 2i\)</span>.</li>
-</ul>
+<li>
+<p><strong>Analyse de la pente :</strong></p>
 </li>
-<li><strong>Quotient</strong> :<ul>
-<li>Pour <span class="arithmatex">\(z = \dfrac{3-i}{4-3i}\)</span>, on multiplie par le conjugué du dénominateur, soit <strong><span class="arithmatex">\(4+3i\)</span></strong>.</li>
-<li><em>Calcul détaillé :</em> <span class="arithmatex">\(z = \dfrac{(3-i)(4+3i)}{(4-3i)(4+3i)} = \dfrac{12 + 9i - 4i - 3i^2}{16 + 9} = \dfrac{15 + 5i}{25} = \dfrac{3}{5} + \dfrac{1}{5}i\)</span>.</li>
-</ul>
-</li>
+<li>Placez un point <code>N</code> appartenant à la courbe et tracez la tangente en ce point.</li>
+<li>Déplacez le point <code>N</code> vers la droite (grandes valeurs de <span class="arithmatex">\(x\)</span>).</li>
+<li><em>Observation :</em> Pourquoi la pente de la tangente tend-elle vers 0 ? Quel terme de la fonction (<span class="arithmatex">\(x\)</span> ou <span class="arithmatex">\(e^{-2x}\)</span>) "gagne" sur l'autre à long terme ?</li>
 </ol>
 <hr />
-<h2 id="exercice-3-resolution-dequations">Exercice 3 : Résolution d'Équations</h2>
-<p>Soit <span class="arithmatex">\(4z^2 - 4z + 5 = 0\)</span>.</p>
+<h2 id="partie-3-integration-et-valeur-moyenne">Partie 3 : Intégration et Valeur Moyenne</h2>
+<p>On souhaite évaluer la valeur moyenne du signal sur une fenêtre temporelle choisie.</p>
 <ol>
-<li><strong>Discriminant</strong> : <ul>
-<li><span class="arithmatex">\(\Delta = (-4)^2 - 4(4)(5) = 16 - 80 = -64\)</span>.</li>
-</ul>
+<li>
+<p><strong>Configuration :</strong> Créez deux curseurs <strong><code>a</code></strong> (min 0) et <strong><code>b</code></strong> (min 0.1). Réglez <code>a = 0</code> et <code>b = 2</code>.</p>
 </li>
-<li><strong>Nature des solutions</strong> : <ul>
-<li>Comme <span class="arithmatex">\(\Delta &lt; 0\)</span>, il existe deux solutions complexes conjuguées.</li>
-</ul>
+<li>
+<p><strong>Calcul global :</strong> Saisissez <code>I = Intégrale(f, a, b)</code> pour obtenir l'aire sous la courbe.</p>
 </li>
-<li><strong>Valeurs des solutions</strong> : <ul>
-<li><span class="arithmatex">\(z_1 = \dfrac{-(-4) - i\sqrt{64}}{2(4)} = \dfrac{4 - 8i}{8} = \dfrac{1}{2} - i\)</span>.</li>
-<li><span class="arithmatex">\(z_2 = \overline{z_1} = \dfrac{1}{2} + i\)</span>.</li>
-</ul>
+<li>
+<p><strong>Valeur Moyenne <span class="arithmatex">\(\mu\)</span> :</strong></p>
 </li>
-</ol>
-<hr />
-<h2 id="exercice-4-formes-trigonometrique-et-exponentielle">Exercice 4 : Formes Trigonométrique et Exponentielle</h2>
-<p>Soit <span class="arithmatex">\(z_A = -2 + 2i\)</span>.</p>
-<ol>
-<li><strong>Module</strong> : <ul>
-<li><span class="arithmatex">\(r = \sqrt{(-2)^2 + 2^2} = \sqrt{8} = 2\sqrt{2}\)</span>.</li>
-</ul>
-</li>
-<li><strong>Argument</strong> : <ul>
-<li><span class="arithmatex">\(\cos \theta = \dfrac{-2}{2\sqrt{2}} = -\dfrac{\sqrt{2}}{2}\)</span> et <span class="arithmatex">\(\sin \theta = \dfrac{2}{2\sqrt{2}} = \dfrac{\sqrt{2}}{2}\)</span>.</li>
-<li>L'angle correspondant est <span class="arithmatex">\(\theta = \dfrac{3\pi}{4}\)</span> rad.</li>
-</ul>
-</li>
-<li><strong>Forme exponentielle</strong> : <ul>
-<li><span class="arithmatex">\(z_A = 2\sqrt{2} e^{i\frac{3\pi}{4}}\)</span>.</li>
-</ul>
-</li>
-<li><strong>Application Électronique</strong> (<span class="arithmatex">\(Z = 10 + 10i\)</span>) :<ul>
-<li><span class="arithmatex">\(|Z| = \sqrt{10^2 + 10^2} = 10\sqrt{2}\)</span>.</li>
-<li><span class="arithmatex">\(\text{arg}(Z) = \dfrac{\pi}{4}\)</span> (car <span class="arithmatex">\(\cos \theta\)</span> et <span class="arithmatex">\(\sin \theta\)</span> sont positifs et égaux).</li>
-<li><span class="arithmatex">\(Z = 10\sqrt{2} e^{i\frac{\pi}{4}}\)</span>.</li>
-</ul>
-</li>
+<li>Calculez la hauteur moyenne : `moy = I / (b - a</li>
 </ol>
 
 
@@ -1758,12 +1720,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../../../_environments/javascripts/mathjax.js"></script>
+        <script src="../../../../../_environments/javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
