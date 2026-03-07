@@ -30,7 +30,7 @@
 \def\level{BTS}  % Classe à droite
 \def\course{CIEL 1}
 \def\chaptername{Intégration} % Titre au centre
-\def\docname{C107 -- TP2}        % Identifiant à gauche
+\def\docname{C107~--~TP2}        % Identifiant à gauche
 
 \pagestyle{DS_FP}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,9 +39,9 @@
 
 %%=============================================================
 
-\section*{PARTIE A: Détermination expérimentale du paramètre $\tau$}
+\section*{PARTIE A\@: Détermination expérimentale du paramètre $\tau$}
 
-On étudie la tension de décharge d'un composant modélisée par la fonction $f$ définie sur $[0; +\infty[$ par la relation suivante:
+On étudie la tension de décharge d'un composant modélisée par la fonction $f$ définie sur $\fo{0}{+\infty}$ par la relation suivante:
 \[f(x) = 10\cdot \e^{-x/\tau} \qquad \text{ (où $\tau$ est la constante de temps).}\]
 
 Le signal doit respecter les contraintes physiques suivantes:
@@ -60,7 +60,7 @@ Le signal doit respecter les contraintes physiques suivantes:
 \end{enumerate}
 
 
-\section*{PARTIE B: Étude du signal identifié}
+\section*{PARTIE B\@: Étude du signal identifié}
 
 Utilisez maintenant la valeur trouvée ($\tau = 2$) pour analyser le comportement du signal $f(x) = 10\cdot \e^{-0,5x}$.
 
@@ -96,7 +96,7 @@ Utilisez maintenant la valeur trouvée ($\tau = 2$) pour analyser le comportemen
     \end{blocvisible}
 \end{enumerate}
 
-\section*{PARTIE C: Intégration et Valeur Moyenne}
+\section*{PARTIE C\@: Intégration et Valeur Moyenne}
 
 On souhaite évaluer la tension moyenne délivrée par le composant sur un intervalle $\ff{a}{b}$.
 
@@ -116,7 +116,7 @@ On souhaite évaluer la tension moyenne délivrée par le composant sur un inter
     \end{blocvisible}
     \item Calculer l'aire sous la courbe de $f$ entre $a=0$ et $b=4$ à l'aide de l'intégrale.  
     \begin{blocvisible}[height=3]
-        \[A=\int_a^b f(x) \dx = \int_0^4 10\cdot \e^{-0,5x} \dx = \left[-20\cdot \e^{-0,5x} \right]_0^4 =  20 \cdot (\e^{-0,5\times 4} - \e^{-0,5\times 0}) = 20 \cdot (1 - \e^{-2}) = 13,53\]
+        \[A=\int_a^b f(x) \dx = \int_0^4 10\cdot \e^{-0,5x} \dx = {\left[-20\cdot \e^{-0,5x} \right]}_0^4 =  20 \cdot (\e^{-0,5\times 4} - \e^{-0,5\times 0}) = 20 \cdot (1 - \e^{-2}) = 13,53\]
 
         L'aire calculée à l'aide de l'intégrale est d'environ $13,53$ unités d'aires, ce qui correspond à la valeur obtenue graphiquement.
     \end{blocvisible}

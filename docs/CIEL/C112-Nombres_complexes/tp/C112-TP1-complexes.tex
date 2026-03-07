@@ -1,0 +1,109 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+\def\visibleornot{visible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{0}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 1}
+\def\chaptername{Nombes complexes} % Titre au centre
+\def\docname{C112~--~TP1}        % Identifiant à gauche
+
+\pagestyle{DS_LP}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NomPrenomNote{}
+
+%%=============================================================
+
+\section*{PARTIE A\@: Création et manipulation de base}
+\medskip
+
+
+
+
+\begin{enumerate}
+    \item Dans la barre de saisie, tapez: \verb|z_1 = 3 + 2|.
+    \item Déplacez le point $z_1$ à la souris et observez comment sa valeur change dans la fenêtre d'algèbre.
+    \item Créez son conjugué en tapant: \verb|z_2 = conjugate(z_1)|.
+    
+    Quel type de symétrie observe-t-on entre $z_1$ et $z_2$?
+
+    \begin{blocvisible}[height=2]
+        Le point $z_2$ est le symétrique de $z_1$ par rapport à l'axe des abscisses (l'axe réel). En effet, si $z_1 = a + \i b$, alors son conjugué $z_2 = a - \i b$, ce qui correspond à une réflexion par rapport à l'axe réel dans le plan complexe.
+    \end{blocvisible}    
+    \item Par le calcul déterminer le module de $z_1$ et de $z_2$. 
+    \begin{blocvisible}[height=4]
+        Le module d'un nombre complexe $z = a + \i b$ est donné par la formule $|z| = \sqrt{a^2 + b^2}$. 
+
+        Pour $z_1 = 3 + 2\i$, on a:
+        \[|z_1| = \sqrt{3^2 + 2^2} = \sqrt{9 + 4} = \sqrt{13}\]
+
+        Pour $z_2 = 3 - 2\i$, on a:
+        \[|z_2| = \sqrt{3^2 + {(-2)}^2} = \sqrt{9 + 4} = \sqrt{13}\]
+
+        Ainsi, les modules de $z_1$ et $z_2$ sont égaux: $|z_1| = |z_2| = \sqrt{13}$.
+    \end{blocvisible}
+    \item Vérifier la valeur du module de $z_1$ en tapant: \verb|r = abs(z_1)|. Faites la même chose pour $z_2$.
+
+\end{enumerate}
+
+\section*{Partie B\@: Forme Trigonométrique dynamique}
+
+
+\begin{enumerate}[resume]
+    \item Créez un curseur $a$ (theta) allant de $0$ à $2\pi$ (en radians).
+    \item Créez un curseur \texttt{mod} (le module) allant de $0$ à $10$.
+    \item Saisissez le point $z_3$ sous sa forme trigonométrique: \verb|z_3 = mod * (cos(a) + i * sin(a))|.
+    \item  Fixez \texttt{mod = 4} et faites varier \verb|a|. 
+    \item Activez la \og{}Trace\fg{} sur $z_3$. Quelle figure géométrique obtenez-vous?
+\begin{blocvisible}[height=2]
+    En faisant varier l'argument $a$ de $0$ à $2\pi$ tout en maintenant le module constant à $4$, le point $z_3$ décrit un cercle de rayon $4$ centré à l'origine du plan complexe. Ainsi, la figure géométrique obtenue est un cercle de rayon $4$.
+
+\end{blocvisible}     
+\end{enumerate}
+
+\section*{Partie C\@: Somme de vecteurs complexes}
+
+\begin{enumerate}[resume]
+    \item Créez deux points libres $z_A$ et $z_B$.
+    \item Saisissez \verb|Somme = z_A + z_B|.
+    \item Tracez les vecteurs: \verb|u = Vector(z_A)| et \verb|v = Vector(z_B) et w = Vector(Somme)|.
+    \item Faites varier les points $z_A$ et $z_B$. Que constatez-vous?
+
+    Vérifiez que la position du point \verb|Somme| correspond bien à la règle du parallélogramme apprise en cours.
+    \begin{blocvisible}[height=2]
+    Le vecteur \verb|w| représente la somme des vecteurs \verb|u| et \verb|v|. En faisant varier les points $z_A$ et $z_B$, on observe que le vecteur \texttt{w} correspond à la diagonale du parallélogramme formé par les vecteurs \texttt{u} et \texttt{v}, ce qui illustre la règle de la somme des vecteurs dans le plan complexe.
+\end{blocvisible}
+\end{enumerate}
+    \end{document}
+
+
+
+
+
+
+
