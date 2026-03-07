@@ -1,97 +1,92 @@
-\def\level{BTS}  % Classe à droite
-\def\course{CIEL 1}
-\def\chaptername{Nombres complexes} % Titre au centre
-\def\docname{C112}        % Identifiant à gauche
+\def\chaptercode{C112}    % Code du chapitre
+\def\chaptername{Nombres complexes}
 
-\pagestyle{cours_FP}
-\makeheader{} % Affiche le bandeau
+\titre{}
 
+\medskip
+\begin{propriete}{On considère un point $M(x;y)$ et $\alpha \in \left]0;\frac{\pi}{2}\right[$}{}
 
-\begin{propriete}{On considère un point $M(x;y)$ et $\alpha \in \oo{0}{\frac{\pi}{2}}$}
 
 \begin{minipage}{0.2\linewidth}
 	\begin{itemize}
-		\item $\cos \alpha =  \dfrac{OH}{OM}$
-		\smallskip
-		\item $\sin \alpha =  \dfrac{HM}{OM}$
+		\item $\cos \alpha = x = \dfrac{OH}{OM}$
+		\item $\sin \alpha = x = \dfrac{HM}{OM}$
 	\end{itemize}
 \end{minipage}\hfill
 \begin{minipage}{0.20\linewidth}
-	\includegraphics[width = 0.95\linewidth]{04}
+	\includegraphics[width = 0.8\linewidth]{04}
 \end{minipage}
 \begin{minipage}{0.59\linewidth}
 \includegraphics[width = 0.95\linewidth]{03}
 \end{minipage}
 \end{propriete}
 
-\section{Approche algébrique: L'unité $\i$}
+\section{Approche algébrique : L'unité $\i$}
 
-\begin{definition}[Nombre complexe -- forme algébrique]
+\begin{definition}{Nombre complexe\textendash{}forme algébrique}{}\label{def:forme_algebrique}
 	Il existe un ensemble $\C$ tel que :
-	\begin{enumerate}
+	\begin{enumerate}[1)]
 		\item $\C$ contient $\R$ et un élément $\i$ tel que \fbox{$\i^2=-1$}.
 		\item Tout nombre complexe s'écrit \fbox{$z=a+\i b$} ($a, b \in \R$).
 	\end{enumerate}
 \end{definition}
 
-\begin{exercice_cours}[Calculer et simplifier pour mettre sous la forme $a + \i b$ :]
-	
+\begin{exercice}{Calculs immédiats}{}
+	Calculer et simplifier pour mettre sous la forme $a + \i b$ :
 	\begin{itemize}
-		\item $A = (3+5\i) - (2-4\i) = \dotfill$
-		\item $B = \i(3-4\i)=\dotfill$
-		\item $C = (1+\i)^2 = \dotfill$
+		\item $A = (3+5\i) - (2-4\i) = \dots$
+		\item $B = \i(3-4\i)$
+		\item $C = (1+\i)^2 = \dots$
 	\end{itemize}
-\end{exercice_cours}
+\end{exercice}
 
-
-\begin{exercice_cours}[Calcul de $i^n$]
+\begin{exercice}{Calcul de $i^n$}
 	\begin{itemize}
 		\item Calculer les valeurs de $i^2$, $i^3$, $i^4$, $i^5$ ...
+		\item Sur Géogébra
+		\begin{itemize}
 			\item placer un curseur $n$ allant de $-10$ à $10$ par pas de $1$
 			\item dans la partie calcul formel, taper $\i^n$. (Attention le $\i$ complexe se forme en appuyant sur \verb|ALT| + \verb|i|)
-			\item faire varier $\i$ et observer ce qu'il se passe dans la partie graphique
+			\item faire varier $\i$ et observer sa valeur
+			\item observer ce qu'il se passe dans la partie graphique
+		\end{itemize} 
 	\end{itemize}
-\end{exercice_cours}
+\end{exercice}
 
-
-\begin{exercice_cours}[Calculs complexes avec Géogébra]
+\begin{exercice}{Calculs complexes avec Géogébra}
 	Par défaut Géogébra cherche à convertir les nombres complexes sous forme algébrique. Tester le calcul formel et créant les nombres complexes suivants et observez la partie graphique.
 
 	$z_1 = (3+4\i) \times (4-\i)$ \hfill 
-	$z_2=\dfrac{1-3\i}{4-\i}$ \hfill
+	$z_2=\frac{1-3\i}{4-\i}$ \hfill
 	$z_3=(1-\i)^6$ \hfill
 	\hspace{3cm}
-\end{exercice_cours}
+\end{exercice}
 
-
-\begin{propriete}[Le nombre complexe conjugué]
+\begin{propriete}{Le nombre conjugué}{}
 	Le conjugué de $z=a+\i b$ est \fbox{$\conj{z} = a - \i b$}.
+	\begin{itemize}
+		\item \textbf{Méthode :} Pour calculer un quotient $\dfrac{z_1}{z_2}$, on multiplie le haut et le bas par $\conj{z_2}$.
+	\end{itemize}
 \end{propriete}
 
-\begin{methode}[Méthode de la quantité conjuguée]
-
-	Pour calculer un quotient $\dfrac{z_1}{z_2}$, on multiplie le haut et le bas par $\conj{z_2}$.
-	\end{methode}
-\begin{exercice_cours}[Application]
+\begin{exercice}{Application}{}
 	\begin{itemize}
 		\item Déterminer le nombre conjugué de $z=4-3\i$
 		\item Ecrire sous forme algébrique le nombre $\dfrac{3-\i}{4-3\i}$
 		\item Vérifier avec Géogébra
 	\end{itemize}
-\end{exercice_cours}
-
+\end{exercice}
 
 \section{Approche géométrique}
 
-\begin{propriete}[Nombres complexes et géométrie]
+\begin{propriete}{Nombres complexes et géométrie}{}
 
-	 Au point $M(a;b)$, on peut associer le nombre complexe $z=a+\i b$.
-
-	 \medskip
-	 
 	\begin{minipage}{0.6\linewidth}
+ Au point $M(a;b)$, on peut associer le nombre complexe $z=a+\i b$.
 
- 	On dit que $z=a+\i b$ est l'\textbf{affixe} du point $M$. On note \[\boxed{M(a+ib)}\]
+ \smallskip
+	
+	On dit que $z=a+\i b$ est l'\textbf{affixe} du point $M$. On note \[\boxed{M(a+ib)}\]
 
 	Soient $A$ et $B$ les points d'affixes respectifs $z_A$ et $z_B$. 
 
@@ -110,22 +105,21 @@
 \end{propriete}
 
 
-\begin{exercice_cours}[Nombres complexes et géométrie]
+\begin{exercice}{Nombres complexes et géométrie}{}
 \begin{itemize}
 	\item Sur Géogébra, placez le point $A$ d'affixe $z_A=1+2\i$
 	\item Placez le point $B$ d'affixe $\conj{z_A}$ et le point $C$ d'affixe $-z_A$.
 	\item Quelle symétrie permet de passer de A à B? De A à C?
 \end{itemize}
 
-\end{exercice_cours}
-
+\end{exercice}
 \section{Résolutions d'équations}
 
-\begin{propriete}[Résolution d'équations du premier degré dans $\C$]
+\begin{propriete}{Résolution d'équations du premier degré dans $\C$}{}
 
 	Les résolutions respectent exactement le même protocole que dans $\R$:
 
-	\begin{enumerate}
+	\begin{enumerate}[1)]
 		\item Faire passer dans le membre de gauche tout ce qui dépend de $z$ et dans le membre de droite tout ce qui ne dépend pas de $z$.
 		\item Simplifier le membre de gauche et de droite
 		\item Isoler $z$ et répondre à la question
@@ -133,16 +127,15 @@
 \end{propriete}
 
 
-\begin{exercice_cours}[Résoudre dans $\C$ l'équation $(E): \,3z-6=4\i+z+2$]
+\begin{exercice}{Résoudre dans $\C$ l'équation $(E): \,3z-6=4\i+z+2$}{}
 
-\end{exercice_cours}
+\end{exercice}
 
-
-\begin{propriete}[Résolution d'équations du deuxième degré dans $\C$]
+\begin{propriete}{Résolution d'équations du deuxième degré dans $\C$}{}
 
 	Les résolutions respectent exactement le même protocole que dans $\R$:
 
-	\begin{enumerate}
+	\begin{enumerate}[1)]
 		\item Mettre l'équation sous la forme $az^2+bz+c=0$ avec $(a, b, c)$ trois réels.
 		\item Calculer le \textbf{discriminant} \fbox{$\Delta = b^2-4ac$}
 		\begin{itemize}
@@ -162,7 +155,7 @@
 
 \section{Formes trigonométrique et exponentielle}
 
-\begin{definition}[Module et argument d'un nombre complexe]
+\begin{definition}{Module et argument d'un nombre complexe}{}
 	
 	\begin{minipage}{0.8\linewidth}
 Le \textbf{module} d'un nombre complexe $z=a+\i b$ est le réel positif  \[\boxed{|z|=\sqrt{a^2+b^2}}\]
@@ -180,7 +173,7 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 \end{definition}
 
 
-\begin{definition}[Forme trigonométrique d'un nombre complexe]
+\begin{definition}{Forme trigonométrique d'un nombre complexe}{}
 
 	Tout nombre complexe $z$ s'écrit sous la \textbf{forme algébrique} $z=a+\i b$. On note $\theta = \arg(z)$
 
@@ -192,11 +185,11 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 		Tout nombre complexe peut donc s'écrire sous la \textbf{forme trigonométrique}: \[\boxed{z=|z|\left(\cos \theta + \i \sin \theta \right)}\]
 \end{definition}
 
-\begin{methode}[Passer de la forme algébrique à la forme trigonométrique]
+\begin{methode}{Passer de la forme algébrique à la forme trigonométrique}{}
 
 	On considère un nombre complexe $z$ écrit sous forme algébrique $z=a+\i b$ 
 
-	\begin{enumerate}
+	\begin{enumerate}[1)]
 		\item Calculer $|z|=\sqrt{a^2+b^2}$
 		\item Calculer $\cos \theta$ et $\sin \theta$ et trouver la valeur de $\theta$ respectant les deux conditions précédentes.
 		\item Ecrire $z=|z|\left(\cos \theta + \i \sin \theta \right)$
@@ -204,9 +197,9 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 
 \end{methode}
 
-\begin{exercice_cours}[Ecrire les nombres complexes suivants sous forme trigonométriques]
+\begin{exercice}{Ecrire les nombres complexes suivants sous forme trigonométriques}{}
 
-	\begin{enumerate}
+	\begin{enumerate}[1)]
 
 		\begin{multicols}{3}
 		\item $z=\frac{\sqrt{3}}{2}-\i \times \frac{1}{2}$
@@ -215,14 +208,13 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 		\end{multicols}
 	\end{enumerate}
 
-\end{exercice_cours}
+\end{exercice}
 
-
-\begin{methode}[Passer de la forme trigonométrique à la forme algébrique]
+\begin{methode}{Passer de la forme trigonométrique à la forme algébrique}{}
 
 	On considère un nombre complexe $z$ tel que l'on connait $|z|$ et un argument $\theta=\arg(z)$. 
 
-	\begin{enumerate}
+	\begin{enumerate}[1)]
 		\item Calculer $a=|z|\cos\theta$
 		\item Calculer $b=|z|\sin\theta$
 		\item Ecrire $z=|z|\cos\theta + \i |z|\sin\theta$
@@ -231,9 +223,9 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 \end{methode}
 
 
-\begin{exercice_cours}[Ecrire les nombres complexes suivants sous forme arithmétique]
+\begin{exercice}{Ecrire les nombres complexes suivants sous forme arithmétique}{}
 
-	\begin{enumerate}
+	\begin{enumerate}[1)]
 
 		\begin{multicols}{3}
 		\item $|z|=2$ et $\arg(z)=-\frac{\pi}{3}$
@@ -242,19 +234,18 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 		\end{multicols}
 	\end{enumerate}
 
-\end{exercice_cours}
-
+\end{exercice}
 
 %%%%%%%%%%%%%
 
-\begin{propriete}[Notation exponentielle (Euler)]
+\begin{propriete}{Notation exponentielle (Euler)}{}
 	On écrit : \fbox{$z = r\e^{\i\theta}$} avec $r = |z|$ et $\theta = \arg(z)$.
 \end{propriete}
 
 
-\begin{propriete}[Propriétés de la forme exponentielle]
+\begin{propriete}{Propriétés de la forme exponentielle}{}
 
-\begin{enumerate}
+\begin{enumerate}[1)]
 	\begin{multicols}{3}
 	\item $\e^{\i \times 0}=1$
 	\item $\e^{\i  \frac{\pi}{2}}=0$
@@ -273,23 +264,21 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 
 \end{propriete}
 
-\begin{exercice_cours}[Ecriture sous forme exponentielle]
+\begin{exercice}{Ecriture sous forme exponentielle}{}
 
 	Ecrire les nombres de l'exercice 7 sous forme exponentielle
 
-\end{exercice_cours}
-
+\end{exercice}
 \section{Application aux circuits}
 
-\begin{exercice_cours}[Impédances complexes]
+\begin{exercice}{Impédances complexes}{}
 	En électronique, on utilise les nombres complexes pour modéliser les composants :
     \begin{itemize}
         \item Résistance : $Z_R = R$
         \item Bobine : $Z_L = \i L\omega$
     \end{itemize}
     Calculer l'impédance totale $Z = Z_R + Z_L$ sous forme exponentielle pour $R=10\Omega$ et $L\omega=10\Omega$.
-\end{exercice_cours}
-
+\end{exercice}
 
 \pagebreak
 
@@ -326,3 +315,4 @@ Un \textbf{argument} de $z$, noté $\arg(z)$ est une mesure exprimée en radian 
 
 \end{multicols}
 
+\end{document}

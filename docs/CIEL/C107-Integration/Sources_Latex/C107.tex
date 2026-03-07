@@ -1,19 +1,18 @@
-\def\chaptercode{C107}    % Code du chapitre
-\def\chaptername{Intégration}        % Nom du chapitre
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 1}
+\def\chaptername{Intégration} % Titre au centre
+\def\docname{C107}        % Identifiant à gauche
 
-\titre{}
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
 
-\medskip
-
-\begin{definition}{Unité d'aire}{}
-
+% --- SECTION 1 ---
+\begin{definition}[Unité d'aire]
     \begin{minipage}{0.79\linewidth}
-        Soit \Oij{} un repère orthogonal du plan. On note $I$ et $J$ les points tels que $\vec{OI}=\vec{\imath}$ et $\vec{OJ}=\vec{\jmath}$.
-
+        Soit \Oij{} un repère orthogonal du plan. On note $I$ et $J$ les points tels que $\vv{OI}=\vec{\imath}$ et $\vv{OJ}=\vec{\jmath}$.
         \smallskip
 
-    L'\textbf{unité d'aire}, que l'on note \verb|u.a.| est l'aire du rectangle dont $O$, $I$ et $J$ forment trois sommets.
-
+        L'\textbf{unité d'aire}, que l'on note \texttt{u.a.}, est l'aire du rectangle dont $O$, $I$ et $J$ forment trois sommets.
     \end{minipage}\hfill
     \begin{minipage}{0.19\linewidth}
         \includegraphics[width=1\linewidth]{01}
@@ -24,262 +23,170 @@
 
 \section{Intégrale d'une fonction continue et positive}
 
-\begin{definition}{Notion d'intégrale}{}
+\begin{definition}[Notion d'intégrale]
+    Soit $f$ une fonction continue et positive sur un intervalle $\ff{a}{b}$ de courbe représentative $\mathcal{C}_f$ dans un repère orthogonal \Oij.
+    \smallskip
 
-    \begin{minipage}{0.69\linewidth}
-        Soit $f$ une fonction continue et positive sur un intervalle $[a;b]$ de courbe représentative $\mathcal{C}_f$ dans un repère orthogonale \Oij.
+    \begin{minipage}{0.75\linewidth}
+        L'\textbf{intégrale} de $a$ à $b$ de $f$ est l'aire, exprimée en unités d'aires, du domaine situé entre la courbe $\mathcal{C}_f$, l'axe des abscisses et les droites d'équation $x=a$ et $x=b$.
 
-        \smallskip
-
-        L'\textbf{intégrale} de $a$ à $b$ de $f$ est l'aire, exprimée en unité d'aires, du domaine situé entre la courbe $\mathcal{C}_f$, l'axe des abscisses et les droites d'équation $x=a$ et $x=b$
-
-        \smallskip
-
-        Cette aire se note $\boxed{\displaystyle\int_{a}^{b} \, f(x)dx}$ et se lit ``intrégrale de $a$ à $b$ de $f(x)$ $dx$''
+        Cette aire se note $\boxed{\displaystyle\int_{a}^{b} f(x)\dx}$ et se lit \og intégrale de $a$ à $b$ de $f(x)$ $dx$ \fg.
     \end{minipage}\hfill
-    \begin{minipage}{0.29\linewidth}
+    \begin{minipage}{0.22\linewidth}
         \includegraphics[width=1\linewidth]{02}
     \end{minipage}
 \end{definition}
 
-
-
-
-\begin{remarque}{}{}
+\begin{remarque}
 \begin{itemize}
-    \item $a$ et $b$ sont les \textbf{bornes inférieures et supérieures} de l'intégrale. Par défaut $a\leq b$.
-    \item $x$ est une variable muette. Cette variable n'intervient pas dans le résultat final. On peut remplacer $x$ par $y$, $t$\ldots
-    \item Pour tout fonction positive: $\displaystyle\int_{a}^{a}\, f(x)dx = 0$ (Aire d'un segment de hauteur $f(a)$)
-    \item Le symbôle $\int$ est dû à G.W. Leibniz (1646--1716). Il ressemble à un ``s'' allongé, rappelant que l'aire peut être calculée comme la somme de petites aires élémentaires.
+    \item $a$ et $b$ sont les \textbf{bornes inférieure et supérieure} de l'intégrale. Par défaut $a \leq b$.
+    \item $x$ est une \textbf{variable muette}. On peut remplacer $x$ par $y$, $t$\ldots
+    \item Pour toute fonction positive : $\displaystyle\int_{a}^{a} f(x)\dx = 0$.
+    \item Le symbole $\int$ (S allongé) est dû à G.W. Leibniz, rappelant qu'une aire est une somme d'aires élémentaires.
 \end{itemize}
-
 \end{remarque}
 
 
 
-\begin{example}{}{}
-    
-    \begin{minipage}{0.79\linewidth}
-        Soit $f$ la fonction définie par $f(x)=\dfrac{x}{2}+2$. Le domaine colorié est un trapèze dont l'aire est:
-    
-    \vspace{1cm}
-
-    Les unités graphiques sont OI=0,6 cm et OJ=0,8 cm. Quelle est la valeur de l'aire coloriée?
-
-    \bigskip
-    
+\begin{exemple}[Calcul d'aire]
+    \begin{minipage}{0.80\linewidth}
+        Soit $f$ la fonction définie par $f(x)=\dfrac{x}{2}+2$. On cherche à évaluer le domaine hachuré. Le domaine colorié est un trapèze dont l'aire est : \dotfill
+        
+        Les unités graphiques sont $OI=0,6$ cm et $OJ=0,8$ cm. Quelle est la valeur de l'aire coloriée ?
     \end{minipage}\hfill
-    \begin{minipage}{0.19\linewidth}
+    \begin{minipage}{0.18\linewidth}
         \includegraphics[width=1\linewidth]{03}
     \end{minipage}
+\end{exemple}
 
-\end{example}
-
-
-\begin{exercice}{Identification d'une aire à l'aide d'une intégrale}{}
-
-    \begin{minipage}{0.3\linewidth}
-       
-    Dans chacune des situations, hachurer la partie du plan dont l'intégrale donne l'aire.
-    
-    \medskip
-
-    Donner un encadrement le plus précis possible pour la valeur de cette intégrale en \verb|u.a.|
+\begin{exercice_cours}[Identification d'une aire à l'aide d'une intégrale]
+    \begin{minipage}{0.38\linewidth}
+        Dans chacune des situations, hachurer la partie du plan dont l'intégrale donne l'aire.
+        \smallskip
+        Donner un encadrement le plus précis possible pour la valeur de cette intégrale en \verb|u.a.|
     \end{minipage}\hfill
-    \begin{minipage}{0.69\linewidth}
+    \begin{minipage}{0.60\linewidth}
         \includegraphics[width=1\linewidth]{10}
     \end{minipage}
+\end{exercice_cours}
 
-
-\end{exercice}
-
-\pagebreak
-
-\begin{propriete}{Calcul d'une intégrale}{}
-
-    Soit $f$ une fonction continue et positive sur $[a;b]$ et $F$ une primitive de $f$ sur cet intervalle, alors:
-
-    \[
-        \boxed{\int_{a}^{b}\, f(x) dx = \left[F(x)\right]{}_{a}^{b}=F(b)-F(a)}
-    \]
+\begin{propriete}[Calcul d'une intégrale]
+    Soit $f$ une fonction continue et positive sur $\ff{a}{b}$ et $F$ une primitive de $f$ sur cet intervalle, alors :
+    \[ \boxed{\int_{a}^{b} f(x) \dx = \Bigl[F(x)\Bigr]_{a}^{b} = F(b) - F(a)} \]
 \end{propriete}
 
-\begin{methode}{Calculer une intégrale}{}
-
-    L'objectif est de calculer une intégrale du type $\int_{a}^{b}\, f(x) dx$
-\begin{enumerate}
-    \item Identifier les valeurs de $a$ et de $b$
-    \item S'assurer que la fonction est positive et continue sur $[a;b]$
-    \item Déterminer une primitive $F$ de $f$ sur l'intervalle considéré.
-    \item Calculer $F(b)$ et $F(a)$
-    \item Calculer l'intégrale par $\int_{a}^{b}\, f(x) dx = \left[F(x)\right]{}_a^b=F(b)-F(a)$
-\end{enumerate}
+\begin{methode}[Calculer une intégrale]
+    Pour calculer $\int_{a}^{b} f(x) \dx$ :
+    \begin{enumerate}
+        \item Identifier les bornes $a$ et $b$.
+        \item S'assurer que $f$ est continue sur $\ff{a}{b}$.
+        \item Déterminer une primitive $F$ de $f$.
+        \item Calculer $F(b) - F(a)$.
+    \end{enumerate}
 \end{methode}
 
-\begin{exercice}{Calculer les intégrales suivantes}{}
-
+\begin{exercice_cours}[Calculer les intégrales suivantes]
     \begin{multicols}{3}
-         \[I_1=\int_{0}^{1} x^2 dx\]
+         \[I_1=\int_{0}^{1} x^2 \dx\] 
 
-         \[I_2=\int_{1}^{\e} \frac{1}{x}dx\]
+         \[I_2=\int_{1}^{\e} \frac{1}{x}\dx\] 
 
-         \[I_3=\int_{1}^{3} x(x^2+1){}^2 dx\]
-
+         \[I_3=\int_{1}^{3} x(x^2+1){}^2 \dx\] 
     \end{multicols}
+\end{exercice_cours}
 
-
-         
-\end{exercice}
 
 \medskip
-
 \section{Intégration d'une fonction continue de signe quelconque}
 
-\begin{propriete}{}{}
-
-    Si la fonction $f$ n'est pas positive sur tout l'intervalle $[a;b]$, alors on ne peut PLUS dire que $\int_{a}^{b}f(x)dx$ est l'aire sous la courbe représentative de la fonction $f$.
-
-
+\begin{propriete}[Cas des fonctions non positives]
+    Si la fonction $f$ n'est pas positive sur tout l'intervalle $\ff{a}{b}$, alors on ne peut PLUS dire que $\int_{a}^{b}f(x)dx$ est l'aire sous la courbe représentative de la fonction $f$.
 \end{propriete}
 
 
-\begin{example}{Calculer $\int_{-1}^{2}\,(x^2-2)dx$ et conclure.}{}
+\begin{exemple}[Calculer $\int_{-1}^{2}\,(x^2-2)\dx$ et conclure.]{}
+\end{exemple}
 
-\end{example}
 
-\medskip
-
-\begin{propriete}{}{}
-
-    \begin{itemize}
-        \item     Pour tout fonction $f$ continue sur $[a;b]$, on a \[\int_{b}^{a}\, f(x)dx=-\int_{a}^{b}f(x)dx\]
-        \item \textbf{Linéarité de l'intégrale}:
-        
-        \[\int_{a}^{b}\,(f+g)(t)dt = \int_{a}^{b} \, f(t)dt+\int_{a}^{b}g(t)dt \qquad \qquad \qquad \int_{a}^{b}kf(t)dt=k\int_{a}^{b}f(t)dt\]
-    \end{itemize}
+\begin{propriete}[Propriétés de l'intégrale]
+    Pour toutes fonctions $f$ et $g$ continues sur $\ff{a}{b}$ :
+    \small
+    \[ \int_{b}^{a} f(x)\dx = -\int_{a}^{b}f(x)\dx \qquad ; \qquad \int_{a}^{b}\Bigl(f+g\Bigr)(t)\dt = \int_{a}^{b} f(t)\dt + \int_{a}^{b}g(t)\dt \]
 \end{propriete}
 
 \medskip
 
-\begin{propriete}{Fonction négative et aire}{}
-
-    \begin{minipage}{0.64\linewidth}
-    
-        Soit $f$ une fonction continue est négative sur un intervalle $[a;b]$. Alors l'aire du domaine situé entre $\mathcal{C}_f$ et l'axe des abscisses sur $[a;b]$ est 
-
+\begin{propriete}[Fonction négative et aire]
+    \begin{minipage}{0.6\linewidth}
+        Soit $f$ une fonction continue est négative sur un intervalle $\ff{a}{b}$. Alors l'aire du domaine situé entre $\mathcal{C}_f$ et l'axe des abscisses sur $\ff{a}{b}$ est 
         \medskip
-
-        \[A_\mathcal{D}= A_\mathcal{E}=\int_{a}^{b}(-f(x))dx=-\int_{a}^{b}f(x)dx\]
+        \[A_\mathcal{D}= A_\mathcal{E}=\int_{a}^{b}(-f(x))\dx=-\int_{a}^{b}f(x)\dx\]
     \end{minipage}\hfill
-    \begin{minipage}{0.34\linewidth}
+    \begin{minipage}{0.39\linewidth}
         \includegraphics[width=1\linewidth]{05}
     \end{minipage}
 \end{propriete}
 
-\pagebreak
 
-\begin{exercice}{\quad}{}
 
-    \begin{minipage}{0.69\linewidth}
-    
-            On considère la fonction $f$ définie par $f(x)=x^2-x-2$ et on note $A$ l'aire du domaine compris entre la courbe $\mathcal{C}_f$, l'axe des abscisses et les droites $x=-1$ et $x=3$.
-
-        \begin{enumerate}
-             \item Etudier le signe de $f$ sur $[-1;3]$
-           \item Déterminer une primitive $F$ de $f$
-           \item Déterminer la valeur de l'aire $A=A_1+A_2$
-        \end{enumerate}
-        \end{minipage}\hfill
-    \begin{minipage}{0.29\linewidth}
-        \begin{center}
-                    \includegraphics[width=0.8\linewidth]{11}
-
-        \end{center}
+\begin{propriete}[Relation de Chasles]
+    \begin{minipage}{0.65\linewidth}
+        Soient $a, b, c$ trois réels d'un intervalle $I$ où $f$ est continue :
+        \[ \int_{a}^{c}f(x)\dx = \int_{a}^{b}f(x)\dx + \int_{b}^{c}f(x)\dx \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.30\linewidth}
+        \includegraphics[width=1\linewidth]{06}
     \end{minipage}
-
-\end{exercice}
-
-\begin{propriete}{Relation de Chasles}{}
-
-\begin{minipage}{0.69\linewidth}
-    
-            Soient $f$ une fonction continue sur un intervalle $I$ et $a$; $b$ et $c$ trois réels appartenant à $I$. Alors:
-
-    \[\int_{a}^{c}f(x)dx=\int_{a}^{b}f(x)dx+\int_{b}^{c}f(x)dx\]
-        \end{minipage}\hfill
-    \begin{minipage}{0.29\linewidth}
-        \begin{center}
-                    \includegraphics[width=0.95\linewidth]{06}
-
-        \end{center}
-    \end{minipage}
-
-
-    
 \end{propriete}
 
-\medskip
 
+\medskip
 \section{Aire entre deux courbes}
 
-\begin{propriete}{Aire entre deux courbes}{}
-
+\begin{propriete}[Aire entre deux courbes]
     \begin{minipage}{0.69\linewidth}
-    
-            Soient $f$ et $g$ deux fonctions continues et positives sur un intervalle $[a;b]$ telles que sur cet intervalle, $f(x) \geq g(x)$. Alors l'aire du domaine compris entre les courbes $\mathcal{C}_f$ et $\mathcal{C}_g$ sur l'intervalle $[a;b]$ est donné par \[\boxed{\int_{a}^{b}(f-g)(x)dx}\]
-        
-        
-        \end{minipage}\hfill
+        Soient $f$ et $g$ deux fonctions continues et positives sur un intervalle $\ff{a}{b}$ telles que sur cet intervalle, 
+        $f(x) \geq g(x)$. Alors l'aire du domaine compris entre les courbes $\mathcal{C}_f$ et $\mathcal{C}_g$ sur l'intervalle $\ff{a}{b}$ est donné par 
+        \[\boxed{\int_{a}^{b}\Bigl(f-g\Bigr)(x)dx}\]
+    \end{minipage}\hfill
     \begin{minipage}{0.29\linewidth}
         \begin{center}
-                    \includegraphics[width=0.85\linewidth]{12}
-
+            \includegraphics[width=1\linewidth]{12}
         \end{center}
     \end{minipage}
-    
 \end{propriete}
 
-\begin{exercice}{\quad}{}
-
+\begin{exercice_cours}
     \begin{center}
-        \includegraphics[width = 0.75\linewidth]{a1}
-
+        \includegraphics[width = 1\linewidth]{a1}
     \end{center}
-\end{exercice}
+\end{exercice_cours}
 
-\pagebreak
+\begin{exercice_cours}{\quad}{}
+    \includegraphics[width = 0.95\linewidth]{a3}
+\end{exercice_cours}
 
-\begin{exercice}{\quad}{}
-
-\includegraphics[width = 0.95\linewidth]{a3}
-\end{exercice}
-
+%######################################
 \medskip
-
 \section{Valeur moyenne}
 
-\begin{definition}{Valeur moyenne}{}
-
-
-    Soit $f$ une fonction continue sur un intervalle $[a;b]$. La \textbf{valeur moyenne} de $f$ sur $[a;b]$ est le nombre $\mu$ défini par:
-
-    \[\boxed{\mu=\dfrac{1}{b-a}\int_{a}^{b} f(t)dt}\]
+\begin{definition}[Valeur moyenne]
+    Soit $f$ une fonction continue sur un intervalle $\ff{a}{b}$. La \textbf{valeur moyenne} de $f$ sur $\ff{a}{b}$ est le nombre $\mu$ défini par:
+    \[\boxed{\mu=\dfrac{1}{b-a}\int_{a}^{b} f(t)\dt}\]
 \end{definition}
 
 
-\begin{remarque}{\quad}{}
-
-    \begin{minipage}{0.69\linewidth}
-    
-Dans le cas où $f$ est positive et continue sur $[a ; b]$, la
-valeur moyenne de $f$ entre $a$ et $b$ représente la hauteur
-du rectangle construit sur l'intervalle $[a ; b]$.\\
-L'aire du rectangle ABCD est égale, en u.a., à l'aire du
-domaine coloré car d'après la définition:
-\[\mu(b-a)=\int_{a}^{b}f(t)dt\]        
+\begin{remarque}
+    \begin{minipage}{0.59\linewidth}
+        Dans le cas où $f$ est positive et continue sur $\ff{a}{b}$, la
+        valeur moyenne de $f$ entre $a$ et $b$ représente la hauteur
+        du rectangle construit sur l'intervalle $\ff{a}{b}$.\\
+        L'aire du rectangle ABCD est égale, en u.a., à l'aire du
+        domaine coloré car d'après la définition:
+        \[\mu\cdot(b-a)=\int_{a}^{b}f(t)\dt\]        
         
         \end{minipage}\hfill
-    \begin{minipage}{0.29\linewidth}
+    \begin{minipage}{0.39\linewidth}
         \begin{center}
                     \includegraphics[width=1\linewidth]{09}
 
@@ -290,13 +197,13 @@ domaine coloré car d'après la définition:
 \end{remarque}
 
 
-\begin{exercice}{Calculer la valeur moyenne de la fonction sur l'intervalle considéré}{}
+\begin{exercice_cours}[Calculer la valeur moyenne de la fonction sur l'intervalle considéré]{}
 \begin{enumerate}
-    \item $f(x)=7x^2-2x+4$ sur $[1;3]$
-    \item $f(x)=x^3$ sur $[-3;3]$
-    \item $f(x)=2x\e^{x^2}$ sur $[2;3]$
+    \item $f(x)=7x^2-2x+4$ sur $\ff{1}{3}$
+    \item $f(x)=x^3$ sur $\ff{-3}{3}$
+    \item $f(x)=2x\e^{x^2}$ sur $\ff{2}{3}$
 \end{enumerate}
 
-\end{exercice}
+\end{exercice_cours}
 
-\resetalltcb{}
+%\resetalltcb{}
