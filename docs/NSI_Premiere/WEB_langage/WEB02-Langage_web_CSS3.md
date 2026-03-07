@@ -53,7 +53,6 @@ L'objectif est d'apprendre à styliser une structure existante en utilisant des 
 ```css
 /* 1. Style global du document */
 body {
-    font-family: 'Arial', sans-serif;
     background-color: #f4f7f6; /* Gris très clair */
     color: #333;
     line-height: 1.6;
@@ -78,8 +77,6 @@ section {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* 4. Style des composants d'interaction (Boutons) */
@@ -91,7 +88,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: background 0.3s ease; /* Animation fluide */
 }
 
 /* Effet au survol (Hover) */

@@ -49,6 +49,12 @@
     \fancyhead[R]{\small \level \, \course} 
     \fancyfoot[C]{\thepage}          
     \renewcommand{\headrulewidth}{0.4pt}
+    \fancyhead[C]{
+    \ifdefstring{\visibleornot}{visible}{%
+        \bfseries\Large\color{red} CORRECTION%
+    }{}%
+    }
+    
 } %
 
 % Styles pour les DS (Première et dernière page)
@@ -58,7 +64,12 @@
     \fancyhead[R]{\small \level \, \course} 
     \fancyfoot[C]{\thepage}          
     \fancyfoot[R]{\texttt{Tourner la page     \faHandPointRight[regular]
-}} 
+}}
+    \fancyhead[C]{
+    \ifdefstring{\visibleornot}{visible}{%
+        \bfseries\Large\color{red} CORRECTION%
+    }{}%
+    }
     \renewcommand{\headrulewidth}{0.4pt}
 } %
 
@@ -68,6 +79,11 @@
     \fancyhead[R]{\small \level \, \course} 
     \fancyfoot[C]{\thepage}          
     \renewcommand{\headrulewidth}{0.4pt}
+    \fancyhead[C]{
+    \ifdefstring{\visibleornot}{visible}{%
+        \bfseries\Large\color{red} CORRECTION%
+    }{}%
+    }
 } %
 
 % Force le style fancy même sur les pages de chapitre
