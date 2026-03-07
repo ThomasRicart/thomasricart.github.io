@@ -1,0 +1,126 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{0}
+
+
+
+\begin{document}
+
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 1}
+\def\chaptername{Intégration} % Titre au centre
+\def\docname{C107~--~TD 1}        % Identifiant à gauche
+
+\pagestyle{DS_FP}
+
+\NomPrenom{}
+
+\bigskip
+
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Calculs d'intégrales basiques}: 
+Calculer les intégrales suivantes en utilisant les primitives usuelles:
+\begin{enumerate}
+    \item $I_1 = \displaystyle\int_{1}^{2} (3x^2 - 2x) \dx$
+    \begin{blocvisible}[height=2]
+        \[I_1 = \int_{1}^{2} (3x^2 - 2x) \dx = {\Big[\frac{3}{3}x^3 - \frac{2}{2}x^2 \Big]}_{1}^{2} = 8 - 1 = 7\]
+    \end{blocvisible}
+
+    \item $I_2 = \displaystyle\int_{0}^{\pi} \cos(t) \dt$
+    \begin{blocvisible}[height=2]
+        \[I_2 = \int_{0}^{\pi} \cos(t) \dt = {\Big[\sin(t) \Big]}_{0}^{\pi} = 0\]
+    \end{blocvisible}
+
+    \item $I_3 = \displaystyle\int_{0}^{1} e^{3t} \dt$
+    \begin{blocvisible}[height=2]
+        \[I_3 = \int_{0}^{1} e^{3t} \dt = {\Big[e^{3t} \Big]}_{0}^{1} = 1\]
+    \end{blocvisible}
+\end{enumerate}
+
+\bigskip
+
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Valeur moyenne et exponentielle composée}: 
+Soit la fonction $f$ définie sur $\ff{0}{2}$ par: $f(t) = 4t e^{t^2}$.
+\begin{enumerate}
+    \item Justifier que $F(t) = 2e^{t^2}$ est une primitive de $f$ sur $\ff{0}{2}$.
+    \begin{blocvisible}[height=2]
+    $F'(t) = 4t e^{t^2} = f(t)$ donc $F$ est une primitive de $f$.
+    \end{blocvisible}
+
+    \item Calculer la valeur exacte de l'intégrale $I = \int_{0}^{2} 4t e^{t^2} \dt$.
+    \begin{blocvisible}[height=2]
+        \[I = \int_{0}^{2} 4t e^{t^2} \dt = {\Big[2e^{t^2} \Big]}_{0}^{2} = 2(e^4 - 1)\]
+
+    \end{blocvisible}
+
+    \item En déduire la valeur moyenne $\mu$ de la fonction $f$ sur l'intervalle $\ff{0}{2}$. 
+    \begin{blocvisible}[height=2]
+        \[\mu = \frac{1}{2-0} \int_{0}^{2} 4t e^{t^2} \dt = \frac{1}{2} \cdot 2(e^4 - 1) = e^4 - 1\]
+    \end{blocvisible}
+\end{enumerate}
+
+\bigskip
+\pagebreak
+\thispagestyle{DS_LP}
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Application au signal (Valeur efficace)}: 
+En électronique, la valeur efficace d'un signal $u(t)$ est liée à l'intégrale de son carré. On considère $f(t) = \sin^2(t)$ sur $\ff{0}{\pi}$.
+\begin{enumerate}
+    \item À l'aide de la formule $\sin^2(t) = \dfrac{1-\cos(2t)}{2}$, calculer $\displaystyle\int_{0}^{\pi} \sin^2(t) \dt$.
+    \begin{blocvisible}[height=2]
+        \[\int_{0}^{\pi} \sin^2(t) \dt = \int_{0}^{\pi} \frac{1-\cos(2t)}{2} \dt = {\Big[\frac{t}{2} - \frac{\sin(2t)}{4}\Big]}_{0}^{\pi} = \frac{\pi}{2}\]
+    \end{blocvisible}
+    \item En déduire la valeur moyenne du carré du signal sur une demi-période $\ff{0}{\pi}$.
+    \begin{blocvisible}[height=2]
+        \[\mu = \frac{1}{\pi-0} \int_{0}^{\pi} \sin^2(t) \dt = \frac{1}{\pi} \cdot \frac{\pi}{2} = \frac{1}{2}\]
+    \end{blocvisible}
+\end{enumerate}
+
+\bigskip
+
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Interprétation graphique}: 
+Soit la fonction $f(x) = 4-x^2$.
+\begin{enumerate}
+    \item Calculer l'intégrale $J = \displaystyle\int_{-2}^{2} (4-x^2) dx$.
+    \begin{blocvisible}[height=2]
+        \[J = \int_{-2}^{2} (4-x^2) dx = {\Big[4x - \frac{x^3}{3} \Big]}_{-2}^{2} = \left(8 - \frac{8}{3}\right) - \left(-8 + \frac{8}{3}\right) = 16 - \frac{16}{3} = \frac{32}{3}\]
+    \end{blocvisible}
+    \item Sachant que $1 \text{ u.a.} = 2 \text{ cm}^2$, déduire l'aire du domaine sous la courbe en $\text{cm}^2$.
+    \begin{blocvisible}[height=2]
+        \[A = 2 \cdot J = 2 \cdot \frac{32}{3} = \frac{64}{3} \text{ cm}^2\]
+    \end{blocvisible}
+\end{enumerate}
+
+\end{document}
