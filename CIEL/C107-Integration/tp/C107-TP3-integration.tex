@@ -30,7 +30,7 @@
 \def\level{BTS}  % Classe à droite
 \def\course{CIEL 1}
 \def\chaptername{Intégration} % Titre au centre
-\def\docname{C107 -- TP3}        % Identifiant à gauche
+\def\docname{C107~--~TP3}        % Identifiant à gauche
 
 \pagestyle{DS_FP}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,9 +38,9 @@
 \NomPrenomNote{}
 
 %%=============================================================
-\section*{PARTIE A: Détermination expérimentale du paramètre $c$}
+\section*{PARTIE A\@: Détermination expérimentale du paramètre $c$}
 
-On cherche à modéliser un signal par la fonction suivante :  
+On cherche à modéliser un signal par la fonction suivante: 
 
 \[f(x) =  x\cdot\e^{-c\cdot x} \qquad \text{ (où $c>0$ est le paramètre à déterminer).}\]
 
@@ -59,7 +59,7 @@ Le signal doit respecter la contrainte physique suivante:
 \end{enumerate}
 
 
-\section*{PARTIE B: Étude du signal identifié}
+\section*{PARTIE B\@: Étude du signal identifié}
 
 Utilisez maintenant la valeur trouvée ($c = 2$) pour analyser le comportement du signal $f(x) = x \cdot\e^{-2x}$.
 
@@ -90,7 +90,7 @@ Utilisez maintenant la valeur trouvée ($c = 2$) pour analyser le comportement d
     \begin{blocvisible}[height=3]
         Lorsque $x$ tend vers $+\infty$, $f(x)$ tend vers 0, car la fonction exponentielle décroît rapidement.
 
-        On peut également calculer la limite formellement :
+        On peut également calculer la limite formellement:
         \[\lim_{x \to +\infty} x \e^{-2x} = \lim_{x \to +\infty} \frac{x}{\e^{2x}}=  0\]
     \end{blocvisible}
 \end{enumerate}
@@ -100,7 +100,7 @@ Utilisez maintenant la valeur trouvée ($c = 2$) pour analyser le comportement d
 \pagebreak
 \thispagestyle{DS_LP}
 
-\section*{PARTIE C: Intégration et Valeur Moyenne}
+\section*{PARTIE C\@: Intégration et Valeur Moyenne}
 
 On souhaite évaluer la tension moyenne délivrée par le composant sur un intervalle $[a ; b]$.
 
@@ -118,7 +118,7 @@ On souhaite évaluer la tension moyenne délivrée par le composant sur un inter
 
     \item A l'aide de Géogébra, déterminer l'expression d'une primitives $F$ de $f$. 
     \begin{blocvisible}[height=2]
-        Une primitive de $f(x) = x \cdot\e^{-2x}$ est donnée par :
+        Une primitive de $f(x) = x \cdot\e^{-2x}$ est donnée par:
         \[F(x) = -\frac{1}{2}\cdot x \cdot\e^{-2x} - \frac{1}{4}\cdot \e^{-2x} + C= -\frac{(2x + 1)}{4}\e^{-2x} + C\]
     \end{blocvisible}
 
