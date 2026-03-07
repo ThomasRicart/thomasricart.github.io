@@ -18,6 +18,8 @@
     %\end{center}
 }
 
+
+
 %%%%%%%%%%%%%ùùù
 %\RequirePackage{etoolbox}
 %\RequirePackage{environ} % Indispensable pour capturer le contenu
@@ -36,4 +38,27 @@
     rounded corners,
     boxrule=0.5pt,
     #1cm % Permet de passer des options locales (ex: height=3cm)
+}
+
+% Commande pour réponse courte en ligne (Style blocvisible)
+% Usage : \reponseLigne[largeur]{contenu}
+\newtcbox{\boxstyleLigne}{
+    on line,                % Indispensable pour rester dans le texte
+    arc=2pt,                % Coins arrondis
+    outer arc=2pt,
+    colback=gray!10,        % Fond gris identique à blocvisible
+    colframe=black,         % Bordure noire
+    boxrule=0.5pt,          % Épaisseur de bordure identique
+    left=2pt, right=2pt, top=1pt, bottom=1pt, % Marges internes réduites
+    before upper=\strut     % Assure une hauteur constante
+}
+
+\newcommand{\reponseLigne}[2][3cm]{%
+    \ifdefstring{\visibleornot}{visible}{%
+        % Si visible : on affiche le texte dans la petite box arrondie
+        \boxstyleLigne{#2}%
+    }{%
+        % Si caché : on affiche un cadre vide arrondi de la largeur demandée
+        \boxstyleLigne{\makebox[#1]{\vphantom{#2}}}%
+    }%
 }

@@ -1,0 +1,131 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{0}
+
+
+
+\begin{document}
+
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 1}
+\def\chaptername{Nombres complexes} % Titre au centre
+\def\docname{C112~--~TD 1}        % Identifiant à gauche
+
+\pagestyle{DS_FP}
+
+\NomPrenom{}
+
+\bigskip
+
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Compréhension et Forme Algébrique}: Soit un nombre complexe $z$ défini par:
+\begin{center}
+    $z = 3 - 4\i$
+\end{center}
+
+\begin{enumerate}
+    \item \textbf{Terminologie}: Identifiez la partie réelle $\Ree(z)$ et la partie imaginaire $\Ima(z)$: \reponseLigne[4cm]{$\Ree(z) = 3$ et $\Ima(z) = -4$}
+     \item \textbf{Conjugué}: Donnez l'écriture du nombre conjugué $\conj{z}$: \reponseLigne[4cm]{$\conj{z} = 3 + 4\i$} 
+    \item \textbf{Module}: Calculez le module $|z|$: \reponseLigne[4cm]{$|z| = 5$}
+    \item \textbf{Opposé}: Donnez l'affixe du point $P$ symétrique du point $M(z)$ par rapport à l'origine: \reponseLigne[4cm]{$z_P = -3 + 4\i$}
+\end{enumerate}
+
+\bigskip
+
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Opérations et Puissances de $\i$}: 
+Ecrire ces nombres complexes sous forme algébrique.
+
+\begin{enumerate}
+    \item $\i^2 = \reponseLigne[3cm]{$-1$}$
+    \item $\i^3 = \reponseLigne[3cm]{$-\i$}$
+    \item ${(1+\i)}^2 =  \reponseLigne[3cm]{$2\i$}$
+    \item $z = \dfrac{3-\i}{4-3\i}=\reponseLigne[3cm]{$\dfrac{1}{5}+\dfrac{2}{5}\i$}$. 
+\end{enumerate}
+
+
+\bigskip
+
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Résolution d'Équations}: 
+On souhaite résoudre dans $\mathbb{C}$ l'équation du second degré suivante:
+\begin{center}
+    $4z^{2}-4z+5=0$
+\end{center}
+
+\begin{enumerate}
+    \item Calculez le discriminant $\Delta = b^2 - 4ac$: \reponseLigne[3cm]{$\Delta = -64$}
+    \item En déduire la nature des solutions (réelles ou complexes conjuguées)
+    \begin{blocvisible}[height=1]
+        $\Delta < 0$ donc les solutions sont complexes conjuguées.
+    \end{blocvisible}
+
+    \item Donnez les valeurs exactes des solutions $z_1$ et $z_2$:
+    \begin{blocvisible}[height=1.5]
+        \[z_1 = \frac{4 - \sqrt{-64}}{8} = \frac{4 - 8\i}{8} = \frac{1}{2} - \i \qquad z_2 = \frac{4 + \sqrt{-64}}{8} = \frac{4 + 8\i}{8} = \frac{1}{2} + \i\]
+    \end{blocvisible}
+\end{enumerate}
+
+\bigskip
+\pagebreak
+\thispagestyle{DS_LP}
+%%=============================================================
+\exods{0} \medskip
+
+\textbf{Formes Trigonométrique et Exponentielle}: 
+Soit le nombre complexe $z_A = -2 + 2\i$. 
+
+\begin{enumerate}
+    \item Calculez le module $r = |z_A|$.
+    
+    \begin{blocvisible}[height=2]
+        \[r = |z_A| = \sqrt{{(-2)}^2 + 2^2} = \sqrt{8} = 2\sqrt{2}\]
+    \end{blocvisible}
+    \item Déterminez un argument $\theta$ en utilisant les formules $\cos \theta = \dfrac{a}{r}$ et $\sin \theta = \dfrac{b}{r}$.
+    \begin{blocvisible}[height=5]
+        \[r = |z_A| = \sqrt{{(-2)}^2 + 2^2} = \sqrt{8} = 2\sqrt{2}\]
+        \[\cos \theta = \frac{-2}{2\sqrt{2}} = -\frac{1}{\sqrt{2}} \qquad \sin \theta = \frac{2}{2\sqrt{2}} = \frac{1}{\sqrt{2}}\]
+        \[\theta = \frac{\pi}{4} + \pi = \frac{5\pi}{4}\]       
+    \end{blocvisible}
+    \item Écrivez $z_A$ sous forme exponentielle ($r e^{i\theta}$).
+    \begin{blocvisible}[height=2]
+        \[z_A = |z_A| \cdot \e^{\i\theta}= 2\sqrt{2} \cdot e^{\dfrac{5\pi}{4}\i}\]
+    \end{blocvisible}
+    \item \textbf{Application Électronique}: Si une impédance complexe est $Z = 10 + 10i$, donnez sa forme exponentielle.
+    \begin{blocvisible}[height=5]
+        \[|Z| = \sqrt{10^2+10^2} = 10\sqrt{2}\]
+        \[\cos \theta = \frac{10}{10\sqrt{2}}  = \frac{1}{\sqrt{2}} =\frac{\sqrt{2}}{2} \qquad \sin \theta = \frac{10}{10\sqrt{2}} = \frac{1}{\sqrt{2}}=\frac{\sqrt{2}}{2}\]
+        \[\theta = \frac{\pi}{4}\]
+        \[Z = 10\sqrt{2}\cdot e^{\i\dfrac{\pi}{4}}\]
+    \end{blocvisible}   
+\end{enumerate}
+
+\end{document}
