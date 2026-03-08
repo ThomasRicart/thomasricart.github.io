@@ -48,11 +48,7 @@ Lorsqu'un serveur s'allume, la température $T$ (en °C) captée par la sonde en
 \[f(t)=60  - 40e^{-0,2t} \quad \text{pour } t \geq 0\]
 
 \begin{enumerate}
-    \item Déterminer $\displaystyle\lim_{t \to +\infty} e^{-0,2t}$. 
-    \begin{blocvisible}[height=1.5]
-        \[\lim_{t \to +\infty} e^{-0,2t} = 0\]
-    \end{blocvisible}
-    \item En déduire $\displaystyle\lim_{t \to +\infty} f(t)$. Interpréter ce résultat dans le contexte de la surveillance de la température.
+    \item Déterminer $\displaystyle\lim_{t \to +\infty} f(t)$. Interpréter ce résultat dans le contexte de la surveillance de la température.
     \begin{blocvisible}[height=3]
         \[\lim_{t \to +\infty} f(t) = 60\]
         Interprétation: Lorsque le temps $t$ tend vers l'infini
@@ -64,9 +60,25 @@ Lorsqu'un serveur s'allume, la température $T$ (en °C) captée par la sonde en
         \[f'(t) = 0-40 \times (-0,2) e^{-0,2t} = 8 e^{-0,2t}\]
     \end{blocvisible}
     \item Étudier le signe de $f'(t)$ et en déduire les variations de la fonction $f$ sur $\fo{0}{+\infty}$. Vous présenterez les résultats dans un tableau.
-    \begin{blocvisible}[height=2]
-        Le signe de $f'(t)$ est déterminé par le signe de $e^{-0,2t}$, qui est toujours positif pour tout $t \geq 0$. Ainsi, $f'(t) > 0$ pour tout $t \geq 0$, ce qui signifie que la fonction $f$ est strictement croissante sur l'intervalle $\fo{0}{+\infty}$.
+    \begin{blocvisible}[height=4]
+        \begin{minipage}{0.54\linewidth}
+                    Le signe de $f'(t)$ est déterminé par le signe de $e^{-0,2t}$, qui est toujours positif pour tout $t \geq 0$. 
+                    
+                    
+                    Ainsi, $f'(t) > 0$ pour tout $t \geq 0$, ce qui signifie que la fonction $f$ est strictement croissante sur l'intervalle $\fo{0}{+\infty}$.
+
+        \end{minipage}\hfill
+        \begin{minipage}{0.45\linewidth}
+            \begin{tikzpicture}
+                \tkzTabInit[lgt=2.5,espcl=3.5]
+                {$x$ / 1, signe $\, f'(x)$ / 1, var \, $f$ / 1}
+                {$0$, $+\infty$}
+                \tkzTabLine{,+,}
+                \tkzTabVar{-/ $20$, +/ $60$}
+            \end{tikzpicture}
+        \end{minipage}
     \end{blocvisible}
+    
     \item On considère que le système est stabilisé lorsque la température atteint 55°C.
     
     À l'aide de GeoGebra, déterminer graphiquement au bout de combien de temps (arrondi à l'unité) cette température est atteinte.
@@ -83,7 +95,9 @@ Lorsqu'un serveur s'allume, la température $T$ (en °C) captée par la sonde en
 \section*{Partie B\@: Gestion d'une pile de messages (Buffer) }
 
 
-Le système de surveillance génère des logs. Initialement, il y a \textbf{50 messages} en attente.\\
+Le système de surveillance génère des logs. Initialement, il y a \textbf{50 messages} en attente.
+
+\medskip
 
 Chaque minute:
 \begin{itemize}
@@ -124,8 +138,8 @@ On note $u_n$ le nombre de messages à la minute $n$. On a $u_0 = 50$.
 
     \item On souhaite savoir quand la pile dépassera 140 messages en attente. Compléter l'algorithme suivant pour trouver la minute à laquelle cela se produit. 
     
-    \begin{minipage}[t]{0.48\textwidth}
-        \smallskip
+    \begin{minipage}[t]{0.48\linewidth}
+        \bigskip
     \begin{verbatim}
     n <- ......
     u <- ......
@@ -137,7 +151,7 @@ On note $u_n$ le nombre de messages à la minute $n$. On a $u_0 = 50$.
     \end{verbatim}
         
     \end{minipage}\hfill
-    \begin{minipage}[t]{0.48\textwidth}
+    \begin{minipage}[t]{0.48\linewidth}
         \smallskip
             \begin{blocvisible}[height=4.5]
 \begin{verbatim}
@@ -178,8 +192,68 @@ On tire un capteur au hasard dans le stock global. Soient les événements:
 
 \begin{enumerate}[resume]
     \item Construire un arbre pondéré modélisant cette situation.
-    \begin{blocvisible}[height=4]
+    
+    
+    \begin{minipage}{0.49\linewidth}
+    \begin{center}
+\begin{tikzpicture}[
+    grow=right,     % On définit la croissance vers la droite
+    % Réglages des distances entre les niveaux et les branches
+    level 1/.style={sibling distance=2cm, level distance=3.5cm},
+    level 2/.style={sibling distance=1.5cm, level distance=3.2cm},
+    every node/.style={sloped}, % Aligne le texte sur les branches
+    edge from parent/.style={draw, -latex, thick} % Ajoute une flèche au bout
+]
+% Racine
+\node {} 
+    child { node {$Y$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$\ldots{}$} }
+        child { node {$D$} 
+            edge from parent node[above] {$\ldots{}$} }
+        edge from parent node[above] {$\ldots{}$} }
+    child { node {$X$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$\ldots{}$} }
+        child { node {$D$} 
+            edge from parent node[above] {$\ldots{}$} }
+        edge from parent node[above] {$\ldots{}$} }
+    ;
+\end{tikzpicture}
+\end{center}
+\end{minipage}\hfill{}
+\begin{minipage}{0.49\linewidth}
+    \begin{blocvisible}[height=5]
+\begin{center}
+\begin{tikzpicture}[
+    grow=right,     % On définit la croissance vers la droite
+    % Réglages des distances entre les niveaux et les branches
+    level 1/.style={sibling distance=2cm, level distance=3.5cm},
+    level 2/.style={sibling distance=1.5cm, level distance=3.2cm},
+    every node/.style={sloped}, % Aligne le texte sur les branches
+    edge from parent/.style={draw, -latex, thick} % Ajoute une flèche au bout
+]
+% Racine
+\node {} 
+    child { node {$Y$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$0,95$} }
+        child { node {$D$} 
+            edge from parent node[above] {$0,05$} }
+        edge from parent node[above] {$0,3$} }
+    child { node {$X$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$0,98$} }
+        child { node {$D$} 
+            edge from parent node[above] {$0,02$} }
+        edge from parent node[above] {$0,7$} }
+    ;
+\end{tikzpicture}
+\end{center}
+
     \end{blocvisible}
+\end{minipage}
+
     \item Calculer la probabilité que le capteur prélevé soit défectueux $P(D)$.
     \begin{blocvisible}[height=3]
         \[P(D) = P(X) \cdot P_X(D) + P(Y) \cdot P_Y(D) = 0,7 \cdot 0,02 + 0,3 \cdot 0,05 = 0,014 + 0,015 = 0,029\]

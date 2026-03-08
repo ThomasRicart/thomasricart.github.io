@@ -1,0 +1,259 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\def\ptsexoA{0}
+
+\begin{document}
+
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 1}
+\def\chaptername{02} % Titre au centre
+\def\docname{CCF Blanc}        % Identifiant à gauche
+
+\pagestyle{DS_FP}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NomPrenomNote{}
+
+%%=============================================================
+
+\section*{Contexte général}
+
+En télécommunications, le gain d'un amplificateur peut varier selon la tension de commande. On modélise le gain $G$ (en décibels) en fonction de la tension $x$ (en volts) sur l'intervalle $\ff{1}{10}$ par:
+$f(x) = a \cdot \ln(x) + b \cdot x$
+
+\section*{Partie A\@: Configuration de l'amplificateur}
+
+Avant d'étudier le signal, le technicien doit configurer l'amplificateur pour qu'il réponde à deux contraintes techniques:
+
+\begin{itemize}
+    \item Pour une tension  de référence ($x = 1\text{ V}$), le gain doit être exactement de $5\text{ dB}$.
+    \item Pour stabiliser le signal, le gain doit atteindre son minimum pour une tension de $4\text{ V}$.
+\end{itemize}
+
+\medskip
+
+\begin{enumerate}
+    \item Exprimer les deux contraintes ci-dessus en termes d'équations impliquant les paramètres $a$ et $b$.
+    \begin{blocvisible}[height=1]
+        \[ f(1) = 5 \qquad \text{et} \qquad      f'(4) = 0\]
+    \end{blocvisible}
+    \item Sur Géogébra, créer deux curseurs pour les paramètres $a$ (allant de $-50$ à $0$) et $b$ (allant de $0$ à $20$).
+    \item Créer la fonction $f$ définie sur $\ff{1}{10}$ par $f(x)=a \cdot \ln(x)+b\cdot x$
+    \item En manipulant les curseurs, trouver les valeurs entières de $a$ et $b$ permettant de vérifier les deux contraintes citées plus haut.
+    \begin{blocvisible}[height=1.5]
+        En manipulant les curseurs sur Géogébra, on trouve que les valeurs entières de $a$ et $b$ qui vérifient les contraintes sont $a = -20$ et $b = 5$.
+    \end{blocvisible}
+    \appelprof{}
+\end{enumerate}
+
+\section*{Partie B\@: Étude de la fonction de Gain}
+
+Pour la suite, on admet que les paramètres sont fixés à $a = -20$ et $b = 5$. On a donc:
+$f(x) = -20 \cdot \ln(x) + 5x$
+
+\medskip
+
+\begin{enumerate}[resume]
+    \item Calculer la valeur exacte de $f(1)$.
+    \begin{blocvisible}[height=1]
+        \[f(1) = -20 \cdot \ln(1) + 5 \cdot 1 = 5\]
+    \end{blocvisible}
+    \item Calculer une valeur approchée à $10^{-2}$ de $f(10)$.
+    \begin{blocvisible}[height=1]
+        \[f(10) \approx -20 \cdot \ln(10) + 5 \cdot 10 \approx 15,05\]
+    \end{blocvisible}
+    \item Déterminer l'intervalle sur lequel la fonction $f$ est négative.
+    \begin{blocvisible}[height=1]
+        En utilisant Géogébra, on trouve que la fonction $f$ est négative sur l'intervalle $\fo{x}{x}$.
+    \end{blocvisible}
+    \item Calculer la dérivée $f'(x)$ sur l'intervalle $\ff{1}{10}$.
+    \begin{blocvisible}[height=1.5]
+\[f'(x) = -20 \cdot \frac{1}{x} + 5 = \dfrac{5x - 20}{x}\]
+    \end{blocvisible}
+
+        \pagebreak
+
+    \item Étudier le signe de $f'(x)$ sur $\ff{1}{10}$ et dresser le tableau de variations complet de $f$.
+    \begin{blocvisible}[height=4.5]
+        \begin{minipage}{0.54\linewidth}
+        Le signe de $f'(x)$ dépend du signe de $5x - 20$. On trouve que $f'(x) < 0$ pour $x < 4$ et $f'(x) > 0$ pour $x > 4$. Ainsi, la fonction $f$ est décroissante sur $\ff{1}{4}$ et croissante sur $\ff{4}{10}$. Le tableau de variations est donc:
+        \end{minipage}\hfill
+        \begin{minipage}{0.45\linewidth}
+            \begin{tikzpicture}
+                \tkzTabInit[lgt=2.5,espcl=1.8]
+                {$x$ / 1, signe $\, f'(x)$ / 1, var \, $f$ / 2}
+                {$1$, $4$, $10$}
+                \tkzTabLine{,-,z,+,}
+                \tkzTabVar{+ / $5$, - / $f(4)$, + / ${15,05}$}
+            \end{tikzpicture}
+                %\tkzTabVar{-/ $20$, +/ $60$}
+        \end{minipage}
+    \end{blocvisible}
+    
+\end{enumerate}
+    
+
+\section*{Partie C\@: Calcul de la Puissance Moyenne}
+
+\begin{enumerate}[resume]
+    \item Déterminer une primitive $F$ de la fonction $f$ sur $\ff{1}{10}$.
+    \begin{blocvisible}[height=1.5]
+\[F(x) = -20 \cdot \Big(x \ln(x) - x\Big) + 5 \cdot x\]
+    \end{blocvisible}
+    \item Calculer la valeur exacte de l'intégrale $I = \displaystyle\int_{1}^{5} f(x) \, dx$.
+    \begin{blocvisible}[height=1.5]    
+\[I = F(5) - F(1) = \Big[-20 \cdot \Big(5 \ln(5) - 5\Big) + 5 \cdot 5\Big] - \Big[-20 \cdot \Big(1 \ln(1) - 1\Big) + 5 \cdot 1\Big]  \approx  \]
+    \end{blocvisible}
+    \item Calculer la valeur moyenne $G_m$ du gain sur l'intervalle $\ff{1}{5}$ (arrondir au dixième).
+    \begin{blocvisible}[height=1.5]
+\[G_m = \frac{1}{5-1} \int_{1}^{5} f(x) \, dx = \frac{1}{4} \cdot I \approx \]
+    \end{blocvisible}
+\end{enumerate}
+
+\section*{Partie D\@: Contrôle qualité et probabilités conditionnelles}
+
+L'entreprise reçoit des puces d'amplification de deux fournisseurs différents. Chaque puce peut être défectueuse ou non.
+
+\begin{itemize}
+    \item Fournisseur $S_1$\@: fournit $60 \%$ du stock (avec un taux de défectueux de $3 \%$).
+    \item Fournisseur $S_2$\@: fournit le reste du stock ($40 \%$) avec un taux de défectueux de $2 \%$.
+\end{itemize}
+
+On tire une puce au hasard dans le stock global. Soient les événements:
+
+\begin{itemize}
+    \item $S_1$: \og{}La puce provient du fournisseur $S_1$\fg{}
+    \item $S_2$: \og{}La puce provient du fournisseur $S_2$\fg{}
+    \item $D$: \og{}La puce est défectueuse\fg{}
+\end{itemize}
+
+\medskip
+\begin{enumerate}[resume]
+    \item Construire un arbre pondéré modélisant cette situation.
+
+\begin{minipage}{0.49\textwidth}
+    \begin{center}
+\begin{tikzpicture}[
+    grow=right,     % On définit la croissance vers la droite
+    % Réglages des distances entre les niveaux et les branches
+    level 1/.style={sibling distance=2cm, level distance=3.5cm},
+    level 2/.style={sibling distance=1.5cm, level distance=3.2cm},
+    every node/.style={sloped}, % Aligne le texte sur les branches
+    edge from parent/.style={draw, -latex, thick} % Ajoute une flèche au bout
+]
+% Racine
+\node {} 
+    child { node {$S_2$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$\ldots{}$} }
+        child { node {$D$} 
+            edge from parent node[above] {$\ldots{}$} }
+        edge from parent node[above] {$\ldots{}$} }
+    child { node {$S_1$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$\ldots{}$} }
+        child { node {$D$} 
+            edge from parent node[above] {$\ldots{}$} }
+        edge from parent node[above] {$\ldots{}$} }
+    ;
+\end{tikzpicture}
+\end{center}
+\end{minipage}\hfill{}
+\begin{minipage}{0.49\textwidth}
+    \begin{blocvisible}[height=5]
+\begin{center}
+\begin{tikzpicture}[
+    grow=right,     % On définit la croissance vers la droite
+    % Réglages des distances entre les niveaux et les branches
+    level 1/.style={sibling distance=2cm, level distance=3.5cm},
+    level 2/.style={sibling distance=1.5cm, level distance=3.2cm},
+    every node/.style={sloped}, % Aligne le texte sur les branches
+    edge from parent/.style={draw, -latex, thick} % Ajoute une flèche au bout
+]
+% Racine
+\node {} 
+    child { node {$S_2$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$0,98$} }
+        child { node {$D$} 
+            edge from parent node[above] {$0,02$} }
+        edge from parent node[above] {$0,4$} }
+    child { node {$S_1$}
+        child { node {$\overline{D}$} 
+            edge from parent node[above] {$0,97$} }
+        child { node {$D$} 
+            edge from parent node[above] {$0,03$} }
+        edge from parent node[above] {$0,6$} }
+    ;
+\end{tikzpicture}
+\end{center}
+
+    \end{blocvisible}
+\end{minipage}
+
+\pagebreak
+    \thispagestyle{DS_LP}
+
+    \item Calculer la probabilité que la puce prélevée soit défectueuse.
+    \begin{blocvisible}[height=1.5]
+        \[P(D) = P(S_1) \cdot P_{S_1}(D) + P(S_2) \cdot P_{S_2}(D) = 0,6 \cdot 0,03 + 0,4 \cdot 0,02 = 0,018 + 0,008 = 0,026\]
+    \end{blocvisible}
+    \item La puce tirée est défectueuse. Calculer la probabilité qu'elle provienne du fournisseur $S_1$. On arrondira le résultat à $10^{-3}$.
+    \begin{blocvisible}[height=1.5]
+        \[P_{S_1}(D) = \frac{P(S_1 \cap D)}{P(D)} = \frac{P(S_1) \cdot P_{S_1}(D)}{P(D)} = \frac{0,6 \cdot 0,03}{0,026} = \frac{0,018}{0,026} \approx 0,692\]
+    \end{blocvisible}
+
+\end{enumerate}
+
+
+
+\section*{Partie E\@: Fiabilité et seuil de confiance}
+
+On utilise des composants dont la probabilité de défaut est $p = 0,04$. On prélève un lot de $n$ résistances.
+
+\medskip
+
+\begin{enumerate}[resume]
+    \item Pour un lot de $n = 80$, on admet que le nombre de défauts suit une loi binomiale. Justifier les paramètres de cette loi.
+    \begin{blocvisible}[height=5]
+        La variable aléatoire qui compte le nombre de résistances défectueuses dans un lot de $n$ résistances suit une loi binomiale car elle compte le nombre de succès (résistances défectueuses) dans un nombre fixe d'essais indépendants (80 résistances), avec une probabilité constante de succès $p = 0,04$. Les paramètres de la loi binomiale sont donc $n = 80$ et $p = 0,04$.
+    \end{blocvisible}
+    \item Calculer la probabilité d'avoir au moins une résistance défectueuse $P(X \geq 1)$.
+    \begin{blocvisible}[height=3]
+        La probabilité d'avoir au moins une résistance défectueuse est complémentaire de la probabilité d'avoir aucune résistance défectueuse:
+        \[P(X \geq 1) = 1 - P(X = 0)= 1 - {(0,96)}^{80} \approx 1 - 0,043 = 0,957\]
+    \end{blocvisible}
+
+
+    \item Le responsable veut que la probabilité d'avoir au moins un défaut dépasse $0,99$. Trouver le nombre minimal de composants à tester pour que $P(X \geq 1) > 0,99$.
+    \begin{blocvisible}[height=5]
+        Pour que la probabilité d'avoir au moins un défaut dépasse $0,99$, il faut que:
+        \[P(X \geq 1) = 1 - P(X = 0) > 0,99 \quad \Leftrightarrow \quad P(X = 0) < 0,01 \quad \Leftrightarrow \quad {(0,96)}^{n} < 0,01\]   
+        En prenant le logarithme des deux côtés, on trouve:
+        \[n \cdot \ln(0,96) < \ln(0,01) \quad \Leftrightarrow \quad n < \frac{\ln(0,01)}{\ln(0,96)} \approx \frac{-4,605}{-0,0408} \approx 112,9\]
+        Donc, le nombre minimal de composants à tester pour que $P(X \geq 1) > 0,99$ est de $n = 113$.
+    \end{blocvisible}
+    \appelprof{}
+\end{enumerate}
+
+\end{document}
