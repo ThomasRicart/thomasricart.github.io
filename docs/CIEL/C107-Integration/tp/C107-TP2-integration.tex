@@ -77,10 +77,10 @@ Utilisez maintenant la valeur trouvée ($\tau = 2$) pour analyser le comportemen
         \begin{minipage}{0.45\linewidth}
             \begin{tikzpicture}
                 \tkzTabInit[lgt=2.5,espcl=3.5]
-                {$x$ / 1, $signe \, f'(x)$ / 1, $var \, f$ / 1}
+                {$x$ / 1, signe $\, f'(x)$ / 1, var \, $f$ / 1}
                 {$0$, $+\infty$}
-                \tkzTabLine{}
-                \tkzTabVar{}
+                \tkzTabLine{,-,}
+                \tkzTabVar{+/ $10$, -/ $0$}
             \end{tikzpicture}
         \end{minipage}
     \end{blocvisible}
@@ -102,8 +102,10 @@ On souhaite évaluer la tension moyenne délivrée par le composant sur un inter
 
 \begin{enumerate}[resume]
     \item Créer les curseurs $a$ et $b$ avec les valeurs initiales $a=0$ et $b=4$.   
-    \item Déterminer graphiquement l'aire sous la courbe de $f$ entre $a$ et $b$ avec la commande \verb|Aire = Intégrale(f, a, b)|.   
-    \begin{blocvisible}[height=2]
+    \item Déterminer graphiquement l'aire sous la courbe de $f$ entre $a$ et $b$ avec la commande 
+    
+    \verb|Aire = Intégrale(f, a, b)|.   
+    \begin{blocvisible}[height=1.]
         D'après Géogébra, l'aire sous la courbe de $f$ entre $a=0$ et $b=4$ est d'environ $13,53$ unités d'aires.
     \end{blocvisible}       
     

@@ -31,7 +31,8 @@ Avant d'étudier le signal, le technicien doit configurer l'amplificateur pour q
 > **✋ Appel professeur n°1** : 
 > 1. Sur GeoGebra, créer deux curseurs pour les paramètres $A$ (allant de $-50$ à $0$) et $B$ (allant de $0$ à $20$).
 >
-> 2. Saisir la fonction $f(x) = A \ln(x) + Bx$.
+> 2. Saisir la fo
+nction $f(x) = A \ln(x) + Bx$.
 >
 > 3. En manipulant les curseurs, trouver les valeurs entières de $A$ et $B$ permettant de vérifier les deux contraintes citées plus haut.
 >

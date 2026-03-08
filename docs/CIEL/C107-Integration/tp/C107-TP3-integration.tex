@@ -67,20 +67,21 @@ Utilisez maintenant la valeur trouvée ($c = 2$) pour analyser le comportement d
     \item Tracer la courbe représentative de $f$ et observer son comportement. 
     \item Affichez la fonction dérivée $f'$  
     \item Déterminer le signe de $f'$ et en déduire les variations de $f$. 
-     \begin{blocvisible}[height=4]
-        \begin{minipage}{0.58\linewidth}
+     \begin{blocvisible}[height=4.5]
+        \begin{minipage}{0.55\linewidth}
             $f'(x) = \e^{-2x} - 2x \e^{-2x} = \e^{-2x}(1 - 2x)$, qui est positif pour $x < 0,5$ et négatif pour $x > 0,5$.
 
-        Par conséquent, $f$ est strictement croissante sur $\ff{0}{0,5}$ et strictement décroissante sur $\ff{0,5}{+\infty}$.
+        Donc, la fonction $f$ est strictement croissante sur $\ff{0}{0,5}$ et strictement décroissante sur $\ff{0,5}{+\infty}$.
         \end{minipage}\hfill
-        \begin{minipage}{0.4\linewidth}
+        \begin{minipage}{0.44\linewidth}
             \begin{tikzpicture}
-                \tkzTabInit[lgt=2,espcl=3.5]
-                {$x$ / 1, $signe \, f'(x)$ / 1, $var \, f$ / 1}
-                {$0$, $+\infty$}
-                \tkzTabLine{}
-                \tkzTabVar{}
+                \tkzTabInit[lgt=2.5,espcl=1.7]
+                {$x$ / 1, signe $\, f'(x)$ / 1, var \, $f$ / 2}
+                {$0$, ${0,5}$, $+\infty$}
+                \tkzTabLine{,+,z,-,}
+                \tkzTabVar{- / $0$, + / $f({0,5})$, - / ${0}$}
             \end{tikzpicture}
+            
         \end{minipage}
     \end{blocvisible}
     \item Placer un point $N\left(x_N; f(x_N)\right)$ sur la courbe et observer la valeur de $f(x_N)$ pour différentes positions de $N$.        
@@ -106,7 +107,9 @@ On souhaite évaluer la tension moyenne délivrée par le composant sur un inter
 
 \begin{enumerate}[resume]
     \item Créer les curseurs $a$ et $b$ avec les valeurs initiales $a=0$ et $b=2$.  
-    \item Déterminer graphiquement l'aire sous la courbe de $f$ entre $a$ et $b$ avec la commande \verb|Aire = Intégrale(f, a, b)|.  
+    \item Déterminer graphiquement l'aire sous la courbe de $f$ entre $a$ et $b$ avec la commande 
+    
+    \verb|Aire = Intégrale(f, a, b)|.  
     \begin{blocvisible}[height=2]
         D'après Géogébra, l'aire sous la courbe de $f$ entre $a=0$ et $b=2$ est d'environ $0,38$ unités d'aires.
     \end{blocvisible}
