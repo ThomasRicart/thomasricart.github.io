@@ -1,0 +1,309 @@
+\def\chaptercode{AL03}    % Code du chapitre
+\def\chaptername{Diviser pour régner}        % Nom du chapitre
+
+\titre{}
+
+\medskip
+
+\section{L'algorithme de dichotomie}
+
+\subsection{La version impérative}
+
+\begin{exercice}{Dichotomie impérative}{}
+\medskip
+
+Ecrire la fonction \verb+recherche_dicho_imperative(tab, val)+ qui renvoie \verb+True+ si \verb+val+ est dans \verb+tab+ et \verb+False+ sinon.
+
+\begin{minipage}{0.49\linewidth}
+    \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+        def recherche_dicho_imperative(tab, val):
+            pass
+        
+        tab = [1, 5, 7, 9, 12, 13]
+        assert recherche_dichotomique(tab, 12) == True
+        assert recherche_dichotomique(tab, 17) == False
+                \end{CodePythontexAlt}
+\end{minipage}\hfill
+\begin{minipage}{0.49\linewidth}
+    À chaque tour de la boucle while, la taille de la liste est divisée par 2. Ceci confère à cet algorithme une complexité logarithmique (bien meilleure qu'une complexité linéaire).
+
+\end{minipage}
+
+
+\end{exercice}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Version récursive}
+
+\begin{remarque}{Le slicing permet de ne garder qu'un bout de liste}{}
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+L = [3, 2, 5, 6, 9, 8, 5]
+assert L[:] == L
+assert L[2:] == [5, 6, 9, 8, 5]
+assert L[:4] == [3, 2, 5, 6]
+assert L[2:4] == [5, 6]
+            \end{CodePythontexAlt}
+
+\end{remarque}
+
+\begin{exercice}{Écrire la fonction \verb+dichotomie_rec+ avec slicing et la tester}{}
+
+
+    
+
+\end{exercice}
+
+\section{Diviser pour régner}
+
+\begin{definition}{Diviser pour régner}{}
+    Un problème peut se résoudre en employant le paradigme \textbf{Diviser pour Régner} lorsque:
+
+    \begin{itemize}
+        \item il est possible de décomposer ce problème en sous problèmes indépendants;
+        \item la taille de ces sous problèmes est une fraction du problème final.
+    \end{itemize}
+    
+    La méthode est composée de trois phases:
+
+    \begin{itemize}
+        \item la \verb+division+: le problème initial est divisé en sous problème de taille inférieure;
+        \item le \verb+règne+: chaque sous-problème est résolu soit récursivement, soit directement si trivial;
+        \item la \verb+combinaison+: les solutions des sous problèmes sont combinés pour obtenir la solution du problème initial.
+    \end{itemize}
+
+    \includegraphics[width = 0.6\linewidth]{dnc01}
+\end{definition}
+
+
+\begin{exercice}{Algorithme de recherche dans une liste non triée}{}
+
+    \begin{verbatim}
+si la liste est vide alors l'élément n'appartient pas à la liste
+si la liste ne comporte qu'un seul élément alors l'élément est présent s'il est égal à L[0]
+sinon on recherche l'élément dans la liste gauche ou dans la liste droite
+    \end{verbatim}
+
+    Écrire cette fonction \verb+recherche(L, val)+ en python
+\end{exercice}
+
+\section{Le tri fusion}
+
+Pour trier une paquet de copie dans l'ordre alphabétique, il est possible de scinder le paquet en deux sous-paquets de même taille puis de trier chacun de ces sous-paquets avant de les fusionner pour obtenir le paquet trié.\\
+
+Pour trier ce sous-paquet, on peut utiliser la même technique\dots\\
+
+On peut scinder les sous-paquets jusqu'à avoir une certitude: si le paquet n'a qu'une seule copie alors ce paquet est trié.
+
+
+\begin{minipage}{0.49\linewidth}
+    \begin{verbatim}
+    si la liste ne contient qu'un seul élément:
+        la liste est triée
+    sinon:
+        on fusionne les deux sous listes triées
+
+\end{verbatim}
+\end{minipage}
+\begin{minipage}{0.49\linewidth}
+    \includegraphics[width = 1\linewidth]{dnc02}
+
+\end{minipage}
+
+
+
+\begin{exercice}{Écrire la fonction \verb+division(L)+ qui renvoie un tuple contenant les deux sous-listes}{}
+
+    \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def division(L:list)->tuple:
+    
+L1 = [1, 4, 6, 15]
+L2 = [3, 9, 10]
+assert division (L1) == ([1, 4], [6, 15])
+assert division (L2) == ([3], [9, 10])
+assert division ([1]) == ([] , [1])
+
+                    \end{CodePythontexAlt}
+\end{exercice}
+
+\begin{exercice}{Écrire la fonction \verb+fusion(L1, L2)+ qui renvoie une liste fusionnée}{}
+
+\begin{verbatim}
+fonction fusion(L1, L2, L)
+    si L1 OU L2 est vide:
+        on renvoie L1 + L2
+    si le premier élément de L1 et plus petit que le premier élément de L2:
+        on insère le premier élément de L1 dans la liste fusionnée
+    si le premier élément de L2 et plus petit que le premier élément de L1:
+        on insère le premier élément de L2 dans la liste fusionnée
+    On appelle récursivement fusion avec le nouveau L1, le nouveau L2 et le nouveau L
+    
+    \end{verbatim}
+
+    \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def fusion(L1, L2, L = None):
+    if L = None:
+        L = []
+    return fusion_rec(L1, L2, L)
+def fusion_rec(L1, L2, L):
+    if L1 == [] or L2 == []:
+        return ....
+    if ....... < .........:
+        .....................
+    else:
+        .....................
+    L = ......................
+    return fusion_rec(........, ........, ..........)
+
+assert fusion(L1, L2) == [1, 3, 4, 6, 9, 10, 15]
+                    \end{CodePythontexAlt}
+\end{exercice}
+
+\begin{exercice}{Ecrire alors la fonction récursive \verb+tri_fusion(L1, L2)+}{}
+    \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def tri_fusion(L:list)->list:
+    
+L = [5, 7, 2, 1, 9, 8, 6]
+assert tri_fusion(L) == [1, 2, 5, 6, 7, 8, 9]
+                            \end{CodePythontexAlt}
+
+\end{exercice}
+
+
+\begin{propriete}{Complexité de l'algorithme}{}
+
+    \begin{minipage}{0.49\linewidth}
+        L'instruction finale 
+        
+        \verb+fusion(tri_fusion(L1), tri_fusion(L2))+ 
+        
+        lance deux appels à la fonction \verb+tri_fusion+ (avec certes des données d'entrée deux fois plus petites).
+
+On peut alors montrer que la complexité du tri fusion est en \verb+O(n log n)+
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\linewidth}
+        \includegraphics[width = 0.8\linewidth]{comparaison.png}
+
+    \end{minipage}
+    
+
+
+\end{propriete}
+
+\begin{exercice}{Dessiner de manière schématisé le tri fusion de \verb+[4, 8, 3, 1, 7, 6]+}{}
+
+
+    \vspace{3cm}
+\end{exercice}
+
+\begin{exercice}{Ecrire la trace de cet algorithme lors de l'appel de \verb+tri_fusion([4, 8, 3, 1, 7, 6])+}{}
+
+\begin{tabular}{|p{3.5cm}|c|c|p{1.cm}|p{1.cm}|p{6cm}|p{3cm}|}
+    \hline
+    Appel &n & IF & L1 & L2 & appel récursif fusion & valeur \\ \hline
+    trifusion([4,8,3,1,7,6])&6&F&[4,8,3]&[1,7,6]&trifusion([4,8,3]), trifusion([1,7,6])& \\ \hline
+    &&&&&& \\ \hline
+    
+\end{tabular}
+\end{exercice}
+
+    \begin{exercice}{Application à la recherche de maximum dans une liste}{}
+
+        \begin{verbatim}
+si la liste ne contient qu'un seul élément:
+    c'est le plus grand
+on coupe la liste en deux
+on récupère le plus grand de la liste de gauche
+on récupère le plus grand de la liste de droite
+on renvoie le plus grand des deux
+        \end{verbatim}
+        
+        On pourra utiliser la fonction \verb+max+ pour trouver le maximum entre deux valeurs.
+        \end{exercice}
+
+    \begin{exercice}{\quad }{}
+
+        Application au calcul de l'exponentiation rapide
+        
+        Il est facile de vérifier que:
+        
+        \begin{itemize}
+            \item $a^0=1$
+            \item si $n$ est pair, $a^n=(a \times a)^{\frac{n}{2}}$
+            \item si $n$ est impair: $a^n=a \times (a \times a)^{\frac{n-1}{2}}$
+        \end{itemize}
+             \end{exercice}
+
+
+\newpage
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+
+def recherche_dicho_imperative(tab, val):
+    ''' Rechercher dichotomique impérative dans liste triée '''
+    i_deb = 0
+    i_fin = len(tab) - 1
+    while i_deb < i_fin:
+        i_mil = (i_fin + i_deb)//2
+        if tab[i_mil] == val:
+            return True
+        if tab[i_mil] > val:
+            i_fin = i_mil - 1
+        else:
+            i_deb = i_mil + 1
+    return False
+
+def recherche_rec(L, val):
+    ''' Recherche dichotomique récursive dans liste triée '''
+    if L == []:
+        return False
+    i_mil = (len(L) - 1)//2
+    if L[i_mil] == val:
+        return True
+    if L[i_mil] > val:
+        return recherche_rec(L[:i_mil], val)
+    else:
+        return recherche_rec(L[i_mil+1:], val)
+
+def recherche_non_triee(L, val):
+    ''' Rechercher récursive dans liste non triée '''
+    if L == []:
+        return False
+    if len(L) == 1:
+        return L[0] == val
+    return recherche_non_triee(L[:len(L)//2], val) or recherche_non_triee(L[len(L)//2:], val)
+
+def division(L):
+    ''' Division de la liste en deux sous listes '''
+    n = len(L)
+    return (L[:n//2], L[n//2:])
+
+def fusion(L1, L2, L = None):
+    ''' Fusion de deux listes triées '''
+    if L == None:
+        L = []
+    return fusion_rec(L1, L2, L)
+def fusion_rec(L1, L2, L):
+    if L1 == [] or L2 == []:
+        return L + L1 + L2
+    if L1[0] < L2[0]:
+        e = L1.pop(0)
+    else:
+        e = L2.pop(0)
+    L = L + [e]
+    return fusion_rec(L1, L2, L)
+
+def tri_fusion(L):
+    ''' Renvoie la liste L triée par tri fusion '''
+    n = len(L)
+    if n < 2:
+        return L
+    else:
+        L1, L2 = division(L)
+        L1 = tri_fusion(L1)
+        L2 = tri_fusion(L2)
+        return fusion(L1, L2)
+\end{CodePythontexAlt}
+    \resetalltcb{}
