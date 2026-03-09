@@ -102,7 +102,8 @@ Vous devez réaliser l'ossature (le squelette) de l'interface de contrôle d'une
 
 * Lien : Un lien `<a>` vers un site météo.
 
-<a href = "./html/WEB01-dashboard.html"> Le rendu devrait ressembler à quelque chose comme cela.</a>
+[Le rendu devrait ressembler à quelque chose comme cela.](https://thomasricart.github.io/NSI_Premiere/WEB_langage/html/WEB01-dashboard.html)
+
 
 **Zoom sur la balise `<button>`**
 
