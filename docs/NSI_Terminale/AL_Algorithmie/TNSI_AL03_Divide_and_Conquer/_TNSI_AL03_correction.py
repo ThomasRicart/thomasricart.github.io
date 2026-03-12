@@ -6,7 +6,7 @@ def recherche_dicho_imperative(tab: list, val: int) -> bool:
     version imperative '''
     i_deb = 0
     i_fin = len(tab) - 1
-    while i_deb < i_fin:
+    while i_deb <= i_fin:
         i_mil = (i_fin + i_deb)//2
         if tab[i_mil] == val:
             return True
@@ -36,12 +36,12 @@ def verif_exo2():
     print(recherche_dicho_rec(tab, 4), 'attendu: True')
     print(recherche_dicho_rec(tab, 5), 'attendu: False')
 
-### Exercice 3 - Recherche dans une liste non triee
-def recherche(L: list, val: int) -> bool:
-    ''' Renvoie True si val est dans tab
-    tab est une liste
-    version recursive '''
-    pass
+def recherche(L, val):
+    if L == []:
+        return False
+    if len(L) == 1:
+        return L[0] == val
+    return recherche(L[:len(L)//2], val) or recherche(L[len(L)//2:], val)
 
 def verif_exo3():
     tab = [2, 3, 4, 6, 7, 8]
@@ -52,6 +52,8 @@ def verif_exo3():
 def division(L: list) -> tuple:
     ''' Renvoie la liste coupée en deux en deux sous listes
     sortie: tuple de listes '''
+    n = len(L)
+    return (L[:n//2], L[n//2:])
 
 def verif_exo4():
     L1 = [1, 4, 6, 15]
@@ -76,6 +78,8 @@ def fusion_rec(L1, L2, L):
         e = L2.pop(0)
     L = L + [e]
     return fusion_rec(L1, L2, L)
+
+
 
 def verif_exo5():
     L1 = [1, 3, 4]

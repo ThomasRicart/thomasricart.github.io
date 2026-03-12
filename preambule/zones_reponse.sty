@@ -33,12 +33,13 @@
     \visibleornot, % Utilise votre \def\visibleornot{visible}
     enhanced,
     breakable,
-    colback=gray!10,
-    colframe=black,
-    rounded corners,
-    boxrule=0.5pt,
+    %colback=gray!10,
+    %colframe=black,
+    %rounded corners,
+    %boxrule=0.5pt,
     #1cm % Permet de passer des options locales (ex: height=3cm)
 }
+
 
 % Commande pour réponse courte en ligne (Style blocvisible)
 % Usage : \reponseLigne[largeur]{contenu}
@@ -60,5 +61,30 @@
     }{%
         % Si caché : on affiche un cadre vide arrondi de la largeur demandée
         \boxstyleLigne{\makebox[#1]{\vphantom{#2}}}%
+    }%
+}
+
+
+\NewEnviron{blocvisiblex}[2][]{%
+    % #1 = Options tcolorbox (ex: height=4cm)
+    % #2 = Contenu pour la version ÉLÈVE (ex: texte à trous ou vide)
+    % \BODY = Contenu pour la version CORRIGÉE (entre begin et end)
+    
+    \ifdefstring{\visibleornot}{visible}%
+    {% --- MODE CORRECTION (PROF) ---
+        \begin{tcolorbox}[
+            enhanced, breakable,
+            #1cm % On applique les options de style/taille
+        ]
+            \BODY % On affiche ce qui est écrit à l'intérieur de l'environnement
+        \end{tcolorbox}
+    }%
+    {% --- MODE SUJET (ÉLÈVE) ---
+        \begin{tcolorbox}[
+            enhanced, breakable,
+            #1cm % On garde la même géométrie
+        ]
+            #2 % On affiche le texte spécifique à l'élève (ou rien)
+        \end{tcolorbox}
     }%
 }

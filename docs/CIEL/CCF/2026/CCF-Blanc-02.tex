@@ -60,8 +60,8 @@ Avant d'étudier le signal, le technicien doit configurer l'amplificateur pour q
     \item Sur Géogébra, créer deux curseurs pour les paramètres $a$ (allant de $-50$ à $0$) et $b$ (allant de $0$ à $20$).
     \item Créer la fonction $f$ définie sur $\ff{1}{10}$ par $f(x)=a \cdot \ln(x)+b\cdot x$
     \item En manipulant les curseurs, trouver les valeurs entières de $a$ et $b$ permettant de vérifier les deux contraintes citées plus haut.
-    \begin{blocvisible}[height=1.5]
-        En manipulant les curseurs sur Géogébra, on trouve que les valeurs entières de $a$ et $b$ qui vérifient les contraintes sont $a = -20$ et $b = 5$.
+    \begin{blocvisible}[height=1]
+        on trouve que les valeurs entières de $a$ et $b$ qui vérifient les contraintes sont $a = -20$ et $b = 5$.
     \end{blocvisible}
     \appelprof{}
 \end{enumerate}
@@ -78,15 +78,18 @@ $f(x) = -20 \cdot \ln(x) + 5x$
     \begin{blocvisible}[height=1]
         \[f(1) = -20 \cdot \ln(1) + 5 \cdot 1 = 5\]
     \end{blocvisible}
-    \item Calculer une valeur approchée à $10^{-2}$ de $f(10)$.
+    \medskip
+\item Calculer une valeur approchée à $10^{-2}$ de $f(10)$.
     \begin{blocvisible}[height=1]
         \[f(10) \approx -20 \cdot \ln(10) + 5 \cdot 10 \approx 15,05\]
     \end{blocvisible}
-    \item Déterminer l'intervalle sur lequel la fonction $f$ est négative.
+    \medskip
+\item Déterminer l'intervalle sur lequel la fonction $f$ est négative.
     \begin{blocvisible}[height=1]
         En utilisant Géogébra, on trouve que la fonction $f$ est négative sur l'intervalle $\fo{x}{x}$.
     \end{blocvisible}
-    \item Calculer la dérivée $f'(x)$ sur l'intervalle $\ff{1}{10}$.
+    \medskip
+\item Calculer la dérivée $f'(x)$ sur l'intervalle $\ff{1}{10}$.
     \begin{blocvisible}[height=1.5]
 \[f'(x) = -20 \cdot \frac{1}{x} + 5 = \dfrac{5x - 20}{x}\]
     \end{blocvisible}
@@ -124,7 +127,8 @@ $f(x) = -20 \cdot \ln(x) + 5x$
     \begin{blocvisible}[height=1.5]    
 \[I = F(5) - F(1) = \Big[-20 \cdot \Big(5 \ln(5) - 5\Big) + 5 \cdot 5\Big] - \Big[-20 \cdot \Big(1 \ln(1) - 1\Big) + 5 \cdot 1\Big]  \approx  \]
     \end{blocvisible}
-    \item Calculer la valeur moyenne $G_m$ du gain sur l'intervalle $\ff{1}{5}$ (arrondir au dixième).
+    \medskip
+\item Calculer la valeur moyenne $G_m$ du gain sur l'intervalle $\ff{1}{5}$ (arrondir au dixième).
     \begin{blocvisible}[height=1.5]
 \[G_m = \frac{1}{5-1} \int_{1}^{5} f(x) \, dx = \frac{1}{4} \cdot I \approx \]
     \end{blocvisible}
@@ -147,7 +151,6 @@ On tire une puce au hasard dans le stock global. Soient les événements:
     \item $D$: \og{}La puce est défectueuse\fg{}
 \end{itemize}
 
-\medskip
 \begin{enumerate}[resume]
     \item Construire un arbre pondéré modélisant cette situation.
 
@@ -218,7 +221,8 @@ On tire une puce au hasard dans le stock global. Soient les événements:
     \begin{blocvisible}[height=1.5]
         \[P(D) = P(S_1) \cdot P_{S_1}(D) + P(S_2) \cdot P_{S_2}(D) = 0,6 \cdot 0,03 + 0,4 \cdot 0,02 = 0,018 + 0,008 = 0,026\]
     \end{blocvisible}
-    \item La puce tirée est défectueuse. Calculer la probabilité qu'elle provienne du fournisseur $S_1$. On arrondira le résultat à $10^{-3}$.
+    \medskip
+\item La puce tirée est défectueuse. Calculer la probabilité qu'elle provienne du fournisseur $S_1$. On arrondira le résultat à $10^{-3}$.
     \begin{blocvisible}[height=1.5]
         \[P_{S_1}(D) = \frac{P(S_1 \cap D)}{P(D)} = \frac{P(S_1) \cdot P_{S_1}(D)}{P(D)} = \frac{0,6 \cdot 0,03}{0,026} = \frac{0,018}{0,026} \approx 0,692\]
     \end{blocvisible}
@@ -238,14 +242,16 @@ On utilise des composants dont la probabilité de défaut est $p = 0,04$. On pr�
     \begin{blocvisible}[height=5]
         La variable aléatoire qui compte le nombre de résistances défectueuses dans un lot de $n$ résistances suit une loi binomiale car elle compte le nombre de succès (résistances défectueuses) dans un nombre fixe d'essais indépendants (80 résistances), avec une probabilité constante de succès $p = 0,04$. Les paramètres de la loi binomiale sont donc $n = 80$ et $p = 0,04$.
     \end{blocvisible}
-    \item Calculer la probabilité d'avoir au moins une résistance défectueuse $P(X \geq 1)$.
+    \medskip
+\item Calculer la probabilité d'avoir au moins une résistance défectueuse $P(X \geq 1)$.
     \begin{blocvisible}[height=3]
         La probabilité d'avoir au moins une résistance défectueuse est complémentaire de la probabilité d'avoir aucune résistance défectueuse:
         \[P(X \geq 1) = 1 - P(X = 0)= 1 - {(0,96)}^{80} \approx 1 - 0,043 = 0,957\]
     \end{blocvisible}
 
 
-    \item Le responsable veut que la probabilité d'avoir au moins un défaut dépasse $0,99$. Trouver le nombre minimal de composants à tester pour que $P(X \geq 1) > 0,99$.
+    \medskip
+\item Le responsable veut que la probabilité d'avoir au moins un défaut dépasse $0,99$. Trouver le nombre minimal de composants à tester pour que $P(X \geq 1) > 0,99$.
     \begin{blocvisible}[height=5]
         Pour que la probabilité d'avoir au moins un défaut dépasse $0,99$, il faut que:
         \[P(X \geq 1) = 1 - P(X = 0) > 0,99 \quad \Leftrightarrow \quad P(X = 0) < 0,01 \quad \Leftrightarrow \quad {(0,96)}^{n} < 0,01\]   

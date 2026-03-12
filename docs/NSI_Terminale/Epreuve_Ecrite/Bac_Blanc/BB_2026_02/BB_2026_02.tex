@@ -1,0 +1,75 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usetikzlibrary{shapes.symbols, positioning}
+\usetikzlibrary{shapes.multipart, arrows.meta, positioning, calc}
+
+% Ton toggle : 'visible' pour le prof, 'invisible' pour l'élève
+\def\visibleornot{visible} 
+
+
+\usepackage{lastpage}
+
+\usepackage{xfp} % Indispensable pour les calculs
+% Dans ton préambule
+\newcommand{\setpts}[2]{\expandafter\def\csname pts#1\endcsname{#2}}
+\newcommand{\getpts}[1]{\csname pts#1\endcsname}
+
+
+% --- BAREME EXERCICE 1 (7 pts) ---
+\setpts{Q1}{0.5}\setpts{Q2}{0.5}\setpts{Q3}{0.5}\setpts{Q4}{0.5}\setpts{Q5}{1}%
+\setpts{Q6}{0.5}\setpts{Q7}{0.5}\setpts{Q8}{1}\setpts{Q9}{1}\setpts{Q10}{1}%
+\setpts{Exo1}{\fpeval{\getpts{Q1}+\getpts{Q2}+\getpts{Q3}+\getpts{Q4}+\getpts{Q5}+\getpts{Q6}+\getpts{Q7}+\getpts{Q8}+\getpts{Q9}+\getpts{Q10}}}
+
+% --- BAREME EXERCICE 2 (7 pts) ---
+\setpts{Q11}{0.5}\setpts{Q12}{0.5}\setpts{Q13}{0.5}\setpts{Q14}{0.5}\setpts{Q15}{0.5}\setpts{Q16}{0.5}\setpts{Q17}{1}%
+\setpts{Q18}{0.25}\setpts{Q19}{0.5}\setpts{Q20}{0.75}\setpts{Q21}{0.5}\setpts{Q22}{0.25}\setpts{Q23}{0.25}\setpts{Q24}{0.25}%
+\setpts{Q25}{0.5}\setpts{Q26}{0.5}\setpts{Q27}{0.25}%
+\setpts{Exo2}{\fpeval{\getpts{Q11}+\getpts{Q12}+\getpts{Q13}+\getpts{Q14}+\getpts{Q15}+\getpts{Q16}+\getpts{Q17}+\getpts{Q18}+\getpts{Q19}+\getpts{Q20}+\getpts{Q21}+\getpts{Q22}+\getpts{Q23}+\getpts{Q24}+\getpts{Q25}+\getpts{Q26}+\getpts{Q27}}}
+
+% --- BAREME EXERCICE 3 (6 pts) ---
+\setpts{Q28}{1}\setpts{Q29}{0.5}\setpts{Q30}{0.5}\setpts{Q31}{0.5}\setpts{Q32}{1}\setpts{Q33}{0.5}%
+\setpts{Q34}{0.5}\setpts{Q35}{0.5}\setpts{Q36}{1}%
+\setpts{Exo3}{\fpeval{\getpts{Q28}+\getpts{Q29}+\getpts{Q30}+\getpts{Q31}+\getpts{Q32}+\getpts{Q33}+\getpts{Q34}+\getpts{Q35}+\getpts{Q36}}}
+
+% --- TOTAL GENERAL ---
+\def\TotalDS{\fpeval{\getpts{Exo1}+\getpts{Exo2}+\getpts{Exo3}}}
+\begin{document}
+
+
+\def\level{Terminale}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{mydate} % Titre au centre
+\def\docname{Bac Blanc 02}        % Identifiant à gauche
+
+
+
+  \include{page_de_garde}
+   \include{exo1}
+   \include{exo2}
+   \include{exo3}
+   \newpage
+   \quad\newpage
+   %\include{exo4}
+
+   \include{annexes}
+\end{document}
