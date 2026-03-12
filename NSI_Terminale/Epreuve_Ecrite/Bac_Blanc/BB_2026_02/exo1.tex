@@ -1,0 +1,454 @@
+
+
+
+\pagestyle{DS_FP}
+%\NomPrenomNote{}
+
+\bigskip
+
+\exods{\getpts{Exo1}}
+%%% POLYNESIE 2025 - J1 - exo1
+
+
+
+\section*{PARTIE A}
+
+Un coeur de réseau est constitué d'un maillage dans lequel les routeurs $R_1$ à $R_6$ sont reliés par des liaisons physiques dont le débit en Mbps (Méga-bits par seconde) est indiqué sur la figure suivante.
+
+\begin{figure}[!h]
+\begin{center}
+\begin{tikzpicture}[
+    scale=0.9, transform shape, % Réduit tout à 70%    
+    r/.style={draw, circle, minimum size=8mm},
+    lan/.style={draw, rectangle, minimum size=6mm},
+    % On renomme le style "nuage" pour éviter de boucler avec la forme "cloud"
+    nuage/.style={draw, cloud, cloud puffs=15, cloud puff arc=120, aspect=2, minimum width=3cm, minimum height=2cm},
+    lbl/.style={midway, fill=white, font=\footnotesize, inner sep=1pt}
+]
+    % Positionnement des Routeurs
+    \node[r] (R1) at (0,0) {$R_1$};
+    \node[r] (R2) at (3,2.5) {$R_2$};
+    \node[r] (R3) at (3,-2.5) {$R_3$};
+    \node[r] (R4) at (9,2.5) {$R_4$};
+    \node[r] (R5) at (9,-2.5) {$R_5$};
+    \node[r] (R6) at (12,0) {$R_6$};
+
+    % Positionnement des LAN
+    \node[lan] (L1) at (-3,0) {$LAN_1$};
+    \node[lan] (L2) at (-3,2.5) {$LAN_2$};
+    \node[lan] (L3) at (-3,-2.5) {$LAN_3$};
+    \node[lan] (L4) at (12,2.5) {$LAN_4$};
+    \node[lan] (L5) at (12,-2.5) {$LAN_5$};
+
+    % Internet (on utilise le style 'nuage')
+    \node[nuage] (Net) at (15.5,0) {INTERNET};
+
+    % Connexions LAN -> Routeurs
+    \draw (L1) -- (R1); \draw (L2) -- (R2); \draw (L3) -- (R3);
+    \draw (L4) -- (R4); \draw (L5) -- (R5);
+    \draw (R6) -- (Net);
+
+    % Connexions entre Routeurs avec débits
+    \draw (R1) -- node[lbl, sloped] {10 Mbps} (R2);
+    \draw (R1) -- node[lbl, pos=0.3, sloped] {1 Mbps} (R4);
+    \draw (R1) -- node[lbl, pos=0.3, sloped] {1 Mbps} (R5);
+    \draw (R2) -- node[lbl] {10 Mbps} (R4);
+    \draw (R2) -- node[lbl, pos=0.2] {100 Mbps} (R3);
+    \draw (R2) -- node[lbl, pos=0.2, sloped] {10 Mbps} (R5);
+    \draw (R3) -- node[lbl, pos=0.2, sloped] {100 Mbps} (R4);
+    \draw (R4) -- node[lbl] {100 Mbps} (R5);
+    \draw (R5) -- node[lbl, sloped] {100 Mbps} (R6);
+\end{tikzpicture}
+\end{center}
+\caption{Schéma du réseau}
+\label{exemplesresolutions4}
+\end{figure}
+
+Derrière chaque routeur $R_1$ à $R_5$, un switch distribue un réseau local $LAN_1$ à $LAN_5$.
+\smallskip
+Les protocoles utilisés sont le protocole RIP et le protocole OSPF, qui minimisent respectivement le nombre de routeurs traversés et la somme des coûts des liaisons physiques empruntées.
+
+\medskip
+
+\begin{enumerate}[series=monDS, resume]
+
+\begin{minipage}[h]{0.5\textwidth}
+    \item Compléter la table de routage de $R_1$ sachant que le protocole de routage RIP est utilisé. (/\getpts{Q1})
+
+    La destination est le routeur à atteindre, le prochain saut est le premier routeur traversé et la distance est le nombre de routeurs traversés.
+
+\medskip
+
+\item Un utilisateur du réseau local $LAN_1$ interroge, via son navigateur web, un serveur d'Internet. Détailler, suivant le protocole RIP, la route suivie dans le maillage par la requête à destination de ce serveur. (/\getpts{Q2})
+
+\begin{blocvisiblex}[height=1]
+{\quad}
+ $R_1 \rightarrow R_5 \rightarrow R_6 \rightarrow INTERNET$.
+    \end{blocvisiblex}
+\end{minipage}\hfill{}
+\begin{minipage}[h]{0.44\textwidth}
+\begin{blocvisiblex}[height=5]
+    {\centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Table de routage $R_1$}} \\ \hline
+        destination & prochain saut & distance \\ \hline
+        $R_2$       & $R_2$         & 0        \\ \hline
+        $R_3$       & $R_2$         & 1        \\ \hline
+        $R_4$       & $R_4$         & 0        \\ \hline
+        $R_5$       & $R_5$         & 0        \\ \hline
+        $R_6$       & $R_5$         & 1        \\ \hline
+    \end{tabular}}
+\centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Table de routage $R_1$}} \\ \hline
+        destination & prochain saut & distance \\ \hline
+        $R_2$       & $R_2$         & 0        \\ \hline
+        $R_3$       & $R_2$         & 1        \\ \hline
+        $R_4$       &               &          \\ \hline
+        $R_5$       &               &          \\ \hline
+        $R_6$       &               &          \\ \hline
+    \end{tabular}
+\end{blocvisiblex}
+    
+\end{minipage}
+ \end{enumerate}
+
+ \medskip
+
+
+
+\smallskip
+
+\begin{minipage}{0.50\linewidth}
+Le coût d'une liaison est donné par la relation coût $\dfrac{10^2}{\text{débit}}$ où le débit est le débit de la liaison en Mbps.
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+    \centering
+    \renewcommand{\arraystretch}{1.3} % Pour l'espacement vertical
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \multicolumn{4}{|c|}{\textbf{Coût des liaisons depuis $R_1$}} \\ \hline
+        routeur & $R_2$ & $R_4$ & $R_5$ \\ \hline
+        coût    & 10    & 100   & 100   \\ \hline
+    \end{tabular}
+\end{minipage}
+
+\medskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[h]{0.50\linewidth}
+\begin{enumerate}[resume=monDS]
+        \item Compléter la table de routage de $R_1$ sachant que le protocole de routage OSPF est utilisé. (/\getpts{Q3})
+
+Un utilisateur du réseau local $LAN_1$ interroge, via son navigateur web, un serveur d'Internet.
+
+\item Donner, selon le protocole OSPF, la route suivie dans le maillage par la requête à destination de ce serveur. (/\getpts{Q4})
+    \end{enumerate}
+    
+\begin{blocvisiblex}[height=1]   
+    {}
+    $R_1 \rightarrow R_2 \rightarrow R_3 \rightarrow R_4 \rightarrow R_5 \rightarrow R_6 \rightarrow INTERNET$.
+    \end{blocvisiblex}
+\end{minipage}
+\begin{minipage}[h]{0.45\linewidth}
+    \begin{blocvisiblex}[height=5]
+{    \centering
+    \renewcommand{\arraystretch}{1.3} % Pour aérer les cellules comme sur l'image
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Table de routage $R_1$}} \\ \hline
+        destination & prochain saut & distance \\ \hline
+        $R_2$       & $R_2$         & 10        \\ \hline
+        $R_3$       &               &          \\ \hline
+        $R_4$       &               &          \\ \hline
+        $R_5$       &               &          \\ \hline
+        $R_6$       &               &          \\ \hline
+    \end{tabular}}
+\centering
+    \renewcommand{\arraystretch}{1.3} % Pour aérer les cellules comme sur l'image
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multicolumn{3}{|c|}{\textbf{Table de routage $R_1$}} \\ \hline
+        destination & prochain saut & distance \\ \hline
+        $R_2$       & $R_2$         & 10        \\ \hline
+        $R_3$       & $R_2$              &  11        \\ \hline
+        $R_4$       & $R_2$              &  12        \\ \hline
+        $R_5$       & $R_2$              &  13        \\ \hline
+        $R_6$       & $R_2$              &  14        \\ \hline
+        
+    \end{tabular}
+\end{blocvisiblex}
+\end{minipage}
+
+
+
+
+\medskip
+\pagebreak
+
+    Le protocole de routage OSPF est toujours utilisé et le routeur $R_2$ tombe en panne.
+
+    
+
+    \begin{enumerate}[resume=monDS]
+    \item Donner la nouvelle route suivie dans le maillage par une requête partant du réseau $LAN_1$ à destination d'Internet et en donner la nouvelle valeur de la distance.   (/\getpts{Q5})
+    \end{enumerate}
+    \begin{blocvisiblex}[height=1]
+        {}
+        $R_1 \rightarrow R_5 \rightarrow R_6 \rightarrow INTERNET$ et la distance est de 101.
+    \end{blocvisiblex}
+    
+\section*{PARTIE B}
+
+Le réseau $LAN_1$ est supposé disposer d'un serveur DHCP (Dynamic Host Control Protocol) gérant l'attribution d'adresses IPv4. 
+
+Il est rappelé, ici, qu'une adresse IPv4 est une séquence de 4 octets, généralement représentée par les 4 entiers correspondants en écriture décimale, séparés par des points (notation décimale pointée). 
+
+Un réseau est caractérisé par des machines dont les adresses ont en commun les $n$ mêmes premiers bits. 
+
+La notation CIDR du réseau a la forme “adresse réseau / $n$”. Appliqué à une adresse du réseau, le masque permet de calculer le préfixe réseau commun. Il est constitué de 4 octets consécutifs, dont (de gauche à droite) les $n$ premiers bits sont égaux à 1 et les suivants à 0. On obtient l'adresse du réseau en effectuant un ET logique, bit à bit, entre chaque octet composant l'adresse d'une machine et l'octet qui lui correspond dans le masque.
+ 
+\medskip
+
+Exemple de \texttt{ET}:
+
+\begin{verbatim}   
+    l'entier 192 s'écrit : 1 1 0 0 0 0 0 0
+    l'entier 255 s'écrit : 1 1 1 1 1 1 1 1
+---------------------------------------------------------
+   ET logique, bit à bit : 1 1 0 0 0 0 0 0 ( soit l'entier 192 )
+\end{verbatim}
+\begin{enumerate}[resume=monDS]
+    \item Compléter le tableau suivant correspondant à une machine d'un réseau d'adresse \texttt{192.168.1.100} et de masque \texttt{255.192.0.0}. Ce tableau détermine l'adresse du réseau (en binaire puis en décimale pointée). (/\getpts{Q6})
+
+    \begin{blocvisiblex}[height=4.5]
+    {
+    
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Pour l'espacement vertical
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multicolumn{5}{|c|}{\textbf{Calcul d'une adresse de réseau}} \\ \hline
+        machine (binaire)        & 11000000 & 10101000 &          &          \\ \hline
+        masque (binaire)         & 11111111 & 11000000 & 00000000 & 00000000 \\ \hline
+        réseau (binaire)         & 11000000 &          &          &          \\ \hline
+        réseau (déc. pointée)    & 192      &          &          &          \\ \hline
+    \end{tabular}
+}
+\centering
+    \renewcommand{\arraystretch}{1.5} % Pour l'espacement vertical
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multicolumn{5}{|c|}{\textbf{Calcul d'une adresse de réseau}} \\ \hline
+        machine (binaire)        & 11000000 & 10101000 & 00000001 & 01100100\\ \hline
+        masque (binaire)         & 11111111 & 11000000 & 00000000 & 00000000 \\ \hline
+        réseau (binaire)         & 11000000 & 10000000 & 00000000 & 00000000 \\ \hline
+        réseau (déc. pointée)    & 192      & 128      & 0        & 0        \\ \hline
+    \end{tabular}
+    \end{blocvisiblex}
+
+\end{enumerate}
+
+On obtient le complémentaire d'un octet en échangeant respectivement chacun des 0 et des 1 qui le composent, par un 1 ou un 0.
+
+Par exemple, le complémentaire de \verb|1 1 0 0 1 0 1 0| est \verb|0 0 1 1 0 1 0 1|.
+
+Par un procédé analogue à celui de la question précédente, l'adresse de broadcast d'un réseau est obtenue en effectuant un OU logique bit à bit entre chaque octet composant l'adresse réseau et le complémentaire de l'octet correspondant dans l'écriture binaire du masque.
+
+\medskip
+
+Exemple de \texttt{OU}:
+\begin{verbatim}   
+           12 s'écrit : 0 0 0 0 1 1 0 0
+            9 s'écrit : 0 0 0 0 1 0 0 1
+------------------------------------------------------------
+OU logique, bit à bit : 0 0 0 0 1 1 0 1 ( soit l'entier 13 )
+\end{verbatim}
+
+\pagebreak
+
+\begin{enumerate}[resume=monDS]
+    \item Compléter le tableau ci-après pour déterminer l'adresse de broadcast du réseau suivant (en binaire puis en décimale pointée). (/\getpts{Q7})
+
+    \begin{blocvisiblex}[height=5]
+    {\centering
+    \renewcommand{\arraystretch}{1.5} % Ajustement de la hauteur des lignes
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multicolumn{5}{|c|}{\textbf{Calcul d’une adresse de broadcast}} \\ \hline
+        réseau (binaire) & 11000000 & 10000000 & 00000000 & 00000000 \\ \hline
+        masque (binaire) & 11111111 & 11000000 & 00000000 & 00000000 \\ \hline
+        complément du masque (binaire) & & & & \\ \hline
+        broadcast (binaire) & & & & \\ \hline
+        broadcast (déc. pointée) & & & & \\ \hline
+    \end{tabular}}
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Ajustement de la hauteur des lignes
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multicolumn{5}{|c|}{\textbf{Calcul d’une adresse de broadcast}} \\ \hline
+        réseau (binaire) & 11000000 & 10000000 & 00000000 & 00000000 \\ \hline
+        masque (binaire) & 11111111 & 11000000 & 00000000 & 00000000 \\ \hline
+        complément du masque (binaire) & 00000000 & 00111111 & 11111111 & 11111111 \\ \hline
+        broadcast (binaire) & 11000000 & 10111111 & 11111111 & 11111111 \\ \hline
+        broadcast (déc. pointée) & 192 & 191 & 255 & 255 \\ \hline
+        
+    \end{tabular}
+        
+    \end{blocvisiblex}
+    
+
+
+\end{enumerate}
+
+\medskip
+
+Une machine du réseau $LAN_1$ a reçu du serveur DHCP l'adresse \verb|172.16.1.100|, avec le masque \verb|255.255.0.0|.
+
+Sa passerelle par défaut a pour adresse \verb|172.16.255.254|.
+
+\begin{enumerate}[resume=monDS]
+    \item En déduire les informations suivantes: (/\getpts{Q8})
+    \begin{itemize}
+        \item l'adresse du réseau $LAN_1$ (en décimale pointée);
+        
+        \begin{blocvisiblex}[height=1]
+            {\quad}
+            L'adresse du réseau $LAN_1$ est \texttt{172.16.0.0}.
+        \end{blocvisiblex}
+        \item l'adresse de broadcast (en décimale pointée);
+        \begin{blocvisiblex}[height=1]
+            {\quad}
+            L'adresse de broadcast du réseau $LAN_1$ est \texttt{172.16.255.255}.
+        \end{blocvisiblex}
+        
+        \item le nombre total d'adresses pouvant être distribuées par le serveur, en ne tenant pas compte des éventuelles restrictions possiblement posées par l'administrateur du réseau.
+        \begin{blocvisiblex}[height=1.5]
+            {\quad}
+            Le nombre total d'adresses pouvant être distribuées par le serveur DHCP est de $2^{16} - 2 = 65534$ adresses, car il faut exclure l'adresse du réseau et l'adresse de broadcast.
+        \end{blocvisiblex}
+    \end{itemize}
+\end{enumerate}
+
+\bigskip
+
+On souhaite, désormais, simuler en Python le fonctionnement du réseau $LAN_1$.
+
+On donne, ci-après, les documentations des méthodes \verb|split| et \verb|join|.
+
+\begin{itemize}
+    \item la documentation de la méthode \verb|split| de l'objet \verb|str| est la suivante:
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+    split(self, séparateur) 
+        Renvoie la liste des sous-chaines de caractères délimitées par 
+        le séparateur dans l'instance courante de chaîne de caractères. 
+        >>> 'ab-pq-rs'.split('-') 
+        ['ab', 'pq', 'rs']
+    \end{CodePythontexAlt}
+
+    \medskip
+
+    \item la documentation de la méthode \verb|join| de l'objet \verb|str|:
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+    join(self, iterable) 
+        Fusionne les chaînes de caractères contenues dans iterable en 
+        le liant par la sous-chaîne depuis laquelle cette méthode est appelée. 
+        >>>'.'.join(['ab', 'pq', 'rs']) 
+        'ab.pq.rs'
+    \end{CodePythontexAlt}
+
+\end{itemize}
+
+On commence par créer la classe IPv4 suivante.
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+class IPv4(object):
+    def __init__(self, adresse:str):
+        """ Constructeur de la classe de calcul sur une adresse IPv4 
+        dont la notation décimale pointée est passée en paramètre. """
+        self.adresse = adresse
+    def octets(self)->list[int]:
+        """ Découpe l'adresse décimale pointée en la liste des 4 entiers 
+        correspondants. """
+        return [int(i) for i in self.adresse.split(".")]
+
+   \end{CodePythontexAlt}
+
+\medskip
+
+   Pour mémoire, l'opérateur \texttt{\&} entre deux entiers effectue le ET logique bit à bit de la représentation binaire de ces entiers et renvoie l'entier correspondant à la représentation binaire ainsi obtenue. Exemple:
+   
+   \begin{verbatim}
+    >>> 192 & 255 
+    192
+   \end{verbatim}
+
+   \begin{enumerate}[resume=monDS]
+    \item Compléter les lignes 11 et 12 du code de la méthode \verb|masquer| de la classe \verb|IPv4|, donné ci-dessous. La méthode doit correspondre au docstring. (/\getpts{Q9})
+    
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+    def masquer(self, masque: str)->str:
+        """ Détermine le préfixe masqué de l'adresse, 
+        le masque (décimal pointé) étant passé en paramètre. 
+        >>> add = IPv4('192.168.1.100')
+        >>> add.masquer('255.192.0.0')
+        '192.128.0.0'        """
+        tmp = []
+        ip = self.octets()
+        crible = IPv4(masque).octets()
+        for i in range(4):
+            tmp.append(...... & ......)
+        return ".".join(.........)
+   \end{CodePythontexAlt}
+
+   \begin{blocvisible}[height=1.5]
+        \begin{lstlisting}
+    Ligne 11: tmp.append(ip[i] & crible[i])
+    Ligne 12: ".".join([str(k) for k in tmp])        
+    \end{lstlisting}
+    \end{blocvisible}
+
+
+        \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+    def adresse_suivante(self, adresse_max:str)->str:
+        """ Détermine l'adresse décimale pointée suivant immédiatement 
+        l'adresse courante, sous réserve d'existence d'une adresse disponible 
+        >>> add = IPv4('192.168.1.100')
+        >>> add.adresse_suivante('192.168.1.254')
+        '192.168.1.101'
+        >>> add = IPv4('192.168.1.255')
+        >>> add.adresse_suivante('192.168.255.254')
+        '192.168.2.0'        """
+        assert self.adresse < adresse_max
+        liste_courante = self.octets()
+        liste_suivante = list()
+        retenue = 1
+        for index in range(4):
+            somme = liste_courante[3 - index] + retenue
+            valeur, retenue = ......, ......
+            liste_suivante =......
+        return '.'.join(liste_suivante)
+   \end{CodePythontexAlt}
+        
+    
+
+   \medskip
+
+\item Compléter les lignes 16 et 17 du code de la méthode \verb|adresse_suivante| de la classe \verb|IPv4|, donné ci-dessous. La méthode doit correspondre au docstring. (/\getpts{Q10})
+
+  \begin{blocvisible}[height=1.5]
+        \begin{lstlisting}
+    Ligne 16: valeur, retenue = somme%256, somme//256
+    Ligne 17: liste_suivante = [str(valeur)] + liste.suivante     
+    \end{lstlisting}
+    \end{blocvisible}
+
+
+   \end{enumerate}

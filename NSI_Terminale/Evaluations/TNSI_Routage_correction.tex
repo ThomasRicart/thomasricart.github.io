@@ -1,0 +1,573 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+\def\visibleornot{visible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\date{Mercredi 18 Février 2026}
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableau
+
+\def\ptsexoA{0}
+\def\ptsexoB{3}
+\def\ptsexoC{3}
+\def\ptsexoD{2}
+
+\def\ptsexoE{3}
+\def\ptsexoF{2}
+\def\ptsexoG{4}
+\def\ptsexoH{2}
+\def\ptsexoI{2}
+\def\ptsexoJ{2}
+\def\ptsexoK{2}
+
+\begin{document}
+
+\def\level{Terminale}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Routage} % Titre au centre
+\def\docname{Evaluation}        % Identifiant à gauche
+
+\pagestyle{DS_FP}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\NomPrenomNote{}
+
+
+
+%\def\ptstotal{\ptsexoA+\ptsexoB+\ptsexoC+\ptsexoD}
+%\usepackage{pgf}
+
+%Exercice 1
+\exods{\ptsexoA}
+
+\emph{Cet exercice porte sur l'architecture matérielle (réseau), les arbres binaires et la programmation Python.}
+
+
+\medskip
+
+L'entreprise CaféNet possède plusieurs cafés répartis dans différentes villes. Le réseau de la chaîne de cafés est représenté en Figure 1.
+
+\begin{center}
+        \includegraphics[width = 0.88\linewidth]{02.png}
+\end{center}
+
+Sur le schéma sont représentés 4 routeurs, le réseau du siège social, le réseau du café 1, le réseau du café 2. Dans les réseaux du café 1 et du café 2, des bornes de commandes sont connectées à des switchs (ce sont des boîtiers de connexion qui n'ont pas eux-mêmes d'adresse IP). Les 4 routeurs représentés sont composés d'au moins 3 interfaces réseau capable de relier des réseaux ensemble. Chaque interface possède donc une adresse IPv4 sur le réseau auquel elle est reliée.
+
+\medskip
+
+Les masques des sous-réseaux sont tous 255.255.255.0. Avec ce masque, les trois premiers octets des adresses IP codent l'adresse réseau. Le dernier octet, c'est-à-dire les 8 derniers bits, code l'adresse des machines à l'intérieur de chaque sous-réseau.
+
+
+\medskip
+
+\textbf{PARTIE A}
+
+\medskip
+
+\begin{enumerate}
+        \item Indiquer l'adresse réseau du réseau du siège social. 
+
+    \begin{blocvisible}[height=3.5]
+        \begin{itemize}
+        \item le schéma montre une adresse \verb|192.168.10.2| avec un masque de sous réseau \verb|255.255.255.0|.
+        \item avec ce genre de masque, les trois premiers octets codent la partie réseau de l'adresse IP (NetId)
+        \item les trois premiers octets sont donc \verb|192.168.10|
+        \item on complète avec des \verb|0|.
+        \item l'adresse réseau du siège social est donc \verb|192.168.10.0|
+        \end{itemize}
+       \end{blocvisible}
+
+\begin{minipage}{0.48\linewidth}
+    \item Indiquer l'adresse réseau du réseau du café 1. 
+\end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+            \begin{blocvisible}[height=1]
+ De la même manière: \verb|192.168.20.0|   \end{blocvisible}
+\end{minipage}
+
+\end{enumerate}
+
+\medskip
+
+Le gérant veut faire installer une troisième borne de commande dans le café 1.
+
+\begin{enumerate}[resume]
+    \item Indiquer les deux seules adresses IP valides pour cette nouvelle borne, parmi les quatre adresses IP proposées. Entourer les bonnes réponses. 
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \verb|192.168.20.2| & \verb|192.168.20.157| & \verb|192.168.20.261| & \verb|192.168.24.12|
+            \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \begin{blocvisible}[height=2]
+        Les adresses IP valides sont \verb|192.168.20.2| et \verb|192.168.20.157|. En effet, l'adresse \verb|192.168.20.261| n'est pas valide car le dernier octet doit être compris entre 0 et 255. L'adresse \verb|192.168.24.12| n'est pas valide car elle n'appartient pas au réseau du café 1.
+    \end{blocvisible}
+
+
+
+\end{enumerate}
+    \medskip
+
+    L'adresse de diffusion, appelée aussi adresse de Broadcast, est la dernière adresse disponible à l'intérieur d’un réseau local.
+\begin{enumerate}[resume]
+
+    \begin{minipage}{0.55\linewidth}
+    \item Déterminer l'adresse de diffusion du réseau du café 1.
+\end{minipage}\hfill
+    \begin{minipage}{0.44\linewidth}
+    \begin{blocvisible}[height=1]
+        \verb|192.168.20.255|
+        \end{blocvisible}
+\end{minipage}
+
+\begin{minipage}{0.55\linewidth}
+    \item Déterminer combien de machines informatiques il est encore possible de connecter au réseau du café 1 après l'installation de la troisième borne de commande.
+\end{minipage}\hfill
+    \begin{minipage}{0.44\linewidth}
+        \begin{blocvisible}[height=1]
+            $2^8 - 2 - 3 = 256 - 2 - 3 = 251$ machines.
+        \end{blocvisible}
+    \end{minipage}
+\end{enumerate}
+
+\medskip
+
+Le réseau local du café 1 n'a pas besoin de plus de 8 adresses IP différentes. Ce décompte d'adresses IP inclut les adresses IP réservées (à savoir l'adresse de diffusion et l'adresse du réseau). Il est rappelé que la longueur du masque de sous-réseau est actuellement de 24 bits (c'est-à-dire 3 octets).
+
+\begin{enumerate}[resume]
+\item Proposer un nouveau masque de sous-réseau permettant d'avoir au maximum 8 adresses IP différentes dans le réseau du café 1 (6 adresses utilisables). Justifier votre réponse.
+
+        \begin{blocvisible}[height=4]
+        Avec un masque de sous-réseau de 24 bits, il y a 8 bits pour coder les adresses des machines à l'intérieur du réseau du café 1. Cela permet d'avoir $2^8 = 256$ adresses différentes, dont 254 utilisables (en retirant l'adresse de diffusion et l'adresse du réseau). Pour n'avoir que 8 adresses différentes, il faut réduire le nombre de bits disponibles pour coder les adresses des machines. En utilisant un masque de sous-réseau de 29 bits, il ne reste que 3 bits pour coder les adresses des machines, ce qui permet d'avoir $2^3 = 8$ adresses différentes, dont 6 utilisables (en retirant l'adresse de diffusion et l'adresse du réseau). Le nouveau masque de sous-réseau est donc \verb|255.255.255.248|.
+
+        \end{blocvisible}
+
+
+\end{enumerate}
+
+
+\bigskip
+
+\textbf{PARTIE B}
+
+\medskip
+
+RIP (Routing Information Protocol) est un protocole de routage utilisé dans les réseaux IP. Il est conçu pour réduire le nombre de sauts entre deux réseaux. Un \og{}saut\fg{} correspond au transfert des données d'un routeur à un autre. Le protocole RIP utilise le nombre de sauts comme critère principal pour évaluer le coût d'un chemin. Autrement dit, il considère que le chemin le plus optimal est celui qui traverse le moins de routeurs.
+
+\medskip
+
+La table de routage du routeur 2 de la Figure 1 est représentée ci-dessous:
+
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Réseau destination} & \textbf{Interface de sortie} & \textbf{Prochain routeur} & \textbf{Nombre de sauts}\\
+         
+
+        \hline
+        \verb|192.168.20.0| & \verb|192.168.20.1| & aucun & 0 \\ \hline
+        \verb|172.16.3.0| & \verb|172.16.3.1| & aucun & 0 \\ \hline
+        \verb|172.16.4.0| & \verb|172.16.4.1| & aucun & 0 \\ \hline
+        \verb|192.168.10.0| & \verb|172.16.3.1| & \verb|172.16.3.2| & 2 \\ \hline
+        \verb|172.16.0.0| & \verb|172.16.4.1|  &  &  \\ \hline
+        \verb|172.16.2.0| & \verb|172.16.4.1| &  &  \\ \hline
+        \verb|192.168.30.0| &  &  &  \\ \hline
+        \verb|172.16.1.0| &  &  &  \\ \hline
+    \end{tabular}
+\end{center}
+
+\begin{enumerate}[resume]
+    \item Compléter les cases vides de la table de routage du routeur 2 ci-dessus.
+\end{enumerate}
+
+\medskip
+
+Une adresse IP qui n'est pas référencée dans la table de routage doit être routée par défaut vers Internet.
+
+\begin{enumerate}[resume]
+    \item Compléter la ligne à ajouter à la table de routage du routeur 2.
+    
+    \renewcommand{\arraystretch}{1.5}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Réseau destination} & \textbf{Interface de sortie} & \textbf{Prochain routeur} & \textbf{Nombre de sauts}\\
+         
+        \hline
+        \verb|autre| &  &  &  \\ \hline
+           \end{tabular}
+\end{center}
+\end{enumerate}
+
+\medskip
+
+La connexion entre le routeur 2 et le routeur 3 est interrompue. Le protocole RIP va permettre au routeur 2 de trouver un nouveau chemin pour atteindre les réseaux du café 2.
+
+\begin{enumerate}[resume]
+    
+    \begin{minipage}{0.68\linewidth}
+    \item Indiquer la route utilisée par le routeur 2 pour atteindre les réseaux du café 2 après l'interruption de la connexion entre le routeur 2 et le routeur 3.
+\end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{blocvisible}[height=1]
+            \end{blocvisible}
+\end{minipage}
+    \item Compléter alors la nouvelle table de routage du routeur 2 après l'interruption de la connexion.
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Réseau destination} & \textbf{Interface de sortie} & \textbf{Prochain routeur} & \textbf{Nombre de sauts}\\
+         
+        \hline
+        \verb|192.168.30.0| &  &  &  \\ \hline
+           \end{tabular}
+\end{center}    
+
+\end{enumerate}
+
+\pagebreak
+\bigskip
+
+\textbf{PARTIE C}
+
+\medskip
+
+OSPF est également un protocole d'échanges de données entre les routeurs qui prend en compte le coût des routes. Le coût est lié au débit des liaisons entre les routeurs par la formule suivante:
+
+\[cout = \dfrac{10^9}{Debit\ de\ la\ liaison\ en\ bits/s}\]
+
+
+\begin{enumerate}[resume]
+    \item Compléter la dernière colonne du tableau ci-dessous:
+    \renewcommand{\arraystretch}{1.5}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Type de connexion} & \textbf{Débit en bit/s} & \textbf{coût} \\
+         
+        \hline
+        \verb|Ethernet| & 10 Mbit/s  & \qquad \qquad\qquad\qquad \\ \hline
+         \verb|Fast Ethernet| & 100 Mbit/s  &  \\ \hline
+        \verb|Fibre Optique| & 1 Gbit/s  &  \\ \hline
+          \end{tabular}
+\end{center}    
+
+\end{enumerate}
+
+\medskip
+
+Le schéma ci-dessous met en évidence les types de connexion qui relient les routeurs.
+
+\begin{center}
+    \includegraphics[width = 0.6\linewidth]{03.png}
+\end{center}
+
+\begin{enumerate}[resume]
+    \item Compléter le schéma de la Figure 2 en indiquant les coûts des différentes connexions entre les routeurs.
+    \item Compléter alors la table de routage du routeur 2 en utilisant le protocole OSPF.
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Réseau destination}  & \textbf{Prochain routeur} & \textbf{Coût}\\ \hline
+        \verb|Siège social| & &  \\ \hline
+        \verb|Réseau café 1| & &  \\ \hline
+        \verb|Réseau café 2| & &  \\ \hline
+        \verb|Internet| & &  \\ \hline
+   
+        \hline
+    \end{tabular}
+\end{center}
+
+\item Déterminer la route dont le coût est minimal pour aller d'Internet jusqu'au siège social. Calculer son coût au sens du protocole OSPF.
+
+
+            \begin{blocvisible}[height=3]
+    \end{blocvisible}
+
+    \end{enumerate}
+
+
+    \pagebreak
+\thispagestyle{DS_LP}
+    \textbf{PARTIE D}
+
+    \medskip
+
+    Le but de cette partie est de classer les adresses IP des différents réseaux afin de faciliter leur recherche.\\
+
+La fonction \verb|ip_bin| prend en argument une chaîne de caractères décrivant une adresse IP en notation décimale, et renvoie une chaîne de caractères, de longueur 35 (32 bits et les 3 points), décrivant l'adresse IP en notation binaire.\\
+
+Exemple:
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	>>> ip_bin('192.168.10.1') 
+    '11000000101010000000101000000001'
+
+	\end{CodePythontexAlt}
+
+    \medskip
+
+    \begin{enumerate}[resume]
+        \item Donner la chaine de caractères renvoyée par \verb|ip_bin('192.168.20.12')|.
+        
+                \begin{blocvisible}[height=1]
+                 \texttt{'11000000101010000001010000001100'}  \end{blocvisible}
+
+    \end{enumerate}
+
+    \medskip
+
+    La fonction \verb|precede| prend en paramètres deux adresses IP en notation binaire, sous forme de chaînes de caractères identiques à celles renvoyées par la fonction \verb|ip_bin|. La fonction \verb|precede| renvoie un booléen qui vaut \verb|True| si la première adresse IP en paramètre précède la seconde adresse IP.\\
+
+Exemple:
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+
+>>> a = '11000000101010000000101000000001' 
+>>> b = '11000000101010000000111100000001' 
+>>> precede(a, b) 
+True
+	\end{CodePythontexAlt}
+
+    L'algorithme compare bit à bit les deux chaînes binaires, en lisant les chaînes de caractères dans le sens usuel (de gauche à droite). Dans l'exemple ci-dessus, tous les caractères sont identiques jusqu'au sixième caractère du troisième octet. Comme le bit de l'adresse a est inférieur à celui de l'adresse b, on en déduit que l'adresse IP a précède l'adresse IP b.\\
+
+Si la première adresse IP ne précède pas la seconde, la fonction doit renvoyer \verb|False|.\\
+
+L’algorithme de comparaison est traduit dans le langage Python sous la forme suivante:\\
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+
+def precede(ip_1, ip_2):
+    if ip_1 == '':
+        return False
+    if ip_1[0] < ip_2[0]:
+        return ...
+    if ip_1[0] > ip_2[0]:
+        return ...
+    return precede(... , ...)
+
+	\end{CodePythontexAlt}
+
+    \begin{enumerate}[resume]
+        \item Compléter les lignes 5, 7 et 8 de la fonction \verb|precede|
+                \begin{blocvisible}[height=3]
+                
+                \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+
+def precede(ip_1, ip_2):
+    if ip_1 == '':
+        return False
+    if ip_1[0] < ip_2[0]:
+        return True              # ← Ligne 5
+    if ip_1[0] > ip_2[0]:
+        return False             # ← Ligne 7
+    return precede(ip_1[1:], ip_2[1:])  # ← Ligne 8
+
+	\end{CodePythontexAlt}
+                
+                \end{blocvisible}
+
+        \item Dans le cas où les deux adresses IP sont identiques, que renvoie la fonction \verb|precede|
+                \begin{blocvisible}[height=1]
+                    La fonction \verb|precede| renvoie \verb|False| dans ce cas.
+                \end{blocvisible}
+
+  \end{enumerate}
+
+  \medskip
+
+
+\pagebreak
+
+\textbf{PARTIE E}
+
+\medskip
+
+L'objectif de cette partie est de:
+\begin{itemize}
+    \item prédire si deux machines appartiennent au même réseau local,
+    \item renvoyer l'adresse du réseau local auquel appartient une machine,
+    
+
+\end{itemize}
+
+Chaque machine est caractérisée par une adresse IP en notation CIDR.
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+PC0 = {'nom': 'PC0', 'adresse_IP': '192.168.4.5/24'}
+PC1 = {'nom': 'PC1', 'adresse_IP': '192.168.4.145/24'}
+   \end{CodePythontexAlt}
+
+
+   \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def ip_bin(adresse):
+    ''' Convertit une adresse Ip en une adresse IP en notation binaire. '''
+    # Le code n'est pas demandé
+
+assert ip_bin('192.168.4.5') == '11000000101010000000010000000101'
+
+def masque_SR(nb_uns):
+    ''' Renvoie le masque de sous-réseau correspondant 
+    à une longueur de masque donnée en nombre de bits à 1. '''
+    # Le code n'est pas demandé
+    
+assert masque_SR(24) == '255.255.255.0'
+
+def extraire_IP(adresse):
+    ''' Extrait l'adresse IP d'une adresse en notation CIDR. '''        
+    # Le code n'est pas demandé
+
+assert extraire_IP('192.168.4.5/24') == '192.168.4.5'
+
+def extraire_MQ(adresse):
+    ''' Extrait le masque de sous-réseau d'une adresse en notation CIDR. '''
+    # Le code n'est pas demandé
+
+assert extraire_MQ('192.168.4.5/24') == '24'
+   \end{CodePythontexAlt}
+
+
+   \pagebreak
+   \thispagestyle{DS_LP}
+\end{document}
+
+   \begin{enumerate}[resume]
+    \item En utilisant les fonction précédentes, compléter la fonction \verb|adresse_reseau| qui renvoie l'adresse du réseau local auquel appartient une machine.
+
+   \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def adresse_reseau(machine):
+    ''' Renvoie l'adresse du réseau local auquel appartient une machine '''
+    
+    # Extraire les composants
+    ip = extraire_IP(machine)
+    nb_bits = int(extraire_MQ(machine))
+    
+    # Convertir IP en binaire
+    ip_binaire = ip_bin(ip)
+    
+    # Créer le masque
+    masque = masque_SR(nb_bits)
+    masque_binaire = ip_bin(masque)
+    
+    # Appliquer le masque (AND logique)
+    reseau_binaire = ''
+    for i in range(len(ip_binaire)):
+        if masque_binaire[i] == '1':
+            reseau_binaire += ip_binaire[i]
+        else:
+            reseau_binaire += '0'
+    
+    # Convertir le résultat binaire en IP décimale
+    # (appel une fonction inverse de ip_bin, non fournie)
+    return convertir_binaire_en_ip(reseau_binaire)
+```
+
+**Ou version plus concise** :
+
+```python
+def adresse_reseau(machine):
+    ''' Renvoie l'adresse du réseau local auquel appartient une machine '''
+    ip = extraire_IP(machine)
+    nb_bits = int(extraire_MQ(machine))
+    masque = masque_SR(nb_bits)
+    
+    # Appliquer le masque en binaire
+    ip_bin_result = ip_bin(ip)
+    masque_bin = ip_bin(masque)
+    
+    reseau_bin = ''.join(
+        ip_bin_result[i] if masque_bin[i] == '1' else '0' 
+        for i in range(len(ip_bin_result))
+    )
+    
+    return convertir_binaire_en_ip(reseau_bin)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+assert adresse_reseau('192.168.1.4/24') == '192.168.1.0'
+assert adresse_reseau('172.18.1.4/16') == '172.18.0.0'
+   \end{CodePythontexAlt}
+
+
+   \item En utilisant les fonctions précédentes, compléter la fonction \verb|meme_reseau| qui renvoie \verb|True| si les deux machines appartiennent au même réseau et \verb|False| sinon.
+   
+   \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def meme_reseau(machine1, machine2):
+    ''' Renvoie True si les deux machines appartiennent au même réseau 
+    et False sinon. '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+assert meme_reseau('192.168.1.4/24', '192.168.1.15/24') == True
+assert meme_reseau('192.168.1.4/24', '192.168.2.5/24') == False
+assert meme_reseau('192.168.1.4/16', '192.168.2.5/16') == True
+
+   \end{CodePythontexAlt}
+
+      \end{enumerate}
+
+    \end{document}
+
+
+
+
+
+
+
+
+
+
+
+

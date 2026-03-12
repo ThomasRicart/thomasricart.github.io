@@ -1,0 +1,450 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{minted}
+\newcommand{\mip}[1]{\mintinline{python}{#1}}
+\newcommand{\mis}[1]{\mintinline{sql}{#1}}
+\newcommand{\mib}[1]{\mintinline{bash}{#1}}
+
+\usepackage{hyperref}
+\usepackage{pstricks,pst-tree,pst-math,pst-eucl,pstricks-add}
+\usepackage[margin=1cm,bottom=1.5cm]{geometry}
+\begin{document}
+\fbox{\textsc{25NSIJ1PO1}}
+
+
+\bigskip
+
+\textbf{Exercice 1} (6 points)
+
+\medskip
+
+\textit{Cet exercice porte sur les protocoles réseaux, l’algorithmique et la POO.}
+
+
+\textbf{Partie A}
+
+\begin{enumerate}
+\item On complète la table de routage de $R_1$ avec RIP.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{Table de routage de $R_1$}\\
+\hline
+destination&prochain saut&distance\\
+\hline
+$R_2$&$R_2$&0\\
+\hline
+$R_3$&$R_2$&1\\
+\hline
+$R_4$&$R_4$&0\\
+\hline
+$R_5$&$R_5$&0\\
+\hline
+$R_6$&$R_5$&1\\
+\hline
+\end{tabular}
+\end{center}
+
+\item La route suivie par un paquet du $LAN_1$ à Internet est $LAN_1$-$R_1$-$R_5$-$R_6$-Internet avec un routage RIP.
+
+\item On complète la table de routage de $R_1$ avec OSPF.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{3}{|c|}{Table de routage de $R_1$}\\
+\hline
+destination&prochain saut&distance\\
+\hline
+$R_2$&$R_2$&10\\
+\hline
+$R_3$&$R_2$&11\\
+\hline
+$R_4$&$R_2$&12\\
+\hline
+$R_5$&$R_2$&13\\
+\hline
+$R_6$&$R_2$&14\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\item La route suivie par un paquet du $LAN_1$ à Internet est $LAN_1$-$R_1$-$R_2$-$R_3$-$R_4$-$R_5$-$R_6$-Internet avec un routage OSPF.
+
+
+\item Si $R_2$ tombe en panne, la route suivie par un paquet du $LAN_1$ à Internet est $LAN_1$-$R_1$-$R_5$-$R_6$-Internet avec un routage OSPF, de distance 101.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+
+
+\begin{enumerate}[resume]
+\item On complète le tableau pour déterminer l'adresse réseau.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Calcul d'une adresse de réseau}\\
+\hline
+machine (binaire)&11000000&10101000&00000001&01100100\\
+\hline 
+masque (binaire)&11111111&11000000&00000000&00000000\\
+\hline
+réseau (binaire)&11000000&10000000&00000000&00000000\\
+\hline
+réseau (déc.pointée)&192&128&0&0\\
+\hline
+\end{tabular}
+\end{center}
+
+\item On complète le tableau pour déterminer l'adresse de broadcast.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{5}{|c|}{Calcul d'une adresse de broadcast}\\
+\hline
+réseau (binaire)&11000000&10000000&00000000&00000000\\
+\hline 
+masque (binaire)&11111111&11000000&00000000&00000000\\
+\hline
+complément du masque (binaire)&00000000&00111111&11111111&11111111\\
+\hline
+broadcast (binaire) & 11000000&10111111&11111111&11111111\\
+\hline
+réseau (déc.pointée)&192&191&255&255\\
+\hline
+\end{tabular}
+\end{center}
+
+\item Avec l'adresse 172.16.1.100/16 et le masque 255.255.0.0, on a l'adresse 172.16.0.0 du $LAN_1$, l'adresse de broadcast 172.16.255.255, et il y a 65534 adresses disponibles, de 172.16.0.1 à 172.16.255.254.
+
+\item On complète la méthode \mip{masquer}.
+
+
+%    def masquer(self, masque: str)->str:
+%        """
+%        Détermine le préfixe masqué de l'adresse,
+%        le masque (décimal pointé) étant passé en
+%        paramètre.
+%        >>> add = IPv4('192.168.1.100')
+%        >>> add.masquer('255.192.0.0')
+%        '192.128.0.0'
+%        """
+%        tmp = []
+%        ip = self.octets()
+%        crible = IPv4(masque).octets()
+
+\begin{minted}[linenos,firstnumber=13]{python}
+        for i in range(4):
+            # Opération booléenne :
+            tmp.append(ip[i] & crible[i])
+        return ".".join([str(k) for k in tmp])
+\end{minted}
+
+\item On complète la méthode \mip{adresse_suivante}.
+
+
+%    def adresse_suivante(self, adresse_max:str)->str:
+%        """
+%        Détermine l'adresse décimale pointée suivant
+%        immédiatement l'adresse courante, sous réserve
+%        d'existence d'une adresse disponible
+%        >>> add = IPv4('192.168.1.100')
+%        >>> add.adresse_suivante('192.168.1.254')
+%        '192.168.1.101'
+%        >>> add = IPv4('192.168.1.255')
+%        >>> add.adresse_suivante('192.168.255.254')
+%        '192.168.2.0'
+%        """
+%        assert self.adresse < adresse_max
+%        liste_courante = self.octets()
+%        liste_suivante = list()
+%        retenue = 1
+%        for index in range(4):
+%            somme = liste_courante[3 - index] + retenue
+
+\begin{minted}[linenos,firstnumber=19]{python}
+            valeur, retenue = somme%256, somme//256
+            liste_suivante = [str(valeur)] + liste.suivante
+\end{minted}
+
+%        return '.'.join(liste_suivante)
+
+
+
+\end{enumerate}
+
+\bigskip
+
+\textbf{Exercice 2} (6 points)
+
+
+\medskip
+
+\textit{Cet exercice porte sur la programmation Python et la récursivité.}
+
+\medskip
+
+\begin{enumerate}
+\item Avec la situation \tikz[baseline=-1ex]{\draw(0,0)rectangle(2.4,0.6);\draw(0.6,0)--(0.6,0.6);\draw(1.2,0)--(1.2,0.6);\draw(1.8,0)--(1.8,0.6);\draw[dotted](0.3,0.3)circle(1mm);\draw[fill=black](0.9,0.3)circle(1mm);\draw[fill=black](1.5,0.3)circle(1mm);\draw[fill=black](2.1,0.3)circle(1mm);
+\draw(0.3,0)node[below]{\small 1};\draw(0.9,0)node[below]{\small 2};\draw(1.5,0)node[below]{\small 3};\draw(2.1,0)node[below]{\small 4};}
+on peut jouer 1 et obtenir \tikz[baseline=-1ex]{\draw(0,0)rectangle(2.4,0.6);\draw(0.6,0)--(0.6,0.6);\draw(1.2,0)--(1.2,0.6);\draw(1.8,0)--(1.8,0.6);\draw[fill=black](0.3,0.3)circle(1mm);\draw[fill=black](0.9,0.3)circle(1mm);\draw[fill=black](1.5,0.3)circle(1mm);\draw[fill=black](2.1,0.3)circle(1mm);
+\draw(0.3,0)node[below]{\small 1};\draw(0.9,0)node[below]{\small 2};\draw(1.5,0)node[below]{\small 3};\draw(2.1,0)node[below]{\small 4};}
+ou jouer 3 et obtenir \tikz[baseline=-1ex]{\draw(0,0)rectangle(2.4,0.6);\draw(0.6,0)--(0.6,0.6);\draw(1.2,0)--(1.2,0.6);\draw(1.8,0)--(1.8,0.6);\draw[dotted](0.3,0.3)circle(1mm);\draw[fill=black](0.9,0.3)circle(1mm);\draw[dotted](1.5,0.3)circle(1mm);\draw[fill=black](2.1,0.3)circle(1mm);
+\draw(0.3,0)node[below]{\small 1};\draw(0.9,0)node[below]{\small 2};\draw(1.5,0)node[below]{\small 3};\draw(2.1,0)node[below]{\small 4};}.
+ 
+\item On écrit le code de la fonction \mip{initialiser}.
+
+\begin{minted}{python}
+def initialiser(n):
+    return [False] * n
+\end{minted}
+
+\item On complète le code de la fonction \mip{victoire}.
+
+\begin{minted}[linenos]{python}
+def victoire(tab):
+    for etat_case in tab:
+        if etat_case == False:
+            return False
+    return True
+\end{minted}
+
+
+\item On écrit le code de la fonction \mip{indice_premiere_case_occupee}.
+
+\begin{minted}[linenos]{python}
+def indice_premiere_case_occupee(tab):
+    for i in range(len(tab)):
+        if etat_case:
+            return i
+    return None
+\end{minted}
+
+\item On écrit le code de la fonction \mip{coup_valide}.
+
+\begin{minted}[linenos]{python}
+def coup_valide(tab, case):
+    return case==0 or case in range(len(tab)) and case == indice_premiere_case_occupee(tab)+1
+\end{minted}
+
+
+\item On écrit le code de la fonction \mip{changer_case}.
+
+\begin{minted}[linenos]{python}
+def changer_case(tab, case):
+    if coup_valide(tab, case):
+        tab[case] = not tab[case]
+    return tab
+\end{minted}
+
+
+\item On complète le code de la fonction \mip{vider}.
+
+\begin{minted}[linenos]{python}
+def vider(n):
+    if n == 1:
+        print('Vider case 1')
+    elif n > 1:
+        vider(n-2)
+        print('Vider case '+str(n))
+        remplir(n-2)
+        vider(n-1)
+\end{minted}
+
+
+\item On donne l'affichage produit par l'appel \mip{vider(3)}.
+
+
+\begin{minted}[linenos]{python}
+>>> vider(3)
+Vider case 1
+Vider case 3
+Remplir case 1
+Vider case 2
+Vider case 1
+\end{minted}
+
+
+\item On écrit le code de la fonction \mip{remplir}.
+
+\begin{minted}[linenos]{python}
+def remplir(n):
+    if n == 1:
+        print('Remplir case 1')
+    elif n > 1:
+        remplir(n-1)
+        vider(n-2)
+        print('Remplir case '+str(n))
+        remplir(n-2)
+\end{minted}
+
+\item Chacune des deux fonctions récursives \mip{vider} et \mip{remplir} s'appelle elle-même deux fois et l'autre une fois donc on a une complexité exponentielle, il est donc déraisonnable de vouloir traiter des baguenaudiers de grande taille.
+ 
+\end{enumerate}
+
+\bigskip
+
+
+\textbf{Exercice 3} (8 points)
+
+\medskip
+
+\textit{Cet exercice porte sur la programmation en Python, les bases de données
+relationnelles, le langage SQL, les systèmes d’exploitation et la sécurisation des
+communications.}
+
+\medskip
+
+\textbf{Partie A}
+
+\begin{enumerate}
+\item L'appel \mip{gen_mdp(8, True, True, False)} convient.
+\item On complète les lignes 8 à 10 de la fonction \mip{gen_mdp}.
+
+\begin{minted}[linenos,firstnumber=8]{python}
+    minuscules = [chr(i) for i in range(97,123)]
+    majuscules = [chr(i) for i in range(65,91)]
+    caracteres_speciaux = [chr(i) for i in range(33,48)] + [chr(i) for i in range(58,65)]
+\end{minted}
+
+
+\item On complète les lignes 13 et suivantes de la fonction \mip{gen_mdp}.
+
+\begin{minted}[linenos,firstnumber=12]{python}
+    if cont_min:
+        jeu_caracteres = jeu_caracteres + minuscules
+    if cont_maj:
+        jeu_caracteres = jeu_caracteres + majuscules
+    if cont_spe:
+        jeu_caracteres = jeu_caracteres + caracteres_speciaux
+\end{minted}
+
+
+\item On complète la ligne 21 de la fonction \mip{gen_mdp}.
+
+\begin{minted}[linenos,firstnumber=20]{python}
+    for i in range(longueur):
+        mot_de_passe = mot_de_passe + jeu_caracteres[randint(0, len(jeu_caracteres)] 
+\end{minted}
+
+
+\item La fonction \mip{gen_mdp} construit un mot de passe de longueur donnée en choisissant les caractères dans les catégories sélectionnées, mais ne garantit pas que des caractères de chaque catégorie seront utilisés.
+
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie B}
+
+%compte(mot_de_passe,utilisateur,renouvellement,id_site)
+%site(id,nom_site,url)
+
+\begin{enumerate}[resume]
+\item L'attribut \texttt{mot\_de\_passe} de la relation \texttt{compte} sert de clé primaire et doit donc être unique, ce qui empêche d'utiliser plusieurs fois le même mot de passe.
+\item La requête \texttt{SELECT url FROM site;} convient.
+\item La requête \texttt{UPDATE compte SET mot\_de\_passe = 'yhTS?d@UTJe' WHERE mot\_de\_passe = '@rDfohpj!\&';} effectue la mise à jour.
+
+\item La requête \texttt{SELECT id\_site FROM compte WHERE renouvellement < '2024-03-20';} convient.
+\item Le format AAAA-MM-JJ permet de comparer des dates en utilisant l'ordre lexicographique usuel. 
+\item La requête \texttt{SELECT utilisateur, mot\_de\_passe FROM compte JOIN site ON compte.id\_site = site.id }
+ 
+\texttt{WHERE nom\_site = 'Votremailp' ORDER BY renouvellement;} convient.
+\item Le fait de séparer les données en plusieurs tables facilite les mises à jour et permet
+de limiter les incohérences ; p.ex on peut avoir plusieurs comptes sur un même site, et on pourra modifier l'url une seule fois dans la table \texttt{site} plutôt qu'une fois pour chacun des comptes.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie C}
+
+
+
+\begin{enumerate}[resume]
+\item L'appel \mip{chiffrement('/home/Documents/gestionnaire.db', '/home/Perso/secret.db', '/home/Perso/cle')} convient, avec des chemins absolus ; avec des chemins relatifs au répertoire courant, on peut utiliser.
+l'appel \mip{chiffrement('gestionnaire.db', '../Perso/secret.db', '../Perso.cle')}.
+
+
+\item On calcule \mip{0xA3 ^ 0x59} en passant par le binaire.
+
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+hexa & binaire \\
+\hline
+A3& 1010.0011\\
+\hline
+59& 0101.1001\\
+\hline
+FA&1111.1010\\
+\hline
+\end{tabular}
+\end{center}
+
+\item Pour prouver l'identité \mip{(a XOR b) XOR b = a}, on présente les quatre cas dans un tableau.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\mip{a}&\mip{b}&\mip{a XOR b}& \mip{(a XOR b) XOR b}\\
+\hline
+0&0&0&0\\
+\hline
+0&1&1&0\\
+\hline
+1&0&1&1\\
+\hline
+1&1&0&1\\
+\hline
+\end{tabular}
+\end{center}
+
+On constate que la première et la dernière colonne sont identiques, ce qui prouve la propriété.
+\item Puisque la même clé permet de chiffrer et de déchiffrer le fichier, Alice utilise un chiffrement symétrique.
+
+\item Les permissions sont \mib{rw} (lecture et écriture) pour Alice, \mib{r} (lecture seule) pour son groupe (le groupe eleves) et aussi \mib{r} pour les autres. Cela signifie que n'importe qui peut lire le fichier \mib{secret.db} ; Alice pourrait changer les permissions de ce fichier avec \mib{chmod 600 secret.db} ou bien  \mib{chmod go-r secret.db}.
+
+Cependant sans accès au fichier \mib{cle}, l'attaque cryptographique est difficile puisque n'importe quel fichier de même taille que \mib{secret.db} peut être reconstruit en choisissant bien le fichier \mib{cle}.
+\end{enumerate}
+
+\bigskip
+
+\textbf{Partie D}
+
+
+
+\begin{enumerate}[resume]
+\item La préconisation P1 est suivie, comme on l'a vu à la question 1.
+
+Pour P2, on a vu que la fonction \mip{gen_mdp} de la partie A ne garantissait pas que chaque catégorie de caractère serait utilisée, on peut conseiller à Alice d'améliorer ce point.
+
+La préconisation P3 sort du cadre de cet exercice ; on peut espérer qu'Alice, sensibilisée à la cybersécurité, évitera une telle erreur de débutant. Malgré tout, Alice stocke sa base de données en clair dans \mib{/home/Documents/gestionnaire.db}, et on a vu question 17 qu'elle pouvait être négligente sur les permissions des fichiers. Clairement on a un problème ici.
+
+
+La préconisation P4 est manifestement suivie, mais utiliser une solution libre déjà existante serait sans doute préférable, avec moins de risque de failles de sécurité que la solution \og maison \fg{} d'Alice.
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+\end{document}
