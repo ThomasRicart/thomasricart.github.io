@@ -1,3 +1,4 @@
+% chktex-file 44 32 36 38 18 11 8 26
 
 
 \medskip
@@ -72,7 +73,7 @@ WHERE aeroport_arr = 'CDG'
 
 
 
-\item Écrire une requête SQL qui donne les noms des villes qui sont destination d'un vol au départ de l'aéroport CDG. (/\getpts{Q15})
+\item Écrire une requête SQL qui donne les noms des villes qui sont destination d'un vol au départ de l'aéroport CDG\@. (/\getpts{Q15})
 \begin{blocvisible}[height=2.5]
 \begin{lstlisting}[language=SQL]
 SELECT aeroport.ville 
@@ -139,11 +140,11 @@ Les distances des vols entre ces villes, exprimées en milliers de kilomètres, 
 
 \begin{minipage}{0.35\linewidth}
     \begin{itemize}
-    \item Washington~--~Paris : 6;
-    \item Paris~--~Tokyo : 10;
-    \item Paris~--~Sydney : 17;
-    \item Berlin~--~Tokyo : 9;
-    \item Tokyo~--~Sydney : 8.
+    \item Washington~--~Paris: 6;
+    \item Paris~--~Tokyo: 10;
+    \item Paris~--~Sydney: 17;
+    \item Berlin~--~Tokyo: 9;
+    \item Tokyo~--~Sydney: 8.
 \end{itemize}
 \end{minipage}
 \hfill
@@ -168,8 +169,7 @@ Les distances des vols entre ces villes, exprimées en milliers de kilomètres, 
         \draw (P) -- node[midway, fill=white, xshift=-2pt] {10} (T);
         
     \end{tikzpicture}
-    \captionof{figure}{Graphe du réseau aérien}
-\label{reseau_aerien}
+    \captionof{figure}{Graphe du réseau aérien}\label{reseau_aerien}
 
 \end{minipage}
 
@@ -187,7 +187,7 @@ Le nombre indiqué sur chaque arête est appelé poids: il représente la distan
 On choisit de représenter ce graphe en Python à l'aide d'un dictionnaire dans lequel chaque clé est un sommet du graphe et la valeur associée à cette clé est elle-même un dictionnaire, dont les clés sont les villes voisines et les valeurs sont les distances correspondantes.
 
 
-Le dictionnaire associé au graphe, représenté par la Figure précédente, est donné ci-après.
+Le dictionnaire associé au graphe, représenté par la figure précédente, est donné ci-après.
 
 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 graphe_airinfo = {     

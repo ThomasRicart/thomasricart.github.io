@@ -191,10 +191,10 @@ La table de routage du routeur 2 de la Figure 1 est représentée ci-dessous:
         \verb|172.16.3.0| & \verb|172.16.3.1| & aucun & 0 \\ \hline
         \verb|172.16.4.0| & \verb|172.16.4.1| & aucun & 0 \\ \hline
         \verb|192.168.10.0| & \verb|172.16.3.1| & \verb|172.16.3.2| & 2 \\ \hline
-        \verb|172.16.0.0| & \verb|172.16.4.1|  &  &  \\ \hline
-        \verb|172.16.2.0| & \verb|172.16.4.1| &  &  \\ \hline
-        \verb|192.168.30.0| &  &  &  \\ \hline
-        \verb|172.16.1.0| &  &  &  \\ \hline
+        \verb|172.16.0.0| & \verb|172.16.4.1|  & 172.16.4.2 & 1 \\ \hline
+        \verb|172.16.2.0| & \verb|172.16.4.1| & 172.16.4.2 & 1 \\ \hline
+        \verb|192.168.30.0| & \verb|172.16.4.1| & 172.16.4.2 & 1 \\ \hline
+        \verb|172.16.1.0| & \verb|172.16.3.1| & 172.16.3.2 & 1 \\ \hline
     \end{tabular}
 \end{center}
 
@@ -214,9 +214,8 @@ Une adresse IP qui n'est pas référencée dans la table de routage doit être r
     \begin{tabular}{|c|c|c|c|}
         \hline
         \textbf{Réseau destination} & \textbf{Interface de sortie} & \textbf{Prochain routeur} & \textbf{Nombre de sauts}\\
-         
         \hline
-        \verb|autre| &  &  &  \\ \hline
+        \verb|autre| & \verb|172.16.3.1| & \verb|172.16.3.2| & 1 \\  \hline
            \end{tabular}
 \end{center}
 \end{enumerate}
@@ -227,11 +226,12 @@ La connexion entre le routeur 2 et le routeur 3 est interrompue. Le protocole RI
 
 \begin{enumerate}[resume]
     
-    \begin{minipage}{0.68\linewidth}
+    \begin{minipage}{0.71\linewidth}
     \item Indiquer la route utilisée par le routeur 2 pour atteindre les réseaux du café 2 après l'interruption de la connexion entre le routeur 2 et le routeur 3.
 \end{minipage}\hfill
     \begin{minipage}{0.28\linewidth}
         \begin{blocvisible}[height=1]
+            R2 - R1 - R3
             \end{blocvisible}
 \end{minipage}
     \item Compléter alors la nouvelle table de routage du routeur 2 après l'interruption de la connexion.
@@ -242,13 +242,12 @@ La connexion entre le routeur 2 et le routeur 3 est interrompue. Le protocole RI
         \textbf{Réseau destination} & \textbf{Interface de sortie} & \textbf{Prochain routeur} & \textbf{Nombre de sauts}\\
          
         \hline
-        \verb|192.168.30.0| &  &  &  \\ \hline
+        \verb|192.168.30.0| & \verb|172.16.3.1| & \verb|172.16.3.2| & 2 \\ \hline
            \end{tabular}
 \end{center}    
 
 \end{enumerate}
 
-\pagebreak
 \bigskip
 
 \textbf{PARTIE C}
@@ -269,9 +268,9 @@ OSPF est également un protocole d'échanges de données entre les routeurs qui 
         \textbf{Type de connexion} & \textbf{Débit en bit/s} & \textbf{coût} \\
          
         \hline
-        \verb|Ethernet| & 10 Mbit/s  & \qquad \qquad\qquad\qquad \\ \hline
-         \verb|Fast Ethernet| & 100 Mbit/s  &  \\ \hline
-        \verb|Fibre Optique| & 1 Gbit/s  &  \\ \hline
+        \verb|Ethernet| & 10 Mbit/s  & 100 \\ \hline
+         \verb|Fast Ethernet| & 100 Mbit/s  & 10 \\ \hline
+        \verb|Fibre Optique| & 1 Gbit/s  & 1 \\ \hline
           \end{tabular}
 \end{center}    
 
@@ -293,10 +292,10 @@ Le schéma ci-dessous met en évidence les types de connexion qui relient les ro
     \begin{tabular}{|c|c|c|}
         \hline
         \textbf{Réseau destination}  & \textbf{Prochain routeur} & \textbf{Coût}\\ \hline
-        \verb|Siège social| & &  \\ \hline
-        \verb|Réseau café 1| & &  \\ \hline
-        \verb|Réseau café 2| & &  \\ \hline
-        \verb|Internet| & &  \\ \hline
+        \verb|Siège social| & R3 &  11\\ \hline
+        \verb|Réseau café 1| & R3&  10\\ \hline
+        \verb|Réseau café 2| &  - &  0\\ \hline
+        \verb|Internet| & R1& 10 \\ \hline
    
         \hline
     \end{tabular}
@@ -306,13 +305,12 @@ Le schéma ci-dessous met en évidence les types de connexion qui relient les ro
 
 
             \begin{blocvisible}[height=3]
+                R1 - R2 - R3 - R4 de cout 21
     \end{blocvisible}
 
     \end{enumerate}
 
 
-    \pagebreak
-\thispagestyle{DS_LP}
     \textbf{PARTIE D}
 
     \medskip
@@ -374,7 +372,7 @@ def precede(ip_1, ip_2):
 
     \begin{enumerate}[resume]
         \item Compléter les lignes 5, 7 et 8 de la fonction \verb|precede|
-                \begin{blocvisible}[height=3]
+                \begin{blocvisible}[height=6]
                 
                 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 
@@ -401,7 +399,6 @@ def precede(ip_1, ip_2):
   \medskip
 
 
-\pagebreak
 
 \textbf{PARTIE E}
 
@@ -451,14 +448,13 @@ assert extraire_MQ('192.168.4.5/24') == '24'
    \end{CodePythontexAlt}
 
 
-   \pagebreak
+
    \thispagestyle{DS_LP}
-\end{document}
 
    \begin{enumerate}[resume]
     \item En utilisant les fonction précédentes, compléter la fonction \verb|adresse_reseau| qui renvoie l'adresse du réseau local auquel appartient une machine.
 
-   \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+\begin{verbatim}
 def adresse_reseau(machine):
     ''' Renvoie l'adresse du réseau local auquel appartient une machine '''
     
@@ -484,11 +480,15 @@ def adresse_reseau(machine):
     # Convertir le résultat binaire en IP décimale
     # (appel une fonction inverse de ip_bin, non fournie)
     return convertir_binaire_en_ip(reseau_binaire)
-```
+    
+\end{verbatim}
+
+ 
+   \begin{verbatim}
+
 
 **Ou version plus concise** :
 
-```python
 def adresse_reseau(machine):
     ''' Renvoie l'adresse du réseau local auquel appartient une machine '''
     ip = extraire_IP(machine)
@@ -506,55 +506,25 @@ def adresse_reseau(machine):
     
     return convertir_binaire_en_ip(reseau_bin)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 assert adresse_reseau('192.168.1.4/24') == '192.168.1.0'
 assert adresse_reseau('172.18.1.4/16') == '172.18.0.0'
-   \end{CodePythontexAlt}
+   \end{verbatim}
 
 
    \item En utilisant les fonctions précédentes, compléter la fonction \verb|meme_reseau| qui renvoie \verb|True| si les deux machines appartiennent au même réseau et \verb|False| sinon.
    
-   \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+   \begin{verbatim}
 def meme_reseau(machine1, machine2):
     ''' Renvoie True si les deux machines appartiennent au même réseau 
     et False sinon. '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return adresse_reseau(machine1) == adresse_reseau(machine2)
 assert meme_reseau('192.168.1.4/24', '192.168.1.15/24') == True
 assert meme_reseau('192.168.1.4/24', '192.168.2.5/24') == False
 assert meme_reseau('192.168.1.4/16', '192.168.2.5/16') == True
 
-   \end{CodePythontexAlt}
+\end{verbatim}
+
+
 
       \end{enumerate}
 
