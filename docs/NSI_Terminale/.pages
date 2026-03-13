@@ -1,4 +1,8 @@
 nav:
   - index.md
   - AL_Algorithmie
+  - ARSE_Archi_Reseau_SE
+  - BDD_Base_de_donnee
+  - LP_Langage_Programmation
+  - SD_Structure_donnees
   - Grand_Oral
