@@ -3,7 +3,7 @@
 
 \bigskip
 
-\exods{0}
+\exods{\getpts{Exo3}}%
 
 \bigskip
 
@@ -61,8 +61,8 @@ Initialement, toutes les cases sont vides.
 
 \bigskip
 
-\begin{enumerate}[resume]
-\item On considère un baguenaudier à $4$ cases sur lequel les trois dernières cases sont remplies. Désigner les cases que l'on peut jouer et dessiner l'état du baguenaudier à la suite de chacun des coups possibles.
+\begin{enumerate}[resume=monDS]
+\item On considère un baguenaudier à $4$ cases sur lequel les trois dernières cases sont remplies. Désigner les cases que l'on peut jouer et dessiner l'état du baguenaudier à la suite de chacun des coups possibles. (/\getpts{Q28})
 
     \begin{blocvisible}[height=2]
         Les cases que l'on peut jouer sont la case $1$ et la case $2$. 
@@ -93,8 +93,8 @@ Initialement, toutes les cases sont vides.
 
 \pagebreak
 
-\begin{enumerate}[resume]
-\item Ecrire le code de la fonction \texttt{initialiser(n)}
+\begin{enumerate}[resume=monDS]
+\item Ecrire le code de la fonction \texttt{initialiser(n)} (/\getpts{Q29})
 \end{enumerate}
 
 \begin{blocvisible}[height=3]
@@ -118,8 +118,8 @@ def victoire(tab):
     \end{CodePythontexAlt}
 
 
-        \begin{enumerate}[resume]
-\item Compléter les lignes 3, 4 et 5 du code de la fonction \texttt{victoire}.
+        \begin{enumerate}[resume=monDS]
+\item Compléter les lignes 3, 4 et 5 du code de la fonction \texttt{victoire}.  (/\getpts{Q30})
 \end{enumerate}
 
 \begin{blocvisible}[height=4]
@@ -145,8 +145,8 @@ def victoire(tab):
 None
     \end{CodePythontexAlt}
 
-    \begin{enumerate}[resume]
-\item Ecrire le code de la fonction \verb|indice_premiere_case_occupee|
+    \begin{enumerate}[resume=monDS]
+\item Ecrire le code de la fonction \verb|indice_premiere_case_occupee| (/\getpts{Q31})
 \end{enumerate}
 
 \begin{blocvisible}[height=6]
@@ -165,8 +165,8 @@ None
  La fonction \verb|coup_valide(tab, case)| prend en paramètres \texttt{tab} qui est une liste modélisant l'état d'un baguenaudier, et un entier \texttt{case} qui est l'indice de la case à jouer. La fonction renvoie \texttt{True} si le coup respecte les règles et \texttt{False} si ce n'est pas le cas. L'indice de la première case du jeu est \texttt{0}. Pour que le coup soit valide, il faut aussi s'assurer que l'indice est un entier positif inférieur à la longueur de \texttt{tab}.
 
 
- \begin{enumerate}[resume]
-\item Ecrire le code de la fonction \verb|coup_valide(tab, case)|
+ \begin{enumerate}[resume=monDS]
+\item Ecrire le code de la fonction \verb|coup_valide(tab, case)|  (/\getpts{Q32})
 \end{enumerate}
 
 \begin{blocvisible}[height=6]
@@ -176,10 +176,10 @@ None
             return False
         if case == 0:
             return True
-        indice_premiere_case_occupee = indice_premiere_case_occupee(tab)
-        if indice_premiere_case_occupee is None:
+        i_premiere_case_occupee = indice_premiere_case_occupee(tab)
+        if i_premiere_case_occupee is None:
             return True
-        return case == indice_premiere_case_occupee + 1
+        return case == i_premiere_case_occupee + 1
     \end{CodePythontexAlt}
 \end{blocvisible}
 
@@ -197,18 +197,16 @@ Exemples:
 [False, False, True]
     
 \end{CodePythontexAlt}
-\begin{enumerate}[resume]
-\item Ecrire le code de la fonction \verb|changer_case(tab, case)|
+\begin{enumerate}[resume=monDS]
+\item Ecrire le code de la fonction \verb|changer_case(tab, case)|  (/\getpts{Q33})
 \end{enumerate}
 
 \begin{blocvisible}[height=6]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
     def changer_case(tab, case):
-        if not coup_valide(tab, case):
-            return tab
-        tab_modifie = tab.copy()
-        tab_modifie[case] = not tab_modifie[case]
-        return tab_modifie
+    if coup_valide(tab, case):
+        tab[case] = not(tab[case])
+    return tab
     \end{CodePythontexAlt}
 \end{blocvisible}
 
@@ -267,8 +265,8 @@ Le code de la fonction \texttt{vider}, incomplet, est donné ci-dessous. On note
 \end{CodePythontexAlt}
 
 
-\begin{enumerate}[resume]
-\item Recopier et compléter la ligne 6 du code de la fonction \texttt{vider} pour qu'elle affiche le texte \verb|'Vider case'| suivi de la valeur de l'entier \texttt{n}.
+\begin{enumerate}[resume=monDS]
+\item Recopier et compléter la ligne 6 du code de la fonction \texttt{vider} pour qu'elle affiche le texte \verb|'Vider case'| suivi de la valeur de l'entier \texttt{n}.  (/\getpts{Q34})
 
 \begin{blocvisible}[height=2]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
@@ -278,22 +276,20 @@ Le code de la fonction \texttt{vider}, incomplet, est donné ci-dessous. On note
 
 \medskip
 
-\item En supposant que l'appel \texttt{remplir(1)} affiche \verb|'Remplir case 1'| et que l'appel \texttt{remplir(0)} ne fait rien, donner les affichages, dans la console, produits par l'exécution de \texttt{vider(3)}.
+\item En supposant que l'appel \texttt{remplir(1)} affiche \verb|'Remplir case 1'| et que l'appel \texttt{remplir(0)} ne fait rien, donner les affichages, dans la console, produits par l'exécution de \texttt{vider(3)}.  (/\getpts{Q35})
 \begin{blocvisible}[height=5]
     \begin{verbatim}
 Vider case 1
 Vider case 3
-Remplir case 2
+Remplir case 1
 Vider case 2
-Vider case 4
-Remplir case 3
-Vider case 3
+Vider case 1
 \end{verbatim}
 \end{blocvisible}
 
 \pagebreak
 
-\item En vous inspirant de la fonction \texttt{vider}, de la résolution donnée à la question précédente pour \texttt{n = 3} et des Figures \ref{exemplesresolutions3} et \ref{exemplesresolutions4}, écrire le code de la fonction récursive \texttt{remplir(n)}.
+\item En vous inspirant de la fonction \texttt{vider}, de la résolution donnée à la question précédente pour \texttt{n = 3} et des Figures \ref{exemplesresolutions3} et \ref{exemplesresolutions4}, écrire le code de la fonction récursive \texttt{remplir(n)}.  (/\getpts{Q36})
 
 \begin{blocvisible}[height=6]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}

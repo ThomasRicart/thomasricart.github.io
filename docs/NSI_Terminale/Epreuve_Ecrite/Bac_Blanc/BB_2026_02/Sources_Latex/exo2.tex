@@ -10,7 +10,7 @@
 Dans cette partie, on pourra utiliser les clauses du langage SQL pour:
 
 \begin{itemize}
-    \item construire des requêtes d'interrogation à l'aide de \texttt{SELECT}, \texttt{FROM}, \texttt{WHERE} (avec les opérateurs logiques \texttt{AND}, \texttt{OR}), \texttt{JOIN... ON};
+    \item construire des requêtes d'interrogation à l'aide de \texttt{SELECT}, \texttt{FROM}, \texttt{WHERE} (avec les opérateurs logiques \texttt{AND}, \texttt{OR}), \texttt{JOIN\ldots{} ON};
     \item construire des requêtes d'insertion et de mise à jour à l'aide de \texttt{UPDATE}, \texttt{INSERT}, \texttt{DELETE};
     \item affiner les recherches à l'aide de \texttt{DISTINCT}, \texttt{ORDER BY}.
 \end{itemize}
@@ -64,10 +64,9 @@ FROM vol
 WHERE aeroport_arr = 'CDG'
 \end{lstlisting}
 
-\begin{blocvisiblex}[height=3]
-    {\quad}
-        Le résultat renvoyé par la requête SQL serait une liste des \texttt{id\_vol} des vols dont l'aéroport d'arrivée est 'CDG'. En se basant sur la table \texttt{vol}, les vols correspondants seraient AI0015, AI01258, AI0292.
-\end{blocvisiblex}
+\begin{blocvisible}[height=3]
+        Le résultat renvoyé par la requête SQL serait une liste des \texttt{id\_vol} des vols dont l'aéroport d'arrivée est \verb|'CDG'|. En se basant sur la table \texttt{vol}, les vols correspondants seraient AI0015, AI01258, AI0292.
+\end{blocvisible}
 
 \medskip
 
@@ -141,8 +140,6 @@ Les distances des vols entre ces villes, exprimées en milliers de kilomètres, 
 \begin{minipage}{0.35\linewidth}
     \begin{itemize}
     \item Washington~--~Paris : 6;
-    \item Washington~--~Berlin : 7;
-    \item Paris~--~Berlin : 1;
     \item Paris~--~Tokyo : 10;
     \item Paris~--~Sydney : 17;
     \item Berlin~--~Tokyo : 9;
@@ -172,7 +169,7 @@ Les distances des vols entre ces villes, exprimées en milliers de kilomètres, 
         
     \end{tikzpicture}
     \captionof{figure}{Graphe du réseau aérien}
-\label{exemplesresolutions4}
+\label{reseau_aerien}
 
 \end{minipage}
 
@@ -339,7 +336,7 @@ parcours(graphe_droidevant, visitees2, 'W')
 \end{CodePythontexAlt}
 
 \begin{blocvisible}[height=3]
-    Après l'exécution de la fonction \texttt{parcours} sur le \texttt{graphe\_airinfo} à partir de la ville \verb|'W'|, la variable \texttt{visitees1} contiendra les villes accessibles depuis \verb|'W'| dans ce graphe, soit \verb|['W', 'P', 'T', 'S', 'B']|.
+    Après l'exécution de la fonction \texttt{parcours} sur le \texttt{graphe\_airinfo} à partir de la ville \verb|'W'|, la variable \texttt{visitees1} contiendra les villes accessibles depuis \verb|'W'| dans ce graphe, soit \verb|['W', 'P', 'T', 'B', 'S']|.
 
     Après l'exécution de la fonction \texttt{parcours} sur le \texttt{graphe\_droidevant} à partir de la ville \verb|'W'|, la variable \texttt{visitees2} contiendra les villes accessibles depuis \verb|'W'| dans ce graphe, soit \verb|['W', 'P', 'B']|.
 \end{blocvisible}
@@ -357,7 +354,7 @@ parcours(graphe_droidevant, visitees2, 'W')
 \end{minipage}\hfill{}
 \begin{minipage}{0.48\linewidth}
     \begin{blocvisible}[height=1.5]
-    Réponse: Proposition C\@: un parcours en profondeur.
+    Réponse: Proposition C\@: un parcours en profondeur (DFS).
     \end{blocvisible}
 \end{minipage}
 
