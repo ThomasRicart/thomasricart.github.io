@@ -24,8 +24,8 @@
 \usetikzlibrary{shapes.multipart, arrows.meta, positioning, calc}
 
 % Ton toggle : 'visible' pour le prof, 'invisible' pour l'élève
-\def\visibleornot{visible} 
-
+%\def\visibleornot{invisible} 
+\ifdefined\visibleornot\else\def\visibleornot{visible}\fi
 
 \usepackage{lastpage}
 
@@ -36,7 +36,7 @@
 
 
 % --- BAREME EXERCICE 1 (7 pts) ---
-\setpts{Q1}{0.5}\setpts{Q2}{0.5}\setpts{Q3}{0.5}\setpts{Q4}{0.5}\setpts{Q5}{1}%
+\setpts{Q1}{0.75}\setpts{Q2}{0.5}\setpts{Q3}{0.75}\setpts{Q4}{0.5}\setpts{Q5}{0.5}%
 \setpts{Q6}{0.5}\setpts{Q7}{0.5}\setpts{Q8}{1}\setpts{Q9}{1}\setpts{Q10}{1}%
 \setpts{Exo1}{\fpeval{\getpts{Q1}+\getpts{Q2}+\getpts{Q3}+\getpts{Q4}+\getpts{Q5}+\getpts{Q6}+\getpts{Q7}+\getpts{Q8}+\getpts{Q9}+\getpts{Q10}}}
 
@@ -53,6 +53,10 @@
 
 % --- TOTAL GENERAL ---
 \def\TotalDS{\fpeval{\getpts{Exo1}+\getpts{Exo2}+\getpts{Exo3}}}
+
+
+\usepackage{minted}
+
 \begin{document}
 
 
@@ -63,13 +67,13 @@
 
 
 
-  \include{page_de_garde}
-   \include{exo1}
-   \include{exo2}
-   \include{exo3}
+  \include{./Sources_Latex/page_de_garde}
+   \include{./Sources_Latex/exo1}
+   \include{./Sources_Latex/exo2}
+   \include{./Sources_Latex/exo3}
    \newpage
    \quad\newpage
    %\include{exo4}
 
-   \include{annexes}
+   \include{./Sources_Latex/annexes}
 \end{document}
