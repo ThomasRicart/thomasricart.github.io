@@ -1,0 +1,200 @@
+% chktex-file 44 32 36 38 18 11 8 26
+
+\pagestyle{DS_FP}
+%\NomPrenomNote{}
+
+\bigskip
+
+
+\section*{Contexte général}
+
+Une entreprise spécialisée dans les systèmes embarqués développe un nouveau module de transmission de données sans fil. Les équipes travaillent sur trois problématiques distinctes : la modélisation du signal de charge d’un condensateur, la gestion d’une mémoire tampon (buffer), et le contrôle qualité des modules produits.
+
+Un ingénieur modélise la tension aux bornes d’un condensateur lors d’une phase de charge particulière par une fonction de la forme :
+
+\[f(t)=(at+b)\cdot \e^{-kt}\qquad \text{où $a$, $b$ et $k$ sont des constantes réelles.}\]
+
+\section*{Modélisation}
+
+\begin{itemize}
+    \item $t$ est le temps en millisecondes (ms) depuis le début de la charge du condensateur.
+    \item $f(t)$ est la tension en volts (V) aux bornes du condensateur à l’instant $t$.
+    \item $k$ est un coefficient de décroissance qui modélise la résistance du circuit, influençant la rapidité avec laquelle la tension atteint son maximum et commence à décroître.
+\end{itemize}
+
+\section*{PARTIE A -- Etude d'une situation particulière}
+
+Uniquement dans cette question, on pose $a=0$, $b=5$ et $k=1$.
+
+Dans cette question uniquement, on a donc:
+\[f(t)=5\cdot \e^{-t}.\]
+
+\begin{enumerate}[series=monDS, resume]
+    \item Calculer $f(0)$, que représente-t-il physiquement dans le contexte de la charge du condensateur ?
+    \begin{blocvisiblex}[height=2]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+    \item Déterminer le comportement de $f(t)$ lorsque $t$ tend vers $+\infty$ et interpréter ce résultat physiquement.
+    \begin{blocvisiblex}[height=2]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+    \item Déterminer expérimentalement au bout de combien de temps la tension sera inférieure à $0,5$ volts. (On arrondira le résultat à la milliseconde près).
+    \begin{blocvisiblex}[height=1]
+    {\quad}
+    \end{blocvisiblex}
+\end{enumerate}
+
+\bigskip
+
+\section*{PARTIE B -- Cas général}
+
+Dans cette partie, on considère que $a$, $b$ et $k$ sont des constantes réelles strictement positives, mais on ne connaît pas leurs valeurs.
+
+Des études expérimentales ont permis de déterminer que:
+\begin{itemize}
+    \item la tension initiale $f(0)$ est de $5$ volts ;
+    \item la tension atteint un maximum au bout de $1.5$ ms.
+    \item le coefficient de décroissance $k$ est égal à $0.5$.
+\end{itemize}
+
+La fonction $f$ est donc définie pour tout $t\geq 0$ par $f(t)=(at+b)\cdot \e^{-0.5t}$.
+
+\pagebreak
+
+\begin{enumerate}[series=monDS, resume]
+    \item A l'aide des deux conditions expérimentales et à l'aide de Géogébra, déterminer les valeurs de $a$ et $b$.
+    \begin{blocvisiblex}[height=1]
+    {\quad}
+    \end{blocvisiblex}
+    \appelprof{}
+\end{enumerate}
+
+\medskip
+
+Dans la suite de l'exercice on considèrera la fonction $f$ définie sur $[0,+\infty[$ par $f(t)=5\cdot (2t+1)\cdot \e^{-0.5t}$.
+
+\begin{enumerate}[series=monDS, resume]
+    \item Déterminer par le calcul l'expression de la fonction dérivée $f'$ et montrer que $f'(t)=5\cdot (1-t)\cdot \e^{-0.5t}$. 
+    \begin{blocvisiblex}[height=3]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+    \item Calculer la valeur exacte puis la valeur approchée de $f(3)$ à $10^{-2}$ près.
+    \begin{blocvisiblex}[height=2]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+    \item Déterminer le tableau de variations de $f$ sur $[0,+\infty[$.
+    \begin{blocvisiblex}[height=5]
+    {\quad}
+    \end{blocvisiblex}
+\end{enumerate}
+
+\medskip
+
+Dans les premières millisecondes suivant la mise sous tension, un ingénieur peut utiliser la tangente à l'origine comme modèle linéaire approché de la tension. 
+
+\begin{enumerate}[series=monDS, resume]
+    \item Déterminer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $0$.
+    \begin{blocvisiblex}[height=2]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+    \item Calculer l'écart entre la valeur de $f(3)$ et la valeur de la tangente à l'origine en $t=3$.
+    \begin{blocvisiblex}[height=2]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+\end{enumerate}
+
+\medskip
+
+L'énergie dissipée entre l'instant 0 et l'instant $T$ est égal à $\displaystyle \int_{0}^{T} f(t) \dt$.
+
+\begin{enumerate}[series=monDS, resume]
+    \item Déterminer une primitive $F$ de $f$ sur $[0,+\infty[$.
+    \begin{blocvisiblex}[height=1]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+    \item Calculer l'énergie dissipée pendant les 5 premières millisecondes. Donner une valeur exacte puis une valeur approchée à $10^{-2}$ près. (/\getpts{Q12})
+    \begin{blocvisiblex}[height=2]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+    \item Déterminer alors l'énergie moyenne dissipée par milliseconde pendant les 5 premières millisecondes.\begin{blocvisiblex}[height=2]
+    {\quad}
+    \end{blocvisiblex}
+    \medskip
+\end{enumerate}
+    
+
+\bigskip
+
+\section*{PARTIE C -- Controle de qualité}
+
+L’usine produit des modules de transmission. Le service qualité distingue deux lignes de production :
+
+\begin{itemize}
+    \item la ligne A, qui produit $60\%$ des modules et génère $3\%$ de défectueux ;
+    \item la ligne B, qui produit $40\%$ des modules et génère $7\%$ de défectueux.
+\end{itemize}
+
+Un module est prélevé au hasard en sortie de chaîne.
+
+\begin{enumerate}[series=monDS, resume]
+    \item Compléter l'arbre de probabilité ci-dessous.
+
+    \item Calculer la probabilité que le module prélevé soit défectueux.
+    \item Sachant que le module prélevé est défectueux, calculer la probabilité qu'il provienne de la ligne A.
+\end{enumerate}
+
+Un technicien prélève un échantillon de 20 modules indépendamment les uns des autres. On admet que la probabilité qu’un module soit défectueux est $p=0,046$
+
+Soit $X$ la variable aléatoire qui compte le nombre de modules défectueux dans l’échantillon.
+
+\begin{enumerate}[series=monDS, resume]
+    \item Déterminer la loi de probabilité de $X$ et en donner les paramètres.
+    \item Déterminer la probabilité qu'exactement 2 modules soient défectueux dans l'échantillon.
+    \item Déterminer la probabilité qu'au moins 2 modules soient défectueux dans l'échantillon.
+\end{enumerate}
+
+
+Le technicien souhaite que la probabilité de détecter au moins un module défectueux sur $n$ prélèvements soit supérieure à $0,99$.
+
+\begin{enumerate}[series=monDS, resume]
+    \item Montrer que cette condition s'écrit ${(1-p)}^n < 0.01$.
+    \item A l'aide de Géogébra, déterminer $n$.
+    \appelprof{}
+\end{enumerate}
+
+\section*{PARTIE D -- Gestion d'une mémoire tampon}
+
+Un buffer (mémoire tampon) contient initialment 200 octets de données. A chaque cycle d'horloge, le système traite et supprime $10\%$ du contenu actuel du buffer.
+
+On note $u_n$ la quantité de données (en octets) présente dans le buffer après $n$ cycles d'horloge.
+
+\begin{enumerate}[series=monDS, resume]
+    \item Justifier que la suite $(u_n)$ vérifie la relation de récurrence $u_{n+1}=0.9\cdot u_n$.
+    \item Déterminer la nature de la suite $(u_n)$. 
+    \item Exprimer $u_n$ en fonction de $n$. 
+    \item Déterminer la limite de la suite $(u_n)$ lorsque $n$ tend vers $+\infty$. Interpréter ce résultat dans le contexte de la gestion du buffer.
+    \item Compléter l'algorithme ci-dessous qui calcule le nombre de cycles d'horloges nécessaires pour que la quantité de données dans le buffer soit inférieure à 1 octet.
+
+\begin{verbatim}
+n = 0
+u = 200
+while .........:
+    u = .........
+    n = .........
+print(n)
+\end{verbatim}
+    \item Par la méthode de votre choix, déterminer le nombre de cycles d'horloge nécessaires pour que la quantité de données dans le buffer soit inférieure à 1 octet.
+\end{enumerate}
+
+\bigskip
+
+
+
