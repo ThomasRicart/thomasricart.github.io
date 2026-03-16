@@ -79,13 +79,10 @@ def fusion_rec(L1, L2, L):
     L = L + [e]
     return fusion_rec(L1, L2, L)
 
-
-
 def verif_exo5():
     L1 = [1, 3, 4]
     L2 = [0, 2, 5, 6]
     print(fusion(L1, L2))
-
 
 ### Exercice 6 - Tri fusion
 def tri_fusion(L):
@@ -104,3 +101,16 @@ def maximum(L):
     if len(L) == 1:
         return L[0]
     return max(maximum(L[:len(L)//2]), maximum(L[len(L)//2:]))
+
+### Exercice 10 - Exponentiation rapide
+def expo_rapide(a, n):
+    if n == 0:
+        return 1
+    if n % 2 == 0:
+        return expo_rapide(a * a, n // 2)
+    return a * expo_rapide(a * a, (n-1)//2)
+
+def expo(a, n):
+    for i in range(2, n):
+        a = a * a
+    return a
