@@ -134,17 +134,14 @@ $-5m - 4 = 0 \Rightarrow m = -\frac{4}{5}$
 
 $\overrightarrow{u} \cdot \overrightarrow{v} = (m-4) \times 2m + (2m+1) \times (3-m)$
 
-$= 2m^2 - 8m + 6m + 3 - m^2$
+$= 2m^2 - 8m + 6m -2m^2 + 3 - m$
 
-$= m^2 - 2m + 3$
+$= -3m+3$
 
 Pour que les vecteurs soient orthogonaux, il faut que $\overrightarrow{u} \cdot \overrightarrow{v} = 0$ :
 
-$m^2 - 2m + 3 = 0$  
+$-3m+3 = 0 $ soit $m = 1$ 
 
-Le discriminant de cette équation est $\Delta = (-2)^2 - 4 \times 1 \times 3 = 4 - 12 = -8$, qui est négatif. 
-
-Il n'y a donc pas de solution réelle pour $m$, ce qui signifie que les vecteurs ne sont jamais orthogonaux pour aucune valeur de $m$.
 
 3. $\overrightarrow{u}\left(m; 3-m\right)$ et $\overrightarrow{v}\left(2; -m\right)$
 
