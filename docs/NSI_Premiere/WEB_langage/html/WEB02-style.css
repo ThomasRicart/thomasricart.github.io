@@ -8,7 +8,7 @@ body {
 }
 
 /* 2. En-tête */
-header h1 {
+h1 {
     text-align: center;
     color: #2c3e50;
     border-bottom: 3px solid #e67e22;

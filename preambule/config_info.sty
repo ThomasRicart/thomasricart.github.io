@@ -74,3 +74,43 @@
     commentstyle=\color{commentcolor},
     morekeywords={let, const, var, function, console, log}
 }
+
+
+% Définition du style Pseudo-Code
+\newtcblisting{pseudocode}[1][]{
+  arc=0mm,                          % Coins droits pour un look "examen"
+  colback=white,                    % Fond blanc
+  colframe=gray!75!black,           % Bordure grise
+  title=Algorithme,                 % Titre par défaut
+  fonttitle=\bfseries\small,
+  listing only,
+  listing options={
+    mathescape=true,                % Permet d'utiliser des symboles maths ($...$)
+    basicstyle=\ttfamily\small,     % Police à chasse fixe
+    keywordstyle=\bfseries,         % Mots-clés en gras
+    keywords={SI, ALORS, SINON, FINSI, TANTQUE, FAIRE, FINTANTQUE, POUR, DE, A, FINPOUR, Fonction, Retourner, Debut, Fin},
+    morecomment=[l]{//},            % Commentaires avec //
+    commentstyle=\itshape\color{gray},
+    %numbers=left,                   % Numérotation des lignes à gauche
+    %numberstyle=\tiny\color{gray},
+    %stepnumber=1,
+    tabsize=2,
+    breaklines=true,
+    captionpos=b,
+    escapeinside={(*}{*)}           % Pour forcer du LaTeX à l'intérieur si besoin
+  },
+  #1                                % Permet d'ajouter des options locales
+}
+
+\newtcblisting{monCode}{
+  colback=gray!5,       % Couleur de fond
+  colframe=blue!50!black, % Couleur de la bordure
+  listing only,         % Affiche uniquement le code (pas le résultat)
+  sharp corners,        % Coins droits ou arrondis
+  fonttitle=\bfseries,
+  listing options={     % Options standard du package listings
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    language=TeX
+  }
+}
