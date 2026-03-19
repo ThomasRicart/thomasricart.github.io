@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; font-weight: bold; font-style: italic; }
+      .subtitle { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 600; letter-spacing: 3px; }
+    </style>
+  </defs>
+  
+  <!-- 7 Étoiles vertes distribuées autour du logo -->
+  <g id="stars" fill="#00FF00">
+    <!-- Étoile 1 (haut gauche) -->
+    <path d="M 150 80 L 158 105 L 185 105 L 163 120 L 171 145 L 150 130 L 129 145 L 137 120 L 115 105 L 142 105 Z"/>
+    
+    <!-- Étoile 2 (haut centre-gauche) -->
+    <path d="M 350 40 L 357 60 L 382 60 L 363 73 L 371 93 L 350 80 L 329 93 L 337 73 L 318 60 L 343 60 Z"/>
+    
+    <!-- Étoile 3 (haut centre) -->
+    <path d="M 500 30 L 508 55 L 535 55 L 514 72 L 523 98 L 500 80 L 477 98 L 486 72 L 465 55 L 492 55 Z"/>
+    
+    <!-- Étoile 4 (haut centre-droit) -->
+    <path d="M 650 45 L 658 65 L 683 65 L 664 78 L 672 98 L 650 85 L 628 98 L 636 78 L 617 65 L 642 65 Z"/>
+    
+    <!-- Étoile 5 (haut droit) -->
+    <path d="M 800 75 L 810 105 L 843 105 L 818 128 L 828 158 L 800 135 L 772 158 L 782 128 L 757 105 L 790 105 Z"/>
+    
+    <!-- Étoile 6 (côté droit haut) -->
+    <path d="M 900 50 L 908 72 L 935 72 L 915 88 L 924 110 L 900 94 L 876 110 L 885 88 L 865 72 L 892 72 Z"/>
+    
+    <!-- Étoile 7 (côté droit) -->
+    <path d="M 920 150 L 928 175 L 955 175 L 935 193 L 943 218 L 920 200 L 897 218 L 905 193 L 885 175 L 912 175 Z"/>
+  </g>
+  
+  <!-- Accent graphique (flèche courbe) -->
+  <path d="M 80 180 Q 140 120 200 150" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Texte principal - BLANC très clair et épais -->
+  <text x="250" y="170" class="title" font-size="90" font-weight="900" fill="#FFFFFF" stroke="none">
+    Lycée Victor Hugo
+  </text>
+  
+  <!-- Ligne décorative - BLANCHE -->
+  <line x1="250" y1="260" x2="750" y2="260" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Texte secondaire centré - BLANC très clair -->
+  <text x="500" y="310" class="subtitle" font-size="52" font-weight="700" fill="#FFFFFF" text-anchor="middle" stroke="none">
+    Colomiers
+  </text>
+  
+  <!-- Petits accents aux extrémités du trait -->
+  <circle cx="250" cy="260" r="6" fill="#00FF00"/>
+  <circle cx="750" cy="260" r="6" fill="#00FF00"/>
+</svg>

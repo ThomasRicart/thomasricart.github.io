@@ -1,0 +1,24 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; font-weight: bold; font-style: italic; }
+      .subtitle { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 600; letter-spacing: 3px; }
+    </style>
+  </defs>
+  
+
+  <!-- Texte principal -->
+  <text x="250" y="170" class="title" font-size="90" fill="#001A4D">
+    Lycée Victor Hugo
+  </text>
+  
+  <!-- Ligne décorative avec Colomiers centré -->
+  <line x1="250" y1="200" x2="750" y2="200" stroke="#001A4D" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Texte secondaire centré -->
+  <text x="500" y="260" class="subtitle" font-size="48" fill="#001A4D" text-anchor="middle">
+    Colomiers
+  </text>
+  
+
+</svg>

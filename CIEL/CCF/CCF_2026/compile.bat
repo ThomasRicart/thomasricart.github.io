@@ -1,5 +1,5 @@
 @echo off
-set FILENAME=BB_2026_02
+set FILENAME=CCF_CIEL1_2026_v1.3
 
 echo ======================================================
 echo   COMPILATION : PDFLATEX + PYTHONTEX + PDFLATEX
