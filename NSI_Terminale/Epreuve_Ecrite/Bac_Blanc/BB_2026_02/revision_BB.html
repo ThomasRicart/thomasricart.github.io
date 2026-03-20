@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Révision NSI - Terminale</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --bg: #f0f2f5;
+            --card: #ffffff;
+            --code-bg: #272822;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.5;
+            background-color: var(--bg);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; }
+
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        section {
+            background: var(--card);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+        }
+
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; }
+        h3 { color: var(--secondary); margin-top: 1.5rem; }
+
+        .method-box {
+            background: #eef2f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin: 1rem 0;
+        }
+
+        pre {
+            background: var(--code-bg);
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+        }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; }
+
+        @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Mémento NSI - Spécialité</h1>
+        <p>Expertise : Réseaux, SQL, POO et Récursivité</p>
+    </header>
+
+    <section>
+        <h2>1. Adressage IPv4 & Masques</h2>
+        <p>L'adresse IP est composée de 4 octets (32 bits). Le masque sépare la partie <strong>Réseau</strong> de la partie <strong>Hôte</strong>.</p>
+        
+        <div class="method-box">
+            <strong>Calculs fondamentaux :</strong>
+            <ul>
+                <li><strong>Adresse Réseau :</strong> \( IP_{binaire} \text{ AND } Masque_{binaire} \)</li>
+                <li><strong>Adresse de Broadcast :</strong> \( Réseau_{binaire} \text{ OR } (\text{NOT } Masque_{binaire}) \)</li>
+                <li><strong>Nombre d'adresses disponibles :</strong> \( 2^{(32 - n)} - 2 \) (on exclut le réseau et le broadcast).</li>
+                <li><strong>Coût d'une liaison OSPF :</strong> \( \text{Coût} = \frac{10^8}{\text{débit en bps}} \)</li>
+            </ul>
+        </div>
+
+        <div class="grid">
+            <div>
+                <h3>Exemple : 172.16.150.40 / 22</h3>
+                <ul>
+                    <li>Le masque /22 est : <code>255.255.252.0</code></li>
+                    <li>En binaire : <code>11111111.11111111.11111100.00000000</code></li>
+                    <li>Le changement se fait sur le 3ème octet.</li>
+                </ul>
+            </div>
+            <div>
+                <table>
+                    <tr><th>Paramètre</th><th>Valeur</th></tr>
+                    <tr><td>IP</td><td>172.16.150.40</td></tr>
+                    <tr><td>Réseau</td><td>172.16.148.0</td></tr>
+                    <tr><td>Broadcast</td><td>172.16.151.255</td></tr>
+                    <tr><td>Nb Hôtes</td><td>\( 2^{10} - 2 = 1022 \)</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. Bases de Données (SQL)</h2>
+        <p>Modèle : <code>Utilisateurs(<u>id_user</u>, nom, ville)</code> et <code>Commandes(<u>id_cmd</u>, #id_user, produit, prix)</code>.</p>
+        
+        <h3>Extraction avec Jointure (SELECT / WHERE / JOIN)</h3>
+        <p><em>Objectif : Lister les produits achetés par les utilisateurs habitant à 'Lyon'.</em></p>
+        <pre>
+SELECT Utilisateurs.nom, Commandes.produit
+FROM Utilisateurs
+JOIN Commandes ON Utilisateurs.id_user = Commandes.id_user
+WHERE Utilisateurs.ville = 'Lyon';</pre>
+
+        <h3>Mise à jour (UPDATE)</h3>
+        <p><em>Objectif : Appliquer une remise de 10% sur tous les produits dépassant 100€.</em></p>
+        <pre>
+UPDATE Commandes
+SET prix = prix * 0.9
+WHERE prix > 100;</pre>
+    </section>
+
+    <section>
+        <h2>3. Programmation Orientée Objet (POO)</h2>
+        <p>Une <strong>Classe</strong> est un moule, un <strong>Objet</strong> est une instance de ce moule.</p>
+        <pre>
+class Robot:
+    def __init__(self, nom, batterie=100):
+        self.nom = nom          # Attribut
+        self.batterie = batterie # Attribut
+
+    def saluer(self):           # Méthode
+        if self.batterie > 0:
+            print(f"Bonjour, je suis {self.nom} !")
+            self.batterie -= 1
+        else:
+            print("Batterie vide...")
+
+# Utilisation
+r2d2 = Robot("R2-D2")
+r2d2.saluer()
+print(r2d2.batterie) # Affiche 99</pre>
+    </section>
+
+    <section>
+        <h2>4. Récursivité</h2>
+        <p>Algorithme qui résout un problème en invoquant une version plus simple du même problème.</p>
+        <pre>
+def factorielle(n):
+    # 1. CAS DE BASE (Arrêt)
+    if n == 0:
+        return 1
+    # 2. APPEL RÉCURSIF (Hérédité)
+    else:
+        return n * factorielle(n - 1)</pre>
+        <div class="method-box">
+            <strong>Trace d'exécution pour factorielle(3) :</strong><br>
+            - <code>factorielle(3)</code> appelle <code>3 * factorielle(2)</code><br>
+            - <code>factorielle(2)</code> appelle <code>2 * factorielle(1)</code><br>
+            - <code>factorielle(1)</code> appelle <code>1 * factorielle(0)</code><br>
+            - <code>factorielle(0)</code> renvoie <code>1</code> (Base)<br>
+            - Remontée : 1 * 1 = 1 → 2 * 1 = 2 → 3 * 2 = <b>6</b>.
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
