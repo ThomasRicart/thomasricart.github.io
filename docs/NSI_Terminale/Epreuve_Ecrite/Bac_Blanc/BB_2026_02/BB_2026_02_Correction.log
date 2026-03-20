@@ -1,0 +1,2146 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.5)  20 MAR 2026 17:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\def\visibleornot{visible} \input{BB_2026_02.tex}
+(BB_2026_02.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count284
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2111.
+\U@D=\dimen149
+\l@unhyphenated=\language79
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count285
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4206.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/fr\babel
+-french.tex)
+Package babel Info: Importing font and identification data for french
+(babel)             from babel-fr.ini. Reported on input line 4330.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french.l
+df
+Language: french 2025-08-15 v4.0e French support from the babel system
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/babel-french\french3.
+ldf
+Language: french 2025-08-15 v3.7e French support from the babel system
+\FB@stdchar=\count286
+Package babel Info: Making : an active character on input line 273.
+Package babel Info: Making ; an active character on input line 274.
+Package babel Info: Making ! an active character on input line 275.
+Package babel Info: Making ? an active character on input line 276.
+\FBguill@level=\count287
+\FBold@everypar=\toks19
+\FB@Mht=\dimen150
+\mc@charclass=\count288
+\mc@charfam=\count289
+\mc@charslot=\count290
+\std@mcc=\count291
+\dec@mcc=\count292
+\FB@pardim=\dimen151
+\listindentFB=\dimen152
+\descindentFB=\dimen153
+\labelindentFB=\dimen154
+\labelwidthFB=\dimen155
+\leftmarginFB=\dimen156
+\parindentFFN=\dimen157
+\FBfnindent=\dimen158
+)))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty)
+(../../../../../preambule/page_layout.sty
+Package: ../../../../../preambule/page_layout 
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count294
+\Gm@cntv=\count295
+\c@Gm@tempcnt=\count296
+\Gm@bindingoffset=\dimen159
+\Gm@wd@mp=\dimen160
+\Gm@odd@mp=\dimen161
+\Gm@even@mp=\dimen162
+\Gm@layoutwidth=\dimen163
+\Gm@layoutheight=\dimen164
+\Gm@layouthoffset=\dimen165
+\Gm@layoutvoffset=\dimen166
+\Gm@dimlist=\toks21
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip51
+\f@nch@offset@elh=\skip52
+\f@nch@offset@erh=\skip53
+\f@nch@offset@olh=\skip54
+\f@nch@offset@orh=\skip55
+\f@nch@offset@elf=\skip56
+\f@nch@offset@erf=\skip57
+\f@nch@offset@olf=\skip58
+\f@nch@offset@orf=\skip59
+\f@nch@height=\skip60
+\f@nch@footalignment=\skip61
+\f@nch@widthL=\skip62
+\f@nch@widthC=\skip63
+\f@nch@widthR=\skip64
+\@temptokenb=\toks22
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
+\UL@box=\box53
+\UL@hyphenbox=\box54
+\UL@skip=\skip65
+\UL@hook=\toks23
+\UL@height=\dimen167
+\UL@pe=\count297
+\UL@pixel=\dimen168
+\ULC@box=\box55
+Package: ulem 2019/11/18
+\ULdepth=\dimen169
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box56
+\beforetitleunit=\skip66
+\aftertitleunit=\skip67
+\ttl@plus=\dimen170
+\ttl@minus=\dimen171
+\ttl@toksa=\toks24
+\titlewidth=\dimen172
+\titlewidthlast=\dimen173
+\titlewidthfirst=\dimen174
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen175
+\captionmargin=\dimen176
+\caption@leftmargin=\dimen177
+\caption@rightmargin=\dimen178
+\caption@width=\dimen179
+\caption@indent=\dimen180
+\caption@parindent=\dimen181
+\caption@hangindent=\dimen182
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count298
+\c@continuedfloat=\count299
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count300
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count301
+) (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
+ty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks25
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip68
+\enit@outerparindent=\dimen183
+\enit@toks=\toks26
+\enit@inbox=\box57
+\enit@count@id=\count302
+\enitdp@description=\count303
+)) (../../../../../preambule/config_info.sty
+Package: ../../../../../preambule/config_info 
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\ProfLycee.sty
+Package: ProfLycee 2026/02/15 4.00d Aide pour l'utilisation de LaTeX en lycee
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count304
+\calc@Bcount=\count305
+\calc@Adimen=\dimen184
+\calc@Bdimen=\dimen185
+\calc@Askip=\skip69
+\calc@Bskip=\skip70
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count306
+\calc@Cskip=\skip71
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip72
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks27
+\ex@=\dimen186
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen187
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count307
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count308
+\leftroot@=\count309
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count310
+\DOTSCASE@=\count311
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box58
+\strutbox@=\box59
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen188
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count312
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count313
+\dotsspace@=\muskip17
+\c@parentequation=\count314
+\dspbrk@lvl=\count315
+\tag@help=\toks28
+\row@=\count316
+\column@=\count317
+\maxfields@=\count318
+\andhelp@=\toks29
+\eqnshift@=\dimen189
+\alignsep@=\dimen190
+\tagshift@=\dimen191
+\tagwidth@=\dimen192
+\totwidth@=\dimen193
+\lineht@=\dimen194
+\@envbody=\toks30
+\multlinegap=\skip73
+\multlinetaggap=\skip74
+\mathdisplay@stack=\toks31
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+\g_MT_multlinerow_int=\count319
+\l_MT_multwidth_dim=\dimen195
+\origjot=\skip75
+\l_MT_shortvdotswithinadjustabove_dim=\dimen196
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen197
+\l_MT_above_intertext_sep=\dimen198
+\l_MT_below_intertext_sep=\dimen199
+\l_MT_above_shortintertext_sep=\dimen256
+\l_MT_below_shortintertext_sep=\dimen257
+\xmathstrut@box=\box60
+\xmathstrut@dim=\dimen258
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks32
+\pgfutil@tempdima=\dimen259
+\pgfutil@tempdimb=\dimen260
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box61
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen261
+\Gin@req@width=\dimen262
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks35
+))
+\pgf@x=\dimen263
+\pgf@y=\dimen264
+\pgf@xa=\dimen265
+\pgf@ya=\dimen266
+\pgf@xb=\dimen267
+\pgf@yb=\dimen268
+\pgf@xc=\dimen269
+\pgf@yc=\dimen270
+\pgf@xd=\dimen271
+\pgf@yd=\dimen272
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count320
+\c@pgf@countb=\count321
+\c@pgf@countc=\count322
+\c@pgf@countd=\count323
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+\pgf@sys@id@count=\count324
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count325
+\pgfsyssoftpath@bigbuffer@items=\count326
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen273
+\pgfmath@count=\count327
+\pgfmath@box=\box62
+\pgfmath@toks=\toks39
+\pgfmath@stack@operand=\toks40
+\pgfmath@stack@operation=\toks41
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count328
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen274
+\pgf@picmaxx=\dimen275
+\pgf@picminy=\dimen276
+\pgf@picmaxy=\dimen277
+\pgf@pathminx=\dimen278
+\pgf@pathmaxx=\dimen279
+\pgf@pathminy=\dimen280
+\pgf@pathmaxy=\dimen281
+\pgf@xx=\dimen282
+\pgf@xy=\dimen283
+\pgf@yx=\dimen284
+\pgf@yy=\dimen285
+\pgf@zx=\dimen286
+\pgf@zy=\dimen287
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen288
+\pgf@path@lasty=\dimen289
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen290
+\pgf@shorten@start@additional=\dimen291
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box63
+\pgf@hbox=\box64
+\pgf@layerbox@main=\box65
+\pgf@picture@serial@count=\count329
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen292
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen293
+\pgf@pt@y=\dimen294
+\pgf@pt@temp=\dimen295
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen296
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen297
+\pgf@sys@shading@range@num=\count330
+\pgf@shadingcount=\count331
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box66
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box67
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen298
+\pgf@nodesepend=\dimen299
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen300
+\pgffor@skip=\dimen301
+\pgffor@stack=\toks42
+\pgffor@toks=\toks43
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count332
+\pgfplotmarksize=\dimen302
+)
+\tikz@lastx=\dimen303
+\tikz@lasty=\dimen304
+\tikz@lastxsaved=\dimen305
+\tikz@lastysaved=\dimen306
+\tikz@lastmovetox=\dimen307
+\tikz@lastmovetoy=\dimen308
+\tikzleveldistance=\dimen309
+\tikzsiblingdistance=\dimen310
+\tikz@figbox=\box68
+\tikz@figbox@bg=\box69
+\tikz@tempbox=\box70
+\tikz@tempbox@bg=\box71
+\tikztreelevel=\count333
+\tikznumberofchildren=\count334
+\tikznumberofcurrentchild=\count335
+\tikz@fig@count=\count336
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count337
+\pgfmatrixcurrentcolumn=\count338
+\pgf@matrix@numberofcolumns=\count339
+)
+\tikz@expandcount=\count340
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+decorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen311
+\pgfdecoratedremainingdistance=\dimen312
+\pgfdecoratedinputsegmentcompleteddistance=\dimen313
+\pgfdecoratedinputsegmentremainingdistance=\dimen314
+\pgf@decorate@distancetomove=\dimen315
+\pgf@decorate@repeatstate=\count341
+\pgfdecorationsegmentamplitude=\dimen316
+\pgfdecorationsegmentlength=\dimen317
+)
+\tikz@lib@dec@box=\box72
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.markings.code.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.markings.code.tex))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\arrowsize=\dimen318
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen319
+\pgfarrowlength=\dimen320
+\pgfarrowwidth=\dimen321
+\pgfarrowlinewidth=\dimen322
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
+ions\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybabel.code.tex
+File: tikzlibrarybabel.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tkz-tab\tkz-tab.sty
+Package: tkz-tab 2020/04/29 v2.12c variations (ctan version)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks44
+\XKV@tempa@toks=\toks45
+)
+\XKV@depth=\count342
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+\tkz@XF=\dimen323
+\tkz@YF=\dimen324
+\c@tkz@cnt@line=\count343
+\c@tkz@cnt@lg=\count344
+\c@tkz@cnt@cl=\count345
+\c@tkz@cnt@pred=\count346
+\c@tkz@cnt@temp=\count347
+\c@tkz@cnt@arrow=\count348
+\c@tkz@cnt@zone=\count349
+\c@tkz@cnt@lgnext=\count350
+\c@tkz@cnt@clnext=\count351
+\c@tkz@cnt@pair=\count352
+\c@tkz@cnt@impair=\count353
+\c@tkz@cnt@aw=\count354
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\xs_counta=\count355
+\xs_countb=\count356
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintexpr.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintfrac.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xint.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintcore.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintkernel.sty
+Package: xintkernel 2025/09/06 v1.4o Paraphernalia for the xint packages (JFB)
+\xint_c_x^v=\count357
+\xint_c_x^viii=\count358
+\xint_c_x^ix=\count359
+\xint_c_x^viii_mone=\count360
+\xint_c_nine_x^viii=\count361
+\xint_c_xi_e_viii_mone=\count362
+\xint_c_xii_e_viii=\count363
+\xint_c_ii^xv=\count364
+\xint_c_ii^xvi=\count365
+\xint_c_ii^xxi=\count366
+)
+Package: xintcore 2025/09/06 v1.4o Expandable arithmetic on big integers (JFB)
+)
+Package: xint 2025/09/06 v1.4o Expandable operations on big integers (JFB)
+)
+Package: xintfrac 2025/09/06 v1.4o Expandable operations on fractions (JFB)
+) (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xinttools.sty
+Package: xinttools 2025/09/06 v1.4o Expandable and non-expandable utilities (JF
+B)
+\XINT_toks=\toks46
+) (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintbinhex.sty
+Package: xintbinhex 2025/09/06 v1.4o Expandable radix conversions (2, 8, 10, an
+d 16) (JFB)
+)
+Package: xintexpr 2025/09/06 v1.4o Expandable expression parser (JFB)
+ (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xinttrig.sty
+Package: xinttrig 2025/09/06 v1.4o Trigonometrical functions for xintexpr (JFB)
+
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintlog.sty
+Package: xintlog 2025/09/06 v1.4o Logarithms and exponentials for xintexpr (JFB
+)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/poormanlog\poormanlog.s
+ty
+Package: poormanlog 2022/05/25 v0.07 base 10 log and pow with 9 digits (JFB)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/poormanlog\poormanlog
+.tex))))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/randomlist\randomlist.s
+ty
+Package: randomlist 2017/09/11 v1.3 Package for random list (JCC, CT)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/randomlist\randomlist.t
+ex
+\RL@random=\count367
+\RL@random@a=\count368
+\RL@random@b=\count369
+\@ListOfList=\toks47
+\RL@counti=\count370
+\RL@countii=\count371
+\RL@countiii=\count372
+\RL@hdle=\read4
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/simplekv\simplekv.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/simplekv\simplekv.tex
+)
+Package: simplekv 2025/06/15 v0.32 Simple keyval package (CT)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/listofitems\listofitems
+.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/listofitems\listofite
+ms.tex
+\loi_cnt_foreach_nest=\count373
+\loi_nestcnt=\count374
+)
+Package: listofitems 2024/03/09 v1.65 Grab items in lists using user-specified 
+sep char (CT)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tabularray\tabularray.s
+ty
+Package: tabularray 2025-11-27 v2025C Typeset tabulars and arrays with LaTeX3
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/ninecolors\ninecolors.s
+ty
+Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count375
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+))
+\g__tblr_nohyper_int=\count376
+\l__tblr_a_int=\count377
+\l__tblr_c_int=\count378
+\l__tblr_r_int=\count379
+\l__tblr_d_dim=\dimen325
+\l__tblr_h_dim=\dimen326
+\l__tblr_o_dim=\dimen327
+\l__tblr_p_dim=\dimen328
+\l__tblr_q_dim=\dimen329
+\l__tblr_r_dim=\dimen330
+\l__tblr_s_dim=\dimen331
+\l__tblr_t_dim=\dimen332
+\l__tblr_v_dim=\dimen333
+\l__tblr_w_dim=\dimen334
+\l__tblr_a_box=\box73
+\l__tblr_b_box=\box74
+\l__tblr_c_box=\box75
+\l__tblr_d_box=\box76
+\c@tblrcount=\count380
+\c@rownum=\count381
+\c@colnum=\count382
+\c@rowcount=\count383
+\c@colcount=\count384
+\abovesep=\dimen335
+\belowsep=\dimen336
+\leftsep=\dimen337
+\rightsep=\dimen338
+\gTblrLevelInt=\count385
+\g__tblr_data_row_key_count_int=\count386
+\g__tblr_data_column_key_count_int=\count387
+\g__tblr_data_cell_key_count_int=\count388
+\g__tblr_array_int=\count389
+\l__tblr_key_count_int=\count390
+\l__tblr_key_quotient_int=\count391
+\l__tblr_key_quotient_two_int=\count392
+\l__tblr_key_remainder_int=\count393
+\g__tblr_data_str_value_count_int=\count394
+\lTblrChildTotalInt=\count395
+\lTblrChildHtotalInt=\count396
+\lTblrChildVtotalInt=\count397
+\l__child_diff_h_int=\count398
+\l__child_diff_v_int=\count399
+\l__child_sign_h_int=\count400
+\l__child_sign_v_int=\count401
+\l__child_step_int=\count402
+\lTblrDefaultHruleWidthDim=\dimen339
+\lTblrDefaultVruleWidthDim=\dimen340
+\l__tblr_split_balance_int=\count403
+\l__tblr_strut_dp_dim=\dimen341
+\l__tblr_strut_ht_dim=\dimen342
+\g__tblr_cell_wd_dim=\dimen343
+\g__tblr_cell_ht_dim=\dimen344
+\g__tblr_cell_head_dim=\dimen345
+\g__tblr_cell_foot_dim=\dimen346
+\l__tblr_measured_cell_box=\box77
+\g__tblr_last_box=\box78
+\l__tblr_temp_box=\box79
+\l__tblr_column_target_dim=\dimen347
+\l__tblr_hfuzz_dim=\dimen348
+\l__tblr_caption_box=\box80
+\l__tblr_caption_left_box=\box81
+\lTblrRowHeadInt=\count404
+\lTblrRowFootInt=\count405
+\l__tblr_row_head_box=\box82
+\l__tblr_row_foot_box=\box83
+\l__tblr_row_head_foot_dim=\dimen349
+\lTblrTableWidthDim=\dimen350
+\l__tblr_table_firsthead_box=\box84
+\l__tblr_table_middlehead_box=\box85
+\l__tblr_table_lasthead_box=\box86
+\l__tblr_table_firstfoot_box=\box87
+\l__tblr_table_middlefoot_box=\box88
+\l__tblr_table_lastfoot_box=\box89
+\l__tblr_remain_height_dim=\dimen351
+\l__tblr_next_rows_dim=\dimen352
+\l__tblr_page_overfill_dim=\dimen353
+\l__tblr_long_from_int=\count406
+\l__tblr_long_to_int=\count407
+\l__tblr_curr_i_int=\count408
+\l__tblr_prev_i_int=\count409
+\lTblrTablePageInt=\count410
+\l__tblr_table_head_box=\box90
+\l__tblr_table_foot_box=\box91
+\l__tblr_table_head_foot_dim=\dimen354
+\l__tblr_table_head_body_foot_dim=\dimen355
+\l__tblr_table_box=\box92
+\lTblrRowFirstInt=\count411
+\lTblrRowLastInt=\count412
+\l__tblr_cover_box_a_dim=\dimen356
+\l__tblr_cover_box_b_dim=\dimen357
+\l__tblr_table_hlines_box=\box93
+\l__tblr_hline_box=\box94
+\l__tblr_row_box=\box95
+\l__tblr_col_o_wd_dim=\dimen358
+\l__tblr_col_b_wd_dim=\dimen359
+\l__tblr_hline_leftskip_dim=\dimen360
+\l__tblr_hline_rightskip_dim=\dimen361
+\l__tblr_row_ht_dim=\dimen362
+\l__tblr_row_dp_dim=\dimen363
+\l__tblr_row_abovesep_dim=\dimen364
+\l__tblr_row_belowsep_dim=\dimen365
+\l__tblr_row_vlines_box=\box96
+\l__tblr_vline_box=\box97
+\l__tblr_cell_box=\box98
+\l__tblr_row_upper_dim=\dimen366
+\l__tblr_row_lower_dim=\dimen367
+\l__tblr_row_vpace_dim=\dimen368
+\l__tblr_vline_aboveskip_dim=\dimen369
+\l__tblr_vline_belowskip_dim=\dimen370
+\lTblrCellRowSpanInt=\count413
+\lTblrCellColSpanInt=\count414
+\l__tblr_cell_wd_dim=\dimen371
+\l__tblr_cell_ht_dim=\dimen372
+\lTblrCellAboveBorderWidthDim=\dimen373
+\lTblrCellBelowBorderWidthDim=\dimen374
+\lTblrCellLeftBorderWidthDim=\dimen375
+\lTblrCellRightBorderWidthDim=\dimen376
+\l__tblr_diag_box=\box99
+\l__tblr_cell_inner_wd_dim=\dimen377
+\l__tblr_cell_inner_dp_dim=\dimen378
+\l__tblr_cell_hanchor_dim=\dimen379
+\l__tblr_last_cell_table_ht_dim=\dimen380
+\l__tblr_last_cell_table_dp_dim=\dimen381
+\l__tblr_last_vline_wd_dim=\dimen382
+\l__tblr_tikz_node_box=\box100
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\settobox.sty
+Package: settobox 2016/05/16 v1.5 Assign box dimensions to length registers (HO
+)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/hologo\hologo.sty
+Package: hologo 2025-11-11 v1.16 A logo collection with bookmark support (HO)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count415
+\FV@InFile=\read5
+\FV@TabBox=\box101
+\c@FancyVerbLine=\count416
+\FV@StepNumber=\count417
+\FV@OutFile=\write4
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/units\nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip76
+\L@UnitsRaiseTextstyle=\skip77
+\L@UnitsRaiseScriptstyle=\skip78
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count418
+\l__siunitx_number_exponent_fixed_int=\count419
+\l__siunitx_number_min_decimal_int=\count420
+\l__siunitx_number_min_integer_int=\count421
+\l__siunitx_number_round_precision_int=\count422
+\l__siunitx_number_lower_threshold_int=\count423
+\l__siunitx_number_upper_threshold_int=\count424
+\l__siunitx_number_group_first_int=\count425
+\l__siunitx_number_group_size_int=\count426
+\l__siunitx_number_group_minimum_int=\count427
+\l__siunitx_angle_tmp_dim=\dimen383
+\l__siunitx_angle_marker_box=\box102
+\l__siunitx_angle_unit_box=\box103
+\l__siunitx_compound_count_int=\count428
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_table_tmp_box=\box104
+\l__siunitx_table_tmp_dim=\dimen384
+\l__siunitx_table_column_width_dim=\dimen385
+\l__siunitx_table_integer_box=\box105
+\l__siunitx_table_decimal_box=\box106
+\l__siunitx_table_uncert_box=\box107
+\l__siunitx_table_before_box=\box108
+\l__siunitx_table_after_box=\box109
+\l__siunitx_table_before_dim=\dimen386
+\l__siunitx_table_carry_dim=\dimen387
+\l__siunitx_unit_tmp_int=\count429
+\l__siunitx_unit_position_int=\count430
+\l__siunitx_unit_total_int=\count431
+ (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen388
+\ar@mcellbox=\box110
+\extrarowheight=\dimen389
+\NC@list=\toks48
+\extratabsurround=\skip79
+\backup@length=\skip80
+\ar@cellbox=\box111
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks49
+\verbatim@line=\toks50
+\verbatim@in@stream=\read6
+)
+\tcb@titlebox=\box112
+\tcb@upperbox=\box113
+\tcb@lowerbox=\box114
+\tcb@phantombox=\box115
+\c@tcbbreakpart=\count432
+\c@tcblayer=\count433
+\c@tcolorbox@number=\count434
+\l__tcobox_tmpa_box=\box116
+\l__tcobox_tmpa_dim=\dimen390
+\tcb@temp=\box117
+\tcb@temp=\box118
+\tcb@temp=\box119
+\tcb@temp=\box120
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbbreakable.
+code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pdfcol\pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+)
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box121
+\tcb@totalupperbox=\box122
+\tcb@totallowerbox=\box123
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbfitting.co
+de.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
+\tcbfitdim=\dimen391
+\tcb@lowerfitdim=\dimen392
+\tcb@upperfitdim=\dimen393
+\tcb@cur@hbadness=\count435
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskins.code
+.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill.image
+.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzfill-commo
+n.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzlibraryfil
+l.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box124
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsa
+w.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistings.c
+ode.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count436
+\lst@gtempboxa=\box125
+\lst@token=\toks51
+\lst@length=\count437
+\lst@currlwidth=\dimen394
+\lst@column=\count438
+\lst@pos=\count439
+\lst@lostspace=\dimen395
+\lst@width=\dimen396
+\lst@newlines=\count440
+\lst@lineno=\count441
+\lst@maxwidth=\dimen397
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count442
+\lst@skipnumbers=\count443
+\lst@framebox=\box126
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsco
+re.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbprocessing
+.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
+)
+\c@tcblisting=\count444
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcblistingsut
+f8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.9.0'
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/listingsutf8\listingsut
+f8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+))))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbhooks.code
+.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
+e5.sty
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
+e5-generic-helper.sty
+Package: fontawesome5-generic-helper 2022/05/02 v5.15.4 non-uTeX helper for fon
+tawesome5
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\fontawesom
+e5-mapping.def)))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\ProfLycee-Mac
+ros.sty
+Package: ProfLycee-Macros 2025/12/12 0.1b Internal macros
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-listings.tex
+\PythonCodeXLeft=\skip81
+\PseudoCodeXLeft=\skip82
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-trigo.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-probas.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/commalists-tools\commal
+ists-tools.sty
+Package: commalists-tools 2026/02/20 0.20a Basic operations for numeral comma s
+eparated lists
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-stats.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-arithm.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/modulus\modulus.sty
+Package: modulus 2018/05/07 v1.0 Modulus/modulo operator in plain TeX
+\remainder=\count445
+\intquotient=\count446
+)
+\l_pfl_n_int=\count447
+\l_pfl_factor_int=\count448
+\l_pfl_exp_int=\count449
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintgcd.sty
+Package: xintgcd 2025/09/06 v1.4o Euclide algorithm with xint package (JFB)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+\colspecbinadd=\skip83
+\widestcharwd=\skip84
+\charwd=\skip85
+\heightercharht=\skip86
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks52
+\minrowclearance=\skip87
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/xint\xintcfrac.sty
+Package: xintcfrac 2025/09/06 v1.4o Expandable continued fractions with xint pa
+ckage (JFB)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-graphiques.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-analyse.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-aleatoire.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-suites.tex
+\CompteurSeuil=\count450
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-complexes.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-geom.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/nicematrix\nicematrix.s
+ty
+Package: nicematrix 2026/02/01 v7.6 Enhanced arrays with the help of PGF/TikZ
+\l__nicematrix_tmpc_dim=\dimen398
+\l__nicematrix_tmpd_dim=\dimen399
+\l__nicematrix_tmpc_int=\count451
+\g__nicematrix_env_int=\count452
+\l__nicematrix_the_array_box=\box127
+\g__nicematrix_NiceMatrixBlock_int=\count453
+\g__nicematrix_notes_caption_int=\count454
+\l__nicematrix_columns_width_dim=\dimen400
+\l__nicematrix_col_width_dim=\dimen401
+\g__nicematrix_row_total_int=\count455
+\g__nicematrix_col_total_int=\count456
+\g__nicematrix_last_row_node_int=\count457
+\l__nicematrix_key_nb_rows_int=\count458
+\g__nicematrix_blocks_wd_dim=\dimen402
+\g__nicematrix_blocks_ht_dim=\dimen403
+\g__nicematrix_blocks_dp_dim=\dimen404
+\l__nicematrix_width_dim=\dimen405
+\l__nicematrix_tabular_width_dim=\dimen406
+\l__nicematrix_rule_width_dim=\dimen407
+\l__nicematrix_old_iRow_int=\count459
+\l__nicematrix_old_jCol_int=\count460
+\l__nicematrix_X_columns_dim=\dimen408
+\l__nicematrix_brace_shift_dim=\dimen409
+\l__nicematrix_x_initial_dim=\dimen410
+\l__nicematrix_y_initial_dim=\dimen411
+\l__nicematrix_x_final_dim=\dimen412
+\l__nicematrix_y_final_dim=\dimen413
+\g__nicematrix_dp_row_zero_dim=\dimen414
+\g__nicematrix_ht_row_zero_dim=\dimen415
+\g__nicematrix_ht_row_one_dim=\dimen416
+\g__nicematrix_dp_ante_last_row_dim=\dimen417
+\g__nicematrix_ht_last_row_dim=\dimen418
+\g__nicematrix_dp_last_row_dim=\dimen419
+\g__nicematrix_width_last_col_dim=\dimen420
+\g__nicematrix_width_first_col_dim=\dimen421
+\g__nicematrix_ddots_int=\count461
+\g__nicematrix_iddots_int=\count462
+\g__nicematrix_delta_x_one_dim=\dimen422
+\g__nicematrix_delta_y_one_dim=\dimen423
+\g__nicematrix_delta_x_two_dim=\dimen424
+\g__nicematrix_delta_y_two_dim=\dimen425
+\l__nicematrix_row_min_int=\count463
+\l__nicematrix_row_max_int=\count464
+\l__nicematrix_col_min_int=\count465
+\l__nicematrix_col_max_int=\count466
+\l__nicematrix_initial_i_int=\count467
+\l__nicematrix_initial_j_int=\count468
+\l__nicematrix_final_i_int=\count469
+\l__nicematrix_final_j_int=\count470
+\l__nicematrix_start_int=\count471
+\l__nicematrix_end_int=\count472
+\l__nicematrix_local_start_int=\count473
+\l__nicematrix_local_end_int=\count474
+\g__nicematrix_static_num_of_col_int=\count475
+\l__nicematrix_rounded_corners_dim=\dimen426
+\l__nicematrix_tab_rounded_corners_dim=\dimen427
+\l__nicematrix_offset_dim=\dimen428
+\l__nicematrix_line_width_dim=\dimen429
+\g__nicematrix_block_box_int=\count476
+\l__nicematrix_submatrix_extra_height_dim=\dimen430
+\l__nicematrix_submatrix_left_xshift_dim=\dimen431
+\l__nicematrix_submatrix_right_xshift_dim=\dimen432
+\l__nicematrix_first_row_int=\count477
+\l__nicematrix_first_col_int=\count478
+\l__nicematrix_last_row_int=\count479
+\l__nicematrix_last_col_int=\count480
+\c@tabularnote=\count481
+\g__nicematrix_tabularnote_int=\count482
+\c@nicematrix_draft=\count483
+\l__nicematrix_cell_space_top_limit_dim=\dimen433
+\l__nicematrix_cell_space_bottom_limit_dim=\dimen434
+\l__nicematrix_xdots_inter_dim=\dimen435
+\l__nicematrix_xdots_shorten_start_dim=\dimen436
+\l__nicematrix_xdots_shorten_end_dim=\dimen437
+\l__nicematrix_xdots_radius_dim=\dimen438
+\l__nicematrix_left_margin_dim=\dimen439
+\l__nicematrix_right_margin_dim=\dimen440
+\l__nicematrix_extra_left_margin_dim=\dimen441
+\l__nicematrix_extra_right_margin_dim=\dimen442
+\c__nicematrix_max_l_dim=\dimen443
+\l__nicematrix_position_int=\count484
+\l__nicematrix_multiplicity_int=\count485
+\l__nicematrix_brace_yshift_dim=\dimen444
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-recreat.tex
+\c@CFnum=\count486
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarylindenmayersystems.code.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arylindenmayersystems.code.tex
+\pgflsystemstep=\dimen445
+\c@pgf@lsystem@iteration=\count487
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypatterns.meta.code.tex
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+arypatterns.meta.code.tex))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshadings.code.tex
+File: tikzlibraryshadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryshadings.code.tex
+File: pgflibraryshadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/datetime2\datetime2.sty
+Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tracklang\tracklang.sty
+Package: tracklang 2025/03/11 v1.6.6 (NLCT) Track Languages
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/tracklang\tracklang.t
+ex)
+Package tracklang Info: Tracking dialect `french' (language `french') on input 
+line 264.
+Package tracklang Info: Tracking dialect `french' (language `french') on input 
+line 264.
+)
+Package tracklang Info: Tracking dialect `france' (language `french') on input 
+line 217.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/datetime2-french\dateti
+me2-french.ldf
+File: datetime2-french.ldf 2020/09/21 v1.03
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/datetime2-french\dateti
+me2-french-ascii.ldf
+File: datetime2-french-ascii.ldf 2020/09/21 v1.03
+)))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/datetime2\datetime2-cal
+c.sty
+Package: datetime2-calc 2021/03/21 v1.5.7 (NLCT)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfcalend
+ar.sty
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfcale
+ndar.code.tex
+File: pgfcalendar.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfcalendarcurrentjulian=\count488
+\pgf@cal@easter@Y=\count489
+\pgf@cal@easter@G=\count490
+\pgf@cal@easter@C=\count491
+\pgf@cal@easter@X=\count492
+\pgf@cal@easter@Z=\count493
+\pgf@cal@easter@D=\count494
+\pgf@cal@easter@E=\count495
+\pgf@cal@easter@N=\count496
+\pgf@cal@easter@M=\count497
+\pgf@cal@easter@julianday=\count498
+))
+\@dtm@julianday=\count499
+)
+\tmpmyct=\count500
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-competences.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-exams.tex)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-cliparts.tex
+\tmpcharacterheightinline=\skip88
+\tmpcharacterdepthinline=\skip89
+\tmptotalheightcurrenttxt=\skip90
+\tmptotaldepthcurrenttxt=\skip91
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\ProfLycee-Pic
+tosbac.sty
+Package: ProfLycee-Pictosbac 2025/08/04 0.1b Pictogrammes Zone Examen
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pythontex\pythontex.sty
+Package: pythontex 2026/02/15 v0.19 execute and typeset Python code and other l
+anguages
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+Package: fvextra 2025/05/29 v1.13.2 fvextra - extensions and patches for fancyv
+rb
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+Package: lineno 2026/02/16 line numbers on paragraphs v5.7
+\linenopenalty=\count501
+\output=\toks53
+\linenoprevgraf=\count502
+\linenumbersep=\dimen446
+\linenumberwidth=\dimen447
+\c@linenumber=\count503
+\c@pagewiselinenumber=\count504
+\c@LN@truepage=\count505
+\c@internallinenumber=\count506
+\c@internallinenumbers=\count507
+\quotelinenumbersep=\dimen448
+\bframerule=\dimen449
+\bframesep=\dimen450
+\bframebox=\box128
+\@LN@amsmath@ams@eqpen=\count508
+)
+\c@FancyVerbWriteLine=\count509
+\c@FancyVerbBufferLine=\count510
+\c@FV@TrueTabGroupLevel=\count511
+\c@FV@TrueTabCounter=\count512
+\FV@TabBox@Group=\box129
+\FV@bgcolorstructbox=\box130
+\FV@TmpLength=\skip92
+\c@FV@HighlightLinesStart=\count513
+\c@FV@HighlightLinesStop=\count514
+\FV@LoopCount=\count515
+\FV@NCharsBox=\box131
+\FV@BreakIndent=\dimen451
+\FV@BreakIndentNChars=\count516
+\FV@BreakSymbolSepLeft=\dimen452
+\FV@BreakSymbolSepLeftNChars=\count517
+\FV@BreakSymbolSepRight=\dimen453
+\FV@BreakSymbolSepRightNChars=\count518
+\FV@BreakSymbolIndentLeft=\dimen454
+\FV@BreakSymbolIndentLeftNChars=\count519
+\FV@BreakSymbolIndentRight=\dimen455
+\FV@BreakSymbolIndentRightNChars=\count520
+\c@FancyVerbLineBreakLast=\count521
+\FV@LineBox=\box132
+\FV@LineIndentBox=\box133
+\c@FV@BreakBufferDepth=\count522
+\FV@LineWidth=\dimen456
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks54
+\pgfopts@list@add@b@toks=\toks55
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/newfloat\newfloat.sty
+Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
+Package newfloat Info: Document class `report' detected (original).
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/currfile\currfile.sty
+Package: currfile 2024/03/14 v1.0 Provides the file path elements of the curren
+t input file
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/filehook\filehook.sty
+Package: filehook 2022/10/25 v0.8b Hooks for input files
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/filehook\filehook-2020.
+sty
+Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
+))
+\c@currfiledepth=\count523
+)
+\pytx@codefile=\write5
+\openout5 = `BB_2026_02_Correction.pytxcode'.
+
+\c@pytx@FancyVerbLineTemp=\count524
+\c@pytx@py@default@default=\count525
+\c@pytx@pycon@default@default=\count526
+\c@pytx@sympy@default@default=\count527
+\c@pytx@sympycon@default@default=\count528
+\c@pytx@pylab@default@default=\count529
+\c@pytx@pylabcon@default@default=\count530
+)
+Package newfloat Info: New float `pythont' with options `fileext=lopytx,listnam
+e={List of Listings},name=Listing' on input line 5.
+\c@pythont=\count531
+\newfloat@ftype=\count532
+Package newfloat Info: float type `pythont'=8 on input line 5.
+Package caption Info: New subtype `subpythont' on input line 5.
+\c@subpythont=\count533
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/proflycee\proflycee-too
+ls-pythontex.tex
+\PythontexCodeXLeft=\skip93
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)) (../../../../../preambule/cadres_cours.sty
+Package: ../../../../../preambule/cadres_cours 
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count534
+\mult@box=\box134
+\multicol@leftmargin=\dimen457
+\c@unbalance=\count535
+\c@collectmore=\count536
+\doublecol@number=\count537
+\multicoltolerance=\count538
+\multicolpretolerance=\count539
+\full@width=\dimen458
+\page@free=\dimen459
+\premulticols=\dimen460
+\postmulticols=\dimen461
+\multicolsep=\skip94
+\multicolbaselineskip=\skip95
+\partial@page=\box135
+\last@line=\box136
+\mc@boxedresult=\box137
+\maxbalancingoverflow=\dimen462
+\mult@rightbox=\box138
+\mult@grightbox=\box139
+\mult@firstbox=\box140
+\mult@gfirstbox=\box141
+\@tempa=\box142
+\@tempa=\box143
+\@tempa=\box144
+\@tempa=\box145
+\@tempa=\box146
+\@tempa=\box147
+\@tempa=\box148
+\@tempa=\box149
+\@tempa=\box150
+\@tempa=\box151
+\@tempa=\box152
+\@tempa=\box153
+\@tempa=\box154
+\@tempa=\box155
+\@tempa=\box156
+\@tempa=\box157
+\@tempa=\box158
+\@tempa=\box159
+\@tempa=\box160
+\@tempa=\box161
+\@tempa=\box162
+\@tempa=\box163
+\@tempa=\box164
+\@tempa=\box165
+\@tempa=\box166
+\@tempa=\box167
+\@tempa=\box168
+\@tempa=\box169
+\@tempa=\box170
+\@tempa=\box171
+\@tempa=\box172
+\@tempa=\box173
+\@tempa=\box174
+\@tempa=\box175
+\@tempa=\box176
+\@tempa=\box177
+\c@minrows=\count540
+\c@columnbadness=\count541
+\c@finalcolumnbadness=\count542
+\last@try=\dimen463
+\multicolovershoot=\dimen464
+\multicolundershoot=\dimen465
+\mult@nat@firstbox=\box178
+\colbreak@box=\box179
+\mc@col@check@num=\count543
+\g__mc_curr_col_int=\count544
+)
+\c@tcb@cnt@definition=\count545
+\c@tcb@cnt@propriete=\count546
+\c@tcb@cnt@methode=\count547
+\c@tcb@cnt@exemple=\count548
+\c@tcb@cnt@exercice_cours=\count549
+)
+(../../../../../preambule/zones_reponse.sty
+Package: ../../../../../preambule/zones_reponse 
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/alterqcm\alterqcm.sty
+Package: alterqcm 2021/05/17 v4.42c
+\aqlocall@ng=\count550
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip96
+\multirow@cntb=\count551
+\multirow@dima=\skip97
+\bigstrutjot=\dimen466
+)
+\aq@randomi=\count552
+\c@aq@identRow=\count553
+\c@aq@identCol=\count554
+\aq@tmp=\count555
+\aq@ranval=\count556
+\aq@tdml@a=\toks56
+\aq@tdml@b=\toks57
+\aq@alea=\count557
+\aq@n@arg=\count558
+\aq@tempbox=\box180
+\aq@hauteurquest=\dimen467
+\aq@hauteurprop=\dimen468
+\aq@wdquest=\dimen469
+\aq@wdprop=\dimen470
+\aq@dimtmpa=\dimen471
+\aq@dimtmpb=\dimen472
+\aq@dimtmp=\dimen473
+\c@AQ@numquestion=\count559
+\c@aq@numb=\count560
+\c@AQ@numprop=\count561
+\c@alea@numfirst=\count562
+\c@alea@numlast=\count563
+) (../../../../../preambule/config_ds.sty
+\c@nexods=\count564
+)
+(../../../../../preambule/config_maths.sty
+Package: ../../../../../preambule/config_maths 
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks58
+\thm@bodyfont=\toks59
+\thm@headfont=\toks60
+\thm@notefont=\toks61
+\thm@headpunct=\toks62
+\thm@preskip=\skip98
+\thm@postskip=\skip99
+\thm@headsep=\skip100
+\dth@everypar=\toks63
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/numprint\numprint.sty
+Package: numprint 2012/08/20 v1.39 Print numbers (HH)
+\c@nprt@mantissa@digitsbefore=\count565
+\c@nprt@mantissa@digitsafter=\count566
+\c@nprt@exponent@digitsbefore=\count567
+\c@nprt@exponent@digitsafter=\count568
+\nprt@digitwidth=\skip101
+\nprt@sepwidth=\skip102
+\nprt@decimalwidth=\skip103
+\nprt@blockwidth=\skip104
+\nprt@digittoks=\toks64
+\nprt@pretoks=\toks65
+\nprt@posttoks=\toks66
+\nprt@thisdigit=\count569
+\nprt@curpos=\count570
+\nprt@rndpos=\count571
+\c@nprt@digitsfirstblock=\count572
+\c@nprt@blockcnt=\count573
+\c@nprt@cntprint=\count574
+
+No configuration file `numprint.cfg' found.)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/was\icomma.sty
+Package: icomma 2002/03/10 v2.0 (WaS)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/mleftright\mleftright
+.sty
+Package: mleftright 2019/12/03 v1.2 Math left/right delim. as open/close (HO)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fourier.sty
+Package: fourier 2024/09/08 2.4 fourier-GUTenberg package
+Now handling font encoding FML ...
+... no UTF-8 mapping file for font encoding FML
+Now handling font encoding FMS ...
+... no UTF-8 mapping file for font encoding FMS
+Now handling font encoding FMX ...
+... no UTF-8 mapping file for font encoding FMX
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+futs on input line 1
+16.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fourier\t1futs.fd
+File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fourier-orns.st
+y
+Package: fourier-orns 2024/09/08 2.4 fourier-ornaments package
+)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 64.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 64.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> T1/futs/m/n on input line 64.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 64.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/m/n on input line 64.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  T1/futs/m/n --> T1/futs/b/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 73.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `normal' on input line 73.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> FML/futmi/m/it on input line 73.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `bold' on input line 73.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> FML/futmi/m/it on input line 73.
+\symotherletters=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  FML/futmi/m/it --> FML/futmi/b/it on input line 75.
+LaTeX Font Info:    Overwriting symbol font `otherletters' in version `bold'
+(Font)                  FML/futm/m/it --> FML/futm/b/it on input line 76.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 77.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 81.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 87.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 127.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 127.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> FMS/futm/m/n on input line 127.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 127.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> FMS/futm/m/n on input line 127.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 128.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 128.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 128
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 128.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 129.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 130.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 131.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> T1/futs/m/it on input line 131.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> T1/futs/m/it on input line 131.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 132.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \leqslant on input line 139.
+LaTeX Font Info:    Redeclaring math symbol \geqslant on input line 140.
+LaTeX Font Info:    Redeclaring math symbol \vDash on input line 143.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 14
+4.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 1
+45.
+LaTeX Font Info:    Redeclaring math symbol \nleqslant on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \ngeqslant on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \nparallel on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 151.
+LaTeX Font Info:    Redeclaring math symbol \intercal on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \hslash on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \nexists on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \complement on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \smallsetminus on input line 163.
+LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 165
+.
+LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 166.
+LaTeX Font Info:    Redeclaring math symbol \square on input line 167.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 168.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 169.
+
+LaTeX Font Info:    Redeclaring math symbol \blacksquare on input line 170.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 200.
+LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 201.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 224.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 229.
+LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 231.
+LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 233.
+LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 235.
+LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 237.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 239.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 241.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 243.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 245.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 247.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 249.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 251.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 253.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 255.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 257.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 261.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 262.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 263.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 264.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 265.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 266.
+LaTeX Font Info:    Redeclaring math accent \check on input line 267.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 268.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 269.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 270.
+\symUfutm=\mathgroup8
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\
+pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodepartlowerbox=\box181
+\pgfnodeparttwobox=\box182
+\pgfnodepartthreebox=\box183
+\pgfnodepartfourbox=\box184
+\pgfnodeparttwentybox=\box185
+\pgfnodepartnineteenbox=\box186
+\pgfnodeparteighteenbox=\box187
+\pgfnodepartseventeenbox=\box188
+\pgfnodepartsixteenbox=\box189
+\pgfnodepartfifteenbox=\box190
+\pgfnodepartfourteenbox=\box191
+\pgfnodepartthirteenbox=\box192
+\pgfnodeparttwelvebox=\box193
+\pgfnodepartelevenbox=\box194
+\pgfnodeparttenbox=\box195
+\pgfnodepartninebox=\box196
+\pgfnodeparteightbox=\box197
+\pgfnodepartsevenbox=\box198
+\pgfnodepartsixbox=\box199
+\pgfnodepartfivebox=\box256
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/draftwatermark\draftwat
+ermark.sty
+Package: draftwatermark 2024/03/04 3.3 Put a gray textual watermark on document
+ pages
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (H
+MM)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern
+.sty
+Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count575
+) 
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
+Package: xfp 2025-10-09 L3 Floating point unit
+) (C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+Package: minted 2025/05/14 v3.7.0 Yet another Pygments shim for LaTeX
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.s
+ty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/latex2pydata\latex2pyda
+ta.sty
+Package: latex2pydata 2025/03/26 v0.6.0 latex2pydata - write data to file in Py
+thon literal format
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count576
+\float@exts=\toks67
+\float@box=\box257
+\@float@everytoks=\toks68
+\@floatcapt=\box258
+)
+\c@minted@FancyVerbLineTemp=\count577
+\@float@every@listing=\toks69
+\c@listing=\count578
+)
+Package french3.ldf Info: Setting StandardItemizeEnv=true for
+(french3.ldf)             compatibility with enumitem package,
+(french3.ldf)             reported on input line 68.
+Package french3.ldf Info: Setting StandardEnumerateEnv=true for
+(french3.ldf)             compatibility with enumitem package,
+(french3.ldf)             reported on input line 68.
+
+(BB_2026_02_Correction.aux (Sources_Latex/page_de_garde.aux))
+\openout1 = `BB_2026_02_Correction.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 68.
+LaTeX Font Info:    Trying to load font information for FML+futm on input line 
+68.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmlfutm.fd
+File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
+)
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 68.
+LaTeX Font Info:    Trying to load font information for FMS+futm on input line 
+68.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmsfutm.fd
+File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
+)
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 68.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
+68.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmxfutm.fd
+File: fmxfutm.fd futm-extension
+)
+LaTeX Font Info:    ... okay on input line 68.
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 68.
+LaTeX Info: Redefining \degres on input line 68.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-58.59087pt
+* \headheight=19.0pt
+* \headsep=10.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count579
+\scratchdimen=\dimen474
+\scratchbox=\box259
+\nofMPsegments=\count580
+\nofMParguments=\count581
+\everyMPshowfont=\toks70
+\MPscratchCnt=\count582
+\MPscratchDim=\dimen475
+\MPnumerator=\count583
+\makeMPintoPDFobject=\count584
+\everyMPtoPDFconversion=\toks71
+)
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+(C:\Users\thoma\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-french.trsl
+File: translations-basic-dictionary-french.trsl (french translation file `trans
+lations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `french'. on input line 68.
+\c@lstlisting=\count585
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen476
+\c__nicematrix_innersep_middle_dim=\dimen477
+\c@tabularnotesi=\count586
+\enitdp@tabularnotes=\count587
+\c@tabularnotes*i=\count588
+\enitdp@tabularnotes*=\count589
+Package newfloat Info: `float' package detected.
+
+(pythontex-files-

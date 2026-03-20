@@ -65,10 +65,12 @@ Initialement, toutes les cases sont vides.
 \begin{enumerate}[resume=monDS]
 \item On considère un baguenaudier à $4$ cases sur lequel les trois dernières cases sont remplies. Désigner les cases que l'on peut jouer et dessiner l'état du baguenaudier à la suite de chacun des coups possibles. (/\getpts{Q28})
 
-    \begin{blocvisible}[height=2]
+    \begin{blocvisible}[height=3]
 
-        \begin{minipage}{0.46\linewidth}
+        \begin{minipage}{0.23\linewidth}
             Case 1:
+                \end{minipage}\hfill{}
+\begin{minipage}{0.23\linewidth}
 
 \begin{tikzpicture}
 \newcommand{\Rvide}[2]{\draw(#1,#2) -- ++ (0.75,0) -- ++(0,0.75) -- ++(-0.75,0) -- cycle; \draw({#1+0.375},{#2+0.375}) circle(0.15);}
@@ -82,10 +84,11 @@ Initialement, toutes les cases sont vides.
 {\draw (\x,0) node[below=0.1cm]{$\val$};}
 \end{tikzpicture}
         \end{minipage}\hfill{}
-        \begin{minipage}{0.46\linewidth}
+        \begin{minipage}{0.23\linewidth}
             Case 3:
+                  \end{minipage}\hfill{}
+\begin{minipage}{0.23\linewidth}
 
-     
 \begin{tikzpicture}
 \newcommand{\Rvide}[2]{\draw(#1,#2) -- ++ (0.75,0) -- ++(0,0.75) -- ++(-0.75,0) -- cycle; \draw({#1+0.375},{#2+0.375}) circle(0.15);}
 \newcommand{\Rplein}[2]{\draw(#1,#2) -- ++ (0.75,0) -- ++(0,0.75) -- ++(-0.75,0) -- cycle; \draw[fill=black] ({#1+0.375},{#2+0.375}) circle(0.15);}
@@ -127,7 +130,7 @@ Initialement, toutes les cases sont vides.
 \item Ecrire le code de la fonction \texttt{initialiser(n)} (/\getpts{Q29})
 \end{enumerate}
 
-\begin{blocvisible}[height=3]
+\begin{blocvisible}[height=3.5]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
     def initialiser(n):
         return [False] * n
@@ -199,17 +202,22 @@ None
 \item Ecrire le code de la fonction \verb|coup_valide(tab, case)|  (/\getpts{Q32})
 \end{enumerate}
 
-\begin{blocvisible}[height=6]
+\begin{blocvisible}[height=8]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
     def coup_valide(tab, case):
-        if case < 0 or case >= len(tab):
-            return False
-        if case == 0:
-            return True
-        i_premiere_case_occupee = indice_premiere_case_occupee(tab)
-        if i_premiere_case_occupee is None:
-            return True
-        return case == i_premiere_case_occupee + 1
+    if case < 0 or case >= len(tab):     # Vérification que l'indice est valide
+        return False
+    if case == 0:                        # La case 0 est toujours jouable
+        return True
+    # Pour toute autre case, le baguenaudier doit être ni vide ni rempli,
+    # et la case doit suivre immédiatement la première case remplie
+    i = indice_premiere_case_occupee(tab)
+    if i is None:        # Baguenaudier vide : seule la case 0 est autorisée
+        return False
+    if victoire(tab):    # Baguenaudier rempli : seule la case 0 est autorisée
+        return False
+    
+    return case == i + 1
     \end{CodePythontexAlt}
 \end{blocvisible}
 
@@ -219,12 +227,12 @@ La fonction \verb|changer_case(tab, case)| prend en paramètres un tableau \text
 Exemples:
 
 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
->>> changer_case([False, False, False], 0)
+>>> changer_case([False, False, False], 1)  # coup non valide
+[False, False, False]
+>>> changer_case([False, False, False], 0)  # coup valide
 [True, False, False]
->>> changer_case([False, False, False], 1)
-[False, True, False]
->>> changer_case([False, False, False], 2)
-[False, False, True]
+>>> changer_case([False, True, False], 2)   # coup valide
+[False, True, True]
     
 \end{CodePythontexAlt}
 \begin{enumerate}[resume=monDS]
@@ -233,7 +241,7 @@ Exemples:
 
 \begin{blocvisible}[height=6]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-    def changer_case(tab, case):
+def changer_case(tab, case):
     if coup_valide(tab, case):
         tab[case] = not(tab[case])
     return tab

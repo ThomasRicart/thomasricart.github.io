@@ -19,7 +19,7 @@ graphe_droidevant = {
 
 # Question 19
 def vol_direct(graphe, ville1, ville2):
-    return ville2 in graphe[ville1]
+    return ville2 in graphe[ville1].keys()
 assert vol_direct(graphe_airinfo, 'T', 'B') == True
 assert vol_direct(graphe_airinfo, 'W', 'B') == False
 
@@ -37,7 +37,7 @@ def parcours(graphe, visitees, ville):
     """Parcours d'un graphe à partir d'une ville non visitée,
     en ayant déjà visité un certain nombre de villes."""
     visitees.append(ville)              # Marque la ville comme visitée
-    for voisine in graphe[ville]:       # Parcourt les voisines de la ville
+    for voisine in graphe[ville].keys():       # Parcourt les voisines de la ville
         if voisine not in visitees:
             # Explore depuis les voisines non visitées
             parcours(graphe, visitees, voisine)
