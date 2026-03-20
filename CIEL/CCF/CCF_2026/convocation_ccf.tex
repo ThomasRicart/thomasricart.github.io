@@ -1,0 +1,80 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[top=1.5cm, bottom=1.cm, left=1.5cm, right=1.5cm]{geometry}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{datatool}
+\usepackage{ifthen}
+
+\pagestyle{empty}
+
+% --- SOLUTION ALTERNATIVE POUR LE SÉPARATEUR ---
+% On définit le séparateur directement dans la commande de chargement
+\DTLloaddb[noheader=false, separator=;]{eleves}{g1.csv}
+
+\def\mycourse{CIEL 1}
+\def\mydate{04 mai 2026}
+\def\mytime{14H00}
+\def\mygroup{1}
+\def\myroom{29}
+\def\myprof{RICART THOMAS}
+
+\begin{document}
+
+\begin{center}
+    {\large \textbf{Contrôle en Cours de Formation -- Situation en Centre de Formation}}\\[0.4cm]
+    {\LARGE \textbf{CONVOCATION}}
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent
+\textbf{Matière :} MATHÉMATIQUES \hfill \textbf{Épreuve :} CCF situation 1 
+
+\vspace{0.3cm}
+\noindent
+\textbf{Classe :} BTS \mycourse -- GROUPE \mygroup 
+
+\vspace{0.5cm}
+\noindent
+\textbf{Nom du professeur faisant passer l'épreuve :} \myprof 
+
+\vspace{0.2cm}
+\noindent
+\textbf{Lieu de l'épreuve :} SALLE \myroom 
+
+\vspace{0.6cm}
+
+\renewcommand{\arraystretch}{1.8}
+\begin{tabularx}{\textwidth}{|c|X|c|c|p{3.5cm}|p{3.5cm}|}
+\hline
+\rowcolor{gray!25}
+\textbf{N°} & \textbf{Nom Prénom ÉTUDIANT} & \textbf{DATE} & \textbf{Horaires} & \textbf{Pris connaissance le} & \textbf{Émargement ÉLÈVE} \\
+\hline
+% Boucle ultra-propre : on n'affiche la ligne QUE si \nom n'est pas vide
+\DTLforeach{eleves}{\nom=Eleve}{%
+    \ifthenelse{\equal{\nom}{}}{}{%
+        \DTLcurrentindex & \nom & \mydate & \mytime & & \tabularnewline\hline
+    }%
+}%
+\end{tabularx}
+
+\vspace{1cm}
+\noindent
+\textbf{Document transmis le} \underline{\hspace{4cm}} 
+
+\vspace{1.5cm}
+\noindent
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{Le Professeur,}\\[2.5cm] 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+    \textbf{Le DDF,}\\[2.5cm] 
+\end{minipage}
+
+\end{document}

@@ -20,12 +20,12 @@ La compagnie aérienne AirInfo souhaite utiliser un système de gestion de bases
 
 Elle crée donc la base de données \texttt{compagnie\_aerienne}, constituée de quatre relations. Le schéma relationnel de cette base de données est le suivant:
 
-\begin{verbatim}
-    aeroport(id_aeroport : TEXT, ville : TEXT, pays : TEXT)
-    vol(id_vol : TEXT, aeroport_dep : TEXT, aeroport_arr : TEXT, distance : INT)
-    passager(id_passager : INT, nom : TEXT, prenom : TEXT, ville : TEXT, d_totale : INT)
-    reservation(id_vol : TEXT, id_passager : INT)
-\end{verbatim}
+\begin{lstlisting}[language=SQL, numbers=none]
+aeroport(id_aeroport : TEXT, ville : TEXT, pays : TEXT)
+vol(id_vol : TEXT, aeroport_dep : TEXT, aeroport_arr : TEXT, dist : INT)
+passager(id_passager : INT, nom : TEXT, ville : TEXT, d_totale : INT)
+reservation(id_vol : TEXT, id_passager : INT)
+\end{lstlisting}
 
 Une clé primaire de la relation vol est l'attribut \texttt{id\_vol}. Les autres clés primaires et étrangères ne sont pas précisées.
 
@@ -66,7 +66,7 @@ WHERE aeroport_arr = 'CDG'
 \end{lstlisting}
 
 \begin{blocvisible}[height=3]
-        Le résultat renvoyé par la requête SQL serait une liste des \texttt{id\_vol} des vols dont l'aéroport d'arrivée est \verb|'CDG'|. En se basant sur la table \texttt{vol}, les vols correspondants seraient AI0015, AI01258, AI0292.
+        Le résultat renvoyé par la requête SQL serait une liste des \texttt{id\_vol} des vols dont l'aéroport d'arrivée est \verb|'CDG'|. En se basant sur la table \texttt{vol}, les vols correspondants seraient AI0015, AI0258, AI0292.
 \end{blocvisible}
 
 \medskip
@@ -75,7 +75,7 @@ WHERE aeroport_arr = 'CDG'
 
 \item Écrire une requête SQL qui donne les noms des villes qui sont destination d'un vol au départ de l'aéroport CDG\@. (/\getpts{Q15})
 \begin{blocvisible}[height=2.5]
-\begin{lstlisting}[language=SQL]
+\begin{lstlisting}[language=SQL,frame=none, numbers=none]
 SELECT aeroport.ville 
 FROM aeroport 
 JOIN vol ON aeroport.id_aeroport = vol.aeroport_arr
@@ -102,7 +102,7 @@ Ainsi, à chaque nouvelle réservation, la table passager doit être mise à jou
 Écrire la requête permettant de mettre à jour la table passager. (/\getpts{Q16})
 
 \begin{blocvisible}[height=2.5]
-\begin{lstlisting}[language=SQL]
+\begin{lstlisting}[language=SQL,frame=none, numbers=none]
 UPDATE passager
 SET d_totale = d_totale + 6
 WHERE id_passager = 5;
@@ -122,7 +122,7 @@ INSERT INTO vol VALUES ('AI0256', 'CDG', 'YUL', 6);
     \item Proposer, en justifiant, une correction relative à l'erreur commise. (/\getpts{Q17})
 \begin{blocvisible}[height=3.5]
     La requête d'insertion proposée est incorrecte car elle utilise une valeur d'identifiant de vol ('AI0256') qui existe déjà dans la table \texttt{vol}. En effet, l'identifiant 'AI0256' est déjà utilisé pour le vol de CDG à SYD. Pour corriger cette erreur, il faut choisir un nouvel identifiant de vol qui n'existe pas encore dans la table, par exemple 'AI0257'. La requête corrigée serait donc:
-\begin{lstlisting}[language=SQL]    
+\begin{lstlisting}[language=SQL,frame=none, numbers=none]    
 INSERT INTO vol VALUES ('AI0257', 'CDG', 'YUL', 6);
 \end{lstlisting}
 \end{blocvisible}
@@ -219,7 +219,7 @@ False
 \begin{blocvisible}[height=3.5]
 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 def vol_direct(graphe, ville1, ville2):
-    return ville2 in graphe[ville1]
+    return ville2 in graphe[ville1].keys()
 \end{CodePythontexAlt}
 \end{blocvisible}
 
@@ -232,7 +232,7 @@ Afin de limiter leurs empreintes carbone, les voyageurs demandent fréquemment a
     \item Écrire le code d'une fonction Python \texttt{liste\_villes\_proches} qui permet de répondre à la demande des voyageurs. Cette fonction prend en paramètres un dictionnaire \texttt{graphe} représentant le graphe, une clé du dictionnaire \texttt{ville} et un entier \texttt{d\_max} représentant une distance et renvoie la liste des villes reliées à \texttt{ville} par une arête dans \texttt{graphe} dont le poids est au plus égal à \texttt{d\_max}. Exemples: (/\getpts{Q20})
         \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 >>> liste_villes_proches(graphe_airinfo, 'T', 7) 
-[] 
+[ ] 
 >>> liste_villes_proches(graphe_airinfo, 'T', 9) 
 ['B', 'S']
 
@@ -240,7 +240,7 @@ Afin de limiter leurs empreintes carbone, les voyageurs demandent fréquemment a
 \begin{blocvisible}[height=4.5]
 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 def liste_villes_proches(graphe, ville, d_max):
-    liste = []
+    liste = [ ]
     for ville_voisine, distance in graphe[ville].items():
         if distance <= d_max:
             liste.append(ville_voisine)
@@ -310,7 +310,7 @@ def parcours(graphe, visitees, ville):
     """Parcours d'un graphe à partir d'une ville non visitée, 
     en ayant déjà visité un certain nombre de villes."""
     visitees.append(ville)              # Marque la ville comme visitée
-    for voisine in graphe[ville]:       # Parcourt les voisines de la ville
+    for voisine in graphe[ville].keys():       # Parcourt les voisines de la ville
         if voisine not in visitees:
             # Explore depuis les voisines non visitées
             parcours(graphe, visitees, voisine)  
@@ -329,9 +329,9 @@ def parcours(graphe, visitees, ville):
 \item Déterminer le contenu des variables \texttt{visitees1} et \texttt{visitees2} après l'exécution des lignes de code données ci-après. (/\getpts{Q23})
 
 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-visitees1 = []
+visitees1 = [ ]
 parcours(graphe_airinfo, visitees1, 'W')
-visitees2 = []
+visitees2 = [ ]
 parcours(graphe_droidevant, visitees2, 'W')
 \end{CodePythontexAlt}
 
@@ -388,7 +388,7 @@ def est_connexe(graphe):
 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 def est_connexe(graphe):
     depart = ville_arbitraire(graphe)
-    visitees = []
+    visitees = [ ]
     parcours(graphe, visitees, depart)
     return len(visitees) == len(graphe)
 \end{CodePythontexAlt}
@@ -425,7 +425,7 @@ def mystere(graphe, ville, chemin, cout, arrivee):
 \begin{enumerate}[resume=monDS]
     \item Déterminer les affichages produits lors de l'exécution de l'appel suivant: (/\getpts{Q26})
 \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-mystere(graphe_airinfo, 'W', [], 0, 'B')
+mystere(graphe_airinfo, 'W', [ ], 0, 'B')
 \end{CodePythontexAlt}
 \begin{blocvisible}[height=3]
     Les affichages produits lors de l'exécution de l'appel suivant:
@@ -437,9 +437,9 @@ mystere(graphe_airinfo, 'W', [], 0, 'B')
 
 \medskip
 
-\item Expliquer, de manière générale, ce que réalise l'appel \texttt{mystere(graphe, ville, [], 0, arrivee)} pour un graphe \texttt{graphe} et deux villes \texttt{ville} et \texttt{arrivee}. (/\getpts{Q27})
+\item Expliquer, de manière générale, ce que réalise l'appel \texttt{mystere(graphe, ville, [ ], 0, arrivee)} pour un graphe \texttt{graphe} et deux villes \texttt{ville} et \texttt{arrivee}. (/\getpts{Q27})
 \begin{blocvisible}[height=5]
-    L'appel \texttt{mystere(graphe, ville, [], 0, arrivee)} réalise une recherche de tous les chemins possibles entre la ville de départ (\texttt{ville}) et la ville d'arrivée (\texttt{arrivee}) dans le graphe \texttt{graphe}. 
+    L'appel \texttt{mystere(graphe, ville, [ ], 0, arrivee)} réalise une recherche de tous les chemins possibles entre la ville de départ (\texttt{ville}) et la ville d'arrivée (\texttt{arrivee}) dans le graphe \texttt{graphe}. 
 
     La fonction utilise une approche récursive pour explorer les différentes routes possibles. À chaque étape, elle ajoute la ville actuelle au chemin parcouru et met à jour le coût total en ajoutant le poids de l'arête correspondante. 
 

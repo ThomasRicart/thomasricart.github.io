@@ -155,7 +155,7 @@ Un utilisateur du réseau local $LAN_1$ interroge, via son navigateur web, un se
     {}
     $R_1 \rightarrow R_2 \rightarrow R_3 \rightarrow R_4 \rightarrow R_5 \rightarrow R_6 \rightarrow INTERNET$.
     \end{blocvisiblex}
-\end{minipage}
+\end{minipage}\hfill{}
 \begin{minipage}[h]{0.45\linewidth}
     \begin{blocvisiblex}[height=5]
 {    \centering
@@ -402,7 +402,7 @@ class IPv4(object):
         >>> ip01 = IPv4('192.168.1.100')
         >>> ip01.masquer('255.192.0.0')
         '192.128.0.0'        """
-        tmp = []
+        tmp = [ ]
         ip = self.octets()
         crible = IPv4(masque).octets()
         for i in range(4):
@@ -410,8 +410,8 @@ class IPv4(object):
         return ".".join(.........)
    \end{CodePythontexAlt}
 
-   \begin{blocvisible}[height=1.5]
-        \begin{lstlisting}
+   \begin{blocvisible}[height=3]
+        \begin{lstlisting}[frame=none, numbers=none]
     Ligne 11: tmp.append(ip[i] & crible[i])
     Ligne 12: ".".join([str(k) for k in tmp])        
     \end{lstlisting}
@@ -445,8 +445,8 @@ class IPv4(object):
 
 \item Compléter les lignes 16 et 17 du code de la méthode \verb|adresse_suivante| de la classe \verb|IPv4|, donné ci-dessous. La méthode doit correspondre au docstring. (/\getpts{Q10})
 
-  \begin{blocvisible}[height=1.5]
-        \begin{lstlisting}
+  \begin{blocvisible}[height=3]
+        \begin{lstlisting}[frame=none, numbers=none]
     Ligne 16: valeur, retenue = somme%256, somme//256
     Ligne 17: liste_suivante = [str(valeur)] + liste_suivante     
     \end{lstlisting}
