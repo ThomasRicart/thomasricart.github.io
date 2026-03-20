@@ -24,6 +24,12 @@
 %\def\visibleornot{invisible} 
 \ifdefined\visibleornot\else\def\visibleornot{visible}\fi
 
+\ifdefstring{\visibleornot}{visible}{
+    % Si c'est "visible", on charge le filigrane
+    \usepackage[firstpageonly, color={[gray]{0.5}}, text=CORRECTION, scale=0.7]{draftwatermark}
+}{
+    % Sinon, on ne fait rien (ou on peut ajouter autre chose ici)
+}
 \usepackage{lastpage}
 \usepackage{tabularx}
 \usepackage{bm}
