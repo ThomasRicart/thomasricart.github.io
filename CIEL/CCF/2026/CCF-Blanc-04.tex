@@ -1,0 +1,58 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usetikzlibrary{shapes.symbols, positioning}
+\usetikzlibrary{shapes.multipart, arrows.meta, positioning, calc}
+
+% Ton toggle : 'visible' pour le prof, 'invisible' pour l'élève
+\def\visibleornot{invisible} 
+\ifdefined\visibleornot\else\def\visibleornot{visible}\fi
+
+\ifdefstring{\visibleornot}{visible}{
+    % Si c'est "visible", on charge le filigrane
+    \usepackage[firstpageonly, color={[gray]{0.5}}, text=CORRECTION, scale=0.7]{draftwatermark}
+}{
+    % Sinon, on ne fait rien (ou on peut ajouter autre chose ici)
+}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{bm}
+\tcbuselibrary{listings}
+
+
+
+
+
+
+\begin{document}
+
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 1}
+\def\chaptername{30 mars 2026} % Titre au centre
+\def\docname{CCF BLANC 01}        % Identifiant à gauche
+
+
+
+
+    \include{./Sources_Latex/CCF_blanc_04_page_garde}
+   \include{./Sources_Latex/CCF_blanc_04_sujet}
+
+
+   \end{document}
+
