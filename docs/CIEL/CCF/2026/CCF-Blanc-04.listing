@@ -1,0 +1,6 @@
+n <- 0
+v <- 100
+tant que (*\trou{v >= 10}*):
+        v <- (*\trou{0,85 * v}*)
+        n <- (*\trou{n + 1}*)
+print(n)
