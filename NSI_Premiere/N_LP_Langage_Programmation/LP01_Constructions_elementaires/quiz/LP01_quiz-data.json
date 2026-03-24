@@ -3,60 +3,60 @@
     "question": "Quelle est la règle correcte pour nommer une variable en Python ?",
     "options": ["Commencer par un chiffre", "Utiliser des espaces", "Commencer par une lettre ou _", "Utiliser le symbole @"],
     "answer": 2,
-    "feedback": "D'après ton cours, une variable doit commencer par une lettre ou un underscore[cite: 53]."
+    "feedback": "D'après ton cours, une variable doit commencer par une lettre ou un underscore."
   },
   {
     "question": "Quel est le type de <code>x = 5.0</code> ?",
     "options": ["int", "str", "float", "bool"],
     "answer": 2,
-    "feedback": "La présence d'un point décimal en fait un <code>float</code>[cite: 70, 79]."
+    "feedback": "La présence d'un point décimal en fait un <code>float</code>."
   },
   {
     "question": "Quel est le résultat de <code>7 // 3</code> ?",
     "options": ["2.33", "2", "1", "2.0"],
     "answer": 1,
-    "feedback": "L'opérateur <code>//</code> donne le quotient de la division entière[cite: 93]."
+    "feedback": "L'opérateur <code>//</code> donne le quotient de la division entière."
   },
   {
-    "question": "Que renvoie <code>'on' in 'Bonjour'</code> ?",
-    "options": ["True", "False", "Error", "None"],
+    "question": "Que renvoie <code>'o' in 'Bonjour'</code> ?",
+    "options": ["True", "False", 2, "None"],
     "answer": 0,
-    "feedback": "L'opérateur <code>in</code> teste l'appartenance d'une sous-chaîne[cite: 161]."
+    "feedback": "L'opérateur <code>in</code> teste l'appartenance d'une sous-chaîne."
   },
   {
     "question": "Si <code>mot = 'Numerique'</code>, que vaut <code>mot[1:5]</code> ?",
     "options": ["'Nume'", "'umer'", "'umeri'", "'umér'"],
     "answer": 1,
-    "feedback": "Le slicing [1:5] prend les caractères des indices 1 à 4[cite: 183]."
+    "feedback": "Le slicing [1:5] prend les caractères des indices 1 à 4."
   },
   {
     "question": "Quelle commande permet d'inverser une chaîne ?",
     "options": ["reverse()", "[-1]", "[::-1]", "[1:-1]"],
     "answer": 2,
-    "feedback": "La syntaxe <code>[::-1]</code> inverse l'ordre des caractères[cite: 182, 183]."
+    "feedback": "La syntaxe <code>[::-1]</code> inverse l'ordre des caractères."
   },
   {
     "question": "Comment transformer <code>a = '5'</code> en entier ?",
     "options": ["str(a)", "int(a)", "float(a)", "type(a)"],
     "answer": 1,
-    "feedback": "On utilise <code>int()</code> pour le transtypage vers un entier[cite: 209]."
+    "feedback": "On utilise <code>int()</code> pour le transtypage vers un entier."
   },
   {
-    "question": "Valeur de <code>c</code> : <code>a=True; b=False; c=a and b</code> ?",
+    "question": "Valeur de <code>c</code> : <code>a = True; b = False; c = a and b</code> ?",
     "options": ["True", "False", "None", "Error"],
     "answer": 1,
-    "feedback": "D'après la table de vérité, <code>True and False</code> vaut <code>False</code>[cite: 247, 248]."
+    "feedback": "D'après la table de vérité, <code>True and False</code> vaut <code>False</code>."
   },
   {
     "question": "Quel opérateur teste si deux valeurs sont différentes ?",
     "options": ["=", "==", "!=", "<>"],
     "answer": 2,
-    "feedback": "L'opérateur de différence est <code>!=</code>[cite: 264, 280]."
+    "feedback": "L'opérateur de différence est <code>!=</code>."
   },
   {
     "question": "Que renvoie <code>len('NSI')</code> ?",
     "options": ["2", "3", "4", "0"],
     "answer": 1,
-    "feedback": "La fonction <code>len()</code> renvoie le nombre de caractères[cite: 163]."
+    "feedback": "La fonction <code>len()</code> renvoie le nombre de caractères."
   }
 ]
