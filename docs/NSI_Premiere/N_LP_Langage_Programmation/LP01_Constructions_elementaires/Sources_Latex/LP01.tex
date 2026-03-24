@@ -1,0 +1,540 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Constructions élémentaires} % Titre au centre
+\def\docname{LP01}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+
+\section{L'environnement de travail}
+
+Nous avons à notre disposition plusieurs outils pour écrire du code Python.
+
+\subsection*{Edupython}
+
+\begin{center}
+	\includegraphics[width = 0.5\linewidth]{LP01-02.png}
+\end{center}
+
+\texttt{Edupython} étant installé localement, il se peut que des obglets soient déjà ouverts. Fermez tous les onglets ouverts et ouvrez un nouvel onglet pour commencer à travailler.
+
+\subsection*{Notebook Capytale}
+
+\begin{minipage}{0.48\linewidth}
+	Vous accédez à \texttt{Capytale -- Notebook} depuis votre ENT en cliquant sur \verb|Pédagogie/Capytale|. Le professeur vous donnera un code à entrer dans la zone \verb|Accéder à une activité|.
+
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
+\begin{center}
+	\includegraphics[width = 0.7\linewidth]{LP01-03.png}
+\end{center}
+\end{minipage}
+
+
+
+Vous pourrez également y accéder directement via un lien que vous donnera votre enseignant.
+
+\subsection*{Console Capytale}
+
+\begin{minipage}{0.48\linewidth}
+Vous accédez à \texttt{Capytale -- Console} depuis votre ENT de la même manière que pour les Notebook.
+
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
+\begin{center}
+	\includegraphics[width = 0.9\linewidth]{LP01-04.png}
+\end{center}
+\end{minipage}
+
+\medskip
+
+\begin{center}
+\fbox{Quelque soit la façon dont vous tapez du code, n'oubliez pas de sauvegarder TRES régulièrement.}
+\end{center}
+
+
+\pagebreak
+
+\section{Les variables en Python}
+
+\begin{easybox}{Déclarer une variable en Python}
+
+	Pour déclarer une variable en Python, il suffit de lui donner un nom et de lui affecter une valeur à l'aide du symbole $=$. Par exemple, pour déclarer une variable \texttt{x} qui contient la valeur 10, on écrit:
+
+\begin{minipage}{0.48\linewidth}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+    a = 10
+    \end{CodePythontexAlt}
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
+\begin{scratch}
+\blocklook{Affecter à \selectmenu{x} la valeur \ovalnum{10}}\end{scratch}
+\end{minipage}
+\end{easybox}
+
+
+\begin{easybox}{Le nom des variables en Python}
+	\begin{itemize}
+		\item Elles doivent commencer par une lettre ou un underscore (\texttt{\_}).
+		\item Elles peuvent contenir des lettres, des chiffres et des underscores.
+		\item Elles ne peuvent pas être des mots réservés du langage Python (comme \texttt{if}, \texttt{for}, \texttt{while}, etc.).
+		\item \texttt{Variable} et \texttt{variable} sont considérées comme deux variables différentes.
+	\end{itemize}
+\end{easybox}
+
+\begin{exemple}[Noms de variables valides et invalides]{}
+
+	  \renewcommand{\arraystretch}{1.}
+    \begin{tabular}{|l|p{12cm}|}
+    \hline
+    Bonne variable & \verb+ma_variable+ \\ \hline
+    Mauvaise variable & \verb+Ma_variable+,  \verb+ma variable+, \verb+1_variable+, \verb+ variable@+ \\ \hline
+    A éviter    & \verb+Variable non explicites+ \\ \hline
+    \end{tabular}
+\end{exemple}
+
+\begin{easybox}{Afficher une variable en Python}
+
+	Pour afficher la valeur d'une variable en Python, on utilise la fonction \texttt{print()}. Par exemple, pour afficher la valeur de la variable \texttt{x}, on écrit:
+
+\begin{minipage}{0.48\linewidth}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+    print(x)
+    \end{CodePythontexAlt}
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
+\begin{scratch}
+\blocklook{Afficher la valeur de \selectmenu{x}}\end{scratch}
+\end{minipage}
+\end{easybox}
+
+\begin{easybox}{Les types de variables en Python}
+	\begin{itemize}
+		\item \textbf{int}: pour les nombres entiers (ex: 1, 42, -5)
+		\item \textbf{float}: pour les nombres à virgule flottante (ex: 3.14, -0.001)
+		\item \textbf{str}: pour les chaînes de caractères (ex: "Bonjour", 'Python')
+		\item \textbf{bool}: pour les valeurs booléennes (ex: True, False)
+	\end{itemize}
+\end{easybox}
+
+\begin{minipage}{0.19\linewidth}
+\begin{lstlisting}[numbers=none]
+# type (int)
+a = 5
+b = 6
+\end{lstlisting}
+    \end{minipage}\hfill
+    \begin{minipage}{0.19\linewidth}    
+\begin{lstlisting}[numbers=none]   
+# type (str)
+a = 'Bonjour'
+b = '6'   
+\end{lstlisting}    
+    \end{minipage}\hfill
+    \begin{minipage}{0.19\linewidth}    
+\begin{lstlisting}[numbers=none] 
+# type (float)
+a = 5.0 
+b = 6.8
+\end{lstlisting}    
+    \end{minipage}\hfill{}
+\begin{minipage}{0.19\linewidth}    
+\begin{lstlisting}[numbers=none]  
+# type (bool)
+a = True
+b = False
+\end{lstlisting}    
+    \end{minipage}
+
+\begin{easybox}{Opérations mathématiques de base en Python}{}
+	\begin{minipage}{0.43\linewidth}
+		\begin{itemize}[]
+        \item[] \texttt{+} \quad  addition:  \verb~5 + 3~ donne 8
+        \item[] \texttt{-} \quad  soustraction \verb~5 - 3~ donne 2
+        \item[] \texttt{*} \quad  multiplication \verb~5 * 3~ donne 15
+        \item[] \texttt{/} \quad  division \verb~6 / 2~ donne 3.0 (\texttt{float})
+\end{itemize}
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.55\linewidth}
+\begin{itemize}[]
+        \item[] \texttt{**} \quad  puissance \verb~2 ** 3~ donne 8
+        \item[] \texttt{\%} \quad  reste de la division entière \texttt{7 \% 3} donne 1
+        \item[] \texttt{//} \quad  quotient de la division entière \texttt{7 // 3} donne 2
+    \end{itemize}
+	\end{minipage}
+\end{easybox}
+
+\begin{minipage}{0.3\linewidth}
+    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        print(17+2)
+        print(17-2)
+    \end{ConsolePythontex}
+\end{minipage}\hfill
+\begin{minipage}{0.3\linewidth}
+    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+		print(17*2)
+		print(17/2)
+    \end{ConsolePythontex}
+\end{minipage}\hfill
+\begin{minipage}{0.3\linewidth}
+    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        print(17%2)
+        print(17//2)
+    \end{ConsolePythontex}
+\end{minipage}
+
+\begin{exercice_cours}[Repérer les les types de variables et leurs valeurs dans les programmes suivants]
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+		\item \verb~x = 5~
+		\item \verb~y = "Hello"~
+		\item \verb~z = True~
+		\item \verb~a = 3.14~
+	\end{itemize}
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+	\begin{itemize}
+		\item \verb~c = 6/2~
+		\item \verb~d = 6//2~
+		\item \verb~f = '1' + '2'~
+		\item \verb~g = 2**3~
+	\end{itemize}
+\end{minipage}
+	
+\end{exercice_cours}
+
+
+\medskip
+
+\section{Les variables de type chaine de caractère \texttt{str}}
+
+
+\begin{easybox}{Les chaines de caractères}{}
+    \smallskip
+    Les chaines de caractères sont des variables qui contiennent du texte. Elles sont délimitées par des guillemets simples ou doubles.
+
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+            a = 'Bonjour'
+            b = ' a tous'
+            c = a + b
+            print(c)
+        \end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+            a = 'Bonjour'
+            b = ' a tous'
+            c = a * 3
+            print(c)
+        \end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+            a = 'Bonjour'
+            b = ' a tous'
+            c = a[0]
+            print(c)
+        \end{ConsolePythontex}
+    \end{minipage}
+
+    \medskip
+
+    Dans l'exemple ci-dessus, la variable \verb+c+ contient la concaténation de \verb+a+ et \verb+b+ dans le premier cas, la répétition de \verb+a+ trois fois dans le deuxième cas et le premier caractère de \verb+a+ dans le troisième cas.
+\end{easybox}
+
+\begin{easybox}{indexation des chaines de caractères}{}
+    
+    \begin{minipage}{0.5\linewidth}
+ Les chaines de caractères peuvent être vues comme un ensemble de caractères ``collés`` les uns aux autres
+
+    Chaque caractère d'une chaine de caractères est indexé: 
+    il y a un index qui donne sa position dans la chaine       
+    \end{minipage}
+    \begin{minipage}{0.5\linewidth}
+ \begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Indice} & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+        \hline
+        \textbf{Caractère} & B & o & n & j & o & u & r \\
+        \hline
+        \textbf{Indice Négatif} & -7 & -6 & -5 & -4 & -3 & -2 & -1 \\
+        \hline
+        \end{tabular}
+    \end{center}       
+    \end{minipage}
+    
+   
+    
+
+    \begin{minipage}[t]{0.48\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+            mot = 'Bonjour'
+            mot[0]
+            mot[4]
+        \end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+mot = 'Bonjour'
+n = len(mot)
+n
+mot[-1]
+		\end{ConsolePythontex}
+    \end{minipage}
+   
+\end{easybox}
+
+\begin{easybox}{Les opérations sur les chaines de caractères}{}   
+    \smallskip
+    \begin{itemize}
+        \item[] \texttt{+} \quad pour la concaténation:  \verb~'Bonjour' + ' a tous'~ donne \verb~'Bonjour a tous'~
+        \item[] \texttt{*} \quad pour la répétition:  \verb~'Bonjour' * 3~ donne \verb~'BonjourBonjourBonjour'~
+        \item[] \texttt{[]} \quad pour l'indexation:  \verb~'Bonjour'[0]~ donne \verb~'B'~
+        \item[] \texttt{in} \quad pour le test d'appartenance:  \verb~'on' in 'Bonjour'~ donne \verb~True~
+        \item[] \texttt{not in} \quad pour le test d'appartenance:  \verb~'on' not in 'Bonjour'~ donne \verb~False~
+        \item[] \texttt{len()} \quad pour la longueur:  \verb~len('Bonjour')~ donne \verb~7~
+       
+    \end{itemize}
+\end{easybox}
+
+
+\begin{minipage}[t]{0.32\linewidth}
+    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        mot1 = 'Bonjour'
+        mot2 = 'Thomas'
+        mot1 + ' ' + mot2
+    \end{ConsolePythontex}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\linewidth}
+    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        'j' in 'Bonjour'
+        'b' in 'Bonjour'
+    \end{ConsolePythontex}
+\end{minipage}\hfill{}
+\begin{minipage}[t]{0.32\linewidth}
+    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        'abracadabra'[4]
+        len('abracadabra')
+    \end{ConsolePythontex}
+\end{minipage}
+
+\begin{easybox}{Opérations avancées sur les chaines de caractères: le Slicing}{}
+    \hspace{1cm}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{p{2cm}|p{13cm}}
+        \texttt{[a:b]} & conserve les caractères d'indice \texttt{[a:b]}:  \verb~'Bonjour'[1:4]~ donne \verb~'onj'~ \\
+        \texttt{[a:]} & conserve les caractères d'indice \texttt{[a:]}:  \verb~'Bonjour'[3:]~ donne \verb~'jour'~ \\
+        \texttt{[:b]} & conserve les caractères d'indice \texttt{[:b]}:  \verb~'Bonjour'[:3]~ donne \verb~'Bon'~ \\
+        \texttt{[::-1]} & inverse les caractères:  \verb~'Bonjour'[::-1]~ donne \verb~'ruojnoB'~ \\
+        \texttt{[1:-1]} & élimine le premier et dernier caractère:  \verb~'Bonjour'[1:-1]~ donne \verb~'onjou'~ \\
+    \end{tabular}
+\end{easybox}
+
+\begin{exercice_cours}[Prédire ce que vont afficher les codes suivants]{}
+
+    \begin{minipage}[t]{0.32\linewidth}        
+\begin{lstlisting}[numbers=none]
+>>> mot = 'Numerique'
+>>> n = len(mot)
+>>> mot[5]
+>>> mot[n]
+>>> mot[-1]
+>>> mot[8]
+\end{lstlisting}
+    \end{minipage} \hfill
+    \begin{minipage}[t]{0.32\linewidth}        
+\begin{lstlisting}[numbers=none]
+>>> mot = 'Numerique'
+>>> m in mot
+>>> e not in mot
+>>> mot+mot[2]
+>>> mot*2
+>>> 'abc'+mot
+\end{lstlisting}
+    \end{minipage}\hfill
+\begin{minipage}[t]{0.32\linewidth}        
+\begin{lstlisting}[numbers=none] 
+>>> mot = 'Numerique'
+>>> mot[1:5]
+>>> mot[:4]
+>>> mot[3:]
+>>> mot[1:-1]
+\end{lstlisting}
+    \end{minipage}
+\end{exercice_cours}
+
+\begin{easybox}{Principe du transtypage}{}
+    Les types des variables en python sont dynamiques, on peut modifier sa valeur ainsi que son type.
+    
+    \begin{minipage}[t]{0.48\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+            a = '5'     # a est de type str
+            b = int(a)  # b est de type int
+            print(b)
+        \end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+            a = 4       # a est de type int
+            b = str(a)  # b est de type str
+            print(b)
+        \end{ConsolePythontex}
+    \end{minipage}
+    
+    \end{easybox}
+
+    \section{Les variables de type booléen \texttt{bool}}
+
+    
+\begin{easybox}{Les booléens}{}
+    \smallskip
+    Les booléens sont des variables qui ne peuvent prendre que deux valeurs: \verb+True+ (vrai) ou \verb+False+ (faux).
+    
+    \smallskip
+    Les booléens peuvent être utilisés dans des opérations logiques.
+    
+	\medskip
+
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+a = True
+b = False
+c = a and b
+c
+        \end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+a = True
+b = False
+c = a or b
+c
+        \end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+a = True
+c = not a
+c
+        \end{ConsolePythontex}
+    \end{minipage}    
+\end{easybox}
+
+\medskip
+
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+not+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        \texttt{not} True & False\tabularnewline{}
+        \texttt{not} False & True\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+and+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        True \texttt{and} True & True\tabularnewline{}
+        True \texttt{and} False & False\tabularnewline{}
+        False \texttt{and} True & False\tabularnewline{}
+        False \texttt{and} False & False\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+or+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        True \texttt{or} True & True\tabularnewline{}
+        True \texttt{or} False & True\tabularnewline{}
+        False \texttt{or} True & True\tabularnewline{}
+        False \texttt{or} False & False\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+
+\pagebreak
+
+\begin{easybox}{Booléen comme résultat de comparaison}{}
+    Les booléens sont le résultat d'une comparaison. Les opérateurs de comparaison sont:
+    \smallskip
+    \begin{itemize}
+        \begin{minipage}{0.44\linewidth}
+            \item[] \texttt{==} \quad pour le test d'égalité
+            \item[] \texttt{!=} \quad pour le test de différence
+            \item[] \texttt{<} \quad pour le test d'infériorité
+        \end{minipage}
+        \begin{minipage}{0.44\linewidth}
+            \item[] \texttt{>} \quad pour le test de supériorité
+            \item[] \texttt{<=} \quad pour le test d'infériorité ou d'égalité
+            \item[] \texttt{>=} \quad pour le test de supériorité ou d'égalité
+        \end{minipage}
+    \end{itemize}
+
+    \end{easybox}
+
+
+\begin{easybox}{Booléen comme résultat de comparaison}{}  
+    \smallskip
+    \begin{minipage}{0.32\linewidth}    
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+a = 5
+b = 6
+c = (a == b)
+c
+\end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+a = 5
+b = 6
+c = (a != b)
+c
+        \end{ConsolePythontex}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+a = 5
+b = 6
+c = (a < b)
+c
+        \end{ConsolePythontex}
+    \end{minipage}
+    
+\end{easybox}
+
+
+\begin{exercice_cours}{    Quelle est la valeur de la variable \verb+c+ après l'exécution des codes suivants?}{}
+
+
+    \begin{minipage}[t]{0.4\linewidth}
+\begin{lstlisting}[numbers=none]   
+>>> a = 3
+>>> b = 1
+>>> c = a > b
+\end{lstlisting}
+
+\begin{lstlisting}[numbers=none]
+>>> a = True
+>>> b = False
+>>> c = (a or b) and (not a)
+\end{lstlisting}
+
+    \end{minipage} \hfill
+    \begin{minipage}[t]{0.58\linewidth}
+\begin{lstlisting}[numbers=none]
+>>> a, b = True, False
+>>> c = (a and b) or (not a) 
+\end{lstlisting}   
+
+\begin{lstlisting}[numbers=none]
+>>> a = True
+>>> b = False
+>>> x, y = 7, 9
+>>> c = (b or (x == y)) or (a and (x != y))
+\end{lstlisting}  
+    \end{minipage}
+
+\end{exercice_cours}

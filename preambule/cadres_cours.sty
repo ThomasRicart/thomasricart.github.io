@@ -52,6 +52,17 @@
     top=4mm,              % Espace interne pour laisser de la place au titre
 }}
 
+% --- Cadre simple ---
+\newtcolorbox{easybox}[2][]{
+    styleBOX,
+    colframe=monBleu,
+    colback=monBleu!2,
+    coltitle=monBleu,
+    colframe=monBleu,
+    boxed title style={colframe=monBleu, colback=white, boxrule=1pt, sharp corners},
+    title=#1{}{#2}
+}
+
 % --- Cadre DEFINITION ---
 \newtcolorbox[auto counter]{definition}[1][]{
     styleBOX,
@@ -62,6 +73,7 @@
     boxed title style={colframe=monBleu, colback=white, boxrule=1pt, sharp corners},
     title=Définition \thetcbcounter\ifstrempty{#1}{}{ : #1}
 }
+
 
 % --- Cadre PROPRIETE ---
 \newtcolorbox[auto counter]{propriete}[1][]{
