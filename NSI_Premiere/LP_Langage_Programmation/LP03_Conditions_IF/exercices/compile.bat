@@ -1,5 +1,5 @@
 @echo off
-set FILENAME=LP02_EXO1
+set FILENAME=LP03_EXO1
 
 echo ======================================================
 echo   COMPILATION : PDFLATEX + PYTHONTEX + PDFLATEX

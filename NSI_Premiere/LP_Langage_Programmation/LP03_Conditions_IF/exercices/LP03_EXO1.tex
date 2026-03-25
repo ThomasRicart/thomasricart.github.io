@@ -31,14 +31,145 @@
 
 \def\level{Premiere}  % Classe à droite
 \def\course{NSI}
-\def\chaptername{Fonctions} % Titre au centre
-\def\docname{LP02~--~TD 1}        % Identifiant à gauche
+\def\chaptername{Les conditions IF} % Titre au centre
+\def\docname{LP03~--~TD 1}        % Identifiant à gauche
 
 \pagestyle{DS_LP}
 
 \NomPrenom{}
 
+\begin{exercice_cours}[        On considère le code suivant:]
+    
+    \begin{minipage}{0.38\linewidth}
 
+    \begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+        valeur = 15
+        if valeur > 10:
+            valeur = valeur + 5
+        print(valeur)
+    \end{CodePythontexAlt}
+    
+    \end{minipage}\hfill{}
+    \begin{minipage}{0.58\linewidth}
+        \begin{enumerate}
+            \item Que va afficher ce code? \qquad \reponseLigne[1.5cm]{\texttt{20}}
+            \item Que va afficher ce code si on change la première ligne en \verb|valeur = 8|? \qquad \reponseLigne[1.5cm]{\texttt{8}}
+        \end{enumerate}
+    \end{minipage}
+    \end{exercice_cours}
+
+
+    \begin{minipage}{0.48\linewidth}
+        \begin{exercice_cours}[Ecrire un code]
+Ecrire la fonction \verb|signe(a)| qui prend en paramètre un nombre \texttt{a} et qui retourne:
+    \begin{itemize}
+        \item $-1$ si \texttt{a} est négatif
+        \item $1$ si \texttt{a} est positif ou nul
+    \end{itemize}
+    \end{exercice_cours}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{blocvisible}[height=3.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def signe(a):
+    if a < 0:
+        return -1
+    else:
+        return 1
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+    \end{minipage}
+
+
+    \begin{minipage}{0.48\linewidth}
+        \begin{exercice_cours}[Test de mot de passe]
+
+            Ecrire la fonction \verb|pwd(good_pwd, guess)| qui prend en paramètre deux chaînes de caractères: \texttt{good\_pwd} et \texttt{guess} et qui retourne:
+    \begin{itemize}
+        \item \texttt{True} si le mot de passe est correct (par exemple \texttt{"password123"})
+        \item \texttt{False} sinon 
+    \end{itemize}
+    \end{exercice_cours}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{blocvisible}[height=3.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def pwd(good_pwd, guess):
+    if good_pwd == guess:
+        return True
+    else:
+        return False    
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+    \end{minipage}
+
+        
+    \begin{minipage}{0.48\linewidth}
+           \begin{exercice_cours}[Système de notation]
+
+            Ecrire la fonction \verb|notation(note)| qui prend en paramètre une note (un nombre entre 0 et 20) et qui retourne:
+    \begin{itemize}
+        \item "A" si la note est supérieure ou égale à 16
+        \item "B" si la note est supérieure ou égale à 12 et inférieure à 16
+        \item "C" si la note est supérieure ou égale à 8 et inférieure à 12
+        \item "D" si la note est inférieure à 8
+    \end{itemize}
+    \end{exercice_cours}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{blocvisible}[height=5.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def notation(note):
+    if note >= 16:
+        return "A"
+    elif note >= 12:
+        return "B"
+    elif note >= 8:
+        return "C"
+    else:
+        return "D"
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+    \end{minipage}
+        
+
+    \begin{exercice_cours}
+
+        \begin{minipage}{0.48\linewidth}
+                Ecrire la fonction \verb|max3(a, b, c)| qui prend en paramètre trois nombres et qui retourne le plus grand des trois nombres.
+\end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{blocvisible}[height=4.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def max3(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+    \end{minipage}
+    
+
+
+    \end{exercice_cours}
+        
+\end{document}
+
+\end{exercice_cours}
+
+\begin{exercice_cours}[Analyse de flux]
+    
+\end{exercice_cours}
 \begin{exercice_cours}[Prédire ce qui va s'afficher dans la console pour chaque cas]
     
     \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
