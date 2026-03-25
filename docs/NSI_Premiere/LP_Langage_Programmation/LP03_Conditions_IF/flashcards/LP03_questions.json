@@ -1,0 +1,42 @@
+[
+    {
+        "recto": "Quel mot-clé permet de tester une condition en Python ?",
+        "verso": "Le mot-clé <code>if</code>."
+    },
+    {
+        "recto": "Quel symbole est obligatoire à la fin d'une ligne <code>if</code>, <code>else</code> ou <code>elif</code> ?",
+        "verso": "Le symbole <strong>deux-points</strong> (<code>:</code>)."
+    },
+    {
+        "recto": "Comment appelle-t-on l'espace (décalage) au début des lignes dépendant d'un <code>if</code> ?",
+        "verso": "L'<strong>indentation</strong>."
+    },
+    {
+        "recto": "Quel mot-clé correspond au 'SINON' (exécuté si la condition est fausse) ?",
+        "verso": "Le mot-clé <code>else</code>."
+    },
+    {
+        "recto": "Quel mot-clé utilise-t-on pour tester une condition supplémentaire si la première est fausse ?",
+        "verso": "Le mot-clé <code>elif</code> (contraction de <em>else if</em>)."
+    },
+    {
+        "recto": "Quel est le symbole pour tester l'égalité entre deux valeurs ?",
+        "verso": "Le double égal (<code>==</code>). <em>Attention : un seul = sert à l'affectation.</em>"
+    },
+    {
+        "recto": "Quel est le symbole pour tester si deux valeurs sont différentes ?",
+        "verso": "Le symbole <code>!=</code>."
+    },
+    {
+        "recto": "Quels sont les deux résultats possibles (booléens) d'une condition ?",
+        "verso": "<code>True</code> (Vrai) ou <code>False</code> (Faux)."
+    },
+    {
+        "recto": "Peut-on mettre un <code>if</code> à l'intérieur d'un autre <code>if</code> ?",
+        "verso": "<strong>Oui</strong>, on appelle cela des structures <strong>imbriquées</strong>."
+    },
+    {
+        "recto": "Dans une structure <code>if / elif / else</code>, combien de blocs peuvent être exécutés au maximum ?",
+        "verso": "<strong>Un seul</strong> bloc au maximum (le premier dont la condition est vraie)."
+    }
+]

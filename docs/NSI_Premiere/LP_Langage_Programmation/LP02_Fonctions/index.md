@@ -24,17 +24,4 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 
 ### 🧩 Concepts illustrés
 ```python
-# 1. Affectation et calcul
-largeur = 10
-hauteur = 5
-aire = largeur * hauteur  # 50
-
-# 2. Manipulation de texte (Slicing)
-sujet = "Informatique"
-print(sujet[0:4])  # Affiche "Info"
-
-# 3. Logique
-est_majeur = True
-a_permis = False
-peut_conduire = est_majeur and a_permis # False
 ```
