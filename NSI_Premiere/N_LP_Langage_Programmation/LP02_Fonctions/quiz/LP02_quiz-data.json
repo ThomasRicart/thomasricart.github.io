@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Quelle commande permet de récupérer une saisie utilisateur au clavier ?",
+    "options": ["output()", "get()", "input()", "read()"],
+    "answer": 2,
+    "feedback": "La fonction <code>input()</code> interrompt le programme pour attendre une saisie."
+  },
+  {
+    "question": "Quel est le type de retour par défaut de <code>input()</code> ?",
+    "options": ["int", "float", "str", "bool"],
+    "answer": 2,
+    "feedback": "Toute valeur saisie via <code>input()</code> est initialement une chaîne de caractères (str)."
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour définir une fonction en Python ?",
+    "options": ["function", "def", "define", "void"],
+    "answer": 1,
+    "feedback": "On utilise <code>def</code> suivi du nom de la fonction."
+  },
+  {
+    "question": "À quoi sert l'instruction <code>return</code> ?",
+    "options": ["À afficher un texte", "À arrêter l'ordinateur", "À renvoyer une valeur utilisable", "À recommencer la boucle"],
+    "answer": 2,
+    "feedback": "<code>return</code> permet à la fonction de 'donner' un résultat au reste du programme."
+  },
+  {
+    "question": "Quelle est la différence entre <code>print()</code> et <code>return</code> ?",
+    "options": ["Aucune", "print affiche, return renvoie une valeur", "return affiche, print renvoie une valeur", "print est plus rapide"],
+    "answer": 1,
+    "feedback": "<code>print</code> sert à la visualisation humaine, <code>return</code> sert au calcul informatique."
+  },
+  {
+    "question": "Comment appelle-t-on une variable définie à l'intérieur d'une fonction ?",
+    "options": ["Variable globale", "Variable système", "Variable locale", "Variable cachée"],
+    "answer": 2,
+    "feedback": "Une variable créée dans une fonction est locale : elle n'existe pas en dehors."
+  },
+  {
+    "question": "Où sont connues les variables globales ?",
+    "options": ["Uniquement dans les fonctions", "Dans tout le programme", "Uniquement dans la console", "Dans aucun endroit"],
+    "answer": 1,
+    "feedback": "Les variables globales sont déclarées dans le corps principal et sont visibles partout."
+  },
+  {
+    "question": "À quoi sert l'instruction <code>assert</code> ?",
+    "options": ["À effacer la mémoire", "À vérifier si une condition est vraie", "À dessiner des graphiques", "À importer des modules"],
+    "answer": 1,
+    "feedback": "<code>assert</code> déclenche une erreur si l'affirmation qui suit est fausse, ce qui est utile pour les tests."
+  },
+  {
+    "question": "Dans <code>print(\"Résultat\", x)</code>, quel est le rôle de la virgule ?",
+    "options": ["Additionner les valeurs", "Sert de séparateur d'affichage", "Créer une liste", "C'est une erreur de syntaxe"],
+    "answer": 1,
+    "feedback": "La virgule permet d'afficher plusieurs éléments de types différents à la suite."
+  },
+  {
+    "question": "Que se passe-t-il si un <code>assert</code> échoue ?",
+    "options": ["Le programme continue", "Le programme s'arrête avec une erreur", "L'ordinateur redémarre", "La variable est supprimée"],
+    "answer": 1,
+    "feedback": "Un échec d'assertion lève une exception <code>AssertionError</code> et stoppe l'exécution."
+  }
+]

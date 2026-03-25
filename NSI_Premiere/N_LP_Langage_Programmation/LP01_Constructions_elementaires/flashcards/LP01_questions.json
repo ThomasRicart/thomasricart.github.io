@@ -1,82 +1,86 @@
 [
     {
-        "recto": "Quels sont les deux outils locaux cités pour coder en Python ?",
-        "verso": "<strong>Edupython</strong> et <strong>PyScripter</strong>[cite: 309, 310]."
+        "recto": "Comment vérifier simplement si <code>'z'</code> est présent dans une chaîne de caractères <code>mot</code> ?",
+        "verso": "En utilisant l'opérateur <strong>in</strong> (ex: <code>'z' in mot</code>)."
     },
     {
-        "recto": "Quelle plateforme en ligne permet d'accéder à des Notebooks Python via l'ENT ?",
-        "verso": "La plateforme <strong>Capytale</strong>[cite: 329, 333]."
+        "recto": "Que renvoie l'appel de la fonction <code>type()</code> sur une variable ? (exemple type('42'))",
+        "verso": "Le type de la variable. Ici <code>type('42')</code> renvoie <strong><class 'str'></strong>."
+    },
+    {
+        "recto": "Quels sont les types de base en Python?",
+        "verso": "Les types de base en Python sont <strong>int</strong> (entier), <strong>float</strong> (décimal), <strong>str</strong> (chaîne de caractères) et <strong>bool</strong> (booléen)."
     },
     {
         "recto": "Par quoi doit obligatoirement commencer le nom d'une variable ?",
-        "verso": "Par une <strong>lettre</strong> ou un <strong>underscore (_)</strong>[cite: 356]."
+        "verso": "Par une <strong>lettre</strong> ou un <strong>underscore (_)</strong>."
     },
     {
         "recto": "Python est-il sensible à la casse (différence majuscule/minuscule) pour les variables ?",
-        "verso": "<strong>Oui</strong>, 'Variable' et 'variable' sont deux entités différentes[cite: 359]."
+        "verso": "<strong>Oui</strong>, 'Variable' et 'variable' sont deux entités différentes."
     },
     {
         "recto": "Quel est le type de variable pour les nombres entiers (ex: 42) ?",
-        "verso": "Le type <strong>int</strong>[cite: 371]."
+        "verso": "Le type <strong>int</strong>."
     },
     {
         "recto": "Quel est le type de variable pour les nombres à virgule (ex: 3.14) ?",
-        "verso": "Le type <strong>float</strong>[cite: 373]."
+        "verso": "Le type <strong>float</strong>."
     },
     {
         "recto": "Quelle fonction permet d'afficher une valeur dans la console ?",
-        "verso": "La fonction <strong>print()</strong>[cite: 366]."
+        "verso": "La fonction <strong>print()</strong>."
     },
     {
         "recto": "Quel est l'opérateur pour calculer une puissance (ex: 2 au cube) ?",
-        "verso": "L'opérateur <strong>**</strong> (ex: 2 ** 3)[cite: 390]."
+        "verso": "L'opérateur <strong>**</strong> (ex: 2 ** 3)."
     },
     {
         "recto": "Que renvoie l'opérateur <code>//</code> ?",
-        "verso": "Le <strong>quotient</strong> de la division entière (ex: 7 // 3 donne 2)[cite: 396]."
+        "verso": "Le <strong>quotient</strong> de la division entière (ex: 7 // 3 donne 2)."
     },
     {
         "recto": "Que renvoie l'opérateur <code>%</code> (modulo) ?",
-        "verso": "Le <strong>reste</strong> de la division entière (ex: 7 % 3 donne 1)[cite: 392]."
+        "verso": "Le <strong>reste</strong> de la division entière (ex: 7 % 3 donne 1)."
     },
     {
-        "recto": "Comment appelle-t-on l'indice du tout premier caractère d'une chaîne ?",
-        "verso": "C'est l'indice <strong>0</strong>[cite: 452]."
+        "recto": "Quel est l'indice du tout premier caractère d'une chaîne ?",
+        "verso": "C'est l'indice <strong>0</strong>."
     },
     {
         "recto": "Quelle fonction donne la longueur d'une chaîne de caractères ?",
-        "verso": "La fonction <strong>len()</strong>[cite: 466]."
+        "verso": "La fonction <strong>len()</strong>."
     },
     {
         "recto": "Comment accéder au dernier caractère d'une chaîne sans connaître sa longueur ?",
-        "verso": "En utilisant l'indice négatif <strong>-1</strong> (ex: <code>mot[-1]</code>)[cite: 457]."
+        "verso": "En utilisant l'indice négatif <strong>-1</strong> (ex: <code>mot[-1]</code>)."
     },
     {
         "recto": "Que signifie l'opération <code>'a' + 'b'</code> ?",
-        "verso": "Une <strong>concaténation</strong>, qui donne 'ab'[cite: 459, 460]."
+        "verso": "Une <strong>concaténation</strong>, qui donne 'ab'."
     },
     {
         "recto": "En slicing, que fait l'instruction <code>mot[::-1]</code> ?",
-        "verso": "Elle permet d'<strong>inverser</strong> les caractères de la chaîne[cite: 485, 486]."
+        "verso": "Elle permet d'<strong>inverser</strong> les caractères de la chaîne."
     },
     {
         "recto": "Comment transformer la chaîne '5' en nombre entier ?",
-        "verso": "Par <strong>transtypage</strong> avec <code>int('5')</code>[cite: 512]."
+        "verso": "Par <strong>transtypage</strong> avec <code>int('5')</code>."
     },
     {
         "recto": "Quelles sont les deux valeurs possibles d'un booléen ?",
-        "verso": "<strong>True</strong> (vrai) ou <strong>False</strong> (faux)[cite: 520]."
+        "verso": "<strong>True</strong> (vrai) ou <strong>False</strong> (faux)."
     },
     {
         "recto": "Quelle est la valeur de <code>True and False</code> ?",
-        "verso": "<strong>False</strong>[cite: 550, 551]."
+        "verso": "<strong>False</strong>."
     },
     {
         "recto": "Quel opérateur utilise-t-on pour tester l'égalité entre deux variables ?",
-        "verso": "Le double égal <strong>==</strong>[cite: 566]."
+        "verso": "Le double égal <strong>==</strong>."
     },
     {
         "recto": "Quel opérateur utilise-t-on pour tester si deux valeurs sont différentes ?",
-        "verso": "L'opérateur <strong>!=</strong>[cite: 567]."
+        "verso": "L'opérateur <strong>!=</strong>."
     }
 ]

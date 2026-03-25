@@ -1,0 +1,186 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Les Fonctions} % Titre au centre
+\def\docname{LP02}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\section{La gestion des entrées - sorties}
+\begin{easybox}{Gestion des entrées en Python}
+    Il est possible en python de demander à l'utilisateur d'entrer une valeur au clavier. Cela s'effectue via la commande \verb+input+
+    La valeur tapée par l'utilisateur est convertie au format chaine de caractère (str)
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+        a = input("Entrer une valeur au clavier")           # a sera de type str
+        b = int(input("Entrer une valeur au clavier"))      # b sera de type int
+    \end{CodePythontexAlt}
+\end{easybox}	
+
+   
+\begin{methode}[Affichage dans la zone programme]{}
+    
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+        def f(x):
+            y = x ** 2  # Fonction calculant x**2
+            return y
+        
+        f(4)        	# PAS D'AFFICHAGE: f(4) est créé mais est perdue
+        print(f(4)) 	# AFFICHAGE: f(4) créé puis affiché. La valeur est perdue
+        carre = f(6)	# PAS D'AFFICHAGE: f(6) créé puis sauvegardé dans carre. 
+        print(carre)	# AFFICHAGE: affichage de la valeur de la variable carre
+    \end{CodePythontexAlt}
+    
+    On peut afficher des chaines complexes avec le séparateur virgule \verb+,+
+    
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+    a, b = 6, 4
+    print("La somme de", a, "et",b, "est", a + b)
+    
+    
+    \end{CodePythontexAlt}
+    \end{methode}
+    
+    \begin{methode}[Affichage dans la console python]{}
+        La console python accepte en plus de la commande \verb+print+ un affichage direct en appelant la variable.
+        \begin{ConsolePythontex}[TaillePolice = \large, Label=false]{}
+            a = 6
+            a           
+        \end{ConsolePythontex}
+    \end{methode}
+
+\begin{methode}[Formatage de l'affichage avec \texttt{f-string} et \texttt{format()}]{}
+
+    L'idée est de créer un texte à trou que l'on va compléter par des variables.
+\begin{ConsolePythontex}[TaillePolice = \large, Label=false]{}
+    name = 'Paul'
+    age = 25
+    print(f'Votre nom est {name} et vous avez {age} ans.')
+\end{ConsolePythontex}  
+
+\begin{ConsolePythontex}[TaillePolice = \large, Label=false]{}
+    print('Votre nom est {} et vous avez {} ans'.format(name, age))
+\end{ConsolePythontex}
+\end{methode}
+
+
+% exemple d'exercice avec str  
+
+\section{Les fonctions}
+
+
+\begin{easybox}{Présentation}{}
+	Une \textbf{fonction} en python est un objet qui se comporterait comme une fonction mathématique. On peut prendre pour exemple une fonction $f$ définie par $f(x)=x^2$.
+
+	\begin{itemize}
+		\item $f$ est le nom de la fonction
+		\item $x$ est un paramètre (une variable en mathématique). C'est juste un concept dont on va se servir pour appliquer la fonction. Ce nom de variable n'est connu qu'à l'intérieur de la fonction.
+		\item $x^2$ est l'expression de la fonction. C'est la manière dont on va calculer l'image de $x$ par la fonction $f$.
+	\end{itemize}
+
+	\begin{minipage}{0.4\linewidth}
+		\includegraphics[width=0.9\linewidth]{fonction1}
+		\end{minipage}
+		\begin{minipage}{0.58\linewidth}
+		\begin{itemize}
+		\item Ici la valeur $4$ est un argument, c'est à dire la valeur sur laquelle on va appliquer la fonction.
+		\item La valeur $16$ est la valeur renvoyée par la fonction. Ne pas confondre \texttt{variable renvoyée} et \texttt{valeur renvoyée}
+		\end{itemize}\end{minipage}
+\end{easybox}
+
+	\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+		def f(x):
+			""" Fonction renvoyant x ** 2 """
+			y = x ** 2		# Calcul de x ** 2
+			return y  		# valeur renvoyée: y
+		\end{CodePythontexAlt}
+		
+		
+		\begin{itemize}
+		\item \textbf{Ligne 1:}  \texttt{def} permet de définir le nom de la fonction. Ici la fonction se nomme \texttt{f}.
+		\item \textbf{Ligne 1:}  \texttt{f(x)} permet de définir le nom et le nombre des paramètres. Ici la fonction \texttt{f} a besoin d'un seul paramètre \texttt{x}
+		\item \textbf{Ligne 2:}  commentaire permettant de décrire ce que fait la fonction.
+		Cette ligne n'est pas interprétée
+		\item \textbf{Ligne 3:}  on lit de la droite vers la gauche: \og{}on prend le contenu de la variable \texttt{x}, on le met au carré et on l'affecte à une nouvelle variable appelée \texttt{y}\fg{}
+		\item \textbf{Ligne 4:}  on renvoie la valeur de la variable \texttt{y}. 
+		\end{itemize}
+		
+		On vient de définir une nouvelle fonction. Il faut maintenant lui donner un argument pour qu'elle puisse calculer une valeur et la renvoyer. C'est ce que l'on appelle \textbf{appeler} la fonction.
+		\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+			a = 4   		# on affecte 4 à la variable a
+			z = f(4)		# on appelle la fonction f avec comme argument 4 
+							# et on récupère la valeur renvoyée dans la variable z
+		\end{CodePythontexAlt}
+
+\begin{itemize}
+		\item la commande \verb+return+ renvoie la valeur contenue dans y
+		\item elle provoque la sortie immédiate de la fonction
+		\item si possible on ne met qu'un seul \verb+return+ dans la fonction
+		\item il peut n'y avoir aucun \verb+return+, on parle alors de \verb+procédure+
+\end{itemize}
+
+\begin{easybox}{Prototypage d'une fonction}
+	\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+		def ma_fonction(param1, param2, ...):
+			''' Docstring: Explication de ce que fait ma_fonction
+			: description des paramètres et leurs types
+			: description des valeurs de sortie et leurs types '''
+			# Corps de la fonction
+
+			return valeur	# La variable 'valeur' est renvoyée
+	\end{CodePythontexAlt}
+\end{easybox}
+
+
+\begin{exemple}{}{}
+	Voici un exemple d'une fonction qui fait quelque chose de très simple: elle prend deux valeurs en paramètres (\texttt{a} et \texttt{b}) et renvoie la somme des ces deux valeurs. Cette somme a été créée et affectée à la variable \texttt{somme}.
+	
+	\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+def calc_somme(a, b):
+	''' Fonction calculant la somme de deux valeurs 
+	: a et b deux entiers (int)					
+	: valeur renvoyée est un entier (int) '''
+	somme = a + b      # le résultats de a + b est affecté à la variable somme
+	return somme       # la valeur de somme est renvoyée par la fonction
+\end{CodePythontexAlt}
+
+	Il est maintenant possible de se servir de cette fonction.
+
+
+\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+s = calc_somme(6, 8)	# s récupère la valeur renvoyée par calc_somme(6, 8)
+print(s)            	# la valeur de la variable s est affichée (14)
+\end{CodePythontexAlt}
+\end{exemple}
+
+
+\begin{remarque}[Variables locales et variables globales]
+	
+	\begin{itemize}
+		\item les \textbf{variables locales} ne sont connues que dans la fonction
+		\item les \textbf{variables globales} sont connues dans tout le programme
+	\end{itemize}
+
+\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+print(a)   # ERREUR -> a est une variable locale (tout comme b et somme)
+\end{CodePythontexAlt}
+
+Il est donc tout à fait normal que les variables \verb+a+, \verb+b+ et \verb+somme+ ne soient pas connues à l'extérieur de la fonction.
+
+Il est de bon usage de ne pas appeler de la même façon des variables locales et des variables globales.
+
+
+\end{remarque}
+
+\begin{easybox}{Vérification de la valeur d'une variable}{}
+
+La fonctionnalité \verb+assert+ vérifie qu'une affirmation est vraie. Si c'est le cas, rien ne se passe, sinon un message d'erreur est donné
+\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+assert calcule_somme(6, 8) == 14     	# True -> aucune message 
+assert calcule_somme(6, 8) == 12     	# False -> message d'erreur 
+assert not(calcule_somme(6, 8) == 12)	# True -> aucun message
+
+\end{CodePythontexAlt}
+\end{easybox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

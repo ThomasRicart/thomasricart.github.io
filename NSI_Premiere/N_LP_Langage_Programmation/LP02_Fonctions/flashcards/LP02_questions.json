@@ -1,0 +1,42 @@
+[
+    {
+        "recto": "Quelle fonction permet de récupérer une saisie utilisateur ?",
+        "verso": "La fonction <code>input()</code>."
+    },
+    {
+        "recto": "Quel est le type de l'objet renvoyé par <code>input()</code> ?",
+        "verso": "C'est toujours une chaîne de caractères (<strong>str</strong>)."
+    },
+    {
+        "recto": "Comment convertir une saisie en nombre entier ?",
+        "verso": "En utilisant le transtypage : <code>int(input(...))</code>."
+    },
+    {
+        "recto": "Quel mot-clé définit le début d'une fonction ?",
+        "verso": "Le mot-clé <code>def</code>."
+    },
+    {
+        "recto": "À quoi sert l'instruction <code>return</code> ?",
+        "verso": "Elle permet à la fonction de <strong>renvoyer</strong> un résultat utilisable dans le reste du programme."
+    },
+    {
+        "recto": "Une fonction peut-elle posséder plusieurs instructions <code>return</code> ?",
+        "verso": "<strong>Oui</strong>, mais dès qu'un <code>return</code> est exécuté, la fonction s'arrête immédiatement."
+    },
+    {
+        "recto": "Qu'est-ce qu'une variable <strong>locale</strong> ?",
+        "verso": "Une variable définie à l'intérieur d'une fonction, invisible à l'extérieur de celle-ci."
+    },
+    {
+        "recto": "Où sont définies les variables <strong>globales</strong> ?",
+        "verso": "Dans le corps principal du programme (en dehors des fonctions)."
+    },
+    {
+        "recto": "Que fait l'instruction <code>assert condition</code> ?",
+        "verso": "Elle vérifie si la condition est vraie. Si c'est <strong>False</strong>, le programme s'arrête avec une erreur."
+    },
+    {
+        "recto": "Quelle est la différence entre <code>print()</code> et <code>return</code> ?",
+        "verso": "<code>print()</code> affiche un texte à l'écran ; <code>return</code> transmet une valeur à une variable ou une autre fonction."
+    }
+]
