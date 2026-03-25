@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Quel mot-clé Python est utilisé pour tester une condition ?",
+    "options": ["check", "if", "test", "when"],
+    "answer": 1,
+    "feedback": "On utilise <code>if</code> suivi de la condition et de deux-points."
+  },
+  {
+    "question": "Que se passe-t-il si la condition d'un bloc 'if' est False et qu'il n'y a pas de 'else' ?",
+    "options": ["Le programme s'arrête", "Le programme saute le bloc et continue après", "Une erreur s'affiche", "Le programme recommence"],
+    "answer": 1,
+    "feedback": "Si la condition est fausse, Python ignore l'instruction indentée et passe à la suite."
+  },
+  {
+    "question": "Quel symbole est indispensable à la fin d'une ligne 'if', 'else' ou 'elif' ?",
+    "options": [";", ".", ":", "!"],
+    "answer": 2,
+    "feedback": "En Python, les structures de bloc sont toujours introduites par le symbole deux-points."
+  },
+  {
+    "question": "Comment appelle-t-on le décalage vers la droite du code sous un 'if' ?",
+    "options": ["La tabulation", "L'espacement", "L'indentation", "Le saut"],
+    "answer": 2,
+    "feedback": "L'indentation définit les blocs d'instructions qui dépendent de la condition."
+  },
+  {
+    "question": "Quel mot-clé permet de tester une deuxième condition seulement si la première était fausse ?",
+    "options": ["else if", "elif", "otherwise", "then"],
+    "answer": 1,
+    "feedback": "Python utilise <code>elif</code> (contraction de else if) pour enchaîner les tests."
+  },
+  {
+    "question": "Dans une structure IF-ELSE, dans quel cas le bloc 'else' est-il exécuté ?",
+    "options": ["Toujours", "Si la condition du IF est True", "Si la condition du IF est False", "Jamais"],
+    "answer": 2,
+    "feedback": "Le bloc <code>else</code> est le 'SINON' : il s'exécute quand la condition est fausse."
+  },
+  {
+    "question": "Dans l'algorithme de la valeur absolue, que fait-on si x < 0 ?",
+    "options": ["On renvoie x", "On transforme x en -x", "On affiche une erreur", "On met x à 0"],
+    "answer": 1,
+    "feedback": "Si x est négatif, sa valeur absolue est son opposé : on fait <code>x = -x</code>."
+  },
+  {
+    "question": "Combien de blocs 'else' peut-on avoir au maximum pour un seul 'if' ?",
+    "options": ["Autant qu'on veut", "Zéro ou Un seul", "Deux", "Trois"],
+    "answer": 1,
+    "feedback": "Le <code>else</code> représente tout ce qui n'a pas été capturé par le if/elif, il est unique."
+  },
+  {
+    "question": "Peut-on mettre un bloc 'if' à l'intérieur d'un bloc 'else' ?",
+    "options": ["Oui, c'est une structure imbriquée", "Non, c'est interdit", "Seulement dans les fonctions", "Seulement avec des nombres"],
+    "answer": 0,
+    "feedback": "On peut imbriquer des conditions pour affiner les tests."
+  },
+  {
+    "question": "Si 'total = 10' et que le code est 'if total > 0: total = total + 1', que vaut 'total' à la fin ?",
+    "options": ["10", "11", "0", "True"],
+    "answer": 1,
+    "feedback": "La condition est vraie (10 > 0), donc l'instruction s'exécute : 10 + 1 = 11."
+  }
+]

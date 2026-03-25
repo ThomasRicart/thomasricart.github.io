@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcards LP04 - Les Boucles</title>
+    <link rel="stylesheet" href="../../../../_environments/stylesheets/flashcards_style.css">
+    <style>
+        /* Surcharge pour le thème vert LP04 */
+        :root {
+            --accent-color: #10b981; 
+        }
+        #chapter-title { color: #065f46; }
+        .front { border-top: 5px solid #10b981; }
+    </style>
+    <script>
+	  window.MathJax = {
+		tex: {
+		  inlineMath: [['$', '$'], ['\\(', '\\)']]
+		}
+	  };
+	</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="../../../../_environments/stylesheets/flashcards_core.js" defer></script>
+</head>
+<body>
+
+    <h1 id="chapter-title">Chapitre LP04 : Les Boucles FOR et WHILE</h1>
+    <div id="progress">Chargement des questions...</div>
+
+    <div class="flashcard-container" onclick="flipCard()">
+        <div class="flashcard" id="card">
+            <div class="front" id="recto"></div>
+            <div class="back" id="verso"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevCard(event)">Précédent</button>
+        <button onclick="nextCard(event)">Suivant</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initFlashcards === 'function') {
+                initFlashcards('LP04_questions.json');
+            }
+        });
+    </script>
+</body>
+</html>

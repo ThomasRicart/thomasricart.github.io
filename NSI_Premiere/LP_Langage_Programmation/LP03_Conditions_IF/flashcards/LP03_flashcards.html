@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashcards LP03 - Les Conditions</title>
+    <link rel="stylesheet" href="../../../../_environments/stylesheets/flashcards_style.css">
+    <style>
+        /* Surcharge pour le thème bleu LP03 */
+        :root {
+            --accent-color: #3f51b5; 
+        }
+        #chapter-title { color: #283593; }
+        .front { border-top: 5px solid #3f51b5; }
+    </style>
+    <script>
+	  window.MathJax = {
+		tex: {
+		  inlineMath: [['$', '$'], ['\\(', '\\)']]
+		}
+	  };
+	</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="../../../../_environments/stylesheets/flashcards_core.js" defer></script>
+</head>
+<body>
+
+    <h1 id="chapter-title">Chapitre LP03 : Les Structures Conditionnelles</h1>
+    <div id="progress">Chargement des questions...</div>
+
+    <div class="flashcard-container" onclick="flipCard()">
+        <div class="flashcard" id="card">
+            <div class="front" id="recto"></div>
+            <div class="back" id="verso"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="prevCard(event)">Précédent</button>
+        <button onclick="nextCard(event)">Suivant</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // On initialise les flashcards avec le fichier JSON du LP03
+            if (typeof initFlashcards === 'function') {
+                initFlashcards('LP03_questions.json');
+            }
+        });
+    </script>
+</body>
+</html>

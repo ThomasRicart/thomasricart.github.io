@@ -6,6 +6,7 @@
 \pagestyle{cours_FP}
 \makeheader{} % Affiche le bandeau
 
+\section{La boucle FOR}
 
 \begin{easybox}{Les boucles FOR}{}
 
@@ -13,7 +14,7 @@
 
 \medskip
 
-	\begin{minipage}[b]{0.35\linewidth}
+	\begin{minipage}{0.35\linewidth}
 	\begin{lstlisting}[numbers=none]
 # En pseudo code
 instruction1
@@ -22,7 +23,7 @@ Pour i allant de 0 a 6:
 instruction3
 	\end{lstlisting}
 		\end{minipage}\hfill
-		\begin{minipage}[b]{0.63\linewidth}
+		\begin{minipage}{0.63\linewidth}
 	\begin{itemize}
 		\item instruction1 est effectuée
 		\item \verb+i+ est un \verb+itérateur+ qui va aller de 0 à 6, c'est à dire 7 tours
@@ -80,49 +81,36 @@ for i in range(5):
 	
 	\end{easybox}
 	
-	\begin{exemple}[Algorigramme de la structure FOR]{}
-	
-	
-	\begin{center}
-	{\verb+for i in range(2, 9):+}
+
+	\begin{minipage}{0.45\linewidth}
 		
-	\end{center}
-	
-	\tcblower{
-	
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
-		for i in range(2, 9):
+	\begin{exemple}[Trace de la structure FOR]{}
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		for i in range(2, 6):
 			print(i)
 		print('fin')
 	\end{CodePythontexAlt}
 	
-	\medskip
+		\end{exemple}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.55\linewidth}
 	
-	
-	
-	L'itérateur \verb+i+ prend toutes les valeurs entières entre 2 et $9-1$
-	
-	\renewcommand{\arraystretch}{1.2}
+	\renewcommand{\arraystretch}{1.1}
 	\begin{center}
 	\begin{tabular}{|c|p{2cm}|p{4cm}|}
 		\hline
-		\verb+i+  & \verb+i < 9+ & instruction \\ \hline{}
-		\verb+2+  & \verb+True+ & \verb+print(2)+ \\ \hline{}
-		\verb+3+  & \verb+True+ & \verb+print(3)+ \\ \hline{}
-		\verb+4+  & \verb+True+ & \verb+print(4)+ \\ \hline{}
-		\verb+5+  & \verb+True+ & \verb+print(5)+ \\ \hline{}
-		\verb+6+  & \verb+True+ & \verb+print(6)+ \\ \hline{}
-		\verb+7+  & \verb+True+ & \verb+print(2)+ \\ \hline{}
-		\verb+8+  & \verb+True+ & \verb+print(2)+ \\ \hline{}
-		\verb+9+  & \verb+False+ & \verb+print('fin')+ \\\hline
-		
+		\texttt{i}  & \texttt{i < 6} & instruction \\ \hline
+		\texttt{2}  & \texttt{True} & \texttt{print(2)} \\ \hline
+		\texttt{3}  & \texttt{True} & \texttt{print(3)} \\ \hline
+		\texttt{4}  & \texttt{True} & \texttt{print(4)} \\ \hline
+		\texttt{5}  & \texttt{True} & \texttt{print(5)} \\ \hline
+		\texttt{6}  & \texttt{False} & \texttt{print('fin')} \\ \hline
 	\end{tabular}	
 	\end{center}
 	
-	}
-	\end{exemple}
+	\end{minipage}
 	
-	\newpage
 	
 	\begin{easybox}{Itération sur une chaine de caractères via les indices}{}
 	Une chaine de caractères \verb+str+ est un itérateur, c'est à dire qu'il est possible d'itérer sur ses éléments.
@@ -131,7 +119,6 @@ for i in range(5):
 		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
 	mot = 'Hello'
 	mot[1]
-	mot[3]
 			\end{ConsolePythontex}
 	\end{minipage}\hfill
 	\begin{minipage}[b]{0.48\linewidth}
@@ -148,14 +135,8 @@ for i in range(5):
 		\end{center}
 	\end{minipage}
 	
-	
-	
-	
-	\bigskip
-	
-	Ainsi si on fait varier un itérateur \verb+i+, il est possible d'obtenir chaque élément de \verb+mot+ en appelant \verb+mot[i]+
-	
-	\begin{minipage}[b]{0.48\linewidth}
+
+	\begin{minipage}{0.48\linewidth}
 	\medskip
 	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
 	mot = 'Hello'
@@ -165,7 +146,7 @@ for i in range(5):
 			
 	\end{CodePythontexAlt}
 	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\linewidth}
+	\begin{minipage}{0.48\linewidth}
 		\begin{center}
 			\renewcommand{\arraystretch}{1}
 			\begin{tabular}{|c|c|c|c|}
@@ -183,14 +164,14 @@ for i in range(5):
 	\end{easybox}
 	
 	\begin{easybox}{Itération sur une chaine de caractères via les éléments}{}
-	Une chaine de caractères \verb+str+ est un itérateur, c'est à dire qu'il est possible
-	d'itérer directement sur les éléments qui constituent cette chaine de caractère
+
+	Il est aussi possible	d'itérer directement sur les éléments qui constituent cette chaine de caractère
 	
 	On peut donc créer un variable nommée \verb+lettre+ par exemple qui prendra pour valeur chacun des caractères de \verb+mot+.
 	
 	\medskip
 	
-	\begin{minipage}[b]{0.48\linewidth}
+	\begin{minipage}{0.48\linewidth}
 	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
 	mot = 'Hello'
 	for lettre in mot:
@@ -199,7 +180,7 @@ for i in range(5):
 	
 		\end{CodePythontexAlt}
 	\end{minipage}\hfill
-	\begin{minipage}[t]{0.48\linewidth}
+	\begin{minipage}{0.48\linewidth}
 		\begin{center}
 			\renewcommand{\arraystretch}{1}
 			\begin{tabular}{|c|c|c|c|}
@@ -233,7 +214,7 @@ for i in range(5):
 		\end{exercice_cours}
 	\end{minipage}
 	
-	\vspace{1.5cm}
+	%\vspace{1.5cm}
 	
 	\begin{minipage}[t]{0.45\linewidth}
 		\begin{exercice_cours}{Écrire une fonction permettant d'afficher toutes les lettres du mot \verb+'abracadabra'+ en itérant sur les indices}{}
@@ -246,98 +227,97 @@ for i in range(5):
 		\end{minipage}
 	
 	
-	\newpage
 	
 	\begin{easybox}{Algorithmes de Recherche dans un itérable}
 	
-	Puisqu'on peut itérer sur une chaine de caractère en observant chaque caractère, on peut décider de faire quelque chose si la caractère a ue particularité.
-	
-	Ce algorithme compte le nombre de caractères \verb+'a'+ dans la chaine de caractère \verb+mot+
-	
-	\medskip
-	
-	\begin{minipage}[t]{0.55\linewidth}
-		\begin{tikzpicture}[node distance=1.5cm]
-	
-	
-			% Nœuds
-			\node (initialisation_i) [process] at (0, -2){\verb+i = 0+};
-			\node (initialisation_compteur) [process] at (0, 0){\verb+compteur = 0+};
-			\node (decision1) [decision] at (0, -5){\verb+i+ $<$ \verb+len(mot)+};
-			\node (decision2) [decision] at (2, -9){\verb+mot[i] == 'a'+};
-			\node (increment_compteur) [process] at (4, -11){\verb-compteur += 1-};
-			\node (increment_i) [process] at (6, -5){\verb-i = i + 1-};
-			\node (return) [process] at (0, -12){return(\verb+sans_0+)};
-		
-			\draw [arrow] (initialisation_compteur.south) -- (initialisation_i.north);
-			\draw [arrow] (initialisation_i.south) -- (decision1.north);
-			\draw [arrow] (decision1.south) -- node[anchor=east]{False}(return.north);
-			\draw [arrow] (decision1.east) -| node[anchor=north, yshift=0.5cm] {True}(decision2.north);
-			\draw [arrow] (decision2.east) -| node[anchor=north, yshift=0.5cm] {True}(increment_compteur.north);
-		
-			\coordinate (point1) at (4, -12);
-			\coordinate (point2) at ($(initialisation_i.south)!0.5!(decision1.north)$);
-			\draw [arrow] (increment_compteur.south) -- (point1);
-			\draw [arrow] (decision2.south) |- node[anchor=east, yshift=1cm]{False}(point1);
-			\draw [arrow] (point1) -| (increment_i.south);
-			\draw [arrow] (increment_i.north) |- (point2);
+		Cet algorithme permet de savoir si un élément est présent dans un itérable. 
+
+			\begin{itemize}
+
+				\item Le mot sera la variable \verb|mot|
+				\item La lettre que l'on cherche sera la variable \verb|lettre_cherchee|
+			\end{itemize}
+
+			On peut utiliser l'algorithme suivant:
 			
-			\filldraw[fill=gray, fill opacity=0.3, draw=black, rounded corners=5mm] 
-		(-2,-7) rectangle (7.6,-1);
-		\end{tikzpicture}	
-	\end{minipage}
-	\begin{minipage}[b]{0.43\linewidth}
-	
-	  \begin{itemize}
-			\item on initialise un compteur à 0
-			\item on parcourt \verb+mot+ à l'aide d'une boucle \verb+FOR+
-			\item on observe donc chaque caractère \verb+mot[i]+
-			\item si le caractère est un \verb+'a'+, alors on incrémente le compteur
-			\item sinon on ne fait rien 
-			\item dans tous les cas on refait une boucle
-		\end{itemize}
-	
-	
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
-	def compte_a(mot):
-		compteur = 0
-		for i in range(len(mot)):
-			if mot[i] == 'a':
-				compteur=compteur+1
-		return compteur
-		
-	\end{CodePythontexAlt}
-	
-	La version suivante permet de compter le nombre de \verb+caractere+ dans \verb+mot+
-	
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
-		def compte(mot, caractere):
-			compteur = 0
-			for i in range(len(mot)):
-				if mot[i] == caractere:
-					compteur=compteur+1
-			return compteur
+	\begin{enumerate}
+		\item on parcourt \verb|mot| à l'aide d'une boucle \verb|FOR|
+		\item on observe donc chaque caractère \verb|mot[i]|
+		\item si le caractère est égal à \verb|lettre_cherchee|, alors on renvoie la valeur \verb|True| et on arrête la boucle.
+		\item sinon on ne fait rien et on revient à l'étape 2 pour observer le caractère suivant.
+		\item si on a observé tous les caractères de \verb|mot| sans trouver \verb|lettre_cherchee|, on renvoie \verb|False|
+	\end{enumerate}
+		\end{easybox}
+
+		\begin{exercice_cours}[Écrire une fonction \texttt{est\_present(mot, lettre\_cherchee)}]{}	
+    
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def est_present(mot, lettre_cherchee):
+					''' Renvoie True si lettre_cherchee est dans mot et False sinon'''
+
+
+
+
+
+					#
+					
+				\end{CodePythontexAlt}
+		\end{exercice_cours}
+
+		\newpage
+
+		\begin{exercice_cours}{Ecrire la fonction \texttt{est\_present2(mot, lettre\_cherchee)} en itérant sur les indices}{}
+
+		\end{exercice_cours}
+
+		\begin{exercice_cours}{		Ecrire la fonction \texttt{est\_present3(mot, lettre\_cherchee)} qui renvoie l'indice de la première occurrence de lettre\_cherchee dans mot ou \texttt{-1} si elle n'est pas présente}{}
+
+		\end{exercice_cours}
+
+	\begin{easybox}{Algorithmes de comptage dans un itérable}
+Cet algorithme permet de compter le nombre de fois qu'un élément est présent dans un itérable.
+			\begin{itemize}
+
+				\item Le mot sera la variable \verb|mot|
+				\item La lettre que l'on cherche sera la variable \verb|lettre_cherchee|
+			\end{itemize}
+
+			On peut utiliser l'algorithme suivant:
 			
-		\end{CodePythontexAlt}
-	\end{minipage}
-	
-	
+	\begin{enumerate}
+		\item on initialise un compteur à 0
+		\item on parcourt \verb|mot| à l'aide d'une boucle \verb|FOR|
+		\item on observe donc chaque caractère \verb|mot[i]|
+		\item si le caractère est égal à \verb|lettre_cherchee|, alors on incrémente le compteur.
+		\item sinon on ne fait rien 
+		\item on revient à l'étape 3 pour observer le caractère suivant.
+		\item si on a observé tous les caractères de \verb|mot|, on renvoie le compteur
+	\end{enumerate}
+		
+
 	\end{easybox}
-	
-	
-	
-	
-	
-	\begin{minipage}[t]{0.45\linewidth}
-		\begin{exercice_cours}{}{}
-			En vous inspirant de du programme précédent, proposer un programme permettant de compter le nombre de \verb+lettre_cherchee+ dans \verb+mot+ en itérant sur les éléments.
+
+	\begin{exercice_cours}[Écrire une fonction \texttt{compte(mot, lettre\_cherchee)}]{}	
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+			def compte(mot, lettre_cherchee):
+				''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
+
+
+
+
+
+
+				#
+				
+			\end{CodePythontexAlt}
+	\end{exercice_cours}
+
+\begin{exercice_cours}[Ecrire la fonction \texttt{compte2(mot, lettre\_cherchee)} qui itère sur les éléments]{}	
 	
 			\begin{CodePythontexAlt}[TaillePolice=\large, Lignes=false, Largeur=1\linewidth,Centre,PremLigne=1]{}
-				def compte_lettre_cherchee(mot):
+				def compte2(mot, lettre_cherchee):
+					''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
 					
-	
-	
-	
 	
 	
 					
@@ -349,46 +329,25 @@ for i in range(5):
 				#
 				\end{CodePythontexAlt}
 		\end{exercice_cours}
-		\end{minipage}\hspace{15pt}
-		\begin{minipage}[t]{0.45\linewidth}
-			\begin{exercice_cours}{}{}
-				\flushleft{Écrire une fonction \verb+est_present(mot, lettre_cherchee)+ qui renvoie \verb+True+ si \verb+lettre_cherchee+ est dans \verb+mot+ et \verb+False+ sinon}
-				\begin{CodePythontexAlt}[TaillePolice=\large, Lignes=false, Largeur=1\linewidth,Centre,PremLigne=1]{}
-					def est_present(mot, lettre_cherchee):
-						
 		
-		
-		
-		
-		
-							
-		
-		
-		
-		
-		
-					#
-					\end{CodePythontexAlt}
-			\end{exercice_cours}
-		\end{minipage}
-
 		\newpage
-		
+			\renewcommand{\arraystretch}{1}
 		\section{La boucle WHILE}
 
 		\begin{easybox}{Les boucles WHILE}
 		La boucle \verb+WHILE+ est une boucle non bornée. On ne sait à l'avance combien de fois on va la faire.
 	
-	\begin{minipage}[b]{0.45\linewidth}
+		\medskip
+	\begin{minipage}{0.4\linewidth}
 	\begin{lstlisting}[numbers=none]
-	# En pseudo code
-	instruction1
-	tant que condition1 vraie:
-		instruction2
-	instruction3
+# En pseudo code
+instruction1
+tant que condition1 vraie:
+	instruction2
+instruction3
 	\end{lstlisting}
 		\end{minipage}\hfill
-		\begin{minipage}[b]{0.53\linewidth}
+		\begin{minipage}{0.59\linewidth}
 	\begin{itemize}
 		\item instruction1 est effectuée
 		\item tant que la condition1 est vraie on effectue l'instruction 2
@@ -398,144 +357,116 @@ for i in range(5):
 		\end{minipage}	
 	\end{easybox}
 	
-	\begin{easybox}{La boucle WHILE en python}
-		\begin{minipage}[b]{0.48\linewidth}
-			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
-				a = 0
-				while a < 5:
-					print(a, end=" ")
-					a = a + 1
-				# affichage: 0 1 2 3 4
-				\end{CodePythontexAlt}
-				
-		\end{minipage}\hfill
-		\begin{minipage}[t]{0.48\linewidth}
-			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
-				lettre, mot = 'd', 'abracadabra'
-				i = 0
-				trouve = False
-				while not trouve:
-					trouve = (lettre == mot[i])
-					i = i + 1
-				print(i)
-				# affichage 7
-				# !!! possibilité de boucle infinie
-			\end{CodePythontexAlt}
-		\end{minipage}\hfill
-		 
-	\end{easybox}
+
+		\begin{easybox}{Prototypage de la boucle WHILE en python}
+	\verb|condition1| est un booléen qui est évalué à chaque tour de boucle.  Tant que \verb|condition1| \verb|True|, on effectue les instructions de la boucle. Lorsque \verb|condition1| devient \verb|False|, on sort de la boucle.
+
+	\begin{center}
 	
-	
-	\begin{easybox}{Prototypage de la boucle WHILE}
-	La boucle WHILE s'écrit de manière générale de la façon suivante:
-	
-	\medskip
-	
-	\begin{minipage}[b]{0.4\linewidth}
 	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
 		while condition1:
 			instruction
 	\end{CodePythontexAlt}
-	\end{minipage}\hfill
-	\begin{minipage}[b]{0.58\linewidth}
-	La boucle est effectuée tant que \verb|condition1| est vraie. Cette condition est donc un booléen\end{minipage}
-	
-
-	
-	\end{easybox}
-	
-	\begin{easybox}{Algorigramme de la structure WHILE}{}
-	
-	
-	\begin{tikzpicture}[node distance=1.5cm]
-		% Nœuds
-		\node (instruction1) [process] at (0, 0){\verb|a = 0|};
-		\node (decision) [decision] at (0, -3){\verb|a| $<$ \verb|5|};
-		\node (instruction2) [process] at (0, -7){\verb|print('fin')|};
-		\node (instruction3) [process] at (2, -5){\verb|print(a)|};
-		\node (instruction4) [process] at (4, -3){\verb|a = a + 1|};
-	
-		\coordinate (point1) at ($(instruction1.south)!0.5!(decision.north)$);
-		\coordinate (point2) at (3, -6);
-	
-		\draw [arrow] (instruction1.south) -- (decision.north);
-		\draw [arrow] (instruction4) |- (point1);
-		\draw [arrow] (decision.east) -| node[anchor=north, yshift=0.5cm] {True}(instruction3.north);
-		\draw [arrow] (instruction3) |- (point2);
-		\draw [arrow] (point2) -| (instruction4.south);
-		\draw [arrow] (decision.south) -- node[anchor=east] {False}(instruction2.north);
-	
-		%\filldraw[fill=gray, fill opacity=0.3, draw=black, rounded corners=5mm] 
-		%(-2,-4) rectangle (6,1);
-		%\node (instruction2) [process] at (0, -4.5){je prend le parapluie};
-		%\node (instruction3) [process] at (0, -6) {je sors de chez moi};
-	
-		%\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction3.north)$);
-		%\coordinate (point1) at (2, -4.5);
-		% Flèches
-		%\draw [arrow] (instruction1) -- (decision);
-		%\draw [arrow] (decision.south) -- node[anchor=west] {True} (instruction2.north);
-		%\draw [arrow] (instruction2) -- (instruction3);
-		%\draw [arrow] (decision.east) -| node[anchor=east, xshift=1.2cm, yshift=-2cm] {False}(point1);
-		%\draw [arrow] (point1) |- (midpoint1);
-	
-		
-	\end{tikzpicture}	
-	
-	\tcblower{
-	
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
-		a = 0
-		while a < 5:
-			print(a, end=" ")
-			a = a + 1 
-		print('fin')
-	\end{CodePythontexAlt}
-	
-	\medskip
-	
-	
-	
-	
-	\renewcommand{\arraystretch}{1.2}
-	\begin{center}
-	\begin{tabular}{|c|p{2cm}|p{4cm}|}
-		\hline
-		\verb|a|  & \verb|a < 5| & instruction \\ \hline
-		\verb|0|  & \verb|True| & \verb|print(0)| \\ \hline
-		\verb|1|  & \verb|True| & \verb|print(1)| \\ \hline
-		\verb|2|  & \verb|True| & \verb|print(2)| \\ \hline
-		\verb|3|  & \verb|True| & \verb|print(3)| \\ \hline
-		\verb|4|  & \verb|True| & \verb|print(4)| \\ \hline
-		\verb|5|  & \verb|False| & \verb|print('fin')| \\ \hline
-	\end{tabular}	
 	\end{center}
 	
-	}
-	\end{easybox}
 
-	\newpage
+			\end{easybox}
 
-	\begin{exercice_cours}{Boucle While}{}
+	\begin{exercice_cours}[Dire ce qu'affichent les programmes suivants et expliquer pourquoi]{}
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+			n = 0
+			u = 1
+			while u < 1000:
+				n = n + 1
+				u = u * 2
+			print(n)
+			print(u)
+		\end{CodePythontexAlt}
+				
+		\end{minipage}\hfill
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+			mot = 'abracadabra'
+			c = 0
+			trouve = False
+			while c < len(mot) and not(trouve):
+				trouve = mot[c] == 'r'
+				c = c + 1
+			print(trouve)
+			\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		 
+	\end{exercice_cours}
+	
+	\begin{exercice_cours}[Boucle FOR]
+
+		\begin{enumerate}
+			\item Écrire une fonction \verb|somme(n)| qui renvoie la somme des entiers de 1 à $n$ inclus. Par exemple, \verb|somme(5)| doit renvoyer $1+2+3+4+5=15$.
+			
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def somme(n):
+					''' Renvoie la somme des entiers de 1 à n inclus'''
+					
+					
+					
+					
+				#
+				\end{CodePythontexAlt}
+
+			\item Écrire une fonction \verb|factorielle(n)| qui renvoie la factorielle de $n$. Par exemple, \verb|factorielle(5)| doit renvoyer $1\times2\times3\times4\times5=120$.
+			
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def factorielle(n):
+					''' Renvoie la factorielle de n'''
+					
+					
+					
+					
+				#
+				\end{CodePythontexAlt}
+			\item Ecrire une fonction \verb|remplace_lettre(mot, lettre_a_remplacer, nouvelle_lettre)| qui remplace toutes les occurrences de \verb|lettre_a_remplacer| par \verb|nouvelle_lettre| dans \verb|mot|. Par exemple, \verb|remplace_lettre('abracadabra', 'a', 'o')| doit renvoyer \verb+'obrocodobro'+.
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def remplace_lettre(mot, lettre_a_remplacer, nouvelle_lettre):
+					''' Renvoie mot dans lequel toutes les occurrences de 
+					lettre_a_remplacer ont été remplacées par nouvelle_lettre'''
+					
+					
+
+
+					
+					
+				#
+				\end{CodePythontexAlt}
+			
+			\item Ecrire une fonction \verb|supprime_lettre(mot, lettre_a_supprimer)| qui supprime toutes les occurrences de \verb|lettre_a_supprimer| dans \verb|mot|. Par exemple, \verb|supprime_lettre('abracadabra', 'a')| doit renvoyer \verb+'brcdbr'+.	
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def supprime_lettre(mot, lettre_a_supprimer):
+					''' Renvoie mot dans lequel toutes les occurrences de 
+					lettre_a_supprimer ont été supprimées'''
+					
+
+
+					
+					
+					
+				#
+				\end{CodePythontexAlt}
+		\end{enumerate}
+	\end{exercice_cours}
+		\begin{exercice_cours}[Boucle While]{}
 	\begin{enumerate}
 		\item On dispose d'une feuille de papier d'épaisseur 0,1 mm. Combien de fois doit-on la plier au minimum pour que l'épaisseur dépasse la hauteur de la tour Eiffel 324 m. Écrire une fonction \verb|nb_plis()| en Python pour résoudre ce problème.
 		
-		Modifier ce programme pour passer en argument la hauteur à atteindre.
-
-		\item Aujourd'hui un appartement vaut 100 000€. Sa valeur augmente de 1% chaque année.
-		\begin{itemize}
-			\item 		Écrire un programme en Python pour connaitre sa valeur au bout de 10 ans.
-			\item 	Écrire un programme en Python pour savoir au bout de combien d'années sa valeur aura doublé. 
-		\end{itemize}
+		\medskip
 
 		\begin{minipage}{0.79\linewidth}
 				\item  Inès veut construire une pyramide à base carrée comme sur la photo. La pyramide sur la photo a 7 étages. 
 			
-				\begin{itemize}
-					\item 			Inès a 1000 billes. Combien d'étages au maximum aura sa pyramide? Écrire un programme en Python pour répondre au problème. 
-					\item 			Modifier ce programme pour déterminer combien d'étages on obtient avec $n$ billes.
-
-				\end{itemize}
+					Inès a n billes. Combien d'étages au maximum aura sa pyramide? Écrire une fonction \verb|nb_etages(n)| en Python pour répondre au problème. 
+					\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					assert nb_etages(1000) == 14
+					\end{CodePythontexAlt}
 
 		\end{minipage}\hfill
 		\begin{minipage}{0.19\linewidth}
@@ -543,869 +474,64 @@ for i in range(5):
 
 		\end{minipage}
 
-			\item Le 1er janvier, les parents de Gaspard ont déposé sur son livret d'épargne 1500 euros au taux d'intéret de 1,5\% pour qu'il s'achète un scooter à 1700 euros.
+			\medskip
 
-			\begin{itemize}
-				\item 			Écrire un programme en Python pour savoir au bout de combien d'années il pourra avoir son scooter
-				\item 			Modifier le programme pour que l'utilisateur puisse choisir le nombre d'années et la somme initiale.
-				\item 			Modifier le programme pour que l'utilisateur puisse également choisir le taux d'intéret en pourcentage.
-
-			\end{itemize}
-		
 			\item L'ordinateur tire un nombre entier au hasard entre 0 et 100.
 			L'utilisateur doit le trouver et pour cela propose des valeurs.
 			L'ordinateur indique pour chaque valeur proposée si la valeur est trop petite, trop grande ou s'il a trouvé.
 			
-			\begin{itemize}
-				\item Écrire un programme en Python pour jouer à ce jeu. En combien de coups est-on sûr de trouver?
-				\item Modifier le programme pour qu'il s'arrête si l'utilisateur n'a pas trouvé au bout du nombre de coups de la question 2. 	
+				 Écrire une fonction \verb|jeu()| en Python pour jouer à ce jeu. En combien de coups est-on sûr de trouver?
 
-			\end{itemize}
+				 \begin{methode}[La bibliothèque \texttt{random}]{}
+					\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 100
+					nombre_aleatoire = random.randint(0, 100)	
+					\end{CodePythontexAlt}
+				\end{methode}
 
-			\item En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Elle commence généralement par les termes 0 et 1 (parfois 1 et 1) et ses premiers termes sont 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc.
+				 \item En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Elle commence généralement par les termes 0 et 1 et ses premiers termes sont 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc.
 			
 			\begin{itemize}
-				\item 			Ecrire un programme qui affiche les termes de la suite de Fibonacci jusqu'à ce qu'un des termes soit supérieur strictement à 1000.
-				\item 			Modifier ce programme pour obtenir les termes de la suite jusqu'à ce qu'un des termes dépasse $n$ qui sera passé en paramètre.
-
+				\item Ecrire une fonction \verb|fibonacci(n)| qui renvoie le terme de rang $n$ de la suite de Fibonnaci. (le premier terme est de rang 0)
+				\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					assert fibonacci(0) == 0
+					assert fibonacci(1) == 1
+					assert fibonacci(2) == 1
+					assert fibonacci(9) == 34
+					\end{CodePythontexAlt}
+				\item 			Ecrire une fonction \verb|rang_fibonacci()| qui renvoie le rang du premier terme supérieur ou égal à 10000.
+				
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					assert rang_fibonacci() == 21
+					\end{CodePythontexAlt}
 			\end{itemize}
 
+\medskip
 
-			\item L'utilisateur donne un entier positif et le programme annonce combien de fois de suite cet entier est divisible par 2.
+			\item L'utilisateur donne un entier positif et le programme annonce combien de fois de suite cet entier est divisible par 2. Ecrire la fonction \verb|divise_par_2(n)| qui renvoie ce nombre de fois. Par exemple, \verb|divise_par_2(48)| doit renvoyer 4 car $48=2^4\times3$ et 4 est le plus grand entier tel que $48$ est divisible par $2^4$.
 			
-			\item Écrire une fonction qui fait des tirages successifs  d'entiers 0 ou 1 jusqu'à tirer 3 fois 1 consécutivement et
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+assert divise_par_2(48) == 4
+assert divise_par_2(7) == 0
+\end{CodePythontexAlt}
+
+\medskip
+
+	\item Écrire une fonction \verb|tirage()| qui fait des tirages successifs  d'entiers 0 ou 1 jusqu'à tirer 3 fois 1 consécutivement et
 			renvoie le nombre de tirages qui ont été nécessaires.
-	
-			\item Ecrire une fonction python qui renvoie l'entier $p$ tel que $2^p \leqslant n \leqslant 2^{p+1}$.
-		\end{enumerate}
+
+			\begin{methode}[La bibliothèque \texttt{random}]{}
+					\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 1
+					nombre_aleatoire = random.randint(0, 1)	
+					\end{CodePythontexAlt}
+				\end{methode}
+
+				\medskip
+
+	\item Ecrire une fonction python qui renvoie l'entier $p$ tel que $2^p \leqslant n \leqslant 2^{p+1}$.
+
+			\end{enumerate}
 	\end{exercice_cours}
-
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{easybox}{Les structures conditionnelles IF}
-
-\begin{minipage}{0.32\linewidth}
-	\begin{tikzpicture}[node distance=1.5cm]
-		% Nœuds
-		\node (instruction1) [process] at (0, 0){Instruction 1};
-		\node (decision) [decision] at (0, -2){Condition};
-		\node (instruction2) [process] at (0, -4.5){Instruction 2};
-		\node (instruction3) [process] at (0, -6) {Instruction 3};
-	
-		\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction3.north)$);
-		\coordinate (point1) at (2, -4.5);
-		% Flèches
-		\draw [arrow] (instruction1) -- (decision);
-		\draw [arrow] (decision.south) -- node[anchor=west] {True} (instruction2.north);
-		\draw [arrow] (instruction2) -- (instruction3);
-		\draw [arrow] (decision.east) -| node[anchor=east, xshift=1.2cm, yshift=-2cm] {False}(point1);
-		\draw [arrow] (point1) |- (midpoint1);
-	\end{tikzpicture}	
-	\end{minipage} \hfill
-	\begin{minipage}{0.65\linewidth}
-		\begin{minipage}{0.55\linewidth}
-	\begin{scratch}
-    \blocklook{mettre \ovalvariable{total} à \ovalvariable{10}}
-\blockif{si \booloperator{\ovalmove{total} > \ovalnum{0}} alors}
-{\blocklook{mettre \ovalvariable{total} à \ovaloperator{\ovalvariable{total} + \ovalnum{1}}}
-}
-\blocklook{Afficher \ovalvariable{total}}
-\end{scratch}		
-		\end{minipage}\hfill
-		\begin{minipage}{0.43\linewidth}
-	\begin{lstlisting}[numbers=none]
-# En python
-Instruction_1
-if condition:
-	Instruction_2
-Instruction_3
-	\end{lstlisting}
-    
-    \begin{lstlisting}[numbers=none]
-# En python
-total = 10
-if total > 0:
-	total = total + 1
-print(total)
-	\end{lstlisting}
-		\end{minipage}
-	
-	
-	\begin{itemize}
-		\item l'\verb+Instruction 1+ est effectuée
-		\item SI la \verb+Condition+ est \verb+True+ alors l'\verb+Instruction 2+ est effectuée
-		\item SINON on va directement à l'\verb+Instruction 3+
-		\item Dans tous les cas l'\verb+Instruction 3+ est effectuée
-	\end{itemize}
-	
-	La \verb+Condition+ est un test qui est évalué en python par un booléen.
-	
-	\end{minipage}
-
-\end{easybox}
-
-
-%%%%%%%%%%%%%%%%%%%%%%ùùù
-
-\begin{exemple}[La condition IF sans ELSE: la valeur absolue d'un nombre]{}
-	%Prenons l'exemple d'une fonction calculant la valeur absolue d'une nombre $x$. La valeur absolue d'un nombre est notée en mathématique $|x|$
-	
-    \begin{minipage}{0.64\linewidth}
-        \begin{itemize}
-		\item si $x \geqslant 0$, alors $|x| = x$
-		\item si $x < 0$, alors $|x|=-x$
-	\end{itemize}
-        \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-	def valeur_absolue(x):
-		''' Renvoie |x| '''
-		if x < 0:
-		# si x < 0 on échange x par -x	
-			x = - x
-		return x
-	\end{CodePythontexAlt}
-    \end{minipage}\hfill{}
-    \begin{minipage}{0.33\linewidth}
-        \begin{center}
-			
-		\begin{tikzpicture}[node distance=1.5cm]
-			% Nœuds
-		\node (decision) [decision] at (0, 0){$x < 0$};
-		\node (instruction2) [process] at (0, -2){$x = - x$};
-		\node (instruction3) [process] at (0, -4) {return $x$};
-	
-		\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction3.north)$);
-		\coordinate (point1) at (2, -2.5);
-		% Flèches
-		\draw [arrow] (decision.south) -- node[anchor=west] {True} (instruction2.north);
-		\draw [arrow] (instruction2) -- (instruction3);
-		\draw [arrow] (decision.east) -| node[anchor=east, xshift=1.2cm, yshift=-2cm] {False}(point1);
-		\draw [arrow] (point1) |- (midpoint1);
-	\end{tikzpicture}
-	\end{center}
-    \end{minipage}
-    
-	
-	
-	
-	
-	
-		
-		
-		
-		
-	\end{exemple}
-	
-
-    
-
-
-	\begin{easybox}{Les structures conditionnelles IF -- ELSE}{}
-		\begin{minipage}{0.4\linewidth}
-			\begin{tikzpicture}[node distance=1.5cm]
-				% Nœuds
-				\node (instruction1) [process] at (0, 0){instruction 1};
-				\node (decision) [decision] at (0, -2){Condition};
-				\node (instruction2) [process] at (3.5, -4){instruction 3};
-				\node (instruction3) [process] at (0, -4) {instruction 2};
-				\node (instruction4) [process] at (0, -6) {instruction 4};
-				
-				\coordinate (midpoint1) at ($(instruction3.south)!0.5!(instruction4.north)$);
-					% Flèches
-				\draw [arrow] (instruction1) -- (decision);
-				\draw [arrow] (decision.east) -| node[anchor=south] {False} (instruction2.north);
-				\draw [arrow] (decision.south) -- node[anchor=east, xshift=-0.5cm, yshift=0.3cm] {True} (instruction3.north);
-				\draw [arrow] (instruction3) -- (instruction4);
-				\draw [arrow] (instruction2) |- (midpoint1);
-		
-			\end{tikzpicture}		
-		\end{minipage}\hfill
-		\begin{minipage}{0.58\linewidth}
-			\begin{minipage}{0.48\linewidth}
-	\begin{scratch}
-\blockifelse{si \booloperator{\ovalmove{x} >= \ovalnum{0}} alors}
-{\blocklook{mettre \ovalvariable{x} à {\ovalvariable{x ** 2} }}}
-{\blocklook{mettre \ovalvariable{x} à {\ovalvariable{x ** 3} }}}
-\end{scratch}	
-			\end{minipage}\hfill
-			\begin{minipage}{0.48\linewidth}
-	\begin{lstlisting}[numbers=none]
-# En python
-	
-instruction_1
-	
-if condition:
-	instruction_2
-else:
-	instruction_3
-instruction_4
-	\end{lstlisting}		
-			\end{minipage}
-				
-				
-	\begin{itemize}
-		\item l'\verb+instruction 1+ est effectuée
-		\item SI la \verb+Condition+ est \verb+True+ alors l'\verb+instruction 2+ est effectuée
-		\item SINON l'\verb+instruction 3+ est effectuée
-		\item Dans tous les cas l'\verb+instruction 4+ est effectuée
-	\end{itemize}
-		\end{minipage}
-			
-			
-	\end{easybox}
-	
-	\begin{exemple}[La condition IF -- ELSE]{}
-		
-
-		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-		def ma_fonction(x):
-			if x >= 0:	
-				sortie = x ** 2
-			else:
-				sortie = x ** 3
-			return sortie
-		\end{CodePythontexAlt}
-		\end{exemple}
-		
-	\begin{easybox}{Les structures conditionnelles IF -- ELIF -- ELSE}{}
-	
-	\medskip
-	
-	Dans le cas où il y a plusieurs possibilités de réponse, on peut utiliser deux structures différentes en python.
-	
-	On suppose une fonction prenant comme paramètre une variable $x$ de type entier.
-	
-	\[f(x)=1 \texttt{ si }  x>0 \qquad f(x)=0 \texttt{ si }  x=0 \qquad f(x)=-1 \texttt{ si } x<0\]
-	
-	\begin{minipage}{0.6\linewidth}
-		\begin{tikzpicture}[node distance=1.5cm]
-			% Nœuds
-			\node (instruction1) [process] at (0, 0){Instruction 1};
-			\node (decision1) [decision] at (0, -2.3){Condition1};
-			\node (decision2) [decision] at (3.5, -4.) {Condition2};	
-			\node (instruction2) [process] at (0, -6.5) {Instruction 2};
-			\node (instruction3) [process] at (3.5, -6.5){Instruction 3};
-			\node (instruction4) [process] at (7, -6.5){Instruction 4};
-			\node (instruction5) [process] at (0, -9){Instruction 5};
-		
-			\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction5.north)$);
-		
-			\draw [arrow] (instruction1) -- (decision1);
-			\draw [arrow] (decision1.east) -| node[anchor=west] {False}(decision2.north);
-			\draw [arrow] (decision1.south) -- node[anchor=east] {True}(instruction2.north);
-			\draw [arrow] (decision2.south) -- node[anchor=east] {True}(instruction3.north);
-			\draw [arrow] (decision2.east) -| node[anchor=west] {False}(instruction4.north);
-			\draw [arrow] (instruction2) -- (instruction5);
-			\draw [arrow] (instruction3.south) |- (midpoint1);
-			\draw [arrow] (instruction4.south) |- (midpoint1);
-			
-	
-		
-		\end{tikzpicture}	
-	\end{minipage}\hfill
-	\begin{minipage}{0.38\linewidth}
-	
-		
-		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-			def ma_fonction(x):
-				if x > 0:	
-					sortie = 1
-				elif x == 0:
-					sortie = 0
-				else:
-					sortie = -1
-				return sortie
-			\end{CodePythontexAlt}
-	
-			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-				def ma_fonction(x):
-					if x > 0:	
-						sortie = 1
-					else:
-						if x == 0:
-							sortie = 0
-						else:
-							sortie = -1
-					return sortie
-				\end{CodePythontexAlt}
-	\end{minipage}
-	
-	
-	\end{easybox}
-	
-	\begin{exercice_cours}[Compléter les fonctions suivantes]{}
-	
-        \begin{minipage}{0.48\linewidth}
-            \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
-def plus_grand2(a, b):
-    ''' Renvoie le plus grand des 
-    deux nombres a et b '''
-	# A compléter
-
-
-
-
-
-
-
-
-    #
-	\end{CodePythontexAlt}
-        \end{minipage}\hfill{}
-        \begin{minipage}{0.48\linewidth}
-            \begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
-def plus_grand3(a, b, c):
-    ''' Renvoie le plus grand des 
-    trois nombres a, b et c '''
-    # A compléter
-            
-
-
-
-
-
-
-
-    #
-		\end{CodePythontexAlt}
-        \end{minipage}
-        
-	
-	
-	
-		
-	
-	
-	\end{exercice_cours}	
-
-\end{document}
-
-\section{L'environnement de travail}
-
-Nous avons à notre disposition plusieurs outils pour écrire du code Python.
-
-\subsection*{Edupython}
-
-\begin{center}
-	\includegraphics[width = 0.5\linewidth]{LP01-02.png}
-\end{center}
-
-\texttt{Edupython} étant installé localement, il se peut que des obglets soient déjà ouverts. Fermez tous les onglets ouverts et ouvrez un nouvel onglet pour commencer à travailler.
-
-\subsection*{Notebook Capytale}
-
-\begin{minipage}{0.48\linewidth}
-	Vous accédez à \texttt{Capytale -- Notebook} depuis votre ENT en cliquant sur \verb|Pédagogie/Capytale|. Le professeur vous donnera un code à entrer dans la zone \verb|Accéder à une activité|.
-
-\end{minipage}\hfill{}
-\begin{minipage}{0.48\linewidth}
-\begin{center}
-	\includegraphics[width = 0.7\linewidth]{LP01-03.png}
-\end{center}
-\end{minipage}
-
-
-
-Vous pourrez également y accéder directement via un lien que vous donnera votre enseignant.
-
-\subsection*{Console Capytale}
-
-\begin{minipage}{0.48\linewidth}
-Vous accédez à \texttt{Capytale -- Console} depuis votre ENT de la même manière que pour les Notebook.
-
-\end{minipage}\hfill{}
-\begin{minipage}{0.48\linewidth}
-\begin{center}
-	\includegraphics[width = 0.9\linewidth]{LP01-04.png}
-\end{center}
-\end{minipage}
-
-\medskip
-
-\begin{center}
-\fbox{Quelque soit la façon dont vous tapez du code, n'oubliez pas de sauvegarder TRES régulièrement.}
-\end{center}
-
-
-\pagebreak
-
-\section{Les variables en Python}
-
-\begin{easybox}{Déclarer une variable en Python}
-
-	Pour déclarer une variable en Python, il suffit de lui donner un nom et de lui affecter une valeur à l'aide du symbole $=$. Par exemple, pour déclarer une variable \texttt{x} qui contient la valeur 10, on écrit:
-
-\begin{minipage}{0.48\linewidth}
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-    a = 10
-    \end{CodePythontexAlt}
-\end{minipage}\hfill{}
-\begin{minipage}{0.48\linewidth}
-\begin{scratch}
-\blocklook{Affecter à \selectmenu{x} la valeur \ovalnum{10}}\end{scratch}
-\end{minipage}
-\end{easybox}
-
-
-\begin{easybox}{Le nom des variables en Python}
-	\begin{itemize}
-		\item Elles doivent commencer par une lettre ou un underscore (\texttt{\_}).
-		\item Elles peuvent contenir des lettres, des chiffres et des underscores.
-		\item Elles ne peuvent pas être des mots réservés du langage Python (comme \texttt{if}, \texttt{for}, \texttt{while}, etc.).
-		\item \texttt{Variable} et \texttt{variable} sont considérées comme deux variables différentes.
-	\end{itemize}
-\end{easybox}
-
-\begin{exemple}[Noms de variables valides et invalides]{}
-
-	  \renewcommand{\arraystretch}{1.}
-    \begin{tabular}{|l|p{12cm}|}
-    \hline
-    Bonne variable & \verb+ma_variable+ \\ \hline
-    Mauvaise variable & \verb+Ma_variable+,  \verb+ma variable+, \verb+1_variable+, \verb+ variable@+ \\ \hline
-    A éviter    & \verb+Variable non explicites+ \\ \hline
-    \end{tabular}
-\end{exemple}
-
-\begin{easybox}{Afficher une variable en Python}
-
-	Pour afficher la valeur d'une variable en Python, on utilise la fonction \texttt{print()}. Par exemple, pour afficher la valeur de la variable \texttt{x}, on écrit:
-
-\begin{minipage}{0.48\linewidth}
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-    print(x)
-    \end{CodePythontexAlt}
-\end{minipage}\hfill{}
-\begin{minipage}{0.48\linewidth}
-\begin{scratch}
-\blocklook{Afficher la valeur de \selectmenu{x}}\end{scratch}
-\end{minipage}
-\end{easybox}
-
-\begin{easybox}{Les types de variables en Python}
-	\begin{itemize}
-		\item \textbf{int}: pour les nombres entiers (ex: 1, 42, -5)
-		\item \textbf{float}: pour les nombres à virgule flottante (ex: 3.14, -0.001)
-		\item \textbf{str}: pour les chaînes de caractères (ex: "Bonjour", 'Python')
-		\item \textbf{bool}: pour les valeurs booléennes (ex: True, False)
-	\end{itemize}
-\end{easybox}
-
-\begin{minipage}{0.19\linewidth}
-\begin{lstlisting}[numbers=none]
-# type (int)
-a = 5
-b = 6
-\end{lstlisting}
-    \end{minipage}\hfill
-    \begin{minipage}{0.19\linewidth}    
-\begin{lstlisting}[numbers=none]   
-# type (str)
-a = 'Bonjour'
-b = '6'   
-\end{lstlisting}    
-    \end{minipage}\hfill
-    \begin{minipage}{0.19\linewidth}    
-\begin{lstlisting}[numbers=none] 
-# type (float)
-a = 5.0 
-b = 6.8
-\end{lstlisting}    
-    \end{minipage}\hfill{}
-\begin{minipage}{0.19\linewidth}    
-\begin{lstlisting}[numbers=none]  
-# type (bool)
-a = True
-b = False
-\end{lstlisting}    
-    \end{minipage}
-
-\begin{easybox}{Opérations mathématiques de base en Python}{}
-	\begin{minipage}{0.43\linewidth}
-		\begin{itemize}[]
-        \item[] \texttt{+} \quad  addition:  \verb~5 + 3~ donne 8
-        \item[] \texttt{-} \quad  soustraction \verb~5 - 3~ donne 2
-        \item[] \texttt{*} \quad  multiplication \verb~5 * 3~ donne 15
-        \item[] \texttt{/} \quad  division \verb~6 / 2~ donne 3.0 (\texttt{float})
-\end{itemize}
-	\end{minipage}\hfill{}
-	\begin{minipage}{0.55\linewidth}
-\begin{itemize}[]
-        \item[] \texttt{**} \quad  puissance \verb~2 ** 3~ donne 8
-        \item[] \texttt{\%} \quad  reste de la division entière \texttt{7 \% 3} donne 1
-        \item[] \texttt{//} \quad  quotient de la division entière \texttt{7 // 3} donne 2
-    \end{itemize}
-	\end{minipage}
-\end{easybox}
-
-\begin{minipage}{0.3\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-        print(17+2)
-        print(17-2)
-    \end{ConsolePythontex}
-\end{minipage}\hfill
-\begin{minipage}{0.3\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-		print(17*2)
-		print(17/2)
-    \end{ConsolePythontex}
-\end{minipage}\hfill
-\begin{minipage}{0.3\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-        print(17%2)
-        print(17//2)
-    \end{ConsolePythontex}
-\end{minipage}
-
-\begin{exercice_cours}[Repérer les les types de variables et leurs valeurs dans les programmes suivants]
-	\begin{minipage}{0.48\linewidth}
-		\begin{itemize}
-		\item \verb~x = 5~
-		\item \verb~y = "Hello"~
-		\item \verb~z = True~
-		\item \verb~a = 3.14~
-	\end{itemize}
-	\end{minipage}\hfill{}
-	\begin{minipage}{0.48\linewidth}
-	\begin{itemize}
-		\item \verb~c = 6/2~
-		\item \verb~d = 6//2~
-		\item \verb~f = '1' + '2'~
-		\item \verb~g = 2**3~
-	\end{itemize}
-\end{minipage}
-	
-\end{exercice_cours}
-
-
-\medskip
-
-\section{Les variables de type chaine de caractère \texttt{str}}
-
-
-\begin{easybox}{Les chaines de caractères}{}
-    \smallskip
-    Les chaines de caractères sont des variables qui contiennent du texte. Elles sont délimitées par des guillemets simples ou doubles.
-
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-            a = 'Bonjour'
-            b = ' a tous'
-            c = a + b
-            print(c)
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-            a = 'Bonjour'
-            b = ' a tous'
-            c = a * 3
-            print(c)
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-            a = 'Bonjour'
-            b = ' a tous'
-            c = a[0]
-            print(c)
-        \end{ConsolePythontex}
-    \end{minipage}
-
-    \medskip
-
-    Dans l'exemple ci-dessus, la variable \verb+c+ contient la concaténation de \verb+a+ et \verb+b+ dans le premier cas, la répétition de \verb+a+ trois fois dans le deuxième cas et le premier caractère de \verb+a+ dans le troisième cas.
-\end{easybox}
-
-\begin{easybox}{indexation des chaines de caractères}{}
-    
-    \begin{minipage}{0.5\linewidth}
- Les chaines de caractères peuvent être vues comme un ensemble de caractères ``collés`` les uns aux autres
-
-    Chaque caractère d'une chaine de caractères est indexé: 
-    il y a un index qui donne sa position dans la chaine       
-    \end{minipage}
-    \begin{minipage}{0.5\linewidth}
- \begin{center}
-        \begin{tabular}{|c|c|c|c|c|c|c|c|}
-        \hline
-        \textbf{Indice} & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
-        \hline
-        \textbf{Caractère} & B & o & n & j & o & u & r \\
-        \hline
-        \textbf{Indice Négatif} & -7 & -6 & -5 & -4 & -3 & -2 & -1 \\
-        \hline
-        \end{tabular}
-    \end{center}       
-    \end{minipage}
-    
-   
-    
-
-    \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-            mot = 'Bonjour'
-            mot[0]
-            mot[4]
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-mot = 'Bonjour'
-n = len(mot)
-n
-mot[-1]
-		\end{ConsolePythontex}
-    \end{minipage}
-   
-\end{easybox}
-
-\begin{easybox}{Les opérations sur les chaines de caractères}{}   
-    \smallskip
-    \begin{itemize}
-        \item[] \texttt{+} \quad pour la concaténation:  \verb~'Bonjour' + ' a tous'~ donne \verb~'Bonjour a tous'~
-        \item[] \texttt{*} \quad pour la répétition:  \verb~'Bonjour' * 3~ donne \verb~'BonjourBonjourBonjour'~
-        \item[] \texttt{[]} \quad pour l'indexation:  \verb~'Bonjour'[0]~ donne \verb~'B'~
-        \item[] \texttt{in} \quad pour le test d'appartenance:  \verb~'on' in 'Bonjour'~ donne \verb~True~
-        \item[] \texttt{not in} \quad pour le test d'appartenance:  \verb~'on' not in 'Bonjour'~ donne \verb~False~
-        \item[] \texttt{len()} \quad pour la longueur:  \verb~len('Bonjour')~ donne \verb~7~
-       
-    \end{itemize}
-\end{easybox}
-
-
-\begin{minipage}[t]{0.32\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-        mot1 = 'Bonjour'
-        mot2 = 'Thomas'
-        mot1 + ' ' + mot2
-    \end{ConsolePythontex}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.32\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-        'j' in 'Bonjour'
-        'b' in 'Bonjour'
-    \end{ConsolePythontex}
-\end{minipage}\hfill{}
-\begin{minipage}[t]{0.32\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-        'abracadabra'[4]
-        len('abracadabra')
-    \end{ConsolePythontex}
-\end{minipage}
-
-\begin{easybox}{Opérations avancées sur les chaines de caractères: le Slicing}{}
-    \hspace{1cm}
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{p{2cm}|p{13cm}}
-        \texttt{[a:b]} & conserve les caractères d'indice \texttt{[a:b]}:  \verb~'Bonjour'[1:4]~ donne \verb~'onj'~ \\
-        \texttt{[a:]} & conserve les caractères d'indice \texttt{[a:]}:  \verb~'Bonjour'[3:]~ donne \verb~'jour'~ \\
-        \texttt{[:b]} & conserve les caractères d'indice \texttt{[:b]}:  \verb~'Bonjour'[:3]~ donne \verb~'Bon'~ \\
-        \texttt{[::-1]} & inverse les caractères:  \verb~'Bonjour'[::-1]~ donne \verb~'ruojnoB'~ \\
-        \texttt{[1:-1]} & élimine le premier et dernier caractère:  \verb~'Bonjour'[1:-1]~ donne \verb~'onjou'~ \\
-    \end{tabular}
-\end{easybox}
-
-\begin{exercice_cours}[Prédire ce que vont afficher les codes suivants]{}
-
-    \begin{minipage}[t]{0.32\linewidth}        
-\begin{lstlisting}[numbers=none]
->>> mot = 'Numerique'
->>> n = len(mot)
->>> mot[5]
->>> mot[n]
->>> mot[-1]
->>> mot[8]
-\end{lstlisting}
-    \end{minipage} \hfill
-    \begin{minipage}[t]{0.32\linewidth}        
-\begin{lstlisting}[numbers=none]
->>> mot = 'Numerique'
->>> m in mot
->>> e not in mot
->>> mot+mot[2]
->>> mot*2
->>> 'abc'+mot
-\end{lstlisting}
-    \end{minipage}\hfill
-\begin{minipage}[t]{0.32\linewidth}        
-\begin{lstlisting}[numbers=none] 
->>> mot = 'Numerique'
->>> mot[1:5]
->>> mot[:4]
->>> mot[3:]
->>> mot[1:-1]
-\end{lstlisting}
-    \end{minipage}
-\end{exercice_cours}
-
-\begin{easybox}{Principe du transtypage}{}
-    Les types des variables en python sont dynamiques, on peut modifier sa valeur ainsi que son type.
-    
-    \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-            a = '5'     # a est de type str
-            b = int(a)  # b est de type int
-            print(b)
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-            a = 4       # a est de type int
-            b = str(a)  # b est de type str
-            print(b)
-        \end{ConsolePythontex}
-    \end{minipage}
-    
-    \end{easybox}
-
-    \section{Les variables de type booléen \texttt{bool}}
-
-    
-\begin{easybox}{Les booléens}{}
-    \smallskip
-    Les booléens sont des variables qui ne peuvent prendre que deux valeurs: \verb+True+ (vrai) ou \verb+False+ (faux).
-    
-    \smallskip
-    Les booléens peuvent être utilisés dans des opérations logiques.
-    
-	\medskip
-
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-a = True
-b = False
-c = a and b
-c
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-a = True
-b = False
-c = a or b
-c
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-a = True
-c = not a
-c
-        \end{ConsolePythontex}
-    \end{minipage}    
-\end{easybox}
-
-\medskip
-
-\begin{minipage}[t]{6cm}
-    \begin{center}Table de vérité du \verb+not+\end{center}
-    \begin{longtable}[]{@{}cc@{}}
-        \hline Expression & Résultat\tabularnewline\hline\endhead{}
-        \texttt{not} True & False\tabularnewline{}
-        \texttt{not} False & True\tabularnewline\hline{}
-    \end{longtable}
-\end{minipage}
-\begin{minipage}[t]{6cm}
-    \begin{center}Table de vérité du \verb+and+\end{center}
-    \begin{longtable}[]{@{}cc@{}}
-        \hline Expression & Résultat\tabularnewline\hline\endhead{}
-        True \texttt{and} True & True\tabularnewline{}
-        True \texttt{and} False & False\tabularnewline{}
-        False \texttt{and} True & False\tabularnewline{}
-        False \texttt{and} False & False\tabularnewline\hline{}
-    \end{longtable}
-\end{minipage}
-\begin{minipage}[t]{6cm}
-    \begin{center}Table de vérité du \verb+or+\end{center}
-    \begin{longtable}[]{@{}cc@{}}
-        \hline Expression & Résultat\tabularnewline\hline\endhead{}
-        True \texttt{or} True & True\tabularnewline{}
-        True \texttt{or} False & True\tabularnewline{}
-        False \texttt{or} True & True\tabularnewline{}
-        False \texttt{or} False & False\tabularnewline\hline{}
-    \end{longtable}
-\end{minipage}
-
-\pagebreak
-
-\begin{easybox}{Booléen comme résultat de comparaison}{}
-    Les booléens sont le résultat d'une comparaison. Les opérateurs de comparaison sont:
-    \smallskip
-    \begin{itemize}
-        \begin{minipage}{0.44\linewidth}
-            \item[] \texttt{==} \quad pour le test d'égalité
-            \item[] \texttt{!=} \quad pour le test de différence
-            \item[] \texttt{<} \quad pour le test d'infériorité
-        \end{minipage}
-        \begin{minipage}{0.44\linewidth}
-            \item[] \texttt{>} \quad pour le test de supériorité
-            \item[] \texttt{<=} \quad pour le test d'infériorité ou d'égalité
-            \item[] \texttt{>=} \quad pour le test de supériorité ou d'égalité
-        \end{minipage}
-    \end{itemize}
-
-    \end{easybox}
-
-
-\begin{easybox}{Booléen comme résultat de comparaison}{}  
-    \smallskip
-    \begin{minipage}{0.32\linewidth}    
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-a = 5
-b = 6
-c = (a == b)
-c
-\end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-a = 5
-b = 6
-c = (a != b)
-c
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
-a = 5
-b = 6
-c = (a < b)
-c
-        \end{ConsolePythontex}
-    \end{minipage}
-    
-\end{easybox}
-
-
-\begin{exercice_cours}{    Quelle est la valeur de la variable \verb+c+ après l'exécution des codes suivants?}{}
-
-
-    \begin{minipage}[t]{0.4\linewidth}
-\begin{lstlisting}[numbers=none]   
->>> a = 3
->>> b = 1
->>> c = a > b
-\end{lstlisting}
-
-\begin{lstlisting}[numbers=none]
->>> a = True
->>> b = False
->>> c = (a or b) and (not a)
-\end{lstlisting}
-
-    \end{minipage} \hfill
-    \begin{minipage}[t]{0.58\linewidth}
-\begin{lstlisting}[numbers=none]
->>> a, b = True, False
->>> c = (a and b) or (not a) 
-\end{lstlisting}   
-
-\begin{lstlisting}[numbers=none]
->>> a = True
->>> b = False
->>> x, y = 7, 9
->>> c = (b or (x == y)) or (a and (x != y))
-\end{lstlisting}  
-    \end{minipage}
-
-\end{exercice_cours}
