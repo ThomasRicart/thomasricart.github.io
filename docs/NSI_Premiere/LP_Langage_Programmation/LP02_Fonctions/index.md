@@ -1,0 +1,5 @@
+[Cours](./LP02_Fonctions.pdf)
+[Synthese](./LP02_Fonctions_Synthese.html)
+[ipynb](./LP02-ACT1-fonctions.ipynb)
+[quiz](./quiz/LP02_quiz.html)
+[flashcards](./flashcards/LP02_flashcards.html)
