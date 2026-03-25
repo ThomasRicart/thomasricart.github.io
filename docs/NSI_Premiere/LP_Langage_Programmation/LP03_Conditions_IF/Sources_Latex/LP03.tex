@@ -1,12 +1,308 @@
 \def\level{Première}  % Classe à droite
 \def\course{NSI}
-\def\chaptername{Constructions élémentaires} % Titre au centre
-\def\docname{LP01}        % Identifiant à gauche
+\def\chaptername{Conditions IF} % Titre au centre
+\def\docname{LP03}        % Identifiant à gauche
 
 \pagestyle{cours_FP}
 \makeheader{} % Affiche le bandeau
 
 
+\begin{easybox}{Les structures conditionnelles IF}
+
+\begin{minipage}{0.32\linewidth}
+	\begin{tikzpicture}[node distance=1.5cm]
+		% Nœuds
+		\node (instruction1) [process] at (0, 0){Instruction 1};
+		\node (decision) [decision] at (0, -2){Condition};
+		\node (instruction2) [process] at (0, -4.5){Instruction 2};
+		\node (instruction3) [process] at (0, -6) {Instruction 3};
+	
+		\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction3.north)$);
+		\coordinate (point1) at (2, -4.5);
+		% Flèches
+		\draw [arrow] (instruction1) -- (decision);
+		\draw [arrow] (decision.south) -- node[anchor=west] {True} (instruction2.north);
+		\draw [arrow] (instruction2) -- (instruction3);
+		\draw [arrow] (decision.east) -| node[anchor=east, xshift=1.2cm, yshift=-2cm] {False}(point1);
+		\draw [arrow] (point1) |- (midpoint1);
+	\end{tikzpicture}	
+	\end{minipage} \hfill
+	\begin{minipage}{0.65\linewidth}
+		\begin{minipage}{0.55\linewidth}
+	\begin{scratch}
+    \blocklook{mettre \ovalvariable{total} à \ovalvariable{10}}
+\blockif{si \booloperator{\ovalmove{total} > \ovalnum{0}} alors}
+{\blocklook{mettre \ovalvariable{total} à \ovaloperator{\ovalvariable{total} + \ovalnum{1}}}
+}
+\blocklook{Afficher \ovalvariable{total}}
+\end{scratch}		
+		\end{minipage}\hfill
+		\begin{minipage}{0.43\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En python
+Instruction_1
+if condition:
+	Instruction_2
+Instruction_3
+	\end{lstlisting}
+    
+    \begin{lstlisting}[numbers=none]
+# En python
+total = 10
+if total > 0:
+	total = total + 1
+print(total)
+	\end{lstlisting}
+		\end{minipage}
+	
+	
+	\begin{itemize}
+		\item l'\verb+Instruction 1+ est effectuée
+		\item SI la \verb+Condition+ est \verb+True+ alors l'\verb+Instruction 2+ est effectuée
+		\item SINON on va directement à l'\verb+Instruction 3+
+		\item Dans tous les cas l'\verb+Instruction 3+ est effectuée
+	\end{itemize}
+	
+	La \verb+Condition+ est un test qui est évalué en python par un booléen.
+	
+	\end{minipage}
+
+\end{easybox}
+
+
+%%%%%%%%%%%%%%%%%%%%%%ùùù
+
+\begin{exemple}[La condition IF sans ELSE: la valeur absolue d'un nombre]{}
+	%Prenons l'exemple d'une fonction calculant la valeur absolue d'une nombre $x$. La valeur absolue d'un nombre est notée en mathématique $|x|$
+	
+    \begin{minipage}{0.64\linewidth}
+        \begin{itemize}
+		\item si $x \geqslant 0$, alors $|x| = x$
+		\item si $x < 0$, alors $|x|=-x$
+	\end{itemize}
+        \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	def valeur_absolue(x):
+		''' Renvoie |x| '''
+		if x < 0:
+		# si x < 0 on échange x par -x	
+			x = - x
+		return x
+	\end{CodePythontexAlt}
+    \end{minipage}\hfill{}
+    \begin{minipage}{0.33\linewidth}
+        \begin{center}
+			
+		\begin{tikzpicture}[node distance=1.5cm]
+			% Nœuds
+		\node (decision) [decision] at (0, 0){$x < 0$};
+		\node (instruction2) [process] at (0, -2){$x = - x$};
+		\node (instruction3) [process] at (0, -4) {return $x$};
+	
+		\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction3.north)$);
+		\coordinate (point1) at (2, -2.5);
+		% Flèches
+		\draw [arrow] (decision.south) -- node[anchor=west] {True} (instruction2.north);
+		\draw [arrow] (instruction2) -- (instruction3);
+		\draw [arrow] (decision.east) -| node[anchor=east, xshift=1.2cm, yshift=-2cm] {False}(point1);
+		\draw [arrow] (point1) |- (midpoint1);
+	\end{tikzpicture}
+	\end{center}
+    \end{minipage}
+    
+	
+	
+	
+	
+	
+		
+		
+		
+		
+	\end{exemple}
+	
+
+    
+
+
+	\begin{easybox}{Les structures conditionnelles IF -- ELSE}{}
+		\begin{minipage}{0.4\linewidth}
+			\begin{tikzpicture}[node distance=1.5cm]
+				% Nœuds
+				\node (instruction1) [process] at (0, 0){instruction 1};
+				\node (decision) [decision] at (0, -2){Condition};
+				\node (instruction2) [process] at (3.5, -4){instruction 3};
+				\node (instruction3) [process] at (0, -4) {instruction 2};
+				\node (instruction4) [process] at (0, -6) {instruction 4};
+				
+				\coordinate (midpoint1) at ($(instruction3.south)!0.5!(instruction4.north)$);
+					% Flèches
+				\draw [arrow] (instruction1) -- (decision);
+				\draw [arrow] (decision.east) -| node[anchor=south] {False} (instruction2.north);
+				\draw [arrow] (decision.south) -- node[anchor=east, xshift=-0.5cm, yshift=0.3cm] {True} (instruction3.north);
+				\draw [arrow] (instruction3) -- (instruction4);
+				\draw [arrow] (instruction2) |- (midpoint1);
+		
+			\end{tikzpicture}		
+		\end{minipage}\hfill
+		\begin{minipage}{0.58\linewidth}
+			\begin{minipage}{0.48\linewidth}
+	\begin{scratch}
+\blockifelse{si \booloperator{\ovalmove{x} >= \ovalnum{0}} alors}
+{\blocklook{mettre \ovalvariable{x} à {\ovalvariable{x ** 2} }}}
+{\blocklook{mettre \ovalvariable{x} à {\ovalvariable{x ** 3} }}}
+\end{scratch}	
+			\end{minipage}\hfill
+			\begin{minipage}{0.48\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En python
+	
+instruction_1
+	
+if condition:
+	instruction_2
+else:
+	instruction_3
+instruction_4
+	\end{lstlisting}		
+			\end{minipage}
+				
+				
+	\begin{itemize}
+		\item l'\verb+instruction 1+ est effectuée
+		\item SI la \verb+Condition+ est \verb+True+ alors l'\verb+instruction 2+ est effectuée
+		\item SINON l'\verb+instruction 3+ est effectuée
+		\item Dans tous les cas l'\verb+instruction 4+ est effectuée
+	\end{itemize}
+		\end{minipage}
+			
+			
+	\end{easybox}
+	
+	\begin{exemple}[La condition IF -- ELSE]{}
+		
+
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+		def ma_fonction(x):
+			if x >= 0:	
+				sortie = x ** 2
+			else:
+				sortie = x ** 3
+			return sortie
+		\end{CodePythontexAlt}
+		\end{exemple}
+		
+	\begin{easybox}{Les structures conditionnelles IF -- ELIF -- ELSE}{}
+	
+	\medskip
+	
+	Dans le cas où il y a plusieurs possibilités de réponse, on peut utiliser deux structures différentes en python.
+	
+	On suppose une fonction prenant comme paramètre une variable $x$ de type entier.
+	
+	\[f(x)=1 \texttt{ si }  x>0 \qquad f(x)=0 \texttt{ si }  x=0 \qquad f(x)=-1 \texttt{ si } x<0\]
+	
+	\begin{minipage}{0.6\linewidth}
+		\begin{tikzpicture}[node distance=1.5cm]
+			% Nœuds
+			\node (instruction1) [process] at (0, 0){Instruction 1};
+			\node (decision1) [decision] at (0, -2.3){Condition1};
+			\node (decision2) [decision] at (3.5, -4.) {Condition2};	
+			\node (instruction2) [process] at (0, -6.5) {Instruction 2};
+			\node (instruction3) [process] at (3.5, -6.5){Instruction 3};
+			\node (instruction4) [process] at (7, -6.5){Instruction 4};
+			\node (instruction5) [process] at (0, -9){Instruction 5};
+		
+			\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction5.north)$);
+		
+			\draw [arrow] (instruction1) -- (decision1);
+			\draw [arrow] (decision1.east) -| node[anchor=west] {False}(decision2.north);
+			\draw [arrow] (decision1.south) -- node[anchor=east] {True}(instruction2.north);
+			\draw [arrow] (decision2.south) -- node[anchor=east] {True}(instruction3.north);
+			\draw [arrow] (decision2.east) -| node[anchor=west] {False}(instruction4.north);
+			\draw [arrow] (instruction2) -- (instruction5);
+			\draw [arrow] (instruction3.south) |- (midpoint1);
+			\draw [arrow] (instruction4.south) |- (midpoint1);
+			
+	
+		
+		\end{tikzpicture}	
+	\end{minipage}\hfill
+	\begin{minipage}{0.38\linewidth}
+	
+		
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+			def ma_fonction(x):
+				if x > 0:	
+					sortie = 1
+				elif x == 0:
+					sortie = 0
+				else:
+					sortie = -1
+				return sortie
+			\end{CodePythontexAlt}
+	
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+				def ma_fonction(x):
+					if x > 0:	
+						sortie = 1
+					else:
+						if x == 0:
+							sortie = 0
+						else:
+							sortie = -1
+					return sortie
+				\end{CodePythontexAlt}
+	\end{minipage}
+	
+	
+	\end{easybox}
+	
+	\begin{exercice_cours}[Compléter les fonctions suivantes]{}
+	
+        \begin{minipage}{0.48\linewidth}
+            \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+def plus_grand2(a, b):
+    ''' Renvoie le plus grand des 
+    deux nombres a et b '''
+	# A compléter
+
+
+
+
+
+
+
+
+    #
+	\end{CodePythontexAlt}
+        \end{minipage}\hfill{}
+        \begin{minipage}{0.48\linewidth}
+            \begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+def plus_grand3(a, b, c):
+    ''' Renvoie le plus grand des 
+    trois nombres a, b et c '''
+    # A compléter
+            
+
+
+
+
+
+
+
+    #
+		\end{CodePythontexAlt}
+        \end{minipage}
+        
+	
+	
+	
+		
+	
+	
+	\end{exercice_cours}	
+
+\end{document}
 
 \section{L'environnement de travail}
 
@@ -23,7 +319,7 @@ Nous avons à notre disposition plusieurs outils pour écrire du code Python.
 \subsection*{Notebook Capytale}
 
 \begin{minipage}{0.48\linewidth}
-	Vous accédez à \texttt{Capytale~--~Notebook} depuis votre ENT en cliquant sur \verb|Pédagogie/Capytale|. Le professeur vous donnera un code à entrer dans la zone \verb|Accéder à une activité|.
+	Vous accédez à \texttt{Capytale -- Notebook} depuis votre ENT en cliquant sur \verb|Pédagogie/Capytale|. Le professeur vous donnera un code à entrer dans la zone \verb|Accéder à une activité|.
 
 \end{minipage}\hfill{}
 \begin{minipage}{0.48\linewidth}
@@ -38,8 +334,8 @@ Vous pourrez également y accéder directement via un lien que vous donnera votr
 
 \subsection*{Console Capytale}
 
-\begin{minipage}{0.46\linewidth}
-Vous accédez à \texttt{Capytale~--~Console} depuis votre ENT de la même manière que pour les Notebook.
+\begin{minipage}{0.48\linewidth}
+Vous accédez à \texttt{Capytale -- Console} depuis votre ENT de la même manière que pour les Notebook.
 
 \end{minipage}\hfill{}
 \begin{minipage}{0.48\linewidth}
@@ -252,7 +548,7 @@ b = False
 
     Chaque caractère d'une chaine de caractères est indexé: 
     il y a un index qui donne sa position dans la chaine       
-    \end{minipage}\hfill{}
+    \end{minipage}
     \begin{minipage}{0.5\linewidth}
  \begin{center}
         \begin{tabular}{|c|c|c|c|c|c|c|c|}
@@ -323,7 +619,7 @@ mot[-1]
 \end{minipage}
 
 \begin{easybox}{Opérations avancées sur les chaines de caractères: le Slicing}{}
-\bigskip
+    \hspace{1cm}
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{p{2cm}|p{13cm}}
         \texttt{[a:b]} & conserve les caractères d'indice \texttt{[a:b]}:  \verb~'Bonjour'[1:4]~ donne \verb~'onj'~ \\
