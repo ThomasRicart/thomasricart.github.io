@@ -16,7 +16,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [💡 **Synthèse**](./LP03_Conditions_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/LP03_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/LP03_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**](./) | Exercices d'application |[Correction](./) |
+| [✏️ **Exercices**](./exercices/LP03_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/LP03_EXO1_Correction.pdf) |
 | [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
 
 ---
