@@ -4,4 +4,4 @@
 [quiz](./quiz/LP01_quiz.html)
 [flashcards](./flashcards/LP01_flashcards.html)
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/thomasricart/lvh/main?filepath=docs/NSI_Premiere/LP01_Constructions_elementaires/LP01-ACT1-constructions_elementaires.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/thomasricart/main?filepath=docs/NSI_Premiere/LP01_Constructions_elementaires/LP01-ACT1-constructions_elementaires.ipynb)
