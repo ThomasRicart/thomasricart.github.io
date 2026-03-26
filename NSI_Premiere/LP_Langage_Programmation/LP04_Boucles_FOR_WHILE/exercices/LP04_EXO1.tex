@@ -1,0 +1,148 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+%\def\visibleornot{visible}    % visible or invisible
+\ifdefined\visibleornot\else\def\visibleornot{visible}\fi
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{0}
+
+
+
+\begin{document}
+
+\def\level{Premiere}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{La boucle FOR} % Titre au centre
+\def\docname{LP04~--~TD 1}        % Identifiant à gauche
+
+\pagestyle{DS_LP}
+
+\NomPrenom{}
+
+\begin{exercice_cours}[pour chaque boucle, indiquer combien de fois elle s'exécute et les valeurs prises par \texttt{i}:]
+    
+\begin{tabular}{p{7cm}cc}
+    \hline
+    Instruction & Nbre de boucles & Valeurs de \texttt{i} \\
+    \hline
+    \verb|for i in range(5):| & \reponseLigne[3.5cm]{\texttt{5}} & \reponseLigne[4.5cm]{\texttt{0, 1, 2, 3, 4}} \\
+    \verb|for i in range(2, 6):| & \reponseLigne[3.5cm]{\texttt{4}} & \reponseLigne[4.5cm]{\texttt{2, 3, 4, 5}} \\
+    \verb|for i in range(0, 7):| & \reponseLigne[3.5cm]{\texttt{7}} & \reponseLigne[4.5cm]{\texttt{0, 1, 2, 3, 4, 5, 6}} \\
+    \verb|for i in range(1, 10, 2):| & \reponseLigne[3.5cm]{\texttt{5}} & \reponseLigne[4.5cm]{\texttt{1, 3, 5, 7, 9}} \\
+    \hline
+        \end{tabular}
+    \end{exercice_cours}
+
+
+    
+    \begin{minipage}{0.48\linewidth}
+        \begin{exercice_cours}[Ecrire un code]
+        Ecrire une boucle \texttt{for} qui affiche les nombres pairs de 0 à 20 (inclus).    
+    
+    \end{exercice_cours}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{blocvisible}[height=3.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def afficher_pairs():
+    for i in range(0, 21, 2):
+        print(i)
+
+    \end{CodePythontexAlt}
+\end{blocvisible}
+    \end{minipage}
+
+    
+    \begin{minipage}{0.48\linewidth}
+        \begin{exercice_cours}[Test d'appartenance]
+
+Ecrire la fonction  qui prend en paramètre un mot et une lettre, et qui retourne: 
+\begin{itemize}
+        \item \texttt{True} si la lettre est présente dans le mot
+        \item \texttt{False} sinon 
+    \end{itemize}
+
+    Fonction: \verb|est_present(mot, lettre_c)|
+    \end{exercice_cours}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{blocvisible}[height=4.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def est_present(mot, lettre_c):
+    for lettre in mot:
+        if lettre == lettre_c:
+            return True
+    return False
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+
+    \end{minipage}
+
+        
+    \begin{minipage}{0.48\linewidth}
+           \begin{exercice_cours}[Nombre d'occurences]
+
+            Ecrire la fonction \verb|compter(mot, lettre_c)| qui prend en paramètre un mot et une lettre, et qui retourne le nombre d'occurences de la lettre dans le mot.
+    \end{exercice_cours}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{blocvisible}[height=4.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def compter(mot, lettre_c):
+    count = 0
+    for lettre in mot:
+        if lettre == lettre_c:
+            count += 1
+    return count
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+    \end{minipage}
+
+\begin{minipage}{0.45\linewidth}
+           \begin{exercice_cours}[Modification de str]
+
+Ecrire la fonction \verb|remplacer(mot, L1, L2)| qui prend en paramètre un mot et deux lettres, et qui retourne le mot avec toutes les occurrences de la première lettre remplacées par la deuxième lettre.
+    \end{exercice_cours}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.53\linewidth}
+\begin{blocvisible}[height=5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def remplacer(mot, L1, L2):
+    nouveau_mot = ""
+    for lettre in mot:
+        if lettre == L1:
+            nouveau_mot += L2
+        else:
+            nouveau_mot += lettre
+    return nouveau_mot
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+    \end{minipage}
+
+\end{document}
