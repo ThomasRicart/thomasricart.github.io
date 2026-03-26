@@ -16,7 +16,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/LP04_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/LP04_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**](./) | Exercices d'application |[Correction](./) |
-| [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
+| [📚 **Activité pratique 1**](./LP04-ACT1-boucles_FOR.ipynb) | Activité Capytale Boucle FOR | [Correction](./)|
+| [📚 **Activité pratique 2**](./LP04-ACT2-boucles_WHILE.ipynb) | Activité Capytale Boucle WHILE | [Correction](./)|
 
 ---
 ---

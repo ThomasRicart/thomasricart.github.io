@@ -17,7 +17,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/LP03_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/LP03_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**](./exercices/LP03_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/LP03_EXO1_Correction.pdf) |
-| [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
+| [📚 **Activité pratique**](./LP03-ACT1-conditions.ipynb) | Activité Capytale | [Correction](./)|
 
 ---
 ---
