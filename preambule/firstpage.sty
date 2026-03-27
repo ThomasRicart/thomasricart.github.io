@@ -1,0 +1,94 @@
+%\thispagestyle{empty}          % Feuille de style fancy
+
+\newcommand{\parttitle}{
+\begin{titlepage}
+    \begin{center}
+        \vspace*{3cm}
+        {\huge \textbf{Année scolaire \schoolyear}}\\[0.4cm]
+        {\Large Lycée Victor Hugo - Colomiers}\\[1cm]
+        \vspace{2cm}
+        {\Huge \textbf{\level \: \course}}\\[0.5cm]
+
+        \rule{0.8\linewidth}{0.5mm}\\[0.4cm]
+        {\Huge \textbf{\codepart}}\\[0.5cm]        
+        {\Huge \textbf{\textpart}}\\[0.5cm]
+        \rule{0.8\linewidth}{0.5mm}\\[1.5cm]
+        \vspace{2cm}
+        
+        \Large
+        \textbf{Thomas Ricart} \\[2cm]
+        \texttt{\href{ricart.lvh@laposte.net}{ricart.lvh@laposte.net}}\\[2cm]
+        \texttt{\href{https://thomasricart.github.io}{https://thomasricart.github.io}}\\[2cm]
+
+        \vfill
+        %\textit{Document officiel du cours NSI}\\
+        \today
+    \end{center}
+\end{titlepage}
+}
+
+\newcommand{\booktitle}{
+\begin{titlepage}
+    \begin{center}
+        \vspace*{3cm}
+        {\huge \textbf{Année scolaire \schoolyear}}\\[0.4cm]
+        {\Large Lycée Victor Hugo - Colomiers}\\[1cm]
+        \vspace{2cm}
+
+        \rule{0.8\linewidth}{0.5mm}\\[0.4cm]
+        {\Huge \textbf{\level \: \course}}\\[0.5cm]
+        \rule{0.8\linewidth}{0.5mm}\\[1.5cm]
+        \vspace{2cm}
+        
+        \Large
+        \textbf{Thomas Ricart} \\
+        \texttt{\href{ricart.lvh@laposte.net}{ricart.lvh@laposte.net}}\\[2cm]
+        
+        \vfill
+        %\textit{Document officiel du cours NSI}\\
+        \today
+    \end{center}
+\end{titlepage}
+}
+
+\newcommand{\parttitlebook}{
+    \thispagestyle{empty}
+    \begin{center}
+        \vspace*{3cm}
+        {\huge \textbf{Année scolaire \schoolyear}}\\[0.4cm]
+        {\Large Lycée Victor Hugo - Colomiers}\\[1cm]
+        \vspace{2cm}
+        {\Huge \textbf{\level \: \course}}\\[0.5cm]
+
+        \rule{0.8\linewidth}{0.5mm}\\[0.4cm]
+        {\Huge \textbf{\codepart}}\\[0.5cm]        
+        {\Huge \textbf{\partname}}\\[0.5cm]
+        \rule{0.8\linewidth}{0.5mm}\\[1.5cm]
+        \vspace{2cm}
+        
+        \Large
+        \textbf{Thomas Ricart} \\
+        \texttt{\href{ricart.lvh@laposte.net}{ricart.lvh@laposte.net}}\\[2cm]
+        \texttt{\href{https://thomasricart.github.io}{https://thomasricart.github.io}}\\[2cm]
+        \vfill
+        %\textit{Document officiel du cours NSI}\\
+        \today
+    \end{center}
+}
+
+
+\makeatletter
+\newcommand{\resetTout}{
+  \setcounter{section}{0}
+  \setcounter{figure}{0}
+  % On réinitialise les compteurs spécifiques de tes tcolorbox
+  \@ifundefined{c@tcb@cnt@definition}{}{\setcounter{tcb@cnt@definition}{0}}
+  \@ifundefined{c@tcb@cnt@propriete}{}{\setcounter{tcb@cnt@propriete}{0}}
+  \@ifundefined{c@tcb@cnt@methode}{}{\setcounter{tcb@cnt@methode}{0}}
+  \@ifundefined{c@tcb@cnt@exemple}{}{\setcounter{tcb@cnt@exemple}{0}}
+  \@ifundefined{c@tcb@cnt@exercice_cours}{}{\setcounter{tcb@cnt@exercice_cours}{0}}
+}
+\makeatother
+
+
+
