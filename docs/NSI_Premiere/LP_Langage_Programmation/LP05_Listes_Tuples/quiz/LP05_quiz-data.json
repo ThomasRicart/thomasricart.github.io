@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Quelle est la principale différence entre une liste et un tuple en Python ?",
+    "options": [
+      "La liste est immuable, le tuple est mutable",
+      "La liste est mutable, le tuple est immuable",
+      "Le tuple ne peut contenir que des nombres",
+      "Il n'y a aucune différence technique"
+    ],
+    "answer": 1,
+    "feedback": "Une <strong>liste</strong> peut être modifiée après sa création (mutable), alors qu'un <strong>tuple</strong> ne peut plus changer (immuable)."
+  },
+  {
+    "question": "Si <code>L = [10, 20, 30, 40]</code>, que renvoie <code>L[-1]</code> ?",
+    "options": ["10", "40", "Erreur d'indice", "-1"],
+    "answer": 1,
+    "feedback": "L'indice <code>-1</code> est un raccourci Python pour accéder au <strong>dernier élément</strong> d'une séquence."
+  },
+  {
+    "question": "Quelle méthode permet d'ajouter la valeur 5 à la fin de la liste <code>MaListe</code> ?",
+    "options": ["MaListe.add(5)", "MaListe.insert(5)", "MaListe.append(5)", "MaListe.push(5)"],
+    "answer": 2,
+    "feedback": "La méthode <code>.append()</code> ajoute un élément unique à la fin d'une liste existante."
+  },
+  {
+    "question": "Que vaut <code>len(M)</code> si <code>M = [[1, 2], [3, 4], [5, 6]]</code> ?",
+    "options": ["6", "2", "3", "9"],
+    "answer": 2,
+    "feedback": "La fonction <code>len()</code> compte les éléments de premier niveau. Ici, il y a 3 sous-listes dans la liste principale."
+  },
+  {
+    "question": "Comment appelle-t-on l'accès à une sous-partie d'une liste (ex: <code>L[1:3]</code>) ?",
+    "options": ["Le hachage", "Le slicing (ou découpage)", "L'indiçage inverse", "La concaténation"],
+    "answer": 1,
+    "feedback": "Le <strong>slicing</strong> permet d'extraire une portion de liste en précisant <code>[début : fin_exclue]</code>."
+  },
+  {
+    "question": "Quel est le résultat de <code>[0] * 3</code> ?",
+    "options": ["[0, 0, 0]", "[0, 3]", "[3]", "Erreur"],
+    "answer": 0,
+    "feedback": "L'opérateur <code>*</code> utilisé sur une liste effectue une <strong>répétition</strong> des éléments."
+  },
+  {
+    "question": "Que se passe-t-il si on exécute <code>T = (1, 2); T[0] = 5</code> ?",
+    "options": [
+      "T devient (5, 2)",
+      "T devient [5, 2]",
+      "Python ignore l'instruction",
+      "Python lève une erreur (TypeError)"
+    ],
+    "answer": 3,
+    "feedback": "Comme le tuple est <strong>immuable</strong>, toute tentative de modification de ses éléments provoque une erreur."
+  },
+  {
+    "question": "Quelle est la valeur de <code>c</code> après : <code>a = [1]; b = a; b.append(2); c = a</code> ?",
+    "options": ["[1]", "[1, 2]", "[2]", "[1, [2]]"],
+    "answer": 1,
+    "feedback": "C'est un <strong>effet de bord</strong> : <code>b = a</code> crée une référence vers la même liste. Modifier <code>b</code> modifie donc aussi <code>a</code>."
+  },
+  {
+    "question": "Laquelle de ces syntaxes est une 'liste par compréhension' ?",
+    "options": [
+      "L = list(1, 2, 3)",
+      "L = [i for i in range(5)]",
+      "L = for i in range(5): append(i)",
+      "L = {1, 2, 3}"
+    ],
+    "answer": 1,
+    "feedback": "La <strong>compréhension de liste</strong> permet de créer une liste de façon compacte en une seule ligne."
+  },
+  {
+    "question": "Comment accéder au nombre 9 dans <code>grille = [[1, 2], [8, 9]]</code> ?",
+    "options": ["grille[1, 1]", "grille[2][2]", "grille[1][1]", "grille[9]"],
+    "answer": 2,
+    "feedback": "On accède d'abord à la deuxième sous-liste (indice 1), puis au deuxième élément de celle-ci (indice 1)."
+  }
+]
