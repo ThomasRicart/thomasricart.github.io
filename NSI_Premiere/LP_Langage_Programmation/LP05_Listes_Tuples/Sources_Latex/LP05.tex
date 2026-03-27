@@ -1,0 +1,832 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Listes et Tuples} % Titre au centre
+\def\docname{LP05}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\section{Les listes}
+
+
+\begin{definition}[Les listes]{}
+	Une \textbf{liste} est une structure de donnée qui contient des éléments ou items identifiés par des indices.
+
+Ces éléments sont:
+\begin{itemize}
+\item \textbf{ordonnés}: les éléments d'une liste sont rangés dans un ordre précis. Chaque élément a une position dans la liste, appelée indice.
+\item \textbf{séparés par des virgules}: les éléments d'une liste sont séparés par des virgules.
+\item \textbf{entre crochets}: les éléments d'une liste sont entourés de crochets \verb|[ ]| en python.
+\end{itemize}
+
+
+\medskip
+
+\begin{tabular}{|p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+\hline
+Indice \verb|i| & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ \hline
+Elément & \verb|T[0]| & \verb|T[1]| & \verb|T[2]| & \verb|T[3]| & \verb|T[4]| & \verb|T[5]| & \verb|T[6]| & \verb|T[7]| \\ \hline
+
+\end{tabular}
+
+
+
+\end{definition}
+\begin{easybox}{Créer une liste}{}
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [1, 2, 3, 4, 5]
+		\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = ['a', 'b', 'c']
+		\end{CodePythontexAlt}
+	\end{minipage}
+
+
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [1, 2, 3, 4, 5]
+print(type(ma_liste))		# Une liste est de type 'list'
+		\end{ConsolePythontex}
+\end{easybox}
+
+\begin{easybox}{Accéder aux éléments d'une liste}{}
+	Pour accéder à un élément d'une liste, on utilise son indice. Les indices commencent à 0.
+
+	\smallskip
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [1, 2, 3, 4, 5]
+print(ma_liste[0]) 
+print(ma_liste[2]) 
+		\end{ConsolePythontex}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [1, 2, 3, 4, 5]
+print(ma_liste[-1]) 
+print(ma_liste[-2])
+		\end{ConsolePythontex}
+	\end{minipage}
+	\end{easybox}
+
+	\begin{easybox}{Modifier les éléments d'une liste}{}
+		Les éléments d'une liste peuvent être modifiés en utilisant leur indice.
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste[0] = 10
+print(ma_liste)
+		\end{ConsolePythontex}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste[4] = 20
+print(ma_liste)
+		\end{ConsolePythontex}
+	\end{minipage}
+\end{easybox}
+
+\begin{easybox}{Connaitre le nombre d'éléments d'une liste}{}
+	Pour connaitre le nombre d'éléments d'une liste, on utilise la fonction \verb|len()|.
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [1, 2, 3, 4, 5]
+print(len(ma_liste))
+		\end{ConsolePythontex}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = ['a', 'b', 'c']
+print(len(ma_liste))
+		\end{ConsolePythontex}
+	\end{minipage}
+\end{easybox}
+
+\begin{exercice_cours}[{Manipulation de base}]{}
+
+	\begin{enumerate}
+		\item Créer la liste suivante: \verb|[4, 8, 7, 9, 4]|
+		\item Afficher le nombre d'éléments de cette liste. (\emph{affiche 5})
+		\item Afficher le troisième élément de cette liste. (\emph{affiche 7})
+		\item Modifier le deuxième élément de cette liste pour qu'il soit égal à 10
+		\item Afficher la liste modifiée. (\emph{affiche [4, 10, 7, 9, 4]})
+		\item Modifier le dernier élément de cette liste pour qu'il soit égal à 5
+		\item Afficher la liste modifiée. (\emph{affiche [4, 10, 7, 9, 5]})
+		\item Modifier le premier éléments de la liste en le remplaçant par la somme du premier et du troisième élément de cette liste
+		\item Afficher la liste modifiée. (\emph{affiche [11, 10, 7, 9, 5]})
+
+	\end{enumerate}
+\end{exercice_cours}
+
+\begin{easybox}{Itérer sur une liste avec une boucle FOR}{}
+
+	Comme pour les chaines de caractères, il est possible d'itérer sur les éléments d'une liste à l'aide d'une boucle \verb|FOR|.	
+
+	\smallskip
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [4, 8, 7, 9, 4]
+for i in range(0, len(ma_liste)):
+	print(ma_liste[i])
+		\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [4, 8, 7, 9, 4]
+for elt in ma_liste:
+	print(elt)
+		\end{CodePythontexAlt}
+	\end{minipage}
+\end{easybox}
+
+\begin{exercice_cours}[Quelques algorithmes sur les listes]{}
+	
+	\begin{enumerate}
+		\item Ecrire une fonction \texttt{somme(liste)} qui renvoie la somme des éléments d'une liste de nombres.
+		
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def somme(liste):
+					''' Renvoie la somme des éléments de liste'''
+
+
+
+
+					#
+				assert somme([1, 2, 3, 4, 5]) == 15
+				assert somme([4, 8, 7, 9, 4]) == 32
+				\end{CodePythontexAlt}
+
+		\item Ecrire une fonction \texttt{maximum(liste)} qui renvoie le maximum des éléments d'une liste de nombres.
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def maximum(liste):
+					''' Renvoie le maximum des éléments de liste'''
+
+
+
+
+
+
+					#
+				assert maximum([1, 2, 3, 4, 5]) == 5
+				assert maximum([4, 8, 7, 9, 4]) == 9
+				\end{CodePythontexAlt}
+		\pagebreak
+
+		\item Ecrire une fonction \texttt{est\_present(elt,liste)} qui renvoie \texttt{True} si l'élément \texttt{elt} est présent dans la liste \texttt{liste}, et \texttt{False} sinon.
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def est_present(elt, liste):
+					''' Renvoie True si elt est dans liste et False sinon'''	
+
+
+
+
+
+
+					#
+				assert est_present(3, [1, 2, 3, 4, 5]) == True
+				assert est_present(6, [1, 2, 3, 4, 5]) == False
+				\end{CodePythontexAlt}
+	
+	\end{enumerate}
+\end{exercice_cours}
+
+\begin{easybox}{Liste de listes}{}
+	Une liste peut contenir des éléments qui sont eux-mêmes des listes. On parle alors de liste de listes.
+
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [[1, 2, 3], [4, 5], [7, 8, 9, 10]]
+print(len(ma_liste))
+print(len(ma_liste[1]))
+print(ma_liste[0])
+print(ma_liste[1])
+print(ma_liste[2])
+print(ma_liste[0][1])
+print(ma_liste[1][1])
+print(ma_liste[2][0])
+		\end{ConsolePythontex}
+
+		
+
+\end{easybox}
+
+\begin{exercice_cours}[Manipulation de listes de listes]{}
+	\begin{enumerate}
+		\item Créer la liste suivante: \verb|[[1, 2], [3, 4], [5, 6]]|
+		\item Afficher le nombre d'éléments de cette liste. (\emph{affiche 3})
+		\item Afficher le deuxième élément de cette liste. (\emph{affiche [3, 4]})
+		\item Afficher le premier élément du troisième élément de cette liste. (\emph{affiche 5})
+		\item Modifier le deuxième élément du premier élément de cette liste pour qu'il soit égal à 10
+		\item Afficher la liste modifiée. (\emph{affiche [[1, 10], [3, 4], [5, 6]]})
+		\item Modifier le premier élément du deuxième élément de cette liste pour qu'il soit égal à 20
+		\item Afficher la liste modifiée. (\emph{affiche [[1, 10], [20, 4], [5, 6]]})	
+		\item Modifier le deuxième élément du troisième élément de cette liste en le remplaçant par la somme du premier et du deuxième élément de ce troisième élément
+		\item Afficher la liste modifiée. (\emph{affiche [[1, 10], [20, 4], [5, 11]]})
+	\end{enumerate}
+\end{exercice_cours}
+
+\pagebreak
+
+
+\begin{exercice_cours}[Itérer sur une liste de listes]{}
+	\begin{enumerate}
+		\item Ecrire une fonction \texttt{somme\_liste\_de\_listes(liste)} qui renvoie la somme des éléments d'une liste de listes de nombres.
+		
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def somme_liste_de_listes(liste):
+					''' Renvoie la somme des éléments de liste'''
+
+
+
+
+
+					#
+				assert somme_liste_de_listes([[1, 2], [3, 4], [5, 6]]) == 21
+				\end{CodePythontexAlt}
+
+		\item Ecrire une fonction \texttt{maximum\_sous\_liste(liste)} qui renvoie la sous liste dont la somme des éléments est maximale.
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def maximum_sous_liste(liste):
+					''' Renvoie la sous liste dont la somme des éléments est max'''
+
+
+
+
+
+
+					#
+				assert maximum_sous_liste([[3, 4, 16], [5, 6, 1, 8]]) == [3, 4, 16]
+				\end{CodePythontexAlt}
+	\end{enumerate}
+\end{exercice_cours}
+
+\begin{easybox}{Quelques méthodes sur les listes}{}
+
+\begin{itemize}
+\item \verb|append(elt)|: ajoute l'élément \verb|elt| à la fin de la liste	
+\item \verb|pop()|: supprime et renvoie le dernier élément de la liste
+\item \verb|pop(i)|: supprime et renvoie l'élément d'indice \verb|i| de la liste
+\end{itemize}
+
+\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste.append(6)
+print(ma_liste)
+a = ma_liste.pop()
+print(a)
+print(ma_liste)
+b = ma_liste.pop(2)
+print(b)
+print(ma_liste)
+		\end{ConsolePythontex}
+\end{easybox}
+
+\pagebreak
+\begin{exercice_cours}[Quelques méthodes sur les listes]{}
+
+	\begin{enumerate}
+		\item Ecrire une fonction \texttt{supprime\_element(liste, element)} qui supprime 
+	\end{enumerate}
+\begin{enumerate}
+\item Ecrire une fonction \texttt{ajoute\_fin(liste, elt)} qui ajoute l'élément \texttt{elt} à la fin de la liste \texttt{liste}.	
+\item Ecrire une fonction \texttt{supprime\_dernier(liste)} qui supprime et renvoie le dernier élément de la liste \texttt{liste}.
+\item Ecrire une fonction \texttt{supprime\_indice(liste, i)} qui supprime et renvoie l'élément d'indice \texttt{i} de la liste \texttt{liste}.
+\item Ecrire une fonction \texttt{ajoute\_fin\_n\_fois(liste, elt, n)} qui ajoute l'élément \texttt{elt} à la fin de la liste \texttt{liste} \texttt{n} fois.	
+\item Ecrire une fonction \texttt{supprime\_dernier\_n\_fois(liste, n)} qui supprime et renvoie le dernier élément de la liste \texttt{liste} \texttt{n} fois.
+\item Ecrire une fonction \texttt{supprime\_indice\_n\_fois(liste, i, n)} qui supprime et renvoie l'élément d'indice \texttt{i} de la liste \texttt{liste} \texttt{n} fois.	
+\item Ecrire une fonction \texttt{ajoute\_fin\_n\_fois\_element\_differents(liste, elt, n)} qui ajoute l'élément \texttt{elt} à la fin de la liste \texttt{liste} \texttt{n} fois en ajoutant un nombre différent à chaque fois.	
+\item Ecrire une fonction \texttt{supprime\_dernier\_n\_fois\_element\_differents(liste, n)}	qui supprime et renvoie le dernier élément de la liste \texttt{liste} \texttt{n} fois en supprimant un nombre différent à chaque fois.	
+\item Ecrire une fonction \texttt{supprime\_indice\_n\_fois\_element\_differents(liste, i, n)} qui supprime et renvoie l'élément d'indice	 \texttt{i} de la liste \texttt{liste} \texttt{n} fois en supprimant un nombre différent à chaque fois.
+\end{enumerate}	
+
+\end{exercice_cours}
+\end{document}
+
+\medskip
+
+	\begin{minipage}{0.35\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En pseudo code
+instruction1
+Pour i allant de 0 a 6:
+	instruction2
+instruction3
+	\end{lstlisting}
+		\end{minipage}\hfill
+		\begin{minipage}{0.63\linewidth}
+	\begin{itemize}
+		\item instruction1 est effectuée
+		\item \verb+i+ est un \verb+itérateur+ qui va aller de 0 à 6, c'est à dire 7 tours
+		\item On effectuera donc 7 fois l'instruction2 
+		\item Quand on a fini la boucle on effectue l'instruction3
+	\end{itemize}
+		\end{minipage}	
+	\end{easybox}
+	
+	\begin{easybox}{La boucle FOR en python}
+		\begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+for i in range(0, 7):
+	print(i, end=" ")
+# affichage: 
+# 0 1 2 3 4 5 6
+	
+				\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		\begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+for i in range(2, 7):
+	print(i, end=" ")
+# affichage: 
+# 2 3 4 5 6
+					
+				\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		 \begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+for i in range(5):
+	print(i, end=" ")
+# affichage: 
+# 0 1 2 3 4
+	
+				\end{CodePythontexAlt}
+		\end{minipage}
+	\end{easybox}
+	
+	
+	\begin{easybox}{Prototypage de la boucle FOR}
+	La boucle FOR s'écrit de manière générale de la façon suivante:
+	
+	\medskip
+	
+	\begin{minipage}[b]{0.4\linewidth}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		for i in range(a, b):
+	\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.58\linewidth}
+	La boucle est effectuée $b-a$ fois et la variable \verb+i+ prend pour valeur tous les entiers entre $\fo{a}{b}$
+	\end{minipage}
+	
+	
+	\end{easybox}
+	
+
+	\begin{minipage}{0.45\linewidth}
+		
+	\begin{exemple}[Trace de la structure FOR]{}
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		for i in range(2, 6):
+			print(i)
+		print('fin')
+	\end{CodePythontexAlt}
+	
+		\end{exemple}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.55\linewidth}
+	
+	\renewcommand{\arraystretch}{1.1}
+	\begin{center}
+	\begin{tabular}{|c|p{2cm}|p{4cm}|}
+		\hline
+		\texttt{i}  & \texttt{i < 6} & instruction \\ \hline
+		\texttt{2}  & \texttt{True} & \texttt{print(2)} \\ \hline
+		\texttt{3}  & \texttt{True} & \texttt{print(3)} \\ \hline
+		\texttt{4}  & \texttt{True} & \texttt{print(4)} \\ \hline
+		\texttt{5}  & \texttt{True} & \texttt{print(5)} \\ \hline
+		\texttt{6}  & \texttt{False} & \texttt{print('fin')} \\ \hline
+	\end{tabular}	
+	\end{center}
+	
+	\end{minipage}
+	
+	
+	\begin{easybox}{Itération sur une chaine de caractères via les indices}{}
+	Une chaine de caractères \verb+str+ est un itérateur, c'est à dire qu'il est possible d'itérer sur ses éléments.
+	
+	\begin{minipage}[b]{0.48\linewidth}
+		\begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+	mot = 'Hello'
+	mot[1]
+			\end{ConsolePythontex}
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.48\linewidth}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			\textbf{Indice} & \verb+0+ & \verb+1+ & \verb+2+ & \verb+3+ & \verb+4+ \\
+			\hline
+			\textbf{Caractère} & \verb+H+ & \verb+e+ & \verb+l+ & \verb+l+ & \verb+o+  \\
+			\hline
+			\textbf{Indice Négatif} & \verb+-5+ & \verb+-4+ & \verb+-3+ & \verb+-2+ & \verb+-1+ \\
+			\hline
+			\end{tabular}
+		\end{center}
+	\end{minipage}
+	
+
+	\begin{minipage}{0.48\linewidth}
+	\medskip
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	mot = 'Hello'
+	for i in range(0, len(mot)):
+		print(mot[i])
+	print('Fin')
+			
+	\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{center}
+			\renewcommand{\arraystretch}{1}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\verb+i+  & \verb+i < len(mot)+ & instruction & affichage \\ \hline{}
+				\verb+0+  & \verb+True+ & \verb+print(mot[0])+ & \verb+H+ \\ \hline{}
+				\verb+1+  & \verb+True+ & \verb+print(mot[1])+ & \verb+e+ \\ \hline{}
+				\verb+2+  & \verb+True+ & \verb+print(mot[2])+ & \verb+l+ \\ \hline{}
+				\verb+3+  & \verb+True+ & \verb+print(mot[3])+ & \verb+l+ \\ \hline{}
+				\verb+4+  & \verb+True+ & \verb+print(mot[4])+ & \verb+o+ \\ \hline{}
+				\verb+5+  & \verb+False+ & \verb+print('Fin')+ & \verb+Fin+ \\ \hline
+			\end{tabular}	
+			\end{center}
+	\end{minipage}
+	\end{easybox}
+	
+	\begin{easybox}{Itération sur une chaine de caractères via les éléments}{}
+
+	Il est aussi possible	d'itérer directement sur les éléments qui constituent cette chaine de caractère
+	
+	On peut donc créer un variable nommée \verb+lettre+ par exemple qui prendra pour valeur chacun des caractères de \verb+mot+.
+	
+	\medskip
+	
+	\begin{minipage}{0.48\linewidth}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	mot = 'Hello'
+	for lettre in mot:
+		print(lettre)
+	print('Fin')
+	
+		\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{center}
+			\renewcommand{\arraystretch}{1}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				lettre  & instruction & affichage \\ \hline{}
+				\verb+'H'+  & \verb+print(lettre)+ & \verb+H+ \\ \hline{}
+				\verb+'e'+  & \verb+print(lettre)+ & \verb+e+ \\ \hline{}
+				\verb+'l'+  & \verb+print(lettre)+ & \verb+l+ \\ \hline{}
+				\verb+'l'+  & \verb+print(lettre)+ & \verb+l+ \\ \hline{}
+				\verb+'o'+  & \verb+print(lettre)+ & \verb+o+ \\ \hline{}
+				\verb+None+  & \verb+print('Fin')+ & \verb+Fin+ \\ \hline
+			\end{tabular}	
+		\end{center}
+	
+	
+	\end{minipage}
+	\begin{itemize}
+		\item Il n'y a pas besoin de connaitre la longueur du mot
+		\item Il n'y  plus l'utilisation d'indice
+		\item \verb+lettre+ prend pour valeur chaque caractère de mot
+		\item lorsque \verb+lettre+ a pris pour valeur tous les caractères de \verb+mot+, la boucle s'arrête.
+	\end{itemize}								
+	\end{easybox}
+	
+	\begin{minipage}[t]{0.45\linewidth}
+	\begin{exercice_cours}{Écrire une fonction permettant d'afficher tous les entiers entre 0 et 6 inclus}{}
+	\end{exercice_cours}
+	\end{minipage}\hspace{15pt}
+	\begin{minipage}[t]{0.45\linewidth}
+		\begin{exercice_cours}{Écrire une fonction permettant d'afficher tous les entiers entre 2 et 9 inclus}{}
+		\end{exercice_cours}
+	\end{minipage}
+	
+	%\vspace{1.5cm}
+	
+	\begin{minipage}[t]{0.45\linewidth}
+		\begin{exercice_cours}{Écrire une fonction permettant d'afficher toutes les lettres du mot \verb+'abracadabra'+ en itérant sur les indices}{}
+		\end{exercice_cours}
+		\end{minipage}\hspace{15pt}
+		\begin{minipage}[t]{0.45\linewidth}
+			\begin{exercice_cours}{Écrire une fonction permettant d'afficher toutes les lettres du mot \verb+'abracadabra'+ en itérant sur les caractères}{}
+			\end{exercice_cours}
+	
+		\end{minipage}
+	
+	
+	
+	\begin{easybox}{Algorithmes de Recherche dans un itérable}
+	
+		Cet algorithme permet de savoir si un élément est présent dans un itérable. 
+
+			\begin{itemize}
+
+				\item Le mot sera la variable \verb|mot|
+				\item La lettre que l'on cherche sera la variable \verb|lettre_cherchee|
+			\end{itemize}
+
+			On peut utiliser l'algorithme suivant:
+			
+	\begin{enumerate}
+		\item on parcourt \verb|mot| à l'aide d'une boucle \verb|FOR|
+		\item on observe donc chaque caractère \verb|mot[i]|
+		\item si le caractère est égal à \verb|lettre_cherchee|, alors on renvoie la valeur \verb|True| et on arrête la boucle.
+		\item sinon on ne fait rien et on revient à l'étape 2 pour observer le caractère suivant.
+		\item si on a observé tous les caractères de \verb|mot| sans trouver \verb|lettre_cherchee|, on renvoie \verb|False|
+	\end{enumerate}
+		\end{easybox}
+
+		\begin{exercice_cours}[Écrire une fonction \texttt{est\_present(mot, lettre\_cherchee)}]{}	
+    
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def est_present(mot, lettre_cherchee):
+					''' Renvoie True si lettre_cherchee est dans mot et False sinon'''
+
+
+
+
+
+					#
+					
+				\end{CodePythontexAlt}
+		\end{exercice_cours}
+
+		\newpage
+
+		\begin{exercice_cours}{Ecrire la fonction \texttt{est\_present2(mot, lettre\_cherchee)} en itérant sur les indices}{}
+
+		\end{exercice_cours}
+
+		\begin{exercice_cours}{		Ecrire la fonction \texttt{est\_present3(mot, lettre\_cherchee)} qui renvoie l'indice de la première occurrence de lettre\_cherchee dans mot ou \texttt{-1} si elle n'est pas présente}{}
+
+		\end{exercice_cours}
+
+	\begin{easybox}{Algorithmes de comptage dans un itérable}
+Cet algorithme permet de compter le nombre de fois qu'un élément est présent dans un itérable.
+			\begin{itemize}
+
+				\item Le mot sera la variable \verb|mot|
+				\item La lettre que l'on cherche sera la variable \verb|lettre_cherchee|
+			\end{itemize}
+
+			On peut utiliser l'algorithme suivant:
+			
+	\begin{enumerate}
+		\item on initialise un compteur à 0
+		\item on parcourt \verb|mot| à l'aide d'une boucle \verb|FOR|
+		\item on observe donc chaque caractère \verb|mot[i]|
+		\item si le caractère est égal à \verb|lettre_cherchee|, alors on incrémente le compteur.
+		\item sinon on ne fait rien 
+		\item on revient à l'étape 3 pour observer le caractère suivant.
+		\item si on a observé tous les caractères de \verb|mot|, on renvoie le compteur
+	\end{enumerate}
+		
+
+	\end{easybox}
+
+	\begin{exercice_cours}[Écrire une fonction \texttt{compte(mot, lettre\_cherchee)}]{}	
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+			def compte(mot, lettre_cherchee):
+				''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
+
+
+
+
+
+
+				#
+				
+			\end{CodePythontexAlt}
+	\end{exercice_cours}
+
+\begin{exercice_cours}[Ecrire la fonction \texttt{compte2(mot, lettre\_cherchee)} qui itère sur les éléments]{}	
+	
+			\begin{CodePythontexAlt}[TaillePolice=\large, Lignes=false, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def compte2(mot, lettre_cherchee):
+					''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
+					
+	
+	
+					
+	
+	
+	
+	
+	
+				#
+				\end{CodePythontexAlt}
+		\end{exercice_cours}
+		
+		\newpage
+			\renewcommand{\arraystretch}{1}
+		\section{La boucle WHILE}
+
+		\begin{easybox}{Les boucles WHILE}
+		La boucle \verb+WHILE+ est une boucle non bornée. On ne sait à l'avance combien de fois on va la faire.
+	
+		\medskip
+	\begin{minipage}{0.4\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En pseudo code
+instruction1
+tant que condition1 vraie:
+	instruction2
+instruction3
+	\end{lstlisting}
+		\end{minipage}\hfill
+		\begin{minipage}{0.59\linewidth}
+	\begin{itemize}
+		\item instruction1 est effectuée
+		\item tant que la condition1 est vraie on effectue l'instruction 2
+		\item quand la condition1 est fausse, on sort de la boucle;
+		\item on effectue l'instruction3
+	\end{itemize}
+		\end{minipage}	
+	\end{easybox}
+	
+
+		\begin{easybox}{Prototypage de la boucle WHILE en python}
+	\verb|condition1| est un booléen qui est évalué à chaque tour de boucle.  Tant que \verb|condition1| \verb|True|, on effectue les instructions de la boucle. Lorsque \verb|condition1| devient \verb|False|, on sort de la boucle.
+
+	\begin{center}
+	
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		while condition1:
+			instruction
+	\end{CodePythontexAlt}
+	\end{center}
+	
+
+			\end{easybox}
+
+	\begin{exercice_cours}[Dire ce qu'affichent les programmes suivants et expliquer pourquoi]{}
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+			n = 0
+			u = 1
+			while u < 1000:
+				n = n + 1
+				u = u * 2
+			print(n)
+			print(u)
+		\end{CodePythontexAlt}
+				
+		\end{minipage}\hfill
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+			mot = 'abracadabra'
+			c = 0
+			trouve = False
+			while c < len(mot) and not(trouve):
+				trouve = mot[c] == 'r'
+				c = c + 1
+			print(trouve)
+			\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		 
+	\end{exercice_cours}
+	
+	\begin{exercice_cours}[Boucle FOR]
+
+		\begin{enumerate}
+			\item Écrire une fonction \verb|somme(n)| qui renvoie la somme des entiers de 1 à $n$ inclus. Par exemple, \verb|somme(5)| doit renvoyer $1+2+3+4+5=15$.
+			
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def somme(n):
+					''' Renvoie la somme des entiers de 1 à n inclus'''
+					
+					
+					
+					
+				#
+				\end{CodePythontexAlt}
+
+			\item Écrire une fonction \verb|factorielle(n)| qui renvoie la factorielle de $n$. Par exemple, \verb|factorielle(5)| doit renvoyer $1\times2\times3\times4\times5=120$.
+			
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def factorielle(n):
+					''' Renvoie la factorielle de n'''
+					
+					
+					
+					
+				#
+				\end{CodePythontexAlt}
+			\item Ecrire une fonction \verb|remplace_lettre(mot, lettre_a_remplacer, nouvelle_lettre)| qui remplace toutes les occurrences de \verb|lettre_a_remplacer| par \verb|nouvelle_lettre| dans \verb|mot|. Par exemple, \verb|remplace_lettre('abracadabra', 'a', 'o')| doit renvoyer \verb+'obrocodobro'+.
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def remplace_lettre(mot, lettre_a_remplacer, nouvelle_lettre):
+					''' Renvoie mot dans lequel toutes les occurrences de 
+					lettre_a_remplacer ont été remplacées par nouvelle_lettre'''
+					
+					
+
+
+					
+					
+				#
+				\end{CodePythontexAlt}
+			
+			\item Ecrire une fonction \verb|supprime_lettre(mot, lettre_a_supprimer)| qui supprime toutes les occurrences de \verb|lettre_a_supprimer| dans \verb|mot|. Par exemple, \verb|supprime_lettre('abracadabra', 'a')| doit renvoyer \verb+'brcdbr'+.	
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+				def supprime_lettre(mot, lettre_a_supprimer):
+					''' Renvoie mot dans lequel toutes les occurrences de 
+					lettre_a_supprimer ont été supprimées'''
+					
+
+
+					
+					
+					
+				#
+				\end{CodePythontexAlt}
+		\end{enumerate}
+	\end{exercice_cours}
+		\begin{exercice_cours}[Boucle While]{}
+	\begin{enumerate}
+		\item On dispose d'une feuille de papier d'épaisseur 0,1 mm. Combien de fois doit-on la plier au minimum pour que l'épaisseur dépasse la hauteur de la tour Eiffel 324 m. Écrire une fonction \verb|nb_plis()| en Python pour résoudre ce problème.
+		
+		\medskip
+
+		\begin{minipage}{0.79\linewidth}
+				\item  Inès veut construire une pyramide à base carrée comme sur la photo. La pyramide sur la photo a 7 étages. 
+			
+					Inès a n billes. Combien d'étages au maximum aura sa pyramide? Écrire une fonction \verb|nb_etages(n)| en Python pour répondre au problème. 
+					\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					assert nb_etages(1000) == 14
+					\end{CodePythontexAlt}
+
+		\end{minipage}\hfill
+		\begin{minipage}{0.19\linewidth}
+						\includegraphics[width = 1\linewidth]{pyramide.png}
+
+		\end{minipage}
+
+			\medskip
+
+			\item L'ordinateur tire un nombre entier au hasard entre 0 et 100.
+			L'utilisateur doit le trouver et pour cela propose des valeurs.
+			L'ordinateur indique pour chaque valeur proposée si la valeur est trop petite, trop grande ou s'il a trouvé.
+			
+				 Écrire une fonction \verb|jeu()| en Python pour jouer à ce jeu. En combien de coups est-on sûr de trouver?
+
+				 \begin{methode}[La bibliothèque \texttt{random}]{}
+					\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 100
+					nombre_aleatoire = random.randint(0, 100)	
+					\end{CodePythontexAlt}
+				\end{methode}
+
+				 \item En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Elle commence généralement par les termes 0 et 1 et ses premiers termes sont 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc.
+			
+			\begin{itemize}
+				\item Ecrire une fonction \verb|fibonacci(n)| qui renvoie le terme de rang $n$ de la suite de Fibonnaci. (le premier terme est de rang 0)
+				\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					assert fibonacci(0) == 0
+					assert fibonacci(1) == 1
+					assert fibonacci(2) == 1
+					assert fibonacci(9) == 34
+					\end{CodePythontexAlt}
+				\item 			Ecrire une fonction \verb|rang_fibonacci()| qui renvoie le rang du premier terme supérieur ou égal à 10000.
+				
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					assert rang_fibonacci() == 21
+					\end{CodePythontexAlt}
+			\end{itemize}
+
+\medskip
+
+			\item L'utilisateur donne un entier positif et le programme annonce combien de fois de suite cet entier est divisible par 2. Ecrire la fonction \verb|divise_par_2(n)| qui renvoie ce nombre de fois. Par exemple, \verb|divise_par_2(48)| doit renvoyer 4 car $48=2^4\times3$ et 4 est le plus grand entier tel que $48$ est divisible par $2^4$.
+			
+			\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+assert divise_par_2(48) == 4
+assert divise_par_2(7) == 0
+\end{CodePythontexAlt}
+
+\medskip
+
+	\item Écrire une fonction \verb|tirage()| qui fait des tirages successifs  d'entiers 0 ou 1 jusqu'à tirer 3 fois 1 consécutivement et
+			renvoie le nombre de tirages qui ont été nécessaires.
+
+			\begin{methode}[La bibliothèque \texttt{random}]{}
+					\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 1
+					nombre_aleatoire = random.randint(0, 1)	
+					\end{CodePythontexAlt}
+				\end{methode}
+
+				\medskip
+
+	\item Ecrire une fonction python qui renvoie l'entier $p$ tel que $2^p \leqslant n \leqslant 2^{p+1}$.
+
+			\end{enumerate}
+	\end{exercice_cours}
