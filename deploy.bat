@@ -5,7 +5,7 @@ echo   Deploiement du site de cours
 echo ========================================
 echo.
 
-cd /d "D:\--- LYCEE ---\ENSEIGNEMENT_G\lvh"
+cd /d "D:\--- LYCEE ---\ENSEIGNEMENT_G\"
 
 :: Demande un message de commit
 set /p COMMIT_MSG="Message de commit (ex: ajout chapitre 3) : "
@@ -24,7 +24,7 @@ mkdocs gh-deploy
 echo.
 echo ========================================
 echo   Site mis a jour avec succes !
-echo   https://thomasricart.github.io/lvh
+echo   https://thomasricart.github.io
 echo ========================================
 echo.
 pause
