@@ -1,0 +1,617 @@
+=>PYTHONTEX#py#default#defaultverb#0#verbatim####LP01.tex#69#
+    a = 10
+=>PYTHONTEX#py#default#defaultverb#1#verbatim####LP01.tex#105#
+    print(x)
+=>PYTHONTEX#pycon#default#default#0#console####LP01.tex#172#
+        print(17+2)
+        print(17-2)
+=>PYTHONTEX#pycon#default#default#1#console####LP01.tex#178#
+		print(17*2)
+		print(17/2)
+=>PYTHONTEX#pycon#default#default#2#console####LP01.tex#184#
+        print(17%2)
+        print(17//2)
+=>PYTHONTEX#pycon#default#default#3#console####LP01.tex#221#
+            a = 'Bonjour'
+            b = ' a tous'
+            c = a + b
+            print(c)
+=>PYTHONTEX#pycon#default#default#4#console####LP01.tex#229#
+            a = 'Bonjour'
+            b = ' a tous'
+            c = a * 3
+            print(c)
+=>PYTHONTEX#pycon#default#default#5#console####LP01.tex#237#
+            a = 'Bonjour'
+            b = ' a tous'
+            c = a[0]
+            print(c)
+=>PYTHONTEX#pycon#default#default#6#console####LP01.tex#276#
+            mot = 'Bonjour'
+            mot[0]
+            mot[4]
+=>PYTHONTEX#pycon#default#default#7#console####LP01.tex#283#
+mot = 'Bonjour'
+n = len(mot)
+n
+mot[-1]
+=>PYTHONTEX#pycon#default#default#8#console####LP01.tex#308#
+        mot1 = 'Bonjour'
+        mot2 = 'Thomas'
+        mot1 + ' ' + mot2
+=>PYTHONTEX#pycon#default#default#9#console####LP01.tex#315#
+        'j' in 'Bonjour'
+        'b' in 'Bonjour'
+=>PYTHONTEX#pycon#default#default#10#console####LP01.tex#321#
+        'abracadabra'[4]
+        len('abracadabra')
+=>PYTHONTEX#pycon#default#default#11#console####LP01.tex#376#
+            a = '5'     # a est de type str
+            b = int(a)  # b est de type int
+            print(b)
+=>PYTHONTEX#pycon#default#default#12#console####LP01.tex#383#
+            a = 4       # a est de type int
+            b = str(a)  # b est de type str
+            print(b)
+=>PYTHONTEX#pycon#default#default#13#console####LP01.tex#405#
+a = True
+b = False
+c = a and b
+c
+=>PYTHONTEX#pycon#default#default#14#console####LP01.tex#413#
+a = True
+b = False
+c = a or b
+c
+=>PYTHONTEX#pycon#default#default#15#console####LP01.tex#421#
+a = True
+c = not a
+c
+=>PYTHONTEX#pycon#default#default#16#console####LP01.tex#484#
+a = 5
+b = 6
+c = (a == b)
+c
+=>PYTHONTEX#pycon#default#default#17#console####LP01.tex#492#
+a = 5
+b = 6
+c = (a != b)
+c
+=>PYTHONTEX#pycon#default#default#18#console####LP01.tex#500#
+a = 5
+b = 6
+c = (a < b)
+c
+=>PYTHONTEX#py#default#defaultverb#2#verbatim####LP02.tex#14#
+        a = input("Entrer une valeur au clavier")           # a sera de type str
+        b = int(input("Entrer une valeur au clavier"))      # b sera de type int
+=>PYTHONTEX#py#default#defaultverb#3#verbatim####LP02.tex#23#
+        def f(x):
+            y = x ** 2  # Fonction calculant x**2
+            return y
+
+        f(4)        	# PAS D'AFFICHAGE: f(4) est créé mais est perdue
+        print(f(4)) 	# AFFICHAGE: f(4) créé puis affiché. La valeur est perdue
+        carre = f(6)	# PAS D'AFFICHAGE: f(6) créé puis sauvegardé dans carre.
+        print(carre)	# AFFICHAGE: affichage de la valeur de la variable carre
+=>PYTHONTEX#py#default#defaultverb#4#verbatim####LP02.tex#36#
+    a, b = 6, 4
+    print("La somme de", a, "et",b, "est", a + b)
+
+
+=>PYTHONTEX#pycon#default#default#19#console####LP02.tex#46#
+            a = 6
+            a
+=>PYTHONTEX#pycon#default#default#20#console####LP02.tex#55#
+    name = 'Paul'
+    age = 25
+    print(f'Votre nom est {name} et vous avez {age} ans.')
+=>PYTHONTEX#pycon#default#default#21#console####LP02.tex#61#
+    print('Votre nom est {} et vous avez {} ans'.format(name, age))
+=>PYTHONTEX#py#default#defaultverb#5#verbatim####LP02.tex#91#
+		def f(x):
+			""" Fonction renvoyant x ** 2 """
+			y = x ** 2		# Calcul de x ** 2
+			return y  		# valeur renvoyée: y
+=>PYTHONTEX#py#default#defaultverb#6#verbatim####LP02.tex#109#
+			a = 4   		# on affecte 4 à la variable a
+			z = f(4)		# on appelle la fonction f avec comme argument 4
+							# et on récupère la valeur renvoyée dans la variable z
+=>PYTHONTEX#py#default#defaultverb#7#verbatim####LP02.tex#123#
+		def ma_fonction(param1, param2, ...):
+			''' Docstring: Explication de ce que fait ma_fonction
+			: description des paramètres et leurs types
+			: description des valeurs de sortie et leurs types '''
+			# Corps de la fonction
+
+			return valeur	# La variable 'valeur' est renvoyée
+=>PYTHONTEX#py#default#defaultverb#8#verbatim####LP02.tex#138#
+def calc_somme(a, b):
+	''' Fonction calculant la somme de deux valeurs
+	: a et b deux entiers (int)					
+	: valeur renvoyée est un entier (int) '''
+	somme = a + b      # le résultats de a + b est affecté à la variable somme
+	return somme       # la valeur de somme est renvoyée par la fonction
+=>PYTHONTEX#py#default#defaultverb#9#verbatim####LP02.tex#150#
+s = calc_somme(6, 8)	# s récupère la valeur renvoyée par calc_somme(6, 8)
+print(s)            	# la valeur de la variable s est affichée (14)
+=>PYTHONTEX#py#default#defaultverb#10#verbatim####LP02.tex#164#
+print(a)   # ERREUR -> a est une variable locale (tout comme b et somme)
+=>PYTHONTEX#py#default#defaultverb#11#verbatim####LP02.tex#178#
+assert calcule_somme(6, 8) == 14     	# True -> aucune message
+assert calcule_somme(6, 8) == 12     	# False -> message d'erreur
+assert not(calcule_somme(6, 8) == 12)	# True -> aucun message
+
+=>PYTHONTEX#py#default#defaultverb#12#verbatim####LP03.tex#83#
+	def valeur_absolue(x):
+		''' Renvoie |x| '''
+		if x < 0:
+		# si x < 0 on échange x par -x	
+			x = - x
+		return x
+=>PYTHONTEX#py#default#defaultverb#13#verbatim####LP03.tex#184#
+		def ma_fonction(x):
+			if x >= 0:	
+				sortie = x ** 2
+			else:
+				sortie = x ** 3
+			return sortie
+=>PYTHONTEX#py#default#defaultverb#14#verbatim####LP03.tex#233#
+			def ma_fonction(x):
+				if x > 0:	
+					sortie = 1
+				elif x == 0:
+					sortie = 0
+				else:
+					sortie = -1
+				return sortie
+=>PYTHONTEX#py#default#defaultverb#15#verbatim####LP03.tex#244#
+				def ma_fonction(x):
+					if x > 0:	
+						sortie = 1
+					else:
+						if x == 0:
+							sortie = 0
+						else:
+							sortie = -1
+					return sortie
+=>PYTHONTEX#py#default#defaultverb#16#verbatim####LP03.tex#263#
+def plus_grand2(a, b):
+    ''' Renvoie le plus grand des
+    deux nombres a et b '''
+	# A compléter
+
+
+
+
+
+
+
+
+    #
+=>PYTHONTEX#py#default#defaultverb#17#verbatim####LP03.tex#280#
+def plus_grand3(a, b, c):
+    ''' Renvoie le plus grand des
+    trois nombres a, b et c '''
+    # A compléter
+
+
+
+
+
+
+
+
+    #
+=>PYTHONTEX#py#default#defaultverb#18#verbatim####LP04.tex#38#
+for i in range(0, 7):
+	print(i, end=" ")
+# affichage:
+# 0 1 2 3 4 5 6
+	
+=>PYTHONTEX#py#default#defaultverb#19#verbatim####LP04.tex#47#
+for i in range(2, 7):
+	print(i, end=" ")
+# affichage:
+# 2 3 4 5 6
+					
+=>PYTHONTEX#py#default#defaultverb#20#verbatim####LP04.tex#56#
+for i in range(5):
+	print(i, end=" ")
+# affichage:
+# 0 1 2 3 4
+	
+=>PYTHONTEX#py#default#defaultverb#21#verbatim####LP04.tex#73#
+		for i in range(a, b):
+=>PYTHONTEX#py#default#defaultverb#22#verbatim####LP04.tex#88#
+		for i in range(2, 6):
+			print(i)
+		print('fin')
+=>PYTHONTEX#pycon#default#default#22#console####LP04.tex#119#
+	mot = 'Hello'
+	mot[1]
+=>PYTHONTEX#py#default#defaultverb#23#verbatim####LP04.tex#141#
+	mot = 'Hello'
+	for i in range(0, len(mot)):
+		print(mot[i])
+	print('Fin')
+			
+=>PYTHONTEX#py#default#defaultverb#24#verbatim####LP04.tex#175#
+	mot = 'Hello'
+	for lettre in mot:
+		print(lettre)
+	print('Fin')
+	
+=>PYTHONTEX#py#default#defaultverb#25#verbatim####LP04.tex#254#
+				def est_present(mot, lettre_cherchee):
+					''' Renvoie True si lettre_cherchee est dans mot et False sinon'''
+
+
+
+
+
+					#
+					
+=>PYTHONTEX#py#default#defaultverb#26#verbatim####LP04.tex#301#
+			def compte(mot, lettre_cherchee):
+				''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
+
+
+
+
+
+
+				#
+				
+=>PYTHONTEX#py#default#defaultverb#27#verbatim####LP04.tex#317#
+				def compte2(mot, lettre_cherchee):
+					''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
+					
+	
+	
+					
+	
+	
+	
+	
+	
+				#
+=>PYTHONTEX#py#default#defaultverb#28#verbatim####LP04.tex#366#
+		while condition1:
+			instruction
+=>PYTHONTEX#py#default#defaultverb#29#verbatim####LP04.tex#377#
+			n = 0
+			u = 1
+			while u < 1000:
+				n = n + 1
+				u = u * 2
+			print(n)
+			print(u)
+=>PYTHONTEX#py#default#defaultverb#30#verbatim####LP04.tex#389#
+			mot = 'abracadabra'
+			c = 0
+			trouve = False
+			while c < len(mot) and not(trouve):
+				trouve = mot[c] == 'r'
+				c = c + 1
+			print(trouve)
+=>PYTHONTEX#py#default#defaultverb#31#verbatim####LP04.tex#407#
+				def somme(n):
+					''' Renvoie la somme des entiers de 1 à n inclus'''
+					
+					
+					
+					
+				#
+=>PYTHONTEX#py#default#defaultverb#32#verbatim####LP04.tex#419#
+				def factorielle(n):
+					''' Renvoie la factorielle de n'''
+					
+					
+					
+					
+				#
+=>PYTHONTEX#py#default#defaultverb#33#verbatim####LP04.tex#429#
+				def remplace_lettre(mot, lettre_a_remplacer, nouvelle_lettre):
+					''' Renvoie mot dans lequel toutes les occurrences de
+					lettre_a_remplacer ont été remplacées par nouvelle_lettre'''
+					
+					
+
+
+					
+					
+				#
+=>PYTHONTEX#py#default#defaultverb#34#verbatim####LP04.tex#443#
+				def supprime_lettre(mot, lettre_a_supprimer):
+					''' Renvoie mot dans lequel toutes les occurrences de
+					lettre_a_supprimer ont été supprimées'''
+					
+
+
+					
+					
+					
+				#
+=>PYTHONTEX#py#default#defaultverb#35#verbatim####LP04.tex#467#
+					assert nb_etages(1000) == 14
+=>PYTHONTEX#py#default#defaultverb#36#verbatim####LP04.tex#486#
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 100
+					nombre_aleatoire = random.randint(0, 100)	
+=>PYTHONTEX#py#default#defaultverb#37#verbatim####LP04.tex#497#
+					assert fibonacci(0) == 0
+					assert fibonacci(1) == 1
+					assert fibonacci(2) == 1
+					assert fibonacci(9) == 34
+=>PYTHONTEX#py#default#defaultverb#38#verbatim####LP04.tex#505#
+					assert rang_fibonacci() == 21
+=>PYTHONTEX#py#default#defaultverb#39#verbatim####LP04.tex#514#
+assert divise_par_2(48) == 4
+assert divise_par_2(7) == 0
+=>PYTHONTEX#py#default#defaultverb#40#verbatim####LP04.tex#525#
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 1
+					nombre_aleatoire = random.randint(0, 1)	
+=>PYTHONTEX#py#default#defaultverb#41#verbatim####LP05.tex#37#
+ma_liste = [1, 2, 3, 4, 5]
+=>PYTHONTEX#py#default#defaultverb#42#verbatim####LP05.tex#42#
+ma_liste = ['a', 'b', 'c']
+=>PYTHONTEX#pycon#default#default#23#console####LP05.tex#48#
+ma_liste = [1, 2, 3, 4, 5]
+print(type(ma_liste))		# Une liste est de type 'list'
+=>PYTHONTEX#pycon#default#default#24#console####LP05.tex#60#
+ma_liste = [1, 2, 3, 4, 5]
+print(ma_liste[0])
+print(ma_liste[2])
+=>PYTHONTEX#pycon#default#default#25#console####LP05.tex#67#
+ma_liste = [1, 2, 3, 4, 5]
+print(ma_liste[-1])
+print(ma_liste[-2])
+=>PYTHONTEX#pycon#default#default#26#console####LP05.tex#79#
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste[0] = 10
+print(ma_liste)
+=>PYTHONTEX#pycon#default#default#27#console####LP05.tex#86#
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste[4] = 20
+print(ma_liste)
+=>PYTHONTEX#pycon#default#default#28#console####LP05.tex#98#
+ma_liste = [1, 2, 3, 4, 5]
+print(len(ma_liste))
+=>PYTHONTEX#pycon#default#default#29#console####LP05.tex#104#
+ma_liste = ['a', 'b', 'c']
+print(len(ma_liste))
+=>PYTHONTEX#py#default#defaultverb#43#verbatim####LP05.tex#133#
+ma_liste = [4, 8, 7, 9, 4]
+for i in range(0, len(ma_liste)):
+	print(ma_liste[i])
+=>PYTHONTEX#py#default#defaultverb#44#verbatim####LP05.tex#140#
+ma_liste = [4, 8, 7, 9, 4]
+for elt in ma_liste:
+	print(elt)
+=>PYTHONTEX#py#default#defaultverb#45#verbatim####LP05.tex#153#
+				def somme(liste):
+					''' Renvoie la somme des éléments de liste'''
+
+
+
+
+					#
+				assert somme([1, 2, 3, 4, 5]) == 15
+				assert somme([4, 8, 7, 9, 4]) == 32
+=>PYTHONTEX#py#default#defaultverb#46#verbatim####LP05.tex#166#
+				def maximum(liste):
+					''' Renvoie le maximum des éléments de liste'''
+
+
+
+
+
+
+					#
+				assert maximum([1, 2, 3, 4, 5]) == 5
+				assert maximum([4, 8, 7, 9, 4]) == 9
+=>PYTHONTEX#py#default#defaultverb#47#verbatim####LP05.tex#182#
+				def est_present(elt, liste):
+					''' Renvoie True si elt est dans liste et False sinon'''	
+
+
+
+
+
+
+					#
+				assert est_present(3, [1, 2, 3, 4, 5]) == True
+				assert est_present(6, [1, 2, 3, 4, 5]) == False
+=>PYTHONTEX#pycon#default#default#30#console####LP05.tex#202#
+ma_liste = [[1, 2, 3], [4, 5], [7, 8, 9, 10]]
+print(len(ma_liste))
+print(len(ma_liste[1]))
+print(ma_liste[0])
+print(ma_liste[1])
+print(ma_liste[2])
+print(ma_liste[0][1])
+print(ma_liste[1][1])
+print(ma_liste[2][0])
+=>PYTHONTEX#py#default#defaultverb#48#verbatim####LP05.tex#240#
+				def somme_liste_de_listes(liste):
+					''' Renvoie la somme des éléments de liste'''
+
+
+
+
+
+					#
+				assert somme_liste_de_listes([[1, 2], [3, 4], [5, 6]]) == 21
+=>PYTHONTEX#py#default#defaultverb#49#verbatim####LP05.tex#253#
+				def maximum_sous_liste(liste):
+					''' Renvoie la sous liste dont la somme des éléments est max'''
+
+
+
+
+
+
+					#
+				assert maximum_sous_liste([[3, 4, 16], [5, 6, 1, 8]]) == [3, 4, 16]
+=>PYTHONTEX#pycon#default#default#31#console####LP05.tex#276#
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste.append(6)
+print(ma_liste)
+a = ma_liste.pop()
+print(a)
+print(ma_liste)
+b = ma_liste.pop(2)
+print(b)
+print(ma_liste)
+=>PYTHONTEX#py#default#defaultverb#50#verbatim####LP05.tex#294#
+ma_liste = []
+for i in range(0, 5):
+	ma_liste.append(i)
+
+print(ma_liste)		
+# Affiche: [0, 1, 2, 3, 4]
+=>PYTHONTEX#py#default#defaultverb#51#verbatim####LP05.tex#304#
+ma_liste = []
+for i in range(0, 5):
+	ma_liste = [i] + ma_liste
+
+print(ma_liste)
+# Affiche: [4, 3, 2, 1, 0]
+		
+=>PYTHONTEX#py#default#defaultverb#52#verbatim####LP05.tex#318#
+ma_liste = [i for i in range(0, 5)]
+print(ma_liste)
+# Affiche: [0, 1, 2, 3, 4]
+=>PYTHONTEX#py#default#defaultverb#53#verbatim####LP05.tex#329#
+				def puissance_2(n):
+					''' Renvoie une liste contenant les puissances de 2 de 0 à n '''
+
+
+
+
+
+
+
+
+					#
+				assert puissance_2(3) == [1, 2, 4, 8]
+				assert puissance_2(5) == [1, 2, 4, 8, 16, 32]
+=>PYTHONTEX#py#default#defaultverb#54#verbatim####LP05.tex#346#
+				def est_pair(liste):
+					''' Renvoie une liste contenant les éléments pairs'''
+
+
+
+
+
+
+
+
+					#
+				assert est_pair([1, 2, 3, 4, 5]) == [2, 4]
+				assert est_pair([1, 3, 5, 7, 9]) == []
+				assert est_pair([2, 4, 6, 21, 8, 12, 13, 10]) == [2, 4, 6, 8, 12, 10]
+=>PYTHONTEX#py#default#defaultverb#55#verbatim####LP05.tex#367#
+				def supprime_element(liste):
+					''' Supprime les éléments de liste en partant du dernier
+					jusqu'à l'obtention du premier 0'''
+
+
+
+
+
+
+
+					#
+				assert supprime_element([0, 0, 1, 1, 0, 1, 1, 1]) == [0, 0, 1, 1, 0]
+				assert supprime_element([1, 1, 0, 1, 1, 1, 1, 1, 1]) == [1, 1, 0]
+=>PYTHONTEX#py#default#defaultverb#56#verbatim####LP05.tex#384#
+					assert est_triee([1, 2, 3, 4, 5]) == True
+					assert est_triee([5, 4, 3, 2, 1]) == False
+=>PYTHONTEX#pycon#default#default#32#console####LP05.tex#398#
+import random
+ma_liste = [1, 2, 3, 4, 5]
+print(random.choice(ma_liste))
+print(ma_liste)
+random.shuffle(ma_liste)
+print(ma_liste)
+=>PYTHONTEX#py#default#defaultverb#57#verbatim####LP05.tex#411#
+ma_liste = [1, 2, 3, 4, 5]
+print(ma_liste[1:4])
+# Affiche: [2, 3, 4]
+print(ma_liste[:3])
+# Affiche: [1, 2, 3]
+print(ma_liste[2:])
+# Affiche: [3, 4, 5]
+=>PYTHONTEX#pycon#default#default#33#console####LP05.tex#430#
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste2 = ma_liste
+ma_liste2[0] = 10
+print(ma_liste)
+print(ma_liste2)
+=>PYTHONTEX#pycon#default#default#34#console####LP05.tex#440#
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste2 = ma_liste[:]
+ma_liste2[0] = 10
+print(ma_liste)
+print(ma_liste2)
+=>PYTHONTEX#py#default#defaultverb#58#verbatim####LP05.tex#451#
+def ajoute_element(liste, element):
+	liste.append(element)
+
+ma_liste = [1, 2, 3, 4, 5]
+ajoute_element(ma_liste, 6)
+print(ma_liste)			# Affiche: [1, 2, 3, 4, 5, 6]
+=>PYTHONTEX#py#default#defaultverb#59#verbatim####LP05.tex#462#
+					def decalage_gauche(liste):
+						''' Décale les éléments de liste vers la gauche '''
+
+
+
+
+
+					#	
+					assert decalage_gauche([1, 2, 3, 4, 5]) == [2, 3, 4, 5, 1]
+					assert decalage_gauche([5, 4, 3, 2, 1]) == [4, 3, 2, 1, 5]
+=>PYTHONTEX#py#default#defaultverb#60#verbatim####LP05.tex#503#
+mon_tuple = (1, 2, 3, 4, 5)
+=>PYTHONTEX#py#default#defaultverb#61#verbatim####LP05.tex#508#
+mon_tuple = ('a', 'b', 'c')
+=>PYTHONTEX#pycon#default#default#35#console####LP05.tex#514#
+mon_tuple = (1, 2, 3, 4, 5)
+print(type(mon_tuple))		# Un tuple est de type 'tuple'
+=>PYTHONTEX#pycon#default#default#36#console####LP05.tex#526#
+mon_tuple = (1, 2, 3, 4, 5)
+print(mon_tuple[0])
+print(mon_tuple[2])
+=>PYTHONTEX#pycon#default#default#37#console####LP05.tex#533#
+mon_tuple = (1, 2, 3, 4, 5)
+print(mon_tuple[-1])
+print(mon_tuple[-2])
+=>PYTHONTEX:SETTINGS#
+version=0.19
+outputdir=pythontex-files-1NSI-LP
+workingdir=.
+workingdirset=false
+gobble=auto
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python3|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python3|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python3|
+pygfamily=pylabcon|pycon|
