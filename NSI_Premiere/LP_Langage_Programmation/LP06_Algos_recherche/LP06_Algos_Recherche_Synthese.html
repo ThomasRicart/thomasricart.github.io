@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthèse NSI LP06 - Algorithmes de Recherche</title>
+    <style>
+        :root {
+            --primary: #1e3a8a; 
+            --accent: #3b82f6; 
+            --bg-light: #eff6ff;
+            --code-bg: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--bg-light);
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            text-align: center;
+            background: white;
+            border-radius: 8px 8px 0 0;
+            padding: 20px;
+        }
+
+        h1 { color: var(--primary); margin-bottom: 5px; }
+        h2 { 
+            color: var(--primary); 
+            border-left: 5px solid var(--accent); 
+            padding-left: 10px;
+            margin-top: 30px;
+            background: #dbeafe;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .code-block {
+            background-color: var(--code-bg);
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+
+        .keyword { color: #569cd6; font-weight: bold; }
+        .function { color: #dcdcaa; }
+        .string { color: #ce9178; }
+        .comment { color: #6a9955; font-style: italic; }
+        .number { color: #b5cea8; }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .important {
+            background-color: #fef2f2;
+            border-left: 5px solid #ef4444;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LP06 : Algorithmes de Recherche</h1>
+    <p>NSI Première - Complexité, Terminaison et Correction</p>
+</header>
+
+<section>
+    <h2>1. Recherche Naïve et Complexité</h2>
+    <p>La recherche naïve parcourt chaque élément de la liste un par un.</p>
+    <div class="code-block">
+        <span class="keyword">def</span> <span class="function">recherche_naive</span>(elt, liste):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> x <span class="keyword">in</span> liste:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> x == elt:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">True</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">False</span>
+    </div>
+    <div class="important">
+        <strong>Complexité Temporelle :</strong> Dans le pire des cas, on effectue <strong>n</strong> comparaisons. La complexité est dite <strong>linéaire</strong>, notée <strong>O(n)</strong>.
+    </div>
+</section>
+
+<section>
+    <h2>2. Terminaison et Correction</h2>
+    <p>Pour prouver qu'un algorithme est fiable, on utilise deux outils théoriques:</p>
+    <ul>
+        <li><strong>Le Variant de Boucle :</strong> Une quantité entière qui décroît strictement à chaque tour tout en restant minorée (garantit que la boucle s'arrête).</li>
+        <li><strong>L'Invariant de Boucle :</strong> Une propriété qui reste vraie avant et après chaque itération (prouve que l'algorithme fait ce qu'on attend de lui).</li>
+    </ul>
+</section>
+
+<section>
+    <h2>3. Recherche Dichotomique (Liste triée)</h2>
+    <p>Utilise la stratégie <strong>"Diviser pour régner"</strong> en coupant la liste en deux à chaque étape.</p>
+    <div class="code-block">
+        <span class="keyword">while</span> i_deb <= i_fin:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;i_cen = (i_deb + i_fin) // <span class="number">2</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> L[i_cen] == val:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="keyword">True</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">elif</span> L[i_cen] < val:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i_deb = i_cen + <span class="number">1</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">else</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i_fin = i_cen - <span class="number">1</span>
+    </div>
+    <div class="important">
+        <strong>Complexité :</strong> Comme la taille du problème est divisée par 2 à chaque tour, la complexité est <strong>logarithmique</strong>, notée <strong>O(log(n))</strong>.
+    </div>
+</section>
+
+<section>
+    <h2>4. Résumé des Complexités</h2>
+    <ul>
+        <li><strong>O(1) :</strong> Temps constant (pas de boucle).</li>
+        <li><strong>O(log(n)) :</strong> Recherche dichotomique (division par 2).</li>
+        <li><strong>O(n) :</strong> Recherche linéaire / Parcours simple.</li>
+        <li><strong>O(n²) :</strong> Boucles imbriquées.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>Synthèse basée sur le cours de Thomas Ricart - NSI Première</p>
+</footer>
+
+</body>
+</html>
