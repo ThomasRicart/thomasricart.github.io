@@ -38,5 +38,5 @@
     {
         "recto": "Comment transformer <code>d = {'a': 1}</code> en <code>{'a': 1, 'b': 2}</code> ?",
         "verso": "En faisant simplement <code>d['b'] = 2</code>."
-    },
+    }
 ]
