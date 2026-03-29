@@ -1,0 +1,50 @@
+[
+    {
+        "recto": "Qu'est-ce que la complexité temporelle d'un algorithme ?",
+        "verso": "C'est une mesure du <strong>temps d'exécution</strong> de l'algorithme en fonction de la taille $n$ de l'entrée."
+    },
+    {
+        "recto": "Dans quel cas étudie-t-on généralement la complexité d'un algorithme ?",
+        "verso": "On se place toujours dans le <strong>pire des cas</strong> (ex: élément absent ou en fin de liste)."
+    },
+    {
+        "recto": "Quelle est la complexité de la recherche naïve ?",
+        "verso": "Elle est <strong>linéaire</strong>, notée $O(n)$, car on peut devoir parcourir les $n$ éléments."
+    },
+    {
+        "recto": "Que signifie qu'un algorithme est 'terminant' ?",
+        "verso": "Cela signifie qu'il s'arrête après un <strong>nombre fini d'étapes</strong> pour toute entrée donnée."
+    },
+    {
+        "recto": "Qu'est-ce qu'un variant de boucle ?",
+        "verso": "C'est une quantité entière qui <strong>décroît strictement</strong> à chaque itération tout en restant positive, garantissant la terminaison."
+    },
+    {
+        "recto": "Qu'est-ce qu'un invariant de boucle ?",
+        "verso": "C'est une propriété qui reste <strong>vraie avant et après</strong> chaque itération. Il sert à prouver la <strong>correction</strong> (le bon résultat)."
+    },
+    {
+        "recto": "Quel est le principe de la stratégie 'Diviser pour régner' ?",
+        "verso": "Diviser un problème en <strong>sous-problèmes plus petits</strong>, les résoudre, puis combiner les solutions."
+    },
+    {
+        "recto": "Quelle est la condition impérative pour utiliser la recherche dichotomique ?",
+        "verso": "La liste (ou le tableau) doit impérativement être <strong>triée</strong>."
+    },
+    {
+        "recto": "Quelle est la complexité de la recherche dichotomique ?",
+        "verso": "Elle est <strong>logarithmique</strong>, notée $O(log(n))$."
+    },
+    {
+        "recto": "Si la taille d'une liste est multipliée par 2, combien d'étapes ajoute-t-on en dichotomie ?",
+        "verso": "On n'ajoute qu'<strong>une seule étape</strong> (boucle) supplémentaire."
+    },
+    {
+        "recto": "Comment note-t-on la complexité d'un algorithme sans boucle ?",
+        "verso": "Sa complexité est constante, notée <strong>$O(1)$</strong>."
+    },
+    {
+        "recto": "Quelle est la complexité d'un algorithme avec deux boucles FOR imbriquées ?",
+        "verso": "Elle est d'ordre quadratique, notée <strong>$O(n^2)$</strong>."
+    }
+]
