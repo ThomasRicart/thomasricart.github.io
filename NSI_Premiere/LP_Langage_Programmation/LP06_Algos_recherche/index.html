@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://thomasricart.github.io/NSI_Premiere/WEB_langage/">
+        <link rel="canonical" href="https://thomasricart.github.io/NSI_Premiere/LP_Langage_Programmation/LP06_Algos_recherche/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../LP05_Listes_Tuples/">
       
       
-        <link rel="next" href="../TC_Types_Construits/">
+        <link rel="next" href="../../../NSI_Terminale/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
-        <title>WEB - Cours de M. Ricart</title>
+        <title>🐍 LP06 : Algorithmes de recherche - Cours de M. Ricart</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../_environments/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../_environments/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web" class="md-skip">
+        <a href="#lp06-algorithmes-de-recherche" class="md-skip">
           Aller au contenu
         </a>
       
@@ -84,7 +84,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../.." title="Cours de M. Ricart" class="md-header__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
+    <a href="../../.." title="Cours de M. Ricart" class="md-header__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WEB
+              🐍 LP06 : Algorithmes de recherche
             
           </span>
         </div>
@@ -173,7 +173,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -194,7 +194,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../SNT/" class="md-tabs__link">
+        <a href="../../../SNT/" class="md-tabs__link">
           
   
   
@@ -218,7 +218,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -240,7 +240,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../NSI_Terminale/" class="md-tabs__link">
+        <a href="../../../NSI_Terminale/" class="md-tabs__link">
           
   
   
@@ -262,7 +262,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../CIEL/" class="md-tabs__link">
+        <a href="../../../CIEL/" class="md-tabs__link">
           
   
   
@@ -284,7 +284,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Maths_Premiere/" class="md-tabs__link">
+        <a href="../../../Maths_Premiere/" class="md-tabs__link">
           
   
   
@@ -306,7 +306,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Divers/" class="md-tabs__link">
+        <a href="../../../Divers/" class="md-tabs__link">
           
   
   
@@ -348,7 +348,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Cours de M. Ricart" class="md-nav__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
+    <a href="../../.." title="Cours de M. Ricart" class="md-nav__button md-logo" aria-label="Cours de M. Ricart" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -366,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -424,7 +424,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../SNT/" class="md-nav__link ">
+            <a href="../../../SNT/" class="md-nav__link ">
               
   
   
@@ -491,7 +491,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../SNT/Informatique_embarquee/" class="md-nav__link ">
+            <a href="../../../SNT/Informatique_embarquee/" class="md-nav__link ">
               
   
   
@@ -561,7 +561,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../SNT/Internet/" class="md-nav__link ">
+            <a href="../../../SNT/Internet/" class="md-nav__link ">
               
   
   
@@ -631,7 +631,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../SNT/Photographie_numerique/" class="md-nav__link ">
+            <a href="../../../SNT/Photographie_numerique/" class="md-nav__link ">
               
   
   
@@ -701,7 +701,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../SNT/Web/" class="md-nav__link ">
+            <a href="../../../SNT/Web/" class="md-nav__link ">
               
   
   
@@ -789,7 +789,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -830,8 +830,6 @@
                 
   
   
-    
-  
   
   
     
@@ -853,15 +851,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../WEB_langage/" class="md-nav__link ">
               
   
   
@@ -880,7 +878,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -934,7 +932,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../TC_Types_Construits/" class="md-nav__link ">
+            <a href="../../TC_Types_Construits/" class="md-nav__link ">
               
   
   
@@ -978,8 +976,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1011,15 +1011,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../LP_Langage_Programmation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1043,7 +1043,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1086,7 +1086,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../LP_Langage_Programmation/LP01_Constructions_elementaires/" class="md-nav__link ">
+            <a href="../LP01_Constructions_elementaires/" class="md-nav__link ">
               
   
   
@@ -1156,7 +1156,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../LP_Langage_Programmation/LP02_Fonctions/" class="md-nav__link ">
+            <a href="../LP02_Fonctions/" class="md-nav__link ">
               
   
   
@@ -1226,7 +1226,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../LP_Langage_Programmation/LP03_Conditions_IF/" class="md-nav__link ">
+            <a href="../LP03_Conditions_IF/" class="md-nav__link ">
               
   
   
@@ -1296,7 +1296,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../LP_Langage_Programmation/LP04_Boucles_FOR_WHILE/" class="md-nav__link ">
+            <a href="../LP04_Boucles_FOR_WHILE/" class="md-nav__link ">
               
   
   
@@ -1366,7 +1366,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../LP_Langage_Programmation/LP05_Listes_Tuples/" class="md-nav__link ">
+            <a href="../LP05_Listes_Tuples/" class="md-nav__link ">
               
   
   
@@ -1410,6 +1410,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1428,15 +1430,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../LP_Langage_Programmation/LP06_Algos_recherche/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1455,7 +1457,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1535,7 +1537,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/" class="md-nav__link ">
               
   
   
@@ -1602,7 +1604,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/AL_Algorithmie/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/AL_Algorithmie/" class="md-nav__link ">
               
   
   
@@ -1672,7 +1674,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/ARSE_Archi_Reseau_SE/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/ARSE_Archi_Reseau_SE/" class="md-nav__link ">
               
   
   
@@ -1742,7 +1744,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/BDD_Base_de_donnee/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/BDD_Base_de_donnee/" class="md-nav__link ">
               
   
   
@@ -1812,7 +1814,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/LP_Langage_Programmation/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/LP_Langage_Programmation/" class="md-nav__link ">
               
   
   
@@ -1882,7 +1884,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/SD_Structure_donnees/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/SD_Structure_donnees/" class="md-nav__link ">
               
   
   
@@ -1952,7 +1954,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/Grand_Oral/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/Grand_Oral/" class="md-nav__link ">
               
   
   
@@ -2022,7 +2024,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../NSI_Terminale/Bac_Blanc/" class="md-nav__link ">
+            <a href="../../../NSI_Terminale/Bac_Blanc/" class="md-nav__link ">
               
   
   
@@ -2105,7 +2107,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CIEL/" class="md-nav__link ">
+            <a href="../../../CIEL/" class="md-nav__link ">
               
   
   
@@ -2172,7 +2174,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CIEL/TP/" class="md-nav__link ">
+            <a href="../../../CIEL/TP/" class="md-nav__link ">
               
   
   
@@ -2242,7 +2244,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CIEL/EVALS/" class="md-nav__link ">
+            <a href="../../../CIEL/EVALS/" class="md-nav__link ">
               
   
   
@@ -2312,7 +2314,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../CIEL/CCF/" class="md-nav__link ">
+            <a href="../../../CIEL/CCF/" class="md-nav__link ">
               
   
   
@@ -2391,7 +2393,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Maths_Premiere/" class="md-nav__link ">
+            <a href="../../../Maths_Premiere/" class="md-nav__link ">
               
   
   
@@ -2458,7 +2460,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Maths_Premiere/Revisions/" class="md-nav__link ">
+            <a href="../../../Maths_Premiere/Revisions/" class="md-nav__link ">
               
   
   
@@ -2537,7 +2539,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Divers/" class="md-nav__link ">
+            <a href="../../../Divers/" class="md-nav__link ">
               
   
   
@@ -2604,7 +2606,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../Divers/NSI/" class="md-nav__link ">
+            <a href="../../../Divers/NSI/" class="md-nav__link ">
               
   
   
@@ -2678,13 +2680,41 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tableau-de-suivi-des-competences-interaction-homme-machine-web" class="md-nav__link">
+  <a href="#ressources-du-chapitre" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📋 Tableau de Suivi des Compétences : Interaction Homme-Machine &amp; Web
+        📂 Ressources du Chapitre
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ---
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="---">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concepts-illustres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 Concepts illustrés
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2705,140 +2735,57 @@
 
 
 
-<h1 id="web">WEB</h1>
+<h1 id="lp06-algorithmes-de-recherche">🐍 LP06 : Algorithmes de recherche</h1>
+<div class="subtitle" style="font-size: 1.2em; color: #546e7a; margin-bottom: 25px; font-style: italic;">
+</div>
+
+<hr />
+<h2 id="ressources-du-chapitre">📂 Ressources du Chapitre</h2>
+<p>Accédez ici à l'ensemble des documents de cours et aux outils de révision interactive.</p>
 <table>
 <thead>
 <tr>
-<th>Séance</th>
-<th>Programme</th>
-<th>Séance</th>
-<th>Correction</th>
-<th>Synthèse</th>
-<th>Quiz</th>
-<th>Exercices</th>
-<th>Correction Exercices</th>
+<th style="text-align: left;">Support</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Corrections</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>WEB01</td>
-<td>Langage du Web HTML5</td>
-<td><a href="WEB01-Langage_web_HTML5/"><img alt="WEB" src="../../_graphics/icones/icons8-globe-30.png" /></a></td>
-<td><a href="html/WEB01-dashboard.html"><img alt="HTML" src="../../_graphics/icones/icons8-html-48.png" /></a></td>
-<td><a href="WEB01-Synthese.html"><img alt="SYNTH" src="../../_graphics/icones/icons8-badge-de-v%C3%A9rification-instagram-30.png" /></a></td>
-<td><a href="quiz/WEB01_quiz.html"><img alt="QUIZ" src="../../_graphics/icones/icons8-quiz-30.png" /></a></td>
-<td><a href="exercices/WEB01_exercices.pdf"><img alt="PDF" src="../../_graphics/icones/icons8-pdf-30.png" /></a></td>
-<td><a href="exercices/WEB01_exercice_correction.html"><img alt="CORR" src="../../_graphics/icones/icons8-coche-emoji-30.png" /></a></td>
+<td style="text-align: left;"><a href="LP06_Algos_Recherche.pdf">📕 <strong>Cours</strong></a></td>
+<td style="text-align: left;">Le support de cours complet en version PDF.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td>WEB02</td>
-<td>Langage du Web CSS3</td>
-<td><a href="WEB02-Langage_web_CSS3/"><img alt="WEB" src="../../_graphics/icones/icons8-globe-30.png" /></a></td>
-<td><a href="html/WEB02-dashboard.html"><img alt="HTML" src="../../_graphics/icones/icons8-html-48.png" /></a><a href="html/WEB02-style.css"><img alt="CSS" src="../../_graphics/icones/icons8-css3-48.png" /></a></td>
-<td><a href="WEB02-Synthese.html"><img alt="SYNTH" src="../../_graphics/icones/icons8-badge-de-v%C3%A9rification-instagram-30.png" /></a></td>
-<td><a href="quiz/WEB02_quiz.html"><img alt="QUIZ" src="../../_graphics/icones/icons8-quiz-30.png" /></a></td>
-<td><a href="exercices/WEB02_exercices.pdf"><img alt="PDF" src="../../_graphics/icones/icons8-pdf-30.png" /></a></td>
-<td><a href="exercices/WEB02_exercice_correction.html"><img alt="CORR" src="../../_graphics/icones/icons8-coche-emoji-30.png" /></a></td>
+<td style="text-align: left;"><a href="LP06_Algos_Recherche_Synthese.html">💡 <strong>Synthèse</strong></a></td>
+<td style="text-align: left;">Fiche récapitulative des concepts clés (HTML).</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td>WEB03</td>
-<td>Interaction Client-Serveur</td>
-<td><a href="WEB03-Interaction_client_serveur/"><img alt="WEB" src="../../_graphics/icones/icons8-globe-30.png" /></a></td>
-<td><a href="html/WEB03-dashboard.html"><img alt="HTML" src="../../_graphics/icones/icons8-html-48.png" /></a><a href="html/WEB03-style.css"><img alt="CSS" src="../../_graphics/icones/icons8-css3-48.png" /></a></td>
-<td><a href="WEB03-Synthese.html"><img alt="SYNTH" src="../../_graphics/icones/icons8-badge-de-v%C3%A9rification-instagram-30.png" /></a></td>
-<td><a href="quiz/WEB03_quiz.html"><img alt="QUIZ" src="../../_graphics/icones/icons8-quiz-30.png" /></a></td>
-<td><a href="exercices/WEB03_exercices.pdf"><img alt="PDF" src="../../_graphics/icones/icons8-pdf-30.png" /></a></td>
-<td><a href="exercices/WEB03_exercice_correction.html"><img alt="CORR" src="../../_graphics/icones/icons8-coche-emoji-30.png" /></a></td>
+<td style="text-align: left;"><a href="flashcards/LP06_flashcards.html">🎴 <strong>Flashcards</strong></a></td>
+<td style="text-align: left;">Cartes de mémorisation pour réviser les notions.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td>WEB04</td>
-<td>JavaScript (1) : Syntaxe de base.</td>
-<td><a href="WEB04-Java_Script_1_Syntaxe/"><img alt="WEB" src="../../_graphics/icones/icons8-globe-30.png" /></a></td>
-<td><a href="html/WEB04-dashboard.html"><img alt="HTML" src="../../_graphics/icones/icons8-html-48.png" /></a><a href="html/WEB04-style.css"><img alt="CSS" src="../../_graphics/icones/icons8-css3-48.png" /></a><a href="html/WEB04-script.js"><img alt="JS" src="../../_graphics/icones/icons8-javascript-30.png" /></a></td>
-<td><a href="WEB04-Synthese.html"><img alt="SYNTH" src="../../_graphics/icones/icons8-badge-de-v%C3%A9rification-instagram-30.png" /></a></td>
-<td><a href="quiz/WEB04_quiz.html"><img alt="QUIZ" src="../../_graphics/icones/icons8-quiz-30.png" /></a></td>
-<td><a href="exercices/WEB04_exercices.pdf"><img alt="PDF" src="../../_graphics/icones/icons8-pdf-30.png" /></a></td>
-<td><a href="exercices/WEB04_exercice_correction.html"><img alt="CORR" src="../../_graphics/icones/icons8-coche-emoji-30.png" /></a></td>
+<td style="text-align: left;"><a href="quiz/LP06_quiz.html">📝 <strong>Quiz</strong></a></td>
+<td style="text-align: left;">Auto-évaluation rapide sur le chapitre.</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr>
-<td>WEB05</td>
-<td>JavaScript (2) : Conditions et Interactivité.</td>
-<td><a href="WEB05-Java_Script_2_conditions_interactivite/"><img alt="WEB" src="../../_graphics/icones/icons8-globe-30.png" /></a></td>
-<td><a href="html/WEB05-dashboard.html"><img alt="HTML" src="../../_graphics/icones/icons8-html-48.png" /></a><a href="html/WEB05-style.css"><img alt="CSS" src="../../_graphics/icones/icons8-css3-48.png" /></a><a href="html/WEB05-script.js"><img alt="JS" src="../../_graphics/icones/icons8-javascript-30.png" /></a></td>
-<td><a href="WEB05-Synthese.html"><img alt="SYNTH" src="../../_graphics/icones/icons8-badge-de-v%C3%A9rification-instagram-30.png" /></a></td>
-<td><a href="quiz/WEB05_quiz.html"><img alt="QUIZ" src="../../_graphics/icones/icons8-quiz-30.png" /></a></td>
-<td><a href="exercices/WEB05_exercices.pdf"><img alt="PDF" src="../../_graphics/icones/icons8-pdf-30.png" /></a></td>
-<td><a href="exercices/WEB05_exercice_correction.html"><img alt="CORR" src="../../_graphics/icones/icons8-coche-emoji-30.png" /></a></td>
+<td style="text-align: left;"><a href="exercices/LP06_EXO1_Sujet.pdf">✏️ <strong>Exercices</strong></a></td>
+<td style="text-align: left;">Exercices d'application</td>
+<td style="text-align: left;"><a href="exercices/LP06_EXO1_Correction.pdf">Correction</a></td>
 </tr>
 <tr>
-<td>WEB06</td>
-<td>IHM : Capteurs, actionneurs.</td>
-<td><a href="WEB06-IHM_Capteurs_actionneurs/"><img alt="WEB" src="../../_graphics/icones/icons8-globe-30.png" /></a></td>
-<td><a href="html/WEB06-dashboard.html"><img alt="HTML" src="../../_graphics/icones/icons8-html-48.png" /></a><a href="html/WEB06-style.css"><img alt="CSS" src="../../_graphics/icones/icons8-css3-48.png" /></a><a href="html/WEB06-script.js"><img alt="JS" src="../../_graphics/icones/icons8-javascript-30.png" /></a></td>
-<td><a href="WEB06-Synthese.html"><img alt="SYNTH" src="../../_graphics/icones/icons8-badge-de-v%C3%A9rification-instagram-30.png" /></a></td>
-<td><a href="quiz/WEB06_quiz.html"><img alt="QUIZ" src="../../_graphics/icones/icons8-quiz-30.png" /></a></td>
-<td><a href="exercices/WEB06_exercices.pdf"><img alt="PDF" src="../../_graphics/icones/icons8-pdf-30.png" /></a></td>
-<td><a href="exercices/WEB06_exercice_correction.html"><img alt="CORR" src="../../_graphics/icones/icons8-coche-emoji-30.png" /></a></td>
+<td style="text-align: left;"><a href=".">📚 <strong>Activité pratique 01</strong></a></td>
+<td style="text-align: left;">Activité Capytale</td>
+<td style="text-align: left;"><a href="./">Correction</a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="tableau-de-suivi-des-competences-interaction-homme-machine-web">📋 Tableau de Suivi des Compétences : Interaction Homme-Machine &amp; Web</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Contenus</th>
-<th style="text-align: left;">Capacités attendues</th>
-<th style="text-align: left;">Activités de référence (Fiches WEB)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Modalités de l’interaction H/M</strong></td>
-<td style="text-align: left;">Identifier les différents composants graphiques permettant d’interagir avec une application Web.</td>
-<td style="text-align: left;"><strong>WEB01</strong> : Analyse des balises <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>. Exploration de l'inspecteur d'éléments (F12).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Événements</strong></td>
-<td style="text-align: left;">Identifier les événements que les fonctions associées aux différents composants graphiques sont capables de traiter.</td>
-<td style="text-align: left;"><strong>WEB04</strong> : Utilisation de l'attribut <code>onclick</code> pour déclencher une fonction JavaScript.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Comportement vs Description</strong></td>
-<td style="text-align: left;">Distinguer ce qui relève de la description des composants (HTML) de leur comportement (programmé en JavaScript).</td>
-<td style="text-align: left;"><strong>WEB01 &amp; WEB04</strong> : Séparation des fichiers <code>.html</code> et <code>.js</code>. Comprendre que JS apporte le comportement dynamique.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Interaction utilisateur</strong></td>
-<td style="text-align: left;">Analyser et modifier les méthodes exécutées lors d’un clic sur un bouton d’une page Web.</td>
-<td style="text-align: left;"><strong>WEB04 &amp; WEB05</strong> : Création et modification de fonctions (<code>direBonjour()</code>, <code>gererLumiere()</code>) modifiant le DOM.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Interaction client-serveur</strong></td>
-<td style="text-align: left;">Distinguer ce qui est exécuté sur le client ou sur le serveur et dans quel ordre.</td>
-<td style="text-align: left;"><strong>WEB03</strong> : Schéma du cycle requête/réponse. Distinction entre le navigateur (Client) et le fichier de réception (Serveur).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Requêtes HTTP</strong></td>
-<td style="text-align: left;">Distinguer ce qui est mémorisé dans le client et retransmis au serveur. Reconnaître quand et pourquoi la transmission est chiffrée.</td>
-<td style="text-align: left;"><strong>WEB03</strong> : Analyse du passage de paramètres via HTTP et discussion sur la confidentialité des données.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Formulaires Web</strong></td>
-<td style="text-align: left;">Analyser le fonctionnement d’un formulaire simple. Distinguer les transmissions de paramètres par les requêtes <strong>POST</strong> ou <strong>GET</strong>.</td>
-<td style="text-align: left;"><strong>WEB03</strong> : Création de la section "Configuration" avec <code>&lt;form&gt;</code>, <code>action</code> et <code>method</code>. Comparaison des méthodes GET/POST.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Interface Homme-Machine (IHM)</strong></td>
-<td style="text-align: left;">Identifier le rôle des capteurs et actionneurs.</td>
-<td style="text-align: left;"><strong>WEB06</strong> : Modélisation de la boucle de contrôle. Le curseur simule le capteur, le texte/couleur simule l'actionneur (ventilation).</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Réalisation d'IHM</strong></td>
-<td style="text-align: left;">Réaliser par programmation une IHM répondant à un cahier des charges donné.</td>
-<td style="text-align: left;"><strong>WEB01 à WEB06</strong> : Projet fil rouge du <strong>Dashboard Domotique</strong> évolutif intégrant HTML, CSS et JavaScript.</td>
-</tr>
-</tbody>
-</table>
+<h2 id="-">---</h2>
+<h3 id="concepts-illustres">🧩 Concepts illustrés</h3>
+<pre><code class="language-python"></code></pre>
 
 
 
@@ -2888,12 +2835,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-        <script src="../../_environments/javascripts/mathjax.js"></script>
+        <script src="../../../_environments/javascripts/mathjax.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
