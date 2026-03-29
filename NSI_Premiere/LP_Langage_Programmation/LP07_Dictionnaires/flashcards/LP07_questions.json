@@ -1,0 +1,42 @@
+[
+    {
+        "recto": "Quelle est la principale différence entre une liste et un dictionnaire pour l'accès aux données ?",
+        "verso": "La liste utilise des <strong>indices entiers</strong> (0, 1...) alors que le dictionnaire utilise des <strong>clés</strong> (étiquettes)."
+    },
+    {
+        "recto": "Que signifie le terme 'mutable' pour un dictionnaire ?",
+        "verso": "Cela signifie que l'on peut <strong>ajouter, modifier ou supprimer</strong> des éléments après sa création."
+    },
+    {
+        "recto": "Pourquoi dit-on qu'un dictionnaire est une collection 'non ordonnée' ?",
+        "verso": "Contrairement aux listes, l'ordre d'insertion n'était historiquement pas garanti (même si Python 3.7+ le conserve, on ne doit pas compter sur l'indice)."
+    },
+    {
+        "recto": "Syntaxe pour créer un dictionnaire contenant 'pomme' (3) et 'banane' (5) ?",
+        "verso": "<code>d = {'pomme': 3, 'banane': 5}</code>"
+    },
+    {
+        "recto": "Comment récupérer uniquement la liste des valeurs d'un dictionnaire ?",
+        "verso": "On utilise la méthode <code>.values()</code>."
+    },
+    {
+        "recto": "Quelle erreur est générée si on cherche une clé absente ?",
+        "verso": "Une erreur de type <strong>KeyError</strong>."
+    },
+    {
+        "recto": "Comment itérer sur les clés et les valeurs en même temps dans une boucle for ?",
+        "verso": "<code>for cle, val in dico.items():</code>"
+    },
+    {
+        "recto": "Peut-on utiliser un tuple comme clé ? Pourquoi ?",
+        "verso": "<strong>Oui</strong>, car un tuple est immuable (non modifiable)."
+    },
+    {
+        "recto": "Peut-on utiliser une liste comme valeur dans un dictionnaire ?",
+        "verso": "<strong>Oui</strong>, les valeurs peuvent être de n'importe quel type (listes, autres dictionnaires, etc.)."
+    },
+    {
+        "recto": "Comment transformer <code>d = {'a': 1}</code> en <code>{'a': 1, 'b': 2}</code> ?",
+        "verso": "En faisant simplement <code>d['b'] = 2</code>."
+    },
+]
