@@ -1,0 +1,57 @@
+[
+  {
+    "question": "Quel type de tri correspond au système utilisé naturellement pour trier des cartes distribuées une par une ?",
+    "options": [
+      "Le tri par sélection",
+      "Le tri par insertion",
+      "Le tri par fusion",
+      "Le tri rapide"
+    ],
+    "answer": 1,
+    "feedback": "Le tri par insertion est comparé à la manière dont on trie des cartes reçues une par une : on insère chaque nouvelle carte (la clé) à sa bonne place parmi les cartes déjà triées."
+  },
+  {
+    "question": "Dans l'algorithme du tri par insertion, qu'appelle-t-on la 'clé' ?",
+    "options": [
+      "Le plus petit élément de la liste entière",
+      "Le premier élément de la liste triée",
+      "Le premier élément de la partie non triée",
+      "L'élément situé à l'indice k=0"
+    ],
+    "answer": 2,
+    "feedback": "Dans le tri par insertion, la clé est définie comme le premier élément non trié que l'on va comparer aux éléments à sa gauche."
+  },
+  {
+    "question": "Comment fonctionne le tri par sélection au départ ?",
+    "options": [
+      "La partie triée contient déjà le premier élément",
+      "La partie triée comporte 0 élément",
+      "On divise la liste en deux parties égales",
+      "On compare les éléments deux par deux"
+    ],
+    "answer": 1,
+    "feedback": "Au départ du tri par sélection, la liste triée comporte 0 élément. On cherche ensuite le plus petit élément de la liste non triée pour l'échanger avec le premier élément non trié."
+  },
+  {
+    "question": "Dans le tri par sélection, quand l'algorithme s'arrête-t-il ?",
+    "options": [
+      "Quand la liste triée comporte n éléments",
+      "Quand la liste triée comporte n-1 éléments",
+      "Dès qu'un élément est à sa place",
+      "Au bout de n*n itérations"
+    ],
+    "answer": 1,
+    "feedback": "L'algorithme recommence jusqu'à ce que la liste triée comporte n-1 éléments, car le dernier élément restant est alors forcément trié."
+  },
+  {
+    "question": "Quelle est une caractéristique commune aux tris par insertion et par sélection présentés ?",
+    "options": [
+      "Ils créent une nouvelle liste triée",
+      "Ils ne fonctionnent que sur des nombres entiers",
+      "Ils modifient la liste 'en place'",
+      "Ils ont une complexité linéaire"
+    ],
+    "answer": 2,
+    "feedback": "Les deux fonctions de tri présentées modifient la liste directement 'en place' et ne renvoient rien."
+  }
+]
