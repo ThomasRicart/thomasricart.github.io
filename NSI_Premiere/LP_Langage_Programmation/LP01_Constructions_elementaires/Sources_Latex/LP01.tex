@@ -7,58 +7,6 @@
 \makeheader{} % Affiche le bandeau
 
 
-
-\section{L'environnement de travail}
-
-Nous avons à notre disposition plusieurs outils pour écrire du code Python.
-
-\subsection*{Edupython}
-
-\begin{center}
-	\includegraphics[width = 0.5\linewidth]{LP01-02.png}
-\end{center}
-
-\texttt{Edupython} étant installé localement, il se peut que des obglets soient déjà ouverts. Fermez tous les onglets ouverts et ouvrez un nouvel onglet pour commencer à travailler.
-
-\subsection*{Notebook Capytale}
-
-\begin{minipage}{0.48\linewidth}
-	Vous accédez à \texttt{Capytale~--~Notebook} depuis votre ENT en cliquant sur \verb|Pédagogie/Capytale|. Le professeur vous donnera un code à entrer dans la zone \verb|Accéder à une activité|.
-
-\end{minipage}\hfill{}
-\begin{minipage}{0.48\linewidth}
-\begin{center}
-	\includegraphics[width = 0.7\linewidth]{LP01-03.png}
-\end{center}
-\end{minipage}
-
-
-
-Vous pourrez également y accéder directement via un lien que vous donnera votre enseignant.
-
-\medskip
-
-\begin{minipage}{0.34\linewidth}
-\subsection*{Console Capytale}
-
-Vous accédez à \texttt{Capytale~--~Console} depuis votre ENT de la même manière que pour les Notebook.
-
-\end{minipage}\hfill{}
-\begin{minipage}{0.64\linewidth}
-\begin{center}
-	\includegraphics[width = 0.95\linewidth]{LP01-04.png}
-\end{center}
-\end{minipage}
-
-\medskip
-
-\begin{center}
-\fbox{Quelque soit la façon dont vous tapez du code, n'oubliez pas de sauvegarder TRES régulièrement.}
-\end{center}
-
-
-\pagebreak
-
 \section{Les variables en Python}
 
 \begin{easybox}{Déclarer une variable en Python}
@@ -66,7 +14,7 @@ Vous accédez à \texttt{Capytale~--~Console} depuis votre ENT de la même mani�
 	Pour déclarer une variable en Python, il suffit de lui donner un nom et de lui affecter une valeur à l'aide du symbole $=$. Par exemple, pour déclarer une variable \texttt{x} qui contient la valeur 10, on écrit:
 
 \begin{minipage}{0.48\linewidth}
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1, Lignes=false,]{}
     a = 10
     \end{CodePythontexAlt}
 \end{minipage}\hfill{}
@@ -102,7 +50,7 @@ Vous accédez à \texttt{Capytale~--~Console} depuis votre ENT de la même mani�
 	Pour afficher la valeur d'une variable en Python, on utilise la fonction \texttt{print()}. Par exemple, pour afficher la valeur de la variable \texttt{x}, on écrit:
 
 \begin{minipage}{0.48\linewidth}
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1, Lignes=false,]{}
     print(x)
     \end{CodePythontexAlt}
 \end{minipage}\hfill{}
@@ -169,19 +117,19 @@ b = False
 \end{easybox}
 
 \begin{minipage}{0.3\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+    \begin{ConsolePythontex}[Label=false]{}
         print(17+2)
         print(17-2)
     \end{ConsolePythontex}
 \end{minipage}\hfill
 \begin{minipage}{0.3\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+    \begin{ConsolePythontex}[Label=false]{}
 		print(17*2)
 		print(17/2)
     \end{ConsolePythontex}
 \end{minipage}\hfill
 \begin{minipage}{0.3\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+    \begin{ConsolePythontex}[Label=false]{}
         print(17%2)
         print(17//2)
     \end{ConsolePythontex}
@@ -218,7 +166,7 @@ b = False
     Les chaines de caractères sont des variables qui contiennent du texte. Elles sont délimitées par des guillemets simples ou doubles.
 
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
             a = 'Bonjour'
             b = ' a tous'
             c = a + b
@@ -226,7 +174,7 @@ b = False
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
             a = 'Bonjour'
             b = ' a tous'
             c = a * 3
@@ -234,7 +182,7 @@ b = False
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
             a = 'Bonjour'
             b = ' a tous'
             c = a[0]
@@ -273,14 +221,14 @@ b = False
     
 
     \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
             mot = 'Bonjour'
             mot[0]
             mot[4]
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
 mot = 'Bonjour'
 n = len(mot)
 n
@@ -305,20 +253,20 @@ mot[-1]
 
 
 \begin{minipage}[t]{0.32\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+    \begin{ConsolePythontex}[ Label=false]{}
         mot1 = 'Bonjour'
         mot2 = 'Thomas'
         mot1 + ' ' + mot2
     \end{ConsolePythontex}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.32\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+    \begin{ConsolePythontex}[ Label=false]{}
         'j' in 'Bonjour'
         'b' in 'Bonjour'
     \end{ConsolePythontex}
 \end{minipage}\hfill{}
 \begin{minipage}[t]{0.32\linewidth}
-    \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+    \begin{ConsolePythontex}[ Label=false]{}
         'abracadabra'[4]
         len('abracadabra')
     \end{ConsolePythontex}
@@ -373,14 +321,14 @@ mot[-1]
     Les types des variables en python sont dynamiques, on peut modifier sa valeur ainsi que son type.
     
     \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
             a = '5'     # a est de type str
             b = int(a)  # b est de type int
             print(b)
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
             a = 4       # a est de type int
             b = str(a)  # b est de type str
             print(b)
@@ -402,7 +350,7 @@ mot[-1]
 	\medskip
 
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
 a = True
 b = False
 c = a and b
@@ -410,7 +358,7 @@ c
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
 a = True
 b = False
 c = a or b
@@ -418,7 +366,7 @@ c
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
 a = True
 c = not a
 c
@@ -481,7 +429,7 @@ c
 \begin{easybox}{Booléen comme résultat de comparaison}{}  
     \smallskip
     \begin{minipage}{0.32\linewidth}    
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
 a = 5
 b = 6
 c = (a == b)
@@ -489,7 +437,7 @@ c
 \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
 a = 5
 b = 6
 c = (a != b)
@@ -497,7 +445,7 @@ c
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[TaillePolice=\large, Label=false]{}
+        \begin{ConsolePythontex}[ Label=false]{}
 a = 5
 b = 6
 c = (a < b)

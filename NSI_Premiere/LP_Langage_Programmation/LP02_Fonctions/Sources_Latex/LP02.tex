@@ -11,16 +11,17 @@
 \begin{easybox}{Gestion des entrées en Python}
     Il est possible en python de demander à l'utilisateur d'entrer une valeur au clavier. Cela s'effectue via la commande \verb+input+
     La valeur tapée par l'utilisateur est convertie au format chaine de caractère (str)
-    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+    \begin{CodePythontexAlt}[Largeur=17cm,Centre,PremLigne=1,Lignes=false,]{}
         a = input("Entrer une valeur au clavier")           # a sera de type str
         b = int(input("Entrer une valeur au clavier"))      # b sera de type int
     \end{CodePythontexAlt}
 \end{easybox}	
 
-   
+   \medskip
+
 \begin{methode}[Affichage dans la zone programme]{}
     
-    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+    \begin{CodePythontexAlt}[Largeur=17cm,Centre,PremLigne=1]{}
         def f(x):
             y = x ** 2  # Fonction calculant x**2
             return y
@@ -33,32 +34,38 @@
     
     On peut afficher des chaines complexes avec le séparateur virgule \verb+,+
     
-    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+    \begin{CodePythontexAlt}[Largeur=17cm,Centre,PremLigne=1, Lignes=false,]{}
     a, b = 6, 4
     print("La somme de", a, "et",b, "est", a + b)
     
     
     \end{CodePythontexAlt}
+
+	   \medskip
+
     \end{methode}
     
     \begin{methode}[Affichage dans la console python]{}
         La console python accepte en plus de la commande \verb+print+ un affichage direct en appelant la variable.
-        \begin{ConsolePythontex}[TaillePolice = \large, Label=false]{}
+        \begin{ConsolePythontex}[Label=false]{}
             a = 6
             a           
         \end{ConsolePythontex}
     \end{methode}
 
+	   \medskip
+
+
 \begin{methode}[Formatage de l'affichage avec \texttt{f-string} et \texttt{format()}]{}
 
     L'idée est de créer un texte à trou que l'on va compléter par des variables.
-\begin{ConsolePythontex}[TaillePolice = \large, Label=false]{}
+\begin{ConsolePythontex}[Label=false]{}
     name = 'Paul'
     age = 25
     print(f'Votre nom est {name} et vous avez {age} ans.')
 \end{ConsolePythontex}  
 
-\begin{ConsolePythontex}[TaillePolice = \large, Label=false]{}
+\begin{ConsolePythontex}[Label=false]{}
     print('Votre nom est {} et vous avez {} ans'.format(name, age))
 \end{ConsolePythontex}
 \end{methode}
@@ -79,7 +86,7 @@
 	\end{itemize}
 
 	\begin{minipage}{0.4\linewidth}
-		\includegraphics[width=0.9\linewidth]{fonction1}
+		\includegraphics[width=0.95\linewidth]{fonction1}
 		\end{minipage}
 		\begin{minipage}{0.58\linewidth}
 		\begin{itemize}
@@ -88,7 +95,7 @@
 		\end{itemize}\end{minipage}
 \end{easybox}
 
-	\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Centre,PremLigne=1]{}
 		def f(x):
 			""" Fonction renvoyant x ** 2 """
 			y = x ** 2		# Calcul de x ** 2
@@ -106,7 +113,7 @@
 		\end{itemize}
 		
 		On vient de définir une nouvelle fonction. Il faut maintenant lui donner un argument pour qu'elle puisse calculer une valeur et la renvoyer. C'est ce que l'on appelle \textbf{appeler} la fonction.
-		\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[Centre,PremLigne=1, Lignes=false,]{}
 			a = 4   		# on affecte 4 à la variable a
 			z = f(4)		# on appelle la fonction f avec comme argument 4 
 							# et on récupère la valeur renvoyée dans la variable z
@@ -119,8 +126,10 @@
 		\item il peut n'y avoir aucun \verb+return+, on parle alors de \verb+procédure+
 \end{itemize}
 
+\medskip
+
 \begin{easybox}{Prototypage d'une fonction}
-	\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Centre,PremLigne=1]{}
 		def ma_fonction(param1, param2, ...):
 			''' Docstring: Explication de ce que fait ma_fonction
 			: description des paramètres et leurs types
@@ -135,7 +144,7 @@
 \begin{exemple}{}{}
 	Voici un exemple d'une fonction qui fait quelque chose de très simple: elle prend deux valeurs en paramètres (\texttt{a} et \texttt{b}) et renvoie la somme des ces deux valeurs. Cette somme a été créée et affectée à la variable \texttt{somme}.
 	
-	\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Centre,PremLigne=1]{}
 def calc_somme(a, b):
 	''' Fonction calculant la somme de deux valeurs 
 	: a et b deux entiers (int)					
@@ -147,7 +156,7 @@ def calc_somme(a, b):
 	Il est maintenant possible de se servir de cette fonction.
 
 
-\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+\begin{CodePythontexAlt}[Centre,PremLigne=1, Lignes=false,]{}
 s = calc_somme(6, 8)	# s récupère la valeur renvoyée par calc_somme(6, 8)
 print(s)            	# la valeur de la variable s est affichée (14)
 \end{CodePythontexAlt}
@@ -161,7 +170,7 @@ print(s)            	# la valeur de la variable s est affichée (14)
 		\item les \textbf{variables globales} sont connues dans tout le programme
 	\end{itemize}
 
-\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+\begin{CodePythontexAlt}[Centre,PremLigne=1, Lignes=false,]{}
 print(a)   # ERREUR -> a est une variable locale (tout comme b et somme)
 \end{CodePythontexAlt}
 
@@ -172,10 +181,13 @@ Il est de bon usage de ne pas appeler de la même façon des variables locales e
 
 \end{remarque}
 
+\medskip
+
+
 \begin{easybox}{Vérification de la valeur d'une variable}{}
 
 La fonctionnalité \verb+assert+ vérifie qu'une affirmation est vraie. Si c'est le cas, rien ne se passe, sinon un message d'erreur est donné
-\begin{CodePythontexAlt}[TaillePolice = \large, Centre,PremLigne=1]{}
+\begin{CodePythontexAlt}[Centre,PremLigne=1, Lignes=false,]{}
 assert calcule_somme(6, 8) == 14     	# True -> aucune message 
 assert calcule_somme(6, 8) == 12     	# False -> message d'erreur 
 assert not(calcule_somme(6, 8) == 12)	# True -> aucun message

@@ -19,7 +19,7 @@
 		\item sont délimités par des \textbf{accolades} \verb|{ }| et les paires clé-valeur sont séparées par des \textbf{deux-points} \verb|:|.
 	\end{itemize}
 	
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
 mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3}
 	\end{CodePythontexAlt}
 
@@ -34,7 +34,7 @@ mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3}
 \end{definition}
 
 \begin{propriete}[Les dictionnaires]{}
-\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
 mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3}
 print(mon_dictionnaire['a'])  # Affiche 1
 print(mon_dictionnaire['b'])  # Affiche 2
@@ -48,7 +48,7 @@ print(len(mon_dictionnaire))  # Affiche 3
 
 \begin{minipage}{0.31\linewidth}
 	\begin{easybox}{Itérer sur les clés}{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 	for cle in dico.keys():
 		print(dico[cle])
 		\end{CodePythontexAlt}
@@ -56,7 +56,7 @@ print(len(mon_dictionnaire))  # Affiche 3
 \end{minipage}\hfill
 \begin{minipage}{0.33\linewidth}
 	\begin{easybox}{Itérer sur les valeurs}{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 	for val in dico.values():
 		print(val)
 		\end{CodePythontexAlt}
@@ -64,7 +64,7 @@ print(len(mon_dictionnaire))  # Affiche 3
 \end{minipage}\hfill
 \begin{minipage}{0.36\linewidth}
 	\begin{easybox}{Itérer sur les items}{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 	for cle, val in dico.items():
 		print(cle, val)
 		\end{CodePythontexAlt}
@@ -74,7 +74,7 @@ print(len(mon_dictionnaire))  # Affiche 3
 \section{Création de dictionnaires}
 
 \begin{easybox}{3 façons de créer un dictionnaire}{}
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
 mon_dico = {}					   # Dictionnaire vide
 mon_dico = {'a': 1, 'b': 2, 'c': 3} # Création avec des paires clé-valeur
 mon_dico['a'] = 4				   # Création par ajout de cle : valeur
@@ -82,7 +82,7 @@ mon_dico['a'] = 4				   # Création par ajout de cle : valeur
 \end{easybox}
 
 \begin{easybox}{Création d'un dictionnaire par itération}{}
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
 mon_dico = {}
 for i in range(5):
 	mon_dico[i] = i**2
@@ -91,7 +91,7 @@ print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 \end{easybox}
 
 \begin{easybox}{Création d'un dictionnaire par compréhension}{}
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
 mon_dico = {i: i**2 for i in range(5)}
 print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 \end{CodePythontexAlt}
@@ -101,12 +101,15 @@ print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
  Ecrire une fonction \texttt{longueurs\_elts(L)} qui prend en argument une liste de chaînes de caractères \texttt{L} et qui renvoie un dictionnaire dont les clés sont les éléments de \texttt{L} et les valeurs sont les longueurs des éléments de la liste \texttt{L}.
  
  
- \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+ \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 def longueurs_elts(L):
 	# A compléter
 	
 
 	
+
+
+
 
 
 
@@ -117,7 +120,7 @@ assert longueurs_elts(['a', 'ab', 'abc']) == {'a': 1, 'ab': 2, 'abc': 3}
 
 \section{Appartenance d'un élément à un dictionnaire}
 
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
 mon_dico = {'a': 1, 'b': 2, 'c': 3}
 print('a' in mon_dico.keys())  # Affiche True
 print('d' in mon_dico.keys())  # Affiche False
@@ -129,7 +132,7 @@ print(('d', 4) in mon_dico.items())  # Affiche False
 
 \section{Suppression dans un dictionnaire}
 
-	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
 mon_dico = {'a': 1, 'b': 2, 'c': 3}
 del mon_dico['a']  # Supprime la paire clé-valeur 'a': 1
 print(mon_dico)  # Affiche {'b': 2, 'c': 3}
@@ -137,13 +140,14 @@ mon_dico.clear()  # Supprime toutes les paires clé-valeur du dictionnaire
 print(mon_dico)  # Affiche {}
 \end{CodePythontexAlt}
 
+\pagebreak
 
 \begin{exercice_cours}{\quad}{}
 
 			\begin{enumerate}
 				\item  Ecrire une fonction \verb|occurence(sequence)| qui renvoie un dictionnaire dont les clés sont les caractères présents dans \verb|sequence| et leurs valeurs le nombre de fois où elles apparaissent.
 
-				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 					def occurence(sequence)->dict:
 						  
 
@@ -161,11 +165,13 @@ print(mon_dico)  # Affiche {}
 
 				\item Ecrire une fonction \verb|plus_frequent(sequence)| qui renvoie le caractère le plus souvent présent dans la \verb|sequence|.
 				
-				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 					def plus_frequent(sequence):
 						
 
 
+
+					
 
 
 
@@ -189,7 +195,7 @@ print(mon_dico)  # Affiche {}
 	moyenne.
 	
 
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 		def coupe_dico(dico):
 			
 
@@ -198,9 +204,11 @@ print(mon_dico)  # Affiche {}
 
 
 
-		dico={"etudiant1":15,"etudiant2":9,"etudiant3":12,"étudiant4":5}
-		assert coupe_dico(dico) == ({"etudiant1":15, "etudiant3":12}, {"etudiant2":9,,"étudiant4":5})
-	
+
+
+
+		dico={"etudiant1": 15,"etudiant2": 9,"etudiant3": 12,"étudiant4": 5}
+		print(coupe_dico(dico))
 	\end{CodePythontexAlt}
 \end{exercice_cours}
 
