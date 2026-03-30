@@ -18,8 +18,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [💡 **Synthèse**](./LP08_Tris_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/LP07_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/LP08_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**](./exercices/LP08_EXO1_Sujet.pdf) | Exercices d'application boucle FOR |[Correction](./exercices/LP05_EXO1_Correction.pdf) |
-| [📚 **Activité pratique 01**](./LP08-ACT1-Listes.ipynb) | Activité Capytale Boucle FOR | [Correction](./)|
+| [✏️ **Exercices**](./exercices/LP08_EXO1_Sujet.pdf) | Exercices d'application Tris |[Correction](./exercices/LP05_EXO1_Correction.pdf) |
+| [📚 **Activité pratique 01**](./LP08-ACT1-Listes.ipynb) | Activité Capytale Tris | [Correction](./)|
 
 ---
 ---
