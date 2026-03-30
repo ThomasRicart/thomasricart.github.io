@@ -16,7 +16,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [💡 **Synthèse**](./LP01_Constructions_elementaires_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/LP01_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/LP01_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**](./exercices/LP01_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/LP01_EXO1_Correction.pdf) |
+| [✏️ **Exercices 01**](./exercices/LP01_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/LP01_EXO1_Correction.pdf) |
+| [✏️ **Exercices 02**](./exercices/LP01_EXO2_variables.url) | Exercices interactifs | |
 | [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
 
 ---
