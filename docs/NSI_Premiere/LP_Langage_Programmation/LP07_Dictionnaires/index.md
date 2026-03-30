@@ -16,7 +16,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/LP07_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/LP07_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**](./exercices/LP07_EXO1_Sujet.pdf) | Exercices d'application boucle FOR |[Correction](./exercices/LP05_EXO1_Correction.pdf) |
-| [📚 **Activité pratique 01**](./LP07-ACT1-Listes.ipynb) | Activité Capytale Boucle FOR | [Correction](./)|
+| [📚 **Activité pratique 01**](./LP07-ACT1-Dictionnaires.ipynb) | Activité Capytale Boucle FOR | [Correction](./)|
+| [📚 **Activité pratique 02**](./LP07-ACT2-Dictionnaires.ipynb) | Activité Capytale Boucle FOR | [Correction](./)|
 
 ---
 ---

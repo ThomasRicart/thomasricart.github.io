@@ -1,0 +1,456 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Tris par insertion et sélection} % Titre au centre
+\def\docname{LP08}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\section{Tri par insertion}
+
+
+\url{https://www.youtube.com/watch?v=ROalU379l3U}
+
+\url{https://physalgo.fr/Dariush_Tris/index.html}
+
+Ce type de tri est le système que vous utilisez naturellement lorsqu'on vous distribue des cartes une par une et que vous voulez les trier par ordre croissant.
+
+Au fur et à mesure que vous recevez une carte (la \textbf{clé}), vous lui trouvez la bonne place en la comparant aux cartes déjà triées. Cette carte va se décaler vers la gauche jusqu'à trouver sa bonne place.
+
+
+\begin{propriete}[Le tri par insertion]{}
+	\begin{minipage}{0.59\linewidth}
+		\begin{enumerate}
+			\item La liste contenant un seul élément d'indice 0 est triée.
+			\item La clé est le premier élément non trié;
+			\item On compare la clé avec l'élément à sa gauche si on n'a pas atteint le bord gauche;
+			\item Échange des éléments si la clé est inférieure à l'élément de gauche;
+			\item Retour à l'étape 3
+			\item La partie triée gagne un élément;
+			\item Retour à l'étape 2 tant qu'il reste des éléments à trier.
+		\end{enumerate}
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.39\linewidth}
+		\includegraphics[width=0.95\linewidth]{tri-par-insertion.png}
+	\end{minipage}
+\end{propriete}
+
+
+\textbf{Etape 1:}
+
+\begin{itemize}
+	\item au départ la liste triée est constituée de l'élément 3;
+	\item la clé est le premier élément non trié (8).
+	\item la clé est supérieure à l'élément de gauche(3);
+	\item la clé est déposée à l'indice 1 de la liste;
+	\item la partie triée gagne un élément (8);
+\end{itemize}
+
+\textbf{Etape 2:}
+
+
+\begin{itemize}
+	\item la liste triée est donc maintenant \verb|[3, 8]|;
+	\item la clé est le premier élément non trié (2).
+	\item la clé est inférieure à l'élément de gauche(8) $\Rightarrow$ la clé est échangée avec l'élément de gauche (8);
+	\item la clé est inférieure à l'élément de gauche(3) $\Rightarrow$ la clé est échangée avec l'élément de gauche (3);
+	\item la clé est maintenant tout à gauche de la liste $\Rightarrow$ la clé est déposée à l'indice 0 de la liste;
+	\item la partie triée gagne un élément (2);
+\end{itemize}
+
+\textbf{Etape 3:}
+
+\begin{itemize}
+	\item la liste triée est donc maintenant \verb|[2, 3, 8]|;
+	\item la clé est le premier élément non trié (6).
+	\item la clé est inférieure à l'élément de gauche(8) $\Rightarrow$ la clé est échangée avec l'élément de gauche (8);
+	\item la clé est supérieure à l'élément de gauche(3) $\Rightarrow$ la clé est déposée à l'indice 2 de la liste;
+	\item la partie triée gagne un élément (6);
+\end{itemize}
+
+
+\begin{exercice_cours}{Tri par insertion}{}
+	\begin{enumerate}
+		\item 	Compléter le programme suivant afin d'effectuer le tri par insertion. Cette fonction modifie la liste en place et ne renvoie donc rien.
+
+
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		def tri_insertion(L):
+			''' Algorithme de tri par insertion '''
+			n = len(L)
+			for i in range(...., ....):
+				# Indice de la clé
+				k = .... 				
+				# Tant que le bord de la liste n'est pas atteint
+				# Et que la clé est inférieure à l'élement de gauche:
+				while .............................................:
+					# Échange de la clé avec l'élément de gauche
+					...................................................... 
+					# Décalage de la clé vers la gauche
+					....................... 
+		
+		L = [8, 4, 1, 0, -5, 6, 7]				 # Liste non triée
+		tri_insertion(L)					   # Tri de la liste
+		assert L == [-5, 0, 1, 4, 6, 7, 8] 	# La liste est triée
+		\end{CodePythontexAlt}
+
+
+		\item Effectuer la trace de cet algorithme pour \verb+L=[3, 6, 0, 2]+. Recopier le tableau ci-dessous et le compléter au fur et à mesure de l'exécution de l'algorithme.
+		
+		\begin{center}
+			
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			Ligne & \verb+L[0]+ & \verb+L[1]+ & \verb+L[2]+ & \verb+L[3]+ & \verb+i+ & \verb+k+ & \verb+L[k-1]+ & \verb+L[k]+ & \verb+while+ \\
+			\hline
+			&&&&&&&&&\\ \hline
+&&&&&&&&&\\ \hline
+
+		\end{tabular}
+	\end{center}
+
+	\item Quel est le variant de boucle? L'algorithme se termine-t-il? \dotfill{}
+	\dotfill{}
+
+	\dotfill{}
+
+	\dotfill{}
+
+	\dotfill{}
+
+	\dotfill{}
+
+	\item Quel est l'invariant de boucle? L'algorithme est-il correct? \dotfill{}
+	
+	\dotfill{}
+
+	\dotfill{}
+
+	\dotfill{}
+
+	\dotfill{}
+
+	\item Déterminer la complexité de cet algorithme \dotfill{}
+	\end{enumerate}
+
+\end{exercice_cours}
+
+\pagebreak
+\section{Tri par sélection}
+
+\url{https://www.youtube.com/watch?v=Ns4TPTC8whw}
+
+\url{https://physalgo.fr/Dariush_Tris/index.html}
+
+Ce type de tri est le système que vous utilisez lorsqu'on vous distribue toutes les cartes d'un coup. 
+
+Au départ la liste triée comporte 0 éléments. On cherche le plus petit élément de la liste non triée et on l'échange avec le premier élément de la liste non triée. La partie triée gagne un élément. On recommence tant qu'il reste des éléments à trier.
+
+
+\begin{propriete}[Le tri par sélection]{}
+	\begin{minipage}{0.59\linewidth}
+		\begin{enumerate}
+			\item la liste triée comporte 0 éléments et la liste non triée $n$
+            \item on cherche le minimum de la liste non triée que l'on échange avec le premier élément de la liste non triée;
+            \item la liste triée augmente de 1 élément
+            \item on recommence l'étape 1 jusqu'à ce que la liste triée comporte $n-1$ éléments (le dernier élément est forcément trié).
+        \end{enumerate}
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.39\linewidth}
+		\includegraphics[width=0.95\linewidth]{tri-par-selection.png}
+	\end{minipage}
+\end{propriete}
+
+
+\textbf{Etape 1:}
+
+\begin{itemize}
+	\item au départ la liste triée est constituée d'aucun élément;
+	\item la liste non triée est \verb|[3, 8, 2, 6, 5, 0, 4]|
+	\item le premier élément de la liste non triée est 3;
+	\item on cherche le minimum de la liste non triée qui est 0;
+	\item on échange 3 et 0;
+	\item la liste triée gagne un élément (0);
+	\item la liste triée est maintenant \verb|[0]| et la liste non triée est \verb|[8, 2, 6, 5, 3, 4]|;
+\end{itemize}
+
+\textbf{Etape 2:}
+
+
+\begin{itemize}
+	\item la liste triée est donc maintenant \verb|[0]|;
+	\item le premier élément de la liste non triée est 8;
+	\item on cherche le minimum de la liste non triée qui est 2;
+	\item on échange 8 et 2;
+	\item la liste triée gagne un élément (2);
+	\item la liste triée est maintenant \verb|[0, 2]| et la liste non triée est \verb|[8, 6, 5, 3, 4]|;
+\end{itemize}
+
+\textbf{Etape 3:}
+
+\begin{itemize}
+	\item la liste triée est donc maintenant \verb|[0, 2]|;
+	\item le premier élément de la liste non triée est 8;
+	\item on cherche le minimum de la liste non triée qui est 3;
+	\item on échange 8 et 3;
+	\item la liste triée gagne un élément (3);
+	\item la liste triée est maintenant \verb|[0, 2, 3]| et la liste non triée est \verb|[8, 6, 5, 4]|;
+\end{itemize}
+
+
+\begin{exercice_cours}{Tri par sélection}{}
+	\begin{enumerate}
+		\item 	Compléter le programme suivant afin d'effectuer le tri par sélection. Cette fonction modifie la liste en place et ne renvoie donc rien.
+
+
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		def tri_selection(L):
+			''' Algorithme de tri par sélection '''
+			n = len(L)
+			for i in range(...., ....):
+				# Recherche du plus petit element de la liste non triee
+				mini = i		# indice de plus petit element non triee
+				for j in range(...., ....):
+					if .............................:
+						mini = j 		# j est le nouvel indice du minimum	
+				# Echange entre L[i] et L[mini]
+				..............................................
+
+		L = [8, 4, 1, 0, -5, 6, 7]				 # Liste non triée
+		tri_selection(L)					   # Tri de la liste
+		assert L == [-5, 0, 1, 4, 6, 7, 8] 	# La liste est triée
+		\end{CodePythontexAlt}
+
+
+		\item Effectuer la trace de cet algorithme pour \verb+L=[3, 6, 0, 2]+. Recopier le tableau ci-dessous et le compléter au fur et à mesure de l'exécution de l'algorithme.
+		
+		\begin{center}
+			
+			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+				Ligne & \verb+L[0]+ & \verb+L[1]+ & \verb+L[2]+ & \verb+L[3]+ & \verb+i+ & \verb+mini+ & \verb+j+ & \verb+L[j]+ & \verb+L[mini]+ & IF  \\
+			\hline
+				&&&&&&&&&&\\ \hline
+				&&&&&&&&&&\\ \hline
+
+		\end{tabular}
+	\end{center}
+
+	\item L'algorithme se termine-t-il? \dotfill{}
+	\dotfill{}
+
+	\item Quel est l'invariant de boucle? L'algorithme est-il correct? \dotfill{}
+	
+	\dotfill{}
+
+	\dotfill{}
+
+	\dotfill{}
+
+	\dotfill{}
+
+	\item Déterminer la complexité de cet algorithme \dotfill{}
+	\end{enumerate}
+
+\end{exercice_cours}
+
+\end{document}
+\section{Introduction}
+
+\begin{definition}[Les dictionnaires]{}
+	Un \textbf{dictionnaire} est une structure de données qui permet de stocker des paires \textbf{clé-valeur}. Les clés sont uniques dans un dictionnaire, tandis que les valeurs peuvent être dupliquées.
+
+	En Python, les dictionnaires:
+	\begin{itemize}
+		\item sont des collections \textbf{non ordonnées} d'éléments;
+		\item sont \textbf{mutables}, les éléments d'un dictionnaire peuvent être modifiés après sa création;
+		\item sont \textbf{indexés par des clés}, qui peuvent être de n'importe quel type de données immuable;
+		\item sont délimités par des \textbf{accolades} \verb|{ }| et les paires clé-valeur sont séparées par des \textbf{deux-points} \verb|:|.
+	\end{itemize}
+	
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3}
+	\end{CodePythontexAlt}
+
+	Dans cet exemple:
+	\begin{itemize}
+		\item les clés sont 'a', 'b' et 'c';
+		\item les valeurs sont 1, 2 et 3;
+		\item la clé 'a' est associée à la valeur 1;
+		\item le couple clé-valeur 'b': 2 signifie que la clé 'b' est associée à la valeur 2;
+	\end{itemize}
+	
+\end{definition}
+
+\begin{propriete}[Les dictionnaires]{}
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3}
+print(mon_dictionnaire['a'])  # Affiche 1
+print(mon_dictionnaire['b'])  # Affiche 2
+print(mon_dictionnaire['c'])  # Affiche 3
+print(len(mon_dictionnaire))  # Affiche 3
+		\end{CodePythontexAlt}
+\end{propriete}
+
+\section{Itérer sur un dictionnaire}
+
+
+\begin{minipage}{0.31\linewidth}
+	\begin{easybox}{Itérer sur les clés}{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	for cle in dico.keys():
+		print(dico[cle])
+		\end{CodePythontexAlt}
+	\end{easybox}
+\end{minipage}\hfill
+\begin{minipage}{0.33\linewidth}
+	\begin{easybox}{Itérer sur les valeurs}{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	for val in dico.values():
+		print(val)
+		\end{CodePythontexAlt}
+	\end{easybox}
+\end{minipage}\hfill
+\begin{minipage}{0.36\linewidth}
+	\begin{easybox}{Itérer sur les items}{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	for cle, val in dico.items():
+		print(cle, val)
+		\end{CodePythontexAlt}
+	\end{easybox}
+\end{minipage}
+
+\section{Création de dictionnaires}
+
+\begin{easybox}{3 façons de créer un dictionnaire}{}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {}					   # Dictionnaire vide
+mon_dico = {'a': 1, 'b': 2, 'c': 3} # Création avec des paires clé-valeur
+mon_dico['a'] = 4				   # Création par ajout de cle : valeur
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{easybox}{Création d'un dictionnaire par itération}{}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {}
+for i in range(5):
+	mon_dico[i] = i**2
+print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{easybox}{Création d'un dictionnaire par compréhension}{}
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {i: i**2 for i in range(5)}
+print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{exercice_cours}[Création d'un dictionnaire]{}
+ Ecrire une fonction \texttt{longueurs\_elts(L)} qui prend en argument une liste de chaînes de caractères \texttt{L} et qui renvoie un dictionnaire dont les clés sont les éléments de \texttt{L} et les valeurs sont les longueurs des éléments de la liste \texttt{L}.
+ 
+ 
+ \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+def longueurs_elts(L):
+	# A compléter
+	
+
+	
+
+
+
+assert longueurs_elts(['a', 'ab', 'abc']) == {'a': 1, 'ab': 2, 'abc': 3}
+\end{CodePythontexAlt}
+\end{exercice_cours}
+
+
+\section{Appartenance d'un élément à un dictionnaire}
+
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {'a': 1, 'b': 2, 'c': 3}
+print('a' in mon_dico.keys())  # Affiche True
+print('d' in mon_dico.keys())  # Affiche False
+print(1 in mon_dico.values())  # Affiche True
+print(4 in mon_dico.values())  # Affiche False
+print(('a', 1) in mon_dico.items())  # Affiche True
+print(('d', 4) in mon_dico.items())  # Affiche False
+\end{CodePythontexAlt}
+
+\section{Suppression dans un dictionnaire}
+
+	\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {'a': 1, 'b': 2, 'c': 3}
+del mon_dico['a']  # Supprime la paire clé-valeur 'a': 1
+print(mon_dico)  # Affiche {'b': 2, 'c': 3}
+mon_dico.clear()  # Supprime toutes les paires clé-valeur du dictionnaire
+print(mon_dico)  # Affiche {}
+\end{CodePythontexAlt}
+
+
+\begin{exercice_cours}{\quad}{}
+
+			\begin{enumerate}
+				\item  Ecrire une fonction \verb|occurence(sequence)| qui renvoie un dictionnaire dont les clés sont les caractères présents dans \verb|sequence| et leurs valeurs le nombre de fois où elles apparaissent.
+
+				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+					def occurence(sequence)->dict:
+						  
+
+
+
+
+
+
+
+
+
+					assert occurence([4, 2, 3, 4, 1, 4, 3, 4]) == {4: 4, 2: 1, 3: 2, 1: 1}
+					assert occurence("abracadrabra") == {'a': 5, 'b': 2, 'r': 3, 'c': 1, 'd': 1}
+				\end{CodePythontexAlt}
+
+				\item Ecrire une fonction \verb|plus_frequent(sequence)| qui renvoie le caractère le plus souvent présent dans la \verb|sequence|.
+				
+				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+					def plus_frequent(sequence):
+						
+
+
+
+
+
+
+
+					assert occurence([4, 2, 3, 4, 1, 4, 3, 4]) == 4
+					assert occurence("abracadrabra") == 'a'
+				\end{CodePythontexAlt}
+
+			\end{enumerate}
+
+
+\end{exercice_cours}
+
+	
+
+\begin{exercice_cours}{\quad}{}
+
+	On considère un dictionnaire donnant la moyenne de quelques étudiants. Partitionner ce dictionnaire en deux sous dictionnaires : un dictionnaire
+	des élèves ayant la moyenne et un dictionnaire des élèves n'ayant pas la
+	moyenne.
+	
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+		def coupe_dico(dico):
+			
+
+
+
+
+
+
+		dico={"etudiant1":15,"etudiant2":9,"etudiant3":12,"étudiant4":5}
+		assert coupe_dico(dico) == ({"etudiant1":15, "etudiant3":12}, {"etudiant2":9,,"étudiant4":5})
+	
+	\end{CodePythontexAlt}
+\end{exercice_cours}
+
