@@ -1,0 +1,310 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Représentation des entiers positifs} % Titre au centre
+\def\docname{RD01}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\section{Origine du binaire en informatique}
+
+ Pour communiquer, deux êtres humains doivent parler la même langue. L'échange d'informations entre les composants d'un ordinateur repose sur le même principe.
+
+ Dans les années 40, lorsqu'il a fallu passer de l'idée abstraite de machine de Turing (modèle mathématique) à la réalisation concrète du premier ordinateur (machine physique), la question des composants matériels à choisir s'est posée (transistor, lampe, DEL, aimant, tube, bande, \ldots{}). Pour ces composants, il est possible de réduire leur fonctionnement à 2 états exclusifs l'un de l'autre : état 0 et état 1.
+
+ \begin{itemize}
+		\item     le transistor est bloqué (état 0) ou passant (état 1),
+		\item     l'interrupteur est ouvert (état 0) ou fermé (état 1),
+		\item     la lampe est éteinte (état 0) ou allumée (état 1),
+		\item     le ruban est trouée (état 0) ou non (état 1),	
+ \end{itemize}
+
+ 	Le langage de base finalement choisie pour l'informatique, et encore utilisé aujourd'hui, est le binaire dont l'unité est le \textbf{bit} : binary digit (ou nombre binaire), pouvant prendre comme seules valeurs \textbf{0 ou 1}.
+
+
+	\begin{exercice_cours}{Combien d'états différents peut-on coder avec 1 bit? 2 bits? 8 bits? $n$ bits? \dotfill}{}
+	\end{exercice_cours}
+
+	\section{Représentation binaire}
+
+	\begin{exercice_cours}{Représentation binaire d'un entier naturel}{}
+
+		Sur 8 bits, donner la représentation des premiers entiers naturels:
+
+\medskip
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+	\hline
+	V. décimale & V. binaire & & V. décimale & V. binaire& & V. décimale & V. binaire& & V. décimale & V. binaire\\ \hline
+	0 & & & 8 & & & 16 & & & 24 &\\ \hline
+	1 & & & 9 & & & 17 & & & 25 &\\ \hline 
+	2 & & & 10 & & & 18 & & & 26 &\\ \hline
+	3 & & & 11 & & & 19 & & & 27 &\\ \hline
+	4 & & & 12 & & & 20 & & & 28 &\\ \hline
+	5 & & & 13 & & & 21 & & & 29 &\\ \hline
+	6 & & & 14 & & & 22 & & & 30 &\\ \hline
+	7 & & & 15 & & & 23 & & & 31 &\\ \hline
+	
+
+
+\end{tabular}
+
+\end{exercice_cours}
+
+\begin{propriete}[A retenir]{}
+
+	\begin{itemize}
+		\item un entier naturel est représenté en binaire par une suite de bits (0 et 1).
+		\item un entier naturel codé sur $n$ bits peut prendre $2^n$ valeurs différentes, de 0 à $2^n-1$.
+		\item avec 8 bits, on peut représenter les entiers naturels de 0 à 255.
+		\item le \textbf{bit de poids faible} est le bit de droite. C'est le seul multiplié par une valeur impaire. C'est donc le bit qui donnera la \textbf{parité}. Si la valeur se termine par 0, le nombre sera pair, sinon il sera impair
+		\item le \textbf{bit de poids fort} est le bit de gauche.
+		\item un octet est un groupe de 8 bits.
+	\end{itemize}
+
+\end{propriete}
+
+
+\section{Conversion Binaire~--~Décimal: convertir $1101\,1011_2$ en décimal}
+
+\renewcommand{\arraystretch}{1.4}
+		\begin{tabular}{|p{2.6cm}|p{1.6cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|p{1.4cm}|}
+		\hline
+		Rang du bit & 7 & 6 & 5 & 4 & 3 & 2 & 1 & 0 \\ \hline
+		Puissance de 2 & $2^7=128$ & $2^6=64$ & $2^5=32$ & $2^4=16$ & $2^3=8$ & $2^2=4$ & $2^1=2$ & $2^0=1$ \\ \hline
+		Bit & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\ \hline
+		Valeur & 128 & 64 & 0 & 16 & 8 & 0 & 2 & 1 \\ \hline
+		
+		\end{tabular}
+
+\medskip
+
+		Ainsi $1101\,1011_2 = 128+64+16+8+2+1=219_{10}$
+
+\medskip
+
+		\begin{exercice_cours}[Convertir les valeurs suivantes en décimal: $1001\,0100_2$, $1010_2$, $110\,1101_2$]{}
+	\vspace{2cm}
+	\end{exercice_cours}
+
+
+	\section{Conversion Décimal~--~Binaire}
+
+	\begin{methode}[Par la méthode des divisions successives]{}
+
+
+
+		\medskip
+
+		\begin{minipage}{0.74\linewidth}
+					Par exemple pour convertir $44_{10}$ en binaire:
+
+			\begin{itemize}
+				\item On effectue des divisions par $2$ jusqu'à ce que le quotient soit nul.
+				\item On lit ensuite les restes de la droite vers la gauche.
+			
+			\end{itemize}
+			
+			On a donc: $$44_{10}=0010 \; 1100_2$$
+			
+			\end{minipage}\hfill
+			\begin{minipage}{0.25\linewidth}
+			\begin{center}
+			\includegraphics[width = 0.95\linewidth]{02.jpg}
+			
+			\end{center}
+			
+			\end{minipage}
+
+\end{methode}
+
+\begin{methode}[Par la méthode des soustractions successives]{}
+
+	Lorsqu'on cherche à convertir $222_{10}$, on remarque que la plus grande puissance de 2 inférieure à 222 est $2^7=128$. Nous aurons donc besoin de 8 bits.
+				
+\medskip
+
+
+		\begin{minipage}{0.54\linewidth}
+			
+			\begin{itemize}
+				\item $222\geqslant 128$. On peut donc décomposer $222 = 2^7 + 94$
+				\item $94 \geqslant 64$. On peut donc décomposer $94 = 2^6 + 30$
+				\item $30 < 36$
+				\item $30 \geqslant 16$. On peut donc décomposer $36 = 2^4 + 14$
+				\item $14  \geqslant 8$. On peut donc décomposer $14 = 2^3 + 6$
+				\item $6 \geqslant 4$. On peut donc décomposer $6 = 2^2 + 2$
+				\item $2 \geqslant 2$. On peut donc décomposer $2 = 2^1 + 0$
+				\item $0 < 1$
+			\end{itemize}
+			
+			\end{minipage}
+			\begin{minipage}{0.44\linewidth}
+			\begin{center}
+			\includegraphics[width = 1\linewidth]{03.jpg}
+			
+			\end{center}
+			
+			\end{minipage}
+			\end{methode}
+
+\medskip
+
+	\begin{exercice_cours}[En utilisant les deux méthodes, convertir $234$ et $86$ sur 8 bits]{}
+		\vspace{3cm}
+
+	\end{exercice_cours}
+
+	\pagebreak
+
+	\section{Opérations binaires}
+
+	\begin{propriete}[Addition en binaire]{}
+
+		\begin{multicols}{2}
+
+		L'addition se pratique de la même façon que dans le calcul décimal usuel, et repose sur la table d'addition binaire. 
+
+
+		\columnbreak
+		
+		\begin{center}
+		
+		\begin{tabular}{|l|l|l|}
+		\hline
+		\rowcolor{red}+ & 0 & 1 \\ 
+		\hline
+		\cellcolor{red}0 & 00 & 01 \\ 
+		\hline
+		\cellcolor{red}1 & 01 & 10 \\ 
+		\hline
+		\end{tabular}
+		\end{center}
+		
+		\end{multicols}
+	\end{propriete}
+
+	\begin{exercice_cours}{Poser et effectuer une addition en binaire: $1 \; 0101_2+1110_2$}{}
+	\end{exercice_cours}
+
+	\begin{propriete}[Multiplication en binaire]{}
+		\begin{minipage}{0.8\linewidth}
+			La multiplication se pratique de la même façon que dans le calcul décimal usuel, et repose sur la table de multiplication suivante :
+
+\end{minipage}\hfill
+\begin{minipage}{0.18\linewidth}
+\begin{center}
+
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor{red}X & 0 & 1 \\ 
+\hline
+\cellcolor{red}0 & 00 & 00 \\ 
+\hline
+\cellcolor{red}1 & 00 & 01 \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+	\end{propriete}
+	
+	\begin{exercice_cours}[Poser et effectuer une multiplication en binaire: $1 \; 0101_2 \times 100_2$]{}
+	\vspace{2cm}
+	\end{exercice_cours}
+
+	\begin{propriete}[A retenir]{}
+		\begin{itemize}
+			\item \textbf{Multiplier} une valeur décimale par 2 revient à décaler tous les bits d'un cran vers la gauche et à ajouter un 0 sur le bit de poids faible.
+			\item \textbf{Diviser} une valeur décimale par 2 revient à décaler tous les bits d'un cran vers la droite. Le bit de poids faible est perdu. Cela revient à récupérer le quotient de la division par 2.
+			\item \textbf{Multiplier} une valeur décimale par $2^n$ revient à décaler tous les bits de $n$ crans vers la gauche et à ajouter des 0 sur les bits de poids faible.
+			\item \textbf{Diviser} une valeur décimale par $2^n$ revient à décaler tous les bits de $n$ crans vers la droite. Les bit de poids faible sont perdus. Cela revient à récupérer le quotient de la division par $2^n$.
+		\end{itemize}
+	\end{propriete}
+
+
+	
+		\section{L'Hexadécimal}
+
+
+	\begin{propriete}[Représentation d'un entier en hexadécimal]{}
+		Si le binaire est une base comprenant 2 éléments, l'hexadécimal est une base comprenant 16 éléments. Il est donc également possible de coder les valeurs décimales suivantes en hexadécimal.
+
+Puisqu'il nous faut 16 symboles. On utilise les 10 premiers chiffres et on rajouter les symboles $\{A, B, C, D, E, F\}$
+
+\begin{center}
+	\includegraphics[scale=0.8]{04.jpg}
+	\end{center}
+	\end{propriete}
+
+	
+	\begin{propriete}[Conversion hexadécimale]{}
+Les méthodes utilisées sont les memes que précédemment en remplaçant la valeur 2 par 16
+	\end{propriete}
+
+	\begin{exercice_cours}[Convertir en décimal: $A3_{16}$, $BCF_{16}$, $42_{16}$ ]{}
+	\vspace{2cm}
+	\end{exercice_cours}
+
+	\begin{exercice_cours}[Convertir en hexadécimal: $364_{10}$, $23_{10}$, $44_{10}$ ]{}
+	\vspace{2cm}
+	\end{exercice_cours}
+
+	\begin{propriete}[Conversion binaire -- hexadécimal]{}
+		Dans le cas de conversion binaire - hexadécimal (et inversement) il n'est pas utile de repasser par le décimal. En effet un symbole hexadécimal peut directement etre codé par 4 bits.
+
+		Pour convertir des entiers naturels de la représentation binaire à la représentation hexadécimale: Il suffit de regrouper les bits par quatre et de leur associer leur chiffre hexadécimal.
+		
+		$0110\,1000_2 = 68_{16}$
+	\end{propriete}
+
+
+	\begin{minipage}{0.49\linewidth}
+		
+	\begin{exercice_cours}[Convertir en hexadécimal:]{}
+		\begin{itemize}
+			\item $1101\,1010\,0011_2$
+			\item $0011\,1111\,1001_2$
+		\end{itemize}
+	\end{exercice_cours}	\end{minipage}
+\hfill
+	\begin{minipage}{0.49\linewidth}
+		\begin{exercice_cours}[Convertir en binaire:]{}
+		\begin{itemize}
+			\item $A3E_{16}$
+			\item $8DC_{16}$
+		\end{itemize}
+	\end{exercice_cours}
+	\end{minipage}
+	
+\begin{propriete}[Conversion en base $b$]{}
+	Dans le même ordre d'idée il est donc possible de faire des conversion depuis n'importe quelle base $b$.
+
+	\bigskip
+	
+	Pour tout entier naturel $b$ non nul appelé base, tout nombre entier naturel $n$ peut se décomposer sous la forme:
+	
+	$$n=\sum_{k = 0}^{N} a_kb^k=a_Nb^N+ \ldots + a_1b^1+a_0b^0$$
+	
+	L'écriture en base $b$ de $n$ sera alors $\overline{a_Na_{N-1} \ldots a_1a_0}$
+	
+\end{propriete}
+
+\begin{methode}[Conversion en python]
+
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+a_bin = 0b1101	# le 0b veut dire que la valeur est écrite en binaire
+a_dec = int(a_bin)	# conversion en décimal - valeur entière égale à 13
+a_hex = hex(a_dec)	# conversion en hexadécimal - valeur égale à 0xd
+
+b_dec = 44
+b_bin = bin(b_dec)	# conversion en binaire - valeur égale à 0b101100
+b_hex = hex(b_dec)	# conversion en hexadécimal - valeur égale à 0x2c
+
+# de manière générale, pour convertir un entier n en base b, on peut utiliser:
+a_dec = int('1101', 2)	 # conversion binaire en décimal égale à 13
+a_hex = hex(int('1101', 2))	# conversion binaire en hexadécimal égale à 0xd
+a_bin = bin(int('A3', 16))	# conversion hexadécimal en binaire égale à 0b10100011
+\end{CodePythontexAlt}
+\end{methode}
+	\pagebreak
