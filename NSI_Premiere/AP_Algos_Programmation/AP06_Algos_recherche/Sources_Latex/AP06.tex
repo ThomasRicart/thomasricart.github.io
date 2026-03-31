@@ -1,0 +1,357 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Algorithmes de recherche} % Titre au centre
+\def\docname{AP06}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\section{Algorithmes de recherche naïfs}
+
+
+\begin{exercice_cours}[Recherche d'un élément dans une liste]{}
+	Ecrire une fonction \texttt{recherche\_naive(elt, liste)} qui renvoie \texttt{True} si l'élément \texttt{elt} est présent dans la liste \texttt{liste}, et \texttt{False} sinon.
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}		
+def recherche_naive(elt, liste):
+	''' Renvoie True si elt est dans liste et False sinon'''
+
+
+
+
+
+
+
+
+
+	#
+assert recherche_naive(3, [1, 2, 3, 4, 5]) == True
+assert recherche_naive(6, [1, 2, 3, 4, 5]) == False
+		\end{CodePythontexAlt}
+\end{exercice_cours}
+
+
+\begin{definition}[Notion de complexité d'un algorithme]{}
+	La \textbf{complexité} d'un algorithme est une mesure de la quantité de ressources (temps, mémoire, etc.) que l'algorithme utilise en fonction de la taille de l'entrée. La complexité permet de comparer les algorithmes entre eux et de choisir le plus efficace pour résoudre un problème donné.	
+
+	Nous allons nous intéresser à la complexité temporelle, (temps d'exécution de l'algorithme en fonction de la taille de l'entrée) exprimée en utilisant la notation \textbf{O} (grand O).
+	
+	Pour étudier la complexité d'un algorithme on se place toujours dans le \textbf{pire des cas}, c'est à dire que l'on suppose que l'algorithme doit parcourir tous les éléments de l'entrée pour trouver la solution.
+\end{definition}
+
+\begin{easybox}{Complexité de la recherche naïve}{}
+	
+\begin{itemize}
+	\item Dans le pire des cas, l'algorithme de recherche naïve doit parcourir tous les éléments de la liste pour vérifier si l'élément recherché est présent ou non. (Elément absent ou présent à la fin de la liste)
+	\item Si la liste possède n éléments, alors l'algorithme de recherche naïve doit effectuer n comparaisons. On dira que la complexité est de l'ordre de O(n).
+	\item Si la liste contient 10 éléments, l'algorithme doit effectuer 10 comparaisons dans le pire des cas. 
+	\item De manière générale, si la taille de la liste double, le temps d'exécution de l'algorithme de recherche naïve double également. La complexité de l'algorithme de recherche naïve est linéaire.
+\end{itemize}
+	
+\end{easybox}
+
+
+\begin{definition}[Notion de terminaison d'un algorithme]{}
+	Un algorithme est dit \textbf{terminant} s'il s'arrête après un nombre fini d'étapes pour toute entrée donnée. 
+
+	Un algorithme se termine de façon certaine si:
+\begin{itemize}
+\item Il ne contient pas de boucle infinie.
+\item S'il fait appel à une boucle infinie (WHILE), il doit y avoir une condition d'arrêt qui est vérifiée à un moment donné.
+\end{itemize}
+
+La condition d'arrêt est appelée \textbf{variant de boucle}.	
+\end{definition}
+
+\pagebreak
+
+\begin{definition}[Le variant de boucle]{}
+	Un \textbf{variant de boucle} est une quantité qui est modifiée à chaque itération d'une boucle et qui permet de garantir la terminaison de l'algorithme. 
+
+	Pour qu'un variant de boucle soit efficace, il doit être:
+\begin{itemize}
+	\item \textbf{positif ou nul} pour que la boucle se poursuive;
+	\item \textbf{décroissant} à chaque itération pour que la boucle se rapproche de sa condition d'arrêt.
+\end{itemize}
+\end{definition}
+
+\begin{exercice_cours}[Variant de boucle]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		def recherche_naive(elt, liste):
+			''' Renvoie True si elt est dans liste et False sinon'''
+			i = 0
+			while i < len(liste):
+				if liste[i] == elt:
+					return True
+				i += 1
+			return False
+			
+		assert recherche_naive(3, [1, 2, 3, 4, 5]) == True
+		assert recherche_naive(6, [1, 2, 3, 4, 5]) == False
+		\end{CodePythontexAlt}
+		\begin{enumerate}
+			\item Identifier le variant de boucle de l'algorithme de recherche naïve.
+			\item Montrer que ce variant de boucle est positif ou nul au début de la boucle, et qu'il est décroissant à chaque itération de la boucle.
+		\end{enumerate}
+\end{exercice_cours}
+
+
+		\begin{definition}[Notion de correction d'un algorithme]{}
+	Un algorithme est dit \textbf{correct} s'il renvoie la bonne solution pour toute entrée donnée. 
+
+	Pour prouver la correction d'un algorithme, on peut utiliser l'invariant de boucle. Un \textbf{invariant de boucle} est une propriété qui est vérifiée avant et après chaque itération d'une boucle. Si l'invariant de boucle est vérifié, alors l'algorithme est correct.
+\end{definition}
+
+\begin{exercice_cours}[Correction d'un algorithme]{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		def recherche_naive(elt, liste):
+			''' Renvoie True si elt est dans liste et False sinon'''
+			i = 0
+			while i < len(liste):
+				if liste[i] == elt:
+					return True
+				i += 1
+			return False
+			
+		assert recherche_naive(3, [1, 2, 3, 4, 5]) == True
+		assert recherche_naive(6, [1, 2, 3, 4, 5]) == False
+		\end{CodePythontexAlt}
+		\begin{enumerate}
+			\item Identifier le variant de boucle de l'algorithme de recherche naïve.
+			\item Montrer que ce variant de boucle est positif ou nul au début de la boucle, et qu'il est décroissant à chaque itération de la boucle. Conclure.			\item Identifier un invariant de boucle de l'algorithme de recherche naïve.
+			\item Montrer que cet invariant de boucle est vérifié avant et après chaque itération de la boucle. Conclure.
+		\end{enumerate}
+\end{exercice_cours}
+
+\pagebreak
+
+\begin{exercice_cours}[division euclidienne]{}
+
+	Le principe de l'algorithme de division euclidienne est de soustraire le diviseur du dividende jusqu'à ce que le reste soit inférieur au diviseur. Le nombre de soustractions effectuées correspond au quotient de la division euclidienne, et le reste correspond au reste de la division euclidienne.
+
+	Si \texttt{a} est le dividende et \texttt{b} est le diviseur, alors l'algorithme de division euclidienne peut être écrit de la manière suivante:
+	\begin{enumerate}
+		\item Initialiser le quotient \texttt{q} à 0 et le reste \texttt{r} à \texttt{a}.
+		\item Tant que le reste \texttt{r} est supérieur ou égal au diviseur \texttt{b}, faire:
+		\begin{itemize}
+			\item Soustraire le diviseur \texttt{b} du reste \texttt{r}.
+			\item Incrémenter le quotient \texttt{q} de 1.
+		\end{itemize}
+		\item Retourner le quotient \texttt{q} et le reste \texttt{r}.
+	\end{enumerate}
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		def division_euclidienne(a, b):
+			''' Renvoie quotient et reste de la division euclidienne de a par b '''
+			
+
+
+
+
+
+
+			
+
+
+
+		assert division_euclidienne(10, 3) == (3, 1)	
+		assert division_euclidienne(10, 4) == (2, 2)
+		\end{CodePythontexAlt}
+		\begin{enumerate}
+			\item Identifier le variant de boucle de l'algorithme de division euclidienne.
+			\item Montrer que ce variant de boucle est positif ou nul au début de la boucle, et qu'il est décroissant à chaque itération de la boucle. Conclure.
+			\item Identifier un invariant de boucle de l'algorithme de division euclidienne.
+			\item Montrer que cet invariant de boucle est vérifié avant et après chaque itération de la boucle.
+			\item Conclure que l'algorithme de division euclidienne est correct.
+		\end{enumerate}
+\end{exercice_cours}
+
+
+\section{Algorithme de recherche dans une liste triée}
+
+\begin{definition}[Diviser pour régner]{}
+	En informatique, la technique de \textbf{diviser pour régner} (\emph{divide and conquer}) est une méthodestratégie algorithmique qui consiste à diviser un problème en sous-problèmes plus petits, à résoudre ces sous-problèmes de manière récursive, puis à combiner les solutions pour obtenir la solution du problème initial.
+\end{definition}
+	
+\begin{minipage}{0.39\linewidth}
+	\includegraphics[width = 1\linewidth]{Binary_search_into_array}
+\end{minipage}\hfill
+\begin{minipage}{0.59\linewidth}
+	\begin{itemize}
+		\item on compare la valeur du milieu avec la valeur cherchée. $4<7$ donc:
+		\item on conserve la moitié gauche du tableau: \verb+[1,3,4]+
+		\item on compare la valeur du milieu avec la valeur cherchée. $4>3$ donc:
+		\item on conserve la moitié droite du tableau: \verb+[4]+
+		\item on compare la valeur du milieu avec la valeur cherchée. La valeur est trouvée.
+	\end{itemize}
+\end{minipage}
+
+\begin{exercice_cours}[Algorithme de recherche dans une liste triée]{}
+
+	\begin{minipage}{0.49\linewidth}
+		
+
+		\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+			def recherche_dichotomique(val, L):
+				i_deb = 0
+				i_fin = len(L) - 1
+				while ......................:
+					i_cen = ...................
+					if ......................:
+						.......................
+					elif ....................:
+						.......................
+					else:
+						.......................
+				return False
+			
+			\end{CodePythontexAlt}
+			
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.49\linewidth}
+		
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			 \verb+i_deb+ & \verb+i_fin+ & while & \verb+i_cen+ & \verb+IF #6+ & \verb+IF #8+ \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+			&&&&& \\ \hline
+		\end{tabular}
+	\end{minipage}
+
+
+	\begin{enumerate}
+		\item Compléter l'algorithme de recherche dichotomique.
+		\item Compléter la trace de l'algorithme de recherche dichotomique pour la valeur 4 et la liste \verb+[1,3,4,6,7,8,10,13,14]+.
+		\item Identifier le variant de boucle de l'algorithme de recherche dichotomique.
+		\item Montrer que ce variant de boucle est positif ou nul au début de la boucle, et qu'il est décroissant à chaque itération de la boucle. Conclure.
+		\item Identifier un invariant de boucle de l'algorithme de recherche dichotomique.
+		\item Montrer que cet invariant de boucle est vérifié avant et après chaque itération de la boucle. Conclure que l'algorithme de recherche dichotomique est correct.
+		\item Comparer les complexités des deux algorithmes de recherche.
+	\end{enumerate}
+\end{exercice_cours}
+
+
+\begin{definition}[Le logarithme]
+	Le \textbf{logarithme} est un opérateur mathématique qui a entre autre comme propriété:
+
+	\[
+	\log_2(2^k) = k \times \log_2(2)=k \qquad \textrm{ et } \log_2(2) = 1
+	\]
+\end{definition}
+
+	Dans notre exemple, lorsque la taille de la liste double, alors le nombre de boucles augmente seulement de 1.
+
+	Supposons que la liste comporte $n$ éléments et que $n$ est tel qu'il existe un $k\in\N$ tel que $n=2^k$.
+
+	Etant donné que le nombre de boucles augmente de 1 quand le nombre d'éléments est multiplié par deux alors $k$ est le nombre de boucles nécessaires pour obtenir une liste d'un seul élément.
+	
+\smallskip
+
+	\begin{minipage}{0.39\linewidth}
+		\begin{center}
+		
+	\begin{tabular}{c|c|c}
+		$n$ & valeur de $k$ & nombre de boucles \\\hline
+		1 & 0 & 0 \\
+		2 & 1 & 1 \\
+		4 & 2 & 2 \\
+		8 & 3 & 3 \\
+		16 & 4 & 4 \\
+		\ldots{} & \ldots{} & \ldots{} \\
+		n & k & k \\
+		2n & k+1 & k+1 \\
+		
+	\end{tabular}
+\end{center}
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.59\linewidth}
+Pour extraire $k$ en fonction de $n$, on utilise une fonction nommée \verb+logarithme+ et notée \verb+log+:
+
+
+\[n = 2^k \Longleftrightarrow \log_2(n)=\log_2(2^k) = k\log_2(2)=k\]
+
+Ainsi $k = \log_2(n)$
+
+$k$ étant le nombre de boucles nécessaires pour obtenir une liste d'un seul élément, alors la complexité est de l'ordre de $O(\log(n))$.
+	
+	\end{minipage}
+	
+
+
+
+\begin{definition}[Complexité logarithmique]{}
+
+Dans l'exemple précédent, on dira que cet algorithme possède une complexité \textbf{logarithmique} notée $O(\log(n))$
+
+	
+\end{definition}
+
+\begin{definition}[Comparaison des complexités]{}
+
+	\begin{center}
+			\includegraphics[width = 0.65\linewidth]{classes-de-complexité.jpg}
+
+	\end{center}
+
+\end{definition}
+
+
+\begin{propriete}[Détermination de complexité]{}
+	Pour déterminer la complexité d'un algorithme, on peut utiliser les propriétés suivantes:
+
+	\begin{itemize}
+		\item Si un algorithme n'effectue pas de boucle, alors sa complexité est de l'ordre de $O(1)$.
+		\item Si un algorithme effectue une boucle FOR, alors sa complexité est de l'ordre de $O(n)$.
+		\item Si un algorithme effectue k boucles FOR imbriquées, alors sa complexité est de l'ordre de $O(n^k)$.
+		\item Si un algorithme effectue une boucle WHILE et à chaque itération la taille du problème est divisée par 2, alors sa complexité est de l'ordre de $O(\log(n))$.
+	\end{itemize}
+\end{propriete}
+
+
+\section{Algorithme de recherche d'extrémum}
+
+
+\begin{exercice_cours}[Recherche d'extrémum]{}
+
+	\begin{enumerate}
+		\item 	Ecrire la fonction \verb|recherche_naive(L)| qui renvoie la valeur max de la liste \verb|L| à l'aide d'une boucle FOR. 
+		\item Déterminer la complexité de cet algorithme.
+	\end{enumerate}
+\end{exercice_cours}
+
+		\begin{exercice_cours}[Recherche d'extrémum avec une boucle WHILE]{}
+			 On considère maintenant l'algorithme de recherche de maximum suivant:
+		
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+
+def recherche_max(L):
+    ''' Renvoie la valeur max de la liste '''
+    maxi = L[-1]
+    while len(L) > 0:
+        valeur = L.pop()
+        if valeur > maxi:
+            maxi = valeur
+    return maxi
+\end{CodePythontexAlt}
+
+
+	\begin{enumerate}
+		\item Effectuer la trace de cet algorithme pour la liste \verb|[4, 8, 7, 9, 4]|
+		\item Identifier le variant de boucle de cet algorithme \dotfill{}
+		\item Montrer que ce variant de boucle est positif ou nul au début de la boucle, et qu'il est décroissant à chaque itération de la boucle. Conclure.
+		\item Identifier un invariant de boucle de cet algorithme \dotfill{}
+		\item Montrer que cet invariant de boucle est vérifié avant et après chaque itération de la boucle. Conclure.
+		\item Quelle est la complexité de cet algorithme? \dotfill{}
+	\end{enumerate}
+	
+\end{exercice_cours}

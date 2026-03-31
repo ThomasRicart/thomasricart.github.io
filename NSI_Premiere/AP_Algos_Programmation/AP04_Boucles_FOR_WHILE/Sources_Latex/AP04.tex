@@ -1,0 +1,552 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Boucles FOR et WHILE} % Titre au centre
+\def\docname{AP04}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\section{La boucle FOR}
+
+\begin{easybox}{Les boucles FOR}{}
+
+	La boucle \verb+FOR+ est une boucle bornée. On sait à l'avance combien de fois on va la faire.
+
+\medskip
+
+	\begin{minipage}{0.35\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En pseudo code
+instruction1
+Pour i allant de 0 a 6:
+	instruction2
+instruction3
+	\end{lstlisting}
+		\end{minipage}\hfill
+		\begin{minipage}{0.63\linewidth}
+	\begin{itemize}
+		\item instruction1 est effectuée
+		\item \verb+i+ est un \verb+itérateur+ qui va aller de 0 à 6, c'est à dire 7 tours
+		\item On effectuera donc 7 fois l'instruction2 
+		\item Quand on a fini la boucle on effectue l'instruction3
+	\end{itemize}
+		\end{minipage}	
+	\end{easybox}
+	
+	\begin{easybox}{La boucle FOR en python}
+		\begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+for i in range(0, 7):
+	print(i, end=" ")
+# affichage: 
+# 0 1 2 3 4 5 6
+	
+				\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		\begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+for i in range(2, 7):
+	print(i, end=" ")
+# affichage: 
+# 2 3 4 5 6
+					
+				\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		 \begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+for i in range(5):
+	print(i, end=" ")
+# affichage: 
+# 0 1 2 3 4
+	
+				\end{CodePythontexAlt}
+		\end{minipage}
+	\end{easybox}
+	
+	
+	\begin{easybox}{Prototypage de la boucle FOR}
+	La boucle FOR s'écrit de manière générale de la façon suivante:
+	
+	\medskip
+	
+	\begin{minipage}[b]{0.4\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+		for i in range(a, b):
+	\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.58\linewidth}
+	La boucle est effectuée $b-a$ fois et la variable \verb+i+ prend pour valeur tous les entiers entre $\fo{a}{b}$
+	\end{minipage}
+	
+	
+	\end{easybox}
+	
+
+	\begin{minipage}{0.45\linewidth}
+		
+	\begin{exemple}[Trace de la structure FOR]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		for i in range(2, 6):
+			print(i)
+		print('fin')
+	\end{CodePythontexAlt}
+	
+		\end{exemple}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.55\linewidth}
+	
+	\renewcommand{\arraystretch}{1.1}
+	\begin{center}
+	\begin{tabular}{|c|p{2cm}|p{4cm}|}
+		\hline
+		\texttt{i}  & \texttt{i < 6} & instruction \\ \hline
+		\texttt{2}  & \texttt{True} & \texttt{print(2)} \\ \hline
+		\texttt{3}  & \texttt{True} & \texttt{print(3)} \\ \hline
+		\texttt{4}  & \texttt{True} & \texttt{print(4)} \\ \hline
+		\texttt{5}  & \texttt{True} & \texttt{print(5)} \\ \hline
+		\texttt{6}  & \texttt{False} & \texttt{print('fin')} \\ \hline
+	\end{tabular}	
+	\end{center}
+	
+	\end{minipage}
+	
+	
+	\begin{easybox}{Itération sur une chaine de caractères via les indices}{}
+	Une chaine de caractères \verb+str+ est un itérateur, c'est à dire qu'il est possible d'itérer sur ses éléments.
+	
+	\begin{minipage}[b]{0.48\linewidth}
+		\begin{ConsolePythontex}[Label=false]{}
+	mot = 'Hello'
+	mot[1]
+			\end{ConsolePythontex}
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.48\linewidth}
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|c|c|}
+			\hline
+			\textbf{Indice} & \verb+0+ & \verb+1+ & \verb+2+ & \verb+3+ & \verb+4+ \\
+			\hline
+			\textbf{Caractère} & \verb+H+ & \verb+e+ & \verb+l+ & \verb+l+ & \verb+o+  \\
+			\hline
+			\textbf{Indice Négatif} & \verb+-5+ & \verb+-4+ & \verb+-3+ & \verb+-2+ & \verb+-1+ \\
+			\hline
+			\end{tabular}
+		\end{center}
+	\end{minipage}
+	
+
+	\begin{minipage}{0.48\linewidth}
+	\medskip
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	mot = 'Hello'
+	for i in range(0, len(mot)):
+		print(mot[i])
+	print('Fin')
+			
+	\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{center}
+			\renewcommand{\arraystretch}{1}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				\verb+i+  & \verb+i < len(mot)+ & instruction & affichage \\ \hline{}
+				\verb+0+  & \verb+True+ & \verb+print(mot[0])+ & \verb+H+ \\ \hline{}
+				\verb+1+  & \verb+True+ & \verb+print(mot[1])+ & \verb+e+ \\ \hline{}
+				\verb+2+  & \verb+True+ & \verb+print(mot[2])+ & \verb+l+ \\ \hline{}
+				\verb+3+  & \verb+True+ & \verb+print(mot[3])+ & \verb+l+ \\ \hline{}
+				\verb+4+  & \verb+True+ & \verb+print(mot[4])+ & \verb+o+ \\ \hline{}
+				\verb+5+  & \verb+False+ & \verb+print('Fin')+ & \verb+Fin+ \\ \hline
+			\end{tabular}	
+			\end{center}
+	\end{minipage}
+	\end{easybox}
+	
+	\begin{easybox}{Itération sur une chaine de caractères via les éléments}{}
+
+	Il est aussi possible	d'itérer directement sur les éléments qui constituent cette chaine de caractère
+	
+	On peut donc créer un variable nommée \verb+lettre+ par exemple qui prendra pour valeur chacun des caractères de \verb+mot+.
+	
+	\medskip
+	
+	\begin{minipage}{0.48\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	mot = 'Hello'
+	for lettre in mot:
+		print(lettre)
+	print('Fin')
+	
+		\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{center}
+			\renewcommand{\arraystretch}{1}
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				lettre  & instruction & affichage \\ \hline{}
+				\verb+'H'+  & \verb+print(lettre)+ & \verb+H+ \\ \hline{}
+				\verb+'e'+  & \verb+print(lettre)+ & \verb+e+ \\ \hline{}
+				\verb+'l'+  & \verb+print(lettre)+ & \verb+l+ \\ \hline{}
+				\verb+'l'+  & \verb+print(lettre)+ & \verb+l+ \\ \hline{}
+				\verb+'o'+  & \verb+print(lettre)+ & \verb+o+ \\ \hline{}
+				\verb+None+  & \verb+print('Fin')+ & \verb+Fin+ \\ \hline
+			\end{tabular}	
+		\end{center}
+	
+	
+	\end{minipage}
+	\begin{itemize}
+		\item Il n'y a pas besoin de connaitre la longueur du mot
+		\item Il n'y  plus l'utilisation d'indice
+		\item \verb+lettre+ prend pour valeur chaque caractère de mot
+		\item lorsque \verb+lettre+ a pris pour valeur tous les caractères de \verb+mot+, la boucle s'arrête.
+	\end{itemize}								
+	\end{easybox}
+	
+	\begin{minipage}[t]{0.45\linewidth}
+	\begin{exercice_cours}{Écrire une fonction permettant d'afficher tous les entiers entre 0 et 6 inclus}{}
+	\end{exercice_cours}
+	\end{minipage}\hspace{15pt}
+	\begin{minipage}[t]{0.45\linewidth}
+		\begin{exercice_cours}{Écrire une fonction permettant d'afficher tous les entiers entre 2 et 9 inclus}{}
+		\end{exercice_cours}
+	\end{minipage}
+	
+	%\vspace{1.5cm}
+	
+	\begin{minipage}[t]{0.45\linewidth}
+		\begin{exercice_cours}{Écrire une fonction permettant d'afficher toutes les lettres du mot \verb+'abracadabra'+ en itérant sur les indices}{}
+		\end{exercice_cours}
+		\end{minipage}\hspace{15pt}
+		\begin{minipage}[t]{0.45\linewidth}
+			\begin{exercice_cours}{Écrire une fonction permettant d'afficher toutes les lettres du mot \verb+'abracadabra'+ en itérant sur les caractères}{}
+			\end{exercice_cours}
+	
+		\end{minipage}
+	
+	
+	
+	\begin{easybox}{Algorithmes de Recherche dans un itérable}
+	
+		Cet algorithme permet de savoir si un élément est présent dans un itérable. 
+
+			\begin{itemize}
+
+				\item Le mot sera la variable \verb|mot|
+				\item La lettre que l'on cherche sera la variable \verb|lettre_cherchee|
+			\end{itemize}
+
+			On peut utiliser l'algorithme suivant:
+			
+	\begin{enumerate}
+		\item on parcourt \verb|mot| à l'aide d'une boucle \verb|FOR|
+		\item on observe donc chaque caractère \verb|mot[i]|
+		\item si le caractère est égal à \verb|lettre_cherchee|, alors on renvoie la valeur \verb|True| et on arrête la boucle.
+		\item sinon on ne fait rien et on revient à l'étape 2 pour observer le caractère suivant.
+		\item si on a observé tous les caractères de \verb|mot| sans trouver \verb|lettre_cherchee|, on renvoie \verb|False|
+	\end{enumerate}
+		\end{easybox}
+
+		\begin{exercice_cours}[Écrire une fonction \texttt{est\_present(mot, lettre\_cherchee)}]{}	
+    
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+				def est_present(mot, lettre_cherchee):
+					''' Renvoie True si lettre_cherchee est dans mot et False sinon'''
+
+
+
+
+
+
+
+					#
+					
+				\end{CodePythontexAlt}
+		\end{exercice_cours}
+
+		\newpage
+
+		\begin{exercice_cours}{Ecrire la fonction \texttt{est\_present2(mot, lettre\_cherchee)} en itérant sur les indices}{}
+
+		\end{exercice_cours}
+
+		\begin{exercice_cours}{		Ecrire la fonction \texttt{est\_present3(mot, lettre\_cherchee)} qui renvoie l'indice de la première occurrence de lettre\_cherchee dans mot ou \texttt{-1} si elle n'est pas présente}{}
+
+		\end{exercice_cours}
+
+	\begin{easybox}{Algorithmes de comptage dans un itérable}
+Cet algorithme permet de compter le nombre de fois qu'un élément est présent dans un itérable.
+			\begin{itemize}
+
+				\item Le mot sera la variable \verb|mot|
+				\item La lettre que l'on cherche sera la variable \verb|lettre_cherchee|
+			\end{itemize}
+
+			On peut utiliser l'algorithme suivant:
+			
+	\begin{enumerate}
+		\item on initialise un compteur à 0
+		\item on parcourt \verb|mot| à l'aide d'une boucle \verb|FOR|
+		\item on observe donc chaque caractère \verb|mot[i]|
+		\item si le caractère est égal à \verb|lettre_cherchee|, alors on incrémente le compteur.
+		\item sinon on ne fait rien 
+		\item on revient à l'étape 3 pour observer le caractère suivant.
+		\item si on a observé tous les caractères de \verb|mot|, on renvoie le compteur
+	\end{enumerate}
+		
+
+	\end{easybox}
+
+	\begin{exercice_cours}[Écrire une fonction \texttt{compte(mot, lettre\_cherchee)}]{}	
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+			def compte(mot, lettre_cherchee):
+				''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
+
+
+
+
+
+
+
+
+				#
+				
+			\end{CodePythontexAlt}
+	\end{exercice_cours}
+
+\begin{exercice_cours}[Ecrire la fonction \texttt{compte2(mot, lettre\_cherchee)} qui itère sur les éléments]{}	
+	
+			\begin{CodePythontexAlt}[Lignes=false, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+				def compte2(mot, lettre_cherchee):
+					''' Renvoie le nombre de fois que lettre_cherchee est dans mot'''
+					
+	
+	
+
+					
+	
+	
+	
+	
+	
+				#
+				\end{CodePythontexAlt}
+		\end{exercice_cours}
+		
+		\newpage
+			\renewcommand{\arraystretch}{1}
+		\section{La boucle WHILE}
+
+		\begin{easybox}{Les boucles WHILE}
+		La boucle \verb+WHILE+ est une boucle non bornée. On ne sait à l'avance combien de fois on va la faire.
+	
+		\medskip
+	\begin{minipage}{0.4\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En pseudo code
+instruction1
+tant que condition1 vraie:
+	instruction2
+instruction3
+	\end{lstlisting}
+		\end{minipage}\hfill
+		\begin{minipage}{0.59\linewidth}
+	\begin{itemize}
+		\item instruction1 est effectuée
+		\item tant que la condition1 est vraie on effectue l'instruction 2
+		\item quand la condition1 est fausse, on sort de la boucle;
+		\item on effectue l'instruction3
+	\end{itemize}
+		\end{minipage}	
+	\end{easybox}
+	
+
+		\begin{easybox}{Prototypage de la boucle WHILE en python}
+	\verb|condition1| est un booléen qui est évalué à chaque tour de boucle.  Tant que \verb|condition1| \verb|True|, on effectue les instructions de la boucle. Lorsque \verb|condition1| devient \verb|False|, on sort de la boucle.
+
+	\begin{center}
+	
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+		while condition1:
+			instruction
+	\end{CodePythontexAlt}
+	\end{center}
+	
+
+			\end{easybox}
+
+			\section{Exercices}
+
+	\begin{exercice_cours}[Dire ce qu'affichent les programmes suivants et expliquer pourquoi]{}
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+			n = 0
+			u = 1
+			while u < 1000:
+				n = n + 1
+				u = u * 2
+			print(n)
+			print(u)
+		\end{CodePythontexAlt}
+				
+		\end{minipage}\hfill
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+			mot = 'abracadabra'
+			c = 0
+			trouve = False
+			while c < len(mot) and not(trouve):
+				trouve = mot[c] == 'r'
+				c = c + 1
+			print(trouve)
+			\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		 
+	\end{exercice_cours}
+	
+	\begin{exercice_cours}[Boucle FOR]
+
+		\begin{enumerate}
+			\item Écrire une fonction \verb|somme(n)| qui renvoie la somme des entiers de 1 à $n$ inclus. Par exemple, \verb|somme(5)| doit renvoyer $1+2+3+4+5=15$.
+			
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+				def somme(n):
+					''' Renvoie la somme des entiers de 1 à n inclus'''
+					
+					
+
+					
+					
+				#
+				\end{CodePythontexAlt}
+
+			\item Écrire une fonction \verb|factorielle(n)| qui renvoie la factorielle de $n$. Par exemple, \verb|factorielle(5)| doit renvoyer $1\times2\times3\times4\times5=120$.
+			
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+				def factorielle(n):
+					''' Renvoie la factorielle de n'''
+					
+					
+					
+
+					
+				#
+				\end{CodePythontexAlt}
+			\item Ecrire une fonction \verb|remplace_lettre(mot, lettre_a_remplacer, nouvelle_lettre)| qui remplace toutes les occurrences de \verb|lettre_a_remplacer| par \verb|nouvelle_lettre| dans \verb|mot|. Par exemple, \verb|remplace_lettre('abracadabra', 'a', 'o')| doit renvoyer \verb+'obrocodobro'+.
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+				def remplace_lettre(mot, lettre_a_remplacer, nouvelle_lettre):
+					''' Renvoie mot dans lequel toutes les occurrences de 
+					lettre_a_remplacer ont été remplacées par nouvelle_lettre'''
+					
+					
+
+
+
+					
+
+
+					
+				#
+				\end{CodePythontexAlt}
+			
+			\item Ecrire une fonction \verb|supprime_lettre(mot, lettre_a_supprimer)| qui supprime toutes les occurrences de \verb|lettre_a_supprimer| dans \verb|mot|. Par exemple, \verb|supprime_lettre('abracadabra', 'a')| doit renvoyer \verb+'brcdbr'+.	
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+				def supprime_lettre(mot, lettre_a_supprimer):
+					''' Renvoie mot dans lequel toutes les occurrences de 
+					lettre_a_supprimer ont été supprimées'''
+					
+
+
+					
+
+					
+					
+					
+					
+				#
+				\end{CodePythontexAlt}
+		\end{enumerate}
+	\end{exercice_cours}
+		\begin{exercice_cours}[Boucle While]{}
+	\begin{enumerate}
+		\item On dispose d'une feuille de papier d'épaisseur 0,1 mm. Combien de fois doit-on la plier au minimum pour que l'épaisseur dépasse la hauteur de la tour Eiffel 324 m. Écrire une fonction \verb|nb_plis()| en Python pour résoudre ce problème.
+		
+		\medskip
+
+		\begin{minipage}{0.79\linewidth}
+				\item  Inès veut construire une pyramide à base carrée comme sur la photo. La pyramide sur la photo a 7 étages. 
+			
+					Inès a n billes. Combien d'étages au maximum aura sa pyramide? Écrire une fonction \verb|nb_etages(n)| en Python pour répondre au problème. 
+					\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+					assert nb_etages(1000) == 14
+					\end{CodePythontexAlt}
+
+		\end{minipage}\hfill
+		\begin{minipage}{0.19\linewidth}
+						\includegraphics[width = 1\linewidth]{pyramide.png}
+
+		\end{minipage}
+
+			\medskip
+
+			\item L'ordinateur tire un nombre entier au hasard entre 0 et 100.
+			L'utilisateur doit le trouver et pour cela propose des valeurs.
+			L'ordinateur indique pour chaque valeur proposée si la valeur est trop petite, trop grande ou s'il a trouvé.
+			
+				 Écrire une fonction \verb|jeu()| en Python pour jouer à ce jeu. En combien de coups est-on sûr de trouver?
+
+				 \begin{methode}[La bibliothèque \texttt{random}]{}
+					\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 100
+					nombre_aleatoire = random.randint(0, 100)	
+					\end{CodePythontexAlt}
+				\end{methode}
+
+				 \item En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent. Elle commence généralement par les termes 0 et 1 et ses premiers termes sont 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc.
+			
+			\begin{itemize}
+				\item Ecrire une fonction \verb|fibonacci(n)| qui renvoie le terme de rang $n$ de la suite de Fibonnaci. (le premier terme est de rang 0)
+				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+					assert fibonacci(0) == 0
+					assert fibonacci(1) == 1
+					assert fibonacci(2) == 1
+					assert fibonacci(9) == 34
+					\end{CodePythontexAlt}
+				\item 			Ecrire une fonction \verb|rang_fibonacci()| qui renvoie le rang du premier terme supérieur ou égal à 10000.
+				
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+					assert rang_fibonacci() == 21
+					\end{CodePythontexAlt}
+			\end{itemize}
+
+\medskip
+
+			\item L'utilisateur donne un entier positif et le programme annonce combien de fois de suite cet entier est divisible par 2. Ecrire la fonction \verb|divise_par_2(n)| qui renvoie ce nombre de fois. Par exemple, \verb|divise_par_2(48)| doit renvoyer 4 car $48=2^4\times3$ et 4 est le plus grand entier tel que $48$ est divisible par $2^4$.
+			
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+assert divise_par_2(48) == 4
+assert divise_par_2(7) == 0
+\end{CodePythontexAlt}
+
+\medskip
+
+	\item Écrire une fonction \verb|tirage()| qui fait des tirages successifs  d'entiers 0 ou 1 jusqu'à tirer 3 fois 1 consécutivement et
+			renvoie le nombre de tirages qui ont été nécessaires.
+
+			\begin{methode}[La bibliothèque \texttt{random}]{}
+					\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+					import random
+					# pour tirer un nombre entier au hasard entre 0 et 1
+					nombre_aleatoire = random.randint(0, 1)	
+					\end{CodePythontexAlt}
+				\end{methode}
+
+				\medskip
+
+	\item Ecrire une fonction python qui renvoie l'entier $p$ tel que $2^p \leqslant n \leqslant 2^{p+1}$.
+
+			\end{enumerate}
+	\end{exercice_cours}

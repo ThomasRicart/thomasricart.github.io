@@ -1,0 +1,281 @@
+\documentclass[11pt, a4paper, tikz,border=10pt]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+%\def\visibleornot{visible}    % visible or invisible
+\ifdefined\visibleornot\else\def\visibleornot{visible}\fi
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{4}
+\def\ptsexoB{5}
+\def\ptsexoC{2}
+\def\ptsexoD{4}
+\def\ptsexoE{5}
+
+\usetikzlibrary{shadows, calc}
+\usepackage{dirtree}
+% Définition des couleurs Firefox
+\definecolor{fxframe}{RGB}{240, 240, 243}
+\definecolor{fxtabactive}{RGB}{255, 255, 255}
+\definecolor{fxurlbar}{RGB}{255, 255, 255}
+\definecolor{fxbutton}{RGB}{180, 180, 185}
+\definecolor{fxline}{RGB}{200, 200, 205}
+
+\usepackage[edges]{forest} % Le package indispensable
+\begin{document}
+
+\def\level{Seconde}  % Classe à droite
+\def\course{SNT}
+\def\chaptername{\quad} % Titre au centre
+\def\docname{EVAL~--~Web}        % Identifiant à gauche
+
+\pagestyle{DS_LP}
+
+\NomPrenom{}
+
+\exods{\ptsexoA}
+
+Indiquer si ces balises sont des balises d'ouverture, de fermeture ou une balise orpheline. Indiquer également ce sur quoi elles s'appliquent: (tous les termes ne sont pas à utiliser)
+
+\fbox{lien hypertexte} \quad \fbox{tableau} \quad \fbox{liste à puces} \quad \fbox{image} \quad \fbox{titre de niveau 1} \quad \fbox{division d'une page} \quad \fbox{saut de ligne} \quad 
+\fbox{liste numérotée} \quad \fbox{paragraphe} \quad \fbox{champ de saisie} \quad \fbox{titre de niveau 2} \quad \fbox{lien vers le CSS}
+
+    \begin{tabular}{p{0.4\linewidth}cc}
+    \hline
+    Balise & Type & Application \\
+    \hline
+    \verb|<div>| & \reponseLigne[3.5cm]{\texttt{Ouverture}} & \reponseLigne[5.5cm]{division d'une page}\\
+    \verb|</p>| & \reponseLigne[3.5cm]{\texttt{Fermeture}} & \reponseLigne[5.5cm]{paragraphe} \\
+    \verb|<img src="image.jpg" alt="Image">| & \reponseLigne[3.5cm]{\texttt{Orpheline}} & \reponseLigne[5.5cm]{image} \\
+    \verb|<a href="https://www.example.com">| & \reponseLigne[3.5cm]{\texttt{Ouverture}} & \reponseLigne[5.5cm]{lien hypertexte} \\
+    \verb|<br>| & \reponseLigne[3.5cm]{\texttt{Orpheline}} & \reponseLigne[5.5cm]{saut de ligne} \\
+    \verb|<h1>| & \reponseLigne[3.5cm]{\texttt{Ouverture}} & \reponseLigne[5.5cm]{titre de niveau 1} \\
+    \verb|<input type="text" name="username">| & \reponseLigne[3.5cm]{\texttt{Orpheline}} & \reponseLigne[5.5cm]{champ de saisie} \\
+    \verb|</ol>| & \reponseLigne[3.5cm]{\texttt{Fermeture}} & \reponseLigne[5.5cm]{liste numérotée} \\
+    \hline
+    \end{tabular}
+
+
+    \bigskip
+
+
+    \exods{\ptsexoB}
+
+    Voici un code HTML. Corriger les erreurs présentes dans ce code:    
+
+    \begin{lstlisting}[numbers=none]
+<!DOCTYPE html>
+<html>
+    <title>Mon site web</title>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Bienvenue sur mon site web</h1>
+        <p>Ceci est un paragraphe de texte.</p>
+        <img src="image.jpg" alt=Image>
+        <a href="https:www.example.com">Lien vers un site</a>
+        <ul>
+            <li>Premier element de la liste
+            <li>Second element de la liste
+        </ul>
+    </body>
+<html>
+    \end{lstlisting}
+
+\pagebreak
+
+ \exods{\ptsexoC}
+
+        Dans le code de l'exercice 2, on a la ligne:
+
+        \begin{lstlisting}[numbers=none]
+<img src="image.jpg" alt="Image">
+        \end{lstlisting}
+
+        \begin{enumerate}
+            \item         Que se passera-t-il si le fichier \texttt{image.jpg} n'est pas présent dans le dossier du projet? Que verra-t-on à la place de l'image?
+        \begin{blocvisible}[height=1.5]
+            Si le fichier \texttt{image.jpg} n'est pas présent dans le dossier du projet, le navigateur affichera le texte \verb|Image|.
+        \end{blocvisible}
+
+        \medskip
+
+        \item Le fichier \verb|HTML| se nomme \verb|index.html| et l'image \verb|image.jpg| se trouve dans le répertoire suivant. Modifier la ligne du code HTML pour que l'image puisse être affichée correctement.
+\medskip
+
+\begin{minipage}{0.2\linewidth}
+     \dirtree{%
+    .1 /.
+    .2 pictures.
+    .3 image.jpg.
+    .2 index.html.
+    }
+\end{minipage}\hfill{}
+\begin{minipage}{0.78\linewidth}
+   \begin{blocvisible}[height=2.5]
+        La ligne du code HTML doit etre modifiée comme suit pour que l'image puisse être affichée correctement:
+
+        \verb|<img src="pictures/image.jpg" alt="Image">|
+   \end{blocvisible}
+\end{minipage}
+
+
+    \end{enumerate}
+
+    \bigskip
+
+    \exods{\ptsexoD}
+
+    Voici un code CSS du fichier style.css. 
+
+    \begin{lstlisting}[numbers=none]
+body {
+  background-color: lightblue; /* Couleur de fond */
+  font-family: sans-serif; /* Police */
+  color: red; /* Couleur du texte du body */
+}
+
+h1 {
+  color: darkblue; /* Couleur du titre */
+  text-align: center; /* Centrer le titre */
+}
+    \end{lstlisting}
+
+    \begin{enumerate}
+        \item Quel est le rôle de la balise \texttt{<link>} dans le code HTML précédent?
+        
+        \begin{blocvisible}[height=2]
+            La balise \texttt{<link>} est utilisée pour lier un fichier CSS externe à la page HTML. Elle permet d'appliquer les styles définis dans le fichier CSS à la page web.
+\end{blocvisible}
+        
+\medskip
+
+        \item De quelle couleur sera le fond de la page web lorsque ce code CSS est appliqué?
+        
+        \begin{blocvisible}[height=1]
+            Le fond de la page web sera de couleur bleu clair (lightblue) lorsque ce code CSS est appliqué.
+            
+        \end{blocvisible}
+
+        \medskip
+
+        \item De quelle couleur sera le texte du corps de la page web lorsque ce code CSS est appliqué?
+        
+        \begin{blocvisible}[height=1]
+            Le texte du corps de la page web sera de couleur rouge (red) lorsque ce code CSS est appliqué.  
+        \end{blocvisible}
+
+        \medskip
+
+        \item De quelle couleur seront les titres de niveau 1 (\texttt{<h1>}) de la page web lorsque ce code CSS est appliqué?
+        
+        \begin{blocvisible}[height=1]
+            Les titres de niveau 1 (\texttt{<h1>}) de la page web seront de couleur bleu foncé (darkblue).
+        \end{blocvisible}
+
+        \medskip
+
+        \end{enumerate}
+
+        \bigskip
+
+       
+
+    \pagebreak
+
+\exods{\ptsexoE}
+
+Voici un code HTML, dessiner dans la zone suivante ce à quoi ressemblera la page web correspondante après l'application du code CSS \verb|style.css| de l'exercice 4:
+
+\begin{lstlisting}[numbers=none]
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Evaluation SNT</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Bienvenue sur ma page de test</h1>
+        <p>Ceci est mon evaluation.</p>
+        <a href="https://www.exemple.com">Lien vers un site</a>
+        <ol>
+            <li> mon site web</li>
+            <li> mon autre site web</li>
+        </ol>
+    </body>
+</html>
+    \end{lstlisting}
+
+
+\begin{tikzpicture}
+    % --- Fenêtre du navigateur Firefox ---
+    \draw[rounded corners=6pt, fill=fxframe, draw=fxline, drop shadow] (0,0) rectangle (16,8.5);
+
+    % --- Barre d'onglets ---
+    \draw[fill=fxframe, draw=none] (0,7.8) rectangle (16,8.5);
+
+    % Onglet Actif (style Firefox)
+    \begin{scope}
+        \clip (0.3, 7.8) -- (2.8, 7.8) -- (3.0, 8.4) -- (0.1, 8.4) -- cycle;
+        \draw[fill=fxtabactive, draw=fxline, rounded corners=3pt] (0.2, 7.7) rectangle (2.9, 8.5);
+    \end{scope}
+
+    % Contenu de l'onglet (le <title>)
+    \node[anchor=west, scale=0.6, font=\sffamily] at (0.8, 8.1) {\quad };
+    
+    % Favicon Firefox générique
+    \fill[gray!50] (0.45, 8.1) circle (0.12);
+
+    % --- Barre d'outils ---
+    \draw[fill=fxframe, draw=fxline] (0, 7) -- (16, 7) -- (16, 7.8) -- (0, 7.8) -- cycle;
+
+    % Boutons de navigation
+    \draw[fxbutton, line width=1pt] (0.4, 7.4) circle (0.25); % Précédent
+    \draw[fxbutton, fill=fxbutton, rounded corners=1pt] (0.4, 7.4) -- (0.5, 7.3) -- (0.3, 7.4) -- (0.5, 7.5) -- cycle;
+    
+    \draw[fxbutton, line width=1pt] (1.1, 7.4) circle (0.25); % Suivant
+    \draw[fxbutton, fill=fxbutton, rounded corners=1pt] (1.1, 7.4) -- (1.0, 7.3) -- (1.2, 7.4) -- (1.0, 7.5) -- cycle;
+
+    \draw[fxbutton, line width=1.2pt, rounded corners=1pt] (1.8, 7.3) -- (1.6, 7.5) -- (1.9, 7.5) -- (1.8, 7.3) -- (2.0, 7.5) -- (1.7, 7.5) -- cycle; % Actualiser (très simplifié)
+
+    % Barre d'adresse/URL
+    \draw[fill=fxurlbar, draw=fxline, rounded corners=4pt] (2.5, 7.15) rectangle (10.0, 7.65);
+    \node[anchor=west, scale=0.6, font=\sffamily\color{gray}] at (2.7, 7.4) {\quad };
+
+    % Icône cadenas
+    \fill[gray!60] (2.9, 7.4) circle (0.08);
+
+    % Bouton "Hamburger" menu
+    \draw[fxbutton, line width=1.2pt] (11.4, 7.3) -- (11.7, 7.3);
+    \draw[fxbutton, line width=1.2pt] (11.4, 7.4) -- (11.7, 7.4);
+    \draw[fxbutton, line width=1.2pt] (11.4, 7.5) -- (11.7, 7.5);
+
+    % --- Zone de contenu (le <body>) ---
+    % C'est cette zone que tes élèves doivent remplir.
+    \draw[fill=white, draw=fxline] (0, 0) rectangle (16, 7);
+    
+    % Annotation optionnelle pour l'exercice (à enlever si nécessaire)
+    %\node[font=\sffamily\itshape, color=gray!30] at (6, 3.5) {Dessinez le contenu du <body> ici};
+
+\end{tikzpicture}
+
+
+\end{document}

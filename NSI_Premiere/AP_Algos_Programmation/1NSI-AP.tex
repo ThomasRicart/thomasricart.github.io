@@ -1,0 +1,94 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+\usepackage{\packagepath/firstpage}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usepackage{scratch3}
+\usepackage{longtable}
+
+
+
+\def\schoolyear{2026-2027}              % Année scolaire
+\def\level{Première}              % Classe
+\def\course{NSI}              % Matière
+\def\codepart{AP}
+\def\textpart{Algorithmes et Programmation}    % Nom du chapitre juste pour le titre de la partie
+%\def\partname{dfLangages de Programmation}
+\def\version{\today}
+\def\visibleornot{invisible}    % visible or invisible
+
+\begin{document}
+
+
+\parttitle{}
+
+%\part*{\chaptername}
+\def\documentpath{./AP01_Constructions_elementaires}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP01}      
+\resetTout
+\def\documentpath{./AP02_Fonctions}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP02}   
+\resetTout
+
+\def\documentpath{./AP03_Conditions_IF}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP03}   
+\resetTout
+
+\def\documentpath{./AP04_Boucles_FOR_WHILE}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP04}   
+\resetTout
+
+
+\def\documentpath{./AP05_Listes_Tuples}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP05}   
+\resetTout
+\def\documentpath{./AP06_Algos_recherche}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP06}   
+\resetTout
+\def\documentpath{./AP07_Dictionnaires}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP07}   
+\resetTout
+\def\documentpath{./AP08_Tri_Insertion_Selection}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP08}   
+\resetTout
+
+\end{document}
+
+
+
+
+\def\documentpath{./AP09_Algos_Gloutons}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP09}   
+\resetTout
+\def\documentpath{./AP10_Algos_KNN}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/AP10}   
+\resetTout
