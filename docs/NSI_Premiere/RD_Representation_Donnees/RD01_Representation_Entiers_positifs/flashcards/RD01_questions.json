@@ -1,0 +1,42 @@
+[
+    {
+        "recto": "Quelle est l'unité minimale d'information en informatique ?",
+        "verso": "C'est le <strong>bit</strong> (binary digit), qui peut prendre deux valeurs : 0 ou 1."
+    },
+    {
+        "recto": "Combien de valeurs différentes peut-on coder avec $n$ bits ?",
+        "verso": "On peut coder $2^n$ valeurs différentes (de $0$ à $2^n - 1$)."
+    },
+    {
+        "recto": "Quelle est la valeur décimale du nombre binaire $1010$ ?",
+        "verso": "$1 \\times 2^3 + 0 \\times 2^2 + 1 \\times 2^1 + 0 \\times 2^0 = 8 + 2 = \\mathbf{10}$"
+    },
+    {
+        "recto": "Comment appelle-t-on un regroupement de 8 bits ?",
+        "verso": "Un <strong>octet</strong> (byte en anglais)."
+    },
+    {
+        "recto": "Quelle est la valeur maximale que l'on peut stocker sur un octet ?",
+        "verso": "$2^8 - 1 = \\mathbf{255}$ (les valeurs vont de 0 à 255)."
+    },
+    {
+        "recto": "En hexadécimal (base 16), quelles lettres utilise-t-on après le chiffre 9 ?",
+        "verso": "Les lettres <strong>A, B, C, D, E et F</strong> (qui valent respectivement 10, 11, 12, 13, 14 et 15)."
+    },
+    {
+        "recto": "Quelle est la méthode pour convertir un nombre décimal en binaire ?",
+        "verso": "On effectue des <strong>divisions euclidiennes successives par 2</strong> et on lit les restes de bas en haut (ou du dernier au premier)."
+    },
+    {
+        "recto": "Comment convertir rapidement du binaire vers l'hexadécimal ?",
+        "verso": "On regroupe les bits par <strong>paquets de 4</strong> (quartets) en partant de la droite, puis on convertit chaque paquet."
+    },
+    {
+        "recto": "À quoi correspond un bit à 1 et un bit à 0 au niveau matériel (transistor) ?",
+        "verso": "Bit 1 = État <strong>passant</strong> (fermé).<br>Bit 0 = État <strong>bloqué</strong> (ouvert)."
+    },
+    {
+        "recto": "Quelle est la valeur décimale de $1111$ en binaire ?",
+        "verso": "$8 + 4 + 2 + 1 = \\mathbf{15}$ (soit $F$ en hexadécimal)."
+    }
+]

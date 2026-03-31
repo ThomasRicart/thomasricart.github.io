@@ -1,0 +1,90 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Représentation des entiers relatifs} % Titre au centre
+\def\docname{RD03}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+
+\begin{easybox}{Approche intuitive~--~codage du signe par le bit de poids fort}{}
+
+\begin{minipage}{0.48\linewidth}
+	$\bullet$ le signe \verb|+| serait codé par un 0
+\end{minipage}
+\begin{minipage}{0.52\linewidth}
+	$\bullet$ le signe \verb|-| serait codé par un 1
+\end{minipage}
+
+Ainsi si $6_{10}=0000\,0110$ alors $-6_{10}=1000\,0110$. Plusieurs problèmes se posent à nous:
+
+
+\begin{enumerate}
+	\item Effectuer l'opération binaire de $-6+6$, qu'obtenez vous en décimal? \dotfill
+	\item La valeur 0 aurait donc deux écritures: $0000\,0000$ et $1000\,0000$
+\end{enumerate}
+\end{easybox}
+
+
+\begin{definition}[Le complément à 2~--~C2]{}
+
+	L'idée est de trouver le nombre $a$, opposé de $b$ tel que $a+b=0$.
+	
+\end{definition}
+
+\begin{exercice_cours}[Déterminer le codage binaire sur 4 bits de $-5$]{}
+\end{exercice_cours}
+
+\begin{propriete}[Codage binaire des entiers relatifs]{}
+	\begin{minipage}{0.68\linewidth}
+		Complétez le diagramme ci-contre avec tous les codages binaires des entiers relatifs entre $-8$ et $7$ sur 4 bits
+
+\begin{itemize}
+	\item le bit de poids fort des nombres négatifs est 1
+	\item le bit de poids fort des nombres positifs est 0
+	\item il y a autant de positifs que de négatifs (0 est positif)
+\end{itemize}
+	\end{minipage} \hfill
+	\begin{minipage}{0.30\linewidth}
+		\includegraphics[width=0.79\linewidth]{01.jpg}
+	
+	\end{minipage}
+
+\end{propriete}
+
+\begin{propriete}[Codage en complément à 2]{}
+	\begin{itemize}
+		\item Avec $n$ bits en représentation C2 il est possible de coder $2^n$ valeurs entre  $-2^{n-1}\: \textrm{ et } \: 2^{n-1}-1$
+		\item si $x$ est compris entre 0 et $2^{n-1}-1$, le codage binaire de $x$ est celui de l'entier naturel $x$ sur $n$ bits.
+		\item si $x$ n'est pas compris entre $-2^{n-1}$ et $2^{n-1}-1$, alors le codage en C2 sur $n$ bits est impossible. 
+		\item Les nombres négatifs commenceront toujours par le bit \verb|1| et les nombres positifs par le bit \verb|0| 
+
+	\end{itemize}
+	
+\end{propriete}
+
+
+\begin{propriete}[Complément à 2~--~Première méthode]{}
+	\begin{enumerate}
+		\item Coder la valeur absolue du nombre en binaire
+	   \item Inverser les bits de la représentation du nombre en base 2. (complément à 1)
+	   \item Additionner 1 au résultat précédent. 
+	\end{enumerate}
+\end{propriete}
+
+\begin{exercice_cours}[A l'aide de cette méthode, convertir la valeur $-5$, $-7$ et $-15$ sur 4 bits]{}
+\end{exercice_cours}
+
+
+\begin{propriete}[Complément à 2~--~Deuxième méthode]{}
+ \begin{enumerate}
+ 	\item Coder la valeur absolue du nombre en binaire
+	\item Recopier les valeurs des bits de droite à gauche jusqu'au premier \verb|1|   inclus.
+	\item Inverser les bits restant jusqu'au dernier (bit de gauche)
+ \end{enumerate}
+\end{propriete}
+
+\begin{exercice_cours}[A l'aide de cette méthodes, convertir la valeur $-12$, $-28$ et $-112$ sur 8 bits]{}
+\end{exercice_cours}
+

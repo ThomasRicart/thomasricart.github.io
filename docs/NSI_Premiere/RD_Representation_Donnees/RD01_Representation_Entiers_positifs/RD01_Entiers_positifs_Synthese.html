@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthèse NSI RD01 - Représentation des Entiers</title>
+    <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+        :root {
+            --primary: #0369a1; /* Bleu Foncé RD01 */
+            --accent: #0ea5e9; 
+            --bg-light: #f8fafc;
+            --code-bg: #1e1e1e;
+            --important-bg: #fff7ed;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #334155; max-width: 950px; margin: 0 auto; padding: 30px; background-color: var(--bg-light); }
+        header { border-bottom: 4px solid var(--primary); margin-bottom: 40px; padding: 30px; text-align: center; background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        h1 { color: var(--primary); margin: 0; font-size: 2.2em; }
+        h2 { color: var(--primary); border-left: 6px solid var(--accent); padding: 10px 20px; margin-top: 40px; background: #f0f9ff; border-radius: 0 8px 8px 0; font-size: 1.5em; }
+        h3 { color: var(--accent); margin-top: 25px; border-bottom: 1px solid #e2e8f0; }
+        .code-block { background-color: var(--code-bg); color: #d4d4d4; padding: 20px; border-radius: 10px; font-family: 'Fira Code', 'Consolas', monospace; overflow-x: auto; border: 1px solid #333; margin: 15px 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); }
+        .important { background-color: var(--important-bg); border: 1px solid #fed7aa; border-left: 6px solid #f97316; padding: 20px; margin: 25px 0; border-radius: 8px; }
+        .method-box { background: white; border: 1px solid #e2e8f0; padding: 20px; border-radius: 10px; margin: 15px 0; }
+        table { width: 100%; border-collapse: collapse; background: white; margin: 20px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #bae6fd; padding: 12px; text-align: center; }
+        th { background-color: var(--primary); color: white; font-weight: 600; }
+        tr:nth-child(even) { background-color: #f8fafc; }
+        .math-formula { font-family: "Cambria Math", "Times New Roman", serif; background: #f1f5f9; padding: 15px; border-radius: 8px; text-align: center; font-size: 1.2em; color: #0369a1; margin: 15px 0; }
+        .keyword { color: #569cd6; }
+        .comment { color: #6a9955; }
+        .numeric { color: #b5cea8; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>RD01 : Représentation des Entiers Positifs</h1>
+    <p>Architecture des ordinateurs & Codage de l'information</p>
+</header>
+
+<section>
+    <h2>I. Origine Physique : Le Binaire</h2>
+    <p>L'informatique repose sur des composants électroniques à <strong>deux états exclusifs</strong>. On utilise le système binaire (Base 2) dont l'unité est le <strong>bit</strong> (<em>binary digit</em>).</p>
+    <ul>
+        <li><strong>États :</strong> Passant (1) ou Bloqué (0) pour un transistor.</li>
+        <li><strong>Capacité de codage :</strong> Sur $n$ bits, on peut représenter $2^n$ valeurs distinctes.</li>
+        <li><strong>Plage de valeurs :</strong> Pour $n$ bits, l'intervalle est $[0 ; 2^n - 1]$.</li>
+    </ul>
+    <div class="important">
+        <strong>Exemple :</strong> Un octet (8 bits) permet de coder $2^8 = 256$ valeurs, allant de $0$ à $255$.
+    </div>
+</section>
+
+<section>
+    <h2>II. Systèmes de Numération (Base $b$)</h2>
+    <p>Tout entier naturel $n$ peut se décomposer selon une base $b$ sous la forme d'une somme de puissances :</p>
+    <div class="math-formula">
+        $n = \sum_{k=0}^{N} a_k b^k = a_N b^N + \dots + a_1 b^1 + a_0 b^0$
+    </div>
+
+    <h3>1. Le système Binaire (Base 2)</h3>
+    <p>Utilise les chiffres $\{0, 1\}$.</p>
+    <div class="code-block">
+        <span class="comment"># Conversion 1101 (Binaire) vers Décimal :</span><br>
+        1&times;2³ + 1&times;2² + 0&times;2¹ + 1&times;2⁰ = 8 + 4 + 0 + 1 = <span class="numeric">13</span>
+    </div>
+
+    <h3>2. Le système Hexadécimal (Base 16)</h3>
+    <p>Utilise $\{0, \dots, 9, A, B, C, D, E, F\}$. Un symbole hexadécimal code exactement <strong>4 bits</strong> (un quartet).</p>
+    <table>
+        <tr>
+            <th>Décimal</th><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+        </tr>
+        <tr>
+            <th>Hexa</th><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td>
+        </tr>
+        <tr>
+            <th>Binaire</th><td>1010</td><td>1011</td><td>1100</td><td>1101</td><td>1110</td><td>1111</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>III. Méthodes de Conversion</h2>
+    
+    <div class="method-box">
+        <strong>Décimal &rarr; Binaire/Hexa :</strong> Effectuer des divisions euclidiennes successives par la base (2 ou 16) et lire les restes de <strong>bas en haut</strong>.
+    </div>
+
+    <div class="method-box">
+        <strong>Binaire &harr; Hexadécimal :</strong> Regrouper les bits par 4 en partant de la droite.
+        <br><em>Exemple :</em> <code>1101 1010</code> &rarr; <code>1101</code> (D) et <code>1010</code> (A) &rarr; <code>DA</code><sub>16</sub>.
+    </div>
+</section>
+
+<section>
+    <h2>IV. Manipulation en Python</h2>
+    <p>Python propose des fonctions natives pour convertir ces bases :</p>
+    <div class="code-block">
+        a = <span class="numeric">44</span> <span class="comment"># Décimal</span><br>
+        bin_a = <span class="keyword">bin</span>(a)   <span class="comment"># '0b101100'</span><br>
+        hex_a = <span class="keyword">hex</span>(a)   <span class="comment"># '0x2c'</span><br>
+        dec_a = <span class="keyword">int</span>(<span class="string">"1011"</span>, <span class="numeric">2</span>) <span class="comment"># 11</span>
+    </div>
+</section>
+
+<section>
+    <h2>V. Résumé des puissances de 2 (à connaître)</h2>
+    <table>
+        <tr>
+            <th>$2^0$</th><th>$2^1$</th><th>$2^2$</th><th>$2^3$</th><th>$2^4$</th><th>$2^5$</th><th>$2^6$</th><th>$2^7$</th><th>$2^8$</th>
+        </tr>
+        <tr>
+            <td>1</td><td>2</td><td>4</td><td>8</td><td>16</td><td>32</td><td>64</td><td>128</td><td>256</td>
+        </tr>
+    </table>
+</section>
+
+</body>
+</html>

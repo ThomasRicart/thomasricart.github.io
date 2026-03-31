@@ -1,0 +1,153 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Représentation du texte} % Titre au centre
+\def\docname{RD05}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+Quelle que soit la nature de l'information traitée par un ordinateur (image, son, texte, vidéo), elle est toujours représentée sous la forme d'un ensemble de nombres binaires.
+
+
+\section{Le codage Morse}
+
+\begin{minipage}{0.68\linewidth}
+	
+Un des premiers systèmes de codage est le code Morse:
+\begin{itemize}
+	\item Il a été développé par Samuel Morse et ses collaborateurs (1837)
+	\item Il a servi pour la transmission de signaux par télégraphe
+	\item  Le système de codage est fait avec des séquences signal court/long
+\end{itemize}
+\end{minipage} \hfill
+\begin{minipage}{0.25\linewidth}
+	\includegraphics[width = 1\linewidth]{01.jpg}
+\end{minipage}
+
+
+Le code Morse est au départ principalement utilisé par les militaires pour transmettre des informations, souvent chiffrées.
+
+Le signal peut être transporté via un signal radio, des signaux électriques à travers un câble télégraphique ou des signaux visuels (lumière).
+
+L'idée est de coder les caractères fréquents avec des séquences simples et les caractères rares par des séquences compliquées.
+
+\includegraphics[width = 1\linewidth]{02.jpg}
+
+
+\begin{exercice_cours}[Coder en ASCII le mot suivant: Bonjour]{}
+
+	\vspace{1cm}
+\end{exercice_cours}
+
+\newpage
+
+\section{Codage ISO 8859-1}
+
+\begin{minipage}{0.59\linewidth}
+	La norme ASCII convient bien à la langue anglaise, mais pose des problèmes dans d'autres langues, par exemple le français. En effet l'ASCII ne prévoit pas d'encoder les lettres accentuées. 
+ 
+	\smallskip
+ 
+	La norme ISO-8859-1 reprend les mêmes principes que l'ASCII, mais les nombres binaires associés à chaque caractère sont codés sur 8 bits, ce qui permet d'encoder jusqu'à 256 caractères. 
+ 
+	\smallskip
+
+ D'autres normes ont donc dû voir le jour, par exemple la norme "GB2312" pour le chinois simplifié ou encore la norme "JIS X 0208" pour le japonais.
+
+\end{minipage}\hfill
+\begin{minipage}{0.39\linewidth}
+	\includegraphics[width = 1\linewidth]{03.jpg}
+
+\end{minipage}
+
+
+
+ \begin{exercice_cours}[Décoder le texte suivant: 4C 61 20 43 69 67 61 6C 65 20 65 74 20 62 62 20 46 6F 75 72 6D 69 2E 20]{}
+
+	\vspace{1cm}
+ \end{exercice_cours}
+
+ \section{Codage Unicode}
+
+ Unicode a pour ambition de rassembler tous les caractères existant afin qu'une personne utilisant Unicode puisse, sans changer la configuration de son traitement de texte, à la fois lire des textes en français ou en japonais.
+
+ Unicode est uniquement une table qui regroupe tous les caractères existant au monde, il ne s'occupe pas de la façon dont les caractères sont codés dans la machine. Unicode accepte plusieurs systèmes de codage : UTF-8, UTF-16, UTF-32. Le plus utilisé, notamment sur le Web, est UTF-8.
+
+ Pour encoder les caractères Unicode, UTF-8 utilise un nombre variable d'octets : les caractères "classiques" (les plus couramment utilisés) sont codés sur un octet, alors que des caractères "moins classiques" sont codés sur un nombre d'octets plus important (jusqu'à 4 octets).
+
+ Un des avantages d'UTF-8 est qu'il est totalement compatible avec la norme ASCII : Les caractères Unicode codés avec UTF-8 ont exactement le même code que les mêmes caractères en ASCII.
+
+ On retrouve ici le codage 8 bits : 
+ 
+ \begin{small}
+	\url{http://sebastienguillon.com/test/jeux-de-caracteres/windows-ascii-fr.html}
+ \end{small}
+
+\begin{propriete}[Codage UTF-8]{}
+
+	\begin{minipage}{0.49\linewidth}
+		\begin{itemize}
+			\item On transforme le code point en binaire
+			\item On code entre 1 et 4 octets selon la table suivante:
+		\end{itemize}
+		
+		Les  ``xxx''  sont les chiffres de la représentation du code point en base 2.
+	
+	\end{minipage}\hfill
+	\begin{minipage}{0.49\linewidth}
+		\begin{center}
+			\includegraphics[width = 0.8\linewidth]{04.jpg}
+			\end{center}	
+	\end{minipage}
+
+	
+	 
+
+\end{propriete}
+
+\begin{exercice_cours}[Coder en UTF-8 la lettre \texttt{é} (U+00E9), le symbole $\varnothing$, $\rightarrow$ et $\uparrow$]{}
+
+\end{exercice_cours}
+
+\begin{propriete}[Unicode et Python]{}
+\begin{minipage}{0.49\linewidth}
+	En python il est possible de comparer des chaines de caractère directement
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	>>> 'abc' < 'abd'
+	True
+	>>> 'ab' < 'abc'
+	True
+	\end{CodePythontexAlt}
+\end{minipage}\hfill
+\begin{minipage}{0.49\linewidth}
+	En python il existe des fonctions capables de transformer les caractère en nombre et les nombres en caractère.
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+	>>> chr(65)     # valeur décimale -> caractère
+	'A'
+	>>> ord('A')    # caractère -> valeur décimale
+	65
+	\end{CodePythontexAlt}
+\end{minipage}
+\end{propriete}
+
+\begin{exercice_cours}[Créer un programme \texttt{cesar(mot:str, decalage:int, codage:bool)} qui: ]{}
+
+	
+
+	\begin{itemize}
+		\item prend un mot au format str
+		\item prend un décalage au format int
+		\item code suivant le coage cesar si \verb|codage| vaut \verb|True| et décode sinon.
+	\end{itemize}
+\end{exercice_cours}
+
+\begin{exercice_cours}[Faire le meme exercice avec le chiffrement de Vigenere]{}
+
+	\medskip
+
+	L'idée de Vigenère est d'utiliser un chiffre de César, mais où le décalage utilisé change de lettres en lettres. Pour cela, on utilise une table composée de 26 alphabets, écrits dans l’ordre, mais décalés de ligne en ligne d’un caractère. On écrit encore en haut un alphabet complet, pour le texte à coder, et à gauche, verticalement, un dernier alphabet, pour la clé. Il sagit de la table de vigenère
+
+\end{exercice_cours}
