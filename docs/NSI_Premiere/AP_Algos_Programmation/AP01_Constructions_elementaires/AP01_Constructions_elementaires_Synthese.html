@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthèse NSI AP01 - Constructions Élémentaires</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db; /* Bleu Python */
+            --bg-light: #f4f7f6;
+            --code-bg: #1e1e1e;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        h1 { color: var(--primary); margin-bottom: 5px; }
+        h2 { 
+            color: var(--primary); 
+            border-left: 5px solid var(--accent); 
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .code-block {
+            background-color: var(--code-bg);
+            color: #dcdcdc;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .keyword { color: #569cd6; }
+        .string { color: #ce9178; }
+        .comment { color: #6a9955; font-style: italic; }
+        .property { color: #9cdcfe; }
+        .number { color: #b5cea8; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th { background-color: var(--primary); color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .note {
+            background-color: #e8f4fd;
+            border-left: 5px solid var(--accent);
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>LP01 : Constructions Élémentaires</h1>
+    <p>NSI Première - Les bases du langage Python</p>
+</header>
+
+<section>
+    <h2>1. Variables et Types de données</h2>
+    <p>Une variable permet de stocker une information en mémoire. En Python, le type est déterminé automatiquement lors de l'affectation.</p>
+    
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Nom Python</th>
+            <th>Exemple</th>
+        </tr>
+        <tr>
+            <td>Entier</td>
+            <td><code>int</code></td>
+            <td><code>age = 17</code></td>
+        </tr>
+        <tr>
+            <td>Flottant (décimal)</td>
+            <td><code>float</code></td>
+            <td><code>prix = 19.99</code></td>
+        </tr>
+        <tr>
+            <td>Chaîne de caractères</td>
+            <td><code>str</code></td>
+            <td><code>nom = "Alice"</code></td>
+        </tr>
+        <tr>
+            <td>Booléen</td>
+            <td><code>bool</code></td>
+            <td><code>est_pret = True</code></td>
+        </tr>
+    </table>
+
+    <div class="note">
+        <strong>Règle de nommage :</strong> Un nom de variable doit commencer par une lettre ou <code>_</code>. Il ne peut pas commencer par un chiffre ni contenir d'espaces ou de caractères spéciaux (sauf <code>_</code>).
+    </div>
+</section>
+
+<section>
+    <h2>2. Opérations Numériques</h2>
+    <div class="code-block">
+        <span class="property">a</span> = 7<br>
+        <span class="property">b</span> = 3<br><br>
+        <span class="property">div_classique</span> = <span class="property">a</span> / <span class="property">b</span> <span class="comment"># 2.333... (float)</span><br>
+        <span class="property">div_entiere</span> = <span class="property">a</span> // <span class="property">b</span> <span class="comment"># 2 (quotient entier)</span><br>
+        <span class="property">reste</span> = <span class="property">a</span> % <span class="property">b</span> <span class="comment"># 1 (modulo)</span><br>
+        <span class="property">puissance</span> = <span class="property">a</span> ** <span class="property">b</span> <span class="comment"># 7³ = 343</span>
+    </div>
+</section>
+
+<section>
+    <h2>3. Manipulation des Chaînes (Slicing)</h2>
+    <p>On accède aux caractères par leur <strong>indice</strong> (le premier est 0).</p>
+    <div class="code-block">
+        <span class="property">mot</span> = <span class="string">"Numérique"</span><br>
+        <span class="property">caractere</span> = <span class="property">mot</span>[<span class="number">0</span>] <span class="comment"># "N"</span><br>
+        <span class="property">sous_chaine</span> = <span class="property">mot</span>[<span class="number">1</span>:<span class="number">4</span>] <span class="comment"># "umé" (indices 1, 2, 3)</span><br>
+        <span class="property">inverse</span> = <span class="property">mot</span>[::-<span class="number">1</span>] <span class="comment"># "euqirémuN"</span><br>
+        <span class="property">longueur</span> = <span class="keyword">len</span>(<span class="property">mot</span>) <span class="comment"># 9</span>
+    </div>
+</section>
+
+<section>
+    <h2>4. Logique et Comparaisons</h2>
+    <p>Les opérateurs logiques permettent de combiner des conditions :</p>
+    <ul>
+        <li><code>and</code> : Vrai si les deux sont vrais.</li>
+        <li><code>or</code> : Vrai si au moins l'un est vrai.</li>
+        <li><code>not</code> : Inverse la valeur (le contraire).</li>
+    </ul>
+
+    <div class="code-block">
+        <span class="property">x</span> = 10<br>
+        <span class="property">test</span> = (<span class="property">x</span> > 5) <span class="keyword">and</span> (<span class="property">x</span> <= 15) <span class="comment"># True</span><br>
+        <span class="property">different</span> = (<span class="property">x</span> != 10) <span class="comment"># False</span>
+    </div>
+</section>
+
+<section>
+    <h2>5. Transtypage (Casting)</h2>
+    <p>Il est parfois nécessaire de forcer le changement de type, notamment lors d'une saisie utilisateur :</p>
+    <div class="code-block">
+        <span class="property">saisie</span> = <span class="string">"15"</span><br>
+        <span class="property">nombre</span> = <span class="keyword">int</span>(<span class="property">saisie</span>) + 5 <span class="comment"># 20</span><br>
+        <span class="property">texte</span> = <span class="keyword">str</span>(2024) <span class="comment"># "2024"</span>
+    </div>
+</section>
+
+<footer>
+    <p style="text-align: center; color: #7f8c8d; font-size: 0.8em; margin-top: 50px;">
+        Support de cours NSI - Lycée - AP01 Constructions Élémentaires
+    </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Les dictionnaires} % Titre au centre
+\def\docname{AP07}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\section{Introduction}
+
+\begin{definition}[Les dictionnaires]{}
+	Un \textbf{dictionnaire} est une structure de données qui permet de stocker des paires \textbf{clé-valeur}. Les clés sont uniques dans un dictionnaire, tandis que les valeurs peuvent être dupliquées.
+
+	En Python, les dictionnaires:
+	\begin{itemize}
+		\item sont des collections \textbf{non ordonnées} d'éléments;
+		\item sont \textbf{mutables}, les éléments d'un dictionnaire peuvent être modifiés après sa création;
+		\item sont \textbf{indexés par des clés}, qui peuvent être de n'importe quel type de données immuable;
+		\item sont délimités par des \textbf{accolades} \verb|{ }| et les paires clé-valeur sont séparées par des \textbf{deux-points} \verb|:|.
+	\end{itemize}
+	
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3}
+	\end{CodePythontexAlt}
+
+	Dans cet exemple:
+	\begin{itemize}
+		\item les clés sont 'a', 'b' et 'c';
+		\item les valeurs sont 1, 2 et 3;
+		\item la clé 'a' est associée à la valeur 1;
+		\item le couple clé-valeur 'b': 2 signifie que la clé 'b' est associée à la valeur 2;
+	\end{itemize}
+	
+\end{definition}
+
+\begin{propriete}[Les dictionnaires]{}
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3}
+print(mon_dictionnaire['a'])  # Affiche 1
+print(mon_dictionnaire['b'])  # Affiche 2
+print(mon_dictionnaire['c'])  # Affiche 3
+print(len(mon_dictionnaire))  # Affiche 3
+		\end{CodePythontexAlt}
+\end{propriete}
+
+\section{Itérer sur un dictionnaire}
+
+
+\begin{minipage}{0.31\linewidth}
+	\begin{easybox}{Itérer sur les clés}{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+	for cle in dico.keys():
+		print(dico[cle])
+		\end{CodePythontexAlt}
+	\end{easybox}
+\end{minipage}\hfill
+\begin{minipage}{0.33\linewidth}
+	\begin{easybox}{Itérer sur les valeurs}{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+	for val in dico.values():
+		print(val)
+		\end{CodePythontexAlt}
+	\end{easybox}
+\end{minipage}\hfill
+\begin{minipage}{0.36\linewidth}
+	\begin{easybox}{Itérer sur les items}{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+	for cle, val in dico.items():
+		print(cle, val)
+		\end{CodePythontexAlt}
+	\end{easybox}
+\end{minipage}
+
+\section{Création de dictionnaires}
+
+\begin{easybox}{3 façons de créer un dictionnaire}{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {}					   # Dictionnaire vide
+mon_dico = {'a': 1, 'b': 2, 'c': 3} # Création avec des paires clé-valeur
+mon_dico['a'] = 4				   # Création par ajout de cle : valeur
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{easybox}{Création d'un dictionnaire par itération}{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {}
+for i in range(5):
+	mon_dico[i] = i**2
+print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{easybox}{Création d'un dictionnaire par compréhension}{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {i: i**2 for i in range(5)}
+print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{exercice_cours}[Création d'un dictionnaire]{}
+ Ecrire une fonction \texttt{longueurs\_elts(L)} qui prend en argument une liste de chaînes de caractères \texttt{L} et qui renvoie un dictionnaire dont les clés sont les éléments de \texttt{L} et les valeurs sont les longueurs des éléments de la liste \texttt{L}.
+ 
+ 
+ \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+def longueurs_elts(L):
+	# A compléter
+	
+
+	
+
+
+
+
+
+
+assert longueurs_elts(['a', 'ab', 'abc']) == {'a': 1, 'ab': 2, 'abc': 3}
+\end{CodePythontexAlt}
+\end{exercice_cours}
+
+
+\section{Appartenance d'un élément à un dictionnaire}
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {'a': 1, 'b': 2, 'c': 3}
+print('a' in mon_dico.keys())  # Affiche True
+print('d' in mon_dico.keys())  # Affiche False
+print(1 in mon_dico.values())  # Affiche True
+print(4 in mon_dico.values())  # Affiche False
+print(('a', 1) in mon_dico.items())  # Affiche True
+print(('d', 4) in mon_dico.items())  # Affiche False
+\end{CodePythontexAlt}
+
+\section{Suppression dans un dictionnaire}
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {'a': 1, 'b': 2, 'c': 3}
+del mon_dico['a']  # Supprime la paire clé-valeur 'a': 1
+print(mon_dico)  # Affiche {'b': 2, 'c': 3}
+mon_dico.clear()  # Supprime toutes les paires clé-valeur du dictionnaire
+print(mon_dico)  # Affiche {}
+\end{CodePythontexAlt}
+
+\pagebreak
+
+\begin{exercice_cours}{\quad}{}
+
+			\begin{enumerate}
+				\item  Ecrire une fonction \verb|occurence(sequence)| qui renvoie un dictionnaire dont les clés sont les caractères présents dans \verb|sequence| et leurs valeurs le nombre de fois où elles apparaissent.
+
+				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+					def occurence(sequence)->dict:
+						  
+
+
+
+
+
+
+
+
+
+					assert occurence([4, 2, 3, 4, 1, 4, 3, 4]) == {4: 4, 2: 1, 3: 2, 1: 1}
+					assert occurence("abracadrabra") == {'a': 5, 'b': 2, 'r': 3, 'c': 1, 'd': 1}
+				\end{CodePythontexAlt}
+
+				\item Ecrire une fonction \verb|plus_frequent(sequence)| qui renvoie le caractère le plus souvent présent dans la \verb|sequence|.
+				
+				\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+					def plus_frequent(sequence):
+						
+
+
+
+					
+
+
+
+
+
+					assert occurence([4, 2, 3, 4, 1, 4, 3, 4]) == 4
+					assert occurence("abracadrabra") == 'a'
+				\end{CodePythontexAlt}
+
+			\end{enumerate}
+
+
+\end{exercice_cours}
+
+	
+
+\begin{exercice_cours}{\quad}{}
+
+	On considère un dictionnaire donnant la moyenne de quelques étudiants. Partitionner ce dictionnaire en deux sous dictionnaires : un dictionnaire
+	des élèves ayant la moyenne et un dictionnaire des élèves n'ayant pas la
+	moyenne.
+	
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+		def coupe_dico(dico):
+			
+
+
+
+
+
+
+
+
+
+		dico={"etudiant1": 15,"etudiant2": 9,"etudiant3": 12,"étudiant4": 5}
+		print(coupe_dico(dico))
+	\end{CodePythontexAlt}
+\end{exercice_cours}
+
