@@ -64,8 +64,6 @@ L'idée est de coder les caractères fréquents avec des séquences simples et l
 
 
  \begin{exercice_cours}[Décoder le texte suivant: 4C 61 20 43 69 67 61 6C 65 20 65 74 20 62 62 20 46 6F 75 72 6D 69 2E 20]{}
-
-	\vspace{1cm}
  \end{exercice_cours}
 
  \section{Codage Unicode}
@@ -92,17 +90,14 @@ L'idée est de coder les caractères fréquents avec des séquences simples et l
 			\item On code entre 1 et 4 octets selon la table suivante:
 		\end{itemize}
 		
-		Les  ``xxx''  sont les chiffres de la représentation du code point en base 2.
 	
 	\end{minipage}\hfill
 	\begin{minipage}{0.49\linewidth}
 		\begin{center}
-			\includegraphics[width = 0.8\linewidth]{04.jpg}
+			\includegraphics[width = 0.9\linewidth]{04.jpg}
 			\end{center}	
 	\end{minipage}
-
-	
-	 
+		Les  ``xxx''  sont les chiffres de la représentation du code point en base 2.
 
 \end{propriete}
 
@@ -132,22 +127,3 @@ L'idée est de coder les caractères fréquents avec des séquences simples et l
 	\end{CodePythontexAlt}
 \end{minipage}
 \end{propriete}
-
-\begin{exercice_cours}[Créer un programme \texttt{cesar(mot:str, decalage:int, codage:bool)} qui: ]{}
-
-	
-
-	\begin{itemize}
-		\item prend un mot au format str
-		\item prend un décalage au format int
-		\item code suivant le coage cesar si \verb|codage| vaut \verb|True| et décode sinon.
-	\end{itemize}
-\end{exercice_cours}
-
-\begin{exercice_cours}[Faire le meme exercice avec le chiffrement de Vigenere]{}
-
-	\medskip
-
-	L'idée de Vigenère est d'utiliser un chiffre de César, mais où le décalage utilisé change de lettres en lettres. Pour cela, on utilise une table composée de 26 alphabets, écrits dans l’ordre, mais décalés de ligne en ligne d’un caractère. On écrit encore en haut un alphabet complet, pour le texte à coder, et à gauche, verticalement, un dernier alphabet, pour la clé. Il sagit de la table de vigenère
-
-\end{exercice_cours}
