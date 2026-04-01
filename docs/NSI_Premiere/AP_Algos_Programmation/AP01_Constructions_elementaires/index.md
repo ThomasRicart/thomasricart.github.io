@@ -17,7 +17,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/AP01_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP01_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/AP01_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP01_EXO1_Correction.pdf) |
-| [✏️ **Exercices 02**](./exercices/AP01_EXO2_variables.url) | Exercices interactifs | |
+| [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=47) | Exercices interactifs | |
 | [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
 
 ---

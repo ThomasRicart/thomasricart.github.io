@@ -1,4 +1,4 @@
-# 🐍 LP08 : Tri par insertion et par sélection
+# 🐍 AP08 : Tri par insertion et par sélection
 
 ---
 
@@ -14,12 +14,12 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 
 | Support | Description | Corrections |
 | :--- | :--- | :--- |
-| [📕 **Cours**](./LP08_Tris_Insertion_Selection.pdf) | Le support de cours complet en version PDF. | |
-| [💡 **Synthèse**](./LP08_Tris_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
-| [🎴 **Flashcards**](./flashcards/LP07_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
-| [📝 **Quiz**](./quiz/LP08_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**](./exercices/LP08_EXO1_Sujet.pdf) | Exercices d'application Tris |[Correction](./exercices/LP05_EXO1_Correction.pdf) |
-| [📚 **Activité pratique 01**](./LP08-ACT1-Listes.ipynb) | Activité Capytale Tris | [Correction](./)|
+| [📕 **Cours**](./AP08_Tris_Insertion_Selection.pdf) | Le support de cours complet en version PDF. | |
+| [💡 **Synthèse**](./AP08_Tris_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
+| [🎴 **Flashcards**](./flashcards/AP07_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
+| [📝 **Quiz**](./quiz/AP08_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
+| [✏️ **Exercices**](./exercices/AP08_EXO1_Sujet.pdf) | Exercices d'application Tris |[Correction](./exercices/AP05_EXO1_Correction.pdf) |
+| [📚 **Activité pratique 01**](./AP08-ACT1-Listes.ipynb) | Activité Capytale Tris | [Correction](./)|
 
 ---
 ---

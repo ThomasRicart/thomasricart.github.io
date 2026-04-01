@@ -1,0 +1,74 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+\usepackage{\packagepath/firstpage}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usepackage{scratch3}
+\usepackage{longtable}
+
+
+
+\def\schoolyear{2026-2027}              % Année scolaire
+\def\level{Première}              % Classe
+\def\course{NSI}              % Matière
+\def\codepart{RD}
+\def\textpart{Représentation et traitement de données}    % Nom du chapitre juste pour le titre de la partie
+%\def\partname{dfLangages de Programmation}
+\def\version{\today}
+\def\visibleornot{invisible}    % visible or invisible
+
+\begin{document}
+
+
+\parttitle{}
+
+%\part*{\chaptername}
+\def\documentpath{./RD01_Representation_Entiers_positifs}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/RD01}      
+\resetTout
+
+\def\documentpath{./RD03_Representation_Entiers_relatifs}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/RD03}   
+\resetTout
+\def\documentpath{./RD04_Representation_Flottants}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/RD04}   
+\resetTout
+\def\documentpath{./RD05_Representation_Texte}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/RD05}   
+\resetTout
+
+\end{document}
+
+\def\documentpath{./RD02_Algebre_Boole}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/RD02}   
+\resetTout
+
+
+\def\documentpath{./RD06_Tables_Indexation}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/RD06}   
+\resetTout
