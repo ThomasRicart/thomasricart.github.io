@@ -14,7 +14,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/RD04_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/RD04_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./) | Exercices d'application |[Correction](./) |
-| [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=24) | Exercices autocorrigés Binaire| |
+| [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=24) | Exercices autocorrigés| |
 | [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
 
 ---

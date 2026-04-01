@@ -1,0 +1,96 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+%\def\visibleornot{visible}    % visible or invisible
+\ifdefined\visibleornot\else\def\visibleornot{visible}\fi
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{0}
+
+
+
+\begin{document}
+
+\def\level{Premiere}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Representation des entiers relatifs} % Titre au centre
+\def\docname{RD03~--~TD 1}        % Identifiant à gauche
+
+\pagestyle{DS_LP}
+
+\NomPrenom{}
+
+\bigskip
+
+%%=============================================================
+\emph{Sauf mention contraire, les mots binaires seront toujours des mots de 8 bits et représenteront des entiers relatifs codés en complément à 2.}
+
+\medskip
+
+\begin{minipage}{0.48\linewidth}
+
+        \begin{exercice_cours}[Conversion Décimal -> Binaire]
+
+        \begin{tabular}{p{3.6cm}c}
+    \hline
+    Nombre entier & Nombre binaire \\
+    \hline
+    \verb|-37| & \reponseLigne[2.5cm]{\texttt{11011101}} \\
+    \verb|-132| & \reponseLigne[2.5cm]{\texttt{10110100}} \\
+    \verb|-27| & \reponseLigne[2.5cm]{\texttt{11100101}} \\
+     \hline
+        \end{tabular}
+        \end{exercice_cours}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+                \begin{exercice_cours}[Conversion Binaire -> Décimal]
+        \begin{tabular}{p{3.6cm}c}
+    \hline
+    Nombre binaire & Nombre entier \\
+    \hline
+    \verb|10011101| & \reponseLigne[2.5cm]{\texttt{-37}} \\
+    \verb|10110110| & \reponseLigne[2.5cm]{\texttt{-132}} \\
+    \verb|11101001| & \reponseLigne[2.5cm]{\texttt{-23}} \\
+    \hline
+        \end{tabular}
+                \end{exercice_cours}
+    \end{minipage}
+%%=============================================================
+
+\bigskip
+
+
+
+\begin{exercice_cours}[Répondre aux questions suivantes:]
+
+    \begin{itemize}
+        \item combien de valeurs différentes peut-on représenter avec 2 bits ? Avec 6 bits ? Avec 8 bits ? Avec 32 bits ? 
+        \reponseLigne[0.8\linewidth]{\texttt{ respectivement 4, 64, 256 et 4294967296}}
+        \item quel est le plus petit entier relatif qu'on peut représenter avec 8 bits ? \hfill\reponseLigne[2cm]{\texttt{-128}}
+        \item quel est le plus grand entier relatif qu'on peut représenter avec 8 bits ? \hfill\reponseLigne[2cm]{\texttt{127}}
+        \item comment est codé le nombre entier relatif $-1$? \hfill\reponseLigne[2cm]{\texttt{11111111}}
+    \end{itemize}
+
+\end{exercice_cours}
+
+\medskip
+
+\end{document}
