@@ -13,7 +13,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [💡 **Synthèse**](./) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/RD03_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/RD03_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**](./) | Exercices d'application |[Correction](./) |
+| [✏️ **Exercices 01**](./) | Exercices d'application |[Correction](./) |
+| [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=23) | Exercices autocorrigés Entiers relatifs| |
 | [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
 
 ---
