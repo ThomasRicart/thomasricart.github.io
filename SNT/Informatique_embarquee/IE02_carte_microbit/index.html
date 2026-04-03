@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://thomasricart.github.io/SNT/Informatique_embarquee/IE01_presentation_informatique_embarquee/">
+        <link rel="canonical" href="https://thomasricart.github.io/SNT/Informatique_embarquee/IE02_carte_microbit/">
       
       
-        <link rel="prev" href="../00_guide_professeur_informatique_embarquee/">
+        <link rel="prev" href="../IE01_presentation_informatique_embarquee/">
       
       
-        <link rel="next" href="../IE02_carte_microbit/">
+        <link rel="next" href="../IE04_evaluation/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>IE01 presentation informatique embarquee - Cours de M. Ricart</title>
+        <title>🕹️ Réaliser une Interface Homme-Machine (IHM) - Cours de M. Ricart</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#partie-1-quest-ce-que-linformatique-embarquee" class="md-skip">
+        <a href="#realiser-une-interface-homme-machine-ihm" class="md-skip">
           Aller au contenu
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IE01 presentation informatique embarquee
+              🕹️ Réaliser une Interface Homme-Machine (IHM)
             
           </span>
         </div>
@@ -3252,6 +3252,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3260,22 +3262,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#partie-1-quest-ce-que-linformatique-embarquee" class="md-nav__link">
+  <a href="#seance-2-activite-guidee-carte-microbit" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📌 Partie 1 — Qu'est-ce que l'informatique embarquée ?
+        Séance 2 — Activité guidée carte micro:bit
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 Partie 1 — Qu&#39;est-ce que l&#39;informatique embarquée ?">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objectifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Objectifs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-carte-microbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 La carte micro:bit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-1-utilisation-de-la-carte-microbit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Partie 1 — Utilisation de la carte Micro:bit ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-2-les-boutons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Partie 2 — Les boutons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partie-3-utilisation-des-capteurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📌 Partie 3 — Utilisation des capteurs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Partie 3 — Utilisation des capteurs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#quelques-reperes-historiques" class="md-nav__link">
+  <a href="#le-capteur-de-lumiere" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🕰️ Quelques repères historiques
+        Le capteur de lumière
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-capteur-de-temperature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le capteur de température
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laccelerometre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L'accéléromètre
       
     </span>
   </a>
@@ -3284,89 +3363,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partie-2-les-composants-dun-systeme-embarque" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📌 Partie 2 — Les composants d'un système embarqué
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partie-3-les-objets-connectes-et-linternet-des-objets-iot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📌 Partie 3 — Les objets connectés et l'Internet des Objets (IoT)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📌 Partie 3 — Les objets connectés et l&#39;Internet des Objets (IoT)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemples-dapplications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🌍 Exemples d'applications
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-capteurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔍 Les capteurs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-actionneurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚙️ Les actionneurs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lihm-interface-homme-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🖥️ L'IHM (Interface Homme-Machine)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#synthese-a-retenir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏁 Synthèse — À retenir
-      
-    </span>
-  </a>
   
 </li>
       
@@ -3387,95 +3383,195 @@
 
 
 
-  <h1>IE01 presentation informatique embarquee</h1>
-
+<h1 id="realiser-une-interface-homme-machine-ihm">🕹️ Réaliser une Interface Homme-Machine (IHM)</h1>
+<h2 id="seance-2-activite-guidee-carte-microbit">Séance 2 — Activité guidée carte micro:bit</h2>
+<p><strong>SNT — Seconde</strong> | Durée : ~2 heures</p>
 <hr />
-<h2 id="partie-1-quest-ce-que-linformatique-embarquee">📌 Partie 1 — Qu'est-ce que l'informatique embarquée ?</h2>
-<p>Un <strong>système informatique embarqué</strong> est un système informatique intégré directement dans un objet pour contrôler son fonctionnement.</p>
-<p>Contrairement à un ordinateur classique, il est :
-- <strong>dédié</strong> à une tâche précise
-- <strong>miniaturisé</strong> (souvent un microprocesseur peu coûteux)
-- souvent soumis à des <strong>contraintes de temps réel</strong> (il doit répondre rapidement)</p>
-<p><img src = "Images/01.png"></p>
-<h3 id="quelques-reperes-historiques">🕰️ Quelques repères historiques</h3>
+<h2 id="objectifs">🎯 Objectifs</h2>
+<ul>
+<li>Comprendre ce qu'est une IHM dans un objet embarqué</li>
+<li>Programmer une carte micro:bit pour réagir à des entrées (boutons, capteurs)</li>
+<li>Contrôler des sorties (LEDs, affichage, buzzer)</li>
+<li>Simuler un petit système embarqué complet</li>
+</ul>
+<hr />
+<hr />
+<h2 id="la-carte-microbit">📌 La carte micro:bit</h2>
+<p>La carte <strong>BBC micro:bit</strong> est une carte microcontrôleur conçue pour l'éducation. Elle possède :</p>
 <table>
 <thead>
 <tr>
-<th>Année</th>
-<th>Événement</th>
+<th>Composant</th>
+<th>Rôle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1967</td>
-<td>1er système embarqué : guidage de la mission lunaire Apollo</td>
+<td>Matrice 5×5 LEDs</td>
+<td>Afficher du texte, des images</td>
 </tr>
 <tr>
-<td>1971</td>
-<td>1er microprocesseur (Intel)</td>
+<td>Boutons A et B</td>
+<td>Entrées utilisateur (IHM)</td>
 </tr>
 <tr>
-<td>1984</td>
-<td>Airbus A320 : 1er avion à commandes électriques informatisées</td>
+<td>Accéléromètre</td>
+<td>Détecter les mouvements, la secousse</td>
 </tr>
 <tr>
-<td>1998</td>
-<td>Météor (ligne 14 Paris) : 1er métro sans conducteur</td>
+<td>Capteur de température</td>
+<td>Mesurer la température</td>
 </tr>
 <tr>
-<td>1999</td>
-<td>Naissance de l'expression « Internet des objets »</td>
+<td>Boussole</td>
+<td>Orientation magnétique</td>
 </tr>
 <tr>
-<td>2007</td>
-<td>Arrivée du smartphone</td>
-</tr>
-<tr>
-<td>2020</td>
-<td>~50 milliards d'objets connectés dans le monde</td>
+<td>Bluetooth / Radio</td>
+<td>Communiquer avec d'autres appareils</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<hr />
-<h2 id="partie-2-les-composants-dun-systeme-embarque">📌 Partie 2 — Les composants d'un système embarqué</h2>
-<p>Un système embarqué interagit avec le monde physique grâce à 3 types de composants :</p>
-<p><img src="Images/02.png"></p>
-<hr />
-<h2 id="partie-3-les-objets-connectes-et-linternet-des-objets-iot">📌 Partie 3 — Les objets connectés et l'Internet des Objets (IoT)</h2>
-<p>Un objet <strong>connecté</strong> est un objet embarqué qui communique via un réseau (souvent Internet ou Bluetooth ou Wi-Fi).</p>
-<p>L'ensemble de ces objets forme l'<strong>Internet des Objets</strong> (<em>Internet of Things</em>, IoT).</p>
-<p>Grâce au smartphone, on peut désormais contrôler de nombreux objets depuis une seule interface unifiée.</p>
-<h3 id="exemples-dapplications">🌍 Exemples d'applications</h3>
-<ul>
-<li><strong>Domotique</strong> : éclairage, chauffage, alarme, électroménager</li>
-<li><strong>Santé</strong> : montres connectées, tensiomètres, glucomètres</li>
-<li><strong>Transport</strong> : voiture connectée, trottinette partagée</li>
-<li><strong>Agriculture</strong> : capteurs d'humidité des sols, drones</li>
-<li><strong>Industrie</strong> : robots de chaîne de montage</li>
-</ul>
-<h3 id="les-capteurs">🔍 Les capteurs</h3>
-<p>Un <strong>capteur</strong> mesure une grandeur physique et la convertit en signal numérique.</p>
-<p>Exemples : thermomètre, accéléromètre, caméra, microphone, capteur de luminosité, GPS...</p>
-<h3 id="les-actionneurs">⚙️ Les actionneurs</h3>
-<p>Un <strong>actionneur</strong> reçoit un signal numérique et produit une action physique.</p>
-<p>Exemples : moteur, LED, haut-parleur, écran, pompe, résistance chauffante...</p>
-<h3 id="lihm-interface-homme-machine">🖥️ L'IHM (Interface Homme-Machine)</h3>
-<p>L'<strong>IHM</strong> permet à un humain d'interagir avec le système.</p>
-<p>Exemples : boutons, écran tactile, application smartphone, télécommande...</p>
-<hr />
-<h2 id="synthese-a-retenir">🏁 Synthèse — À retenir</h2>
-<p>Complétez cette synthèse avec vos propres mots :</p>
-<ul>
-<li>Un système informatique embarqué est ...</li>
-<li>Un <strong>capteur</strong> permet de ...</li>
-<li>Un <strong>actionneur</strong> permet de ...</li>
-<li>Une <strong>IHM</strong> permet de ...</li>
-<li>Un objet <strong>connecté</strong> est un objet embarqué qui ...</li>
-<li>Les principaux risques liés aux objets connectés sont ...</li>
-</ul>
-<p><img src="Images/03.png"></p>
+<p>Dans Tinkercad, on peut la programmer en <strong>Python (MicroPython)</strong> ou en blocs visuels.</p>
 <p><img src="Images/04.png"></p>
+<hr />
+<h2 id="partie-1-utilisation-de-la-carte-microbit">📌 Partie 1 — Utilisation de la carte Micro:bit ?</h2>
+<p>Rendez vous à l'adresse suivante: <a href="https://capytale2.ac-paris.fr/web/c/b874-10483684">https://capytale2.ac-paris.fr/web/c/b874-10483684</a></p>
+<p>Vous découvrez alors une partie "programmation en python" avec du code du type:</p>
+<pre><code class="language-python"># Importer la bibliothèque microbit
+from microbit import *
+
+# Boucle infinie
+while True:
+    # Afficher une image
+    display.show(Image.HAPPY)
+</code></pre>
+<ul>
+<li>Cliquer alors sur la flèche <img alt="alt text" src="../image.png" /> pour démarrer la simulation.</li>
+<li>La carte <code>micro:bit</code> apparait à droite. </li>
+<li>Vous observez un premier actionneur: une matrice de <span class="arithmatex">\(5 \times 5\)</span> LEDS.</li>
+</ul>
+<p>L'image affichée n'est qu'un exemple d'images que vous pouvez générer. Vous trouverez une banque d'image <a href = "https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html">ici</a>.</p>
+<p><strong>Exercice 1</strong> </p>
+<p>Modifier l'image que vous afficher en choisissant une image parmis celles disponibles.</p>
+<p><strong>Exercice 2</strong></p>
+<p>Modifier votre programme de manière à afficher au moins 3 images différentes successivement et en boucle.</p>
+<p><em>Remarque</em> : la fonction <code>sleep()</code> permet de faire une pause. Le temps de pause en millisecondes (millièmes de secondes) s'insère entre les parenthèses. </p>
+<p><strong>Exercice 3</strong></p>
+<p>Bien sûr, il est possible de créer sa propre image sur le micro:bit. C'est facile.</p>
+<p>Chaque pixel LED sur l'affichage physique peut prendre une parmi dix valeurs. Si un pixel prend la valeur 0 c'est qu'il est éteint. </p>
+<p>En revanche, s'il prend la valeur 9 il est à la luminosité maximale. Les valeurs de 1 à 8 représentent des niveaux de luminosité entre éteint (0) et « à fond » (9).</p>
+<p>Muni de ces informations, il est possible de créer une nouvelle image comme ça :</p>
+<pre><code class="language-python">from microbit import *
+
+bateau = Image(&quot;05050:&quot;
+               &quot;05050:&quot;
+               &quot;05050:&quot;
+               &quot;99999:&quot;
+               &quot;09990&quot;)
+
+display.show(bateau)
+</code></pre>
+<ul>
+<li>Recopiez ou copiez-collez ce code et voir le résultat.</li>
+</ul>
+<p><em>Remarque</em> : Avec l'instruction <code>display.set_pixel(x,y,lum)</code> il est possible de régler la luminosité des pixels de l'affichage individuellement de 0 (désactivé) à 9 (luminosité maximale). <code>x</code> et <code>y</code> varient de 0 à 4.</p>
+<p><em>Exemple</em> : <code>display.set_pixel(1, 4, 9)</code> allume la 2ème LED de la 5ème ligne. </p>
+<ul>
+<li>En utilisant <code>display.set_pixel(x,y,lum)</code> et <code>sleep(1000)</code>, faire clignoter le haut des mâts du bateau.</li>
+</ul>
+<p><strong>Exercice 4</strong></p>
+<p>Avec cette méthode, créez une image de votre choix. Programmez la et vérifier le bon fonctionnement.</p>
+<hr />
+<h2 id="partie-2-les-boutons">📌 Partie 2 — Les boutons</h2>
+<p>Deux boutons sont présents sur la carte afin de rajouter de l'interactivité dans les programmes. Les fonctions associées sont :</p>
+<ul>
+<li><code>button_a.is_pressed()</code> renvoie <code>True</code> si le bouton est effectivement appuyé.</li>
+<li><code>button_a.was_pressed()</code> renvoie <code>True</code> si le bouton a été appuyé.</li>
+<li>
+<p><code>button_a.get_pressed()</code> renvoie le nombre de fois que le bouton a été appuyé.</p>
+</li>
+<li>
+<p>Écrire un script qui affiche un smiley qui sourit 😊 lorsqu'on appuie sur le bouton <code>A</code> et un smiley triste 🙁 lorsqu'on appuie sur le bouton <code>B</code>.</p>
+</li>
+</ul>
+<p><em>Aide</em> : Dans une une structure de boucle infinie (<code>while True</code>), inclure une structure conditionnelle (<code>if</code> appui bouton <code>A</code> -&gt; action 😊 <code>elif</code> appui bouton <code>B</code> -&gt; action 🙁). </p>
+<p><strong>Exercice 5</strong>: </p>
+<p>À partir des parties précédentes, réaliser un programme qui simule un lancer de dé à 6 faces. Le programme devra choisir un chiffre entre 1 et 6 au hasard (on utilisera la fonction <code>random</code> qu'il faudra importer via l'instruction <code>from random import *</code>).</p>
+<p>Un bouton servira à effectuer le lancer de dé tandis que l'autre permettra d'effacer l'écran.</p>
+<p>L'instruction <code>display.clear()</code> permet d'éteindre les pixels de l'écran.</p>
+<p><em>Code python à compléter</em> :</p>
+<pre><code class="language-python">from random import *
+
+while True:
+    if button_a.was_pressed():
+        # A compléter
+
+
+
+</code></pre>
+<p><em>Améliorations possibles</em> :</p>
+<ul>
+<li>
+<p>On pourrait faire s'afficher une petite animation sur l'écran simulant un dé qui roule ou des numéros qui défilent.</p>
+</li>
+<li>
+<p>Au lieu d'afficher un chiffre, afficher une image avec une disposition de points, un peu comme sur les faces d'un véritable dé.</p>
+</li>
+</ul>
+<h2 id="partie-3-utilisation-des-capteurs">📌 Partie 3 — Utilisation des capteurs</h2>
+<p>La carte Micro:Bit comporte divers capteurs permettant d'effectuer des mesures de grandeurs :</p>
+<ul>
+<li>Un accéléromètre</li>
+<li>Un capteur de luminosité</li>
+<li>Un capteur de température</li>
+<li>Un capteur de champ magnétique (ou boussole)</li>
+</ul>
+<h3 id="le-capteur-de-lumiere">Le capteur de lumière</h3>
+<p>En inversant la fonctionnalité des LEDs d'un écran pour devenir un point d'entrée, l'écran LED devient un capteur de lumière basique, permettant de détecter la luminosité ambiante.</p>
+<p>La commande <code>display.read_light_level()</code> retourne un entier compris entre 0 et 255 représentant le niveau de lumière.</p>
+<p><strong>Exercice 6</strong>: </p>
+<p>Compléter le programme ci-dessous pour qu'il affiche une image de lune si on baisse la luminosité (en recouvrant la carte avec sa main par exemple) et un soleil sinon. </p>
+<p><em>Code python à compléter</em> :</p>
+<pre><code class="language-python">
+from microbit import *
+
+soleil = Image(&quot;90909:&quot;
+               &quot;09990:&quot;
+               &quot;99999:&quot;
+               &quot;09990:&quot;
+               &quot;90909:&quot;)
+
+lune = Image(&quot;00999:&quot;
+             &quot;09990:&quot;
+             &quot;09900:&quot;
+             &quot;09990:&quot;
+             &quot;00999:&quot;)
+
+while True:
+    if display.read_light_level()&gt;&quot;Compléter ici&quot;:
+        display.show(soleil)
+    else:
+        display.show(&quot;Compléter ici&quot;)
+    sleep(10)
+</code></pre>
+<p><em>Aller plus loin:</em> Créer un programme qui allume d'autant plus fort les LEDS que la luminosité est faible pour simuler un lampadaire intelligent tels qu'on les trouve dans les rues de Toulouse. </p>
+<h3 id="le-capteur-de-temperature">Le capteur de température</h3>
+<p>L'instruction <code>temperature()</code> renvoie la température de la carte micro:bit en degrés Celsius. </p>
+<p>Par exemple, <code>a = temperature()</code> sauvegarde dans <code>a</code> la temperature.</p>
+<p>Vous pouvez modifier la température avec le curseur sous la carte micro:bit.</p>
+<p><strong>Exercice 7:</strong> 
+Écrire un programme qui affiche la température sur la matrice de LED.
+Aide : on pourra utiliser l'instruction <code>display.scroll()</code>.</p>
+<h3 id="laccelerometre">L'accéléromètre</h3>
+<p>Un accéléromètre mesure l'accélération de la carte micro:bit ; ce composant détecte quand la micro:bit est en mouvement. Il peut aussi détecter d'autres actions (gestes), par exemple quand elle est secouée, inclinée ou qu'elle tombe.</p>
+<p>Les smartphones utilisent un accéléromètre pour savoir dans quel sens afficher les images sur son écran. Des manettes de jeux contiennent aussi des accéléromètres pour aider à tourner et à se déplacer dans les jeux.</p>
+<ul>
+<li>X : l'inclinaison de gauche à droite.</li>
+<li>Y : l'inclinaison d'avant en arrière.</li>
+<li>Z : le mouvement haut et bas.</li>
+</ul>
+<p>Dans l'exemple suivant à essayer, l'instruction <code>accelerometer.get_x()</code> permet de détecter un mouvement de gauche à droite en renvoyant un nombre compris entre <span class="arithmatex">\(-1023\)</span> et <span class="arithmatex">\(1023\)</span> ; <span class="arithmatex">\(0\)</span> étant la position «d'équilibre».</p>
 
 
 

@@ -1,0 +1,6 @@
+n <- 0
+u <- 800
+tant que (*\trou{u >= 100}*):
+        u <- (*\trou{0,88 * u}*)
+        n <- (*\trou{n + 1}*)
+print(n)

@@ -1,0 +1,223 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+%\def\visibleornot{visible}    % visible or invisible
+\ifdefined\visibleornot\else\def\visibleornot{visible}\fi
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{0}
+
+
+
+\begin{document}
+
+\def\level{Premiere}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Algèbre de Boole} % Titre au centre
+\def\docname{RD02~--~TD 1}        % Identifiant à gauche
+
+\pagestyle{DS_LP}
+
+\NomPrenom{}
+
+\bigskip
+
+%%=============================================================
+
+
+
+
+        \begin{exercice_cours}[Donner dans chaque cas la valeur du booleen \texttt{rep}:]
+
+        \begin{tabular}{p{3.6cm}p{8.6cm}c}
+    \hline
+    Variables & Expression booléenne& Valeur de \verb|rep|\\
+    \hline
+        \verb|x = 3| & \verb|rep = (x**2 == 7)| & \reponseLigne[2.5cm]{\texttt{False}} \\
+        \verb|x, y, z = 3, 4, 5| & \verb|rep = (x**2 + y**2 == z**2)| & \reponseLigne[2.5cm]{\texttt{False}} \\
+        \verb|a, b = 3, -7| & \verb|rep = (a**3 > 50 and b**2 < 50)| & \reponseLigne[2.5cm]{\texttt{True}} \\
+        \hline
+        \end{tabular}
+        \end{exercice_cours}
+
+        \medskip
+
+        \begin{exercice_cours}[Compléter la table de vérité suivante:]{}
+            \begin{tabular}{cc|c|c|c|c|c|c|}
+                \hline
+                A & B & $\overline{A}$ & $\overline{B}$ & $\overline{A}\cdot B$ & $\overline{A} + B$ & $\overline{A} \cdot \overline{B}$ & $\overline{A} + \overline{B}$ \\
+                \hline
+                0 & 0 & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{1}} \\
+                0 & 1 & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{1}} \\
+                1 & 0 & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{1}} \\
+                1 & 1 & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{1}} & \reponseLigne[1.5cm]{\texttt{0}} & \reponseLigne[1.5cm]{\texttt{0}} \\
+                \hline
+            \end{tabular}
+        \end{exercice_cours}
+
+        \medskip
+
+        \begin{exercice_cours}[Créer la table de vérité de l'expression suivante: $S=(A \cdot B)+(A \cdot \overline{C})+(\overline{B}\cdot C)$]{}
+            \begin{tabular}{ccc|P{10cm}|c|}
+                \hline
+                A & B & C & S \\
+                \hline
+                0 & 0 & 0 & &\reponseLigne[1.5cm]{\texttt{0}} \\
+                0 & 0 & 1 & &\reponseLigne[1.5cm]{\texttt{1}} \\
+                0 & 1 & 0 & &\reponseLigne[1.5cm]{\texttt{0}} \\
+                0 & 1 & 1 & &\reponseLigne[1.5cm]{\texttt{0}} \\
+                1 & 0 & 0 & &\reponseLigne[1.5cm]{\texttt{1}} \\
+                1 & 0 & 1 & &\reponseLigne[1.5cm]{\texttt{1}} \\
+                1 & 1 & 0 & &\reponseLigne[1.5cm]{\texttt{1}} \\
+                1 & 1 & 1 & &\reponseLigne[1.5cm]{\texttt{1}} \\
+                \hline
+            \end{tabular}
+            
+        \end{exercice_cours}
+    \end{document}
+        \begin{minipage}{0.48\linewidth}
+                \begin{exercice_cours}[Conversion Binaire -> Décimal]
+        \begin{tabular}{p{3.6cm}c}
+    \hline
+    Nombre binaire & Nombre entier \\
+    \hline
+    \verb|10110110| & \reponseLigne[2.5cm]{\texttt{182}} \\
+    \verb|01101101| & \reponseLigne[2.5cm]{\texttt{109}} \\
+    \verb|00110101| & \reponseLigne[2.5cm]{\texttt{53}} \\
+    \hline
+        \end{tabular}
+                \end{exercice_cours}
+    \end{minipage}
+%%=============================================================
+
+\bigskip
+
+\begin{minipage}{0.48\linewidth}
+
+        \begin{exercice_cours}[Conversion Décimal -> Hexadécimal]
+
+        \begin{tabular}{p{3.6cm}c}
+    \hline
+    Nombre entier & Nombre hexadécimal \\
+    \hline
+    \verb|42| & \reponseLigne[2.5cm]{\texttt{2A}} \\
+    \verb|127| & \reponseLigne[2.5cm]{\texttt{7F}} \\
+    \verb|64| & \reponseLigne[2.5cm]{\texttt{40}} \\
+     \hline
+        \end{tabular}
+        \end{exercice_cours}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+                \begin{exercice_cours}[Conversion Hexadécimal -> Décimal]
+        \begin{tabular}{p{3.6cm}c}
+    \hline
+    Nombre hexadécimal & Nombre entier \\
+    \hline
+    \verb|4A| & \reponseLigne[2.5cm]{\texttt{74}} \\
+    \verb|7C| & \reponseLigne[2.5cm]{\texttt{124}} \\
+    \verb|42| & \reponseLigne[2.5cm]{\texttt{66}} \\
+    \hline
+        \end{tabular}
+                \end{exercice_cours}
+    \end{minipage}
+
+    %%%%%%%%%%
+
+    
+\begin{minipage}{0.48\linewidth}
+
+        \begin{exercice_cours}[Conversion Binaire -> Hexadécimal]
+
+        \begin{tabular}{p{3.6cm}c}
+    \hline
+    Nombre binaire & Nombre hexadécimal \\
+    \hline
+    \verb|10110101| & \reponseLigne[2.5cm]{\texttt{B5}} \\
+    \verb|00011111| & \reponseLigne[2.5cm]{\texttt{1F}} \\
+    \verb|10011010| & \reponseLigne[2.5cm]{\texttt{9A}} \\
+     \hline
+        \end{tabular}
+        \end{exercice_cours}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+                \begin{exercice_cours}[Conversion Hexadécimal -> Binaire]
+        \begin{tabular}{p{3.6cm}c}
+    \hline
+    Nombre hexadécimal & Nombre entier \\
+    \hline
+    \verb|FE| & \reponseLigne[2.5cm]{\texttt{254}} \\
+    \verb|12| & \reponseLigne[2.5cm]{\texttt{18}} \\
+    \verb|A3| & \reponseLigne[2.5cm]{\texttt{163}} \\
+    \hline
+        \end{tabular}
+                \end{exercice_cours}
+    \end{minipage}
+
+
+
+
+\begin{exercice_cours}[Répondre aux questions suivantes:]
+
+    \begin{itemize}
+        \item Combien de valeurs différentes peut-on représenter avec 2 bits ? Avec 6 bits ? Avec 8 bits ? Avec 32 bits ? 
+        \reponseLigne[0.8\linewidth]{\texttt{ respectivement 4, 64, 256 et 4294967296}}
+        \item Combien de bits sont nécessaires pour représenter 1000 valeurs différentes?\hfill\reponseLigne[2cm]{\texttt{10 bits}}
+        \item Quel est le plus grand entier naturel que l'on peut représenter avec 7 bits? \hfill\reponseLigne[2cm]{\texttt{127}}
+    \end{itemize}
+
+\end{exercice_cours}
+
+\medskip
+
+\begin{exercice_cours}[Effectuer les opérations binaires suivantes:]
+    
+    \begin{minipage}{0.48\linewidth}
+       \begin{center}
+       \texttt{101111} + \texttt{11011}  \reponseLigne[2.5cm]{=\texttt{1001010}} \\
+       \end{center}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{center}
+       \texttt{110011101} + \texttt{11011}  \reponseLigne[2.5cm]{=\texttt{110101110}} \\
+       \end{center}
+    \end{minipage}
+
+    \vspace{2cm}
+\end{exercice_cours}
+
+\medskip
+
+\begin{exercice_cours}[Effectuer les opérations binaires suivantes:]
+    
+    \begin{minipage}{0.48\linewidth}
+       \begin{center}
+       \texttt{101111} $\times$ \texttt{1000}  \reponseLigne[2.5cm]{=\texttt{101111000}} \\
+       \end{center}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{center}
+       \texttt{110011000} $\div $ \texttt{10}  \reponseLigne[2.5cm]{=\texttt{11001100}} \\
+       \end{center}
+    \end{minipage}
+
+\end{exercice_cours}
+
+\end{document}
