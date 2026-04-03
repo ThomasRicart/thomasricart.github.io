@@ -111,39 +111,39 @@ Une passerelle est prélevée au hasard en sortie de chaîne.
     \item Calculer la probabilité que la passerelle prélevée soit défectueuse.
     \begin{blocvisiblex}[height=1.5]
     {\quad}
-    $P(D)=P(A\cap D)+P(B\cap D)=P(A) \times P_D(A)+P(B) \times P_D(B)=0,75 \times 0,02+0,25 \times 0,06=0,029$
+    $P(D)=P(A\cap D)+P(B\cap D)=P(A) \times P_D(A)+P(B) \times P_D(B)=0,75 \times 0,02+0,25 \times 0,06=0,03$
 
         \smallskip
-    La probabilité que la passerelle soit défectueuse est de $0,029$.
+    La probabilité que la passerelle soit défectueuse est de $0,03$.
     \end{blocvisiblex}
     \medskip
     \item Sachant que la passerelle est défectueuse, calculer la probabilité qu'elle soit de type \textbf{Alpha}.
     \begin{blocvisiblex}[height=2]
     {\quad}
-    $P_A(D)=\dfrac{P(A\cap D)}{P(D)}=\dfrac{P(A) \times P_D(A)}{P(D)}=\dfrac{0,75 \times 0,02}{0,029}\approx 0,5172$
+    $P_A(D)=\dfrac{P(A\cap D)}{P(D)}=\dfrac{P(A) \times P_D(A)}{P(D)}=\dfrac{0,75 \times 0,02}{0,03}\approx 0,5$
 
         \smallskip
-    La probabilité que la passerelle soit de type \textbf{Alpha} sachant qu'elle est défectueuse est $0,5172$.
+    La probabilité que la passerelle soit de type \textbf{Alpha} sachant qu'elle est défectueuse est $0,5$.
      \end{blocvisiblex}
      \medskip
     \item  On prélève un lot de 30 passerelles de manière indépendante. Soit $Y$ la variable aléatoire comptant le nombre de passerelles défectueuses. Démontrer que $Y$ suit une loi binomiale dont on précisera les paramètres.
     \begin{blocvisiblex}[height=3.5]
     {\quad}
     \begin{itemize}
-        \item "choisir une passerelle défectueuse" est une expérience à deux issues: "la passerelle est défectueuse" de $p=0,029$ et "la passerelle n'est pas défectueuse" de $p=0,971$
+        \item "choisir une passerelle défectueuse" est une expérience à deux issues: "la passerelle est défectueuse" de $p=0,03$ et "la passerelle n'est pas défectueuse" de $p=0,97$
         \item On répète cette expérience $n=30$ fois de manière identique et indépendante
         \item $Y$ compte le nombre de succès (passerelles défectueuses) parmi les 30 expériences
-        \item Donc $Y$ suit une loi binomiale de paramètres $n=30$ et $p=0,029$.
+        \item Donc $Y$ suit une loi binomiale de paramètres $n=30$ et $p=0,03$.
     \end{itemize}
     \end{blocvisiblex}
         \medskip
         \item Calculer la probabilité d'avoir au moins 2 passerelles défectueuses dans ce lot.
     \begin{blocvisiblex}[height=1.5]
     {\quad}
-    $P(Y\geq 2)\approx 0,2158$
+    $P(Y\geq 2)\approx 0,2269$
 
         \smallskip
-    La probabilité d'avoir au moins 2 passerelles défectueuses dans ce lot est d'environ $0,2158$.
+    La probabilité d'avoir au moins 2 passerelles défectueuses dans ce lot est d'environ $0,2269$.
     \end{blocvisiblex}
     \medskip
 
@@ -155,13 +155,13 @@ Une passerelle est prélevée au hasard en sortie de chaîne.
     $P(Y=3)\approx 0,0447$
 
         \smallskip  
-    La probabilité d'avoir exactement 3 passerelles défectueuses dans ce lot est d'environ $0,0447$.
+    La probabilité d'avoir exactement 3 passerelles défectueuses dans ce lot est d'environ $0,0482$.
     \end{blocvisiblex}
     \medskip
     \item Combien faut-il prélever de passerelles pour que la probabilité d'avoir au moins 1 passerelle défectueuse soit supérieure à 20\% ? Déterminer à l'aide de Géogébra à partir de quelle valeur de $n$ la condition est satisfaite.
     \begin{blocvisiblex}[height=2]
     {\quad}
-    $P(Y\geq 1)=1-P(Y=0)=1-\binom{n}{0} \times 0,029^0 \times (1-0,029)^n = 1-(1-0,029)^n=1-0,971^n$  
+    $P(Y\geq 1)=1-P(Y=0)=1-\binom{n}{0} \times 0,03^0 \times (1-0,03)^n = 1-(1-0,03)^n=1-0,97^n$  
 
     Il faut prélever au moins 8 passerelles pour que la probabilité d'en avoir au moins 1 défectueuse soit supérieure à 20\%.
     \end{blocvisiblex}
@@ -226,7 +226,7 @@ On considère la fonction $f$ définie sur $\ff{1}{20}$ par:
                  \item Calculer le gain moyen du circuit sur la plage de fréquence $[1;3]$ arrondi à $10^{-2}$ près.
                     \begin{blocvisiblex}[height=1.5]
                     {\quad}
-                    Le gain moyen du circuit sur la plage de fréquence $[1;3]$ est de $\dfrac{1}{3-1}\int_1^3 f(x) \, \dx\approx 7,04$ dB.
+                    Le gain moyen du circuit sur la plage de fréquence $[1;3]$ est de $\dfrac{1}{3-1}\int_1^3 f(x) \, \dx\approx 3,52$ dB.
                      \end{blocvisiblex}
             
     \end{enumerate}
@@ -286,7 +286,7 @@ u <- 800
 tant que (*\trou{u >= 100}*):
         u <- (*\trou{0,88 * u}*)
         n <- (*\trou{n + 1}*)
-print(n)
+afficher (n)
 \end{tcblisting}
 
 \item Déterminer par la méthode de votre choix après combien d'heures l'énergie sera inférieure à 100 Wh.
@@ -323,10 +323,10 @@ Une autre batterie (Modèle Gamma) suit une décharge linéaire. Sa capacité in
     Ainsi, après 12 heures, l'énergie de cette batterie sera inférieure à 100 Wh.
     \end{blocvisiblex}
     \medskip
-    \item Déterminer à l'aide de Géogébra à partir de quelle heure le modèle Gamma devient plus avantageux que le modèle de la partie C.
+    \item Déterminer à l'aide de Géogébra à partir de quelle heure le modèle Gamma devient moins avantageux que le modèle de la partie C.
     \begin{blocvisiblex}[height=1.]
     {\quad}
-    Le modèle Gamma devient plus avantageux que le modèle de la partie C à partir de la 10ème heure.
+    Le modèle Gamma devient moins avantageux que le modèle de la partie C à partir de la 10ème heure.
     \end{blocvisiblex}
     \end{enumerate}
 
@@ -364,7 +364,7 @@ On suppose que $u(t)$ est de la forme $u(t)=e^{kt}+C$ où $k$ et $C$ sont des co
 
 \begin{enumerate}[resume=monDS]
     \item Tracer la courbe représentative de $u$ sur géogébra.
-    \item Tracer la courbe représentative de la fonction $g$ définie sur $\ff{0}{+\infty}$ par $g(t)=u'(t)-0,5u(t)$ sur géogébra.
+    \item Tracer la courbe représentative de la fonction $g$ définie sur $\ff{0}{+\infty}$ par $g(t)=u'(t)+0,5u(t)$ sur géogébra.
     \item Déterminer les valeurs de $k$ et $C$ afin que $g(t)=10$ pour tout $t$ de $\ff{0}{+\infty}$.
     \begin{blocvisiblex}[height=2.5]
     {\quad}
