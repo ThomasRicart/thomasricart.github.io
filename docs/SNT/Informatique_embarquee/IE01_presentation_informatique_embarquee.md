@@ -23,7 +23,7 @@ Contrairement à un ordinateur classique, il est :
 - **miniaturisé** (souvent un microprocesseur peu coûteux)
 - souvent soumis à des **contraintes de temps réel** (il doit répondre rapidement)
 
-<img src = "Images/01.png">
+![alt text](Images/01.png)
 
 
 ### 🕰️ Quelques repères historiques
@@ -46,7 +46,7 @@ Contrairement à un ordinateur classique, il est :
 
 Un système embarqué interagit avec le monde physique grâce à 3 types de composants :
 
-<img src="Images/02.png">
+![alt text](Images/02.png)
 
 ---
 ## 📌 Partie 3 — Les objets connectés et l'Internet des Objets (IoT)
@@ -92,8 +92,7 @@ Complétez cette synthèse avec vos propres mots :
 - Un objet **connecté** est un objet embarqué qui ...
 - Les principaux risques liés aux objets connectés sont ...
 
-<img src="Images/03.png">
+![alt text](Images/03.png)
 
-<img src="Images/04.png">
-
+![alt text](Images/04.png)
 

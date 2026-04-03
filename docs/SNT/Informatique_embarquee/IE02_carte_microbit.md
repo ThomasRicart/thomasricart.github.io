@@ -30,8 +30,8 @@ La carte **BBC micro:bit** est une carte microcontrôleur conçue pour l'éducat
 
 Dans Tinkercad, on peut la programmer en **Python (MicroPython)** ou en blocs visuels.
 
-<img src="Images/04.png">
 
+![alt text](Images/04.png)
 
 ---
 ## 📌 Partie 1 — Utilisation de la carte Micro:bit ?
