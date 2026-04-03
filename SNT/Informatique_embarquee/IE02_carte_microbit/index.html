@@ -3572,6 +3572,24 @@ Aide : on pourra utiliser l'instruction <code>display.scroll()</code>.</p>
 <li>Z : le mouvement haut et bas.</li>
 </ul>
 <p>Dans l'exemple suivant à essayer, l'instruction <code>accelerometer.get_x()</code> permet de détecter un mouvement de gauche à droite en renvoyant un nombre compris entre <span class="arithmatex">\(-1023\)</span> et <span class="arithmatex">\(1023\)</span> ; <span class="arithmatex">\(0\)</span> étant la position «d'équilibre».</p>
+<p><strong>Exercice 8:</strong></p>
+<ul>
+<li>Copiez-coller le programme ci-dessous et le faire fonctionner.</li>
+</ul>
+<pre><code class="language-python">from microbit import *
+while True:
+    abscisse = accelerometer.get_x()
+    if abscisse &gt; 500:
+        display.show(Image.ARROW_E)
+    elif abscisse &lt; -500:
+        display.show(Image.ARROW_W)
+    else:
+        display.show(&quot;-&quot;)
+</code></pre>
+<ul>
+<li>Modifier ce programme pour ajouter des flèches vers le haut et vers le bas quand on oriente la carte micro:bit vers l'avant ou vers l'arrière.</li>
+</ul>
+<p><strong>Exercice 9:</strong></p>
 
 
 

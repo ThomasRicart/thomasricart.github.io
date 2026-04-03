@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#partie-1-quest-ce-que-linformatique-embarquee" class="md-skip">
-          Aller au contenu
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -3253,125 +3248,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#partie-1-quest-ce-que-linformatique-embarquee" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📌 Partie 1 — Qu'est-ce que l'informatique embarquée ?
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📌 Partie 1 — Qu&#39;est-ce que l&#39;informatique embarquée ?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#quelques-reperes-historiques" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🕰️ Quelques repères historiques
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partie-2-les-composants-dun-systeme-embarque" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📌 Partie 2 — Les composants d'un système embarqué
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partie-3-les-objets-connectes-et-linternet-des-objets-iot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        📌 Partie 3 — Les objets connectés et l'Internet des Objets (IoT)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📌 Partie 3 — Les objets connectés et l&#39;Internet des Objets (IoT)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemples-dapplications" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🌍 Exemples d'applications
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-capteurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🔍 Les capteurs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#les-actionneurs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ⚙️ Les actionneurs
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lihm-interface-homme-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🖥️ L'IHM (Interface Homme-Machine)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#synthese-a-retenir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        🏁 Synthèse — À retenir
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -3387,95 +3263,102 @@
 
 
 
-  <h1>IE01 presentation informatique embarquee</h1>
+<div style="background-color:#1e1e1e;border-radius:12px;overflow:hidden;font-family:'Consolas','Monaco',monospace;box-shadow:0 10px 30px rgba(0,0,0,0.5);border:1px solid #333;">
+    <div style="background-color:#333;padding:12px;display:flex;align-items:center;gap:8px;">
+        <div style="width:12px;height:12px;background:#ff5f56;border-radius:50%;"></div>
+        <div style="width:12px;height:12px;background:#ffbd2e;border-radius:50%;"></div>
+        <div style="width:12px;height:12px;background:#27c93f;border-radius:50%;"></div>
+        <span style="color:#aaa;font-size:13px;margin-left:15px;font-weight:bold;letter-spacing:0.5px;">IE01-presentation_informatique_embarquee.ipynb</span>
+    </div>
+    <div style="padding:30px;color:#d4d4d4;line-height:1.6;">
+        <h1 style="color:#4ec9b0;margin:0;font-size:2.2em;font-weight:bold;">
+            <span style="color:#569cd6;">&gt;</span> IE01 : Présentation générale</h1>
+        <p style="color:#ce9178;margin:15px 0 5px 0;font-size:1.2em;font-weight:bold;"># Thème : Informatique Embarquée</p>
+        <p style="color:#9cdcfe;margin:0;font-size:1.1em;font-weight:bold;"># Niveau : 2nde SNT</p>
 
-<hr />
-<h2 id="partie-1-quest-ce-que-linformatique-embarquee">📌 Partie 1 — Qu'est-ce que l'informatique embarquée ?</h2>
-<p>Un <strong>système informatique embarqué</strong> est un système informatique intégré directement dans un objet pour contrôler son fonctionnement.</p>
-<p>Contrairement à un ordinateur classique, il est :
-- <strong>dédié</strong> à une tâche précise
-- <strong>miniaturisé</strong> (souvent un microprocesseur peu coûteux)
-- souvent soumis à des <strong>contraintes de temps réel</strong> (il doit répondre rapidement)</p>
-<p><img src = "Images/01.png"></p>
-<h3 id="quelques-reperes-historiques">🕰️ Quelques repères historiques</h3>
-<table>
-<thead>
-<tr>
-<th>Année</th>
-<th>Événement</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1967</td>
-<td>1er système embarqué : guidage de la mission lunaire Apollo</td>
-</tr>
-<tr>
-<td>1971</td>
-<td>1er microprocesseur (Intel)</td>
-</tr>
-<tr>
-<td>1984</td>
-<td>Airbus A320 : 1er avion à commandes électriques informatisées</td>
-</tr>
-<tr>
-<td>1998</td>
-<td>Météor (ligne 14 Paris) : 1er métro sans conducteur</td>
-</tr>
-<tr>
-<td>1999</td>
-<td>Naissance de l'expression « Internet des objets »</td>
-</tr>
-<tr>
-<td>2007</td>
-<td>Arrivée du smartphone</td>
-</tr>
-<tr>
-<td>2020</td>
-<td>~50 milliards d'objets connectés dans le monde</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<hr />
-<h2 id="partie-2-les-composants-dun-systeme-embarque">📌 Partie 2 — Les composants d'un système embarqué</h2>
-<p>Un système embarqué interagit avec le monde physique grâce à 3 types de composants :</p>
-<p><img src="Images/02.png"></p>
-<hr />
-<h2 id="partie-3-les-objets-connectes-et-linternet-des-objets-iot">📌 Partie 3 — Les objets connectés et l'Internet des Objets (IoT)</h2>
-<p>Un objet <strong>connecté</strong> est un objet embarqué qui communique via un réseau (souvent Internet ou Bluetooth ou Wi-Fi).</p>
-<p>L'ensemble de ces objets forme l'<strong>Internet des Objets</strong> (<em>Internet of Things</em>, IoT).</p>
-<p>Grâce au smartphone, on peut désormais contrôler de nombreux objets depuis une seule interface unifiée.</p>
-<h3 id="exemples-dapplications">🌍 Exemples d'applications</h3>
-<ul>
-<li><strong>Domotique</strong> : éclairage, chauffage, alarme, électroménager</li>
-<li><strong>Santé</strong> : montres connectées, tensiomètres, glucomètres</li>
-<li><strong>Transport</strong> : voiture connectée, trottinette partagée</li>
-<li><strong>Agriculture</strong> : capteurs d'humidité des sols, drones</li>
-<li><strong>Industrie</strong> : robots de chaîne de montage</li>
-</ul>
-<h3 id="les-capteurs">🔍 Les capteurs</h3>
-<p>Un <strong>capteur</strong> mesure une grandeur physique et la convertit en signal numérique.</p>
-<p>Exemples : thermomètre, accéléromètre, caméra, microphone, capteur de luminosité, GPS...</p>
-<h3 id="les-actionneurs">⚙️ Les actionneurs</h3>
-<p>Un <strong>actionneur</strong> reçoit un signal numérique et produit une action physique.</p>
-<p>Exemples : moteur, LED, haut-parleur, écran, pompe, résistance chauffante...</p>
-<h3 id="lihm-interface-homme-machine">🖥️ L'IHM (Interface Homme-Machine)</h3>
-<p>L'<strong>IHM</strong> permet à un humain d'interagir avec le système.</p>
-<p>Exemples : boutons, écran tactile, application smartphone, télécommande...</p>
-<hr />
-<h2 id="synthese-a-retenir">🏁 Synthèse — À retenir</h2>
-<p>Complétez cette synthèse avec vos propres mots :</p>
-<ul>
-<li>Un système informatique embarqué est ...</li>
-<li>Un <strong>capteur</strong> permet de ...</li>
-<li>Un <strong>actionneur</strong> permet de ...</li>
-<li>Une <strong>IHM</strong> permet de ...</li>
-<li>Un objet <strong>connecté</strong> est un objet embarqué qui ...</li>
-<li>Les principaux risques liés aux objets connectés sont ...</li>
-</ul>
-<p><img src="Images/03.png"></p>
-<p><img src="Images/04.png"></p>
+
+---
+## 📌 Partie 1 — Qu'est-ce que l'informatique embarquée ?
+
+Un **système informatique embarqué** est un système informatique intégré directement dans un objet pour contrôler son fonctionnement.
+
+Contrairement à un ordinateur classique, il est :
+- **dédié** à une tâche précise
+- **miniaturisé** (souvent un microprocesseur peu coûteux)
+- souvent soumis à des **contraintes de temps réel** (il doit répondre rapidement)
+
+<img src = "Images/01.png">
+
+
+### 🕰️ Quelques repères historiques
+
+| Année | Événement |
+|-------|-----------|
+| 1967  | 1er système embarqué : guidage de la mission lunaire Apollo |
+| 1971  | 1er microprocesseur (Intel) |
+| 1984  | Airbus A320 : 1er avion à commandes électriques informatisées |
+| 1998  | Météor (ligne 14 Paris) : 1er métro sans conducteur |
+| 1999  | Naissance de l'expression « Internet des objets » |
+| 2007  | Arrivée du smartphone |
+| 2020  | ~50 milliards d'objets connectés dans le monde |
+
+
+-----------------
+
+---
+## 📌 Partie 2 — Les composants d'un système embarqué
+
+Un système embarqué interagit avec le monde physique grâce à 3 types de composants :
+
+<img src="Images/02.png">
+
+---
+## 📌 Partie 3 — Les objets connectés et l'Internet des Objets (IoT)
+
+Un objet **connecté** est un objet embarqué qui communique via un réseau (souvent Internet ou Bluetooth ou Wi-Fi).
+
+L'ensemble de ces objets forme l'**Internet des Objets** (*Internet of Things*, IoT).
+
+Grâce au smartphone, on peut désormais contrôler de nombreux objets depuis une seule interface unifiée.
+
+### 🌍 Exemples d'applications
+- **Domotique** : éclairage, chauffage, alarme, électroménager
+- **Santé** : montres connectées, tensiomètres, glucomètres
+- **Transport** : voiture connectée, trottinette partagée
+- **Agriculture** : capteurs d'humidité des sols, drones
+- **Industrie** : robots de chaîne de montage
+
+
+### 🔍 Les capteurs
+Un **capteur** mesure une grandeur physique et la convertit en signal numérique.
+
+Exemples : thermomètre, accéléromètre, caméra, microphone, capteur de luminosité, GPS...
+
+### ⚙️ Les actionneurs
+Un **actionneur** reçoit un signal numérique et produit une action physique.
+
+Exemples : moteur, LED, haut-parleur, écran, pompe, résistance chauffante...
+
+### 🖥️ L'IHM (Interface Homme-Machine)
+L'**IHM** permet à un humain d'interagir avec le système.
+
+Exemples : boutons, écran tactile, application smartphone, télécommande...
+
+---
+## 🏁 Synthèse — À retenir
+
+Complétez cette synthèse avec vos propres mots :
+
+- Un système informatique embarqué est ...
+- Un **capteur** permet de ...
+- Un **actionneur** permet de ...
+- Une **IHM** permet de ...
+- Un objet **connecté** est un objet embarqué qui ...
+- Les principaux risques liés aux objets connectés sont ...
+
+<img src="Images/03.png">
+
+<img src="Images/04.png">
 
 
 
