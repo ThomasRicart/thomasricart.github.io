@@ -10,7 +10,8 @@
             <span style="color:#569cd6;">&gt;</span> IE01 : Présentation générale</h1>
         <p style="color:#ce9178;margin:15px 0 5px 0;font-size:1.2em;font-weight:bold;"># Thème : Informatique Embarquée</p>
         <p style="color:#9cdcfe;margin:0;font-size:1.1em;font-weight:bold;"># Niveau : 2nde SNT</p>
-        
+    </div>
+    </div>
 
 ---
 ## 📌 Partie 1 — Qu'est-ce que l'informatique embarquée ?
