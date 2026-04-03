@@ -218,3 +218,25 @@ Les smartphones utilisent un accéléromètre pour savoir dans quel sens affiche
 * Z : le mouvement haut et bas.
 
 Dans l'exemple suivant à essayer, l'instruction `accelerometer.get_x()` permet de détecter un mouvement de gauche à droite en renvoyant un nombre compris entre $-1023$ et $1023$ ; $0$ étant la position «d'équilibre».
+
+**Exercice 8:**
+
+* Copiez-coller le programme ci-dessous et le faire fonctionner.
+
+```python
+from microbit import *
+while True:
+    abscisse = accelerometer.get_x()
+    if abscisse > 500:
+        display.show(Image.ARROW_E)
+    elif abscisse < -500:
+        display.show(Image.ARROW_W)
+    else:
+        display.show("-")
+```
+
+* Modifier ce programme pour ajouter des flèches vers le haut et vers le bas quand on oriente la carte micro:bit vers l'avant ou vers l'arrière.
+
+**Exercice 9:**
+
+ 

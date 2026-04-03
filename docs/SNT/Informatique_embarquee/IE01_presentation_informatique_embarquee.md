@@ -1,4 +1,16 @@
-
+<div style="background-color:#1e1e1e;border-radius:12px;overflow:hidden;font-family:'Consolas','Monaco',monospace;box-shadow:0 10px 30px rgba(0,0,0,0.5);border:1px solid #333;">
+    <div style="background-color:#333;padding:12px;display:flex;align-items:center;gap:8px;">
+        <div style="width:12px;height:12px;background:#ff5f56;border-radius:50%;"></div>
+        <div style="width:12px;height:12px;background:#ffbd2e;border-radius:50%;"></div>
+        <div style="width:12px;height:12px;background:#27c93f;border-radius:50%;"></div>
+        <span style="color:#aaa;font-size:13px;margin-left:15px;font-weight:bold;letter-spacing:0.5px;">IE01-presentation_informatique_embarquee.ipynb</span>
+    </div>
+    <div style="padding:30px;color:#d4d4d4;line-height:1.6;">
+        <h1 style="color:#4ec9b0;margin:0;font-size:2.2em;font-weight:bold;">
+            <span style="color:#569cd6;">&gt;</span> IE01 : Présentation générale</h1>
+        <p style="color:#ce9178;margin:15px 0 5px 0;font-size:1.2em;font-weight:bold;"># Thème : Informatique Embarquée</p>
+        <p style="color:#9cdcfe;margin:0;font-size:1.1em;font-weight:bold;"># Niveau : 2nde SNT</p>
+        
 
 ---
 ## 📌 Partie 1 — Qu'est-ce que l'informatique embarquée ?
