@@ -15,7 +15,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📝 **Quiz**](./quiz/RD06_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./) | Exercices d'application |[Correction](./) |
 | [✏️ **Exercices 02**]() | Exercices autocorrigés| |
-| [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
+| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/bc72-10504512) | **bc72-10504512** | [Correction](./)|
 
 
 |Fichiers|Description|

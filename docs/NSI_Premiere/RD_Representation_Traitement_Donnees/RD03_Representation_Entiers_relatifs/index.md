@@ -15,7 +15,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📝 **Quiz**](./quiz/RD03_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/RD03_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/RD03_EXO1_Correction.pdf) |
 | [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=23) | Exercices autocorrigés Entiers relatifs| |
-| [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
+| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/d33f-10504492) | **d33f-10504492** | [Correction](./)|
 
 ---
 ---

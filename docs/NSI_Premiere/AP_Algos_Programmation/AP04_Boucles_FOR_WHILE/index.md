@@ -17,8 +17,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📝 **Quiz**](./quiz/AP04_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/AP04_EXO1_Sujet.pdf) | Exercices d'application boucle FOR |[Correction](./exercices/AP04_EXO1_Correction.pdf) |
 | [✏️ **Exercices 02**](./exercices/AP04_EXO2_Sujet.pdf) | Exercices d'application boucle WHILE |[Correction](./exercices/AP04_EXO2_Correction.pdf) |
-| [📚 **Activité pratique 1**](./AP04-ACT1-boucles_FOR.ipynb) | Activité Capytale Boucle FOR | [Correction](./)|
-| [📚 **Activité pratique 2**](./AP04-ACT2-boucles_WHILE.ipynb) | Activité Capytale Boucle WHILE | [Correction](./)|
+| [📚 **Activité Capytale 1**](https://capytale2.ac-paris.fr/web/c/2c33-10504433) | **a9d3-10504403** | [Correction](./)|
+| [📚 **Activité Capytale 2**](https://capytale2.ac-paris.fr/web/c/7054-10504439) | **7054-10504439** | [Correction](./)|
 
 ---
 ---
