@@ -1,0 +1,290 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Traitement de données en table} % Titre au centre
+\def\docname{RD06}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{definition}[Bases de données]{}
+	
+\begin{itemize}
+	\item Une \textbf{base de données} (BD) peut contenir une ou plusieurs \textbf{tables}.
+	\item Une \textbf{table} est un ensemble d'objets appelés \textbf{enregistrements}.
+	\item Un \textbf{enregistrement} possède différentes \textbf{valeurs} associées à des \textbf{attributs} (descripteurs).
+	\item Toutes les \textbf{valeurs} que peut prendre un attribut s'appelle son \textbf{domaine de valeurs} et sont toutes du même type.
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.8]{exemple_table.png}
+\end{center}
+\end{definition}
+
+
+
+\begin{easybox}[Le format CSV]{}
+Le format CSV (pour comma separated values, valeurs séparées par des virgules) est un fichier texte où chaque ligne représente un enregistrement avec différents champs séparés par une virgule. La première ligne d'un fichier CSV est généralement utilisée pour indiquer le nom des différents champs que l'on appelle les descripteurs.
+\end{easybox}
+\begin{itemize}
+	\item     Le caractère de séparation peut aussi être un point-virgule, une tabulation ou deux points.
+	\item     Un fichier CSV peut être lu par un éditeur de texte mais aussi un tableur.
+
+\end{itemize}
+
+ Dans la suite du cours, nous utiliserons comme BD, le fichier \verb|countries.csv| issues du site \verb|www.geonames.org| qui listes les pays du monde entier. Les descripteurs sont assez clairs, mis à part les premiers qui correspondent à des codes associés aux pays selon la norme ISO-3166. En voici les premières lignes : 
+
+\begin{lstlisting}[numbers=none]
+ISO-alpha2;ISO-alpha3;ISO-numeric;fips;Country;Capital;Area;Population;Continent
+AD;AND;20;AN;Andorra;Andorra la Vella;468.0;84,000;EU
+AE;ARE;784;AE;United Arab Emirates;Abu Dhabi;82,880.0;4,975,593;AS
+AF;AFG;4;AF;Afghanistan;Kabul;647,500.0;29,121,286;AS
+AG;ATG;28;AC;Antigua and Barbuda;St. John's;443.0;86,754;NA
+AI;AIA;660;AV;Anguilla;The Valley;102.0;13,254;NA
+AL;ALB;8;AL;Albania;Tirana;28,748.0;2,986,952;EU
+...
+\end{lstlisting}
+
+\pagebreak
+
+\section{Importation d'une table depuis un fichier CSV}
+
+Le module natif csv de Python permet d'importer les données depuis un fichier CSV.
+Voici un script permettant de charger le fichier \verb|countries.csv| avec des points-virgules comme délimitations.
+
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+import csv
+
+with open('countries.csv', newline='', encoding='utf-8') as csvfile:
+    pays = list(csv.reader(csvfile, delimiter=';'))
+\end{CodePythontexAlt}
+
+
+\begin{exercice_cours}[Importation d'une table depuis un fichier CSV]{}
+\begin{enumerate}
+	\item  Récupérer le fichier .
+	\item L'explorer avec un éditeur de texte et identifier chaque descripteur.
+	\item Exécuter le script ci-dessus (il devra être placé dans le même dossier que countries.csv).
+	\item Qu'affiche l'instruction pays[0]?
+	\item Qu'affiche l'instruction pays[1]?
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{remarque}{\quad}{}
+    On s'aperçoit que la première ligne (des descripteurs) est traitée comme les autres (les enregistrements).
+    Les valeurs du 1re enregistrement (concernant l'Andorre) ne sont pas associées directement à leur descripteur. Pour y remédier et pouvoir faciliter le traitement des données, il est préférable que celles-ci soient sous forme d'une liste de dictionnaire, plutôt qu'un simple tableau (liste de listes) comme dans l'exemple suivant :
+\end{remarque}
+
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+import csv
+
+with open('countries.csv', newline='', encoding='utf-8') as csvfile:
+    pays = list(csv.DictReader(csvfile, delimiter=';'))
+\end{CodePythontexAlt}
+
+\begin{exercice_cours}[Importation d'une table depuis un fichier CSV avec DictReader]{}
+\begin{enumerate}
+	\item Exécuter le script ci-dessus (il devra être placé dans le même dossier que countries.csv).
+	\item Qu'affiche l'instruction pays[0]?
+	\item Qu'affiche l'instruction pays[1]?
+\end{enumerate}
+\end{exercice_cours}
+
+
+
+%%%%%%%%%%%%%%%%%%
+
+\begin{remarque}{\quad}{}
+La variable \verb+pays+ est donc une liste d'objets ressemblant à des dictionnaires. Chaque élément de cette liste correspond à une ligne du fichier \verb|countries.csv| (sauf la première qui servira d'attribut).
+
+\end{remarque}
+
+\medskip
+
+Dans notre cas, pour observer la variable \verb+pays[0]+ comme un dictionnaire, il faudra faire:
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+>>> dict(pays[0])
+{'ISO-alpha2': 'AD', 'ISO-alpha3': 'AND', 'ISO-numeric': '20', 'fips': 'AN', 'country': 'Andorra', 
+ 'capital': 'Andorra la Vella', 'area': '468.0', 'population': '84', 'continent': 'EU'}
+\end{CodePythontexAlt}
+
+\medskip
+
+Ainsi pour accéder à la capitale de l'Andorre, il faudra faire:
+	
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+>>> pays[0]['capital']
+'Andorra la Vella'
+\end{CodePythontexAlt}
+
+\pagebreak
+
+\section{Rechercher dans une table}
+
+\begin{definition}[Recherche dans une table]{}
+Une \textbf{recherche} vise à extraire une partie des données d'une table vérifiant certains \textbf{critères}.
+
+Un critère est une condition appliquée à la \textbf{valeur} d'un \textbf{attribut} d'un \textbf{enregistrement}.
+
+\end{definition}
+
+
+\begin{exercice_cours}[Quels sont les pays de l'union européenne ? ]{}
+
+	Intuitivement, on peut faire une recherche par itération. Les pays seront rassemblés dans une liste \verb+resul+.
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+# Recherche des pays de l'union européenne
+resul = []
+for enreg in donnees:
+	# A compléter
+	
+	
+
+
+
+assert resul == ['Andorra', 'Albania', ...]
+\end{CodePythontexAlt}
+
+\end{exercice_cours}
+
+\begin{exercice_cours}[Quels sont les différents continents présents dans la base? ]{}
+
+
+	\end{exercice_cours}
+
+
+	\begin{remarque}[Elimination des doublons]{}
+		Pour éliminer les éventuels doublons dans la liste, on utilise la fonction \verb+set()+.
+	
+	
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+>>> set([3, 2, 1, 3, 7])
+{3, 2, 1, 7}
+\end{CodePythontexAlt}
+	\end{remarque}
+
+
+\begin{exercice_cours}[Déterminer le nom du pays le plus peuplé d'Europe ]{}
+
+
+	\end{exercice_cours}
+
+\section{Trier une table}
+
+Le tri d'une table présente deux intérêts: il permet d'établir des classements et accélère la recherche de l'information.
+En effet, il est beaucoup plus efficace (rapide) d'effectuer une recherche dans une liste triée. Cela vient du fait qu'il est alors possible d'effectuer une recherche par dichotomie. 
+
+\subsubsection{Tri selon un unique critère}
+
+ On ne peut pas directement trier la liste pays car cela ne veut rien dire. Il faut indiquer selon quels critères (population, superficie etc.) on veut effectuer ce tri.
+
+Pour cela, on appelle la fonction \verb|sorted(list)| qui retourne une copie de la liste triée ou la méthode \verb|list.sort()| qui trie la liste sur place.
+Ces deux fonctions ont deux paramètres possibles :
+
+\begin{itemize}
+	\item     \verb|key| qui est la fonction permettant d'évaluer les éléments de la liste afin de les classer selon leur score
+	\item     \verb|reverse| qui est un boolean (par défaut \verb|False|) permettant de trie selon l'ordre décroissant (\verb|True|).
+
+\end{itemize}
+
+Par exemple, si l'on veut trier les pays selon leur superficie: il faut d'abord définir une fonction qui permet d'accéder à la valeur de l'attribut \verb|'area'| d'un enregistrement puis retourne le score de l'enregistrement afin qu'il puisse être comparé aux autres et ainsi trier la liste entière.
+
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+def cle_superficie(p):
+    return p['area']
+
+pays.sort(key=cle_superficie, reverse=True) # tri
+
+top5 = []
+for p in pays[:5] : # extraction
+	top5.append((p['country'], p['area']))
+\end{CodePythontexAlt}
+
+
+\begin{exercice_cours}[\quad]{}
+\begin{enumerate}
+	\item Ajouter le script ci-dessus à la suite de l'importation des données (script précédent) et l'exécuter. 
+	\item Afficher les 5 pays les plus peuplés d'Europe.
+	\item Les 5 pays affichés ne sont pas ceux ayant la plus grande superficie? Donner une explication au problème.
+	\item Proposer une solution pour régler ce problème.
+
+	\begin{remarque}{\quad}{}
+\begin{itemize}
+	\item la fonction \verb|float| permet de transformer une chaîne de caractère en nombre à virgule flottante (nombre décimal)
+	\item la méthode \verb|mot.replace(",","")| permet de supprimer les virgules d'une chaîne de caractère (utile pour les nombres avec des milliers séparés par des virgules)
+\end{itemize}
+\end{remarque}
+	\end{enumerate}
+
+\end{exercice_cours}
+\subsubsection{Tri selon plusieurs critères}
+
+ Supposons maintenant que l'on veut trier les pays selon deux critères: d'abord par continent, puis par population.
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+def cle_population(p):
+    return int(p['population'].replace(",", ""))
+
+def cle_continent(p):
+    return p['continent']
+
+pays.sort(key=cle_population, reverse=True)  # tri par population
+pays.sort(key=cle_continent)                 # tri par continent
+resultat = []
+for p in pays[:5] : # extraction
+	resultat.append((p['country'], p['population'], p['continent']))
+for p in resultat : # affichage
+    print(p)
+\end{CodePythontexAlt}
+
+\medskip
+
+
+\newpage
+
+\section{Fusion de table ou jointure}
+
+\subsubsection{Fusion de tables ayant les mêmes attributs}
+
+Les données étant importées sous la forme d'une liste. Fusionner deux tables revient à concaténer deux listes.
+
+La dernière étape est de sauvegarder cette nouvelle liste de dictionnaire dans un nouveau fichier CSV 
+
+\verb|'nom_fichier.csv'|, ce qui est réalisable avec le script suivant:
+
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+import csv
+with open('nom_fichier.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    fieldnames = list(liste_fusionnee[0].keys())
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=';')
+    writer.writeheader()
+    for p in liste_fusionnee:
+        writer.writerow(p)
+	
+	\end{CodePythontexAlt}
+
+
+	\begin{remarque}{\quad}{}
+
+		\begin{itemize}
+			\item     La liste fusionnées est dans la variable: \verb|liste_fusionnee|.
+			\item     L'argument \verb|'w'| donné à la fonction \verb|open('nom_fichier.csv', 'w', ...)| permet d'ouvrir le fichier en mode écriture (write). Par défaut ce paramètre est en mode lecture (\verb|'r'| pour read).
+		\end{itemize}
+	\end{remarque}
+
+	\begin{exercice_cours}[Fusion de tables ayant les mêmes attributs]{}
+\begin{enumerate}
+	\item Le fichier \verb|villes_sup300.csv| contient les populations des villes françaises ayant plus de 300 000 habitants.
+	\item Le fichier \verb|villes_100_300.csv| contient les populations des villes françaises ayant entre 100 et 300 000 habitants en 2015 (données INSEE).
+	\item Écrire un script permettant de fusionner ces deux tables dans un fichier \verb|villes_sup100.csv|.
+\end{enumerate}
+\end{exercice_cours}
+
+
+
+

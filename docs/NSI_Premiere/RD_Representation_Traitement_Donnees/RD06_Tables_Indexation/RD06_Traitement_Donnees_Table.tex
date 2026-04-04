@@ -1,0 +1,47 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usepackage{scratch3}
+\usepackage{longtable}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!20]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=yellow!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{line} = [thick,->,>=stealth]
+
+% Source - https://tex.stackexchange.com/a/23960
+% Posted by Leo Liu, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-04-03, License - CC BY-SA 3.0
+
+\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+
+\begin{document}
+
+   \include{\documentpath/RD06}
+\end{document}
+
+			
