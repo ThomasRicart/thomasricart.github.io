@@ -243,48 +243,13 @@ for p in resultat : # affichage
 
 \medskip
 
+\section{Ecrire dans un fichier CSV}
 
-\newpage
-
-\section{Fusion de table ou jointure}
-
-\subsubsection{Fusion de tables ayant les mêmes attributs}
-
-Les données étant importées sous la forme d'une liste. Fusionner deux tables revient à concaténer deux listes.
-
-La dernière étape est de sauvegarder cette nouvelle liste de dictionnaire dans un nouveau fichier CSV 
-
-\verb|'nom_fichier.csv'|, ce qui est réalisable avec le script suivant:
-
-
+Pour écrire dans un fichier CSV, on peut utiliser la fonction \verb|csv.writer| du module csv. Voici un script permettant d'écrire une liste de listes dans un fichier CSV avec des points-virgules comme délimiteurs.	
 \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
-import csv
+import csv	
 with open('nom_fichier.csv', 'w', newline='', encoding='utf-8') as csvfile:
-    fieldnames = list(liste_fusionnee[0].keys())
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=';')
-    writer.writeheader()
-    for p in liste_fusionnee:
-        writer.writerow(p)
-	
-	\end{CodePythontexAlt}
-
-
-	\begin{remarque}{\quad}{}
-
-		\begin{itemize}
-			\item     La liste fusionnées est dans la variable: \verb|liste_fusionnee|.
-			\item     L'argument \verb|'w'| donné à la fonction \verb|open('nom_fichier.csv', 'w', ...)| permet d'ouvrir le fichier en mode écriture (write). Par défaut ce paramètre est en mode lecture (\verb|'r'| pour read).
-		\end{itemize}
-	\end{remarque}
-
-	\begin{exercice_cours}[Fusion de tables ayant les mêmes attributs]{}
-\begin{enumerate}
-	\item Le fichier \verb|villes_sup300.csv| contient les populations des villes françaises ayant plus de 300 000 habitants.
-	\item Le fichier \verb|villes_100_300.csv| contient les populations des villes françaises ayant entre 100 et 300 000 habitants en 2015 (données INSEE).
-	\item Écrire un script permettant de fusionner ces deux tables dans un fichier \verb|villes_sup100.csv|.
-\end{enumerate}
-\end{exercice_cours}
-
-
-
-
+	writer = csv.DictWriter(csvfile, fieldnames=liste_de_dico[0].keys(), delimiter=';')
+	writer.writeheader()
+	writer.writerows(liste_de_dico)
+\end{CodePythontexAlt}

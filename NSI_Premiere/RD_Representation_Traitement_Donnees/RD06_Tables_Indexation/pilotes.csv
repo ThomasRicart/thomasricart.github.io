@@ -1,0 +1,9 @@
+name;height;mass;hair_color;skin_color;eye_color;birth_year;sex;gender;homeworld;species;ship;type
+Luke Skywalker;172;77;blond;fair;blue;19;male;masculine;Tatooine;Human;X-Wing;Chasseur
+Darth Vader;202;136;none;white;yellow;41.9;male;masculine;Tatooine;Human;TIE Advanced x1;Chasseur
+Obi-Wan Kenobi;182;77;auburn, white;fair;blue-gray;57;male;masculine;Stewjon;Human;Jedi Starfighter;Intercepteur
+Chewbacca;228;112;brown;unknown;blue;200;male;masculine;Kashyyyk;Wookiee;Millennium Falcon;Transport léger
+Han Solo;180;80;brown;fair;brown;29;male;masculine;Corellia;Human;Millennium Falcon;Transport léger
+Yoda;66;17;white;green;brown;896;male;masculine;NA;Yoda's species;Jedi Starfighter;Intercepteur
+Boba Fett;183;78.2;black;fair;brown;31.5;male;masculine;Kamino;Human;Slave I;Patrouilleur
+Lando Calrissian;177;79;black;dark;brown;31;male;masculine;Socorro;Human;Millennium Falcon;Transport léger
