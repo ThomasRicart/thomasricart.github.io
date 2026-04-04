@@ -17,9 +17,12 @@ def codage_rle(liste_octets):
 
 
 def decodage_rle(liste_rle):
-    '''Renvoie la liste d'octets obtenue à partir de la liste liste_rle obtenue
-    par compression RLE'''
-    pass  # A VOUS D'ÉCRIRE LE CODE LA FONCTION
+    '''Renvoie la liste d'octets obtenue à partir de la liste liste_rle obtenue par compression RLE'''
+    resultat = []
+    for k in range(0, len(liste_rle), 2):
+        for i in range(liste_rle[k]):
+            resultat.append(liste_rle[k+1])
+    return resultat
 
 
 def test_codage():
@@ -47,7 +50,7 @@ def charger_octets(nom_fichier):
 
 
 def enregistrer_image(nom_image, largeur, liste_niveaux):
-    '''Enregistre un fichier image nom_image de la largeur donnée et dont les 
+    '''Enregistre un fichier image nom_image de la largeur donnée et dont les
     valeurs de niveaux de gris des pixels sont celles de la liste
     liste_niveaux'''
     hauteur = len(liste_niveaux) // largeur
@@ -56,8 +59,8 @@ def enregistrer_image(nom_image, largeur, liste_niveaux):
 
 
 def charger_image(nom_image):
-    '''Étant donné une image nom_image, renvoie un couple (largeur, liste_niveaux) où 
-    largeur est la largeur de l'image et liste_niveaux est la liste des valeurs de niveaux 
+    '''Étant donné une image nom_image, renvoie un couple (largeur, liste_niveaux) où
+    largeur est la largeur de l'image et liste_niveaux est la liste des valeurs de niveaux
     de gris de l'image ligne par ligne'''
 
     image = Image.open(nom_image).convert('L')
