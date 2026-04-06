@@ -1,0 +1,167 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Boucles FOR et WHILE} % Titre au centre
+\def\docname{AP04-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+%\section{La boucle FOR}
+
+
+	\begin{easybox}{La boucle FOR en python}
+
+				\begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+for i in range(0, 7):
+	print(i, end=" ")
+# affichage: 
+# 0 1 2 3 4 5 6
+	
+				\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		\begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+for i in range(2, 7):
+	print(i, end=" ")
+# affichage: 
+# 2 3 4 5 6
+					
+				\end{CodePythontexAlt}
+		\end{minipage}\hfill
+		 \begin{minipage}[b]{0.33\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+for i in range(5):
+	print(i, end=" ")
+# affichage: 
+# 0 1 2 3 4
+	
+				\end{CodePythontexAlt}
+		\end{minipage}
+	\end{easybox}
+	
+	\begin{easybox}{Itération sur une chaine de caractères}{}
+	
+	\begin{minipage}{0.48\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	mot = 'Hello'
+	for i in range(0, len(mot)):
+		print(mot[i])
+			
+	\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	mot = 'Hello'
+	for lettre in mot:
+		print(lettre)	
+		\end{CodePythontexAlt}
+	
+	
+	\end{minipage}
+	\end{easybox}
+		
+	
+	\begin{easybox}{Algorithmes de Recherche dans un itérable}
+	
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+				def est_present(mot, lettre_cherchee):
+					for lettre in mot:
+						if lettre == lettre_cherchee:
+							return True
+					return False
+				\end{CodePythontexAlt}
+		
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+				def est_present(mot, lettre_cherchee):
+					for i in range(len(mot)):
+						if mot[i] == lettre_cherchee:
+							return True
+					return False
+				\end{CodePythontexAlt}
+		
+	\end{minipage}
+		
+		\end{easybox}
+
+	\begin{easybox}{Algorithmes de comptage dans un itérable}
+		
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+			def compte(mot, lettre_cherchee):
+				c = 0
+				for lettre in mot:
+					if lettre == lettre_cherchee:
+						c = c + 1
+				return c
+				
+			\end{CodePythontexAlt}
+	
+		\end{minipage}\hfill
+		\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+			def compte(mot, lettre_cherchee):
+				c = 0
+				for i in range(len(mot)):
+					if mot[i] == lettre_cherchee:
+						c = c + 1
+				return c
+				
+			\end{CodePythontexAlt}
+	
+		\end{minipage}
+		
+
+	\end{easybox}
+
+	\begin{easybox}{Algorithmes de somme}
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+			def somme(n):
+				''' Renvoie la somme des entiers de 1 à n inclus'''
+				s = 0
+				for i in range(1, n+1):
+					s = s + i
+				return s
+
+			\end{CodePythontexAlt}
+			\end{easybox}
+
+			\renewcommand{\arraystretch}{1}
+
+
+		%\section{La boucle WHILE}
+
+
+		\begin{easybox}{Prototypage de la boucle WHILE en python}
+	\verb|condition1| est un booléen qui est évalué à chaque tour de boucle.  Tant que \verb|condition1| \verb|True|, on effectue les instructions de la boucle. Lorsque \verb|condition1| devient \verb|False|, on sort de la boucle.
+
+	
+	\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+			n = 0
+			u = 1
+			while u < 1000:
+				n = n + 1
+				u = u * 2
+			print(n)
+			print(u)
+		\end{CodePythontexAlt}
+				
+		\end{minipage}\hfill
+		\begin{minipage}{0.48\linewidth}
+			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+			mot = 'abracadabra'
+			c = 0
+			trouve = False
+			while c < len(mot) and not(trouve):
+				trouve = mot[c] == 'r'
+				c = c + 1
+			print(trouve)
+			\end{CodePythontexAlt}
+		\end{minipage}	
+
+			\end{easybox}
+

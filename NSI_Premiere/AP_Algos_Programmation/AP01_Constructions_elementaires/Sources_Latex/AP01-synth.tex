@@ -1,0 +1,147 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Constructions élémentaires} % Titre au centre
+\def\docname{AP01-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{definition}[Les différents types de variables]{}
+
+
+\begin{itemize}
+
+   \begin{minipage}{0.48\linewidth}
+      \item \textbf{int}: (entiers naturels) Ex.: \texttt{a = 5}
+      \item \textbf{float}: (nombres décimaux) Ex.: \texttt{b = 3.14}
+      \item \textbf{str}: (chaînes de caractères) Ex.: \texttt{c = "Bonjour"}
+   \end{minipage}\hfill{}
+   \begin{minipage}{0.48\linewidth}
+      \item \textbf{bool}: (valeurs booléennes) Ex.: \texttt{d = True}
+      \item \textbf{list}: (listes) Ex.: \texttt{e = [1, 2, 3]}
+      \item \textbf{tuple}: (tuples) Ex.: \texttt{f = (1, 2, 3)}
+      
+   \end{minipage}
+   \end{itemize}
+
+\end{definition}
+
+\begin{easybox}{Opérations mathématiques de base en Python}{}
+	\begin{minipage}{0.43\linewidth}
+		\begin{itemize}[]
+        \item[] \texttt{+} \quad  addition:  \verb~5 + 3~ donne 8
+        \item[] \texttt{-} \quad  soustraction \verb~5 - 3~ donne 2
+        \item[] \texttt{*} \quad  multiplication \verb~5 * 3~ donne 15
+        \item[] \texttt{/} \quad  division \verb~6 / 2~ donne 3.0 (\texttt{float})
+\end{itemize}
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.55\linewidth}
+\begin{itemize}[]
+        \item[] \texttt{**} \quad  puissance \verb~2 ** 3~ donne 8
+        \item[] \texttt{\%} \quad  reste de la division entière \texttt{7 \% 3} donne 1
+        \item[] \texttt{//} \quad  quotient de la division entière \texttt{7 // 3} donne 2
+    \end{itemize}
+	\end{minipage}
+\end{easybox}
+
+
+\begin{propriete}[Les chaines de caractères]{}
+    
+    \begin{minipage}{0.5\linewidth}
+\begin{center}
+        \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \textbf{Indice} & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
+        \hline
+        \textbf{Caractère} & B & o & n & j & o & u & r \\
+        \hline
+        \textbf{Indice Négatif} & -7 & -6 & -5 & -4 & -3 & -2 & -1 \\
+        \hline
+        \end{tabular}
+    \end{center}    
+    \end{minipage}\hfill{}
+    \begin{minipage}{0.5\linewidth}
+    \begin{CodePythontexAlt}[Largeur=0.9\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+            mot = 'Bonjour'
+            mot[0]   # Affiche 'B'
+            mot[4]   # Affiche 'o'
+            len(mot) # Affiche 7
+        \end{CodePythontexAlt}
+    \end{minipage}
+    
+\begin{easybox}{Les opérations sur les chaines de caractères}{}   
+    \smallskip
+    \begin{itemize}
+        \item[] \texttt{+} \quad pour la concaténation:  \verb~'Bonjour' + ' a tous'~ donne \verb~'Bonjour a tous'~
+        \item[] \texttt{*} \quad pour la répétition:  \verb~'Bonjour' * 3~ donne \verb~'BonjourBonjourBonjour'~
+        \item[] \texttt{[]} \quad pour l'indexation:  \verb~'Bonjour'[0]~ donne \verb~'B'~
+        \item[] \texttt{in} \quad pour le test d'appartenance:  \verb~'on' in 'Bonjour'~ donne \verb~True~
+        \item[] \texttt{not in} \quad pour le test d'appartenance:  \verb~'on' not in 'Bonjour'~ donne \verb~False~
+        \item[] \texttt{len()} \quad pour la longueur:  \verb~len('Bonjour')~ donne \verb~7~
+       
+    \end{itemize}
+\end{easybox}
+
+
+   \end{propriete}
+
+   \begin{definition}[Les booléens]{}
+
+       \begin{minipage}{0.32\linewidth}
+    \begin{CodePythontexAlt}[Largeur=0.9\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+a = True
+b = False
+c = 6
+d = 3
+        \end{CodePythontexAlt}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{CodePythontexAlt}[Largeur=0.9\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+a == b  # Affiche False
+a != b  # Affiche True
+c == d  # Affiche False
+        \end{CodePythontexAlt}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{CodePythontexAlt}[Largeur=0.9\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+c <= d  # Affiche False
+c > d   # Affiche True
+c >= d // 2  # Affiche True
+
+      \end{CodePythontexAlt}
+    \end{minipage}    
+
+      
+   \end{definition}
+
+
+   
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+not+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        \texttt{not} True & False\tabularnewline{}
+        \texttt{not} False & True\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+and+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        True \texttt{and} True & True\tabularnewline{}
+        True \texttt{and} False & False\tabularnewline{}
+        False \texttt{and} True & False\tabularnewline{}
+        False \texttt{and} False & False\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+or+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        True \texttt{or} True & True\tabularnewline{}
+        True \texttt{or} False & True\tabularnewline{}
+        False \texttt{or} True & True\tabularnewline{}
+        False \texttt{or} False & False\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+

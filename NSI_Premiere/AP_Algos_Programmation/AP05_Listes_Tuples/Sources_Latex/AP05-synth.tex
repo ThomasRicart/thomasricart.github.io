@@ -1,0 +1,239 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Listes et Tuples} % Titre au centre
+\def\docname{AP05-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{definition}[Les listes]{}
+
+\begin{tabular}{|p{2cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+\hline
+Indice \verb|i| & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ \hline
+Elément & \verb|T[0]| & \verb|T[1]| & \verb|T[2]| & \verb|T[3]| & \verb|T[4]| & \verb|T[5]| & \verb|T[6]| & \verb|T[7]| \\ \hline
+
+\end{tabular}
+
+
+
+\end{definition}
+
+
+	\begin{minipage}{0.48\linewidth}
+\begin{easybox}{Accéder aux éléments d'une liste}{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [1, 2, 3, 4, 5]
+print(ma_liste[0]) 	# Affiche: 1
+print(ma_liste[2])  # Affiche: 3
+print(len(ma_liste))  # Affiche: 5
+		\end{CodePythontexAlt}
+		\end{easybox}
+\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{easybox}{Modifier les éléments d'une liste}{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [1, 2, 3]
+ma_liste[0] = 10 
+print(ma_liste) 	# Affiche: [10, 2, 3]
+print(len(ma_liste))  # Affiche: 3
+		\end{CodePythontexAlt}
+	\end{easybox}
+	
+	\end{minipage}
+
+\begin{easybox}{Itérer sur une liste avec une boucle FOR}{}
+
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [4, 8, 7, 9, 4]
+for i in range(0, len(ma_liste)):
+	print(ma_liste[i])
+		\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [4, 8, 7, 9, 4]
+for elt in ma_liste:
+	print(elt)
+		\end{CodePythontexAlt}
+	\end{minipage}
+\end{easybox}
+
+\begin{minipage}{0.48\linewidth}
+\begin{easybox}[Sommes des éléments d'une liste]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+def somme(liste):
+	somme = 0
+	for elt in liste:
+		somme = somme + elt
+	return somme
+#
+		\end{CodePythontexAlt}
+\end{easybox}
+\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{easybox}{Recherche de maximum dans une liste}{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+def maximum(liste):
+	maximum = liste[0]
+	for elt in liste:
+		if elt > maximum:
+			maximum = elt
+	return maximum
+\end{CodePythontexAlt}
+	\end{easybox}
+	\end{minipage}
+
+	\begin{minipage}{0.48\linewidth}
+\begin{easybox}[Recherche présence d'un élément dans une liste]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+def est_present(elt, liste):
+	for e in liste:
+		if e == elt:
+			return True
+	return False
+		\end{CodePythontexAlt}
+\end{easybox}
+\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+\begin{easybox}[Vérification liste triée]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+def est_triee(liste):
+	for i in range(0, len(liste)-1):
+		if liste[i] > liste[i+1]:
+			return False
+	return True
+		\end{CodePythontexAlt}
+\end{easybox}
+\end{minipage}
+			
+\begin{easybox}{Liste de listes}{}
+
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [[1, 2, 3], [4, 5], [7, 8, 9, 10]]
+print(len(ma_liste))	# Affiche: 3
+print(len(ma_liste[1])) # Affiche: 2
+print(ma_liste[0]) 		# Affiche: [1, 2, 3]
+print(ma_liste[1])		# Affiche: [4, 5]
+print(ma_liste[2])		# Affiche: [7, 8, 9, 10]
+print(ma_liste[0][1]) 	# Affiche: 2
+print(ma_liste[1][1]) 	# Affiche: 5
+print(ma_liste[2][0]) 	# Affiche: 7
+		\end{CodePythontexAlt}
+
+		
+
+\end{easybox}
+
+\pagebreak
+
+\begin{minipage}{0.47\linewidth}
+\begin{easybox}[Sommes des éléments d'une liste de listes]{}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+def somme(matrice):
+	somme = 0
+	for liste in matrice:
+		for elt in liste:
+			somme = somme + elt
+	return somme
+#
+		\end{CodePythontexAlt}
+\end{easybox}
+\end{minipage}\hfill
+	\begin{minipage}{0.51\linewidth}
+		\begin{easybox}{Recherche de maximum liste de listes}{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+def maximum(matrice):
+	maximum = matrice[0][0]
+	for i in range(0, len(matrice)):
+		for j in range(0, len(matrice[i])):
+			if matrice[i][j] > maximum:
+				maximum = matrice[i][j]
+	return maximum
+\end{CodePythontexAlt}
+	\end{easybox}
+	\end{minipage}
+
+
+\begin{easybox}{Quelques méthodes sur les listes}{}
+
+	\begin{minipage}{0.65\linewidth}
+		\begin{itemize}
+\item \verb|append(elt)|: ajoute l'élément \verb|elt| à la fin de la liste	
+\item \verb|pop()|: supprime et renvoie le dernier élément de la liste
+\item \verb|pop(i)|: supprime et renvoie l'élément d'indice \verb|i| de la liste
+\end{itemize}
+
+	\end{minipage}\hfill
+	\begin{minipage}{0.35\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [1, 2, 3, 4, 5]
+ma_liste.append(6)
+a = ma_liste.pop()
+b = ma_liste.pop(2)
+		\end{CodePythontexAlt}
+	\end{minipage}
+\end{easybox}
+
+\begin{easybox}{Créer une liste par itération}{}
+
+\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = []
+for i in range(0, 5):
+	ma_liste.append(i)
+
+print(ma_liste)		
+# Affiche: [0, 1, 2, 3, 4]
+		\end{CodePythontexAlt}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = []
+for i in range(0, 5):
+	ma_liste = [i] + ma_liste
+
+print(ma_liste)
+# Affiche: [4, 3, 2, 1, 0]
+		
+		\end{CodePythontexAlt}
+	\end{minipage}
+\end{easybox}
+
+\begin{easybox}{Créer une liste par compréhension}{}
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [i for i in range(0, 5)]
+print(ma_liste)
+# Affiche: [0, 1, 2, 3, 4]
+		\end{CodePythontexAlt}
+		\end{easybox}
+
+
+	
+\begin{easybox}{Le hasard et les listes}{}
+	\begin{itemize}
+		\item La fonction \verb|random.choice(liste)| permet de choisir un élément au hasard dans une liste.
+		\item La fonction \verb|random.shuffle(liste)| permet de mélanger les éléments d'une liste de manière aléatoire.
+	\end{itemize}
+\end{easybox}
+
+\begin{easybox}{Le slicing}{}
+	Le slicing permet de créer une nouvelle liste à partir d'une liste existante en sélectionnant une portion de cette liste.
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+ma_liste = [1, 2, 3, 4, 5]
+print(ma_liste[1:4])	# Affiche: [2, 3, 4]
+print(ma_liste[:3])		# Affiche: [1, 2, 3]
+print(ma_liste[2:4])	# Affiche: [3, 4]
+		\end{CodePythontexAlt}
+\end{easybox}
+
+		\begin{definition}[Les tuples]{}
+		Un \textbf{tuple} est une structure de donnée qui contient des éléments ou items identifiés par des indices.	
+		Les tuples ont les mêmes caractéristiques que les listes, à la différence que les éléments d'un tuple ne peuvent pas être modifiés après la création du tuple. Un tuple est une structure de donnée immuable.
+
+			
+		\end{definition}

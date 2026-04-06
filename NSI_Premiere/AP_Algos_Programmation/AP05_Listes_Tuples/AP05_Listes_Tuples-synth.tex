@@ -1,0 +1,32 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usepackage{scratch3}
+\usepackage{longtable}
+
+
+\begin{document}
+
+   \include{\documentpath/AP05-synth}
+
+\end{document}
