@@ -17,8 +17,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 
 |Fichiers|Description|
 |---|---|
-|[**starwars.csv**](./starwars.csv)|
-|(**vaisseaux.csv**)(./vaisseaux.csv)|
+|[**starwars.csv**](./assets/starwars.csv)|
+|(**vaisseaux.csv**)(./assets/vaisseaux.csv)|
 
 ---
 ---
