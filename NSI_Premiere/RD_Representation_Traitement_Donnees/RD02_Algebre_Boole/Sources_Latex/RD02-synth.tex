@@ -1,0 +1,77 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Algèbre de Boole} % Titre au centre
+\def\docname{RD02-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{easybox}[Variable booléenne]{}
+	\begin{itemize}
+		\item     une variable booléenne est une variable qui ne peut prendre que deux valeurs : \textbf{vrai} ou \textbf{faux}.
+		\item     les variables booléennes sont utilisées pour modéliser des situations à deux états, par exemple : allumé/éteint, ouvert/fermé, 1/0, \ldots{}
+	\end{itemize}
+\end{easybox}
+
+\begin{easybox}[Opérateurs booléens]{}
+
+
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+not+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        \texttt{not} True & False\tabularnewline{}
+        \texttt{not} False & True\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+and+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        True \texttt{and} True & True\tabularnewline{}
+        True \texttt{and} False & False\tabularnewline{}
+        False \texttt{and} True & False\tabularnewline{}
+        False \texttt{and} False & False\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+\begin{minipage}[t]{6cm}
+    \begin{center}Table de vérité du \verb+or+\end{center}
+    \begin{longtable}[]{@{}cc@{}}
+        \hline Expression & Résultat\tabularnewline\hline\endhead{}
+        True \texttt{or} True & True\tabularnewline{}
+        True \texttt{or} False & True\tabularnewline{}
+        False \texttt{or} True & True\tabularnewline{}
+        False \texttt{or} False & False\tabularnewline\hline{}
+    \end{longtable}
+\end{minipage}
+\end{easybox}
+
+
+\begin{easybox}[Element neutre]{}
+	\begin{itemize}
+		\item L'élément neutre de l'addition est 0: $A + 0 = A$
+		\item L'élément neutre de la multiplication est 1: $A \cdot 1 = A$
+	\end{itemize}
+\end{easybox}
+
+\begin{easybox}[Element absorbant]{}
+	\begin{itemize}
+		\item L'élément absorbant de l'addition est 1: $A + 1 = 1$
+		\item L'élément absorbant de la multiplication est 0: $A \cdot 0 = 0$
+	\end{itemize}
+\end{easybox}
+
+\begin{easybox}[Elements complémentaires et incompatibles]{}
+	\begin{itemize}
+		\item $A + \overline{A} = 1$
+		\item $A \cdot \overline{A} = 0$
+	\end{itemize}
+\end{easybox}
+
+\begin{propriete}[Loi de Morgan]{}
+	\begin{itemize}
+		\item $\overline{A + B} = \overline{A} \cdot \overline{B}$
+		\item $\overline{A \cdot B} = \overline{A} + \overline{B}$
+	\end{itemize}
+\end{propriete}
