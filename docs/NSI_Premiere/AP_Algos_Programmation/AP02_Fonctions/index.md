@@ -17,7 +17,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/AP02_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP02_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**](./exercices/AP02_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP02_EXO1_Correction.pdf) |
-| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/00c9-10504416) | **00c9-10504416** | [Correction](./)|
+| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/00c9-10504416) | **00c9-10504416** | [Correction]()|
 
 ---
 ---

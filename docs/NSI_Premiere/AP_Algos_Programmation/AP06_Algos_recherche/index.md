@@ -17,7 +17,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/AP06_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP06_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**](./exercices/AP06_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP06_EXO1_Correction.pdf) |
-| [📚 **Activité pratique 01**](.) | Activité Capytale | [Correction](./)|
+| [📚 **Activité pratique 01**](.) | Activité Capytale | [Correction]()|
 
 ---
 ---
