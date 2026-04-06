@@ -19,7 +19,6 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [🎴 **Flashcards**](./flashcards/AP08_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP08_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**]() | Exercices d'application Tris |[Correction]() |
-| [📚 **Activité pratique 01**](./AP08-ACT1-Listes.ipynb) | Activité Capytale Tris | [Correction]()|
 
 ---
 ---
