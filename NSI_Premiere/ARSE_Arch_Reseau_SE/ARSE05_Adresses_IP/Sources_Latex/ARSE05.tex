@@ -1,0 +1,452 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Adresses IP} % Titre au centre
+\def\docname{ARSE05}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{definition}[Les adresses IP]{}
+
+	\begin{minipage}{0.70\linewidth}
+		Une \textbf{adresse IP (Internet Protocol)} est un numéro d'identification qui est affecté de manière permanente ou provisoire à chaque périphérique relié à un réseau informatique.
+
+	Les adresses IP de version 4 (\verb+IPv4+) sont codées sur 32 bits (4 octets ou 4 valeurs comprises entre 0 et 255).
+
+
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\linewidth}
+			\includegraphics[width = 1\linewidth]{ip1.png}
+
+	\end{minipage}
+	\end{definition}
+
+	\begin{definition}[Les masques de sous-réseau]{}
+Une \textbf{adresse IP} permet d'identifier un appareil de manière unique sur un réseau. L'adresse IP peut changer mais l'adresse MAC est fixée.
+	
+Pour savoir si deux machines appartiennent au même réseau, il faut connaitre leur masque de sous réseau.
+
+Le \textbf{masque de sous réseau (Subnet Mask)} permet de séparer deux zones dans l'adresse IP: 
+
+\begin{itemize}
+	\item la partie \textbf{identification réseau} (NetId)
+	\item la partie \textbf{identification h\^ote} (HostId)
+\end{itemize}
+	
+Les masques de sous-réseau classiques sont de trois types:
+\begin{itemize}
+	\item classe A: \verb+255.0.0.0+ soit \verb+11111111.00000000.00000000.00000000+ en binaire
+	\item classe B: \verb+255.255.0.0+ soit \verb+11111111.11111111.00000000.00000000+ en binaire
+	\item classe C: \verb+255.255.255.0+ soit \verb+11111111.11111111.11111111.00000000+ en binaire
+\end{itemize}
+	\end{definition}
+
+	\begin{methode}[Adresse Réseau]{}
+
+		Pour déterminer l'adresse du réseau il suffit d'effectuer une opération de ET bit à bit entre l'adresse IP de la machine et son masque de sous réseau:
+
+		On prend un PC d'adresse IP: \verb+172.16.4.1+ avec un masque de sous-réseau de classe C
+
+		\begin{enumerate}
+			\item Convertir les 4 octets de l'adresse IP et du masque en binaire
+			\item Effectuer un ET logique bit à bit entre l'adresse IP et le masque de sous réseau
+		\end{enumerate}
+
+	\includegraphics[width = 0.9\linewidth]{masque}
+
+Après avoir effectué le ET logique, on obtient l'adresse du réseau. Si tous les PC ont la même adresse réseau, alors ils peuvent communiquer entre eux.
+
+	\end{methode}
+
+
+
+	\begin{exemple}[Adresse réseau]{}
+
+	Par exemple dans un sous réseau de classe C (masque 255.255.255.0)
+
+	\begin{itemize}
+		\item PC01 d'adresse IP: \verb+192.168.2.4+ a une adresse réseau \verb+192.168.2.0+
+		\item PC02 d'adresse IP: \verb+192.168.2.8+ a une adresse réseau \verb+192.168.2.0+
+		\item PC03 d'adresse IP: \verb+192.168.3.7+ a une adresse réseau \verb+192.168.3.0+
+	\end{itemize}
+
+	PC01 et PC02 peuvent communiquer entre eux car ils ont la même adresse réseau alors que PC03 est isolé.	
+	\end{exemple}
+
+
+    \begin{exercice_cours}[ Déterminer les adresses réseaux de chacune de ces machines:]{}
+\begin{itemize}
+    \item PC01: \verb+IP: 192.168.4.8+ et Masque: \verb+255.255.255.0+ \dotfill
+    \item PC02: \verb+IP: 172.24.34.6+ et Masque: \verb+255.255.0.0+ \dotfill
+    \item PC03: \verb+IP: 10.15.3.254+ et Masque: \verb+255.0.0.0+ \dotfill
+\end{itemize}
+
+           
+\end{exercice_cours}
+
+\begin{exercice_cours}[On considère la configuration suivante:]{}
+ \begin{enumerate}
+        \item PC01: \verb+IP: 192.168.4.8+ et Masque: \verb+255.255.255.0+
+        \item PC02: \verb+IP: 192.168.3.8+ et Masque: \verb+255.255.255.0+
+    \end{enumerate}
+    
+    Proposer une modification de la configuration réseau pour que les deux PC puissent communiquer
+\end{exercice_cours}
+
+\begin{exercice_cours}{}{}
+    Il est possible de connaitre la configuration réseau de vos PC. Pour cela il faut ouvrir l'invite de commande:
+    
+    \medskip
+
+    \begin{minipage}{0.44\linewidth}
+        \begin{itemize}
+            \item Dans la barre de rechercher taper \verb+cmd+
+            \item Cliquer sur la proposition
+            \item Taper ensuite \verb+ipconfig+
+            \item Chercher la carte réseau de votre PC
+        \end{itemize}       
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\linewidth}
+        \includegraphics[width = 0.8\linewidth]{ipconfig.jpg}
+    \end{minipage}   
+
+\begin{enumerate}
+    \item Noter l'adresse IP et le masque de sous réseau du PC du lycée: \dotfill
+    \item Calculer l'adresse de ce réseau: \dotfill
+    \item Noter l'adresse IP et le masque de sous réseau du PC du chez vous: \dotfill
+    \item Calculer l'adresse de ce réseau: \dotfill
+
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{definition}[Notation CIDR]{}
+    Afin de faciliter la lecture des masques de sous-réseaux, on utilise aussi la notation \verb+CIDR+.
+
+	Les masques de sous-réseaux doivent respecter les règles suivantes:
+
+	\begin{itemize}
+        \item 32 bits
+        \item que des 1 dans la conversion binaire à gauche
+        \item que des 0 dans la conversion binaire à droite
+        \item on ne peut pas intercaler les 1 et les 0
+    \end{itemize}
+
+    On peut donc définir le masque de sous réseaux en comptant uniquement les 1 à gauche.
+\end{definition}
+
+
+\begin{exemple}[Notation CIDR]{}
+         Le masque de sous réseau \verb+255.255.255.0+ se convertit en binaire par 11111111.11111111.11111111.00000000 soit 24 bits à 1. On notera ce masque \verb+/24+
+        
+        Ainsi PC01 d'adresse IP \verb+192.168.6.4+ avec un masque de classe C s'écrira \verb+192.168.6.4/24+
+\end{exemple}
+
+\begin{exercice_cours}[Convertir les adresses suivantes en notation CIDR]{}
+    \begin{enumerate}
+        \item PC01: IP \verb+192.168.4.3+, Masque: \verb+255.255.255.0+ \dotfill
+        \item PC02: IP \verb+172.16.254.1+, Masque: \verb+255.255.0.0+ \dotfill
+        \item PC03: IP \verb+10.99.54.154+, Masque: \verb+255.252.0.0+ \dotfill
+        \item PC04: IP \verb+10.1.1.254+, Masque: \verb+255.255.255.252+ \dotfill
+    \end{enumerate}
+
+\end{exercice_cours}
+
+
+	\begin{definition}[Adresse Broadcast]{}
+
+		L'\textbf{adresse Broadcast} est l'adresse à laquelle il faut envoyer un message pour que toutes les machines du réseau le reçoive.
+
+		Cette adresse est la dernière adresse du réseau, c'est à dire celle où la partie HostId ne contient que des \verb+1+.
+
+	\end{definition}
+
+\begin{methode}[Déterminer l'adresse broadcast]{}
+On prend le \verb+NetId+ de l'adresse IP et on ajoute des 1 dans la partie \verb+HostId+
+
+Si PC01 a une adresse IP \verb+192.168.1.3/24+ alors la partie \verb+NetId+ est \verb+192.168.1+ et la partie \verb+HostId+ est 3.
+
+Son adresse réseau est \verb+192.168.1.0+ et son adresse broadcast est \verb+192.168.1.255+
+\end{methode}
+
+
+\begin{exercice_cours}{}{}
+Déterminer l'adresse réseau et broadcast des réseaux suivants:
+
+\begin{enumerate}
+    \item PC01 IP \verb+192.168.4.9/24+: \dotfill
+    \item PC02 IP \verb+172.16.254.1/16+: \dotfill
+    \item PC03 IP \verb+10.2.6.4/8+: \dotfill
+    \item PC04 IP \verb+10.99.54.154/30+: \dotfill
+    \item PC05 IP \verb+172.43.116.57/20+: \dotfill
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{propriete}[Nombre de machines dans un sous-réseau]{}
+Si $n$ est le nombre de bits à 0 dans le masque de sous réseau alors il est possible de créer $2^n$ adresses différentes dans ce sous-réseau. Il faut conserver: 
+\begin{itemize}
+    \item la première adresse pour l'adresse du réseau
+    \item la dernière adresse pour l'adresse de broadcast.
+\end{itemize}
+
+Finalement si le masque de sous réseau possède $n$ bits à 0, on peut insérer \textbf{$2^n-2$} machines.
+\end{propriete}
+
+\begin{exercice_cours}[]{}
+
+	Calculer le nombre de machines dans le sous-réseau ainsi que la première et dernière adresse disponible
+    \begin{enumerate}
+        \item PC01 IP \verb+192.168.4.9/24+: \dotfill
+        \item PC02 IP \verb+172.16.254.1/16+: \dotfill
+        \item PC03 IP \verb+10.2.6.4/8+: \dotfill
+        \item PC04 IP \verb+10.99.54.154/30+: \dotfill
+        \item PC05 IP \verb+172.43.116.57/20+: \dotfill
+    \end{enumerate}
+\end{exercice_cours}
+
+\begin{definition}[Le routeur]{}
+    
+    Le routeur est un composant actif qui permet d'assurer la communication entre deux réseaux différents. Il dispose de deux cartes réseaux et donc de deux adresses IP:
+
+    \begin{itemize}
+        \item une adresse coté réseau local 1 compatible avec celle du réseau 1
+        \item une adresse coté réseau local 2 compatible avec celle du réseau 2
+    \end{itemize}
+\end{definition}
+
+\medskip
+
+\begin{exemple}[Exemple de réseau]{}
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+        \item le réseau A est de classe C, 
+        
+        son adresse est donc \verb+192.168.1.0/24+
+
+        \item le réseau B est de classe B
+        
+        son adresse est donc \verb+172.16.0.0/16+
+    \end{itemize}
+
+    Le routeur possède deux adresses IP qui sont compatibles avec chacun des réseau A et B.
+
+    En général on choisit la dernière adresse disponible dans le réseau.
+
+\begin{itemize}
+    \item \verb+192.168.1.254+ coté réseau A
+    \item \verb+172.16.255.254+ coté réseau B
+\end{itemize}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+ \includegraphics[width = 0.99\linewidth]{routeur3.png}
+
+	\end{minipage}
+    
+
+        
+    
+\end{exemple}
+
+\pagebreak
+
+\begin{definition}[Passerelle par défaut]{}
+    Pour que les PC du réseau A puisse communiquer avec ceux du réseau B, il faut leur indiquer par quel endroit ils doivent ``sortir''. C'est le rôle de la \textbf{passerelle}.
+
+    La passerelle est l'adresse IP du routeur du coté du réseau LAN.
+
+    \begin{itemize}
+        \item pour les PC du réseau A, la passerelle est \verb+192.168.1.254+
+        \item pour les PC du réseau B, la passerelle est \verb+172.16.255.254+
+    \end{itemize}
+    \end{definition}
+
+
+\begin{exercice_cours}[Étude d'un réseau avec un routeur]{}
+
+\begin{enumerate}
+    \item Déterminer pour le réseau A le nombre de machine possible: \dotfill
+    \item Déterminer pour le réseau B le nombre de machine possible: \dotfill
+    \item Déterminer pour le réseau A l'adresse de Broadcast: \dotfill
+    \item Déterminer pour le réseau B l'adresse de Broadcast: \dotfill
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{exercice_cours}[Déterminer la passerelle par défaut d'un réseau]{}
+    
+    Pour trouver l'adresse de la passerelle il suffit de taper \verb+ipconfig+ dans l'invite de commande.
+
+    \begin{enumerate}
+        \item Déterminer l'adresse de la passerelle du lycée: \dotfill
+        \item Déterminer l'adresse de la passerelle de chez vous: \dotfill
+    \end{enumerate}
+
+\end{exercice_cours}
+
+\begin{definition}[Controle des communications]{}
+
+	\begin{minipage}{0.48\linewidth}
+Il est possible de vérifier qu'une machine est accessible en l'interrogeant via un \verb+ping+.
+
+    Dans l'invite de commande ``\verb+ping adresse+'' en remplaçant \verb+adresse+ par l'adresse IP que vous voulez joindre.
+
+		
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+	\includegraphics[width = 1\linewidth]{ping.png}
+
+	\end{minipage}
+    
+
+\end{definition}
+
+Ici on voit que le poste d'adresse IP \verb+10.2.0.9+ est bien joignable. On lui a envoyé 4 paquets de données qu'il a renvoyé comme accusé de réception. Le temps moyen est inférieur à la milliseconde.
+
+\begin{exercice_cours}
+Tester la communication avec un autre PC de votre salle
+\end{exercice_cours}
+
+
+\begin{definition}[Adresse IP publique et adresse IP privée]{}
+    
+Dans un réseau domestique, seule votre ``BOX'' (votre routeur) est identifiée par une adresse \textbf{IP publique}. Les autres périphériques de votre réseau domestique (ordinateurs, tablettes, téléphones\ldots{}) sont identifiés par une adresse \textbf{IP privée}.
+
+L'adresse \textbf{IP publique} de votre BOX ADSL est une adresse IP fournie par votre fournisseur d'accès (FAI) unique pour tout le réseau Internet.
+\end{definition}
+
+
+\begin{minipage}{0.58\linewidth}
+\begin{exemple}[Dans l'exemple ci-contre:]{}
+	
+\begin{itemize}
+    \item le réseau privé a pour adresse  \verb+192.168.0.0/24+
+    \item l'adresse IP publique du réseau est \verb+86.124.34.99+
+\end{itemize}
+
+La BOX sert de routeur pour transférer les données depuis la partie publique vers la partie privée et inversement.
+\end{exemple}
+\end{minipage}\hfill{}
+\begin{minipage}{0.38\linewidth}
+\includegraphics[width = 0.95\linewidth]{2017-11-09_153933.png}
+
+\end{minipage}
+
+
+
+\begin{methode}[Déterminer son adresse IP publique]{}
+
+	\begin{minipage}{0.48\linewidth}
+Étant donné que l'adresse IP publique est celle que voit le réseau coté Internet, il suffit d'interroger un site du type \verb+what's my IP+
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+    \includegraphics[width = 0.6\linewidth]{whatsmyip.png}
+
+	\end{minipage}
+\end{methode}
+
+\begin{exercice_cours}[Adresses publiques]{}
+
+
+\begin{enumerate}
+    \item Déterminer l'adresse IP publique du lycée: \dotfill
+    \item Déterminer l'adresse IP publique de chez vous: \dotfill
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{definition}[Les serveurs DHCP]{}
+Quand le réseau est vaste, il est difficile d'attribuer une adresse IP convenable à chacune des machines. On utilise un \textbf{serveur DHCP} (Dynamic Host Configuration Protocol) pour réaliser cette tache automatiquement. Le serveur DHCP lui attribue automatiquement une adresse IP à chaque machine.
+
+Les machines peuvent donc être configurées en:
+\begin{itemize}
+    \item DHCP non activé: adresse fixe, c'est l'utilisateur qui renseigne l'adresse IP
+    \item DHCP activé: c'est le serveur DHCP qui attribue l'adresse
+\end{itemize}
+
+\end{definition}
+
+
+\begin{methode}[Savoir si une machine est en DHCP]{}
+
+	\begin{minipage}{0.48\linewidth}
+	Dans l'invite de commande, taper \verb+ipconfig /all+
+
+    On apprend ici que le DHCP est activé et que le serveur qui a fourni cette adresse a pour adresse IP \verb+10.255.3.125+
+	
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+\includegraphics[width = 1\linewidth]{dhcp.png}
+
+	\end{minipage}
+    
+    
+    
+\end{methode}
+
+\begin{exercice_cours}{\quad }{}
+\begin{enumerate}
+    \item Déterminer si votre machine a un DHCP activé ou non \dotfill
+    \item Si le DHCP est activé donner l'adresse du serveur DHCP \dotfill
+    \item Faites la même chose chez vous \dotfill
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{definition}[Les serveurs DNS]{}
+Dans notre utilisation quotidienne du web, nous tapons des adresses constituées de noms de domaines, par exemple \verb+www.google.fr+   
+
+Or un site web est un ensemble de fichiers situés sur une machine qui possède une adresse IP.
+
+Il existe donc une machine sur le réseau appelée \verb+Serveur DNS (Domain Name Server)+ qui permet de faire la traduction entre le nom de domaine et l'adresse IP. Ceci impose au serveur d'avoir une adresse IP fixe et non attribuée dynamiquement par un serveur DHCP)
+
+\end{definition}
+
+\begin{exercice_cours}{\quad}{}
+\begin{itemize}
+    \item Déterminer l'adresse IP du serveur DNS du lycée: \dotfill
+    \item Déterminer l'adresse IP du serveur DNS chez vous: \dotfill
+\end{itemize}
+\end{exercice_cours}
+
+\pagebreak
+
+\begin{methode}{Déterminer l'adresse IP d'un nom de domaine}{}
+Pour déterminer l'adresse IP d'un nom de domaine, il suffit de faire une commande \verb+ping+ sur le nom de domaine visé.
+\end{methode}
+
+
+
+\begin{exercice_cours}[Déterminer les adresses IP des sites de votre choix]{}
+
+\begin{enumerate}
+    \item URL: \dotfill, adresse IP: \dotfill
+    \item URL: \dotfill, adresse IP: \dotfill
+    \item URL: \dotfill, adresse IP: \dotfill
+\end{enumerate}
+\end{exercice_cours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\medskip
+
+\begin{exercice_cours}[Un cas d'étude]{}
+
+    On suppose qu'on étudie ce réseau. On sait que:
+
+    \begin{itemize}
+        \item Le \verb+Desktop PC+ a l'adresse \verb+192.168.1.1/24+
+        \item le scanner a l'adresse \verb+172.55.3.5/16+
+        \item le routeur wifi a une patte avec l'adresse \verb+10.1.1.1/30+
+        \item le serveur a pour adresse \verb+10.2.3.253+
+        \item l'adresse IP publique du réseau est \verb+88.33.2.76+
+    \end{itemize}
+
+    
+
+    \centering\includegraphics[width = 0.8\linewidth]{ffdf6394-75e8-4af2-997f-2b7050647539.png}
+
+    \begin{enumerate}
+        \item Proposez des adresses IP pour chacun des objets connectés
+        \item Indiquer pour chaque réseau son adresse ainsi que son masque en notation CIDR
+        \item Calculer le nombre maximum de machines qu'il serait possible de connecter sur chaque réseau.
+    \end{enumerate}
+\end{exercice_cours}
+

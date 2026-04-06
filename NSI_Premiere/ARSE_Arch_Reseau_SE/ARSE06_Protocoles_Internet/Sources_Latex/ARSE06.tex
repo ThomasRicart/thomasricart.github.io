@@ -1,0 +1,114 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Protocoles Internet} % Titre au centre
+\def\docname{ARSE06}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{definition}[Le modèle TCP/IP]{}
+    
+
+    \begin{minipage}{0.4\linewidth}
+
+        \begin{center}
+            \includegraphics[width=0.95\linewidth]{couches_TCP-IP.png}
+        \end{center}
+
+    \end{minipage}\hfill
+    \begin{minipage}{0.58\linewidth}
+        Les informations sont transmises entre les ordinateurs en suivant un modèle en couches. Il existe deux
+        modèles, un modèle complet et théorique en 7 couches : le
+        modèle OSI et un autre constitué de 4 couches : le modèle
+        TCP/IP. Dans ces modèles, chaque couche a un rôle bien
+        précis.
+    \end{minipage}
+
+    
+\end{definition}
+
+
+\begin{easybox}[Les différents protocoles]{}
+    
+	\begin{tabular}{|c|p{13cm}|c|}
+		\textbf{Nom}&\textbf{Description}&\textbf{Couche} \\ \hline
+		ARP&Traduit une adresse IP en adresse MAC en interrogeant le réseau en Broadcast&1 / 2\\ \hline
+		ICMP&Vérifie la connectivité entre deux machines: envoie des messages de type ``ping''&2\\ \hline
+		HTTP&Permet de transférer des pages web&4\\ \hline
+		FTP&Permet de transférer des fichiers&4\\ \hline	
+		SMTP&Permet de transférer des mails&4\\ \hline
+		TCP&Permet de garantir une bonne transmission des données&3\\ \hline
+		UDP&Permet de garantir une bonne réception des données&3\\ \hline	
+		IP&Permet d'adresser les paquets à travers les réseaux&2\\ \hline
+		TLS/SSL&Permet de sécuriser les échanges sur Internet&4\\ \hline
+		POP&Permet de récupérer les mails&4\\ \hline
+		IMAP&Permet de récupérer les mails&4\\ \hline	
+		SMTP&Permet de transférer des mails&4\\ \hline
+	\end{tabular}
+	
+	\end{easybox}
+	
+
+\begin{easybox}[Le protocole TCP]{}
+	Le protocole TCP (Transmission Control Protocol) est un protocole de la couche 3 (Transport) qui permet de garantir la bonne transmission des données entre les machines. Il utilise un système de numérotation des paquets pour assurer que les données sont reçues dans le bon ordre et qu'aucune donnée n'est perdue.
+
+	Les étapes du processus de handshake sont les suivantes :
+
+	\begin{enumerate}
+		\item La machine émettrice envoie un segment SYN (synchronize) pour initier la connexion.
+		\item La machine réceptrice répond avec un segment SYN-ACK (synchronize-acknowledge) pour confirmer la réception du segment SYN.
+		\item La machine émettrice envoie un segment ACK (acknowledge) pour confirmer la réception du segment SYN-ACK et établir la connexion.
+	\end{enumerate}
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{center}
+		\includegraphics[width=1\linewidth]{connexion_TCP.png}
+		\end{center}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{center}
+\includegraphics[width=1\linewidth]{connexion_SMS.png}
+		\end{center}
+	\end{minipage}
+
+\end{easybox}
+
+\pagebreak
+
+\begin{methode}[Le bit alterné]{}
+
+    Dans le cas du protocole TCP, l'émetteur doit s'assurer que le message a bien été reçu. 
+
+    En temps normal, l'émetteur (noté E) envoie un message au receveur (noté R) qui répond par un acquittement (ACK pour ACKnowledge) pour confirmer la bonne réception du message. 
+
+    Le protocole du bit alterné prévoit 4 règles:
+
+    \begin{enumerate}
+        \item chaque message et son acquittement contiennent un même bit de contrôle ``0'' ou ``1'',
+        \item deux messages successifs contiennent des bits de contrôle différents (la valeur du bit de contrôle alterne à
+        chaque message),
+        \item si E ne reçoit pas l'acquittement ou un acquittement erroné (mauvais bit de contrôle), il renvoie le dernier
+        message,
+        \item si R reçoit un message avec un bit de contrôle erroné (pas d'alternance ``0'' ou ``1''), il renvoie le dernier
+        acquittement.
+    \end{enumerate}
+
+    Pour chaque message, un délai doit être respecté pour vérifier les acquittements.
+
+    \medskip
+
+    \begin{minipage}[t]{0.48\linewidth}
+        Cas 1: Non réception du message
+    
+        \includegraphics[width=1\linewidth]{cas_1.png}
+
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\linewidth}
+        Cas 2: Non réception de l'acquittement
+
+        \includegraphics[width=1\linewidth]{cas_2.png}
+
+    \end{minipage}
+\end{methode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

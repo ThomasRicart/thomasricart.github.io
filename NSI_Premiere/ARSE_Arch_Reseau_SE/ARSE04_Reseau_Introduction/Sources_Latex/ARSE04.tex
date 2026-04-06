@@ -1,0 +1,71 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Adresses IP} % Titre au centre
+\def\docname{ARSE05}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{definition}[Réseau informatique]{}
+	C'est un ensemble de machines (ordinateurs, smart phones, imprimantes, box, objets connectés \dots) reliés entre eux. Chaque objet possède une \textbf{carte réseau} et est connecté au réseau (avec ou sans fil).
+\end{definition}
+
+
+
+Pour qu'un équipement puisse être connecté à un réseau, il lui fait un interface réseau. Cet interface est soit filaire via une connexion de type RJ45 ou sans fil (wifi ou bluetooth).
+
+\begin{exemple}[Connexion filaire]{}
+\begin{minipage}{0.40\linewidth}
+	\begin{itemize}
+		\item une carte réseau dans un PC fixe
+		\item un adaptateur USB-RJ45
+		\item un prise RJ45
+	\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.15\linewidth}
+	\includegraphics[width = 0.9\linewidth]{cr1.jpg}
+\end{minipage}\hfill
+\begin{minipage}{0.15\linewidth}
+	\includegraphics[width = 0.9\linewidth]{cr2.jpg}
+\end{minipage}\hfill
+\begin{minipage}{0.15\linewidth}
+	\includegraphics[width = 0.9\linewidth]{cr3.jpg}
+\end{minipage}
+\end{exemple}
+
+\begin{easybox}[Une carte réseau -- une adresse physique]{}
+Chaque interface réseau doit posséder une \textbf{adresse physique}, nommée adresse \verb+MAC+: elle est liée à la carte réseau et identifie de manière unique celle-ci. Cette adresse ne peut pas être modifiée (facilement).
+
+C'est une suite de six nombres en hexadécimal. par exemple: \verb+94-BB-43-42-A3-A5+.
+\end{easybox}
+
+
+\begin{easybox}[Constitution d'un réseau]{}
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+	\item un \textbf{routeur}: la porte d'entrée du réseau.
+	\item un \textbf{commutateur} (switch): ``multiprise'' 
+	
+	pour connecter plusieurs objets au routeur
+	\item des \textbf{postes clients}: les PC des utilisateurs
+	\item un \textbf{serveur}: permet de stocker des données accessibles par tout le monde
+	\item une \textbf{borne wifi} créer un nouveau sous-réseau
+\end{itemize}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+\includegraphics[width=1\linewidth]{reseau2.jpg}
+
+	\end{minipage}
+
+
+	
+\end{easybox}
+
+
+\begin{center}
+	\includegraphics[width = 0.9\linewidth]{ScreenShot_20240601232651.jpeg}
+
+\end{center}
