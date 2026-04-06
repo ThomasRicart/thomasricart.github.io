@@ -11,12 +11,10 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | :--- | :--- | :--- |
 | [📕 **Cours**](./RD02_Algebre_Boole.pdf) | Le support de cours complet en version PDF. | |
 | [💡 **Synthèse**](./RD02_Algebre_Boole-synth.pdf) | Fiche récapitulative des concepts clés (HTML). | |
-| [🎴 **Flashcards**]() | Cartes de mémorisation pour réviser les notions. ||
-| [📝 **Quiz**]()| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](https://raisintine.fr/chocolatine/question.php?idc=29) | Exercices autocorrigés / Généralités| |
 | [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=30) | Exercices autocorrigés / Opérateurs | |
 | [✏️ **Exercices 03**](https://raisintine.fr/chocolatine/question.php?idc=31) | Exercices autocorrigés / Avec Python | |
-| [📚 **Activité pratique**](./) | Activité Capytale | [Correction](./)|
+| [📚 **Activité pratique**]() | Activité Capytale | [Correction]()|
 
 ---
 ---

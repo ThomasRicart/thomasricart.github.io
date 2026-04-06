@@ -17,7 +17,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=3) | Exercices autocorrigés Binaire| |
 | [✏️ **Exercices 03**](https://raisintine.fr/chocolatine/question.php?idc=4) | Exercices autocorrigés Hexadécimal| |
 | [✏️ **Exercices 04**](https://raisintine.fr/chocolatine/question.php?idc=22) | Exercices autocorrigés Opérations binaires| |
-| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/312b-10504483) | **312b-10504483** | [Correction](./)|
+| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/312b-10504483) | **312b-10504483** | [Correction]()|
 
 ---
 ---
