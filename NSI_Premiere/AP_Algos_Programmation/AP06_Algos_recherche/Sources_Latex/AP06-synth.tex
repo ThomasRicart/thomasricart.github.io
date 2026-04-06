@@ -1,0 +1,87 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Algorithmes de recherche} % Titre au centre
+\def\docname{AP06-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{definition}[Notion de complexité d'un algorithme]{}
+
+	\begin{minipage}{0.63\linewidth}
+			La complexité s'exprime en utilisant la notation \textbf{O} (grand O) et se déterminer en fonction de la taille de l'entrée du problème. On se place toujours dans le \textbf{pire des cas}
+
+	\end{minipage}\hfill
+	\begin{minipage}{0.35\linewidth}
+			\includegraphics[width = 0.95\linewidth]{classes-de-complexité.jpg}
+
+	\end{minipage}
+
+\end{definition}
+
+
+\begin{definition}[Notion de terminaison d'un algorithme]{}
+	Un algorithme est dit \textbf{terminant} s'il s'arrête après un nombre fini d'étapes pour toute entrée donnée. 	
+
+La condition d'arrêt est appelée \textbf{variant de boucle}.	
+\end{definition}
+
+\begin{definition}[Le variant de boucle]{}
+	Un \textbf{variant de boucle} est une quantité qui est modifiée à chaque itération d'une boucle et qui permet de garantir la terminaison de l'algorithme. Pour qu'un variant de boucle soit efficace, il doit être:
+\begin{itemize}
+	\item \textbf{positif ou nul} pour que la boucle se poursuive;
+	\item \textbf{décroissant} à chaque itération pour que la boucle se rapproche de sa condition d'arrêt.
+\end{itemize}
+\end{definition}
+
+		\begin{definition}[Notion de correction d'un algorithme]{}
+	Un algorithme est dit \textbf{correct} s'il renvoie la bonne solution pour toute entrée donnée. 
+
+	Un \textbf{invariant de boucle} est une propriété qui est vérifiée avant et après chaque itération d'une boucle. Si l'invariant de boucle est vérifié, alors l'algorithme est correct.
+\end{definition}
+
+
+\begin{definition}[Algorithme dichotomique]{}
+	
+\begin{minipage}{0.39\linewidth}
+	\includegraphics[width = 1\linewidth]{Binary_search_into_array}
+\end{minipage}\hfill
+\begin{minipage}{0.59\linewidth}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+			def recherche_dichotomique(val, L):	
+			i_deb = 0
+				i_fin = len(L) - 1
+				while i_deb <= i_fin:
+					i_cen = (i_deb + i_fin) // 2
+					if L[i_cen] == val:
+						return True
+					elif L[i_cen] < val:
+						i_deb = i_cen + 1
+					else:
+						i_fin = i_cen - 1
+				return False
+			
+			\end{CodePythontexAlt}
+		
+\end{minipage}
+\end{definition}
+
+
+\begin{definition}[Complexité logarithmique]{}
+
+Dans l'exemple précédent, on dira que cet algorithme possède une complexité \textbf{logarithmique} notée $O(\log(n))$
+
+	
+\end{definition}
+
+\begin{propriete}[Détermination de complexité]{}
+
+	\begin{itemize}
+		\item Si un algorithme n'effectue pas de boucle, alors sa complexité est de l'ordre de $O(1)$.
+		\item Si un algorithme effectue une boucle FOR, alors sa complexité est de l'ordre de $O(n)$.
+		\item Si un algorithme effectue k boucles FOR imbriquées, alors sa complexité est de l'ordre de $O(n^k)$.
+		\item Si la taille du problème est divisée par 2, complexité est l'ordre de $O(\log(n))$ (WHILE).
+	\end{itemize}
+\end{propriete}
+

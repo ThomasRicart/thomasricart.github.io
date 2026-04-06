@@ -1,0 +1,66 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Tris par insertion et sélection} % Titre au centre
+\def\docname{AP08-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+	\begin{minipage}{0.48\linewidth}
+\begin{propriete}[Le tri par insertion]{}
+		\includegraphics[width=0.95\linewidth]{tri-par-insertion.png}
+	\end{propriete}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+\begin{propriete}[Le tri par sélection]{}
+		\includegraphics[width=0.95\linewidth]{tri-par-selection.png}
+	\end{propriete}
+
+	\end{minipage}
+
+
+
+\begin{propriete}[Le tri par insertion]{}
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		def tri_insertion(L):
+			''' Algorithme de tri par insertion '''
+			n = len(L)
+			for i in range(1, n):
+				# Indice de la clé
+				k = i				
+				# Tant que le bord de la liste n'est pas atteint
+				# Et que la clé est inférieure à l'élement de gauche:
+				while k > 0 and L[k] < L[k-1]:
+					# Échange de la clé avec l'élément de gauche
+					L[k], L[k-1] = L[k-1], L[k]
+					# Décalage de la clé vers la gauche
+					k -= 1
+		\end{CodePythontexAlt}
+\end{propriete}
+
+
+	
+\begin{propriete}[Le tri par sélection]{}
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,PremLigne=1]{}
+		def tri_selection(L):
+			''' Algorithme de tri par sélection '''
+			n = len(L)
+			for i in range(0, n-1):
+				# Recherche du plus petit element de la liste non triee
+				mini = i		# indice de plus petit element non triee
+				for j in range(i+1, n):
+					if L[j] < L[mini]:
+						mini = j 		# j est le nouvel indice du minimum	
+				# Echange entre L[i] et L[mini]
+				L[i], L[mini] = L[mini], L[i]
+		\end{CodePythontexAlt}
+
+	
+
+
+\end{propriete}
+
+
+
+	

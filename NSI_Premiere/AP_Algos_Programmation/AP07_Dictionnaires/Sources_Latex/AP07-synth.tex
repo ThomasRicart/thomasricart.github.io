@@ -1,0 +1,89 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Les dictionnaires} % Titre au centre
+\def\docname{AP07-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{definition}[Les dictionnaires]{}
+	
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dictionnaire = {}				# Dictionnaire vide
+mon_dictionnaire = {'a': 1, 'b': 2, 'c': 3} 	# Dictionnaire avec des paires clé-valeur
+print(mon_dictionnaire['a'])  # Affiche 1
+print(len(mon_dictionnaire))  # Affiche 3
+mon_dictionnaire['a'] = 4  # Modifie la valeur associée à la clé 'a'
+		\end{CodePythontexAlt}
+\end{definition}
+
+\begin{easybox}[Itérer sur un dictionnaire]{}
+\begin{minipage}{0.31\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+	# Itérer sur les clés	
+	for cle in dico.keys():
+		print(dico[cle])
+		\end{CodePythontexAlt}
+\end{minipage}\hfill
+\begin{minipage}{0.33\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+	# Itérer sur les valeurs
+	for val in dico.values():
+		print(val)
+		\end{CodePythontexAlt}
+\end{minipage}\hfill
+\begin{minipage}{0.36\linewidth}
+		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+	# Itérer sur les items
+	for cle, val in dico.items():
+		print(cle, val)
+		\end{CodePythontexAlt}
+\end{minipage}
+\end{easybox}
+
+
+\begin{easybox}{Création d'un dictionnaire}{}
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+# Création d'un dictionnaire par itération
+mon_dico = {}
+for i in range(5):
+	mon_dico[i] = i**2
+print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Création d'un dictionnaire par compréhension
+mon_dico = {i: i**2 for i in range(5)}
+print(mon_dico) # Affiche {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{easybox}{Appartenance d'un élément à un dictionnaire}{}
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+mon_dico = {'a': 1, 'b': 2, 'c': 3}
+print('a' in mon_dico.keys())  # Affiche True
+print(4 in mon_dico.values())  # Affiche False
+print(('a', 1) in mon_dico.items())  # Affiche True
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{easybox}{Suppression dans un dictionnaire}{}
+
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+del mon_dico['a']  # Supprime la paire clé-valeur 'a': 1
+mon_dico.clear()  # Supprime toutes les paires clé-valeur du dictionnaire
+\end{CodePythontexAlt}
+\end{easybox}
+
+\begin{easybox}{Occurrences dans un dictionnaire}{}
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+def occurence(sequence)->dict:
+	dico={}
+	for element in sequence:
+		if element in dico:
+			dico[element] += 1
+		else:
+			dico[element] = 1
+	return dico
+\end{CodePythontexAlt}
+\end{easybox}
+
