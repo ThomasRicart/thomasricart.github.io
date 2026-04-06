@@ -1,0 +1,205 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{La langage assembleur} % Titre au centre
+\def\docname{ARSE01-TP1}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{easybox}{Les registres}{}
+
+    \begin{itemize}
+        \item un \textbf{registre} est un emplacement de mémoire interne à un processeur. Les registres sont les mémoires les plus rapides d'un ordinateur mais dont le coût de fabrication est le plus élevé.
+        \item les registres sont utilisés pour stocker des opérandes et des résultats intermédiaires lors des opérations effectuées dans l'UAL (unité arithmétique et logique) du processeur.
+        \item la plupart des PC actuels ont des registres de taille 64 bits.
+    \end{itemize}
+
+        
+\end{easybox}
+
+
+\begin{easybox}{Initiation à l'assembleur}{}
+	Le langage \textbf{assembleur} est un langage de programmation très particulier. Il possède des instructions:
+	\begin{itemize}
+		\item arithmétiques: addition, soustraction, multiplication \ldots
+		\item transfert de données: déplace des données du registre vers la mémoire et inversement
+		\item rupture de séquence: des sauts dans le programme pour aller à une ligne particulière.
+	\end{itemize}
+\end{easybox}
+
+\begin{easybox}{Simulateur assembleur}{}
+	 \href{https://www.peterhigginson.co.uk/AQA/}{https://www.peterhigginson.co.uk/AQA/}
+\end{easybox}
+
+
+
+\begin{exemple}[Voici un petit programme qui effectue une addition et stocke le résultat.]{}
+	\begin{verbatim}
+		MOV R0, #22            # Stocke la valeur 22 dans le registre R0
+		MOV R1, #36            # Stocke la valeur 36 dans le regsitre R1
+		ADD R2, R0, R1         # Addition R0 et R1 et mets le résultat dans R2
+		STR R2, 24             # Stocke R2 à l'adresse mémoire 24
+	\end{verbatim}
+\end{exemple}
+
+\renewcommand{\arraystretch}{1.21}
+\begin{longtable}{|l|l|l|l|}
+    \hline
+    \textbf{Commande}  & \textbf{Description}  & \textbf{Exemple}  & \\    \hline
+    \endfirsthead  \hline
+    \endfoot  \hline
+    charger   & \texttt{LDR R1, 78} & \texttt{R1 <- @78} & Place la valeur stockée à l'adresse 78 dans \texttt{R1}\\
+    stocker   & \texttt{STR R3, 125} & \texttt{@125 <- R3} & Place la valeur du registre \texttt{R3} à l'adresse 125 \\
+    déplacer  & \texttt{MOV R0, \#23} & \texttt{R0 <- 23} & Place la valeur 23 dans \texttt{R0} \\ \hline
+    ajouter   & \texttt{ADD R1, R0, \#128} &\texttt{R1 <- R0 + 128}& Additionne 128 à \texttt{R0} et le place dans \texttt{R1} \\
+    ajouter   & \texttt{ADD R0, R1, R2} & \texttt{R0 <- R1 + R2} & Additionne \texttt{R1} et \texttt{R2} et le place dans \texttt{R0} \\ 
+    soustraire & \texttt{SUB R1, R0, \#128} & \texttt{R1 <- R0 - 128} & Soustrait 128 de \texttt{R0} et le place dans \texttt{R1} \\
+    soustraire & \texttt{SUB R0, R1, R2} & \texttt{R0<- R1 - R2} & Soustrait \texttt{R2} de \texttt{R1} et le place dans \texttt{R0} \\ \hline
+    arrêt & \texttt{HALT} & &Arrêt de l'exécution du programme \\
+    saut  & \texttt{B label} &  & La prochaine instruction se situe en \texttt{label}\\
+    comparer & \texttt{CMP R0, \#23} & \texttt{R0 == 23} & Compare \texttt{R0} au nombre 23 - suivi par ``saut''\\
+    saut ``égal'' & \texttt{BEQ label} & \texttt{if R0 == 23}& Si le dernier \verb+CMP+ est égal, saute à \texttt{label}\\
+    saut ``différent'' & \texttt{BNE label} & \texttt{if R0 != 23}& Si le dernier \texttt{CMP} est différent, saute à \texttt{label}\\
+    saut ``plus grand'' & \texttt{BGT label} & \texttt{if R0 > 23}& Si le dernier \texttt{CMP} est plus grand, saute à \texttt{label}\\
+    saut ``plus petit'' & \texttt{BLT label} & \texttt{if R0 < 23}& Si le dernier \texttt{CMP} est plus petit, saute à \texttt{label}\\
+	\hline
+	entrée clavier & \texttt{INP R0} & \texttt{R0 = input()} & Demande une entrée clavier et stocke dans \texttt{R0} \\
+	sortie affichage & \texttt{OUT R0} & \texttt{print(R0)} & Affiche le contenu de \texttt{R0} \\
+	\hline
+	label & \texttt{mon\_label} & & crée un label dans le programme pour le boucles \\
+	constante & \texttt{mavaleur: 7} & \texttt{mavaleur = 7} & crée une constante de valeur 7\\ \hline
+\end{longtable}
+
+
+\newpage
+
+
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{Expliquer ce que fait cet algorithme:}{}
+		
+		\begin{verbatim}
+			MOV R0, #10
+			MOV R1, #20
+			ADD R2, R1, R0
+			ADD R2, R2, #5
+		\end{verbatim}
+	\end{exercice_cours}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{Expliquer ce que fait cet algorithme:}{}
+		
+		\begin{verbatim}
+			INP R0
+			ADD R0, R0, #1
+			OUT R0
+			HALT
+		\end{verbatim}
+	\end{exercice_cours}
+\end{minipage}
+
+
+
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{Expliquer ce que fait cet algorithme:}{}
+		
+		\begin{verbatim}
+     INP R0
+     INP R1
+     MOV R2, #0
+boucle:
+     CMP R1, #0
+     BEQ fin
+     SUB R1, R1, #1
+     ADD R2, R2, R0
+     B boucle
+fin:
+     OUT R2
+     HALT
+\end{verbatim}
+	\end{exercice_cours}
+
+	\begin{exercice_cours}{Programmer en Assembleur}
+		\begin{lstlisting}
+x = 0
+while x < 3:
+	x = x + 1
+print(x)
+		\end{lstlisting}
+	\end{exercice_cours}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{Expliquer ce que fait cet algorithme:}{}
+		
+		\begin{verbatim}
+     MOV R12, #999
+     MOV R11, #888
+     INP R0 
+     STR R0, 40 
+boucle:
+     CMP R0, #2 
+     BLT decision
+     SUB R0, R0, #2
+     B boucle
+decision:
+     CMP R0, #1
+     BEQ label
+     OUT R12
+     B halte
+label:
+     OUT R11
+halte:
+     HALT
+	  
+		\end{verbatim}
+	\end{exercice_cours}
+\end{minipage}
+
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{}{}
+		Écrire en assembleur un programme qui calcule la somme des $n$ premiers entiers naturels: $1+2+3+\ldots+n$
+		
+	\end{exercice_cours}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{}{}
+Écrire un programme qui demande 2 entiers positifs et affiche le plus grand
+	\end{exercice_cours}
+\end{minipage}
+
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{}{}
+		Écrire en assembleur un programme qui demande un entier naturel $n$ et affiche $2^n$
+		
+	\end{exercice_cours}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{}{}
+Écrire un programme qui demande trois entiers positifs et les affiche par ordre croissant	\end{exercice_cours}
+\end{minipage}
+
+%%
+
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{Traduire en assembleur}{}
+\begin{lstlisting}
+capital = 2000
+for annee in range(10):
+	capital = capital + 150
+print(capital)
+\end{lstlisting}		
+	\end{exercice_cours}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+	\begin{exercice_cours}{Traduire en assembleur}{}
+
+\begin{lstlisting}
+capital = 2000
+n = 0
+while capital < 3000:
+	capital = capital + 123
+print(n)
+			\end{lstlisting}
+		\end{exercice_cours}
+	\end{minipage}
+
+

@@ -1,0 +1,392 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Architecture Von Neumann} % Titre au centre
+\def\docname{ARSE01}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{easybox}[Architecture Von Neumann]{}
+	\begin{minipage}{0.7\linewidth}
+		Le mathématicien John Von Neumann a élaboré en 1944 la première description d'un ordinateur dont le programme est stocké dans sa mémoire.
+
+		Son architecture comporte 4 éléments:
+
+		\begin{itemize}
+			\item L' \textbf{Unité Arithmétique et Logique (UAL)} qui effectue les opérations de base.
+			\item L'\textbf{Unité de Contrôle} qui est chargé de séquencer les opérations.
+			\item La \textbf{mémoire} qui contient les données et les instructions
+			\item Les \textbf{périphériques (entrées, sorties)} qui communiquent avec l'extérieur.
+		\end{itemize}
+
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\linewidth}
+		\includegraphics[width=1\linewidth]{archi-vneumann.jpg}
+	\end{minipage}
+	
+\end{easybox}
+
+
+%\begin{easybox*}[commontheoremstyle, sidebyside, sidebyside align = top]{Opérations mathématiques de base en Python}{}
+
+\begin{easybox}{La carte mère}{}
+	C'est une carte de circuit imprimé qui permet de connecter tous les composants entre eux (processeur, périphériques I/O, mémoire etc.) On y retrouve:
+	
+	\begin{minipage}{0.49\linewidth}
+		
+	\begin{itemize}
+		\item un processeur connecté sur le socket CPU.
+		\item de la mémoire vive (RAM).
+		\item connecteurs en façade (USB, HDMI, RJ45\dots{})
+		\item une pile pour le BIOS
+		\item connecteurs pour composants internes (disque dur, cartes supplémentaires\dots{}) 
+	\end{itemize}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.49\linewidth}
+	\includegraphics[width=1\linewidth]{carte_mere_interne.jpg}
+	\end{minipage}
+\end{easybox}
+
+\begin{easybox}{Les connecteurs}{}
+
+		\begin{minipage}{0.49\linewidth}
+		
+	\begin{itemize}
+		\item des ports USB (Communication)
+		\item des ports HDMI / VGA / DVI (Video)
+		\item des ports Ethernet RJ45 (Réseau)
+		\item des prises jack (audio)
+	\end{itemize}
+	
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.49\linewidth}
+	\includegraphics[width=0.9\linewidth]{peripherique.jpg}
+	\end{minipage}
+
+
+\end{easybox}
+
+
+\begin{easybox}{Role du processeur}{}
+	Le \textbf{microprocesseur} (Central Processing Unit: CPU) est chargé d'interpréter et d'exécuter les instructions d'un programme, de lire et sauvegarder les résultat dans une mémoire.
+
+	Il est constitué de:
+	\begin{itemize}
+		\item une \textbf{horloge} qui synchronise toutes les opérations
+		\item une \textbf{unité de commande} qui appelle les données et décode les instructions
+		\item une \textbf{unité arithmétique et logique (UAL)} qui effectue les calculs et les comparaisons
+		\item des \textbf{registres} qui stockent les opérandes et les résultats des calculs.
+	\end{itemize}
+
+\end{easybox}
+
+
+\begin{easybox}{Les processeurs aujourd'hui}
+\renewcommand{\arraystretch}{1.2}
+		\begin{minipage}{0.49\linewidth}
+		
+	\begin{tabular}{|l|c|c|c|c|l|}
+        \hline
+        \textbf{Processeur}  & \textbf{Core} & \textbf{Fréq }  & \textbf{Usage} \\
+        \hline
+        AMD Ryzen9  & 16 & 4,3GHz  & Gaming +\\
+        \hline
+        Intel Core i9  & 24 & 3,2GHz  & Gaming \\
+        \hline
+        AMD Ryzen7   & 8 & 4,7GHz & Gaming \\
+        \hline
+        Intel Core i7  & 20 & 3,4GHz & Gaming \\
+        \hline
+        AMD Ryzen5   & 6 & 3,9GHz  & Bureautique, \\
+        \hline
+    \end{tabular}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.49\linewidth}
+\includegraphics[width=0.95\linewidth]{arse01.png}
+	\end{minipage}
+\end{easybox}
+
+
+
+
+\begin{easybox}{Mémoire vive et mémoire morte}{}
+
+	\begin{itemize}
+		\item La \textbf{mémoire vive} (RAM: ``Random Access Memory'') permet de stocker les informations pendant tout le temps de fonctionnement de l'ordinateur.
+		
+		Son contenu est par contre détruit dès lors que l'ordinateur est éteint ou redémarré, contrairement à une mémoire de masse telle que le disque dur, capable de garder les informations même lorsqu'il est hors tension. On dit que cette mémoire est \textbf{volatile}.
+	
+		Cette mémoire est bien plus rapide les périphériques de stockage de masse (Disque dur, clé USB \dots) 
+	
+		\item La \textbf{mémoire morte} (ROM: ``Read Only Memory'') permet de stocker des données nécessaires au démarrage de l'ordinateur.
+		
+		Son contenu ne s'efface pas lors de la mise hors tension du système. C'est une mémoire non volatile qui contient les éléments essentiels au démarrage de l'ordinateur (BIOS).
+				
+		\item La \textbf{mémoire de masse} (Disque dur--HDD) sert à conserver les données de manière permanente. 
+	\end{itemize} 
+	
+\end{easybox}
+
+\begin{easybox}{Vitesse des différentes mémoires}
+
+	\begin{minipage}{0.49\linewidth}
+		\begin{tabular}{|l|c|c|}
+			\hline
+			\textbf{Type de mémoire} & \textbf{Débit moyen}  \\
+			\hline
+			RAM (DDR4/DDR5) & 25--80 Go/s\\
+			\hline
+			SSD NVMe (PCIe 4.0/5.0) & 3--14 Go/s \\
+			\hline
+			SSD SATA & 500--600 Mo/s\\
+			\hline
+			HDD SATA & 80--200 Mo/s \\
+			\hline
+			ROM du BIOS (EEPROM) & 50--100 ns \\
+			\hline
+		\end{tabular}
+
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.49\linewidth}
+	\includegraphics[width = 1\linewidth]{memoire.jpg}
+	\end{minipage}		
+\end{easybox}
+
+\begin{exercice_cours}{Reconnaitre les différents types de mémoires}{}
+
+\begin{itemize}
+	\item Associez chaque image à son type de mémoire (RAM, SSD NVMe, SSD SATA, HDD SATA, ROM BIOS).
+\end{itemize}
+
+\includegraphics[width=0.3\linewidth]{ram4.jpg}
+\includegraphics[width=0.3\linewidth]{nvme.jpg}
+\includegraphics[width=0.3\linewidth]{rom_bios.jpg}
+
+\includegraphics[width=0.28\linewidth]{sata_ssd.jpg}
+\includegraphics[width=0.28\linewidth]{sata_hdd.jpg}
+\includegraphics[width=0.28\linewidth]{proc.jpg}
+\end{exercice_cours}
+
+
+
+
+\end{document}
+Pour mémoire, les nombres flottants sont ce que nous appelons en mathématiques les nombres réels ($\R$). A ceci près qu'en Python, on ne peut pas représenter tous les réels mais uniquement les nombres qui auront un nombre fini de chiffres après la virgule. Dans les autres cas, nous devrons faire des approximations.
+
+
+
+\section{Les nombres dyadiques}
+
+
+
+\begin{definition}[les nombres décimaux]{}
+
+
+Un nombre décimal est un nombre s'écrvant sous la forme $\dfrac{x}{10^n}$ où $x$ est un entier relatif et $n$ un entier naturel. Visuellement, un nombre décimal possède un nombre fini de chiffres après la virgule.
+\end{definition}
+
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|p{3cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+\hline
+Nombre & $4$ & $-3$ & $0.25$ & $1/3$ & $1/4$ & $\pi$ & $10/3$ \\ \hline
+Décimal ? & OUI & OUI & OUI & NON & OUI & NON & NON \\ \hline
+\end{tabular}
+
+
+\begin{definition}[les nombres dyadiques]{}
+	
+	Par analogie, on appelle nombres dyadiques les nombres s'écrivant sous la forme $\dfrac{x}{2^n}$.
+\end{definition}
+
+\begin{exercice_cours}[Dire si les nombres suivants sont dyadiques]{}
+
+	%\renewcommand{\arraystretch}{2.2}
+\begin{tabular}{|p{3cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+\hline
+Nombre & $13/4$ & $1/5$ & $2.5$ & $25$ & $10/3$ & $\pi$ & $3.125$ \\ \hline
+Dyadique ? &  &  &  &  &  &  &  \\ \hline
+\end{tabular}
+\end{exercice_cours}
+
+\begin{definition}[Développement dyadique d'un nombre]{}
+	
+	On appelle développement dyadique d'un nombre l'écriture binaire de ce nombre.
+\end{definition}
+
+\begin{propriete}[Écriture binaire d'un nombre dyadique]{}
+	
+	Pour obtenir le développement dyadique d'un nombre qui peut s'écrire sous la forme $\dfrac{x}{2^n}$, on prend le nombre binaire correspondant à $x$ et on insère une virgule avant le n-ième bit en partant de la fin.
+\end{propriete}
+
+\begin{exemple}[Écrire le développement dyadique de $2.5$]{}
+
+	$2.5 = \dfrac{5}{2^1}$. Le nombre binaire correspondant à 5 est $101_2$. 
+	
+	En insérant une virgule avant le premier bit en partant de la fin, on obtient $10.1_2$.
+
+\end{exemple}
+
+	\begin{exercice_cours}[Trouver les représentations binaires des nombres dyadiques suivants: $\dfrac{17}{4}$ et $\dfrac{54}{64}$]
+\vspace{2cm}
+	\end{exercice_cours}
+
+
+\section{Conversion d'un nombre décimal en base 2}
+
+	\begin{methode}{\quad}{}
+	\begin{enumerate}
+	\item Conversion de la partie entière du nombre décimal
+	\item Multiplication de la partie décimale par 2
+	\item Récupération de la partie entière 
+	\item Si la partie décimale est nulle on arrête sinon retour au 2.
+	\item Assemblage de la partie entière et des bits récupérés pour former l'écriture binaire
+\end{enumerate}
+	\end{methode}
+
+	\bigskip
+
+\begin{exemple}[Conversion du nombre  $5.1875$ en binaire.]
+\begin{enumerate}
+	\item Conversion de la partie entière: $5_{10}=101_2$
+	\item Multiplications successives par 2 de la partie décimale jusqu'à ce qu'elle soit nulle.
+\end{enumerate}
+	
+\begin{eqnarray*}
+0.1875 \times 2  = & 0.375 & =  \underline{0} + 0.375 \\
+0.375 \times 2  = & 0.75 & =  \underline{0} + 0.75 \\
+0.75 \times 2  = & 1.5 & =  \underline{1} + 0.5 \\
+0.5 \times 2  = & 1  & =  \underline{1} + 0.0
+\end{eqnarray*}
+
+On assemble ensuite la partie entière et la partie décimale, ainsi: $5.1875 = 101,0011_2$
+
+\end{exemple}  
+\begin{exercice_cours}[Convertir les nombres suivants:]{}
+
+	\begin{minipage}{8cm}
+$$9.6875$$
+\end{minipage}
+\begin{minipage}{8cm}
+$$2.625$$
+\end{minipage}
+
+\vspace{3cm}
+	\end{exercice_cours}
+
+	\begin{remarque}{\quad}{}
+
+		Il existe des nombres décimaux non dyadiques! Ainsi si on applique la méthode ci-dessus, alors le développement ne s'arrêtera pas. C'est pour cela qu'il faudra définir une précision souhaitée. Et cela explique aussi certains comportements étranges au premier abord de Python.
+
+	
+	\end{remarque}
+
+	\begin{lstlisting}
+>>> print(0.1 + 0.1)
+0.2
+>>> print(0.1 + 0.1 + 0.1)
+0.30000000000000004
+
+
+\end{lstlisting}
+
+\begin{itemize}
+	\item En Python, les flottants sont codés sur 64 bits
+	\item Il faut éviter de tester l'égalité de deux flottants. 
+\end{itemize}
+
+\begin{exercice_cours}[Expliquer par le calcul le résultat de l'addition $1.1+0.1$]{}
+
+\end{exercice_cours}
+
+\vspace{3.5cm}
+
+\section{De l'écriture binaire à la notation décimale}
+
+\begin{exemple}[Convertir $100,0101_2$]
+
+\begin{enumerate}
+	\item Convertir la partie entière: $100_2=4_{10}$
+	\item Convertir la partie décimale. On utilise un tableau des puissances de 2 négative.
+\end{enumerate}
+	
+\renewcommand{\arraystretch}{1.3}
+\begin{footnotesize}
+\begin{tabular}{|p{2.6cm}|p{1.8cm}|p{1.9cm}|p{2.2cm}|p{2.4cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+Rang du bit & -1 & -2 & -3 & -4 & -5 & -6  \\ \hline
+Puissance de 2 & $2^{-1}=0.5$ & $2^{-2}=0.25$ & $2^{-3}=0.125$ & $2^{-4}=0.0625$ & $2^{-5}=0.03125$ & $2^{-6}=0.015625$  \\ \hline
+Bit & 0 & 1 & 0 & 1 & 0 & 0  \\ \hline
+Valeur & 0 & 0.25  & 0  & 0.0625 & 0 & 0 \\ \hline
+
+\end{tabular}
+\end{footnotesize}
+
+
+\medskip
+
+Il suffit ensuite d'additionner toutes les valeurs calculées: $100,0101_2=4+0.25+0.0625=4.3125_{10}$
+
+\end{exemple}
+
+\begin{exercice_cours}[Trouver la représentation décimale de $101.001$]{}
+
+	
+\begin{enumerate}
+	\item Convertir la partie entière: \dotfill
+	\item Convertir la partie décimale. On utilise un tableau des puissances de 2 négative.
+\end{enumerate}
+	
+\renewcommand{\arraystretch}{1.3}
+\begin{footnotesize}
+\begin{tabular}{|p{2.1cm}|p{1.8cm}|p{1.9cm}|p{2.2cm}|p{2.4cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+Rang du bit & -1 & -2 & -3 & -4 & -5 & -6  \\ \hline
+Puissance de 2 & $2^{-1}=0.5$ & $2^{-2}=0.25$ & $2^{-3}=0.125$ & $2^{-4}=0.0625$ & $2^{-5}=0.03125$ & $2^{-6}=0.015625$  \\ \hline
+Bit &  &  &  &  &  &   \\ \hline
+Valeur &  &   &   &  &  &  \\ \hline
+
+\end{tabular}
+\end{footnotesize}
+\end{exercice_cours}
+
+\begin{exercice_cours}[Convertir en décimal les nombres suivants:]{}
+\begin{multicols}{2}
+
+$1101,100101$
+
+\columnbreak
+
+$1000,11101$
+
+\end{multicols}
+
+\vspace{1cm}
+\end{exercice_cours}
+
+\section{Notation scientifique}
+
+
+En base dix, il est possible d'écrire les très grands nombres et les très petits nombres grâce aux "puissances de dix" (exemples $6,02\times 10^{23}$ ou $6,67 \times 10^{-11}$). 
+
+Il est possible de faire exactement la même chose avec une représentation binaire, puisque nous sommes en base 2, nous utiliserons des "puissances de deux" à la place des "puissances dix" (exemple $101,1101 .  2^{10}$).
+
+Exemple: Pour passer d'une écriture sans "puissance de deux" à une écriture avec "puissance de deux", il suffit décaler la virgule: $1101,1001=1,1011001.2^{11}$.
+
+ Pour passer de $1101,1001$ à $1,1011001$ nous avons décalé la virgule de 3 rangs vers la gauche d'où le $2^{11}$. (attention de ne pas oublier que nous travaillons en base 2 le " $11$ "  correspond bien à un décalage de 3 rangs de la virgule, car $11_2=3_{10}$.
+ 
+
+Exemple: Si l'on désire décaler la virgule vers la gauche, il va être nécessaire d'utiliser des "puissances de deux négatives". $0,0110_2=1,10.2^{-10}$. Nous décalons la virgule de 2 rangs vers la droite, d'où le " $-10$ ".
+ 
+ 
+ \bigskip
+
+\begin{exercice_cours}[Trouver l'écriture binaire scientifique de:]{}
+ \begin{enumerate}
+ 	\item $1011,0111101_2$ \dotfill
+ 	\item $0.0745_{10}$ \dotfill
+ \end{enumerate}
+
+\end{exercice_cours}
