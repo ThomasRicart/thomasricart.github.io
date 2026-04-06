@@ -13,7 +13,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | Support | Description | Corrections |
 | :--- | :--- | :--- |
 | [📕 **Cours**](./AP01_Constructions_elementaires.pdf) | Le support de cours complet en version PDF. | |
-| [💡 **Synthèse**](./AP01_Constructions_elementaires_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
+| [💡 **Synthèse**](./AP01_Constructions_elementaires-Synth.tex) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/AP01_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP01_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/AP01_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP01_EXO1_Correction.pdf) |

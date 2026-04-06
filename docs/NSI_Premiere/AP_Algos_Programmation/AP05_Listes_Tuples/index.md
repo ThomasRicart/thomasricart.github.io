@@ -12,7 +12,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | Support | Description | Corrections |
 | :--- | :--- | :--- |
 | [📕 **Cours**](./AP05_Listes_Tuples.pdf) | Le support de cours complet en version PDF. | |
-| [💡 **Synthèse**](./AP05_Listes_Tuples_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
+| [💡 **Synthèse**](./AP05_Listes_Tuples-synth.pdf) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/AP05_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP05_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**](./exercices/AP05_EXO1_Sujet.pdf) | Exercices d'application boucle FOR |[Correction](./exercices/AP05_EXO1_Correction.pdf) |

@@ -12,7 +12,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | Support | Description | Corrections |
 | :--- | :--- | :--- |
 | [📕 **Cours**](./AP04_Boucles_FOR_WHILE.pdf) | Le support de cours complet en version PDF. | |
-| [💡 **Synthèse**](./AP04_Boucles_FOR_WHILE_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
+| [💡 **Synthèse**](./AP04_Boucles_FOR_WHILE-synth.pdf) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/AP04_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP04_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/AP04_EXO1_Sujet.pdf) | Exercices d'application boucle FOR |[Correction](./exercices/AP04_EXO1_Correction.pdf) |
