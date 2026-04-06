@@ -1,0 +1,168 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Conditions IF} % Titre au centre
+\def\docname{AP03-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{easybox}{Les structures conditionnelles IF}
+
+\begin{minipage}{0.32\linewidth}
+	\begin{tikzpicture}[node distance=1.5cm]
+		% Nœuds
+		\node (instruction1) [process] at (0, 0){Instruction 1};
+		\node (decision) [decision] at (0, -2){Condition};
+		\node (instruction2) [process] at (0, -4.5){Instruction 2};
+		\node (instruction3) [process] at (0, -6) {Instruction 3};
+	
+		\coordinate (midpoint1) at ($(instruction2.south)!0.5!(instruction3.north)$);
+		\coordinate (point1) at (2, -4.5);
+		% Flèches
+		\draw [arrow] (instruction1) -- (decision);
+		\draw [arrow] (decision.south) -- node[anchor=west] {True} (instruction2.north);
+		\draw [arrow] (instruction2) -- (instruction3);
+		\draw [arrow] (decision.east) -| node[anchor=east, xshift=1.2cm, yshift=-2cm] {False}(point1);
+		\draw [arrow] (point1) |- (midpoint1);
+	\end{tikzpicture}	
+	\end{minipage} \hfill
+	\begin{minipage}{0.65\linewidth}
+		\begin{minipage}{0.55\linewidth}
+	\begin{scratch}
+    \blocklook{mettre \ovalvariable{total} à \ovalvariable{10}}
+\blockif{si \booloperator{\ovalmove{total} > \ovalnum{0}} alors}
+{\blocklook{mettre \ovalvariable{total} à \ovaloperator{\ovalvariable{total} + \ovalnum{1}}}
+}
+\blocklook{Afficher \ovalvariable{total}}
+\end{scratch}		
+		\end{minipage}\hfill
+		\begin{minipage}{0.43\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En python
+Instruction_1
+if condition:
+	Instruction_2
+Instruction_3
+	\end{lstlisting}
+    
+    \begin{lstlisting}[numbers=none]
+# En python
+total = 10
+if total > 0:
+	total = total + 1
+print(total)
+	\end{lstlisting}
+		\end{minipage}
+	
+	
+	\begin{itemize}
+		\item l'\verb+Instruction 1+ est effectuée
+		\item SI la \verb+Condition+ est \verb+True+ alors l'\verb+Instruction 2+ est effectuée
+		\item SINON on va directement à l'\verb+Instruction 3+
+		\item Dans tous les cas l'\verb+Instruction 3+ est effectuée
+	\end{itemize}
+	
+	La \verb+Condition+ est un test qui est évalué en python par un booléen.
+	
+	\end{minipage}
+
+\end{easybox}
+
+
+	\begin{easybox}{Les structures conditionnelles IF -- ELSE}{}
+		\begin{minipage}{0.4\linewidth}
+			\begin{tikzpicture}[node distance=1.5cm]
+				% Nœuds
+				\node (instruction1) [process] at (0, 0){instruction 1};
+				\node (decision) [decision] at (0, -2){Condition};
+				\node (instruction2) [process] at (3.5, -4){instruction 3};
+				\node (instruction3) [process] at (0, -4) {instruction 2};
+				\node (instruction4) [process] at (0, -6) {instruction 4};
+				
+				\coordinate (midpoint1) at ($(instruction3.south)!0.5!(instruction4.north)$);
+					% Flèches
+				\draw [arrow] (instruction1) -- (decision);
+				\draw [arrow] (decision.east) -| node[anchor=south] {False} (instruction2.north);
+				\draw [arrow] (decision.south) -- node[anchor=east, xshift=-0.5cm, yshift=0.3cm] {True} (instruction3.north);
+				\draw [arrow] (instruction3) -- (instruction4);
+				\draw [arrow] (instruction2) |- (midpoint1);
+		
+			\end{tikzpicture}		
+		\end{minipage}\hfill
+		\begin{minipage}{0.58\linewidth}
+			\begin{minipage}{0.48\linewidth}
+	\begin{scratch}
+\blockifelse{si \booloperator{\ovalmove{x} >= \ovalnum{0}} alors}
+{\blocklook{mettre \ovalvariable{x} à {\ovalvariable{x ** 2} }}}
+{\blocklook{mettre \ovalvariable{x} à {\ovalvariable{x ** 3} }}}
+\end{scratch}	
+			\end{minipage}\hfill
+			\begin{minipage}{0.48\linewidth}
+	\begin{lstlisting}[numbers=none]
+# En python
+	
+instruction_1
+	
+if condition:
+	instruction_2
+else:
+	instruction_3
+instruction_4
+	\end{lstlisting}		
+			\end{minipage}
+				
+				
+	\begin{itemize}
+		\item l'\verb+instruction 1+ est effectuée
+		\item SI la \verb+Condition+ est \verb+True+ alors l'\verb+instruction 2+ est effectuée
+		\item SINON l'\verb+instruction 3+ est effectuée
+		\item Dans tous les cas l'\verb+instruction 4+ est effectuée
+	\end{itemize}
+		\end{minipage}
+			
+			
+	\end{easybox}
+	
+	\medskip
+
+		\begin{exemple}[Les structures conditionnelles]{}
+			
+        \begin{minipage}{0.48\linewidth}
+            \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+def plus_grand2(a, b):
+    ''' Renvoie le plus grand des 
+    deux nombres a et b '''
+	if a > b:
+		return a
+	else:
+		return b
+
+maximum = plus_grand2(5, 10)
+print(maximum) # Affiche 10
+	\end{CodePythontexAlt}
+        \end{minipage}\hfill{}
+        \begin{minipage}{0.48\linewidth}
+            \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+def plus_grand3(a, b, c):
+    ''' Renvoie le plus grand des 
+    trois nombres a, b et c '''
+    if a > b and a > c:
+		return a
+	elif b > a and b > c:
+		return b
+	else:
+		return c
+
+maximum = plus_grand3(5, 10, 7)
+print(maximum) # Affiche 10
+		\end{CodePythontexAlt}
+        \end{minipage}
+        
+	
+	
+	
+		
+	
+	
+	\end{exemple}	

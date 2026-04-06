@@ -1,0 +1,78 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Les Fonctions} % Titre au centre
+\def\docname{AP02-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{easybox}{Gestion des entrées en Python}
+    \begin{CodePythontexAlt}[Largeur=17cm,Centre,PremLigne=1,Lignes=false,]{}
+        a = input("Entrer une valeur au clavier")           # a sera de type str
+        b = int(input("Entrer une valeur au clavier"))      # b sera de type int
+    \end{CodePythontexAlt}
+
+    \begin{CodePythontexAlt}[Largeur=17cm,Centre,PremLigne=1,Lignes=false,]{}
+         a = 6
+         print(a)  # Affiche 6
+         print("La valeur de a est", a)  # Affiche "La valeur de a est 6"   
+      \end{CodePythontexAlt}
+\end{easybox}	
+
+\begin{methode}[Formatage de l'affichage avec \texttt{f-string} et \texttt{format()}]{}
+
+    L'idée est de créer un texte à trou que l'on va compléter par des variables.
+\begin{ConsolePythontex}[Label=false]{}
+    name = 'Paul'
+    age = 25
+    print(f'Votre nom est {name} et vous avez {age} ans.')
+\end{ConsolePythontex}  
+
+\begin{ConsolePythontex}[Label=false]{}
+    print('Votre nom est {} et vous avez {} ans'.format(name, age))
+\end{ConsolePythontex}
+\end{methode}
+
+
+\begin{definition}[Les fonctions]{}
+
+	\begin{CodePythontexAlt}[Centre,PremLigne=1]{}
+		def f(x):
+			""" Fonction renvoyant x ** 2 """
+			y = x ** 2		# Calcul de x ** 2
+			return y  		# valeur renvoyée: y
+		\end{CodePythontexAlt}
+		
+   \end{definition}
+
+		\begin{CodePythontexAlt}[Centre,PremLigne=1, Lignes=false,]{}
+			a = 4   		# on affecte 4 à la variable a
+			z = f(4)		# on appelle la fonction f avec comme argument 4 
+							# et on récupère la valeur renvoyée dans la variable z
+		\end{CodePythontexAlt}
+
+\begin{remarque}[Variables locales et variables globales]
+	
+	\begin{itemize}
+		\item les \textbf{variables locales} ne sont connues que dans la fonction
+		\item les \textbf{variables globales} sont connues dans tout le programme
+	\end{itemize}
+
+\begin{CodePythontexAlt}[Centre,PremLigne=1, Lignes=false,]{}
+print(x)   # ERREUR -> x est une variable locale (tout comme y et z)
+\end{CodePythontexAlt}
+
+\end{remarque}
+
+
+
+\begin{easybox}{Vérification de la valeur d'une variable}{}
+
+\begin{CodePythontexAlt}[Centre,PremLigne=1, Lignes=false,]{}
+assert f(6) == 36     	# True -> aucune message 
+assert f(6) == 12     	# False -> message d'erreur 
+assert not(f(6) == 12)	# True -> aucun message
+
+\end{CodePythontexAlt}
+\end{easybox}
+
