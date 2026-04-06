@@ -1,0 +1,149 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Représentation des entiers positifs} % Titre au centre
+\def\docname{RD01-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{propriete}[Représentation d'un entier en binaire]{}
+
+	\begin{minipage}{0.38\linewidth}
+		\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	Val dec & Val bin & & Val dec & Val bin\\ \hline
+	0 & 0000 & & 4 & 0100 \\ \hline
+	1 & 0001 & & 5 & 0101 \\ \hline
+	2 & 0010 & & 6 & 0110 \\ \hline
+	3 & 0011 & & 7 & 0111 \\ \hline
+\end{tabular}
+	\end{minipage}\hfill
+	\begin{minipage}{0.58\linewidth}
+		\begin{itemize}
+		\item $n$ bits codent $2^n$ valeurs entre 0 et $2^n-1$.
+		\item $8$ bits codent $2^8 = 256$ valeurs entre 0 et $255$.
+		\item le \textbf{bit de poids faible} est le bit de droite. C'est le bit de \textbf{parité}. 
+		\item le \textbf{bit de poids fort} est le bit de gauche.
+		\item un \textbf{octet} est un groupe de 8 bits.
+	\end{itemize}
+
+	\end{minipage}
+\end{propriete}
+
+\begin{methode}[Conversion binaire~--~décimal: $1101\,1011_2=128+64+16+8+2+1=219_{10}$]{}
+
+\renewcommand{\arraystretch}{1.4}
+		\begin{tabular}{|p{2.6cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|}
+		\hline
+		Rang du bit & 7 & 6 & 5 & 4 & 3 & 2 & 1 & 0 \\ \hline
+		Puissance de 2 & $2^7$ & $2^6$ & $2^5$ & $2^4$ & $2^3$ & $2^2$ & $2^1$ & $2^0$ \\ \hline
+		Bit & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\ \hline
+		Valeur & 128 & 64 & 0 & 16 & 8 & 0 & 2 & 1 \\ \hline
+		
+		\end{tabular}
+		\end{methode}
+
+	\begin{methode}[Conversion décimal~--~binaire par division succéssives par 2]{}
+
+		\begin{minipage}{0.74\linewidth}
+					Par exemple pour convertir $44_{10}$ en binaire:
+
+			\begin{itemize}
+				\item On effectue des divisions par $2$ jusqu'à ce que le quotient soit nul.
+				\item On lit ensuite les restes de la droite vers la gauche.
+			
+			\end{itemize}
+			
+			On a donc: $$44_{10}=0010 \; 1100_2$$
+			
+			\end{minipage}\hfill
+			\begin{minipage}{0.25\linewidth}
+			\begin{center}
+			\includegraphics[width = 0.95\linewidth]{02.jpg}
+			
+			\end{center}
+			
+			\end{minipage}
+
+\end{methode}
+
+\begin{methode}[Conversion décimal~--~binaire par la méthode des soustractions successives]{}
+
+				
+		\begin{minipage}{0.54\linewidth}
+			
+			\begin{itemize}
+				\item $222\geqslant 128$. On peut donc décomposer $222 = 2^7 + 94$
+				\item $94 \geqslant 64$. On peut donc décomposer $94 = 2^6 + 30$
+				\item $30 \geqslant 16$. On peut donc décomposer $36 = 2^4 + 14$
+				\item $14  \geqslant 8$. On peut donc décomposer $14 = 2^3 + 6$
+				\item $6 \geqslant 4$. On peut donc décomposer $6 = 2^2 + 2$
+				\item $2 \geqslant 2$. On peut donc décomposer $2 = 2^1 + 0$
+			\end{itemize}
+			
+			\end{minipage}
+			\begin{minipage}{0.44\linewidth}
+			\begin{center}
+			\includegraphics[width = 1\linewidth]{03.jpg}
+			
+			\end{center}
+			
+			\end{minipage}
+			\end{methode}
+
+
+	
+
+	\begin{propriete}[Opérations binaires]{}
+		\begin{itemize}
+			\item \textbf{Multiplier} une valeur décimale par 2 revient à décaler tous les bits d'un cran vers la gauche et à ajouter un 0 sur le bit de poids faible.
+			\item \textbf{Diviser} une valeur décimale par 2 revient à décaler tous les bits d'un cran vers la droite. Le bit de poids faible est perdu. Cela revient à récupérer le quotient de la division par 2.
+			\item \textbf{Multiplier} une valeur décimale par $2^n$ revient à décaler tous les bits de $n$ crans vers la gauche et à ajouter des 0 sur les bits de poids faible.
+			\item \textbf{Diviser} une valeur décimale par $2^n$ revient à décaler tous les bits de $n$ crans vers la droite. Les bit de poids faible sont perdus. Cela revient à récupérer le quotient de la division par $2^n$.
+		\end{itemize}
+	\end{propriete}
+
+\pagebreak
+	
+	\begin{propriete}[Représentation d'un entier en hexadécimal]{}
+\begin{minipage}{0.18\linewidth}
+		\begin{tabular}{|c|c|}
+	\hline
+	Val dec & Val hexa \\ \hline
+	10 & A \\ \hline
+	11 & B \\ \hline
+	12 & C \\ \hline
+	13 & D \\ \hline
+	14 & E \\ \hline
+	15 & F \\ \hline
+\end{tabular}
+	\end{minipage}\hfill
+	\begin{minipage}{0.78\linewidth}
+		\begin{itemize}
+		\item $1$ valeur hexadécimale codent $16$ valeurs entre 0 et $15$.
+		\item $2$ valeurs hexadécimales codent $256$ valeurs
+		\item un \textbf{octet} est représenté par 2 valeurs hexadécimales comprises entre 00 et FF.
+	\end{itemize}
+
+	\end{minipage}
+
+	\end{propriete}
+		
+\begin{methode}[Conversion en python]
+
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, lineNumbers=false]{}
+a_bin = 0b1101	# le 0b veut dire que la valeur est écrite en binaire
+a_dec = int(a_bin)	# conversion en décimal - valeur entière égale à 13
+a_hex = hex(a_dec)	# conversion en hexadécimal - valeur égale à 0xd
+
+b_dec = 44
+b_bin = bin(b_dec)	# conversion en binaire - valeur égale à 0b101100
+b_hex = hex(b_dec)	# conversion en hexadécimal - valeur égale à 0x2c
+
+# de manière générale, pour convertir un entier n en base b, on peut utiliser:
+a_dec = int('1101', 2)	 # conversion binaire en décimal égale à 13
+a_hex = hex(int('1101', 2))	# conversion binaire en hexadécimal égale à 0xd
+a_bin = bin(int('A3', 16))	# conversion hexadécimal en binaire égale à 0b10100011
+\end{CodePythontexAlt}
+\end{methode}

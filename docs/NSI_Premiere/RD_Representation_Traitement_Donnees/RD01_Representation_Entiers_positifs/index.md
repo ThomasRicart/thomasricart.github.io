@@ -10,7 +10,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | Support | Description | Corrections |
 | :--- | :--- | :--- |
 | [📕 **Cours**](./RD01_Entiers_positifs.pdf) | Le support de cours complet en version PDF. | |
-| [💡 **Synthèse**](./RD01_Entiers_positifs_Synthese.html) | Fiche récapitulative des concepts clés (HTML). | |
+| [💡 **Synthèse**](./RD01_Entiers_positifs-synth.pdf) | Fiche récapitulative des concepts clés (PDF). | |
 | [🎴 **Flashcards**](./flashcards/RD01_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/RD01_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/RD01_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/RD01_EXO1_Correction.pdf) |

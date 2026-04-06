@@ -11,11 +11,11 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | :--- | :--- | :--- |
 | [📕 **Cours**](./RD06_Traitement_Donnees_Table.pdf) | Le support de cours complet en version PDF. | |
 | [💡 **Synthèse**](./) | Fiche récapitulative des concepts clés (HTML). | |
-| [🎴 **Flashcards**](./flashcards/RD06_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
-| [📝 **Quiz**](./quiz/RD06_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices 01**](./) | Exercices d'application |[Correction](./) |
+| [🎴 **Flashcards**]() | Cartes de mémorisation pour réviser les notions. ||
+| [📝 **Quiz**]()| Auto-évaluation rapide sur le chapitre. ||
+| [✏️ **Exercices 01**]() | Exercices d'application |[Correction]() |
 | [✏️ **Exercices 02**]() | Exercices autocorrigés| |
-| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/bc72-10504512) | **bc72-10504512** | [Correction](./)|
+| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/bc72-10504512) | **bc72-10504512** | [Correction]()|
 
 
 |Fichiers|Description|

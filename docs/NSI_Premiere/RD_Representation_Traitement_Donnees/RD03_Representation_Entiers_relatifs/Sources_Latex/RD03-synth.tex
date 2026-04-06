@@ -1,0 +1,88 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Représentation des entiers relatifs} % Titre au centre
+\def\docname{RD03-S}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+
+\begin{easybox}[Codage binaire des entiers relatifs]{}
+	\begin{minipage}{0.68\linewidth}
+\begin{itemize}
+	\item le bit de poids fort des nombres négatifs est 1
+	\item le bit de poids fort des nombres positifs est 0
+	\item il y a autant de positifs que de négatifs (0 est positif)
+	\item $n$ bits permettent de coder $2^n$ valeurs différentes, soit $2^{n-1}$ valeurs positives et $2^{n-1}$ valeurs négatives.
+	\item les valeurs codées avec $n$ bits sont comprises entre $-2^{n-1}$ et $2^{n-1}-1$
+\end{itemize}
+	\end{minipage} \hfill
+	\begin{minipage}{0.30\linewidth}
+		\includegraphics[width=0.79\linewidth]{codageZ.png}
+	
+	\end{minipage}
+
+\end{easybox}
+
+\begin{easybox}[Complément à 2~--~Première méthode]{}
+	\begin{enumerate}
+		\item Coder la valeur absolue du nombre en binaire
+	   \item Inverser les bits de la représentation du nombre en base 2. (complément à 1)
+	   \item Additionner 1 au résultat précédent. 
+	\end{enumerate}
+\end{easybox}
+
+
+
+\begin{easybox}[Complément à 2~--~Deuxième méthode]{}
+ \begin{enumerate}
+ 	\item Coder la valeur absolue du nombre en binaire
+	\item Recopier les valeurs des bits de droite à gauche jusqu'au premier \verb|1|   inclus.
+	\item Inverser les bits restant jusqu'au dernier (bit de gauche)
+ \end{enumerate}
+\end{easybox}
+
+\bigskip
+
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Représentation des flottants} % Titre au centre
+\def\docname{RD04-S}        % Identifiant à gauche
+
+\makeheader{} % Affiche le bandeau
+
+	\begin{methode}[Conversion d'un nombre décimal en base 2]{}
+	\begin{enumerate}
+	\item Conversion de la partie entière du nombre décimal
+	\item Multiplication de la partie décimale par 2
+	\item Récupération de la partie entière 
+	\item Si la partie décimale est nulle on arrête sinon retour au 2.
+	\item Assemblage de la partie entière et des bits récupérés pour former l'écriture binaire
+\end{enumerate}
+	\end{methode}
+
+	\begin{methode}[Conversion d'un nombre binaire en décimal $100,0101_2$]{}
+
+\begin{enumerate}
+	\item Convertir la partie entière: $100_2=4_{10}$
+	\item Convertir la partie décimale. On utilise un tableau des puissances de 2 négative.
+\end{enumerate}
+
+	
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|p{2.6cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|p{1.3cm}|}
+\hline
+Rang du bit & -1 & -2 & -3 & -4 & -5 & -6  \\ \hline
+Puissance de 2 & $2^{-1}$ & $2^{-2}$ & $2^{-3}$ & $2^{-4}$ & $2^{-5}$ & $2^{-6}$  \\ \hline
+Bit & 0 & 1 & 0 & 1 & 0 & 0  \\ \hline
+Valeur & 0 & 0.25  & 0  & 0.0625 & 0 & 0 \\ \hline
+
+\end{tabular}
+
+
+\medskip
+
+Il suffit ensuite d'additionner toutes les valeurs calculées: $100,0101_2=4+0.25+0.0625=4.3125_{10}$
+
+\end{methode}
