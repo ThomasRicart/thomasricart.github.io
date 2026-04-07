@@ -1,0 +1,374 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{TP Réseau Packet Tracer} % Titre au centre
+\def\docname{ARSE05-TP1}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+\begin{methode}{}{}
+\begin{itemize}
+    \item Lancer le logiciel \verb+Packet Tracer+ (Bureau / Mathématique en Local)
+    \item Ajouter un poste dans le réseau: \verb+Terminaux / Generic+. Le poste ajouté s'appelle \verb+PC-PT PC0+
+    \item pour supprimer ce poste ou tout autre élément vous pouvez cliquer sur l'icône \verb+Delete(Del)+ à droite de l'écran puis sélectionner l'élément à supprimer.
+\end{itemize}
+\end{methode}
+
+\section{Communication poste à poste}
+
+\begin{exercice_cours}[Connexion poste à poste]{}
+
+    \medskip
+
+    \begin{minipage}{0.60\linewidth}
+\begin{enumerate}
+            \item Placer deux postes \verb+Generic+ nommés PC01 et PC02
+            \item Relier les deux postes par une connexion automatique. \includegraphics[width = 0.05\linewidth]{./icone1.jpg}
+\end{enumerate}       
+    \end{minipage}\hfill
+    \begin{minipage}{0.38\linewidth}
+        \begin{center}
+                    \includegraphics[width = 0.8\linewidth]{./icone02.jpg}
+        \end{center}
+    \end{minipage}
+\begin{remarque}{}{}
+En choisissant la connexion automatique, le logiciel se charge de choisir le meilleur type de connexion. Ici la liaison utilisée est un câble croisé.
+\end{remarque}
+
+\end{exercice_cours}
+
+\begin{exercice_cours}[Communication entre les postes]{}
+
+    Pour faire communiquer ces deux postes on peut utiliser un \verb+PDU+ (Protcol Data Unit).
+
+    \begin{enumerate}
+        \item Cliquer sur l'icône ``Add simple PDU'' \includegraphics[width = 0.05\linewidth]{./icone03.jpg}
+        \item Cliquer dans l'ordre sur le poste émetteur puis sur le destinataire.
+        \item Vous obtenez un message d'erreur: \verb+PCI has no functional ports+
+        \item Expliquer pourquoi les informations ne peuvent pas circuler.
+        
+        \begin{tcolorbox}[height = 1cm]
+        
+        \end{tcolorbox}
+
+        \begin{minipage}{0.75\linewidth}
+        \item Nous allons définir les adresses IP pour chaque poste. Cliquer sur l'icône ``Select'' puis sur l'un des postes.
+        
+        Choisir ``Desktop / IP configuration'' et taper l'adresse \verb+192.168.1.1+. Le masque de sous réseau va se définir automatiquement (classe C). 
+    
+        \item Faire de même avec l'autre poste et lui attribuer l'adresse \verb+192.168.1.2+
+        
+        \item Recommencer l'envoi d'une trame entre ces deux poste. Cette fois-ci la transmission doit se dérouler normalement.
+         
+        \end{minipage}\hfill
+        \begin{minipage}{0.23\linewidth}
+            \includegraphics[width = 1\linewidth]{./icone04.jpg}
+        \end{minipage}   
+        
+        \medskip
+
+        La communication s'est déroulée très vite et nous n'avons pas eu le temps de voir ce qu'il se passait. 
+
+        \item Passer en mode \verb+Simulation+ en cliquant sur l'icône en bas à droite. 
+    
+        \item Cliquer sur ``Edit Filters'' puis décocher l'option ``show all'' et cocher uniquement le protocole ICMP. Nous ferons cette manipulation à chaque fois que nous utiliserons ce mode dans ce TP.
+    
+        \item cliquer sur ``Auto Capture/Play'' et observer l'animation entre les deux postes. Pour réinitialiser la simulation cliquer en bas sur ``Delete''
+        
+        \item Décrivez ce que vous voyez
+        
+        \begin{tcolorbox}[height = 1cm]
+        
+        \end{tcolorbox}
+
+    \end{enumerate} 
+
+\end{exercice_cours}
+
+\section{Faire communiquer plusieurs réseaux entre eux}
+
+\begin{exercice_cours}[A l'aide du réseau filaire]{}
+
+
+
+\begin{minipage}{0.65\linewidth}
+    Nous allons simuler un réseau composé de 4 ordinateurs et d'un switch (commutateur). Réaliser le schéma suivant puis affecter l'adressage IP:
+
+    \begin{itemize}
+        \item \verb+PC0: 192.168.1.1/24+
+        \item \verb+PC1: 192.168.1.2/24+
+        \item \verb+PC2: 192.168.1.3/24+
+    \end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.33\linewidth}
+       \includegraphics[width = 0.9\linewidth]{./icone07.jpg}
+ 
+\end{minipage}
+
+    \begin{enumerate}
+        \item Envoyer un message (add Simple PDU) de PC0 vers PC2 en respectant le consignes du précédent exercice (Simulation / ICMP / Capture automatique/ Jouer). Décrire ce qu'il se passe.
+        
+        \begin{tcolorbox}[height = 2cm]
+        
+        \end{tcolorbox}
+
+        \item Pour tester la communication entre plusieurs postes au sein d'un réseau, il est possible d'utiliser la commande \verb+ping+ (Packet INternet Groper). Cette commande permet de tester l'accessibilité à une autre machine (adresse IP). \verb+ping+ utilise une requête ICMP \verb+echo+ et attend en retour une réponse \verb+echo reply+.
+        
+        Tester la communication des 4 PC entre eux avec la commande. ``Desktop / command prompt''
+
+        Dans la fenêtre qui apparait après le prompt \verb+C:\+, taper la commande \verb+ping <adresse IP>+ avec l'adresse que vous voulez joindre.
+
+        Faites un test de communication pour chaque PC. Qu'observe-t-on? Indiquer ce que fait chaque requête \verb+echo+
+
+        \begin{tcolorbox}[height = 3cm]
+        
+        \end{tcolorbox}
+
+        \item Modifier l'adresse IP de PC2 en \verb+192.168.6.4/24+ et refaite un \verb+ping+ depuis PC0 vers PC3. Que constatez-vous? Expliquer.
+       
+        \begin{tcolorbox}[height = 3cm]
+        
+        \end{tcolorbox}
+
+        \item Redonner à PC2 l'adresse \verb+192.168.1.3+. Relever les adresses \verb+MAC+ des 3 cartes Ethernet des PC:
+        \begin{itemize}
+            \item PC0: \dotfill
+            \item PC1: \dotfill
+            \item PC2: \dotfill
+        \end{itemize}
+
+        \item Tester la communication entre les PC de votre salle à l'aide de la commande \verb+ping+. Tester également d'autres adresses IP de PC d'autres salles.
+        
+    \end{enumerate}
+
+\end{exercice_cours}
+
+\medskip
+
+\begin{exercice_cours}[Communication à l'aide d'un réseau sans fil]{}
+
+\medskip
+
+        \begin{minipage}{0.7\linewidth}
+        Nous allons simuler un réseau sans fil WiFi (Wireless Fidelity) constitué de:
+            \begin{itemize}
+                \item un ordinateur portable (Laptop-PT Generic)
+                \item un serveur (server-PT generic)
+                \item un point d'accès WiFi (access point-PT Generic)
+            \end{itemize}
+
+            Aucun de ces terminaux ne peut se connecter au point d'accès car ils n'ont pas de connexion WiFi
+        \end{minipage}\hfill
+        \begin{minipage}{0.28\linewidth}
+            \includegraphics[width = 0.9\linewidth]{./icone08.jpg}
+
+        \end{minipage}
+        
+        \medskip
+
+        \begin{enumerate}
+   
+            \item Cliquer sur le serveur puis onglet \verb+Physique+ sur la face arrière visible, éteindre le serveur et remplacer le connecteur Fast Ethernet par un connecteur Wireless (PT-HOST-NM-1W). Rallumer le serveur.
+
+            \item Donner au serveur une IP fixe: ``Configuration, Wireless0'' et dans la rubrique ``IP configuration'', cocher ``Static'' puis entrer l'adresse IP \verb+192.168.1.253/24+. Fermer la fenêtre.
+            
+            \item Configurer l'ordinateur portable en remplaçant le connecteur. Mettre sa configuration IP en mode DHCP.
+            \item Rajouter deux autres périphériques sans fils: une tablette PC et un PDA.
+    
+            \item Observer les adresses IP des différents périphériques. Quelle remarque pouvez vous faire?
+        
+            \begin{tcolorbox}[height = 2cm]
+        
+            \end{tcolorbox}
+    
+        \end{enumerate}
+
+\end{exercice_cours}
+
+\medskip
+
+\begin{exercice_cours}[Communication entre deux réseaux]{}
+
+    \medskip
+
+    \begin{enumerate}
+
+        \begin{minipage}{0.55\linewidth}
+            \item Réaliser le réseau ci-contre de manière à avoir deux sous réseaux avec une adresse IP différente:
+
+        \begin{itemize}
+            \item A gauche: sous réseau d'adresse \verb+192.168.1.0/24+
+            \item A droite: sous réseau d'adresse \verb+172.16.0.0/16+
+        \end{itemize}
+
+        N'oubliez pas d'attribuer les adresses IP fixes.
+    
+        \end{minipage}\hfill
+        \begin{minipage}{0.43\linewidth}
+            \includegraphics[width = 0.9\linewidth]{./icone09.jpg}
+ 
+        \end{minipage}
+        
+        \item Connecter les deux switchs entre eux avec un câble et tester la connexion entre deux PC de réseaux différents. Que constatez-vous? Expliquer.
+        
+        \begin{tcolorbox}[height = 2cm]
+        
+        \end{tcolorbox}
+
+        \item Supprimer ce câble et insérer un routeur entre les deux switchs (routeur 1841). Reliez les sous réseaux comme sur le schéma. Testez les communications entre PC0 et PC3. Expliquer.
+        
+        \begin{minipage}{0.48\linewidth}
+           \begin{center}
+                    \includegraphics[width = 0.95\linewidth]{./icone10.jpg}
+
+        \end{center} 
+        \end{minipage}\hfill{}
+                \begin{minipage}{0.48\linewidth}
+\begin{tcolorbox}[height = 3cm]
+        
+        \end{tcolorbox}
+        \end{minipage}
+        
+
+
+        
+
+        \medskip
+
+        \begin{easybox}[Configuration des adresses IP du routeur]{}
+        La configuration du routeur doit respecter les contraintes suivantes:
+        \begin{itemize}
+            \item le port du routeur relié au sous réseau de gauche doit posséder une adresse IP de ce sous réseau. En général on lui donne la dernière adresse disponible.
+            \item même configuration pour le port du routeur relié au sous réseau de droite.
+        \end{itemize}
+        \end{easybox}
+
+        \item Attribuez des adresses IP aux ports du routeur. Indiquer sur le schéma les différentes adresses IP que vous avez choisi. 
+        \item Tester maintenant les connexions entre PC0 et PC3. Que remarquez-vous? Expliquer
+        
+        \begin{tcolorbox}[height = 1.5cm]
+        
+        \end{tcolorbox}
+
+        \begin{easybox}[Configurer la passerelle par défaut]{}
+            Le réseau de gauche et le réseau de droite ne peuvent pas encore communiquer car les paquets ne savent pas par où sortir du sous réseau.
+
+            Pour chaque machine, la passerelle par défaut (Default Gateway) doit être configurée pour pointer vers l'adresse IP du port du routeur correspondant à son sous-réseau. Par exemple, pour le sous-réseau de gauche (\verb+192.168.1.0/24+), la passerelle par défaut sera l'adresse IP du port du routeur connecté à ce sous-réseau. De même, pour le sous-réseau de droite (\verb+172.16.0.0/16+), la passerelle par défaut sera l'adresse IP du port du routeur connecté à ce sous-réseau.
+        \end{easybox}
+
+        \item Configurer les passerelles par défaut des chaque PC.
+        
+        \item Tester maintenant la communication entre PC0 et PC3. Que constatez-vous?
+        
+        
+        \begin{tcolorbox}[height = 1.5cm]
+        
+        \end{tcolorbox}
+    \end{enumerate}
+\end{exercice_cours}
+
+\medskip
+
+\begin{exercice_cours}[Serveur HTTP et DNS]{}
+
+    \medskip
+
+    Nous allons simuler deux choses:
+    \begin{itemize}
+        \item l'hébergement d'un site internet sur un serveur HTTP
+        \item la redirection des adresses IP grâce au serveur DNS
+    \end{itemize}
+
+    \begin{enumerate}
+        \item Créer le réseau suivant en configurant comme sur le schéma les différents objets connectés.
+        
+        \begin{center}
+        \includegraphics[width = 0.75\linewidth]{./icone12.jpg}
+            
+        \end{center}
+
+        \item Donner les valeurs suivantes dans le tableau:
+        
+        \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+        \hline
+        Nom du périphérique & Adresse IP & Masque de sous réseau & Passerelle \\
+        \hline
+        PC\_A &  &  &  \\ \hline
+        Routeur coté réseau A & & & XXX \\ \hline
+        PC\_B &  &  &  \\ \hline
+        Routeur coté réseau B & & & XXX\\ \hline
+        Serveur HTTP &  &  &  \\ \hline
+        Serveur DNS &  &  &  \\ \hline
+        \end{tabular}
+        \end{center}
+
+        \item Quelle est l'adresse du réseau A, son adresse de broadcast? \dotfill{}
+        \item Quelle est l'adresse du réseau B, son adresse de broadcast? \dotfill{}
+        \item Vérifier la communication entre les différents éléments du réseau. A ce stade il ne devrait pas y avoir de problème.
+        \item Cliquer sur le serveur HTTP puis ``HTTP''. Vérifier que le protocole HTTP est bien ``On''.
+        \medskip
+
+        Trois sites sont présents sur le serveur. Nous travaillerons avec \verb+http://www.index.html+ mais vous pouvez choisir un des deux autres.
+        \item Vérifier que le site web est accessible en ouvrant ``PC\_A / Desktop / Web Browser'' et en tapant l'adresse IP du serveur HTTP.
+        \item Faites pareil avec l'adresse \verb+http://www.index.html+. Que constatez vous? Expliquer.
+        
+        \begin{tcolorbox}[height = 2cm]
+        
+        \end{tcolorbox}
+
+        \item Pour faire la ``traduction'' entre les adresses IP et les noms de domaine, il faut renseigner l'adresse du serveur DNS pour les PC\_A et PC\_B ainsi que pour le serveur HTTP.
+        
+        Cliquer sur chaque périphérique puis ``Ip configuration / DNS Server'' et renseigner l'adresse IP du serveur DNS
+    
+        \item Tester maintenant la connexion au site \verb+http://www.index.html+. Que constatez vous? Expliquer.
+        
+        \begin{tcolorbox}[height = 2cm]
+        
+        \end{tcolorbox}
+
+        \item Il faut faire le lien entre l'adresse IP du serveur et le nom de domaine
+        
+        Dans le serveur DNS, cliquer sur ``Config / DNS'' et renseigner le nom du site: \verb+http://www.index.html+ et l'adresse du serveur HTTP. Cliquer sur ``Add''
+
+        \begin{center}
+        \includegraphics[width = 0.5\linewidth]{./icone13.jpg}
+        \end{center}
+
+        \item Tester à nouveau la connexion au site \verb+http://www.index.html+
+        
+        \item Dans le serveur DNS rajouter une ligne en tapant \verb+www.banquepopulaire.fr+ comme nom et l'adresse du serveur HTTP. Cliquer sur ``Add''
+        
+
+        \item Tester alors la connexion au site \verb+www.banquepopulaire.fr+
+        
+        \begin{tcolorbox}
+        Vous venez d'expérimenter de manière simple le principe de l'attaque DNS. En d'autres termes, si quelqu'un parvient à manipuler les enregistrements DNS pour rediriger l'utilisateur vers des sites frauduleux, celui ci pourrait vous amener à entrer des données sensibles.
+        \end{tcolorbox}
+    \end{enumerate}
+\end{exercice_cours}
+
+
+    \medskip
+
+    \begin{exercice_cours}[Mettre en place un serveur ftp]{}
+
+        \begin{definition}{Le serveur ftp}{}
+            Le serveur \verb+ftp+ (File Transfert Protocol) permet de transférer des fichiers par Internet. Toute personne ayant l'autorisation peut télécharger ou envoyer des fichiers depuis un ordinateur distant.
+        \end{definition}
+
+        \begin{enumerate}
+            \item Dans le serveur HTTP, cliquer sur ``Config / FTP''. Un utilisateur est déjà renseigné. 
+            
+            Noter l'identifiant et le mot de passe: \dotfill
+            \item Sur un des PC, ouvrir l'invite de commande et connectez vous au serveur \verb+ftp+ en tapant \verb+ftp 172.16.0.15+. Entrer l'identifiant et le mot de passe.
+            \item La commande \verb+dir+ permet de lister les fichiers sur le serveur \verb+ftp+
+            \item Pour ajouter un fichier vous pouvez utiliser la commande \verb+put+. A la racine de votre machine virtuelle vous avez un fichier nommé ``\verb+sampleFile.txt+''. Transférez le sur le serveur \verb+ftp+ avec ``\verb+put sampleFile.txt+''.
+            \item Vérifier que le transfert s'est bien passé en listant les fichiers présents avec \verb+dir+.
+            \item Récupérez un autre fichier depuis le serveur \verb+ftp+ avec ``\verb+get <nom du fichier>+''.
+            \item Quitter le serveur \verb+ftp+ en faisant \verb-Control + C-.
+            \item Vérifier que vous avez bien récupéré le fichier sur le disque local de la machine avec la commande \verb+dir+.
+        \end{enumerate}
+    \end{exercice_cours}
+

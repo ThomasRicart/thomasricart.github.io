@@ -1,0 +1,45 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Utilisation de Wireshark} % Titre au centre
+\def\docname{ARSE06-TP1}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+
+Wireshark est un logiciel de sniffing, c'est-à-dire un analyseur qui permet d'écouter le réseau auquel est connecté l'ordinateur. Il enregistre tous les transferts de données (toutes les trames) du réseau. Ce logiciel de surveillance est un outil puissant et il est interdit de l'utiliser pour surveiller un réseau sans autorisation. Pour cette raison, seul un précédent enregistrement sera utilisé, mais vous pourrez le tester intégralement chez vous, sur votre propre réseau.
+
+Vous pouvez télécharger Wireshark à l'adresse suivante : \url{https://www.wireshark.org/download.html}.
+
+\begin{easybox}[L'interface de Wireshark]{}
+
+    \begin{itemize}
+        \item La partie supérieure affiche la liste des paquets capturés, avec des informations telles que le numéro du paquet, l'heure de capture, l'adresse source, l'adresse de destination, le protocole utilisé et une brève description du contenu du paquet.
+        \item La partie centrale affiche les détails du paquet sélectionné dans la partie supérieure. Elle montre les différentes couches du modèle TCP/IP et les informations spécifiques à chaque couche.
+        \item La partie inférieure affiche les données brutes du paquet sélectionné, souvent en format hexadécimal et ASCII.
+    \end{itemize}
+
+    \includegraphics[width = 1\linewidth]{fenetre_wireshark.jpg}
+
+
+\end{easybox}
+
+\begin{exercice_cours}[Analyse d'une capture Wireshark]{}
+    
+    \begin{enumerate}
+        \item Récupérer le fichier de capture \href{}{act11.pcap} et l'ouvrir avec le logiciel Wireshark. 
+        \item À quelle heure a eu lieu cette connexion ? Pour cela explorer une des trames (Frame).
+        \item  Quels sont les différents protocoles utilisés et à quelle couche du modèle TCP/IP simplifié appartiennent-ils ?
+        \item Dans la suite nous étudierons la trame 3.
+        \item Quelle est la taille (en octets) de cette trame ?
+        \item Faire un clic droit dans le cadre 3 et choisir l'affichage hexadécimal.
+        \item Qu'indiquent les six premiers octets de cette trame ainsi que les six octets suivants ?
+        \item Quel est le constructeur de la carte réseau du destinataire ?
+        \item À quelle couche (Accès Réseau, Internet, Transport ou Application) appartiennent les informations à partir du 15ième octet ?
+        \item À quelle couche (Accès Réseau, Internet, Transport ou Application) appartiennent les informations à partir du 35ième octet ?
+        \item Trouver l'adresse logique IP à laquelle l'ordinateur essaie de se connecter.
+        \item Copier cette adresse IP dans la barre d'adresse d'un navigateur pour trouver à quel site l'utilisateur essayait de se connecter.
+        \item Maintenant, étudions ce qui se passe dans les deux premières trames.
+        \item Décrire ce qui se passe ? Que réalise le protocole ARP ?
+    \end{enumerate}
+\end{exercice_cours}
