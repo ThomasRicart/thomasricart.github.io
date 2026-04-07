@@ -1,0 +1,125 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Algorithme k plus proches voisins (knn)} % Titre au centre
+\def\docname{AP10}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{definition}[Algorithme des k plus proches voisins]{}
+Abrégé en \textbf{KNN} (K-nearest neighbors), cet algorithme cherche à prédire la classe (ou propriété) d'un élément en fonction de la classe majoritaire de ses k plus proches voisins.
+\end{definition}
+
+
+\begin{exemple}[]{}
+
+
+Par exemple, imaginons qu'un pixel soit manquant dans une image. L'algorithme va prédire la couleur de ce pixel en fonction de la couleur des pixels voisins.
+
+\end{exemple}
+
+
+L'algorithme KNN est un algorithme d'\textbf{apprentissage} (Machine Learning) supervisé. C'est-à-dire qu'à partir d'un ensemble des données étiquetées, il va pouvoir prédire l'étiquette d'une donnée inconnue.
+
+Par exemple, à partir d'un ensemble d'images de chiens et de chats, ce type d'algorithme permet de déterminer si une photo inconnue est celle d'un chien ou d'un chat.
+
+Un autre exemple sont les systèmes de recommandation. Un site marchand peut chercher vos \verb+k+ plus proches voisins en termes d'âge, de lieu, etc., pour vous proposer des articles susceptibles de vous plaire.
+
+
+\section{Principe}
+
+Tout d'abord, il nous faut avoir un ensemble de données d'apprentissage. Chaque donnée:
+
+\begin{itemize}
+	\item appartient à une \textbf{classe}.
+	\item est caractérisée par un certain nombre d'\textbf{attributs}.
+\end{itemize}
+
+Nous avons un individu non identifié, c'est à dire de \textbf{classe inconnue}, dont on possède cependant les caractéristiques. L'objectif est de classifier cet individu en regardant ses k plus proches voisins.
+
+\section{Exemple} 
+
+
+Voici la représentation de deux classes: les carrés et les disques. En représentant leurs caractéristiques graphiquement, on obtient la répartition ci-dessous. Un individus de classe inconnue possédant ces mêmes caractéristiques, est représenté par le triangle.
+
+\begin{center}
+\includegraphics[scale=1.6]{knn_ex_perso.jpg}
+\end{center}
+\medskip
+
+
+\begin{itemize}
+	\item En prenant k=3, les 3 plus proches voisins sont 2 disques et un carré: on décidera que l'inconnu est un disque.
+	\item  En prenant k=7, les 7 plus proches voisins sont 4 disques et 3 carrés: on décidera encore que l'inconnu est un disque.
+	\item En prenant k=13, les 13 plus proches voisins sont 6 disques et 7 carrés: on décidera alors que l'inconnu est un carré.
+\end{itemize}
+
+\begin{remarque}[]{}
+ L' algorithme k-NN est un algorithme de décision qui pourrait être résumé par la phrase \og dis moi qui sont des voisins et je te dirai qui tu es\fg. 
+\end{remarque}
+
+\begin{itemize}
+	\item  En prenant une décision, on fait un choix éclairé mais on ne peut pas être à 100\% certain d'avoir fait le bon:
+	\item      La définition de la \textbf{distance} entre deux classes est particulièrement importante.
+	\item Le choix du k, c'est à dire du nombre de voisins à étudier, est également primordial.
+\end{itemize}
+    
+    
+    
+    \section{Activité 1}
+    
+    \begin{minipage}{0.48\linewidth}
+       On considère un ensemble d'objets dans le plan de deux types différents, des triangles verts et des carrés jaunes. 
+
+	    On ajoute un nouvel objet (la croix que l'on appelera $N$) et on souhaite déterminer à quel type d'objet il appartient.
+
+    \end{minipage}\hfill{}
+    \begin{minipage}{0.48\linewidth}
+    \begin{center}
+    \includegraphics[width = 0.9\linewidth]{img2.png}
+    \end{center}
+    \end{minipage}
+   
+    
+   
+   
+        
+    
+    \subsubsection{Plus proche voisin k = 3}
+    
+    \begin{enumerate}
+    	\item sur la figure précédente, sélectionnez les 3 plus proches voisins du point N. \dotfill
+    	\item quel type choisir alors pour le point N? \dotfill
+    \end{enumerate}
+    
+    
+    \subsubsection{Plus proche voisin  k = 5}
+    
+    \begin{enumerate}
+    	\item sur la figure précédente, sélectionnez les 5 plus proches voisins du point N. \dotfill
+    	\item quel type choisir alors pour le point N? \dotfill
+    \end{enumerate}
+    
+    
+    \section{Activité 2}
+    
+    
+    \begin{minipage}{0.50\linewidth}
+		      On considère la figure ci-dessous avec un nouvel ensemble de points dans le plan de trois classes différentes, et N un nouveau point que l'on souhaite colorier.  
+
+			  \begin{enumerate}
+    	\item Choisir un point aléatoirement et le placer dans le graphique
+    	\item Déterminer, à l'aide de l'algorithme des k plus proches voisins, la classification de votre nouveau point N pour k=1, k=3 et k=5.
+    \end{enumerate}
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+\begin{center}
+    \includegraphics[width = 0.95\linewidth]{4.png}
+    \end{center}
+	\end{minipage}
+      
+                
+    \begin{easybox}[Choix du k]{}
+	Le choix du k est important. En effet, si k est trop petit, on risque de faire du bruit dans les données (on peut être influencé par un voisin qui n'est pas représentatif). Si k est trop grand, on risque d'inclure des voisins qui ne sont pas pertinents pour la classification de l'individu.
+	\end{easybox}
+    
