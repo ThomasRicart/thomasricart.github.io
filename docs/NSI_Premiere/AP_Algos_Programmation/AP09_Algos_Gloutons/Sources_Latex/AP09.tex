@@ -1,0 +1,148 @@
+\def\level{Première}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Algorithme Glouton} % Titre au centre
+\def\docname{AP09}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheader{} % Affiche le bandeau
+
+\begin{propriete}[Algorithme glouton]{}
+Les \textbf{algorithmes gloutons} répondent à des problèmes d'optimisation. L'idée est qu'à chaque étape de l'algorithme, celui-ci fasse le choix qui lui semble le plus optimal, sans réfléchir à la suite, en espérant que la solution finale au problème soit elle-même la plus optimale. Attention cela n'est pas forcément toujours le cas et dépend du problème à traiter.
+\end{propriete}
+
+\section{Problème de rendu de monnaie}
+
+L'exemple classique d'application d'un algorithme glouton est le problème du \textbf{rendu de monnaie}. L'objectif est, à partir d'un système de monnaie, de trouver comment rendre une somme de façon optimale, c'est-à-dire avec le moins de pièces et de billets possible.
+
+\medskip
+
+\begin{exemple}[]{}
+On considère une système monétaire \verb+SYSTEME = [500, 200, 100, 50, 20, 10, 5, 2, 1]+. La question est de savoir comment rendre une somme particulière. Dans un premier temps, on renverra une liste des billets ou pièces à rendre. On peut de façon naïve déployer cet algorithme:
+
+\begin{enumerate}
+	\item Tant que la somme à rendre est supérieure à 0
+	\item Si la somme à rendre est plus grande que la pièce observée alors:
+	\begin{itemize}
+		\item on soustrait cette pièce à la somme à rendre
+		\item insère la valeur de la somme à rendre dans la liste de choix
+		
+	\end{itemize}
+	\item Sinon on prend la pièce de valeur immédiatement inférieure et on reprend à la ligne 1
+\end{enumerate}
+\end{exemple}
+
+\begin{exercice_cours}[]{}
+\begin{enumerate}
+	\item Implémenter cette fonction en python
+	
+	
+	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+def rendre_monnaie1(systeme:list, somme:int)->list:
+    ''' Renvoie la liste des pièces à rendre '''
+    i = 0					# Indice de la pièce actuelle
+    choix = []				# Liste de choix
+    while somme > 0:
+        if somme >= SYSTEME[i]:
+            somme -= SYSTEME[i]
+            ...
+        else:
+            ...
+    return choix
+
+SYSTEME = [500, 200, 100, 50, 20, 10, 5, 2, 1]
+assert rendre_monnaie1(SYSTEME, 674) == [500, 100, 50, 20, 2, 2]
+	
+	\end{CodePythontexAlt}
+	
+	
+\item Compléter la trace de l'algorithme pour \verb+somme = 674+
+
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{|c|c|p{3.5cm}|c|c|c|c|p{3.5cm}|c|}
+\hline
+\verb+somme+ &
+\verb+i+ &
+\verb+choix+ &
+\verb+while+ &
+\verb+SYSTEME[i]+ &
+\verb+IF+&
+\verb+somme+ &
+\verb+choix+ &
+\verb+i+ \\ \hline
+674 & 0 &\verb+[]+ &True & 500 &True & 174 & \verb+[500]+ & 0 \\ \hline 
+174&0&\verb+[500]+&&&&&&\\ \hline
+&&&&&&&&\\ \hline
+
+\end{tabular}
+
+\item Modifier cet algorithme en prenant un système sous forme de listes de listes. Chaque sous liste contient la valeur du billet ou de la pièce et le nombre disponible.
+
+Par exemple: \verb+SYSTEME2 = {500: 1, 200: 1, 100: 1, 50: 2, 20: 2, 10: 2, 5: 3, 2: 6, 1: 4}+
+
+Attention, il faudra vérifier que le système permet de rendre la somme à rendre
+
+\end{enumerate}
+\end{exercice_cours}
+\medskip
+
+\begin{remarque}[]{}
+ Le système de monnaie a été choisi pour qu'un algorithme glouton soit optimal. Comment payer 9 \euro{}  avec un système de pièces ou de billets de 1 \euro{}, 2 \euro{}, 5 \euro{} et 10 \euro{}. Le choix optimal (moins de pièces et de billet) s'obtient en appliquant l'algorithme glouton (choisir toujours la plus grande des valeurs pour compléter) soit 5 \euro{} + 2 \euro{} + 2 \euro{} (3 pièces). Imaginons qu'il existe un billet de 7 \euro{}. L'algorithme glouton n'est plus optimal. En effet si l'on souhaite payer 14 \euro{}, il donnerait : 10 \euro{} + 2 \euro{} + 2 \euro{} alors que le meilleur choix serait 7 \euro{} + 7 \euro{}.\\
+
+\end{remarque}
+ 
+
+
+
+\section{Problème du sac à dos}
+ 
+ 
+Le problème du sac à dos (aussi noté KP pour \emph{knapsack problem}) est lui aussi un problème d'optimisation. 
+
+On dispose de plusieurs objets (chaque objet possède une valeur et un poids). Seulement ce sac ne peut supporter plus d'un certain poids. On va donc devoir choisir des objets et maximiser la valeur totale dans le sac sans toutefois dépasser le poids maximum.
+
+On suppose pour la suite de l'exercice que le sac ne peut supporter que 15 kg maximum
+
+\subsection{Méthode naïve ou exhaustive}
+
+Une première méthode consiste à lister toutes les combinaisons possibles d'objets puis de regarder lesquelles ne dépassent pas 15 kg et enfin de regarder laquelle permet d'avoir une somme maximale.
+
+S'il y a $n$ objets, alors il y a $2^n$ combinaisons possibles. La complexité est donc en $O(2^n)$, c'est un coût exponentiel.
+\subsection{Méthode glouton}
+
+Un algorithme glouton fait le meilleur choix possible à chaque étape en espérant que la solution finale soit elle-même la meilleure.
+	
+Voici cinq objets, leur poids et leur valeur. Vous disposez d'un sac de capacité maximale de 32 kg.
+
+\begin{minipage}{11cm}
+
+	
+\begin{exercice_cours}[]{}
+
+\begin{enumerate}
+	\item Choisissons un critère de choix d'un objet à mettre dans le sac. Quelle est la valeur du sac si on applique ce critère à chaque choix d'un objet?
+	\item Définissez un autre critère de choix. Appliquez-le à chaque choix d'objet et donnez la valeur obtenue
+	\item Même question avec un troisième critère de choix.
+	\item Y a-t-il une meilleure valeur totale?
+\end{enumerate}
+\end{exercice_cours}
+\end{minipage}
+\begin{minipage}{7cm}
+
+\begin{center}
+\includegraphics[width = 0.9\linewidth]{ScreenShot_20240701085122.jpeg}
+\end{center}
+\end{minipage}
+
+
+
+\begin{definition}[Algorithme glouton]{}
+Type d'algorithme dans lequel, à chaque étape, un \textbf{choix optimal local} est fait, sans tenir compte de la suite et sans possibilité de retour en arrière (pensez à un glouton qui avale un objet, impossible de revenir en arrière...). On peut donc comparer:
+
+\begin{itemize}
+	\item     la méthode \textbf{exhaustive} (étude de tous les cas ou force brute): permet de trouver la meilleure solution à un problème mais en un temps qui peut être considérable;
+	\item     une méthode \textbf{gloutonne}: ne donne pas forcément la solution optimale à un problème mais donne souvent une solution acceptable en un temps limité. En ce sens, une méthode gloutonne est heuristique, c'est-à-dire une méthode qui permet de trouver une solution convenable mais non forcément optimale à un problème mais en un temps raisonnable en évitant une analyse complète de ce problème.
+
+\end{itemize}
+
+
+\end{definition}

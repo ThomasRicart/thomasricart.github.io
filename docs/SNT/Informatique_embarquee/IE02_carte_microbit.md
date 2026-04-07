@@ -61,7 +61,7 @@ L'image affichée n'est qu'un exemple d'images que vous pouvez générer. Vous t
 
 **Exercice 1** 
 
-Modifier l'image que vous afficher en choisissant une image parmis celles disponibles.
+Modifier l'image que vous afficher en choisissant une image parmi celles disponibles.
 
 **Exercice 2**
 
@@ -237,6 +237,5 @@ while True:
 
 * Modifier ce programme pour ajouter des flèches vers le haut et vers le bas quand on oriente la carte micro:bit vers l'avant ou vers l'arrière.
 
-**Exercice 9:**
 
  

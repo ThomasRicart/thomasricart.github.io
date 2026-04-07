@@ -53,6 +53,10 @@
 \def\schoolyear{2026~--~2027}              % Année scolaire
 \def\level{Première}              % Classe
 \def\course{NSI}              % Matière
+\def\myurl{https://thomasricart.github.io}
+\def\myname{Thomas Ricart}
+\def\myemail{ricart.lvh@laposte.net}
+
 \def\codepart{ARSE}
 \def\textpart{Architecture Réseaux Systèmes Exploitation}    % Nom du chapitre juste pour le titre de la partie
 %\def\partname{dfLangages de Programmation}
@@ -63,31 +67,37 @@
 
 \thispagestyle{empty}
 
+\title{{\Huge Première NSI}\\Lycée Victor Hugo - Colomiers\\}
+\author{Thomas Ricart -  \url{ricart.lvh@laposte.net}}
+\date{Année scolaire 2026 - 2027}
+%\thanks{\url{ricart.lvh@laposte.net}}
+\booktitle
+
 \parttitle{}
-\end{document}
 
 %\part*{\chaptername}
-\def\documentpath{./ARSE01_Modele_Von_Neumann}
+\def\chapterpath{./ARSE_Arch_Reseau_SE}
+\def\documentpath{./\chapterpath/ARSE01_Modele_Von_Neumann}
 \graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
 \include{\documentpath/Sources_Latex/ARSE01}      
 \resetTout{}
-\def\documentpath{./ARSE04_Reseau_Introduction}
+\def\documentpath{./\chapterpath/ARSE04_Reseau_Introduction}
 \graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
 \include{\documentpath/Sources_Latex/ARSE04}   
 \resetTout{}
 
-\def\documentpath{./ARSE05_Adresses_IP}
+\def\documentpath{./\chapterpath/ARSE05_Adresses_IP}
 \graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
 \include{\documentpath/Sources_Latex/ARSE05}   
 \resetTout{}
 
-\def\documentpath{./ARSE06_Protocoles_Internet}
+\def\documentpath{./\chapterpath/ARSE06_Protocoles_Internet}
 \graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
 \include{\documentpath/Sources_Latex/ARSE06}   
 \resetTout{}
 
 
-\def\documentpath{./ARSE07_Systemes_Exploitation}
+\def\documentpath{./\chapterpath/ARSE07_Systemes_Exploitation}
 \graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
 \include{\documentpath/Sources_Latex/ARSE07}  
 \resetTout{}
