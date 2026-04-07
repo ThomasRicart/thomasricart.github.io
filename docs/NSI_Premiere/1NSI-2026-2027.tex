@@ -1,0 +1,300 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+\usepackage{\packagepath/firstpage}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usepackage{scratch3}
+\usepackage{longtable}
+
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+% Style pour les commandes (fond noir, texte blanc, coins arrondis)
+\newtcbox{\command}{
+    on line,
+    arc=2pt,
+    colback=black,
+    colframe=black,
+    before upper=\rule[-3pt]{0pt}{10pt},
+    boxrule=0pt,
+    boxsep=0pt,
+    left=4pt,
+    right=4pt,
+    top=2pt,
+    bottom=2pt,
+    colupper=white,
+    fontupper=\ttfamily\small
+}
+
+% Couleur grise pour les en-têtes
+\definecolor{headergray}{HTML}{E2E3E5}
+\definecolor{sectiongray}{HTML}{F2F2F2}
+
+\def\schoolyear{2026~--~2027}              % Année scolaire
+\def\level{Première}              % Classe
+\def\course{NSI}              % Matière
+\def\codepart{ARSE}
+\def\textpart{Architecture Réseaux Systèmes Exploitation}    % Nom du chapitre juste pour le titre de la partie
+%\def\partname{dfLangages de Programmation}
+\def\version{\today}
+\def\visibleornot{invisible}    % visible or invisible
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\parttitle{}
+\end{document}
+
+%\part*{\chaptername}
+\def\documentpath{./ARSE01_Modele_Von_Neumann}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/ARSE01}      
+\resetTout{}
+\def\documentpath{./ARSE04_Reseau_Introduction}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/ARSE04}   
+\resetTout{}
+
+\def\documentpath{./ARSE05_Adresses_IP}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/ARSE05}   
+\resetTout{}
+
+\def\documentpath{./ARSE06_Protocoles_Internet}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/ARSE06}   
+\resetTout{}
+
+
+\def\documentpath{./ARSE07_Systemes_Exploitation}
+\graphicspath{{\documentpath/Images/}}	% Définit le chemin d'accès aux images
+\include{\documentpath/Sources_Latex/ARSE07}  
+\resetTout{}
+\end{document}
+
+
+
+
+
+
+\title{{\Huge Première NSI}\\Lycée Victor Hugo - Colomiers\\}
+\author{Thomas Ricart -  \url{ricart.lvh@laposte.net}}
+\date{Année scolaire 2024 - 2025}
+%\thanks{\url{ricart.lvh@laposte.net}}
+\maketitle
+
+%\pagestyle{otherpage}
+%\fancyhead[R]{T NSI}
+
+%\dominitoc% Initialization
+\tableofcontents
+
+
+\pagestyle{otherpage}
+\fancyhead[R]{1 NSI}
+\fancyfoot[L]{}
+
+%%%%%%%%%%%%%%%%%%% AL %%%%%%%%%%%%%%%%%%%%%
+\part{Algorithmique}
+\setcounter{chapter}{0}
+
+\chapter{AL01 - Complexité des algorithmes}
+\newpage
+\graphicspath{{../1NSI-AL-Algorithmique/AL1-Complexite_algorithme/Images/}}
+\import{../1NSI-AL-Algorithmique/AL1-Complexite_algorithme/Sources_Latex}{AL11}
+
+
+\chapter{AL02 - Preuve et terminaison}
+\newpage
+\graphicspath{{../1NSI-AL-Algorithmique/AL2-Preuve_et_terminaison/Images/}}
+\import{../1NSI-AL-Algorithmique/AL2-Preuve_et_terminaison/Sources_Latex}{AL21}
+
+\chapter{AL03 - Algorithmes de recherche}
+\newpage
+\graphicspath{{../1NSI-AL-Algorithmique/AL3-Algorithmes_de_recherche/Images/}}
+\import{../1NSI-AL-Algorithmique/AL3-Algorithmes_de_recherche/Sources_Latex}{AL31}
+%\import{../../preambule}{raz_compteurs.tex}
+
+\chapter{AL04 - Algorithmes de tri}
+\newpage
+\graphicspath{{../1NSI-AL-Algorithmique/AL4-Algorithmes_de_tri/Images/}}
+\import{../1NSI-AL-Algorithmique/AL4-Algorithmes_de_tri/Sources_Latex}{AL41}
+
+\chapter{AL05 - Algorithme glouton}
+\newpage
+\graphicspath{{../1NSI-AL-Algorithmique/AL5-Algo Glouton/Images/}}
+\import{../1NSI-AL-Algorithmique/AL5-Algo Glouton/Sources_Latex}{AL51}
+
+\chapter{AL06 - Algorithme knn}
+\newpage
+\graphicspath{{../1NSI-AL-Algorithmique/AL6-Algo_Knn/Images/}}
+\import{../1NSI-AL-Algorithmique/AL6-Algo_Knn/Sources_Latex}{AL61}
+
+
+%%%%%%%%%%%%%%%%%%% ARSE %%%%%%%%%%%%%%%%%%%%%
+\part{Architecture Matérielle et Système d'exploitation}
+\setcounter{chapter}{0}
+
+\chapter{ARSE01 - Architecture des ordinateurs}
+\newpage
+\graphicspath{{../1NSI-ARSE-Architecture Materielle et SE/ARSE1-Architecture des ordinateurs/Images/}}
+\import{../1NSI-ARSE-Architecture Materielle et SE/ARSE1-Architecture des ordinateurs/Sources_Latex}{ARSE11}
+
+\chapter{ARSE02 - Réseaux}
+\newpage
+\graphicspath{{../1NSI-ARSE-Architecture Materielle et SE/ARSE2-Reseaux/Images/}}
+\import{../1NSI-ARSE-Architecture Materielle et SE/ARSE2-Reseaux/Sources_Latex/}{ARSE21}
+\import{../1NSI-ARSE-Architecture Materielle et SE/ARSE2-Reseaux/Sources_Latex/}{ARSE24}
+
+\chapter{ARSE03 - Systèmes d'exploitation}
+\newpage
+\graphicspath{{../1NSI-ARSE-Architecture Materielle et SE/ARSE3-Systemes exploitation/Images/}}
+\import{../1NSI-ARSE-Architecture Materielle et SE/ARSE3-Systemes exploitation/Sources_Latex/}{ARSE31}
+\import{../1NSI-ARSE-Architecture Materielle et SE/ARSE3-Systemes exploitation/Sources_Latex/}{ARSE32}
+
+\chapter{ARSE04 - Interface Homme Machine}
+\newpage
+\graphicspath{{../1NSI-ARSE-Architecture Materielle et SE/ARSE4-IHM/Images/}}
+\import{../1NSI-ARSE-Architecture Materielle et SE/ARSE4-IHM/Sources_Latex/}{ARSE41}
+
+%%%%%%%%%%%%%%%%%%%%% IHM WEB %%%%%%%%%%%%%%%%%%%
+\part{Interface Homme Machine sur le Web}
+\setcounter{chapter}{0}
+
+\chapter{IHM01 - HTML et CSS}
+\newpage
+\graphicspath{{../1NSI-IHM-Interaction HM sur le web/IHM1-HTML CSS/Images/}}
+\import{../1NSI-IHM-Interaction HM sur le web/IHM1-HTML CSS/Sources_Latex/}{IHM11}
+
+\chapter{IHM02 - Interface Client - Serveur}
+\newpage
+\graphicspath{{../1NSI-IHM-Interaction HM sur le web/IHM2-Interface Client - Serveur/Images/}}
+\import{../1NSI-IHM-Interaction HM sur le web/IHM2-Interface Client - Serveur/Sources_Latex/}{IHM21}
+
+%%%%%%%%%%%%%%%%%%%%% LP %%%%%%%%%%%%%%%%%%%
+\part{Langages de programmation}
+\setcounter{chapter}{0}
+\chapter{LP01 - Constructions élémentaires}
+\newpage
+\graphicspath{{../1NSI-LP-Langages et programmation/LP1-Constructions_elementaires/Images/}}
+\import{../1NSI-LP-Langages et programmation/LP1-Constructions_elementaires/Sources_Latex/}{LP11}
+
+\chapter{LP02 - Fonctions}
+\newpage
+\graphicspath{{../1NSI-LP-Langages et programmation/LP2-Fonctions/Images/}}
+\import{../1NSI-LP-Langages et programmation/LP2-Fonctions/Sources_Latex/}{LP21}
+
+\chapter{LP03 - Structures conditionnelles}
+\newpage
+\graphicspath{{../1NSI-LP-Langages et programmation/LP3-Structures_conditionnelles/Images/}}
+\import{../1NSI-LP-Langages et programmation/LP3-Structures_conditionnelles/Sources_Latex/}{LP31}
+
+\chapter{LP04 - Boucles}
+\newpage
+\graphicspath{{../1NSI-LP-Langages et programmation/LP4-Boucles/Images/}}
+\import{../1NSI-LP-Langages et programmation/LP4-Boucles/Sources_Latex/}{LP41}
+\import{../1NSI-LP-Langages et programmation/LP4-Boucles/Sources_Latex/}{LP42}
+
+\chapter{LP05 - Autres langages de programmation}
+\newpage
+%\graphicspath{{../1NSI-LP-Langages et programmation/LP5-Autres_langages_de_programmation/Images/}}
+%\import{../1NSI-LP-Langages et programmation/LP5-Autres_langages_de_programmation/Sources_Latex/}{LP51}
+
+%%%%%%%%%%%%%%%%%%%%% RD %%%%%%%%%%%%%%%%%%%
+\part{Représentation des données}
+\setcounter{chapter}{0}
+
+\chapter{RD01 - Codage des entiers naturels}
+\newpage
+\graphicspath{{../1NSI-RD-Representation des donnees/RD1-Codage_N/Images/}}
+\import{../1NSI-RD-Representation des donnees/RD1-Codage_N/Sources_Latex/}{RD11}
+\import{../1NSI-RD-Representation des donnees/RD1-Codage_N/Sources_Latex/}{RD12}
+
+\chapter{RD02 - Algèbre de Boole}
+\newpage
+\graphicspath{{../1NSI-RD-Representation des donnees/RD2-Algebre_de_Boole/Images/}}
+\import{../1NSI-RD-Representation des donnees/RD2-Algebre_de_Boole/Sources_Latex/}{RD21}
+
+\chapter{RD03 - Codage des caractères}
+\newpage
+\graphicspath{{../1NSI-RD-Representation des donnees/RD3-Codage des caracteres/Images/}}
+\import{../1NSI-RD-Representation des donnees/RD3-Codage des caracteres/Sources_Latex/}{RD31}
+
+\chapter{RD04 - Codage des entiers relatifs}
+\newpage
+\graphicspath{{../1NSI-RD-Representation des donnees/RD4-Codage_Z/Images/}}
+\import{../1NSI-RD-Representation des donnees/RD4-Codage_Z/Sources_Latex/}{RD41}
+
+\chapter{RD05 - Codage des nombres flottants}
+\newpage
+\graphicspath{{../1NSI-RD-Representation des donnees/RD5-Codage_nombres_flottants/Images/}}
+\import{../1NSI-RD-Representation des donnees/RD5-Codage_nombres_flottants/Sources_Latex/}{RD51}
+
+%%%%%%%%%%%%%%%%%%%%% TC %%%%%%%%%%%%%%%%%%%
+
+\part{Types construits}
+\setcounter{chapter}{0}
+
+\chapter{TC01 - Listes et tuples}
+\newpage
+\graphicspath{{../1NSI-TC-Types construits/TC1-Listes Tuples/Images/}}
+\import{../1NSI-TC-Types construits/TC1-Listes Tuples/Sources_Latex/}{TC11}
+\import{../1NSI-TC-Types construits/TC1-Listes Tuples/Sources_Latex/}{TC12}
+
+\chapter{TC02 - Les dictionnaires}
+\newpage
+\graphicspath{{../1NSI-TC-Types construits/TC2-Dictionnaires/Images/}}
+\import{../1NSI-TC-Types construits/TC2-Dictionnaires/Sources_Latex/}{TC21}
+
+
+%%%%%%%%%%%%%%%%%%%%% TDT %%%%%%%%%%%%%%%%%%%
+
+\part{Traitement de données en tables}
+\setcounter{chapter}{0}
+
+\chapter{TDT01 - Présentation des fichiers csv}
+\newpage
+\graphicspath{{../1NSI-TDT-Traitement de donnees en table/TDT1-Presentation fichiers csv/Images/}}
+\import{../1NSI-TDT-Traitement de donnees en table/TDT1-Presentation fichiers csv/Sources_Latex/}{TDT11}
+
+\chapter{TDT02 - Traitement de données en table}
+\newpage
+%\graphicspath{{../1NSI-TDT-Traitement de donnees en table/TDT2-traitement donnees en table/Images/}}
+%\import{../1NSI-TDT-Traitement de donnees en table/TDT2-traitement donnees en table/Sources_Latex/}{TDT21}
+%%%%%%%%%%%%%%%%%%%%% BDD %%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
+\begin{minipage}{9cm}
+
+\end{minipage}
+
+
