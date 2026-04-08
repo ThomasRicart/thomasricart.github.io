@@ -12,3 +12,5 @@ arrange:
   - AP06_Algos_recherche
   - AP07_Dictionnaires
   - AP08_Tri_Insertion_Selection
+  - AP09_Algos_Gloutons
+  - AP10_Algos_KNN
