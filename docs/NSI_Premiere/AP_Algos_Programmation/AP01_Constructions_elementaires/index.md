@@ -18,6 +18,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📝 **Quiz**](./quiz/AP01_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/AP01_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP01_EXO1_Correction.pdf) |
 | [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=47) | Exercices interactifs | |
+| [✏️ **Exercices 03**](https://raisintine.fr/chocolatine/question.php?idc=60) | Exercices interactifs chaines de caractères| |
 | [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/a9d3-10504403) | **a9d3-10504403** | [Correction]()|
 
 ---

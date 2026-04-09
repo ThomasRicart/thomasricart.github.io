@@ -16,7 +16,11 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [💡 **Synthèse**](./AP02_Fonctions-synth.pdf) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/AP02_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP02_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**](./exercices/AP02_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP02_EXO1_Correction.pdf) |
+| [✏️ **Exercices 01**](./exercices/AP02_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP02_EXO1_Correction.pdf) |
+| [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=140) | Exercices auto corrigés Spécifications  | |
+| [✏️ **Exercices 03**](https://raisintine.fr/chocolatine/question.php?idc=141) | Exercices auto corrigés Tests | |
+| [✏️ **Exercices 04**](https://raisintine.fr/chocolatine/question.php?idc=62) | Exercices auto corrigés Erreurs | |
+
 | [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/00c9-10504416) | **00c9-10504416** | [Correction]()|
 
 ---

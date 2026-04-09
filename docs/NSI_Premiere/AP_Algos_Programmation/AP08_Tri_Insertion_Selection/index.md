@@ -18,7 +18,9 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [💡 **Synthèse**](./AP08_Tris_Insertion_Selection-synth.pdf) | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**](./flashcards/AP08_flashcards.html) | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**](./quiz/AP08_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**]() | Exercices d'application Tris |[Correction]() |
+| [✏️ **Exercices 01**]() | Exercices d'application Tris |[Correction]() |
+| [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=299) | Exercices auto corrigés Recherche et tris | |
+
 
 ---
 ---

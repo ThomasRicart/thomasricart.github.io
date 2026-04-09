@@ -18,7 +18,9 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [💡 **Synthèse**]() | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**]() | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**]()| Auto-évaluation rapide sur le chapitre. ||
-| [✏️ **Exercices**]() | Exercices d'application Tris |[Correction]() |
+| [✏️ **Exercices 01**]() | Exercices d'application Tris |[Correction]() |
+| [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=301) | Exercices auto corrigés Algo KNN | |
+
 
 ---
 ---

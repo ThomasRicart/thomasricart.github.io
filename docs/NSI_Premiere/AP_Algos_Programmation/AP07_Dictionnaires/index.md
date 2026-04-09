@@ -18,6 +18,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [✏️ **Exercices 01**](./exercices/AP07_EXO1_Sujet.pdf) | Exercices d'application Dictionnaires |[Correction](./exercices/AP07_EXO1_Correction.pdf) |
 | [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=62) | Exercices auto corrigés Dictionnaires | |
 | [✏️ **Exercices 03**](https://raisintine.fr/chocolatine/question.php?idc=64) | Exercices auto corrigés Types construits | |
+| [✏️ **Exercices 04**](https://raisintine.fr/chocolatine/question.php?idc=823) | Exercices auto corrigés Généralités | |
 | [📚 **Activité Capytale - Dict**](https://capytale2.ac-paris.fr/web/c/eeab-10504465) | **eeab-10504465** | [Correction]()|
 | [📚 **Activité Capytale - Projet**](https://capytale2.ac-paris.fr/web/c/28d3-10504473) | **28d3-10504473** | [Correction]()|
 
