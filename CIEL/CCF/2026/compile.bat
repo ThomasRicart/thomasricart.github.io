@@ -1,5 +1,5 @@
 @echo off
-set FILENAME=CCF-Blanc-05
+set FILENAME=CCF-Blanc-06
 
 echo ======================================================
 echo   COMPILATION : PDFLATEX + PYTHONTEX + PDFLATEX
