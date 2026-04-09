@@ -15,7 +15,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | Support | Description | Corrections |
 | :--- | :--- | :--- |
 | [📕 **Cours**](./AP09_Algo_glouton.pdf) | Le support de cours complet en version PDF. | |
-| [💡 **Synthèse**](./AP08_Tris_Insertion_Selection-synth.pdf) | Fiche récapitulative des concepts clés (HTML). | |
+| [💡 **Synthèse**]() | Fiche récapitulative des concepts clés (HTML). | |
 | [🎴 **Flashcards**]() | Cartes de mémorisation pour réviser les notions. ||
 | [📝 **Quiz**]()| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices**]() | Exercices d'application Tris |[Correction]() |
