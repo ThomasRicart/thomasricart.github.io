@@ -16,6 +16,10 @@ plugins:
   - awesome-pages
 
 markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
 
@@ -25,3 +29,5 @@ extra_javascript:
 
 extra_css:
   - _environments/stylesheets/extra.css
+
+  
