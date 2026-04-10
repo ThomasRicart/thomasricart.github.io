@@ -104,4 +104,5 @@ print(f"Chiffrement de 'CODE' : {traiter_message('CODE', CLE_K)}")
 
 # 2. DEFI : Déchiffrer le message secret "CPZP"
 # secret = traiter_message("CPZP", CLE_INV)
-# print(f"Le mot secret est : {secret}")
+# print(f"Le mot secret est : {secret}")`
+```
