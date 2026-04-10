@@ -4056,49 +4056,57 @@ On reçoit le bloc chiffré <strong>"WW"</strong> (soit le vecteur <span class="
 <hr />
 <h3 id="4-partie-informatique-code-a-completer">4. Partie Informatique : Code à compléter</h3>
 <p><strong>Consigne :</strong> Complétez les zones marquées <code>TODO</code> dans le script Python pour automatiser le processus.</p>
-<p>```python</p>
-<h1 id="_1">==========================================================</h1>
-<h1 id="tp-chiffre-de-hill-bts-ciel">TP : CHIFFRE DE HILL - BTS CIEL</h1>
-<h1 id="_2">==========================================================</h1>
-<p>ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"</p>
-<h1 id="matrices-fournies">Matrices fournies</h1>
-<p>CLE_K = [[3, 3], [2, 5]]
-CLE_INV = [[15, 17], [20, 9]]</p>
-<p>def lettre_vers_nombre(lettre):
-    return ALPHABET.index(lettre.upper())</p>
-<p>def nombre_vers_lettre(nombre):
-    return ALPHABET[nombre % 26]</p>
-<p>def produit_hill(matrice, bloc_nombres):
-    """Effectue le calcul matriciel ligne par colonne modulo 26"""
+<pre><code class="language-python"># ==========================================================
+# TP : CHIFFRE DE HILL - BTS CIEL
+# ==========================================================
+
+ALPHABET = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+
+# Matrices fournies
+CLE_K = [[3, 3], [2, 5]]
+CLE_INV = [[15, 17], [20, 9]]
+
+def lettre_vers_nombre(lettre):
+    return ALPHABET.index(lettre.upper())
+
+def nombre_vers_lettre(nombre):
+    return ALPHABET[nombre % 26]
+
+def produit_hill(matrice, bloc_nombres):
+    &quot;&quot;&quot;Effectue le calcul matriciel ligne par colonne modulo 26&quot;&quot;&quot;
     # TODO : Implémenter le calcul de y1 et y2
     y1 = (matrice[0][0] * bloc_nombres[0] + matrice[0][1] * bloc_nombres[1]) % 26
     y2 = (matrice[1][0] * bloc_nombres[0] + matrice[1][1] * bloc_nombres[1]) % 26
-    return [y1, y2]</p>
-<p>def traiter_message(message, matrice):
-    message = message.upper().replace(" ", "")</p>
-<pre><code># TODO : Gérer les messages de longueur impaire
-if len(message) % 2 != 0:
-    message += "X"
+    return [y1, y2]
 
-resultat = ""
-for i in range(0, len(message), 2):
-    # TODO : Extraire le bloc, transformer et convertir en texte
-    paire_lettres = message[i:i+2]
-    nombres_clairs = [lettre_vers_nombre(paire_lettres[0]), lettre_vers_nombre(paire_lettres[1])]
+def traiter_message(message, matrice):
+    message = message.upper().replace(&quot; &quot;, &quot;&quot;)
 
-    nombres_transformes = produit_hill(matrice, nombres_clairs)
+    # TODO : Gérer les messages de longueur impaire
+    if len(message) % 2 != 0:
+        message += &quot;X&quot;
 
-    resultat += nombre_vers_lettre(nombres_transformes[0])
-    resultat += nombre_vers_lettre(nombres_transformes[1])
+    resultat = &quot;&quot;
+    for i in range(0, len(message), 2):
+        # TODO : Extraire le bloc, transformer et convertir en texte
+        paire_lettres = message[i:i+2]
+        nombres_clairs = [lettre_vers_nombre(paire_lettres[0]), lettre_vers_nombre(paire_lettres[1])]
 
-return resultat
+        nombres_transformes = produit_hill(matrice, nombres_clairs)
+
+        resultat += nombre_vers_lettre(nombres_transformes[0])
+        resultat += nombre_vers_lettre(nombres_transformes[1])
+
+    return resultat
+
+# --- ZONE DE TESTS ---
+# 1. Tester le chiffrement de &quot;CODE&quot;
+print(f&quot;Chiffrement de 'CODE' : {traiter_message('CODE', CLE_K)}&quot;)
+
+# 2. DEFI : Déchiffrer le message secret &quot;CPZP&quot;
+# secret = traiter_message(&quot;CPZP&quot;, CLE_INV)
+# print(f&quot;Le mot secret est : {secret}&quot;)`
 </code></pre>
-<h1 id="-zone-de-tests-">--- ZONE DE TESTS ---</h1>
-<h1 id="1-tester-le-chiffrement-de-code">1. Tester le chiffrement de "CODE"</h1>
-<p>print(f"Chiffrement de 'CODE' : {traiter_message('CODE', CLE_K)}")</p>
-<h1 id="2-defi-dechiffrer-le-message-secret-cpzp">2. DEFI : Déchiffrer le message secret "CPZP"</h1>
-<h1 id="secret-traiter_messagecpzp-cle_inv">secret = traiter_message("CPZP", CLE_INV)</h1>
-<h1 id="printfle-mot-secret-est-secret">print(f"Le mot secret est : {secret}")</h1>
 
 
 
