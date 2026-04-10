@@ -25,7 +25,7 @@
     
     
       
-        <title>🛡️ TP Co-Enseignement : Mathématiques & Informatique - Cours de M. Ricart</title>
+        <title>Chiffrement hill - Cours de M. Ricart</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🛡️ TP Co-Enseignement : Mathématiques &amp; Informatique
+              Chiffrement hill
             
           </span>
         </div>
@@ -4015,6 +4015,9 @@
 
 
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <h1 id="tp-co-enseignement-mathematiques-informatique">🛡️ TP Co-Enseignement : Mathématiques &amp; Informatique</h1>
 <h2 id="theme-cryptographie-lineaire-le-chiffre-de-hill">Thème : Cryptographie Linéaire – Le Chiffre de Hill</h2>
 <hr />
@@ -4025,12 +4028,12 @@
 <h3 id="2-rappel-theorique">2. Rappel Théorique</h3>
 <h4 id="chiffrement">📜 Chiffrement</h4>
 <p>On remplace chaque lettre par son rang dans l'alphabet (<span class="arithmatex">\(A=0, B=1, \dots, Z=25\)</span>).
-Pour chiffrer un bloc <span class="arithmatex">\(P = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}\)</span> avec une matrice clé <span class="arithmatex">\(K\)</span>, on calcule :
-$<span class="arithmatex">\(C = (K \times P) \pmod{26}\)</span>$</p>
+Pour chiffrer un bloc <span class="arithmatex">\(P = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}\)</span> avec une matrice clé <span class="arithmatex">\(K\)</span>, on calcule :</p>
+<div class="arithmatex">\[C = (K \times P) \pmod{26}\]</div>
 <h4 id="dechiffrement">🔓 Déchiffrement</h4>
-<p>Pour retrouver le message d'origine, on doit utiliser la matrice inverse <span class="arithmatex">\(K^{-1}\)</span> telle que :
-$<span class="arithmatex">\(P = (K^{-1} \times C) \pmod{26}\)</span>$
-<em>Note : En arithmétique modulaire, le calcul de l'inverse est spécifique et nécessite que le déterminant de la matrice soit premier avec 26.</em></p>
+<p>Pour retrouver le message d'origine, on doit utiliser la matrice inverse <span class="arithmatex">\(K^{-1}\)</span> telle que :</p>
+<div class="arithmatex">\[P = (K^{-1} \times C) \pmod{26}\]</div>
+<p><em>Note : En arithmétique modulaire, le calcul de l'inverse est spécifique et nécessite que le déterminant de la matrice soit premier avec 26.</em></p>
 <hr />
 <h3 id="3-travail-preparatoire-mathematiques">3. Travail Préparatoire (Mathématiques)</h3>
 <p><em>À réaliser avant de passer sur ordinateur.</em></p>
