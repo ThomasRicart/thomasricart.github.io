@@ -1,3 +1,6 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 # 🛡️ TP Co-Enseignement : Mathématiques & Informatique
 ## Thème : Cryptographie Linéaire – Le Chiffre de Hill
 
@@ -14,11 +17,14 @@ Contrairement aux chiffrements simples qui travaillent lettre par lettre, le chi
 #### 📜 Chiffrement
 On remplace chaque lettre par son rang dans l'alphabet ($A=0, B=1, \dots, Z=25$).
 Pour chiffrer un bloc $P = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}$ avec une matrice clé $K$, on calcule :
+
 $$C = (K \times P) \pmod{26}$$
 
 #### 🔓 Déchiffrement
 Pour retrouver le message d'origine, on doit utiliser la matrice inverse $K^{-1}$ telle que :
+
 $$P = (K^{-1} \times C) \pmod{26}$$
+
 *Note : En arithmétique modulaire, le calcul de l'inverse est spécifique et nécessite que le déterminant de la matrice soit premier avec 26.*
 
 ---
