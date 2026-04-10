@@ -1,8 +1,8 @@
 nav:
   - index.md
-  - SNT
-  - NSI_Premiere
-  - NSI_Terminale
-  - CIEL
-  - Maths_Premiere
+  - SNT : 2SNT
+  - NSI_Premiere : 1NSI
+  - NSI_Terminale : TNSI
+  - CIEL : BTS
+  - Maths_Premiere : 1MATHS
   - Divers
