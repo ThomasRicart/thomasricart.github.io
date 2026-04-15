@@ -1,0 +1,434 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Loi continues} % Titre au centre
+\def\docpart{Loi normale} % Partie du cours
+\def\docname{C223}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+\begin{definition}[Loi normale]{}
+	
+ Une variable aléatoire X suit une loi normale d'espérance $\mu$ et d'écart-type $\sigma$, notée $\mathcal{N}(\mu;\sigma)$, lorsque la densité de probabilité $f$ est définie par:
+\[f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e^{-\dfrac{1}{2}\left(\dfrac{x-\mu}{\sigma}\right)^2}\]
+
+\begin{center}
+\includegraphics[width = 0.9\linewidth]{loi_normale2.png}
+\end{center}
+\end{definition}
+
+\begin{itemize}
+	\item[$\bullet$] 	La courbe représentative de la densité de probabilité \og en cloche \fg{}  est appelée une courbe de Gauss. Elle admet un axe de symétrie d'équation $x=\mu$.
+
+	\item[$\bullet$] L'adjectif « normale » s'explique par le fait que cette loi décrit et modélise la majorité des situations concrètes dans lesquelles le résultat dépend de nombreux paramètres aléatoires indépendants.
+
+\end{itemize}
+
+\begin{propriete}[Caractères de position et de dispersion]{}
+
+	$X \sim \mathcal{N}(\mu;\sigma)$: Espérance $E(X)=\mu$ et écart-type $\sigma(X)=\sigma$.
+
+\end{propriete}
+
+\begin{minipage}{0.55\linewidth}
+
+On remarque que:
+
+\begin{itemize}
+	\item[$\bullet$] 	$\mu$ est un caractère de position. Lorsque $\mu$ varie l'extremum de la courbe de déplace le long de l'axe des abscisses. 
+
+	\item[$\bullet$] $\sigma$ est un caractère de dispersion. Lorsque $\sigma$ augmente, la répartition est plus étalée.
+
+\end{itemize}
+	
+
+
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[width = 0.9\linewidth]{musigma.png}
+\end{minipage}
+
+
+\bigskip
+
+\begin{propriete}[Règle empirique]{}
+Soit $X$ une variable aléatoire suivant la loi normale $\mathcal{N}(\mu;\sigma)$, alors:
+
+\begin{minipage}{0.5\linewidth}
+\[P(\mu-\sigma\le X\le\mu+\sigma)\approx 0,68\]
+
+\[P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0,95\]
+
+\[P(\mu-3\sigma\le X\le\mu+3\sigma)\approx 0,997\]
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\includegraphics[width=0.95\linewidth]{loi_normale.png}
+\end{minipage}
+\end{propriete}
+
+
+\pagebreak
+
+\begin{easybox}[Approximation de la loi binomiale par la loi normale]{}
+
+	
+{\it Lorsque $n$ est grand et $p$ ni trop près de $0$, ni trop près de $1$, alors la loi binomiale est très proche d'une loi normale ayant même espérance et même écart-type.
+
+En pratique, on convient de faire cette approximation pour $n \geq 50$, $p$ ni proche de $0$ ni de $1$ et $np(1 - p) > 10$.}
+
+
+Dans les bonnes conditions, on peut approcher un loi binomiale $\mathscr{B}(n,p)$ par une loi normale $\mathscr{N}(\mu,\sigma)$ avec $\mu=np$ et $\sigma=\sqrt{np(1-p)}$
+
+
+\begin{center}
+	\includegraphics[width=0.99\linewidth]{approxim.png}
+\end{center}
+
+\end{easybox}
+
+
+\begin{exercice_cours}[\quad]{Dans cette activité, chaque probabilité demandée sera arrondie à $10^{-3}$.}
+
+
+
+Une enquête réalisée par un institut de sondage permet d'estimer que la probabilité qu'une lettre, choisie au hasard dans le courrier d'une entreprise, parvienne à son destinataire en France le lendemain est $0,7$.
+
+Dans une des agences d'une grande entreprise, on admet que l'on expédie $500$ lettres par jour.
+
+On note $X$ la variable aléatoire qui, à un jour tiré au hasard, associe le nombre de lettres qui parviendront à leur destinataire le lendemain.
+
+On suppose que les acheminements de ces lettres se font en toute indépendance.
+
+\begin{enumerate}
+  \item 
+  \begin{enumerate}
+    \item Expliquer pourquoi $X$ suit une loi binomiale et préciser les paramètres de cette loi.
+    
+    \item Calculer l'espérance mathématique de $X$, puis la valeur arrondie à $10^{-2}$ de l'écart-type de $X$.
+    
+    \item Calculer la probabilité que $355$ lettres exactement, sur les $500$ expédiées un jour tiré au hasard, parviennent à leur destinataire le lendemain.
+  \end{enumerate}
+
+  \item Soit $P_0$ la probabilité qu'au moins $375$ des $500$ lettres expédiées un jour tiré au hasard parviennent à leur destinataire le lendemain. Calculer la probabilité $P_0$.
+
+  \item Pour calculer une valeur approchée $P_0'$ de $P_0$, on pense approcher la loi de $X$ par la loi de $Y$, où $Y$ est une variable aléatoire suivant la loi normale $\mathscr{N}(350~;~10,25)$.
+  
+  \begin{enumerate}
+    \item Justifier que les deux paramètres choisis sont pertinents.
+    
+    \item Calculer une valeur arrondie à $10^{-3}$ de $P_0'=P(Y\geq 375)$, avec $Y$ qui suit la loi normale $\mathscr{N}(350~;~10,25)$ puis comparer avec la valeur trouvée pour $P_0$.
+  \end{enumerate}
+
+  \item En utilisant l'approximation de la loi binomiale $X$ par la loi normale $Y$, estimer la probabilité que le nombre de lettres, sur les $500$ expédiées un jour choisi au hasard, parvenant à leur destinataire le lendemain, soit compris entre $340$ et $365$.
+\end{enumerate}
+
+
+\end{exercice_cours}
+
+\end{document}
+\vfill
+
+\underline{Exemple :}\sautm
+
+
+\vfill ~
+
+%\includegraphics[width=\lw]{ex}
+
+
+
+\bigskip
+
+\subsubsection{Calculatrices}
+
+Les calculatrices permettent de calculer directement $P(a\le X\le b)$ pour une loi normale.
+
+\begin{itemize}
+	\item[$\bullet$] 	Sur Casio : \verb+Menu / STAT / DIST / NORM / Ncd+
+
+	\item[$\bullet$] 	Sur TI : \verb+2nd / Distrib : normalFrep+
+
+\end{itemize}
+
+Lorsqu'on veut obtenir $P(X\le b)$, on remplace $a$ par $-10^{99}$ et lorsqu'on veut obtenir $P(X\geq a)$, on remplace $b$ par $10^{99}$.
+
+\subsubsection{Geogebra}
+
+\verb+ Affichage / Calculs de probabilités / Loi normale+
+
+\bigskip
+
+Approximation d'une loi binomiale par une loi normale
+
+On peut approcher une loi binomiale $\mathcal{B}(n;p)$ par une loi normale $\mathcal{N}(\mu;\sigma)$ si $n>30$, $np>5$ et $n(1-p)>5$.
+
+Dans ce cas on choisit $\mu=np$ et $\sigma=\sqrt{np(1-p)}$ afin de garder l'espérance et l'écart type.
+
+Il faut alors tenir compte de la correction de continuité.
+
+
+
+\newpage
+
+\subsubsection{Exemple et correction de continuité}
+
+Soit $X$ une variable aléatoire suivant la loi  $\mathcal{B}(50;0,4)$.
+
+On peut approcher cette loi binomiale par une loi normale de moyenne $\mu=50\times0,4=20$ et d'écart type $\sigma=\sqrt{50\times0,4\times(1-0,4)}\approx3,4641$.
+
+
+Ci-dessous est représentée l'approximation de la loi $\mathcal{B}(50;0,4)$ par la loi $\mathcal{N}(20;3,46)$ à l'aide du logiciel GeoGebra. 
+
+\begin{center}
+\includegraphics[scale=0.55]{bin_normale.png}
+
+\end{center}
+
+Notons Y la variable aléatoire suivant la loi N(20;3,46).
+Pour calculer une probabilité, il faut alors tenir compte de la correction de continuité :
+\begin{itemize}
+
+	\item[$\bullet$]  pour approcher $P(X\le 22)$, on calcule $P(Y\le 22,5)$,
+	\item[$\bullet$]  pour approcher $P(X\geq 16)$, on calcule $P(Y\geq 15,5)$,
+	\item[$\bullet$]  pour approcher $P(18\le X\le 22)$, on calcule $P(17,5\le Y\le 22,5)$.
+\end{itemize}
+
+
+\end{document}
+
+\begin{definition}[La loi uniforme]{}
+Une \textbf{loi de probabilité} est dite \textbf{uniformee} si tous les éléments de l'univers ont la même probabilité d'occurrence.
+	
+\medskip
+
+Une variable aléatoire $X$ suit une loi uniforme sur l'intervalle $\ff{a}{b}$ notée $X \sim \mathcal{U}\ff{a}{b}$ lorsque la densité de probabilité de $f$ est définir par:\\
+
+\begin{minipage}{8cm}
+$$f(x)=
+\begin{cases}
+\dfrac{1}{b-a} & \textrm{si} \qquad a \leqslant x \leqslant b \\
+0 & \textrm{sinon}
+\end{cases}$$
+
+\end{minipage}
+\begin{minipage}{8cm}
+$$P(c \leqslant X \leqslant d)=\dfrac{d-c}{b-a}$$
+\end{minipage}
+\begin{center}
+	\includegraphics[width = 0.6\linewidth]{C220_1.jpg}
+	
+\end{center}
+\end{definition}
+
+
+\begin{exercice_cours}[\quad]{}
+Ci-contre est représentée la densité de probabilité de la loi uniforme X sur l'intervalle $\ff{1}{3}$:
+
+\begin{minipage}{0.4\linewidth}
+
+$$f(x)=
+\begin{cases}
+\dfrac{1}{2} & \textrm{si} \qquad 1 \leqslant x \leqslant 3 \\
+0 & \textrm{sinon}
+\end{cases}$$
+\end{minipage}\hfill
+\begin{minipage}{0.27\linewidth}
+\includegraphics[width = 0.9\linewidth]{C220_2.jpg}
+\end{minipage}\hfill
+\begin{minipage}{0.33\linewidth}
+	\begin{itemize}
+		\item Calculer $P(X<2,5)$
+		\item Calculer $P(X>2,5)$
+		\item Calculer $P(1,5<X<2,5)$
+		\item Calculer $P(1<X<2)$
+	\end{itemize}
+\end{minipage}
+\end{exercice_cours}
+
+\begin{propriete}[Propriétés des lois uniformes]{}
+Soit $X$ une variable aléatoire suivant une loi uniforme sur l'intervalle $\ff{a}{b}$.
+
+\begin{itemize}
+	\item[$\bullet$] L'espérance de $X$ est : $E(X)=\dfrac{a+b}{2}$.
+	\item[$\bullet$] La variance de $X$ est : $V(X)=\dfrac{(b-a)^2}{12}$.
+	\item[$\bullet$] L'écart-type de $X$ est : $\sigma(X)=\dfrac{b-a}{\sqrt{12}}$.
+
+\end{itemize}
+\end{propriete}
+
+\begin{exercice_cours}[A partir des données de l'exercice 1]{}
+\begin{enumerate}
+	\item Calculer l'espérance de $X$.\hfill\reponseLigne[7cm]{}.
+	\item Calculer la variance de $X$.\hfill\reponseLigne[7cm]{}.
+	\item Calculer l'écart-type de $X$.\hfill\reponseLigne[7cm]{}.
+\end{enumerate}
+\end{exercice_cours}
+
+\pagebreak
+
+\begin{exercice_cours}[\quad]{}
+
+	$X$ est une variable aléatoire qui suit une loi uniforme sur l'intervalle $\ff{-2}{8}$.
+
+\begin{enumerate}
+	\item Donner la fonction de densité de $X$ 
+	\begin{blocvisiblex}[height=1.5]
+{\quad}
+\end{blocvisiblex}
+	\item Déterminer les probabilité suivantes:
+	
+	$$P(X  \in \ff{0}{3}) \qquad P(-1\leqslant X \leqslant 4) \qquad P(X\leqslant 5)  \qquad P(X=2)$$
+	
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}	
+	\item Déterminer l'espérance, la variance et l'écart-type de $X$.
+	
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}	
+	
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{exercice_cours}[\quad]{}
+\bigskip
+
+ Antoine arrive à l'arrêt du bus sans avoir consulté les horaires. Sur cette ligne, un bus part toutes les huit minutes. On note $X$ la variable aléatoire donnant, en minutes, le temps d'attente jusqu'au départ du bus.
+
+\begin{enumerate}
+	\item Quelle est la loi suivie par la variable aléatoire $X$?
+	
+\begin{blocvisiblex}[height=1.5]
+{\quad}
+\end{blocvisiblex}	
+	\item Calculer la probabilité qu'Antoine attende:
+	
+	\begin{enumerate}
+		\item moins de 2 minutes \hfill\reponseLigne[7cm]{}.
+		\item entre 3 et 6 minutes \hfill\reponseLigne[7cm]{}.
+		\item au plus 5 minutes \hfill\reponseLigne[7cm]{}.
+		\item au moins 3 minutes \hfill\reponseLigne[7cm]{}.
+		\item plus de 6 minutes \hfill\reponseLigne[7cm]{}.
+	\end{enumerate}
+	
+	\item Calculer l'espérance de la variable aléatoire $X$ \hfill\reponseLigne[7cm]{}.
+	\item Calculer la variance de la variable aléatoire $X$ \hfill\reponseLigne[7cm]{}.
+	\item Calculer l'écart-type de la variable aléatoire $X$ \hfill\reponseLigne[7cm]{}.
+\end{enumerate}
+\end{exercice_cours}
+
+\end{document}
+
+
+\section{Lois discrètes}
+
+\begin{propriete}[Lois discrètes]{}
+Une \textbf{loi de probabilité} est dite \textbf{discrète} si elle est définie sur un ensemble fini ou dénombrable de valeurs.
+
+On peut donc compter les éléments de l'univers et attribuer une probabilité à chacun d'eux. Si on jette un dé équilibré à six faces, la loi de probabilité associée est discrète car elle est définie sur l'ensemble fini $\{1, 2, 3, 4, 5, 6\}$.
+\end{propriete}
+
+\begin{exemple}[\quad]{}
+	\begin{itemize}
+		\item La \textbf{loi de Bernoulli} est une loi de probabilité discrète qui modélise une expérience aléatoire binaire, c'est-à-dire une expérience qui n'a que deux issues possibles: succès ou échec.
+		\item La \textbf{loi binomiale} est une loi de probabilité discrète qui modélise le nombre de succès dans une séquence d'expériences de Bernoulli indépendantes.
+	\end{itemize}
+\end{exemple}
+
+
+\section{Lois continues}
+
+\begin{definition}[Lois continues]{}
+Une \textbf{loi de probabilité} est dite \textbf{continue} si elle est définie sur un intervalle de valeurs réelles. 
+
+\begin{itemize}
+	\item les lois continues ne sont pas définies sur des points individuels,
+	\item elles sont plutôt définies sur des intervalles de valeurs.
+\end{itemize}
+\end{definition}
+
+\begin{exemple}[Exemples de lois continues]{}
+	\begin{itemize}
+		\item on définit une variable aléatoire qui associe à chaque train, le temps de trajet entre deux gares.
+		\item on définit une variable aléatoire qui associe à chaque personne, sa taille.
+		\item on définit une variable aléatoire qui associe à chaque jour, la température maximale enregistrée dans une ville.
+	\end{itemize}
+\end{exemple}
+
+\begin{easybox}[Fonction de densité]{}
+Une \textbf{fonction de densité} est une fonction qui permet de définir une loi de probabilité continue. Elle doit satisfaire les conditions suivantes:
+
+\medskip
+
+\begin{minipage}{0.7\linewidth}
+	
+\begin{itemize}
+	\item $f(x) \geq 0$ pour tout $x \in \R$ et  $\displaystyle\int_{-\infty}^{+\infty} f(x) \, dx = 1$
+	\item pour tout intervalle $\ff{a}{b}$, la probabilité que la variable aléatoire prenne une valeur dans cet intervalle est donnée par l'intégrale de la fonction de densité sur cet intervalle: \[P(X \in \ff{a}{b}) = P(a \leq X \leq b)= \int_{a}^{b} f(x) \, dx\]
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.3\linewidth}
+\includegraphics[width = 0.9\linewidth]{loiproba2.png}
+\end{minipage}
+\end{easybox}
+
+\pagebreak
+
+\begin{exemple}[Exemple de fonction de densité]{}
+\begin{enumerate}
+	\item Vérifier que la fonction $f$ définie ci-dessous est une fonction de densité.
+	$$f(x) = \begin{cases}
+2\e^{-x} & \text{si } x \in \ff{0}{\ln(2)}  \\
+0 & \text{sinon}
+\end{cases}$$
+	\item Calculer $\displaystyle\int_{0}^{0,5} f(x) \, dx$ et interpréter le résultat en terme de probabilité.
+	\item Calculer la probabilité que la variable aléatoire prenne une valeur supérieure à $0,5$.
+	\item Calculer la probabilité que la variable aléatoire prenne une valeur comprise entre $0,2$ et $0,5$.
+	\item Créer un curseur $a$ dans l'intervalle $\ff{0}{\ln(2)}$ et 
+	\begin{itemize}
+		\item déterminer $a$ tel que $P(X \leq a) = 0,25$,
+		\item déterminer $a$ tel que $P(X \leq a) = 0,5$.
+	\end{itemize}
+\end{enumerate}
+\end{exemple}
+
+\begin{propriete}[Propriétés des lois continues]{}
+\begin{itemize}
+	\item $P(X=k)=\displaystyle\int_k^k\;f(x)\,dx=0$ 
+	\item $P(X \leq a) = P(X < a)$ (la probabilité que la variable aléatoire prenne une valeur inférieure ou égale à $a$ est égale à la probabilité qu'elle prenne une valeur strictement inférieure à $a$)
+	\item L'espérance d'une variable aléatoire continue $X$ est donnée par la formule: \[E(X) = \displaystyle\int_{-\infty}^{+\infty} x f(x) \, dx\]
+\end{itemize}
+\end{propriete}
+
+\begin{exercice_cours}
+
+Soit $X$ la variable aléatoire qui suit la loi de probabilité $f$ définie par $f(x)=0.015x-0.00075x^2$
+
+\begin{enumerate}
+	\item Montrer que $f$ est bien une densité de probabilité sur l'intervalle $\ff{0}{20}$
+	
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}
+	\item Calculer la probabilité de l'évènement \og $X$ est supérieure ou égale à 12 \fg{} 
+	
+
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}	
+	\item Calculer la probabilité de l'évènement \og $X$ est compris entre 5 et 15 \fg{} 
+	
+
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}
+\item Calculer l'espérance mathématique de $X$.
+
+
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}\end{enumerate}
+
+
+\end{exercice_cours}

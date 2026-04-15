@@ -1,0 +1,185 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amsbsy,amscd,mathrsfs}
+\usepackage{lmodern}
+\usepackage{fourier}
+%\usepackage{times,mathptmx}
+%\DeclareSymbolFont{lmodern}{U}{euex}{m}{n}
+%\DeclareMathSymbol\infty \mathord{lmodern}{"31}
+\usepackage[scaled=0.875]{helvet} % ss
+\usepackage{textcomp}
+\usepackage{dsfont} % pour les symboles des ensembles
+\usepackage[left=2cm,right=2cm,top=1.5cm,bottom=2.5cm]{geometry}
+\usepackage{fancyhdr} 
+\fancyhf{}
+\setlength{\headheight}{26pt}
+\setlength{\footskip}{18pt}
+\renewcommand {\headrulewidth}{0pt}
+\renewcommand {\footrulewidth}{0pt}
+%\usepackage{lastpage}
+%\usepackage{makeidx}
+\usepackage{graphicx} % inclure le fichier graphique de pondichery 2010
+\usepackage{hyperxmp}
+\usepackage[colorlinks=true,pdfstartview=FitV,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage[table]{xcolor}
+\usepackage{arydshln}%%% lignes en tirets dans un tableau 
+\usepackage{mathtools} %pour l'alignement des termes d'une matrice
+\usepackage{fltpoint}
+\usepackage{xcolor,colortbl}
+\usepackage{pstricks,pst-all,pst-plot,pstricks-add,pst-tree,pst-3dplot,pst-func}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{esvect}
+\usepackage[np]{numprint}
+\setlength{\parindent}{0mm}
+\usepackage [alwaysadjust]{paralist}
+\setdefaultenum {1.}{a)}{}{}
+\hyphenpenalty=10000 
+\tolerance=2000
+\emergencystretch=1em
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+\renewcommand*{\tabularxcolumn}[1]{m{#1}} %centrage vertical des cellules d'un tableau tabularx
+\newcommand{\Oij}{$\left( {{\mathrm{O}};\vec i,\vec j} \right)$}
+\newcommand{\Oijk}{$\left( {{\mathrm{O}};\vec i,\vec j ,\vec k} \right)$}
+\newcommand{\euro}{\texteuro{}}
+\newcommand{\R}{\mathds {R}}
+%\newcommand{\C}{\mathds {C}}
+\newcommand{\N}{\mathds {N}}
+\newcommand{\Z}{\mathds {Z}}
+\newcommand{\Q}{\mathds {Q}}
+\newcommand{\e}{\mathrm {e}}
+\newcommand{\dd}{\,\mathrm{d}}
+\DecimalMathComma
+%%% Mise en forme des algorithmes
+\usepackage[french,boxed,titlenumbered,lined,longend]{algorithm2e}
+  \SetKwIF {Si}{SinonSi}{Sinon}{si}{alors}{sinon\_si}{alors}{fin~si}
+ \SetKwFor{Tq}{tant\_que~}{~faire~}{fin~tant\_que}
+ \SetKwFor{PourCh}{pour\_chaque }{ faire }{fin pour\_chaque}
+ \SetKwInput{Sortie}{Sortie}
+\newcommand{\Algocmd}[1]{\textsf{\textsc{\textbf{#1}}}}\SetKwSty{Algocmd}
+  \newcommand{\AlgCommentaire}[1]{\textsl{\small  #1}}  
+%%%%%%%%%%%%%%%
+\newcounter{nexo}    % déclaration du numéro d'exo
+\setcounter{nexo}{0} % initialisation du numero
+\newcommand{\exo}{%
+  \stepcounter{nexo} 
+  \par{\textsf{\textbf{\textcolor{blue}{{\textsc{exercice  \arabic{nexo}}}}}}}
+  }%
+\newcommand{\QCM}[3]{ $\bullet$ \quad #1 \hfill 
+$\bullet$ \quad #2 \hfill 
+$\bullet$ \quad #3 }
+\newcommand{\QCMc}[4]{   #1 \\ 
+\makebox[3cm][l]{\psframe(.25,.25) \qquad #2 }\hfill 
+\makebox[3cm][l]{\psframe(.25,.25) \qquad #3 }\hfill 
+\makebox[3cm][l]{\psframe(.25,.25) \qquad #4 }} % QCM avec cases à cocher%
+% en-tête
+%\lhead{\footnotesize{\textsf{Lycée JANSON DE SAILLY\\ {\today}}}} %gauche
+\chead{\textsf{\textcolor{red}{\textbf{\textsc{DS02}}}}} %centre
+%\rhead{\footnotesize{\fbox{\textsf{S1E2}}}} %droit
+%pied de page
+%\lfoot{\scriptsize{\textsf{\textsc{A. Yallouz}}}} %gauche
+\cfoot{\scriptsize{\textsf{-~\thepage{}~-}}}  %centre                                                   
+%\rfoot{\htmladdnormallink{\scriptsize\textsf{\textsc{MATH@ES}}}{http://yallouz.arie.free.fr}} %droit 
+\hypersetup{
+pdftitle={titre du document.}, 
+pdfauthor={Arié Yallouz},   
+pdfsubject={Exercices Terminale ES.}, 
+pdfkeywords={exercices, sujets.},
+pdfcontacturl={http//yallouz.arie.free.fr/},
+pdflang={fr},
+baseurl={http://yallouz.arie.free.fr/serveurtex/exostex.php}
+}
+\begin{document}
+
+\exo
+
+ \medskip 
+
+\medskip 
+
+
+La fonte GS (graphite sphéroïdal) possède des caractéristiques mécaniques élevées et proche de celles des aciers. Une entreprise fabrique des pièces de fonte GS qui sont utilisées dans l'industrie automobile.
+
+Ces pièces sont coulées dans des moules de sable et ont une température de 1400\,\degres C à la sortie du four. Elles sont entreposées dans un local dont la température ambiante est maintenue à une température de 30\,\degres C. Ces pièces peuvent être démoulées dès lors que leur température est inférieure à 650\,\degres C.
+
+La température en degrés Celsius d'une pièce de fonte est une fonction du temps $t$, exprimé en heures, depuis sa sortie du four. On admet que cette fonction $f$, définie et dérivable sur l'intervalle $\left[ 0 ; +\infty\right[$, est une solution sur cet intervalle de l'équation différentielle :\[(E): \quad 
+  y'+0,065y = 1,95.\]
+
+Vous pourrez effectuer l'intégralité du TP avec le logiciel GEOGEBRA, EXCEL, XCAS...
+
+Les questions où l'on vous demandera d'effectuer les calculs seront indiquées de manière explicite.
+
+\bigskip
+
+\begin{enumerate}
+\item Résoudre l'équation homogène $(E_0)$ de cette équation différentielle
+
+\vspace{2cm}
+
+\item Déterminer les solutions de  l'équation différentielle $(E)$
+
+\vspace{2cm}
+
+\item En déduire une solution particulière $f_p$ de l'équation différentielle $(E)$
+
+\vspace{2cm}
+
+\item Donner la valeur de $f(0)$ et déterminer alors \textbf{par le calcul} la solution de l'équation différentielle $(E)$ qui correspond au problème donné.
+
+\vspace{3cm}
+
+\newpage
+
+\item Dans cette partie, on considère la fonction $f$ définie pour tout $t \in [0;+\infty[$ par $$f(t)=1370 \e^{-0.065t}+30$$
+
+\begin{enumerate}
+
+\item Déterminer la fonction $f'$, dérivée de la fonction $f$.
+	
+	\vspace{2cm}
+	
+\item La pièce de fonte peut-elle être démoulée après avoir été entreposée 5 heures dans le local ?
+	
+\vspace{3cm}
+	
+	\bigskip
+\end{enumerate}
+	
+
+\item
+  \begin{enumerate}
+  \item Déterminer au bout de combien de temps au minimum la pièce pourra être démoulée. Arrondir au centième d'heure.
+  
+  \vspace{3cm}
+  
+  
+  \item Pour éviter la fragilisation de la fonte, il est préférable de ne pas démouler la pièce avant que sa température ait atteint 325\,\degres C.
+
+    Dans ce cas faudra-t-il attendre exactement deux fois plus de temps que pour un démoulage à 650\,\degres C ? Justifier la réponse.
+
+  \end{enumerate}
+  
+  \end{enumerate}
+\end{document}
+
+  
+
+
+\end{enumerate}
+
+
+ \bigskip 
+
+\end{document}
+
+ 
+ \end{document}

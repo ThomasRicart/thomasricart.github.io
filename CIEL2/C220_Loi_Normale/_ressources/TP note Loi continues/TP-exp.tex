@@ -1,0 +1,386 @@
+\documentclass[a4paper,12pt,openany]{book}
+\input{../../../preambule/preambule}
+
+% en-tête
+\rhead{\footnotesize{\textsf{BTS SNIR 2}} }%droit
+
+\begin{document}
+
+\begin{center}\begin{huge}
+TP lois continues
+\end{huge}\end{center}
+
+
+\exo
+
+\medskip
+
+Le temps d'attente à un arrêt de bus peut être modélisé par une variable aléatoire $T$ qui suit la loi uniforme sur l'intervalle $[1;7]$
+
+\medskip
+
+\begin{enumerate}
+	\item Donner la fonction densité de $T$
+	
+	\cadre{
+\vspace{1.5cm}\hspace{18cm}
+}
+
+	\item Déterminer les probabilités suivantes:
+	\begin{enumerate}
+		\item Probabilité d'attendre moins de 5 minutes
+		
+		\cadre{
+\vspace{1.5cm}\hspace{18cm}
+}
+
+		\item Probabilité d'attendre exactement 5 minutes
+		
+		\cadre{
+\vspace{1.5cm}\hspace{18cm}
+}
+		\item Probabilité d'attendre au moins 3 minutes
+		
+		\cadre{
+\vspace{1.5cm}\hspace{18cm}
+}
+	\end{enumerate}
+	\item Déterminer l'espérance de $T$ et en donner une interprétation.
+	
+	\cadre{
+\vspace{1.5cm}\hspace{18cm}
+}
+\end{enumerate}
+
+
+\bigskip
+
+\newpage
+\exo
+
+\medskip
+
+On s'intéresse à la durée de vie d'un téléphone portable. On note $T$ la variable aléatoire qui à tout téléphone associe sa durée de bon fonctionnement en années.
+
+Toutes les valeurs seront données à $10^{-3}$
+\bigskip
+
+
+PARTIE A
+
+\bigskip
+
+Dans cette partie on suppose que $T$ suit la loi exponentielle de paramètre $\lambda = 0.25$
+
+\begin{enumerate}
+	\item Donner la fonction de densité de $T$
+	
+		\cadre{
+\vspace{1.5cm}\hspace{18cm}
+}
+	\item Calculer l'espérance de $T$ 
+	
+		\cadre{
+\vspace{2cm}\hspace{18cm}
+}
+	\item Calculer $P(T\leqslant 1)$ et en donner une interprétation
+	
+		\cadre{
+\vspace{2.5cm}\hspace{18cm}
+}
+	\item Calculer la probabilité que le temps de bon fonctionnement soit supérieur à 2 ans
+	
+			\cadre{
+\vspace{2.5cm}\hspace{18cm}
+}
+	\item Calculer la valeur de $t_0$ la demi-vie de la variable aléatoire $T$. Cette valeur est la valeur pour laquelle $P(T \leqslant t_0 )= \dfrac{1}{2}$
+	
+			\cadre{
+\vspace{3.5cm}\hspace{18cm}
+}
+\end{enumerate}
+
+\bigskip
+
+\newpage
+
+PARTIE B
+
+\bigskip
+
+Sous Geogebra:
+\begin{enumerate}
+	\item Créer un curseur $\lambda$ compris entre 0 et 10 avec un pas de $0.01$
+	\item Créer un curseur $a$ compris entre 0 et 10 avec un pas de $0.01$
+	\item Créer un curseur $b$ compris entre a et 10 avec un pas de $0.01$
+	\item Tracer le courbe représentative de la fonction densité de probabilité sur $]0;+\infty[$: $$f(x)=\lambda \e^{-\lambda x}$$
+		\item Afficher l'intégrale
+		\begin{liste}
+			\item $I_1=\intx{0}{a}f(x)dx$ (en rouge), 
+			\item $I_2=\intx{a}{b}f(x)dx$ (en bleu), 
+			\item $I_3=\intx{b}{+\infty}f(x)dx$ (en vert). 
+\end{liste}				
+		 
+
+\end{enumerate}
+
+		\cadre{
+\begin{center}
+APPELER LE PROFESSEUR POUR VALIDATION
+
+\end{center}}
+\bigskip
+
+PARTIE C
+
+\bigskip
+
+Dans cette partie $\lambda$ ne vaut plus 0.25.\\
+
+\begin{enumerate}
+	\item Déterminer avec Geogebra la valeur de $\lambda$ telle que $P(1<T<5)=0.31$
+	
+	\cadre{
+\vspace{3.5cm}\hspace{18cm}
+
+APPELER LE PROFESSEUR POUR VALIDATION
+}
+	\item Déterminer avec Geogebra la valeur de $\lambda$ telle que la probabilité que le téléphone fonctionne plus de 3 ans soit égale à 0.13
+	
+	\cadre{
+\vspace{3.5cm}\hspace{18cm}
+
+APPELER LE PROFESSEUR POUR VALIDATION
+
+}
+\end{enumerate}
+
+
+\end{document}
+\section{Loi uniforme}
+
+\cadreR{Une variable aléatoire $X$ suit une loi uniforme sur l'intervalle $\ff{a}{b}$ notée $X \sim \mathcal{U}\ff{a}{b}$ lorsque la densité de probabilité de $f$ est définir par:\\
+
+\begin{minipage}{8cm}
+$$f(x)=
+\begin{cases}
+\dfrac{1}{b-a} & \textrm{si} \qquad a \leqslant x \leqslant b \\
+0 & \textrm{sinon}
+\end{cases}$$
+
+\end{minipage}
+\begin{minipage}{8cm}
+$$P(c \leqslant X \leqslant d)=\dfrac{d-c}{b-a}$$
+\end{minipage}
+}
+
+
+\begin{center}
+\includegraphics[scale=0.7]{unnamed.ps}
+\end{center}
+\bigskip
+
+\begin{minipage}{10cm}
+\subsubsection{Exemple}
+
+Ci-contre est représentée la densité de probabilité de la loi uniforme X sur l'intervalle $[1;3]$:
+$$f(x)=
+\begin{cases}
+\dfrac{1}{2} & \textrm{si} \qquad 1 \leqslant x \leqslant 3 \\
+0 & \textrm{sinon}
+\end{cases}$$
+Calculer $P(X<2,5)$:
+\vspace{1cm}
+\end{minipage}
+\begin{minipage}{6cm}
+\includegraphics[scale=0.7]{./Images/2021-04-15_145819.ps}
+\end{minipage}
+
+\bigskip
+
+\cadreR{\prop \qquad espérance, variance et écart-type d'une loi uniforme
+
+Soit $X$ une variable aléatoire suivant une loi uniforme sur l'intervalle $[a;b]$.
+
+\begin{itemize}
+	\item[$\bullet$] L'espérance de $X$ est : $E(X)=\dfrac{a+b}{2}$.
+	\item[$\bullet$] La variance de $X$ est : $V(X)=\dfrac{(b-a)^2}{12}$.
+	\item[$\bullet$] L'écart-type de $X$ est : $\sigma(X)=\dfrac{b-a}{\sqrt{12}}$.
+
+\end{itemize}
+
+
+
+
+
+}
+
+\bigskip
+
+\exer \qquad A partir de l'exemple précédent, calculer l'espérance, la variance ainsi que l'écart type de $X$
+
+\newpage
+
+\exer $X$ est une variable aléatoire qui suit une loi uniforme sur l'intervalle $\ff{-2}{8}$.
+
+\begin{enumerate}
+	\item Donner la fonction de densité de $X$ \\
+	
+	\item Déterminer les probabilité suivantes:
+	
+	$$P(X  \in \ff{0}{3}) \qquad P(-1\leqslant X \leqslant 4) \qquad P(X\leqslant 5)  \qquad P(X=2)$$
+	
+	\vspace{4cm}
+	
+	\item Déterminer l'espérance, la variance et l'écart-type de $X$.
+	
+	\vspace{3cm}
+	
+	
+\end{enumerate}
+
+\bigskip
+
+\exer Antoine arrive à l'arrêt du bus sans avoir consulté les horaires. Sur cette ligne, un bus part toutes les huit minutes. On note $X$ la variable aléatoire donnant, en minutes, le temps d'attente jusqu'au départ du bus.
+
+\begin{enumerate}
+	\item Quelle est la loi suivie par la variable aléatoire $X$?
+	
+	\vspace{1cm}
+	
+	\item Calculer la probabilité qu'Antoine attende:
+	
+	\begin{enumerate}
+		\item moins de 2 minutes \dotfill \\
+		\item entre 3 et 6 minutes \dotfill \\
+		\item au plus 5 minutes \dotfill\\
+		\item au moins 3 minutes \dotfill\\
+		\item plus de 6 minutes \dotfill\\
+	\end{enumerate}
+	
+	\item Calculer l'espérance de la variable aléatoire $X$ \dotfill\\
+	
+	\item Calculer la variance de la variable aléatoire $X$ \dotfill\\
+	
+	\item Calculer l'écart-type de la variable aléatoire $X$ \dotfill\\
+\end{enumerate}
+
+
+\newpage
+
+\section{Loi exponentielle}
+
+La loi exponentielle permet de modéliser la durée de vie d'un phénomène sans mémoire, c'est-à-dire sans vieillissement ou sans usure lorsqu'il s'agit d'un équipement.
+
+\cadreR{\defi Soit $\lambda$ un nombre réel strictement positif.
+
+$X$ suit la loi exponentielle de paramètre $\lambda$ si et seulement si $X$ a pour fonction de densité de probabilité la fonction $f$:
+
+\begin{minipage}{11cm}
+ $$\forall x \in \fo{0}{+\infty}, \, f(x)=\lambda\e^{-\lambda x}$$
+ 
+ pour tout $a$ et $b$ de l'intervalle $\fo{0}{+\infty}$, avec $a<b$, on a:
+ 
+$$P(X\leqslant a)=\intx{0}{a}\lambda \e^{-\lambda t}\dt=1-\e^{-\lambda a}$$
+
+$$P(X\geqslant a)=\e^{-\lambda a}$$
+
+$$P(a \leqslant X \leqslant b)=\e^{-\lambda a}-\e^{-\lambda b}$$
+\end{minipage}
+\begin{minipage}{8cm}
+\begin{center}
+\includegraphics[scale=0.21]{maths-terminale-cours-21-part4-copie.ps}
+
+\end{center}
+\end{minipage}
+
+} 
+
+\bigskip
+
+\cadreR{\prop Propriété de durée de vie sans vieillissement
+
+Soit $X$ une variable aléatoire qui suit la loi exponentielle de paramètre $\lambda$.  $$\forall t,h \in \fo{0}{+\infty}, \, P_{X\geqslant t}(X \geqslant t+h)=P(X\geqslant h)$$
+En d'autres termes, la probabilité de l'évènement $(X \geqslant h)$ est indépendant de l'instant initial $t$. }
+
+
+\bigskip
+
+\cadreR{\prop \textbf{Espérance} et \textbf{variance} de $X \sim \mathcal{E}(\lambda)$
+
+ $$E(X)=\dfrac{1}{\lambda} \qquad V(X)=\dfrac{1}{\lambda^2}$$}
+ 
+ \bigskip
+ 
+ \rem Vocabulaire de la fiabilité
+ 
+ \begin{liste}
+ 	\item La variable aléatoire $T$ qui, à tout dispositif associe sa durée de vie est appelée \textbf{temps de bon fonctionnement} (TBF)
+ 	\item La fonction $F$ notée par $F(t)=P(T \leqslant t)$ est appelée \textbf{fonction de défaillance}. C'est la probabilité que la durée de vie d'un objet soit inférieure à une valeur $t$
+  	\item La fonction $R$ notée par $R(t)=P(T > t)=1-F(t)$ est appelée \textbf{fonction de fiabilité du système}. C'est la probabilité que la durée de vie d'un objet soit supérieure à une valeur $t$
+  	\item L'espérance mathématique de $T$ ets la \textbf{durée de vie moyenne} du système. Elle est notée MTBF.
+	
+ 	
+ \end{liste}
+ 
+ \bigskip
+ \newpage
+ 
+ \section{Loi de Poisson}
+ 
+ La loi de Poisson intervient pour mesurer un nombre de réalisations observées pendant un intervalle de temps de longueur donnée, lorsque le temps d'attente entre deux réalisations est fourni par une loi exponentielle. Il s'agit donc d'une loi discrète.
+ 
+
+\bigskip
+
+\exemple Dans un atelier, l'alimentation électrique est soumise à des micro-coupures aléatoires, indépendantes les unes des autres. Cette indépendance signifie que les micro-coupures passées n'ont aucune influence sur celles à venir. \textbf{Le futur est indépendant du passé.}\\
+
+Supposons que la variable aléatoire $T$ mesurant le temps d'attente entre deux micro-coupures suive une loi exponentielle.\\
+
+Alors la variable aléatoire $X$ mesurant le nombre de micro-coupures sur une plage horaire fixée suit une loi de probabilité appelée \textbf{loi de Poisson}
+
+\subsection{Définition de la loi}
+
+\cadreR{\defi Une variable aléatoire $X$ suit la loi de Poisson de paramètre $\lambda$ positif notée $\mathcal{P}(\lambda)$, lorsque:
+$$\forall k \in \N, \: P(X=k)=\e^{-\lambda} \times \dfrac{\lambda^k}{k!}$$
+}
+
+\bigskip
+
+\exer Soit $X$ la variable aléatoire mesurant le nombre de clients se présentant à l'accueil d'un magasin par intervalle de temps de durée 10 minutes. Entre 14h30 et 16h30, $X$ suit la loi de Poisson de paramètre $\lambda = 5$.
+
+\begin{enumerate}
+	\item Calculer la probabilité qu'entre 14h et 14h10, li y ait 6 personnes exactement se présentent à l'accueil
+	
+	\vspace{0.7cm}
+	
+	\item Calculer la probabilité qu'entre 16h15 et 16h25 , 8 personnes au moins se présentent à l'accueil.
+	
+		\vspace{0.7cm}
+
+	\item Représenter graphiquement la loi de probabilité de $X$ et retrouver grâce à Geogebra les valeurs précédentes. 
+\end{enumerate}
+
+\bigskip
+
+\cadreR{\prop Soit $X$ une variable aléatoire suivant la loi de Poisson $\mathcal{P}(\lambda)$
+
+$$E(X)=\lambda \qquad V(X)=\lambda \qquad \sigma(X)=\sqrt{\lambda}$$
+
+}
+
+\bigskip
+
+\rem Dans l'exemple précédent, on a $E(X)=5$, $V(X)=5$ et $\sigma(X)=\sqrt{5}\approx 2.2$
+
+Ces résultat peuvent être interprétés de la façon suivante: Pour un très grand nombre d'après-midi d'observation, en moyenne 5 personnes se présentent à l'accueil sur une période de 10 minutes.
+
+\subsection{Approximation de la loi binomiale par une loi de Poisson}
+
+\cadreR{\prop La loi binomiale $\mathcal{B}(n;p)$ peut être approchée par une loi de Poisson $\mathcal{P}(\lambda)$ lorsque $n>30$, $p<0.1$ et $np<10$. Dans ce cas, on choisit $\lambda=np$
+}
+
+
+\end{document}
+
+

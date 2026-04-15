@@ -1,0 +1,230 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amsbsy,amscd,mathrsfs}
+\usepackage{lmodern}
+\usepackage{fourier}
+%\usepackage{times,mathptmx}
+%\DeclareSymbolFont{lmodern}{U}{euex}{m}{n}
+%\DeclareMathSymbol\infty \mathord{lmodern}{"31}
+\usepackage[scaled=0.875]{helvet} % ss
+\usepackage{textcomp}
+\usepackage{dsfont} % pour les symboles des ensembles
+\usepackage[left=2cm,right=2cm,top=1.5cm,bottom=2.5cm]{geometry}
+\usepackage{fancyhdr} 
+\fancyhf{}
+\setlength{\headheight}{26pt}
+\setlength{\footskip}{18pt}
+\renewcommand {\headrulewidth}{0pt}
+\renewcommand {\footrulewidth}{0pt}
+%\usepackage{lastpage}
+%\usepackage{makeidx}
+\usepackage{graphicx} % inclure le fichier graphique de pondichery 2010
+\usepackage{hyperxmp}
+\usepackage[colorlinks=true,pdfstartview=FitV,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage[table]{xcolor}
+\usepackage{arydshln}%%% lignes en tirets dans un tableau 
+\usepackage{mathtools} %pour l'alignement des termes d'une matrice
+\usepackage{fltpoint}
+\usepackage{xcolor,colortbl}
+\usepackage{pstricks,pst-all,pst-plot,pstricks-add,pst-tree,pst-3dplot,pst-func}
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{esvect}
+\usepackage[np]{numprint}
+\setlength{\parindent}{0mm}
+\usepackage [alwaysadjust]{paralist}
+\setdefaultenum {1.}{a)}{}{}
+\hyphenpenalty=10000 
+\tolerance=2000
+\emergencystretch=1em
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+\renewcommand*{\tabularxcolumn}[1]{m{#1}} %centrage vertical des cellules d'un tableau tabularx
+\newcommand{\Oij}{$\left( {{\mathrm{O}};\vec i,\vec j} \right)$}
+\newcommand{\Oijk}{$\left( {{\mathrm{O}};\vec i,\vec j ,\vec k} \right)$}
+\newcommand{\euro}{\texteuro{}}
+\newcommand{\R}{\mathds {R}}
+%\newcommand{\C}{\mathds {C}}
+\newcommand{\N}{\mathds {N}}
+\newcommand{\Z}{\mathds {Z}}
+\newcommand{\Q}{\mathds {Q}}
+\newcommand{\e}{\mathrm {e}}
+\newcommand{\dd}{\,\mathrm{d}}
+\DecimalMathComma
+%%% Mise en forme des algorithmes
+\usepackage[french,boxed,titlenumbered,lined,longend]{algorithm2e}
+  \SetKwIF {Si}{SinonSi}{Sinon}{si}{alors}{sinon\_si}{alors}{fin~si}
+ \SetKwFor{Tq}{tant\_que~}{~faire~}{fin~tant\_que}
+ \SetKwFor{PourCh}{pour\_chaque }{ faire }{fin pour\_chaque}
+ \SetKwInput{Sortie}{Sortie}
+\newcommand{\Algocmd}[1]{\textsf{\textsc{\textbf{#1}}}}\SetKwSty{Algocmd}
+  \newcommand{\AlgCommentaire}[1]{\textsl{\small  #1}}  
+%%%%%%%%%%%%%%%
+\newcounter{nexo}    % déclaration du numéro d'exo
+\setcounter{nexo}{0} % initialisation du numero
+\newcommand{\exo}{%
+  \stepcounter{nexo} 
+  \par{\textsf{\textbf{\textcolor{blue}{{\textsc{exercice  \arabic{nexo}}}}}}}
+  }%
+\newcommand{\QCM}[3]{ $\bullet$ \quad #1 \hfill 
+$\bullet$ \quad #2 \hfill 
+$\bullet$ \quad #3 }
+\newcommand{\QCMc}[4]{   #1 \\ 
+\makebox[3cm][l]{\psframe(.25,.25) \qquad #2 }\hfill 
+\makebox[3cm][l]{\psframe(.25,.25) \qquad #3 }\hfill 
+\makebox[3cm][l]{\psframe(.25,.25) \qquad #4 }} % QCM avec cases à cocher%
+% en-tête
+%\lhead{\footnotesize{\textsf{Lycée JANSON DE SAILLY\\ {\today}}}} %gauche
+\chead{\textsf{\textcolor{red}{\textbf{\textsc{DS01}}}}} %centre
+%\rhead{\footnotesize{\fbox{\textsf{S1E2}}}} %droit
+%pied de page
+%\lfoot{\scriptsize{\textsf{\textsc{A. Yallouz}}}} %gauche
+\cfoot{\scriptsize{\textsf{-~\thepage{}~-}}}  %centre                                                   
+%\rfoot{\htmladdnormallink{\scriptsize\textsf{\textsc{MATH@ES}}}{http://yallouz.arie.free.fr}} %droit 
+\hypersetup{
+pdftitle={titre du document.}, 
+pdfauthor={Arié Yallouz},   
+pdfsubject={Exercices Terminale ES.}, 
+pdfkeywords={exercices, sujets.},
+pdfcontacturl={http//yallouz.arie.free.fr/},
+pdflang={fr},
+baseurl={http://yallouz.arie.free.fr/serveurtex/exostex.php}
+}
+\begin{document}
+
+\exo
+
+Soit l'équation différentielle \qquad $(E): \quad y'-3y=-21x+13$
+
+
+\begin{enumerate}
+	\item Montrer que la fonction $f_p$ définie sur $\R$ par $f_p(x)=7x-2$ est une solution particulière de $(E)$
+	
+	\vspace{6cm}
+	\item Déterminer les solutions de l'équation homogène \qquad $(E_0): \quad y'-3y=0$
+	
+		\vspace{4cm}
+
+	\item En déduire que les solutions de $(E)$ peuvent s'écrire sous la forme $$f(x)=7x-2+k\e^{3x}$$
+	
+		\vspace{4cm}
+
+	
+	\item Déterminer la valeur de la constante $k$ telle que $f(0)=5$
+\end{enumerate}
+
+\newpage
+
+\exo 
+
+\medskip
+
+
+On se propose de résoudre l'équation différentielle $$(E): \quad y'+y=\e^{-x}$$
+
+\begin{enumerate}
+	
+	\item Résoudre dans $\R$ l'équation homogène $(E_0): \quad y'+y=0$
+	
+	\vspace{3cm}
+	
+	\item Montrer que la fonction $f_p$ définie sur $\R$ par $$f_p(x)=x\e^{-x}$$ est une solution particulière de $(E)$
+	
+	\vspace{6cm}
+	
+	\item En déduire la solution générale $f$ de $(E)$
+	
+	\vspace{2cm}
+
+\item Déterminer la solution particulière de $(E)$ qui est telle que la courbe représentative de la fonction $f$ solution de $(E)$ passe par le point $(0;3)$
+	\end{enumerate}
+
+
+
+
+
+
+
+\newpage
+
+\begin{center}
+\begin{Huge}
+CORRECTION DS01
+
+\end{Huge}
+\end{center}
+
+
+\setcounter{nexo}{0}
+
+\exo
+
+\begin{enumerate}
+	\item $f_p(x)=7x-2$ et $f'_p(x)=7$
+	
+	Donc $f'_p(x)-3f_p(x)=7-3(7x-2)=7-21x+6=-21x+13$
+	
+	Donc $f_p$ est bien une solution particulière de l'équation différentielle $(E)$.
+	
+	\bigskip
+	
+	\item Les solutions de l'équation homogène $(E_0)$ sont toutes les fonctions du type $$f_0(x)=k\e^{3x}, \quad k \in \R$$
+	
+	\bigskip
+	
+	\item Les solutions de l'équation $(E)$ sont donc les fonctions $f$ de la forme:
+	
+	$$f(x)=f_p(x)+f_0(x)=7x-2+k\e^{3x} \quad k\in\R$$
+	
+	\bigskip
+	
+	\item On cherche la valeur du réel $k$ tel que $f(0)=5$
+	
+	On a $f(0)=7 \times 0 - 2 + k \e^{3 \times 0} = -2 + k$ Donc finalement $k=7$
+	
+	$$f(x)=7x-2+5\e^{3x}$$
+\end{enumerate}
+
+\bigskip
+
+\exo
+
+\bigskip
+
+\begin{enumerate}
+	\item Les solutions de l'équation homogène $(E_0)$ sont toutes les fonctions du type $$f_0(x)=k\e^{-x}, \quad k \in \R$$
+
+\bigskip
+
+
+	\item $f_p(x)=x\e^{-x}$ et $f'_p(x)=(1-x)\e^{-x}$
+	
+	Donc $f'_p(x)+f_p(x)=(1-x)\e{-x}+x\e^{-x}=\e^{-x}-x\e^{-x}+x\e^{-x}=\e^{-x}$
+	
+	Donc $f_p$ est bien une solution particulière de l'équation différentielle $(E)$.
+	
+	\bigskip
+	
+	
+	
+	\item Les solutions de l'équation $(E)$ sont donc les fonctions $f$ de la forme:
+	
+	$$f(x)=f_p(x)+f_0(x)=x\e^{-x}+k\e^{-x}=(x-k)\e^{-x} \quad k\in\R$$
+	
+	\bigskip
+	
+	\item On cherche la valeur du réel $k$ tel que $f(0)=3$
+	
+	On a $f(0)=k$ Donc finalement $k=3$
+	
+	$$f(x)=(x-3)\e^{-x}$$
+\end{enumerate}
+\end{document}
