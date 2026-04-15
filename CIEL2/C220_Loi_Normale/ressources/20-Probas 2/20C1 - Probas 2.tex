@@ -1,0 +1,478 @@
+\documentclass[a4paper,12pt,openany]{book}
+\input{../../preambule/preambule}
+
+% en-tête
+\rhead{\footnotesize{\textsf{BTS SNIR 2}} }%droit
+
+\begin{document}
+
+\begin{center}\begin{huge}
+ch 20 - Probabilités 2 - partie 1
+\end{huge}\end{center}
+
+\section{Loi de probabilité à densité}
+
+\subsection{Rappel}
+
+\exemple \quad \textbf{Loi discrète}
+
+Soit l'expérience aléatoire :\og On lance un dé à six faces et on regarde le résultat.\fg
+
+L'ensemble de toutes les issues possibles $\Omega=\left\lbrace 1; 2; 3; 4; 5; 6 \right\rbrace$ s'appelle l'univers des possibles.
+
+
+On considère le jeu suivant:
+
+\begin{liste}
+	\item Si le résultat est pair, on gagne 1 euro
+	\item Si le résultat est 1, on gagne 5 euros
+	\item Si le résultat est 3 ou 5, on perd 2 euros
+\end{liste}
+
+
+On a défini ainsi une variable aléatoire $X$ sur $\left\lbrace 1; 2; 3; 4; 5; 6 \right\rbrace$ qui peut prendre les valeurs $1$, $5$ ou  $-2$
+
+$$\left\lbrace 1; 2; 3; 4; 5; 6 \right\rbrace \longmapsto \left\lbrace -2,1,5 \right\rbrace$$
+
+Pour une variable aléatoire discrète, la loi de probabilité peut être résumée dans un tableau :
+
+\begin{center}
+\includegraphics[scale=0.6]{2021-08-02_101654.ps}
+\end{center}
+
+La variable aléatoire ne prend qu'un nombre fini de valeurs, elle est dite discrète.
+
+Il est possible de calculer l'espérance $E(X)$ de cette variable aléatoire:
+
+\vspace{2cm}
+
+\subsection{Variable aléatoire continue}
+
+Il existe des variables aléatoires qui prennent n'importe quelle valeur dans un intervalle de $\R$.
+
+\bigskip
+
+\exemple \quad \textbf{Loi continue}
+
+Une entreprise fabrique des disques durs.
+
+On définit une variable aléatoire qui, à chaque disque dur, associe sa durée de vie en heures. Cette durée n'est pas nécessairement un nombre entier et peut prendre toutes les valeurs de l'intervalle $\fo{0}{+\infty}$. 
+
+\subsection{Fonction à densité}
+
+Dans le cas d'une variable aléatoire continue qui prend pour valeurs les réels d'un intervalle $I$, sa loi de probabilité n'est pas associée à la probabilité de chacune de ses valeurs (comme dans le cas discret) mais à la probabilité de tout intervalle inclus dans $I$. On a ainsi recours à une fonction définie sur un intervalle $I$ de $\R$ et appelée \textbf{fonction de densité}.
+
+\medskip
+
+En reprenant l'exemple 2, on ne peut pas définir la probabilité que la durée de vie d'un disque sur soit exactement égal à une valeur mais on définit plutôt un intervalle du type:
+$$P(a \leqslant X \leqslant b) \qquad \text{La probabilité que la durée de vie soit comprise entre $a$ et $b$}$$
+
+
+\bigskip
+
+\exemple Il est possible de définir la probabilité que la durée de vie d'un disque dur soit comprise entre $\np{5000}$ et $\np{20000}$ heures en écrivant: $P(5000 \leqslant X \leqslant 20000)$ où $X$ est la variable aléatoire rendant compte de la durée de vie d'un disque dur.\\
+
+Pour cela on utilise la fonction densité $f$ définissant la loi de probabilité. La probabilité $P(5000 \leqslant X \leqslant 20000)$ est l'aire comprise entre l'axe des abscisses, la courbe représentative de la fonction $f$ et les droites d'équations $x=5000$ et $x=20000$.
+
+\medskip
+
+\begin{minipage}{9cm}
+\begin{center}
+\includegraphics[scale=0.6]{densite_proba.ps}
+\end{center}
+\end{minipage}
+\begin{minipage}{9cm}
+On a ainsi: $$P(5000 \leqslant X \leqslant 20000) = \intx{5000}{20000}\,f(t)\dd t$$
+\end{minipage}
+
+\bigskip
+
+\cadreR{\defi On appelle \textbf{fonction de densité} toute fonction $f$ définie, continue et positive sur un intervalle $I$ de $\R$ telle que l'intégrale de $f$ sur $I$ soit égale à 1.
+
+
+Si $X$ est une variable aléatoire continue sur $\ff{a}{b}$, la probabilité de l'évènement $\left\lbrace X \in \ff{a}{b} \right\rbrace$ où $\ff{a}{b} \subset I$ est égale à:
+
+$$P(X\in \ff{a}{b})=\intx{a}{b}\, f(t) \dd t$$
+}
+
+\begin{center}
+\includegraphics[scale=0.6]{densite_proba2.ps}
+\end{center}
+
+\bigskip
+
+\rem Dans le cas de variables aléatoires continues, on a: $P(X \leqslant a)=P(X < a)$ car $P(X=a)=\intx{a}{a}f(x)\dd x =0$
+
+\subsection{Espérance}
+
+\cadreR{\defi Soit $X$ une variable aléatoire continue de fonction de densité $f$ sur un intervalle $\ff{a}{b}$
+
+L'espérance mathématique de $X$ est le réel $$E(X)=\intx{a}{b}\,t f(t) \dd t$$
+}
+
+\bigskip
+
+\subsection{Exemple d'utilisation d'une loi à densité}
+
+Une entreprise vend des écrans plats suivant une variable aléatoire continue $X$, en tonnes, qui prend ses valeurs dans l'intervalle $\ff{0}{20}$ avec une densité de probabilité $f$ définie par :  $f(x)=0.015x-0.00075x^2$
+
+\begin{enumerate}
+	\item Montrer que $f$ est bien une densité de probabilité sur l'intervalle $\ff{0}{20}$
+	
+	\vspace{4cm}
+	
+	\item Calculer la probabilité de l'évènement \og La vente quotidienne est supérieure ou égale à 12 \fg{} 
+	
+	\vspace{4cm}
+	
+	\item Calculer la probabilité de l'évènement \og La vente quotidienne est comprise entre 5 et 15 \fg{} 
+	
+		\vspace{4cm}
+
+\item Calculer l'espérance mathématique de $X$.
+
+\vspace{4cm}
+\end{enumerate}
+
+\newpage
+
+
+\section{Loi normale}
+
+\subsection{Densité de probabilité d'une loi normale}
+
+\cadreR{Une variable aléatoire $X$ suit une loi normale d'espérance $\mu$ et d'écart-type $\sigma$, noté $X \sim \mathcal{N}(\mu;\sigma)$ lorsque la densité de probabilité est définie par: $$f(x)=\dfrac{1}{\sigma \sqrt{2\pi}} \, \e^{-\dfrac{1}{2}\left( \dfrac{x-\mu}{\sigma} \right)^2 }$$
+
+
+}
+
+\bigskip
+
+\begin{minipage}{9cm}
+\exemple Ci-contre est représentée la densité de probabilité de la loi normale
+$\mathcal{N}(0;1)$. Il s'agit de la loi normale centrée réduite.
+\end{minipage}
+\begin{minipage}{9cm}
+\begin{center}
+\includegraphics[scale=0.7]{2021-08-02_113106.ps}
+\end{center}
+\end{minipage}
+%\e^{-\dfrac{1}{2}\right(\dfrac{x-\mu}{\sigma}\right)^2}
+
+\bigskip
+
+\begin{minipage}{9cm}
+\rem 
+
+\begin{liste}
+	\item La courbe représentative de la densité de probabilité  \og en cloche \fg est appelée une courbe de Gauss. Elle admet un axe de symétrie d'équation $x=\mu$
+	\item L'adjectif \og normale \fg s'explique par le fait que cette loi décrit et modélise la majorité des situations concrètes dans lesquelles le résultat dépend de nombreux paramètres aléatoires indépendants.
+
+\end{liste}
+\end{minipage}
+\begin{minipage}{9cm}
+\begin{center}
+\includegraphics[scale=0.7]{2021-08-02_113352.ps}
+\end{center}
+\end{minipage}
+
+\bigskip
+
+On remarque que:
+
+\begin{liste}
+	\item $\mu$ est un caractère de position. Lorsque $\mu$ varie, la courbe se déplace le long de l'axe des abscisses.
+	\item $\sigma$ est un caractère de dispersion. Lorsque $\sigma$ augmente, la cloche s'ouvre et le maximum diminue.
+\end{liste}
+
+\subsection{Quelques résultats}
+
+\cadreR{
+\begin{minipage}{9cm}
+$$P(\mu-\sigma \leqslant X \leqslant \mu + \sigma) \approx 0.68$$
+$$P(\mu-2\sigma \leqslant X \leqslant \mu + 2\sigma) \approx 0.95$$
+$$P(\mu-3\sigma \leqslant X \leqslant \mu + 3\sigma) \approx 0.997$$
+\end{minipage}
+\begin{minipage}{9cm}
+\begin{center}
+\includegraphics[scale=0.7]{2021-08-02_113634.ps}
+\end{center}
+\end{minipage}
+
+}
+
+
+\newpage
+
+\subsection{Utilisation de la calculatrice}
+
+Les calculatrices permettent de calculer directement les probabilités liées aux lois normales.
+
+\medskip
+
+\begin{center}
+\includegraphics[scale=0.45]{2021-08-02_114119.ps}
+\end{center}
+
+\medskip
+
+Lorsqu'on veut obtenir $P(X\leqslant b)$, il faut  remplacer $a$ par $-10^{99}$ et lorsqu'on veut obtenir $P(X\geqslant a)$, on remplace $b$ par $10^{99}$.
+
+\subsection{Approximation d'une loi binomiale par une loi normale}
+
+\cadreR{On peut approcher une loi binomiale $\mathcal{B}(n;p)$ par une loi normale $\mathcal{N}(\mu;\sigma)$ si $$n>30, \quad np>5 \quad \text{et} \quad n(1-p)>5$$
+
+Dans ce cas, on choisit $\mu=np$ et $\sigma=\sqrt{np(1-p)}$
+}
+
+\bigskip
+
+\exemple Soit $X$ une variable aléatoire suivant la loi $\mathcal{B}(50;0.4)$.
+
+On peut approcher cette loi binomiale par une loi normale de moyenne $\mu=50 \times 0.4=20$ et d'écart-type $\sigma = \sqrt{50 \times 0.4 \times (1-0.4)}\approx 3.4641$.
+
+A l'aide du logiciel Geogebra, il est possible de représenter cette approximation:
+
+
+\begin{center}
+\includegraphics[scale=0.6]{2021-08-02_114858.ps}
+\end{center}
+
+Notons $Y$ la variable aléatoire suivant la loi $\mathcal{N}(20;3.46)$ alors, pour calculer une probabilité,il faut tenir compte de la correction de continuité:
+
+\begin{liste}
+	\item pour approcher $P(X\leqslant 22)$, on calcule $P(Y\leqslant 22.5)$
+	\item pour approcher $P(X\geqslant 16)$, on calcule $P(Y\geqslant 15.5)$
+	\item pour approcher $P(18 \leqslant X \leqslant 22)$, on calcule $P(17.5 \leqslant Y\leqslant 22.5)$
+\end{liste}
+
+\end{document}
+\section{Loi uniforme}
+
+\subsection{Densité de probabilité d'une loi uniforme}
+
+\cadreR{Une variable aléatoire $X$ suit une loi uniforme sur l'intervalle $\ff{a}{b}$ notée $X \sim \mathcal{U}\ff{a}{b}$ lorsque la densité de probabilité de $f$ est définir par:\\
+
+\begin{minipage}{8cm}
+$$f(x)=
+\begin{cases}
+\dfrac{1}{b-a} & \textrm{si} \qquad a \leqslant x \leqslant b \\
+0 & \textrm{sinon}
+\end{cases}$$
+
+\end{minipage}
+\begin{minipage}{8cm}
+$$P(c \leqslant X \leqslant d)=\dfrac{d-c}{b-a}$$
+\end{minipage}
+}
+
+
+\begin{center}
+\includegraphics[scale=0.7]{unnamed.ps}
+\end{center}
+\bigskip
+
+\begin{minipage}{10cm}
+\subsubsection{Exemple}
+
+Ci-contre est représentée la densité de probabilité de la loi uniforme X sur l'intervalle $[1;3]$:
+$$f(x)=
+\begin{cases}
+\dfrac{1}{2} & \textrm{si} \qquad 1 \leqslant x \leqslant 3 \\
+0 & \textrm{sinon}
+\end{cases}$$
+Calculer $P(X<2,5)$:
+\vspace{1cm}
+\end{minipage}
+\begin{minipage}{6cm}
+\includegraphics[scale=0.7]{./Images/2021-04-15_145819.ps}
+\end{minipage}
+
+\bigskip
+
+\cadreR{\prop \qquad espérance, variance et écart-type d'une loi uniforme
+
+Soit $X$ une variable aléatoire suivant une loi uniforme sur l'intervalle $[a;b]$.
+
+\begin{itemize}
+	\item[$\bullet$] L'espérance de $X$ est : $E(X)=\dfrac{a+b}{2}$.
+	\item[$\bullet$] La variance de $X$ est : $V(X)=\dfrac{(b-a)^2}{12}$.
+	\item[$\bullet$] L'écart-type de $X$ est : $\sigma(X)=\dfrac{b-a}{\sqrt{12}}$.
+
+\end{itemize}
+
+
+
+
+
+}
+
+\bigskip
+
+\exer \qquad A partir de l'exemple précédent, calculer l'espérance, la variance ainsi que l'écart type de $X$
+
+\newpage
+
+\exer $X$ est une variable aléatoire qui suit une loi uniforme sur l'intervalle $\ff{-2}{8}$.
+
+\begin{enumerate}
+	\item Donner la fonction de densité de $X$ \\
+	
+	\item Déterminer les probabilité suivantes:
+	
+	$$P(X  \in \ff{0}{3}) \qquad P(-1\leqslant X \leqslant 4) \qquad P(X\leqslant 5)  \qquad P(X=2)$$
+	
+	\vspace{4cm}
+	
+	\item Déterminer l'espérance, la variance et l'écart-type de $X$.
+	
+	\vspace{3cm}
+	
+	
+\end{enumerate}
+
+\bigskip
+
+\exer Antoine arrive à l'arrêt du bus sans avoir consulté les horaires. Sur cette ligne, un bus part toutes les huit minutes. On note $X$ la variable aléatoire donnant, en minutes, le temps d'attente jusqu'au départ du bus.
+
+\begin{enumerate}
+	\item Quelle est la loi suivie par la variable aléatoire $X$?
+	
+	\vspace{1cm}
+	
+	\item Calculer la probabilité qu'Antoine attende:
+	
+	\begin{enumerate}
+		\item moins de 2 minutes \dotfill \\
+		\item entre 3 et 6 minutes \dotfill \\
+		\item au plus 5 minutes \dotfill\\
+		\item au moins 3 minutes \dotfill\\
+		\item plus de 6 minutes \dotfill\\
+	\end{enumerate}
+	
+	\item Calculer l'espérance de la variable aléatoire $X$ \dotfill\\
+	
+	\item Calculer la variance de la variable aléatoire $X$ \dotfill\\
+	
+	\item Calculer l'écart-type de la variable aléatoire $X$ \dotfill\\
+\end{enumerate}
+
+
+\newpage
+
+\section{Loi exponentielle}
+
+La loi exponentielle permet de modéliser la durée de vie d'un phénomène sans mémoire, c'est-à-dire sans vieillissement ou sans usure lorsqu'il s'agit d'un équipement.
+
+\cadreR{\defi Soit $\lambda$ un nombre réel strictement positif.
+
+$X$ suit la loi exponentielle de paramètre $\lambda$ si et seulement si $X$ a pour fonction de densité de probabilité la fonction $f$:
+
+\begin{minipage}{11cm}
+ $$\forall x \in \fo{0}{+\infty}, \, f(x)=\lambda\e^{-\lambda x}$$
+ 
+ pour tout $a$ et $b$ de l'intervalle $\fo{0}{+\infty}$, avec $a<b$, on a:
+ 
+$$P(X\leqslant a)=\intx{0}{a}\lambda \e^{-\lambda t}\dt=1-\e^{-\lambda a}$$
+
+$$P(X\geqslant a)=\e^{-\lambda a}$$
+
+$$P(a \leqslant X \leqslant b)=\e^{-\lambda a}-\e^{-\lambda b}$$
+\end{minipage}
+\begin{minipage}{8cm}
+\begin{center}
+\includegraphics[scale=0.21]{maths-terminale-cours-21-part4-copie.ps}
+
+\end{center}
+\end{minipage}
+
+} 
+
+\bigskip
+
+\cadreR{\prop Propriété de durée de vie sans vieillissement
+
+Soit $X$ une variable aléatoire qui suit la loi exponentielle de paramètre $\lambda$.  $$\forall t,h \in \fo{0}{+\infty}, \, P_{X\geqslant t}(X \geqslant t+h)=P(X\geqslant h)$$
+En d'autres termes, la probabilité de l'évènement $(X \geqslant h)$ est indépendant de l'instant initial $t$. }
+
+
+\bigskip
+
+\cadreR{\prop \textbf{Espérance} et \textbf{variance} de $X \sim \mathcal{E}(\lambda)$
+
+ $$E(X)=\dfrac{1}{\lambda} \qquad V(X)=\dfrac{1}{\lambda^2}$$}
+ 
+ \bigskip
+ 
+ \rem Vocabulaire de la fiabilité
+ 
+ \begin{liste}
+ 	\item La variable aléatoire $T$ qui, à tout dispositif associe sa durée de vie est appelée \textbf{temps de bon fonctionnement} (TBF)
+ 	\item La fonction $F$ notée par $F(t)=P(T \leqslant t)$ est appelée \textbf{fonction de défaillance}. C'est la probabilité que la durée de vie d'un objet soit inférieure à une valeur $t$
+  	\item La fonction $R$ notée par $R(t)=P(T > t)=1-F(t)$ est appelée \textbf{fonction de fiabilité du système}. C'est la probabilité que la durée de vie d'un objet soit supérieure à une valeur $t$
+  	\item L'espérance mathématique de $T$ ets la \textbf{durée de vie moyenne} du système. Elle est notée MTBF.
+	
+ 	
+ \end{liste}
+ 
+ \bigskip
+ \newpage
+ 
+ \section{Loi de Poisson}
+ 
+ La loi de Poisson intervient pour mesurer un nombre de réalisations observées pendant un intervalle de temps de longueur donnée, lorsque le temps d'attente entre deux réalisations est fourni par une loi exponentielle. Il s'agit donc d'une loi discrète.
+ 
+
+\bigskip
+
+\exemple Dans un atelier, l'alimentation électrique est soumise à des micro-coupures aléatoires, indépendantes les unes des autres. Cette indépendance signifie que les micro-coupures passées n'ont aucune influence sur celles à venir. \textbf{Le futur est indépendant du passé.}\\
+
+Supposons que la variable aléatoire $T$ mesurant le temps d'attente entre deux micro-coupures suive une loi exponentielle.\\
+
+Alors la variable aléatoire $X$ mesurant le nombre de micro-coupures sur une plage horaire fixée suit une loi de probabilité appelée \textbf{loi de Poisson}
+
+\subsection{Définition de la loi}
+
+\cadreR{\defi Une variable aléatoire $X$ suit la loi de Poisson de paramètre $\lambda$ positif notée $\mathcal{P}(\lambda)$, lorsque:
+$$\forall k \in \N, \: P(X=k)=\e^{-\lambda} \times \dfrac{\lambda^k}{k!}$$
+}
+
+\bigskip
+
+\exer Soit $X$ la variable aléatoire mesurant le nombre de clients se présentant à l'accueil d'un magasin par intervalle de temps de durée 10 minutes. Entre 14h30 et 16h30, $X$ suit la loi de Poisson de paramètre $\lambda = 5$.
+
+\begin{enumerate}
+	\item Calculer la probabilité qu'entre 14h et 14h10, li y ait 6 personnes exactement se présentent à l'accueil
+	
+	\vspace{0.7cm}
+	
+	\item Calculer la probabilité qu'entre 16h15 et 16h25 , 8 personnes au moins se présentent à l'accueil.
+	
+		\vspace{0.7cm}
+
+	\item Représenter graphiquement la loi de probabilité de $X$ et retrouver grâce à Geogebra les valeurs précédentes. 
+\end{enumerate}
+
+\bigskip
+
+\cadreR{\prop Soit $X$ une variable aléatoire suivant la loi de Poisson $\mathcal{P}(\lambda)$
+
+$$E(X)=\lambda \qquad V(X)=\lambda \qquad \sigma(X)=\sqrt{\lambda}$$
+
+}
+
+\bigskip
+
+\rem Dans l'exemple précédent, on a $E(X)=5$, $V(X)=5$ et $\sigma(X)=\sqrt{5}\approx 2.2$
+
+Ces résultat peuvent être interprétés de la façon suivante: Pour un très grand nombre d'après-midi d'observation, en moyenne 5 personnes se présentent à l'accueil sur une période de 10 minutes.
+
+\subsection{Approximation de la loi binomiale par une loi de Poisson}
+
+\cadreR{\prop La loi binomiale $\mathcal{B}(n;p)$ peut être approchée par une loi de Poisson $\mathcal{P}(\lambda)$ lorsque $n>30$, $p<0.1$ et $np<10$. Dans ce cas, on choisit $\lambda=np$
+}
+
+
+\end{document}
+
+

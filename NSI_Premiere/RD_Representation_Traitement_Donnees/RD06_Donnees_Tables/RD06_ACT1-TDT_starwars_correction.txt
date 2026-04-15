@@ -1,0 +1,80 @@
+# Question 1: Déterminer le nombre de personnages
+print(f"Nombre de personnages : {len(dataset)}")
+
+# Question 2: Déterminer l'espèce de Dooku
+for p in dataset:
+    if p['name'] == 'Dooku':
+        print(f"Espèce de Dooku : {p['species']}")
+
+# Question 3: Déterminer l'âge de Anakin (birth_year)
+for p in dataset:
+    if p['name'] == 'Anakin Skywalker':
+        print(f"Âge d'Anakin : {p['birth_year']}")
+
+# Question 4: Déterminer la planète de Jabba the Hutt
+for p in dataset:
+    if p['name'] == 'Jabba Desilijic Tiure':
+        print(f"Planète de Jabba : {p['homeworld']}")
+
+# Question 5: Liste des noms des humains et décompte
+noms_humains = []
+for p in dataset:
+    if p['species'] == 'Human':
+        noms_humains.append(p['name'])
+print(f"Nombre d'humains : {len(noms_humains)}")
+
+# Question 6: Liste des planètes sans doublons
+planetes = []
+for p in dataset:
+    if p['homeworld'] not in planetes:
+        planetes.append(p['homeworld'])
+print(f"Nombre de planètes uniques : {len(planetes)}")
+
+# --- Questions avec tris et conversions ---
+
+# Question 7: Les 20 personnages les plus grands
+# On filtre les valeurs numériques valides avant de trier
+valides_taille = []
+for p in dataset:
+    if p['height'] != 'unknown' and p['height'] != 'NA':
+        valides_taille.append(p)
+
+top_20_grands = sorted(valides_taille, key=lambda p: float(p['height']), reverse=True)[:20]
+
+# Question 9: 10 personnages humains de Tatooine les plus grands
+selection = []
+for p in dataset:
+    if p['species'] == 'Human' and p['homeworld'] == 'Tatooine':
+        if p['height'] != 'unknown' and p['height'] != 'NA':
+            selection.append(p)
+
+top_10_tatooine = sorted(selection, key=lambda p: float(p['height']), reverse=True)[:10]
+
+# Question 11: Trouver le nom du personnage mystère
+for p in dataset:
+    # On vérifie d'abord les chaînes
+    if p['species'] == 'Human' and p['sex'] == 'male' and 'blue' in p['eye_color']:
+        # On vérifie ensuite si les nombres sont convertibles
+        if p['birth_year'] != 'NA' and p['mass'] != 'unknown':
+            age = float(p['birth_year'])
+            poids = float(p['mass'])
+            if 55 <= age <= 60 and poids < 100:
+                print(f"Le personnage mystère est : {p['name']}")
+				
+				
+				
+	# ... dans la boucle for vaisseau in table_vaisseaux:
+        if vaisseau['name'] == nom_perso:
+            # Création du dictionnaire fusionné
+            pilote = {}
+            
+            # On copie toutes les données du personnage
+            for cle, valeur in perso.items():
+                pilote[cle] = valeur
+                
+            # On ajoute (ou écrase) les données du vaisseau
+            for cle, valeur in vaisseau.items():
+                pilote[cle] = valeur
+            
+            # Ajout du pilote à la table des pilotes
+            table_pilotes.append(pilote)

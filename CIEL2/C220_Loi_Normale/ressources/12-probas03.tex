@@ -1,0 +1,238 @@
+\documentclass[a4paper,12pt,openany]{book}
+\input{../../preambule/preambule}
+
+% en-tête
+\rhead{\footnotesize{\textsf{BTS - SNIR1}} }%droit
+
+\begin{document}
+
+
+\begin{center}
+\begin{huge}
+12 - Variables aléatoires continues, loi uniforme, loi normale\end{huge}\end{center}
+
+\section{Variables aléatoires continues}
+
+
+\subsubsection{Exemple}
+
+Une machine fabrique des tiges de bois de longueurs aléatoires comprise entre 1 cm et 3 cm. On considère la variable aléatoire $X$ qui à une tige associe sa longueur. L'ensemble des valeurs prises par $X$ est tout un intervalle.
+
+ On dit que $X$ est une variable aléatoire \textbf{continue}. 
+ 
+Le problème est que pour tout réel $x$, on a $P(X=x)=0$. Et pourtant $P(1\le X\le3)=1$ .
+
+On ne peut donc pas définir $X$ par l'ensemble des valeurs $P(X=x)$.
+ 
+C'est pourquoi on définit $X$ par les valeurs $P(X\le x)$. C'est le rôle de la fonction de répartition.
+
+\bigskip
+
+\cadreR{\defi \qquad \textbf{Fonction de répartition et densité de probabilité}
+
+
+Soit $X$ une variable aléatoire continue:
+
+\begin{itemize}
+	\item[$\bullet$] La fonction de répartition d'une variable aléatoire $X$ est la fonction $F$ définie sur $\R$ par $$F(x)=P(X\le x)$$
+\item[$\bullet$] La fonction  $f$ dérivée de $F$ est la densité de probabilité de $X$. On a alors $$P(X\le x)=\int_{-\infty}^{x}f(x)dx$$
+
+\end{itemize}
+}
+
+\subsubsection{Exemple}
+
+\begin{minipage}{10cm}
+Ci-contre est représentée une densité de probabilité pouvant convenir à l'exemple précédent.\\
+
+La densité de probabilité permet de se faire une idée d'un seul coup d'œil de la répartition des valeurs.\\
+
+Pour déterminer une probabilité du type $P(a\le X\le b)$, on calcule l'aire sous la courbe représentative de $f$.\\
+Ci-contre on a : $P(1,66\le X\le2,34)=0,74$.
+\end{minipage}
+\begin{minipage}{6cm}
+\includegraphics[scale=0.5]{./Images/2021-04-15_144452.ps}
+\end{minipage}
+
+\section{Loi uniforme}
+
+\cadreR{\defi \qquad Densité de probabilité d'une loi uniforme
+
+Une variable aléatoire $X$ suit une loi uniforme sur l'intervalle $[a;b]$, notée $\mathcal{U}(a;b)$, lorsque la densité de probabilité de $f$ est définie par :
+
+$$f(x)=
+\begin{cases}
+\dfrac{1}{b-a} & \textrm{si} \qquad a \leqslant x \leqslant b \\
+0 & \textrm{sinon}
+\end{cases}$$
+
+}
+
+\newpage
+
+
+\begin{minipage}{10cm}
+\subsubsection{Exemple}
+
+Ci-contre est représentée la densité de probabilité de la loi uniforme X sur l'intervalle $[1;3]$:
+$$f(x)=
+\begin{cases}
+\dfrac{1}{2} & \textrm{si} \qquad 1 \leqslant x \leqslant 3 \\
+0 & \textrm{sinon}
+\end{cases}$$
+Calculer $P(X<2,5)$:
+\vspace{1cm}
+\end{minipage}
+\begin{minipage}{6cm}
+\includegraphics[scale=0.7]{./Images/2021-04-15_145819.ps}
+\end{minipage}
+
+\bigskip
+
+\cadreR{\prop \qquad espérance, variance et écart-type d'une loi uniforme
+
+Soit $X$ une variable aléatoire suivant une loi uniforme sur l'intervalle $[a;b]$.
+
+\begin{itemize}
+	\item[$\bullet$] L'espérance de $X$ est : $E(X)=\dfrac{a+b}{2}$.
+	\item[$\bullet$] La variance de $X$ est : $V(X)=\dfrac{(b-a)^2}{12}$.
+	\item[$\bullet$] L'écart-type de $X$ est : $\sigma(X)=\dfrac{b-a}{\sqrt{12}}$.
+
+\end{itemize}
+
+
+
+
+
+}
+
+\bigskip
+
+\exer \qquad A partir de l'exemple précédent, calculer l'espérance, la variance ainsi que l'écart type de $X$
+
+\vspace{3cm}
+
+\section{Loi normale}
+
+\cadreR{\defi Une variable aléatoire X suit une loi normale d'espérance $\mu$ et d'écart-type $\sigma$, notée $\mathcal{N}(\mu;\sigma)$, lorsque la densité de probabilité $f$ est définie par:
+$$f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e^{-\dfrac{1}{2}\left(\dfrac{x-\mu}{\sigma}\right)^2}$$ }
+
+
+\begin{minipage}{10cm}
+\subsubsection{Exemple}
+
+Ci-contre est représentée la densité de probabilité de la loi normale
+$\mathcal{N}(0;1)$. Il s'agit de la loi normale centrée réduite.
+
+\end{minipage}
+\begin{minipage}{6cm}
+\includegraphics[scale=0.7]{./Images/2021-04-15_150707.ps}
+\end{minipage}
+
+\newpage
+
+\subsubsection{Remarques:}
+
+\begin{itemize}
+	\item[$\bullet$] 	La courbe représentative de la densité de probabilité \og en cloche \fg{}  est appelée une courbe de Gauss. Elle admet un axe de symétrie d'équation $x=\mu$.
+
+	\item[$\bullet$] L'adjectif « normale » s'explique par le fait que cette loi décrit et modélise la majorité des situations concrètes dans lesquelles le résultat dépend de nombreux paramètres aléatoires indépendants.
+
+\end{itemize}
+
+\begin{minipage}{8cm}
+
+On remarque que:
+
+\begin{itemize}
+	\item[$\bullet$] 	$\mu$ est un caractère de position. Lorsque $\mu$ varie l'extremum de la courbe de déplace le long de l'axe des abscisses. 
+
+	\item[$\bullet$] $\sigma$ est un caractère de dispersion. Lorsque $\sigma$ augmente, la répartition est plus étalée.
+
+\end{itemize}
+	
+
+
+\end{minipage}
+\begin{minipage}{6cm}
+\includegraphics[scale=0.5]{./Images/musigma.ps}
+\end{minipage}
+
+
+\bigskip
+
+\cadreR{\prop \qquad Des résultats à connaître:
+
+
+\begin{minipage}{7cm}
+$$P(\mu-\sigma\le X\le\mu+\sigma)\approx 0,68$$
+
+$$P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0,95$$
+
+$$P(\mu-3\sigma\le X\le\mu+3\sigma)\approx 0,997$$
+
+\end{minipage}
+\begin{minipage}{7cm}
+\includegraphics[scale=0.3]{./Images/loi_normale.ps}
+\end{minipage}
+
+}
+
+\bigskip
+
+\subsubsection{Calculatrices}
+
+Les calculatrices permettent de calculer directement $P(a\le X\le b)$ pour une loi normale.
+
+\begin{itemize}
+	\item[$\bullet$] 	Sur Casio : \verb+Menu → STAT → DIST → NORM → Ncd+
+
+	\item[$\bullet$] 	Sur TI : \verb+2nd → Distrib → normalFrep+
+
+\end{itemize}
+
+Lorsqu'on veut obtenir $P(X\le b)$, on remplace $a$ par $-10^{99}$ et lorsqu'on veut obtenir $P(X\geq a)$, on remplace $b$ par $10^{99}$.
+
+\subsubsection{Geogebra}
+
+\verb+ Affichage → Calculs de probabilités → Loi normale+
+
+\bigskip
+
+\cadreR{\prop \qquad Approximation d'une loi binomiale par une loi normale
+
+On peut approcher une loi binomiale $\mathcal{B}(n;p)$ par une loi normale $\mathcal{N}(\mu;\sigma)$ si $n>30$, $np>5$ et $n(1-p)>5$.
+
+Dans ce cas on choisit $\mu=np$ et $\sigma=\sqrt{np(1-p)}$ afin de garder l'espérance et l'écart type.
+
+Il faut alors tenir compte de la correction de continuité.
+
+}
+
+\newpage
+
+\subsubsection{Exemple et correction de continuité}
+
+Soit $X$ une variable aléatoire suivant la loi  $\mathcal{B}(50;0,4)$.
+
+On peut approcher cette loi binomiale par une loi normale de moyenne $\mu=50\times0,4=20$ et d'écart type $\sigma=\sqrt{50\times0,4\times(1-0,4)}\approx3,4641$.
+
+
+Ci-dessous est représentée l'approximation de la loi $\mathcal{B}(50;0,4)$ par la loi $\mathcal{N}(20;3,46)$ à l'aide du logiciel GeoGebra. 
+
+\begin{center}
+\includegraphics[scale=0.55]{./Images/bin_normale.ps}
+
+\end{center}
+
+Notons Y la variable aléatoire suivant la loi N(20;3,46).
+Pour calculer une probabilité, il faut alors tenir compte de la correction de continuité :
+\begin{itemize}
+
+	\item[$\bullet$]  pour approcher $P(X\le 22)$, on calcule $P(Y\le 22,5)$,
+	\item[$\bullet$]  pour approcher $P(X\geq 16)$, on calcule $P(Y\geq 15,5)$,
+	\item[$\bullet$]  pour approcher $P(18\le X\le 22)$, on calcule $P(17,5\le Y\le 22,5)$.
+\end{itemize}
+
+
+\end{document}
