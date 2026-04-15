@@ -1,0 +1,261 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Equations différentielles} % Titre au centre
+\def\docpart{Solutions des Equations différentielles} % Partie du cours
+\def\docname{C211}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+
+Dans de nombreuses activités scientifiques, les phénomènes étudiés sont régis par des relations faisant intervenir une fonction et certaines de ses dérivées.
+
+\subsection{En électricité}
+
+\begin{minipage}{8cm}
+\includegraphics[scale=0.45]{image2_6.jpg}
+
+\end{minipage}
+\begin{minipage}{10cm}
+La loi des mailles en électricité nous donne:
+$$E=Ri(t)+u(t)$$
+L'intensité circulant à l'intérieur d'un condensateur s'exprimant par $i=C\, \dfrac{du}{dt}$, on peut écrire:
+$$E=RC\, \dfrac{du(t)}{dt}+u(t)=RC\, u'(t)+u(t)$$
+\end{minipage}
+
+\bigskip
+
+\begin{minipage}{8cm}
+\includegraphics[scale=0.3]{circuit-tp-cours-2.png}
+
+\end{minipage}
+\begin{minipage}{10cm}
+La loi des mailles en électricité nous donne:
+$$E=u_R+u_L=Ri(t)+u_L(t)$$
+La tension aux bornes d'une inductance s'exprimant par $u=L\, \dfrac{di}{dt}$, on peut écrire:
+$$E=Ri(t)+L\, \dfrac{di(t)}{dt}+i(t)=Ri(t)+L\, i'\,(t)$$
+\end{minipage}
+
+\subsection{En bactériologie}
+
+Soit une  population de bactéries qui se développent dans un milieu. La  \og production \fg{} de bactéries est proportionnelle au nombre de bactéries à chaque instant.\\
+
+On pose $B$ le nombre de bactéries en fonction du temps. On a donc:
+$$\dfrac{d B}{d t}=k \times B$$
+Avec $B(0)=B_0$ le nombre de bactéries au début de l'expérience et $k$ un coefficient de proportionnalité.
+
+\subsection{En mécanique}
+
+
+\begin{minipage}{7cm}
+\includegraphics[scale=0.35]{2021-07-16_151316.jpg}
+
+\begin{itemize}
+	\item P: poids du mobile
+	\item R: force de réaction
+	\item F: force de rappel
+\end{itemize}
+\end{minipage}
+\begin{minipage}{11cm}
+Soit un solide de masse $m$ soumis à un ressort de constante de raideur $k$. On veut connaitre l'évolution de sa position au cours du temps.\\
+
+Selon l'axe $(Ox)$ seule la force de rappel intervient et si on suppose un système sans frottement, on peut écrire le principe fondamental de la dynamique:
+$$m \dfrac{d ^2 x}{d t^2} = F_{(Ox)} \Leftrightarrow m \dfrac{d ^2 x}{d t^2} = -kx \Leftrightarrow m \dfrac{d ^2 x}{d t^2} + kx =0$$ 
+
+$$\Leftrightarrow m\, x\, ''(t)+kx(t)=0$$
+
+
+\end{minipage}
+
+\pagebreak
+
+
+\begin{definition}[	Equation différentielle]{}
+Une \textbf{équation différentielle} est une relation mathématique qui lie une fonction inconnue à une ou plusieurs de ses dérivées. L'inconnue de cette équation n'est pas un nombre mais une fonction. 
+\end{definition}
+
+\begin{exemple}[Types d'équations différentielles]{}
+Voici quelques exemples d'équations différentielles:
+\begin{itemize}
+	\item $y' - y = 7$ (équation différentielle du premier ordre à coefficients constants)
+	\item $y'' - 3y' + 2y = 0$ (équation différentielle du second ordre à coefficients constants)
+	
+	\end{itemize}
+\end{exemple}
+
+
+\medskip
+
+\begin{definition}[Solution d'une équation différentielle]{}
+On appelle \textbf{solution} d'une équation différentielle $(E)$ sur un intervalle $I$ de $\R$ toute fonction vérifiant la relation $(E)$ sur $I$.
+
+\end{definition}
+
+\medskip
+
+\begin{methode}[Vérification d'une solution]{}
+Pour vérifier qu'une fonction $f$ est solution d'une équation différentielle $(E)$, il suffit de:
+\begin{enumerate}
+	\item Calculer les dérivées de $f$ nécessaires à l'équation $(E)$
+	\medskip
+	\item Remplacer ces dérivées dans l'équation $(E)$
+	\medskip
+	\item Simplifier l'expression obtenue et conclure.
+\end{enumerate}
+\end{methode}
+
+\begin{exemple}[Vérifiez que $g(t)=\e^{-t}$ est solution de $(E):\: y'+y=0$]{}
+
+
+\begin{blocvisiblex}[height=3.5]
+    {\begin{enumerate}
+		\item Calcul de la dérivée de $g$: \dotfill{}
+		\item Remplacer dans $(E)$: \dotfill{}
+		\item Vérification de l'égalité: \dotfill{}
+	\end{enumerate}
+
+
+	}
+\begin{enumerate}
+	\item Calcul de la dérivée de $g$: $g'(t)=-\e^{-t}$
+
+	\item Remplaçons $g$ et $g'$ dans l'équation $(E)$: $g'(t)+g(t)=-\e^{-t}+\e^{-t}=0$
+
+	\item Vérification de l'égalité:
+	L'équation $(E)$ est vérifiée pour tout $t \in \R$. On conclut que $g$ est solution de l'équation différentielle $(E)$.
+	
+\end{enumerate}
+
+\end{blocvisiblex}
+
+
+\end{exemple}
+
+\begin{exercice_cours}[Vérification d'une solution]{}
+\begin{minipage}{0.30\linewidth}
+	Vérifiez que $f(t)=4t^2+t-1$ 
+	
+	solution de $(E_1): \, y'=8t+1$.
+
+	\medskip
+
+	\dotfill{}
+
+	\medskip{}
+
+	\dotfill{}
+
+	\medskip
+
+	\dotfill{}
+
+	\medskip
+
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+\end{minipage}\hfill{}
+\begin{minipage}{0.30\linewidth}
+		Vérifiez que $g(x)=4+\e^{-3x}$ 
+		
+		solution de $(E_2): \, y'+3y=12$.
+
+		
+	\medskip
+
+	\dotfill{}
+
+	\medskip{}
+
+	\dotfill{}
+
+	\medskip
+
+	\dotfill{}
+
+	\medskip
+
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+\end{minipage}\hfill{}
+\begin{minipage}{0.30\linewidth}
+		Vérifiez que $f(x)=\e^{2x}+3$ 
+		
+		sol. de $(E_3): \, y'-2y=-6$.
+
+		
+	\medskip
+
+	\dotfill{}
+
+	\medskip{}
+
+	\dotfill{}
+
+	\medskip
+
+	\dotfill{}
+
+	\medskip
+
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+
+	\medskip
+	
+	\dotfill{}
+\end{minipage}
+\end{exercice_cours}

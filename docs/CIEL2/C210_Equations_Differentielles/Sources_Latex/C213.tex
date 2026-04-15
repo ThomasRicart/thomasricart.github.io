@@ -1,0 +1,99 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Equations différentielles} % Titre au centre
+\def\docpart{Résolution ED avec Geogebra} % Partie du cours
+\def\docname{C213}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+On considère l'équation différentielle $(E):\; y'+2y=-5\e^{-2x}$ où $y$ est une fonction de la variable réelle $x$, définie et dérivable sur $\R$ et $y'$ est la fonction dérivée de $y$.
+
+\begin{enumerate}
+	\item Résoudre l'équation homogène $(E_0):\; y'+2y=0$.
+	
+	\begin{blocvisiblex}[height=2]
+    {\quad}
+L'équation homogène associée à l'équation différentielle $(E)$ est: $y'+2y=0$. On a donc $a=1$ et $b=2$.
+\par
+La solution de $(E_0)$ est donc de la forme $y_0(x)=k \times e^{-\frac{2}{1}x}=k \times e^{-2x}$ où $k$ est une constante quelconque.
+\end{blocvisiblex}
+
+\medskip
+
+	\item A l'aide du logiciel Géogébra, déterminer les nombres réels $a$ et $b$ pour que la fonction $p$ définie sur $\R$ par: $p(x)=a+bx\e^{-2x}$ soit une solution particulière de l'équation différentielle $(E)$ et donner l'expression de $p$.
+
+\begin{blocvisiblex}[height=1]
+    {
+			On trouve : $a=$\makebox[0.1\linewidth]{\dotfill} \hfill $b=$\makebox[0.1\linewidth]{\dotfill} \hfill $p(x)=$\makebox[0.3\linewidth]{\dotfill}
+
+	}
+	On trouve : $a=$\makebox[0.1\linewidth]{\dotfill} \hfill $b=$\makebox[0.1\linewidth]{\dotfill} \hfill $p(x)=$\makebox[0.3\linewidth]{\dotfill}
+\end{blocvisiblex}
+
+	
+	\begin{methode}[Créer les membres de gauche et de droite de l'ED dans Geogebra]{}
+	1) Dans le champs de saisie (en bas) : taper \verb|p(x)=a+b*x*exp(-2x)|
+	
+	2) mettre la courbe de $p$ en vert
+	
+	3) Dans le champs de saisie, taper : \verb|g(x)=p'(x)+2p(x)| {\it \footnotesize (la partie gauche de E avec $p$ au lieu de $y$)}
+	
+	4) mettre la courbe de $g$ en rouge
+	
+	5) Dans le champs de saisie, taper : \verb|d(x)= -5*exp(-2x)| {\it \footnotesize (la partie droite de E)}
+	
+	6) mettre $d$ en bleu
+	
+	7) faire bouger les curseurs (au besoin, changer les paramètres) pour faire correspondre la courbe rouge avec la courbe bleue {\it \footnotesize (donc la partie gauche avec la partie droite de E)}
+	\end{methode}
+\medskip
+
+	\item En déduire la forme générale des solutions de (E).
+	
+	
+\begin{blocvisiblex}[height=1.5]
+    {
+\quad
+	}
+\end{blocvisiblex}
+
+	\medskip
+
+	\item Déterminer, à l'aide de géogebra et d'un curseur, la solution particulière $f$ de (E) telle que $f(0)=1$.
+	
+
+
+\begin{blocvisiblex}[height=1.5]
+    {
+\quad
+	}
+\end{blocvisiblex}
+
+	\begin{methode}[Trouver la solution qui vérifie une condition donnée avec Geogebra]{}
+	1) Dans le champs de saisie créer une nouvelle fonction ({\bf ne pas} l'appeler $y$)
+	
+	2) la mettre en orange	
+	
+	3) bouger le curseur pour répondre à la question 4
+	\end{methode}
+
+\end{enumerate}
+
+\medskip
+
+\begin{exercice_cours}[Résolution d'une équation différentielle du second ordre avec Geogebra]{}
+
+On considère l’équation différentielle (E) : $4y' + y = 3e^{0,5x}-1$ où $y$ est une fonction de la variable réelle $x$, définie et dérivable sur l’ensemble $\R$ des nombres réels, et $y'$ est la fonction dérivée de $y$.
+
+\begin{enumerate}
+	\item Résoudre l'équation homogène (E$_0$) : $4y'+y=0$
+
+	\item A l’aide du logiciel Géogébra, déterminer les nombres réels $a$ et $b$ pour que la fonction $p$ définie sur $\R$ par : $p(x) = a + b~e^{0,5x}$ soit une solution particulière de l'équation différentielle (E)
+	
+	\item En déduire la forme générale des solutions de (E).
+
+	\item Déterminer, à l'aide de géogebra et d'un curseur, la solution $f$ de (E) telle que $f(0)=4$.
+
+\end{enumerate}
+\end{exercice_cours}

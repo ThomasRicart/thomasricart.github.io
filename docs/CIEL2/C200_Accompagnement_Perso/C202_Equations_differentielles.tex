@@ -1,0 +1,71 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+\usepackage{\packagepath/firstpage}
+
+% --- PILOTAGE ---
+\def\visibleornot{invisible}    % visible or invisible
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+\usepackage{scratch3}
+\usepackage{longtable}
+
+
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+% Style pour les commandes (fond noir, texte blanc, coins arrondis)
+\newtcbox{\command}{
+    on line,
+    arc=2pt,
+    colback=black,
+    colframe=black,
+    before upper=\rule[-3pt]{0pt}{10pt},
+    boxrule=0pt,
+    boxsep=0pt,
+    left=4pt,
+    right=4pt,
+    top=2pt,
+    bottom=2pt,
+    colupper=white,
+    fontupper=\ttfamily\small
+}
+
+% Couleur grise pour les en-têtes
+\definecolor{headergray}{HTML}{E2E3E5}
+\definecolor{sectiongray}{HTML}{F2F2F2}
+
+\def\schoolyear{2026~--~2027}              % Année scolaire
+\def\level{BTS}              % Classe
+\def\course{CIEL 2}              % Matière
+\def\codepart{C201}
+\def\textpart{Révision BTS CIEL 1}    % Nom du chapitre juste pour le titre de la partie
+%\def\partname{dfLangages de Programmation}
+\def\version{\today}
+\def\visibleornot{invisible}    % visible or invisible
+\begin{document}
+
+%\parttitle{}
+
+
+   \include{\documentpath/C2021}
+      \include{\documentpath/C2022}
+
+\end{document}
+
+			

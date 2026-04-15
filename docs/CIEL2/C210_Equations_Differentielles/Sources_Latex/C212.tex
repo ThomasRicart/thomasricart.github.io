@@ -1,0 +1,210 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Equations différentielles} % Titre au centre
+\def\docpart{Résolution ED du premier ordre à coefficients constants} % Partie du cours
+\def\docname{C212}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+\begin{definition}[Equation différentielle du premier ordre à coefficients constants]{}
+\[(E): \; a\, y' + b\, y = d(x)\]
+	
+où $a\neq 0$ et $b$ deux constantes réelles et $d$ une fonction dérivable sur un intervalle $I$.
+\end{definition}
+
+\begin{exemple}[Equation différentielle du premier ordre à coefficients constants]{}
+
+	\begin{itemize}
+		\item 	$(E_1):\; 2y'+y+7$: ED du premier ordre à coefficients constants avec: \hfill\reponseLigne[4cm]{$a=2, \quad b=1, \quad d(x)=-7$}
+		\item $(E_2):\; y'-2y=4x+1$: ED du premier ordre à coefficients constants avec: \hfill\reponseLigne[4cm]{$a=1, \quad b=-2, \quad d(x)=4x+1$}
+	\end{itemize}
+\end{exemple}
+
+\medskip
+
+\begin{definition}[Equation différentielle homogène ou sans second membre:]{}
+
+\[(E): \; a\, y' + b\, y = 0\]
+	
+\end{definition}
+
+	\begin{itemize}
+		\item L'équation homogène associée à l'équation $(E_1)$ est: \hfill\reponseLigne[5cm]{$2y'+y=0$}.
+		\item L'équation homogène associée à l'équation $(E_2)$ est: \hfill\reponseLigne[5cm]{$y'-2y=0$}.
+	\end{itemize}
+
+\begin{propriete}[Infinité de solutions d'une équation différentielle]{}
+Toute équation différentielle du premier ordre à coefficients constants admet une infinité de solutions.
+\end{propriete}
+
+\begin{methode}[Résolution d'une équation différentielle]{}
+\begin{enumerate}
+	\item Déterminer une solution particulière $y_p$ de l'équation différentielle $(E)$.
+	\item Déterminer les solutions $y_0$ de l'équation homogène associée $(E_0)$.
+	\item En déduire les solutions de l'équation différentielle $(E)$ $y=y_0+y_p$.
+	\item Déterminer la solution qui respecte une condition donnée du type $f(x_i)=y_i$.
+\end{enumerate}
+
+\end{methode}
+
+\medskip
+
+\begin{exemple}[Résolution d'une équation différentielle]{}
+
+	On considère l'équation différentielle suivante: $(E):\; y'-2y=6$.
+\begin{enumerate}[series=A, resume]
+	\item Vérifier que $y_p=-3$ est une solution particulière de l'équation différentielle $(E)$.
+	
+	
+	\begin{blocvisiblex}[height=2]
+    {La fonction $y_p$ est solution particulière de $(E)$ si et seulement si: 	\dotfill{}.
+	
+	\medskip
+
+	$y'_p= \ldots{}$ et $y'_p-2y_p=\ldots{}\ldots{}$ donc \dotfill{}
+
+	\dotfill{}
+	
+	}
+La fonction $y_p$ est solution particulière de l'équation différentielle $(E)$ si et seulement si $y_p'-2y_p=6$. Calculons $y_p'-2y_p$:
+	
+	$y'_p=0$ et $y'_p-2y_p=0-2\times(-3)=6$ donc $y_p=-3$ est une solution particulière de l'équation différentielle $(E)$.
+	
+	
+\end{blocvisiblex}
+	\end{enumerate}
+
+
+	\medskip
+
+	\begin{propriete}[Résolution d'une équation différentielle homogène $(E_0): \; ay'+by=0$]{}
+
+		L'ensemble des solutions de l'équation différentielle homogène $(E_0)$ est l'ensemble des fonctions $y_0$ définies sur $\R$ par:
+
+\[y_0(x)=k \times e^{-\frac{b}{a}x} \quad \text{où $k$ est une constante quelconque.}\]
+
+	\end{propriete}
+
+\begin{enumerate}[series=A, resume]
+
+
+	\item Résoudre l'équation homogène $(E_0)$ associée à l'équation différentielle $(E)$.
+	
+\begin{blocvisiblex}[height=2]
+    {
+L'équation homogène associée à l'équation différentielle $(E)$ est: \dotfill{}.
+
+\medskip
+
+On a donc $a=\ldots{}$ et $b=\ldots{}$. La solution de $(E_0)$ est donc de la forme $y_0(x)=\dotfill{}$
+
+	}
+L'équation homogène associée à l'équation différentielle $(E)$ est: $y'-2y=0$. On a donc $a=1$ et $b=-2$.
+
+\medskip
+
+La solution de $(E_0)$ est donc de la forme $y_0(x)=k \times e^{-\frac{-2}{1}x}=k \times e^{2x}$ où $k$ est une constante quelconque.
+
+
+	
+\end{blocvisiblex}
+	
+
+	\end{enumerate}
+
+\medskip
+
+\begin{propriete}[Ensemble des solutions d'une équation différentielle $(E):\; ay'+by=d(x)$]{}
+La solution générale de $(E)$ s'obtient en \textbf{ajoutant} une solution \textbf{particulière} $y_p$ et la solution \textbf{générale} de l'équation \textbf{homogène} $(E_0)$.
+
+\[y(x)=y_0(x)+y_p(x) \quad \text{avec $y_0$ la solution de l'équation homogène et $y_p$ une solution particlière}\]
+\end{propriete}
+	\begin{enumerate}[series=A, resume]
+		
+		
+		\item En déduire la solution générale de l'équation différentielle $(E)$.
+
+
+\begin{blocvisiblex}[height=2]
+    {
+On a $y_0(x)=\ldots{}\ldots{}\ldots{}\ldots{}$ et $y_p(x)=\ldots{}\ldots{}$.
+
+\medskip
+
+La solution générale de $(E)$ est donc de la forme $y(x)=\dotfill$ 
+
+où $k$ est une constante quelconque.
+
+	}
+On a $y_0(x)=k \times e^{2x}$ et $y_p(x)=-3$ est une solution particulière de l'équation différentielle $(E)$.
+
+\par
+
+La solution générale de l'équation différentielle $(E)$ est donc de la forme $y(x)=k \times e^{2x}-3$ où $k$ est une constante quelconque.
+
+	
+\end{blocvisiblex}
+
+	\end{enumerate}
+
+	\medskip
+
+	\begin{propriete}[Déterminer la solution qui respecte une condition donnée]{}
+
+Toute équation différentielle du premier ordre à coefficients constants admet une unique solution qui respecte une condition donnée du type $f(x_i)=y_i$.
+
+	\end{propriete}
+
+		\begin{enumerate}[series=A, resume]
+
+			\item Déterminer la solution de l'équation différentielle $(E)$ qui vérifie la condition $y(0)=1$.
+\begin{blocvisiblex}[height=4]
+	{On cherche la solution de l'équation différentielle $(E)$ qui vérifie la condition $\dotfill{}$. 
+	
+	\medskip
+
+	On a $y(x)= \ldots{}\ldots{}\ldots{}\ldots$.
+\medskip
+
+On a donc \dotfill{}
+
+\medskip
+
+\dotfill{}
+
+\medskip
+
+\dotfill{}
+
+	}
+On cherche la solution de l'équation différentielle $(E)$ qui vérifie la condition $y(0)=1$. On a $y(x)=k \times e^{2x}-3$.
+\medskip
+On a donc $y(0)=k \times e^{2\times 0}-3=k-3$. La condition $y(0)=1$ est vérifiée si et seulement si $k-3=1$ c'est à dire $k=4$.
+\medskip
+La solution de l'équation différentielle $(E)$ qui vérifie la condition $y(0)=1$ est donc $y(x)=4 \times e^{2x}-3$.
+\end{blocvisiblex}
+
+		\end{enumerate}
+\end{exemple}
+
+\begin{exercice_cours}[Résoudre $(E): \; y'-y=x^2-x-1$]{}
+
+	\begin{enumerate}
+		\item Vérifier que $p(x)=-x^2-x$ est solution particulière de $(E)$.
+		\item Déterminer l'ensemble des solutions de $(E)$
+		\item Déterminer la solution de $(E)$ vérifint $f(0)=1$.
+	\end{enumerate}
+
+\end{exercice_cours}
+
+
+\begin{exercice_cours}[Résoudre $(E): \; y'+y=\e^{-x}$]{}
+
+	\begin{enumerate}
+		\item Vérifier que $p(x)=x\e^{-x}$ est solution particulière de $(E)$.
+		\item Déterminer l'ensemble des solutions de $(E)$
+		\item Déterminer la solution de $(E)$ vérifint $f(0)=3$.
+	\end{enumerate}
+
+\end{exercice_cours}

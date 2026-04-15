@@ -1,0 +1,120 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Lois continues} % Titre au centre
+\def\docpart{Généralités sur les lois continues} % Partie du cours
+\def\docname{C221}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+\section{Lois discrètes}
+
+\begin{propriete}[Lois discrètes]{}
+Une \textbf{loi de probabilité} est dite \textbf{discrète} si elle est définie sur un ensemble fini ou dénombrable de valeurs.
+
+On peut donc compter les éléments de l'univers et attribuer une probabilité à chacun d'eux. Si on jette un dé équilibré à six faces, la loi de probabilité associée est discrète car elle est définie sur l'ensemble fini $\{1, 2, 3, 4, 5, 6\}$.
+\end{propriete}
+
+\begin{exemple}[\quad]{}
+	\begin{itemize}
+		\item La \textbf{loi de Bernoulli} est une loi de probabilité discrète qui modélise une expérience aléatoire binaire, c'est-à-dire une expérience qui n'a que deux issues possibles: succès ou échec.
+		\item La \textbf{loi binomiale} est une loi de probabilité discrète qui modélise le nombre de succès dans une séquence d'expériences de Bernoulli indépendantes.
+	\end{itemize}
+\end{exemple}
+
+
+\section{Lois continues}
+
+\begin{definition}[Lois continues]{}
+Une \textbf{loi de probabilité} est dite \textbf{continue} si elle est définie sur un intervalle de valeurs réelles. 
+
+\begin{itemize}
+	\item les lois continues ne sont pas définies sur des points individuels,
+	\item elles sont plutôt définies sur des intervalles de valeurs.
+\end{itemize}
+\end{definition}
+
+\begin{exemple}[Exemples de lois continues]{}
+	\begin{itemize}
+		\item on définit une variable aléatoire qui associe à chaque train, le temps de trajet entre deux gares.
+		\item on définit une variable aléatoire qui associe à chaque personne, sa taille.
+		\item on définit une variable aléatoire qui associe à chaque jour, la température maximale enregistrée dans une ville.
+	\end{itemize}
+\end{exemple}
+
+\begin{easybox}[Fonction de densité]{}
+Une \textbf{fonction de densité} est une fonction qui permet de définir une loi de probabilité continue. Elle doit satisfaire les conditions suivantes:
+
+\medskip
+
+\begin{minipage}{0.7\linewidth}
+	
+\begin{itemize}
+	\item $f(x) \geq 0$ pour tout $x \in \R$ et  $\displaystyle\int_{-\infty}^{+\infty} f(x) \, dx = 1$
+	\item pour tout intervalle $\ff{a}{b}$, la probabilité que la variable aléatoire prenne une valeur dans cet intervalle est donnée par l'intégrale de la fonction de densité sur cet intervalle: \[P(X \in \ff{a}{b}) = P(a \leq X \leq b)= \int_{a}^{b} f(x) \, dx\]
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.3\linewidth}
+\includegraphics[width = 0.9\linewidth]{loiproba2.png}
+\end{minipage}
+\end{easybox}
+
+\pagebreak
+
+\begin{exemple}[Exemple de fonction de densité]{}
+\begin{enumerate}
+	\item Vérifier que la fonction $f$ définie ci-dessous est une fonction de densité.
+	$$f(x) = \begin{cases}
+2\e^{-x} & \text{si } x \in \ff{0}{\ln(2)}  \\
+0 & \text{sinon}
+\end{cases}$$
+	\item Calculer $\displaystyle\int_{0}^{0,5} f(x) \, dx$ et interpréter le résultat en terme de probabilité.
+	\item Calculer la probabilité que la variable aléatoire prenne une valeur supérieure à $0,5$.
+	\item Calculer la probabilité que la variable aléatoire prenne une valeur comprise entre $0,2$ et $0,5$.
+	\item Créer un curseur $a$ dans l'intervalle $\ff{0}{\ln(2)}$ et 
+	\begin{itemize}
+		\item déterminer $a$ tel que $P(X \leq a) = 0,25$,
+		\item déterminer $a$ tel que $P(X \leq a) = 0,5$.
+	\end{itemize}
+\end{enumerate}
+\end{exemple}
+
+\begin{propriete}[Propriétés des lois continues]{}
+\begin{itemize}
+	\item $P(X=k)=\displaystyle\int_k^k\;f(x)\,dx=0$ 
+	\item $P(X \leq a) = P(X < a)$ (la probabilité que la variable aléatoire prenne une valeur inférieure ou égale à $a$ est égale à la probabilité qu'elle prenne une valeur strictement inférieure à $a$)
+	\item L'espérance d'une variable aléatoire continue $X$ est donnée par la formule: \[E(X) = \displaystyle\int_{-\infty}^{+\infty} x f(x) \, dx\]
+\end{itemize}
+\end{propriete}
+
+\begin{exercice_cours}
+
+Soit $X$ la variable aléatoire qui suit la loi de probabilité $f$ définie par $f(x)=0.015x-0.00075x^2$
+
+\begin{enumerate}
+	\item Montrer que $f$ est bien une densité de probabilité sur l'intervalle $\ff{0}{20}$
+	
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}
+	\item Calculer la probabilité de l'évènement \og $X$ est supérieure ou égale à 12 \fg{} 
+	
+
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}	
+	\item Calculer la probabilité de l'évènement \og $X$ est compris entre 5 et 15 \fg{} 
+	
+
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}
+\item Calculer l'espérance mathématique de $X$.
+
+
+\begin{blocvisiblex}[height=2.]
+{\quad}
+\end{blocvisiblex}\end{enumerate}
+
+
+\end{exercice_cours}

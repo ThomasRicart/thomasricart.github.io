@@ -1,0 +1,339 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{CIEL2~--~Accompagnement Personnalisé} % Titre au centre
+\def\docpart{Révision BTS CIEL 1} % Partie du cours
+\def\docname{C201} % Nom du fichier sans extension
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+\begin{easybox}[Pourcentages]{}
+\begin{itemize}
+	\item \textbf{prendre un pourcentage $t \%$ de $a$}: \fbox{$\dfrac{t}{100} \times a$}
+	\item \textbf{augmenter une valeur $a$ de $t\%$} revient à multiplier $a$ par $1+\dfrac{t}{100}$: \fbox{$a \times \left(1+\dfrac{t}{100}\right)$}
+	\item \textbf{diminuer une valeur $a$ de $t\%$} revient à multiplier $a$ par $1-\dfrac{t}{100}$: \fbox{$a \times \left(1-\dfrac{t}{100}\right)$}
+	\item \textbf{pourcentage d'évolution} entre une valeur initiale $V_i$ et une valeur finale $V_f$: \fbox{$\dfrac{V_f-V_i}{V_i} \times 100$}
+\end{itemize}
+\end{easybox}
+
+\begin{easybox}[Probabilités]{}
+\begin{itemize}
+	\item La somme des probabilités de tous les événements élémentaires d'une expérience aléatoire est égale à 1: \fbox{$\sum P(E_i) = 1$}
+	
+	\begin{minipage}{0.75\linewidth}
+		\item Dans un cas d'équiprobabilité: \fbox{$P(A) = \dfrac{\text{nombre de cas favorables}}{\text{nombre de cas possibles}}$}	
+	\item \fbox{$P(A \cup B) = P(A) + P(B) - P(A \cap B)$}
+	\item \fbox{$P(\overline{A}) = 1 - P(A)$}
+	\item \fbox{$P_A(B)=\dfrac{P(A \cap B)}{P(A)}$} et \fbox{$P(A \cap B) = P(A) \times P_A(B)$}
+	
+	\end{minipage}\hfill{}
+	\begin{minipage}{0.24\linewidth}
+		\includegraphics[width = 0.95\linewidth]{rev01.png}
+	\end{minipage}
+	
+
+\end{itemize}
+\end{easybox}
+
+\begin{easybox}[Répétitions d'épreuves]{}
+\begin{itemize}
+	\item \fbox{Lancer un dé} est une expérience aléatoire à 2 issues:
+	\begin{itemize}
+		\item $S$: \textbf{Succès}: \fbox{obtenir un 6} $p=\dfrac{1}{6}$
+		\item $\overline{S}$: \textbf{Échec}: \fbox{obtenir un 1, 2, 3, 4 ou 5} de probabilité $1-p=\dfrac{5}{6}$
+	\end{itemize}
+	\item On répète cette expérience aléatoire \fbox{$n=10$} fois de manière identique et indépendante.
+	\item $X$ est la variable aléatoire qui compte le nombre de succès
+\end{itemize}
+
+Donc $X$ suit une loi binomiale de paramètres $n$ et $p$
+\end{easybox}
+
+\begin{easybox}[Loi binomiale]{}
+\begin{minipage}{0.5\linewidth}
+	\begin{itemize}
+		\item Espérance: \fbox{$E(X)=np$}
+		\item Variance: \fbox{$V(X)=np(1-p)$}
+		\item Écart-type: \fbox{$\sigma(X)=\sqrt{V(X)}$}
+		\item Probabilité d'obtenir exactement $k$ succès: \par\fbox{$P(X=k)=\binom{n}{k} p^k (1-p)^{n-k}$}
+		\item Probabilité d'obtenir au moins un succès: \par\fbox{$P(X \geq 1) = 1 - P(X = 0)=1-(1-p)^n$}
+	\end{itemize}
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
+	\includegraphics[width=0.7\linewidth]{rev02.png}
+\end{minipage}
+\end{easybox}
+
+\pagebreak
+
+\begin{easybox}[Fonctions affines]{}
+
+	\[f(x)=mx+p\]
+\begin{itemize}
+
+\begin{minipage}{0.48\linewidth}
+		\item $m=\dfrac{y_B-y_A}{x_B-x_A}$: coefficient directeur 
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
+			\item $p=y_A-mx_A$: ordonnée à l'origine
+
+\end{minipage}
+	\end{itemize}
+
+	\includegraphics[width = 0.95\linewidth]{rev03.png}
+
+\end{easybox}
+
+
+\begin{easybox}[Fonctions polynôme du second degré ]{}
+
+	\[f(x)=ax^2+bx+c\]
+\begin{itemize}
+
+\begin{minipage}{0.48\linewidth}
+		\item $\Delta = b^2-4ac$: discriminant 
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
+			\item $x=\dfrac{-b}{2a}$: abscisse du sommet
+
+\end{minipage}
+	\end{itemize}
+
+	\includegraphics[width = 0.95\linewidth]{rev04.jpg}
+
+\end{easybox}
+
+\begin{easybox}[Fonctions exponentielles]{}
+
+	\[f(x)=e^{x}\]
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+		\item $f$ est strictement positive sur $\R$
+		\item $f$ est strictement croissante sur $\R$
+		\item $\e^0=1$
+		\item $\displaystyle\lim_{x \to +\infty} \e^x = +\infty$ et $\displaystyle\lim_{x \to -\infty} \e^x = 0$
+			\item $(\e^x)'=\e^x$ et $(\e^{u})' = u' \e^{u}$
+			\item $\e^{a+b}=\e^a \times \e^b$ et $\e^{-x}=\dfrac{1}{\e^x}$
+			\item $(e^x)^n=\e^{nx}$ 
+		\end{itemize}
+\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+		\includegraphics[width = 0.95\linewidth]{rev05.png}
+	\end{minipage}
+\end{easybox}
+
+
+\begin{easybox}[Fonctions logarithmiques népérien]{}
+
+	\[f(x)=\ln(x)\]
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+		\item $f$ est strictement positive sur $\R^*$
+		\item $f$ est strictement croissante sur $\R^*$
+		\item $\ln(1)=0$
+		\item $\displaystyle\lim_{x \to +\infty} \ln(x) = +\infty$ et $\displaystyle\lim_{x \to 0^+} \ln(x) = -\infty$
+			\item $(\ln(x))'=\dfrac{1}{x}$ et $(\ln(u))' = \dfrac{u'}{u}$
+			\item $\ln(a \times b)=\ln(a) + \ln(b)$ et $\ln(a^{-1})=-\ln(a)$
+			\item $(\ln(x))^n=\ln(x^n)$ 
+		\item $\ln(\e^x)=x$ et $\e^{\ln(x)}=x$
+		\end{itemize}
+\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+		\includegraphics[width = 0.95\linewidth]{rev06.png}
+	\end{minipage}
+\end{easybox}
+
+\begin{easybox}[Dérivation]{}
+		\begin{itemize}
+			\item Equation de la tangente en $A(a, f(a))$: \fbox{$y=f'(a)(x-a)+f(a)$}
+			\item $f$ est croissante sur un intervalle $I$ si $f'(x) \geq 0$ pour tout $x \in I$
+			\item $f$ est décroissante sur un intervalle $I$ si $f'(x) \leq 0$ pour tout $x \in I$
+			\item $f$ est constante sur un intervalle $I$ si $f'(x) = 0$ pour tout $x \in I$	
+			\item $f$ admet un extremum local en $a$ si $f'(a)=0$ et que le signe de $f'$ change autour de $a$.
+		\end{itemize}
+		
+\begin{minipage}{0.48\linewidth}
+	
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Fonction $f(x)$ & Dérivée $f'(x)$ & Domaine \\
+\hline
+$k$ (constante) & $0$ & $\mathbb{R}$ \\
+$x^n$ & $nx^{n-1}$ & $n \in \mathbb{Z}$ \\
+$\frac{1}{x}$ & $-\frac{1}{x^2}$ & $x \neq 0$ \\
+$e^x$ & $e^x$ & $\mathbb{R}$ \\
+$\ln(x)$ & $\frac{1}{x}$ & $x > 0$ \\
+$\cos(x)$ & $-\sin(x)$ & $\mathbb{R}$ \\
+$\sin(x)$ & $\cos(x)$ & $\mathbb{R}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}{0.48\linewidth}
+
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Opération & Dérivée \\
+\hline
+$u + v$ & $u' + v'$ \\
+$uv$ & $u'v + uv'$ \\
+$\frac{1}{v}$ & $-\frac{v'}{v^2}$ \\
+$\frac{u}{v}$ & $\frac{u'v - uv'}{v^2}$ \\
+$u^n$ & $n u' u^{n-1}$ \\
+$e^u$ & $u' e^u$ \\
+$\ln(u)$ & $\frac{u'}{u}$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+
+\end{easybox}
+
+\begin{easybox}[Primitives et intégration]{}
+
+	\begin{itemize}
+		\item $F$ est une primitive de $f$ sur un intervalle $I$ si \fbox{$F'(x)=f(x)$} pour tout $x \in I$.
+		\item Si $F$ est une primitive de $f$ sur un intervalle $I$, alors les autres primitives de $f$ sur $I$ sont de la forme: \fbox{$F(x)+C$} où $C$ est une constante réelle.
+		\item \fbox{$\displaystyle\int_a^b f(x) dx = F(b) - F(a)$}
+		\item Moyenne d'une fonction $f$ sur un intervalle $\ff{a}{b}$: \fbox{$\dfrac{1}{b-a} \displaystyle\int_a^b f(x) dx$}
+	\end{itemize}
+
+
+	\end{easybox}
+
+	\begin{easybox}[Suites numériques]{}
+	\begin{itemize}
+		\item $u$ est une suite numérique si $u$ est une fonction définie sur $\N$ à valeurs dans $\R$: \fbox{$u: \N \to \R$}
+		\item $u$ est une suite \textbf{arithmétique} de \textbf{raison} $r$ si pour tout $n \in \N$, \fbox{$u_{n+1} = u_n + r$}. Alors $u_n = u_0 + nr$
+		\item $u$ est une suite \textbf{géométrique} de \textbf{raison} $q$ si pour tout $n \in \N$, \fbox{$u_{n+1} = q u_n$}. Alors $u_n = u_0 q^n$ 
+		\item $u$ est une suite définie par une relation de récurrence si pour tout $n \in \N$, \fbox{$u_{n+1} = f(u_n)$}.
+	\end{itemize}
+\end{easybox}
+
+\begin{easybox}[Suites géométriques]{}
+\includegraphics[width=0.95\linewidth]{rev07.png}
+\end{easybox}
+
+\begin{easybox}[Trigonométrie]{}
+	\includegraphics[width=0.95\linewidth]{03.jpg}
+\end{easybox}
+
+\begin{easybox}[Nombres complexes]{}
+\begin{itemize}
+	\item \fbox{$z=a+\ii b$} avec $a, b \in \R$ et \fbox{$\ii^2=-1$}
+	\item $a$ est la partie \textbf{réelle} de $z$ et $b$ est la partie \textbf{imaginaire} de $z$
+	\item \fbox{$\overline{z}=a-\ii b$}: \textbf{conjugué} de $z$
+	\item \fbox{$|z|=\sqrt{a^2+b^2}$}: \textbf{module} de $z$
+	\item \fbox{$\arg(z)=\theta$}: \textbf{argument} de $z$ (angle entre le vecteur $\overrightarrow{Oz}$ et l'axe des abscisses)
+	\item Forme \textbf{trigonométrique}: \fbox{$z=|z|(\cos(\theta)+\ii \sin(\theta))$}
+	\item Forme \textbf{exponentielle}: \fbox{$z=|z| e^{\ii \theta}$}
+	\item \textbf{Formule de Moivre}: \fbox{$z^n = |z|^n (\cos(n \theta) + \ii \sin(n \theta))$}
+\end{itemize}
+
+\begin{minipage}{0.28\linewidth}
+	\includegraphics[width=0.95\linewidth]{02.jpg}
+
+\end{minipage}\hfill{}
+\begin{minipage}{0.68\linewidth}
+Résolution de l'équation $az^2+bz+c=0$:
+\begin{itemize}
+	\item Si $\Delta > 0$, alors $z_1 = \dfrac{-b + \sqrt{\Delta}}{2a}$ et $z_2 = \dfrac{-b - \sqrt{\Delta}}{2a}$
+	\item Si $\Delta = 0$, alors $z_0 = \dfrac{-b}{2a}$
+	\item Si $\Delta < 0$, alors $z_1 = \dfrac{-b + \ii \sqrt{-\Delta}}{2a}$ et $z_2 = \dfrac{-b - \ii \sqrt{-\Delta}}{2a}$
+\end{itemize}
+\end{minipage}
+\end{easybox}
+
+\pagebreak
+
+\begin{exercice_cours}[Probabilités]{}
+
+Une entreprise fabrique des objets qui peuvent être produit depuis la ligne de production $A$ ou la ligne de production $B$.
+
+\begin{itemize}
+	\item $60\%$ des objets sont produits par la ligne $A$ et $40\%$ par la ligne $B$.
+	\item $2\%$ des objets produits par la ligne $A$ sont défectueux, tandis que $5\%$ des objets produits par la ligne $B$ sont défectueux.
+\end{itemize}
+
+\begin{enumerate}
+		\item Construire un arbre de probabilités modélisant la situation.
+		\item Calculer la probabilité qu'un objet choisi au hasard provienne de la ligne $A$ et soit défectueux.
+		\item Calculer la probabilité qu'un objet choisi au hasard soit défectueux.
+		\item Sachant qu'un objet choisi au hasard est défectueux, calculer la probabilité qu'il provienne de la ligne $A$.
+\end{enumerate}
+
+\end{exercice_cours}
+
+\begin{exercice_cours}[Répétition d'épreuves]{}
+
+	On prélève au hasard un objet dans une production. La probabilité que cet objet soit défectueux est de $0,03$. On répète cette expérience $n=20$ fois de manière identique et indépendante. Soit $X$ la variable aléatoire qui compte le nombre d'objets défectueux parmi les 20 prélevés.
+\begin{enumerate}
+	\item Quelle est la loi de probabilité suivie par $X$? Justifier votre réponse.
+	\item Calculer $P(X=0)$, $P(X=1)$ et $P(X \geq 2)$.
+	\item Calculer l'espérance, la variance et l'écart-type de $X$.
+	\item $n$ objets sont prélevés au hasard dans cette production. On suppose que la probabilité qu'un objet soit défectueux est toujours de $0,03$ et que les prélèvements sont indépendants. 
+
+Combien de fois doit-on répéter cette expérience pour que la probabilité d'obtenir au moins un objet défectueux soit supérieure à $0,95$?
+
+\end{enumerate}
+
+
+\end{exercice_cours}
+
+
+\begin{exercice_cours}[Fonctions exponentielles]{}
+
+La tension $u(t)$ (en volts) aux bornes d'un condensateur en fonction du temps $t$ en millisecondes est modélisé par la fonction $f(t)=(ax+b)\e^{-x}$.
+
+
+\begin{enumerate}
+	\item Déterminer les constantes $a$ et $b$ à partir des conditions suivantes:
+	\begin{itemize}
+		\item $f(0)=5$ volts
+		\item $f'(0)=1$
+	\end{itemize}
+	\item Calculer la dérivée de $f$ et déterminer les intervalles de croissance et de décroissance de $f$.
+
+	\item Calculer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $t=0$.
+	\item Déterminer pour quelle valeur de $t$ la tension devient inférieure à $1$ volt.
+	\item Calculer la valeur moyenne de $f$ sur l'intervalle $\ff{0}{5}$.
+\end{enumerate}
+
+\end{exercice_cours}
+
+
+\begin{exercice_cours}[Fonctions logarithmiques]{}
+
+Soit $f$ la fonction définie sur $\ff{1}{10}$ par $f(x)=a\ln(x)+bx$.
+
+\begin{enumerate}
+	\item Déterminer les constantes $a$ et $b$ telles que $f(1)=5$ et que le minimum est atteint pour $x=4$.
+	\item Calculer la dérivée de $f$ et déterminer les intervalles de croissance et de décroissance de $f$.
+	\item Déterminer pour quelles valeurs de $x$ la fonction $f$ est négative.
+	\item Calculer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $x=1$.
+	\item Calculer la valeur moyenne de $f$ sur l'intervalle $\ff{1}{10}$.
+\end{enumerate}
+
+\end{exercice_cours}
+
+\begin{exercice_cours}[Suites numériques]{}
+	Soit $(u_n)$ la suite définie par $u_0=50$ et $u_{n+1}=0.8u_n+30$.
+\begin{enumerate}
+	\item Calculer $u_1$, $u_2$ et $u_3$.
+	\item Déterminer à partir de quelle valeur de $n$ la suite $(u_n)$ devient supérieure à $100$.
+	\item Montrer que la suite $(u_n)$ a pour limite $150$
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{exercice_cours}[Suites géométriques]{}
+	Soit $(u_n)$ la suite définie par $u_0=3$ et $u_{n+1}=2u_n$.
+\begin{enumerate}
+	\item Calculer $u_1$, $u_2$ et $u_3$.
+	\item Exprimer $u_n$ en fonction de $n$.
+	\item Grâce à un algorithme, déterminer à partir de quelle valeur de $n$ la suite $(u_n)$ devient supérieure à $1000$.
+\end{enumerate}
+\end{exercice_cours}

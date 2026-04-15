@@ -1,0 +1,337 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{CIEL2~--~Accompagnement Personnalisé} % Titre au centre
+\def\docpart{Equations différentielles AP2} % Partie du cours
+\def\docname{C202} % Nom du fichier sans extension
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+\begin{exercice_cours}[\quad]{}
+
+
+	On souhaite étudier l'évolution au cours du temps de la concentration d'un analgésique dans la sang: par voie intraveineuse dans la partie A, puis par voie orale dans la partie B.
+
+	\medskip
+
+	\textbf{PARTIE A~--~Voie intraveineuse}\par
+
+	\medskip
+
+	Dans cette partie, $\lambda$ est une constante réelle strictement positive. On considère l'équation différentielle $(E_1):\;y'(t)=-\lambda y(t)$ où $y$ est une fonction définie pour tout réel $t$.
+
+
+
+\begin{enumerate}[series=A]
+	\item Déterminer la solution générale de $(E_1)$
+	\item On appelle $Q$ la solution de $(E_1)$ qui vérifie $Q(0)=0,6$. Donner l'expressoin de $Q$ en fonction de $\lambda$.
+	\item Donner la limite de $Q$ en $+\infty$. Donner le sens de variation de $Q$. Aucun justification n'est demandée.
+\end{enumerate}
+
+
+A l'instant $t=0$, une dose d'analgésique est injectée dans le sang par voie intraveineuse. La substance se répartit instantanément dans le sang, ce qui donne une concentration initiale de $0.6$ mg/L, et est ensuite progressivement éliminée.
+
+Pour tout $t>0$, la concentration de médicament, en mg/L, présente dans le sang à l'instant $t$ (exprimé en heure) est égale à $Q(t)$ trouvée à la question 2.
+
+Au bout d'une heure, la concentration de médicament dans le ans a diminué de $30\%$.
+
+\begin{enumerate}[series=A, resume]
+	\item Calculer la valeur de $\lambda$. On donnera la valeur exacte pis une valeur approchée à $10^{-4}$. Justifier.
+	
+	\end{enumerate}
+
+	Le médicament est efficace tant que la concentration dans le sang est supérieure à $0,1$ mg/L.
+\begin{enumerate}[series=A, resume]
+	\item Déterminer en heures le temps d'efficacité du médicament. On donnera la valeur exacte, puis une valeur approchée à $10^{-2}$.
+\end{enumerate}
+
+\medskip
+
+\textbf{PARTIE B~--~Voie orale}
+
+\medskip
+
+On considère l'équation différentielle $(E_2):\;y'(t)+y(t)=\dfrac{1}{2}t\e^{-\frac{t}{2}}$.
+
+
+\begin{enumerate}[series=A, resume]
+	\item Vérifier par le calcul que la fonction $g$ définie par $g(t)=\e^{-\frac{t}{2}}-\e^{-t}$ est une solution de  $(E_2)$.
+	\item En déduire la solution générale de $(E_2)$.
+	\item Déterminer la solution $f$ de $(E_2)$ vérifiant $f(0)=0$. Donner l'expression de $f$.
+\end{enumerate}
+
+\medskip
+
+On considère la fonction $q$ définie sur $[0~;~+\infty[$ par : $q(t)=\e^{-\frac{t}{2}}-\e^{-t}$. On note $\mathcal{C}_q$ la courbe représentative de $q$ dans le plan muni d'un repère orthonormé.
+
+\begin{enumerate}[series=A, resume]
+	\item Donner la limite de $q$ en $+\infty$. En déduire une équation de l'asymptote horizontale à $\mathcal{C}_q$.
+	\item $q'$ désigne la fonction dérivée de $a$. Pour tout réel positif $t$, $q'(t)$ s'écrit sous la forme \par $q'(t)=\e^{-\frac{t}{2}}\left(a\e^{-t}+b\right)$. Donner les valeurs de $a$ et $b$. Justifier.
+	\item Donner l'ensemble des solutions réelles $t$ de l'inéquation $q'(t)>0$.
+	\item Soit $A$ le point de $\mathcal{C}_q$ d'abscisse $x_A=\ln(4)$ et d'ordonnée $y_A$. Calculer la valeur exacte de $y_A$. Détaillez les calculs.
+	\item Compléter le tableau de variation de $q$ sur $[0~;~+\infty[$
+\end{enumerate}
+
+A l'instant $t=0$, un analgésique est administré par voie orale en une prise. La substance est absorbée progressivement dans le sang puis éliminée.\par
+Pour tout $t \geq 0$, la concentration de médicament, en mg/L, présente dans le sang à l'instant $t$ (exprimé en heures) est égale à $q(t)$.\par
+Le médicament cause des effets indésirables quand sa concentration dans le sang est supérieure à $0,3 $ mg/L.
+
+\begin{enumerate}[series=A, resume]
+	\item Le médicament va-t-il causer des effets indésirables au patient ? Justifier la réponse.
+\end{enumerate}
+
+\medskip
+
+\textbf{PARTIE C~--~Comparaison des deux voies d'administration}
+
+\medskip
+
+\begin{enumerate}[series=A, resume]
+	\item Quel mode d'administration choisirons-nous si nous voulons être tout de suite soulagé de la douleur?
+	\item Sachant que l'analgésique est efficace quand sa concentration dans le sang est supérieure à $0,1 $ mg/L par les deux méthodes, quel mode d'administration choisirons-nous si nous voulons que
+ce médicament soit efficace le plus longtemps possible?
+\end{enumerate}
+\end{exercice_cours}
+
+\bigskip
+
+\begin{exercice_cours}[\quad]{}
+
+Dans cet exercice, $K$ et $a$ sont des constantes réelles strictement positives.
+
+\medskip
+
+\textbf{PARTIE A: Etudes préliminaires}
+
+\medskip
+
+On considère l'équation différentielle $(E_1):\; z'(t)+z(t)=\dfrac{1}{K}$ où $z$ est une fonction définie et dérivable sur $\fo{0}{+\infty}$.
+
+
+\begin{enumerate}[series=B]
+	\item Donner la solution générale de $(E_1)$ sur l'intervalle $\fo{0}{+\infty}$.
+\end{enumerate}
+
+On considère la fonction $f$ définie pour tout réel $t$ positif par : $f(t)=\dfrac{10}{1+a\e^{-t}}$.
+
+\begin{enumerate}[series=B, resume]
+	\item Déterminer les variations de $f$ sur l'intervalle $\fo{0}{+\infty}$. Préciser la valeur de $f$ en $0$ ainsi que la limite de $f$ en $+\infty$.
+	\item Déterminer, en fonction de $a$, l'ensemble des solutions de l'équation $f(t)=5$.
+\end{enumerate}
+
+\medskip
+
+\textbf{PARTIE B: Evolution d'une population de marmottes}
+\medskip
+
+Soit $y_0$ un réel strictement positif. On étudie l'évolution d'une population de marmottes, qui compte initialement $y_0$ milliers d'individus. On admet que la taille de la population, exprimée en milliers d'individus, au bout de $t$ années (avec $t \geq 0$) est une fonction $y$ dérivable sur $\fo{0}{+\infty}$, solution de l'équation différentielle : $(E_2):\; y'(t)=y(t)\left(1-\dfrac{y(t)}{K}\right)$ \par La constante $K$ s'appelle la capacité d'accueil du milieu, exprimée en milliers d'individus. On admet qu'il existe une unique fonction $y$ solution de $(E_2)$ qui vérifie $y(0)=y_0$. On admet que cette fonction est à valeurs strictement positives sur $\fo{0}{+\infty}$. On pose $z(t)=\dfrac{1}{y(t)}$ pour tout réel $t$ positif.
+
+\begin{enumerate}[series=B, resume]
+	\item Exprimer $z'(t)$ en fonction de $y'(t)$ et $y(t)$.
+	\item Montrer que $z$ est solution de $(E_1)$ si, et seulement si, $y$ est solution de $(E_2)$. 
+	\item En déduire la solution générale de $(E_2)$.
+	\item On admet que l'unique solution $y$ de $(E_2)$ vérifiant $y(0)=y_0$ s'écrit $y(t)=\dfrac{K}{1+ae^{-t}}$. Exprimer $a$ en fonction de $y_0$ et de $K$.	
+\end{enumerate}
+
+\medskip
+
+Dans un certain vallon de capacité d'accueil $K=10$, les marmottes ont disparu. Les scientifiques veulent réintroduire $y_0$ milliers de marmottes, avec $0<y_0<10$.
+
+\begin{enumerate}[series=B, resume]
+	\item Justifier que la valeur de $a$ obtenue à la question précédente est bien strictement positive.
+	\item En utilisant le résultat de la question 3, donner la valeur de $a$ telle que $y(5)=5$.
+	\item En déduire la valeur exacte de $y_0$ telle que $y(5)=5$. Justifier la réponse.
+\end{enumerate}
+
+\end{exercice_cours}
+
+\pagebreak
+
+\begin{exercice_cours}[\quad]{}
+
+	Soit $n$ un entier strictement positif et l'équation différentielle $(E_n):\; y'+y=\dfrac{x^n}{n!}\e^{-x}$ où $y$ est une fonction définie et dérivable sur $\fo{0}{+\infty}$.
+
+	On rappelle que pour tout entier naturel $k$, $k!=1\times 2\times 3\times \dots \times k$ et que $0!=1$.
+
+\begin{enumerate}[series=C]
+	\item Soit $g$ et $h$ deux fonctions dérivables sur $\R$ telles que pour tout réel $x$, $g(x)=h(x)\e^{-x}$.
+
+	\begin{enumerate}
+		\item Montrer que $g$ est solution de $(E_n)$ si et seulement si $f'(x)=\dfrac{x^n}{n!}$.
+		\item En déduire une solution particulière de $(E_n)$.
+	\end{enumerate}
+
+	\item Déterminer la solution générale de l'équation $(E_n)$.
+	\item Déterminer la solution $f$ de $(E_n)$ vérifiant $f(0)=0$. 
+	\item On pose, pour tout réel $x$, $f_0(x)=\e^{-x}$.
+	
+	Pour tout entier strictement positif $n$, on éfinit la fonction $f_n$ comme la solution de l'équation différentielle $y'+y=f_{n-1}$ vérifiant $f_n(0)=0$.
+
+	Montrer par récurrence que pour tout réel $x$ et tout entier $n$ strictement positif, $f(x)=\dfrac{x^n}{n!}\e^{-x}$.
+\end{enumerate}
+
+
+\end{exercice_cours}
+
+
+\bigskip
+
+\begin{exercice_cours}[\quad]{}
+
+En électronique embarquée, on utilise souvent un circuit RC pour créer des délais ou filtrer des signaux. On étudie ici la charge d'un condensateur à travers une résistance R par un générateur de tension constante E.
+
+\medskip
+
+\textbf{Données du problème:}
+\begin{itemize}
+	\item Tension du générateur: $E=10$ volts
+	\item Résistance: $R=2,2 k\Omega$
+	\item Capacité du condensateur: $C=4,7 \mu F$
+	\item Condition initiale: $u(0)=0$ volts. Le condensateur est initialement déchargé.	
+	\item On admet que la tension $u$ aux bornes du condensateur vérifie l'équation différentielle  \[RC \dfrac{du(t)}{dt}+u(t)=E\]
+\end{itemize}
+
+\medskip
+
+\textbf{PARTIE A: Analyse théorique}
+
+\medskip
+
+\begin{enumerate}[series=C]
+	\item Calculer la constante de temps du circuit $\tau=RC$. Donner la valeur exacte puis une valeur approchée à $10^{-3}$ secondes.
+	\item Résoudre l'équation différentielle pour déterminer l'expression théorique de $u(t)$.
+	\item Calculer la valeur de la tension $u(t)$ pour $t=\tau$. Donner la valeur exacte puis une valeur approchée à $10^{-3}$ volts.
+\end{enumerate}
+
+\medskip
+
+\textbf{PARTIE B: Modélisation numérique}
+
+\medskip
+
+Pour traiter ce signal dans un microcontrôleur, nous devons transformer l'équation continue en une suite de calculs discrets. On utilise la méthode d'Euler avec un pas d'échantillonnage $h$.
+
+On remplacera la dérivée $du(t)/dt$ par le taux d'accroissement de $u$ entre les instants $t$ et $t+h$, soit \[\dfrac{du(t)}{dt}=\dfrac{u(t+h)-u(t)}{h} \approx \dfrac{u_{n+1}-u_n}{u_n}\]
+
+\begin{enumerate}[series=C, resume]
+	\item Montrer que l'équation différentielle peut se réécrire sous la forme d'une suite récurrente:
+
+	\[u_{n+1}=\left(1-\dfrac{h}{RC}\right)u_n+\dfrac{h}{RC}E\]
+
+	\item On reconnaît une suite de la forme $u_{n+1}=au_n+b$. Identifiez les coefficients $a$ et $b$ en fonction de $h$, $R$, $C$ et $E$.
+	\item En remplaçant les valeurs numériques de $R$, $C$ et $E$, donner les expressions de $a$ et $b$ en fonction de $h$.
+	\item Déterminer la valeur de $L$ telle que $L=aL+b$ et vérifier que cette limite est bien égale à la tension du générateur $E$.
+	\item On pose maintenant la suite $(v_n)$ définie par $v_n=u_n-E$. 
+	
+	\begin{enumerate}
+		\item Montrer que $(v_n)$ est une suite géométrique de raison $a$.
+		\item Exprimer $v_n$ en fonction de $n$, $a$ et de la condition initiale $v_0$.
+		\item En déduire l'expression de $u_n$ en fonction de $n$, $a$, $b$ et de la condition initiale $u_0$ et montrer que:
+		\[u_n=E+(u_0-E)\times a^n\]
+		\item A quelle condition sur le coefficient $a$ la suite $(u_n)$  converge-t-elle vers $E$?
+		\item Déduisez-en une condition sur le pas d'échantillonnage $h$ par rapport à la constante de temps $\tau=RC$.
+\end{enumerate}
+\end{enumerate}
+
+\medskip
+
+\textbf{PARTIE C: Simulation numérique}
+\medskip
+
+L'objectif est d'implémenter cette suite pour simuler la charge.
+
+Compléter le script suivant pour qu'il affiche la tension toutes les millisecondes jusqu'à $t=5\tau$.
+
+\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+# --- Configuration du système ---
+E = 10.0
+R = 2200.0
+C = 4.7e-6
+tau = R * C
+
+# --- Paramètres de simulation ---
+h = 0.0005  # Pas d'échantillonnage (0.5 ms)
+t_max = 5 * tau
+u_n = 0.0   # u(0) = 0
+t = 0.0
+
+# Coefficients de la suite u_{n+1} = a*u_n + b
+a = 1 - (h / (R * C))
+b = (h / (R * C)) * E
+
+print(f"{'Temps (s)':<12} | {'Tension (V)':<12}")
+print("-" * 30)
+
+# --- Boucle de calcul ---
+while .........:
+    # 1. Affichage des valeurs actuelles
+    print(f"{t:<12.4f} | {u_n:<12.4f}")
+    
+    # 2. Calcul du terme suivant de la suite
+    # A compléter
+    
+    # 3. Incrémentation du temps
+    # A compléter
+
+	
+				\end{CodePythontexAlt}
+
+
+\begin{enumerate}[series=C, resume]
+	\item Comparez la valeur obtenue par votre programme à $t\approx\tau$ avec votre calcul de la Partie A.
+	\item Changez la valeur du pas $h$ dans votre code. Prenez $h=0,02$ (un pas très grand devant $\tau$). Que se passe-t-il ? Expliquez pourquoi le résultat n'est plus physiquement cohérent
+	
+\end{enumerate}
+\end{exercice_cours}
+
+
+\bigskip
+
+\pagebreak
+
+\begin{exercice_cours}[\quad]{}
+
+Pour tout réel $x$, on considère l'équation différentielle $(E):\:y'(x)+y(x)=x$. Nous allons étudier la famille des solutions de cette équation différentielle
+
+
+\begin{enumerate}
+	\item Déterminer une solution $f$ de l'équation $(E)$ telle que $f$ soit une fonction affine; c'est à dire de la forme $f(x)=mp+p$
+	
+	\item Soit $(E_0):\: y'+y=0$ l'équation homogène associée à $(E)$. Déterminer les solutions de $(E_0)$
+	
+	\item En déduire que les solutions $f_k$ de $(E)$ sont de la forme $$f_k(x)=k\e^{-x}+x-1, \quad \text{avec} \quad k\in\R$$
+	
+	\item Déterminer la solution $f_{k_0}$ de $(E)$ telle que $f_{k_0}(0)=1$.
+	
+	\item Sur Géogébra, créer un curseur $k$ variant de $-100$ à $100$ avec un incrément de $0.01$.
+	
+	\item En activant leur trace et en faisant varier le curseur $k$, afficher les courbes $\mathcal{C}_k$ des fonctions $f_k$ définies sur $\R$ par $$f_k(x)=k\e^{-x}+x-1$$
+	
+	\item A l'aide des courbes obtenues, conjecturer les variations des fonctions $f_k$ en fonction de $k$.
+	
+	\item Démontrer cette conjecture
+	
+	\item Tracer la droite $\Delta$ d'équation $y=x-1$ puis conjecturer la position des courbes $\mathcal{C}_k$ par rapport à la droite $\Delta$ suivant les valeurs de $k$
+	
+	\item Démontrer cette conjecture
+	
+	\item Placer le point $J(0;1)$ puis conjecturer le nombre de courbes $\mathcal{C}_k$ passant pas le point $J$.
+	
+	\item Démontrer cette conjecture
+	
+	\item On suppose maintenant que $k>0$ jusqu'à la fin de l'exercice.
+	
+	Justifier que dans ce cas, les fonctions $f_k$ admettent un minimum sur $\R$ atteint en $x=\ln(k)$
+	
+	\item Soit le point $A_k$ de $\mathcal{C}_k$ d'abscisse $\ln(k)$. En activant la trace et en faisant varier le curseur $k$, conjecturer la nature de l'ensemble des points $A_k$ pour $k>0$
+	
+	\item Démontrer que, pour tout $k>0$, $A_k$ appartient à la droite d'équation $y=k$.
+\end{enumerate}
+
+\end{exercice_cours}
+
+\medskip
+
+\begin{exercice_cours}[\quad]{}
+
+	
+\end{exercice_cours}

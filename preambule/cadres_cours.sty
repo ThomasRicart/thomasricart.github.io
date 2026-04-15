@@ -34,6 +34,26 @@
     \vspace{10pt}
 }
 
+\newcommand{\makeheaderBTS}{
+    \begin{tcolorbox}[
+        enhanced,
+        colback=white,
+        colframe=black,
+        sharp corners,
+        boxrule=1pt,
+        top=2mm, bottom=2mm,
+        left=2mm, right=2mm,
+        valign=center
+    ]
+    \parbox[c]{0.15\linewidth}{\centering\bfseries\Large \docname} % Numéro (ex: LP05)
+    \hfill
+    \parbox[c]{0.65\linewidth}{\centering\bfseries\Large\MakeUppercase{\docpart}} % Titre (ex: Les fonctions)
+    \hfill
+    \parbox[c]{0.15\linewidth}{\quad} % Classe (ex: Première NSI)
+    \end{tcolorbox}
+    \vspace{10pt}
+}
+
 % --- Style de base commun ---
 \tcbset{styleBOX/.style={
     enhanced,
