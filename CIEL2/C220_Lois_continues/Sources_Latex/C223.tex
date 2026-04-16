@@ -1,0 +1,126 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Lois continues} % Titre au centre
+\def\docpart{Loi normale} % Partie du cours
+\def\docname{C223}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+\begin{definition}[Loi normale]{}
+	
+ Une variable aléatoire X suit une loi normale d'espérance $\mu$ et d'écart-type $\sigma$, notée $\mathcal{N}(\mu;\sigma)$, lorsque la densité de probabilité $f$ est définie par:
+\[f(x)=\dfrac{1}{\sigma\sqrt{2\pi}}e^{-\dfrac{1}{2}\left(\dfrac{x-\mu}{\sigma}\right)^2}\]
+
+\begin{center}
+\includegraphics[width = 0.9\linewidth]{loi_normale2.png}
+\end{center}
+\end{definition}
+
+\begin{itemize}
+	\item[$\bullet$] 	La courbe représentative de la densité de probabilité \og en cloche \fg{}  est appelée une courbe de Gauss. Elle admet un axe de symétrie d'équation $x=\mu$.
+
+	\item[$\bullet$] L'adjectif « normale » s'explique par le fait que cette loi décrit et modélise la majorité des situations concrètes dans lesquelles le résultat dépend de nombreux paramètres aléatoires indépendants.
+
+\end{itemize}
+
+\begin{propriete}[Caractères de position et de dispersion]{}
+
+	$X \sim \mathcal{N}(\mu;\sigma)$: Espérance $E(X)=\mu$ et écart-type $\sigma(X)=\sigma$.
+
+\end{propriete}
+
+\begin{minipage}{0.55\linewidth}
+
+On remarque que:
+
+\begin{itemize}
+	\item[$\bullet$] 	$\mu$ est un caractère de position. Lorsque $\mu$ varie l'extremum de la courbe de déplace le long de l'axe des abscisses. 
+
+	\item[$\bullet$] $\sigma$ est un caractère de dispersion. Lorsque $\sigma$ augmente, la répartition est plus étalée.
+
+\end{itemize}
+	
+
+
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[width = 0.9\linewidth]{musigma.png}
+\end{minipage}
+
+
+\bigskip
+
+\begin{propriete}[Règle empirique]{}
+Soit $X$ une variable aléatoire suivant la loi normale $\mathcal{N}(\mu;\sigma)$, alors:
+
+\begin{minipage}{0.6\linewidth}
+\[P(\mu-\sigma\le X\le\mu+\sigma)\approx 0,68\]
+
+\[P(\mu-2\sigma\le X\le\mu+2\sigma)\approx 0,95\]
+
+\[P(\mu-3\sigma\le X\le\mu+3\sigma)\approx 0,997\]
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\includegraphics[width=0.85\linewidth]{loi_normale3.png}
+\end{minipage}
+\end{propriete}
+
+
+\pagebreak
+
+\begin{easybox}[Approximation de la loi binomiale par la loi normale]{}
+
+	
+{\it Lorsque $n$ est grand et $p$ ni trop près de $0$, ni trop près de $1$, alors la loi binomiale est très proche d'une loi normale ayant même espérance et même écart-type.
+
+En pratique, on convient de faire cette approximation pour $n \geq 50$, $p$ ni proche de $0$ ni de $1$ et $np(1 - p) > 10$.}
+
+
+Dans les bonnes conditions, on peut approcher un loi binomiale $\mathscr{B}(n,p)$ par une loi normale $\mathscr{N}(\mu,\sigma)$ avec $\mu=np$ et $\sigma=\sqrt{np(1-p)}$
+
+
+\begin{center}
+	\includegraphics[width=0.99\linewidth]{approxim.png}
+\end{center}
+
+\end{easybox}
+
+
+\begin{exercice_cours}[\quad]{Dans cette activité, chaque probabilité demandée sera arrondie à $10^{-3}$.}
+
+
+
+Une enquête réalisée par un institut de sondage permet d'estimer que la probabilité qu'une lettre, choisie au hasard dans le courrier d'une entreprise, parvienne à son destinataire en France le lendemain est $0,7$.
+
+Dans une des agences d'une grande entreprise, on admet que l'on expédie $500$ lettres par jour.
+
+On note $X$ la variable aléatoire qui, à un jour tiré au hasard, associe le nombre de lettres qui parviendront à leur destinataire le lendemain.
+
+On suppose que les acheminements de ces lettres se font en toute indépendance.
+
+\begin{enumerate}
+  \item 
+  \begin{enumerate}
+    \item Expliquer pourquoi $X$ suit une loi binomiale et préciser les paramètres de cette loi.
+    
+    \item Calculer l'espérance mathématique de $X$, puis la valeur arrondie à $10^{-2}$ de l'écart-type de $X$.
+    
+    \item Calculer la probabilité que $355$ lettres exactement, sur les $500$ expédiées un jour tiré au hasard, parviennent à leur destinataire le lendemain.
+  \end{enumerate}
+
+  \item Soit $P_0$ la probabilité qu'au moins $375$ des $500$ lettres expédiées un jour tiré au hasard parviennent à leur destinataire le lendemain. Calculer la probabilité $P_0$.
+
+  \item Pour calculer une valeur approchée $P_0'$ de $P_0$, on pense approcher la loi de $X$ par la loi de $Y$, où $Y$ est une variable aléatoire suivant la loi normale $\mathscr{N}(350~;~10,25)$.
+  
+  \begin{enumerate}
+    \item Justifier que les deux paramètres choisis sont pertinents.
+    
+    \item Calculer une valeur arrondie à $10^{-3}$ de $P_0'=P(Y\geq 375)$, avec $Y$ qui suit la loi normale $\mathscr{N}(350~;~10,25)$ puis comparer avec la valeur trouvée pour $P_0$.
+  \end{enumerate}
+
+  \item En utilisant l'approximation de la loi binomiale $X$ par la loi normale $Y$, estimer la probabilité que le nombre de lettres, sur les $500$ expédiées un jour choisi au hasard, parvenant à leur destinataire le lendemain, soit compris entre $340$ et $365$.
+\end{enumerate}
+
+
+\end{exercice_cours}

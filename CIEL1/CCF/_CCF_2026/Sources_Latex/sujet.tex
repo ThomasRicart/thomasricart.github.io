@@ -108,7 +108,7 @@ Un module est prélevé au hasard en sortie de chaîne.
     La probabilité que le module prélevé soit défectueux et provienne de la ligne A est de $0,018$.
      \end{blocvisiblex}
      \medskip
-    \item Calculer la probabilité que le module prélevé soit défectueux. Montrer que cette probabilité est égale à $0,046$.
+    \item Montrer que la probabilité que le module prélevé soit défectueux est égale à \fbox{$0,046$}.
     \begin{blocvisiblex}[height=2.5]
     {\quad}
     $P(D)=P(A\cap D)+P(B\cap D)=P(A) \times P_D(A)+P(B) \times P_D(B)=0,6 \times 0,03+0,4 \times 0,07=0,046$
@@ -117,10 +117,10 @@ Un module est prélevé au hasard en sortie de chaîne.
     La probabilité que le module prélevé soit défectueux est de $0,046$.
     \end{blocvisiblex}
     \medskip
-    \item Sachant que le module prélevé est défectueux, calculer la probabilité qu'il provienne de la ligne A.
+    \item Calculer $P_D(A)$ et donner une interprétation de cette valeur dans le contexte de l'exercice.
     \begin{blocvisiblex}[height=2.5]
     {\quad}
-    $P_A(D)=\dfrac{P(A\cap D)}{P(D)}=\dfrac{P(A) \times P_D(A)}{P(D)}=\dfrac{0,6 \times 0,03}{0,046}\approx 0,3913$
+    $P_D(A)=\dfrac{P(A\cap D)}{P(D)}=\dfrac{P(A) \times P_D(A)}{P(D)}=\dfrac{0,6 \times 0,03}{0,046}\approx 0,3913$
 
         \smallskip
     La probabilité que le module provienne de la ligne A sachant qu'il est défectueux est d'environ $0,3913$.
@@ -129,7 +129,7 @@ Un module est prélevé au hasard en sortie de chaîne.
      
 \end{enumerate}
 
-Un technicien prélève un échantillon de 20 modules indépendamment les uns des autres. On admet que la probabilité qu'un module soit défectueux est $p=0,046$
+Un technicien prélève un échantillon de \fbox{30} modules indépendamment les uns des autres. On admet que la probabilité qu'un module soit défectueux est \fbox{$0,046$}
 
 Soit $X$ la variable aléatoire qui compte le nombre de modules défectueux dans l'échantillon. On supposera que cette variable aléatoire suit une loi binomiale.
 
@@ -141,7 +141,7 @@ Soit $X$ la variable aléatoire qui compte le nombre de modules défectueux dans
 \begin{minipage}{0.47\textwidth}
     \begin{blocvisiblex}[height=1]
     {\quad}
-    $n=20$ et $p=0,046$
+    $n=30$ et $p=0,046$
     \end{blocvisiblex}
 \end{minipage}
 
@@ -153,16 +153,16 @@ Soit $X$ la variable aléatoire qui compte le nombre de modules défectueux dans
 \begin{minipage}{0.47\textwidth}
     \begin{blocvisiblex}[height=1]
     {\quad}
-    $P(X\geq 2)= 0.2341$
+    $P(X\geq 2)= 0.4043$
     \end{blocvisiblex}
 \end{minipage}
 \end{enumerate}
 
-
-Le technicien souhaite que la probabilité de détecter au moins un module défectueux sur $n$ prélèvements soit supérieure à $0,9$.
+\pagebreak
+Le technicien souhaite que la probabilité de détecter au moins un module défectueux sur $n$ prélèvements soit supérieure à \fbox{$0,9$}.
 
 \begin{enumerate}[series=monDS, resume]
-    \item Montrer que cette condition s'écrit ${0,954}^n \leq 0,1$.
+    \item Montrer que cette condition s'écrit \fbox{${0,954}^n \leq 0,1$}.
     \begin{blocvisiblex}[height=3]
     {\quad}
     $P(X\geq 1)=1-P(X=0)=1-{(1-p)}^n=1-{0,954}^n$
@@ -183,13 +183,13 @@ Le technicien souhaite que la probabilité de détecter au moins un module défe
     \appelprof{}
 \end{enumerate}
 
-\bigskip
+\medskip
 
 \section*{PARTIE B~--~Modélisation du signal de charge d'un condensateur}
 
 Un ingénieur modélise la tension aux bornes d'un condensateur lors d'une phase de charge par une fonction de la forme:
 
-\[f(t)=(at+b)\cdot \e^{-kt}\qquad \text{où $a$, $b$ et $k$ sont des constantes réelles.}\]
+\[\boxed{f(t)=(at+b)\cdot \e^{-kt}}\qquad \text{où $a$, $b$ et $k$ sont des constantes réelles.}\]
 
 \begin{itemize}
     \item $t$ est le temps en millisecondes (ms) depuis le début de la charge du condensateur.
@@ -216,8 +216,8 @@ Un ingénieur modélise la tension aux bornes d'un condensateur lors d'une phase
 
 
 \begin{enumerate}[series=monDS, resume]
-    \item Déterminer par le calcul une expression de la fonction dérivée $f'$ et montrer que $f'(t)=-\dfrac{5}{2}\cdot \e^{-0,5t}$.
-    \begin{blocvisiblex}[height=3]
+    \item Déterminer par le calcul une expression de la fonction dérivée $f'$ et montrer que \fbox{$f'(t)=-\dfrac{5}{2}\cdot \e^{-0,5t}$}.
+    \begin{blocvisiblex}[height=2.8]
     {\quad}
     $f(t)= 5 \cdot \e^{-0,5t}$
 
@@ -244,7 +244,7 @@ Des études expérimentales ont permis de déterminer que:
     \item le coefficient de décroissance $k$ est égal à $0,5$.
 \end{itemize}
 
-La fonction $f$ est donc définie pour tout $t\geq 0$ par \fbox{$f(t)=(at+b)\cdot \e^{-0,5t}$}
+La fonction $f$ est donc définie pour tout $t\geqslant 0$ par \fbox{$f(t)=(at+b)\cdot \e^{-0,5t}$}
 
 \bigskip
 
@@ -263,7 +263,7 @@ La fonction $f$ est donc définie pour tout $t\geq 0$ par \fbox{$f(t)=(at+b)\cdo
 
 \bigskip
 
-Dans la suite de l'exercice on considèrera la fonction $f$ définie sur $\fo{0}{+\infty}$ par $f(t)=5\cdot (2t+1)\cdot \e^{-0,5t}$.
+Dans la suite de l'exercice on considèrera la fonction $f$ définie sur $\fo{0}{+\infty}$ par \fbox{$f(t)=5\cdot (2t+1)\cdot \e^{-0,5t}$}.
 
 \begin{enumerate}[series=monDS, resume]
     \begin{minipage}{0.46\textwidth}
@@ -325,7 +325,7 @@ Dans la suite de l'exercice on considèrera la fonction $f$ définie sur $\fo{0}
    \item Déterminer grâce à Géogébra à partir de quelle valeur de $t$ la tension $f(t)$ devient inférieure à 1 volt. (On donnera une valeur approchée à $10^{-2}$ près.)
     \begin{blocvisiblex}[height=1]
     {\quad}
-    $f(t)<1$ à partir de $t\approx 9,1$ ms.
+    $f(t)<1$ à partir de $t\approx 9,14$ ms.
     \end{blocvisiblex}
 \end{enumerate}
 
@@ -350,7 +350,7 @@ L'énergie dissipée en \textbf{joules} entre l'instant $a$ et l'instant $b$ est
     {
     \faSquare[regular] \, $F(a) - F(b)$ \hfill \faSquare[regular] \, $F(b) - F(a)$ \hfill \faSquare[regular] \, $F(b)$ \hfill \faSquare[regular] \, $F(a)$ \hspace{1cm} 
  }         
-    \faSquare[regular] \, $F(a) - F(b)$ \hfill \faSquare[regular] \, $F(b) - F(a)$ \hfill \faCheck[regular] \, $F(b)$ \hfill \faSquare[regular] \, $F(a)$ \hspace{1cm} 
+    \faSquare[regular] \, $F(a) - F(b)$ \hfill \faCheck[regular] \, $F(b) - F(a)$ \hfill \faSquare[regular] \, $F(b)$ \hfill \faSquare[regular] \, $F(a)$ \hspace{1cm} 
     \end{blocvisiblex}
     \medskip
 \item On suppose maintenant que l'énergie dissipée pendant les 5 premières milliseconde est égale à 40 joutes. Déterminer par le calcul l'énergie moyenne $\mu$ dissipée par milliseconde pendant les 5 premières millisecondes.

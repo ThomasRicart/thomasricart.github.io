@@ -1,0 +1,90 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Lois continues} % Titre au centre
+\def\docpart{Loi exponentielle~--~Exercices} % Partie du cours
+\def\docname{C225}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+
+
+La loi exponentielle modélise la durée de vie d'un phénomène sans mémoire, ou sans vieillissement/sans usure.
+
+
+Elle permet, entre autres, de modéliser la durée de vie en radioactivité, la durée de vie d'un composant électronique, de décrire le temps écoulé entre deux moments, etc.
+
+
+
+\begin{definition}[Loi exponentielle]{}
+
+
+	Une variable aléatoire $X$ suit une loi exponentielle de paramètre $\lambda$ ($\lambda>0$), noté $X\sim\mathscr{E}(\lambda)$, lorsque $X$ a pour fonction densité de probabilité la fonction $f$ définie sur $\fo{0}{+\infty}$ par :
+	
+	
+\[f(x)=\lambda\e^{-\lambda ~x} \]
+\end{definition}
+
+\begin{exemple}[Représentation graphique d'une loi exponentielle de paramètre $1$]{}
+
+\bigskip
+
+\begin{center}
+	\includegraphics[width=0.65\linewidth]{expo1.png}
+\end{center}
+\end{exemple}
+
+
+\begin{propriete}[$X\sim\mathscr{E}(\lambda)$, pour tout $a$ et $b$ de l'intervalle $\fo{0}{+\infty}$, avec $a<b$, on a:
+]{}
+ 
+	\smallskip 
+ 
+	\begin{minipage}{0.6\linewidth}
+	\[{P(X\leqslant a)=\int_{0}^{a}\lambda \e^{-\lambda t}\text{d}t=1-\e^{-\lambda a}}\]
+
+	\[P(X\geqslant a)=\e^{-\lambda a}\]
+
+	\[P(a \leqslant X \leqslant b)=\e^{-\lambda a}-\e^{-\lambda b}\]
+	
+	\[E(X)=\dfrac{1}{\lambda} \qquad V(X)=\dfrac{1}{\lambda^2}\]
+
+\end{minipage}	
+	\hfill
+	\begin{minipage}{0.35\linewidth}
+	%\begin{center}
+		\includegraphics[width=0.9\linewidth]{C220_3.jpg}
+	%\end{center}
+	\end{minipage}
+\end{propriete}
+
+
+\begin{propriete}[Propriété de durée de vie sans vieillissement]{}
+
+	Soit $X$ une variable aléatoire qui suit la loi exponentielle de paramètre $\lambda$.  \[\forall t,h \in \fo{0}{+\infty}, \; P_{X\geqslant t}(X \geqslant t+h)=P(X\geqslant h)\]
+\end{propriete}
+
+
+\vrule
+\hfill
+\begin{minipage}{0.98\linewidth}
+\it   En d'autres termes, la probabilité de l'évènement $(X \geqslant h)$ est indépendant de l'instant initial $t$.
+	
+\end{minipage}
+
+
+ \begin{itemize}
+ 	\item La variable aléatoire $T$ qui, à tout dispositif associe sa durée de vie est appelée \textbf{temps de bon fonctionnement} (TBF)
+ 	
+ 	\smallskip
+ 	\item La fonction $F$ notée par $F(t)=P(T \leqslant t)$ est appelée \textbf{fonction de défaillance}. C'est la probabilité que la durée de vie d'un objet soit inférieure à une valeur $t$
+ 	
+ 	\smallskip
+  	\item La fonction $R$ notée par $R(t)=P(T > t)=1-F(t)$ est appelée \textbf{fonction de fiabilité du système}. C'est la probabilité que la durée de vie d'un objet soit supérieure à une valeur $t$
+ 	
+ 	\smallskip
+  	\item L'espérance mathématique de $T$ est la \textbf{durée de vie moyenne} du système. Elle est notée MTBF.
+	
+ 	
+ \end{itemize}
+

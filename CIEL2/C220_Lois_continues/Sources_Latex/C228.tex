@@ -1,0 +1,215 @@
+\def\level{BTS}  % Classe à droite
+\def\course{CIEL 2}
+\def\chaptername{Lois continues} % Titre au centre
+\def\docpart{Loi exponentielle~--~TP3} % Partie du cours
+\def\docname{C228}        % Identifiant à gauche
+
+\pagestyle{cours_FP}
+\makeheaderBTS{} % Affiche le bandeau
+
+
+\begin{exercice_cours}[\quad]{}
+	La durée de vie d'un robot, exprimée en années est modélisée par une variable aléatoire $X$ qui suit la loi exponentielle de paramètre $\lambda=0,2$.
+
+	\begin{enumerate}
+		\item A quel instant $t$, à un mois près, la probabilité qu'un robot tombe en panne pour la première fois est-elle de 0,5?
+		\item Montrer que la probabibilité qu'un robot n'ait pas eu de panne au cours des deux premières années est $e^{-0,4}$.
+		\item Calculer la probabilité qu'un robot tombe en panne au cours de la troisième année sachant qu'il n'a pas eu de panne au cours des deux premières années.
+	\end{enumerate}
+\end{exercice_cours}
+
+\begin{exercice_cours}[\quad]{}
+
+On s'intéresse à la durée de vie d'une ampoule électrique. On suppose que cette durée de vie, exprimée en heures, est modélisée par une variable aléatoire $X$ qui suit la loi exponentielle de paramètre $\lambda=0,01$.
+
+\begin{enumerate}
+	\item Calculer $P(X\leqslant 100)$, 
+	\item Calculer $P(50\leqslant X\leqslant 150)$ 
+	\item Calculer la probabilité que l'ampoule dure plus de 200 heures.
+	\item Calculer la probabilité que l'ampoule dure exactement 100 heures.
+	\item Calculer l'espérance de $X$ et donner une interprétation de ce résultat.	
+	\item Calculer la probabilité que l'ampoule dure plus de 150 heures sachant qu'elle a déjà duré 100 heures.
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{exercice_cours}[\quad]{}
+
+	On s'intéresse à la durée de vie d'une batterie de téléphone portable. On suppose que cette durée de vie, exprimée en heures, est modélisée par une variable aléatoire $Y$ qui suit la loi exponentielle de paramètre $\lambda$.
+
+	\begin{enumerate}
+		\item Tracer la fonction de répartition de $Y$ à l'aide de Géogébra pour différentes valeurs de $\lambda$.
+		\item Sachant que $P(Y\leqslant 10)=0,6321$, déterminer de $\lambda$ grâce à Géogébra.
+		\item Vérifier la valeur trouvée par le calcul.
+		\item Déterminer $P(Y\leqslant 20)$ grâce à Géogébra et vérifier ce résultat par le calcul.
+		\item Déterminer $P(15\leqslant Y\leqslant 25)$ grâce à Géogébra et vérifier ce résultat par le calcul.
+		\item Déterminer la probabilité que la batterie dure plus de 30 heures.
+		\item Déterminer la probabilité que la batterie dure exactement 20 heures.
+		\item Calculer l'espérance de $Y$ et donner une interprétation de ce résultat.
+		\item Calculer la probabilité que la batterie dure plus de 25 heures sachant qu'elle a déjà duré 15 heures.
+		\item Calculer la probabilité que la batterie dure plus de 30 heures sachant qu'elle a déjà duré 20 heures.
+		\item Calculer la probabilité que la batterie dure plus de 30 heures sachant qu'elle a déjà duré 25 heures.
+	\end{enumerate}
+	\end{exercice_cours}
+
+
+	\begin{exercice_cours}[\quad]{}
+
+
+La durée de vie, en jours, d’un composant électronique est une variable aléatoire T qui suit une loi exponentielle de paramètre $\ell$ compris entre $0$ et $0,005$
+
+{\it On rappelle que la fonction densité de probabilité associée à une loi exponentielle est : $f(t)=\ell\e^{-\ell t}$.}\\
+
+\begin{enumerate}
+	\item À l'aide de Géogebra, déterminer le paramètre $\ell$, à $0,0001$ près, pour que P(T$\leq266$)$ \simeq 0,5$.
+	
+	{\it \begin{itemize}
+		\item Dans le champs de saisie de Géogebra, rentrer la fonction $f$.
+		\item Représenter la probabilité à l'aide de la commande \texttt{intégrale(<fonction>,<xmin>,<xmax>)}.
+		\item Déplacer le curseur pour obtenir la valeur demandée (il sera nécessaire d'augmenter l'arrondi et de choisir un pas adapté.
+		\end{itemize}}
+	
+	$\ell = $\makebox[0.1\linewidth]{\dotfill} \hfill \fbox{\bf \large Appeler le professeur}
+	\item[~] Dans la suite du TP, on choisira $\ell = 0,00255$.
+	
+	\item Calculer la MTBF (moyenne de temps de bon fonctionnement), correspondant à la durée de vie moyenne du composant éléctronique.\\
+	
+	\dotfill
+	
+	\smallskip
+	\item On s'intéresse à la probabilité que ce composant tombe en panne au cours de la première année.
+	
+	{\it On considère qu’une année compte 365 jours.}
+	
+	\begin{enumerate}
+		\item Donner la valeur exacte (formule) de cette probabilité : \dotfill \\
+		
+		\item En donner une valeur approchée à $10^{-3}$ près : \dotfill
+		
+		\smallskip
+	\end{enumerate}
+	\item On s'intéresse à la probabilité que ce composant fonctionne encore au bout de $3$ ans.
+	
+	Donner la valeur exacte de cette probabilité, puis une valeur approchée à $10^{-3}$ près. \\
+	
+	\dotfill
+	
+	\smallskip
+	\item À l'aide de Géogebra, déterminer le plus grand nombre de jours $n$, tel que la probabilité que ce composant fonctionne encore au bout de ces $n$ jours soit supérieure ou égale à $0,95$.\\
+	
+	$n =$\makebox[0.1\linewidth]{\dotfill} \hfill \fbox{\bf \large Appeler le professeur}\\
+	
+	Retrouver ce résultat par un calcul :\\
+	
+	\dotfill\\
+	
+	\dotfill\\
+	
+	\dotfill\\
+	
+	\dotfill\\
+	
+	\dotfill\\
+	
+	\dotfill
+\end{enumerate}
+
+\end{exercice_cours}
+
+\begin{exercice_cours}[\quad]{}
+On étudie un modèle de climatiseur d’automobile composé d’un module mécanique et d’un module
+électronique.
+
+Si un module subit une panne, il est changé.
+
+\medskip
+
+L'enseigne d’entretien automobile a constaté que la durée de
+fonctionnement (en mois) du module électronique peut être modélisée par une variable aléatoire T qui suit une loi exponentielle de paramètre $\lambda$.
+
+\begin{enumerate}
+	\item Le service statistique indique que P(T$\leq 24$) $= 0,03$.
+	
+	\begin{enumerate}
+		\item À l'aide de Géogebra, déterminer une valeur approchée de $\lambda$ à $10^{-4}$ près.
+		
+		{\it Reprendre la méthode du précédent TP. On utilisera ici un curseur compris entre $0$ et $0,002$}\\
+		
+		$\lambda =$ \makebox[0.2\linewidth]{\dotfill} \hfill \fbox{\large \bf Appeler le professeur}
+		
+		\smallskip
+		\item À l'aide d'un calcul, déterminer la valeur exacte de $\lambda$.\\
+		
+		\dotfill \\
+		
+		\dotfill \\
+		
+		\dotfill \\
+		
+		\dotfill \\
+		
+		\dotfill
+		
+		\smallskip
+	\end{enumerate}
+
+	
+	\item[~] Dans la suite du TP, on prendra $\lambda = 0,00127$.
+	
+	Pour tous les résultats, on attend la valeur exacte, puis une valeur approchée à $0,01$ près.
+	
+	\smallskip
+	
+	\item Déterminer la probabilité que la durée de fonctionnement du module électronique soit comprise entre 24 et 48 mois.\\
+	
+	\dotfill
+	
+	\smallskip
+	\item Déterminer la probabilité qu'un module électronique fonctionne encore au bout de 3 ans.\\
+	
+	\dotfill \\
+	
+	\dotfill
+	
+	\smallskip
+	
+	\item Le module électronique du climatiseur fonctionne depuis 36 mois.
+	
+	Déterminer la probabilité qu’il fonctionne encore les 12 mois suivants.\\
+	
+	\dotfill \\
+	
+	\dotfill
+\end{enumerate}
+
+\newpage
+
+\subsection*{Exercice 2 : \normalsize  Loi exponentielle -- \small Donner les valeurs exactes puis leur valeur approchée au centième.}
+
+La durée de vie, en années, d’un composant électronique fabriqué dans une usine est une variable aléatoire T qui suit la loi exponentielle de paramètre $\lambda = 0,099$.
+
+\begin{enumerate}
+	\item On choisit au hasard un composant fabriqué dans cette usine.
+	
+	Déterminer la probabilité que ce composant tombe en panne au cours des 5 premières années.\\
+	
+	\dotfill
+	
+	\smallskip
+	\item On choisit au hasard un composant parmi ceux qui fonctionnent encore au bout de 2 ans.
+	
+	Déterminer la probabilité que ce composant ait une durée de vie supérieure à 7 ans.\\
+	
+	\dotfill
+	
+	\smallskip
+	\item Donner l’espérance mathématique E(T) de la variable aléatoire T à l’unité près.
+	
+	Interpréter ce résultat dans le contexte de l'énoncé.\\
+	
+	\dotfill \\
+	
+	\dotfill \\
+	
+	\dotfill
+
+\end{exercice_cours}

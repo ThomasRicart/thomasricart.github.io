@@ -21,45 +21,37 @@
 \usetikzlibrary{shapes.multipart, arrows.meta, positioning, calc}
 
 % Ton toggle : 'visible' pour le prof, 'invisible' pour l'élève
-%\def\visibleornot{invisible} 
+%\def\visibleornot{visible} 
 \ifdefined\visibleornot\else\def\visibleornot{visible}\fi
 
-\ifdefstring{\visibleornot}{visible}{
+%\ifdefstring{\visibleornot}{visible}{
     % Si c'est "visible", on charge le filigrane
-    \usepackage[firstpageonly, color={[gray]{0.5}}, text=CORRECTION, scale=0.7]{draftwatermark}
-}{
+ %   \usepackage[firstpageonly, color={[gray]{0.5}}, text=CORRECTION, scale=0.7]{draftwatermark}
+%}{
     % Sinon, on ne fait rien (ou on peut ajouter autre chose ici)
-}
+%}
 \usepackage{lastpage}
 \usepackage{tabularx}
 \usepackage{bm}
 \tcbuselibrary{listings}
 
 
-
-
 \usepackage{fourier}
+
 
 
 \begin{document}
 
 \def\level{BTS}  % Classe à droite
 \def\course{CIEL 1}
-\def\chaptername{04 mai 2026} % Titre au centre
-\def\docname{CCF Situation 1}        % Identifiant à gauche
+\def\chaptername{13 avril 2026} % Titre au centre
+\def\docname{CCF BLANC 06}        % Identifiant à gauche
 
 
 
 
-    \include{./Sources_Latex/page_garde}
-   \include{./Sources_Latex/sujet}
-
-   \ifdefstring{\visibleornot}{visible}{
-    % Si c'est "visible", on charge le filigrane
-%\include{./Sources_Latex/grille_comp}
-    }{
-    % Sinon, on ne fait rien (ou on peut ajouter autre chose ici)
-}
+    \include{./Sources_Latex/CCF_blanc_06_page_garde}
+   \include{./Sources_Latex/CCF_blanc_06_sujet}
 
 
    \end{document}

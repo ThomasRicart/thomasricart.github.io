@@ -1,0 +1,6 @@
+n <- 0
+u <- 120
+tant que (*\trou{u >= 100}*):
+        u <- (*\trou{0,983 * u}*)
+        n <- (*\trou{n + 1}*)
+afficher (n)

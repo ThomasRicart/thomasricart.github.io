@@ -1,0 +1,223 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath}
+
+% --- Couleurs des competences ---
+\definecolor{sinformer}{RGB}{180,212,244}
+\definecolor{chercher}{RGB}{159,225,203}
+\definecolor{modeliser}{RGB}{250,199,117}
+\definecolor{raisonner}{RGB}{244,192,209}
+\definecolor{calculer}{RGB}{192,221,151}
+\definecolor{communiquer}{RGB}{206,203,246}
+
+\definecolor{sinformertxt}{RGB}{12,68,124}
+\definecolor{cherchertxt}{RGB}{8,80,65}
+\definecolor{modelisertxt}{RGB}{99,56,6}
+\definecolor{raisonnertxt}{RGB}{114,36,62}
+\definecolor{calculertxt}{RGB}{39,80,10}
+\definecolor{communiquertxt}{RGB}{60,52,137}
+
+\definecolor{headerrow}{RGB}{230,230,230}
+\definecolor{partierow}{RGB}{242,242,242}
+
+% --- Badges competences ---
+\newcommand{\sinformer}{\colorbox{sinformer}{\textcolor{sinformertxt}{\footnotesize\textbf{S'informer}}}}
+\newcommand{\chercher}{\colorbox{chercher}{\textcolor{cherchertxt}{\footnotesize\textbf{Chercher}}}}
+\newcommand{\modeliser}{\colorbox{modeliser}{\textcolor{modelisertxt}{\footnotesize\textbf{Mod\'eliser}}}}
+\newcommand{\raisonner}{\colorbox{raisonner}{\textcolor{raisonnertxt}{\footnotesize\textbf{Raisonner}}}}
+\newcommand{\calculer}{\colorbox{calculer}{\textcolor{calculertxt}{\footnotesize\textbf{Calculer}}}}
+\newcommand{\communiquer}{\colorbox{communiquer}{\textcolor{communiquertxt}{\footnotesize\textbf{Communiquer}}}}
+
+% Largeurs fixes : 0.8 + 4.4 + 11.4 = 16.6 cm (dans les marges 2cm sur A4 = 17cm utile)
+\newlength{\colQ}    \setlength{\colQ}{0.8cm}
+\newlength{\colComp} \setlength{\colComp}{4.4cm}
+\newlength{\colJust} \setlength{\colJust}{11.4cm}
+
+\begin{document}
+
+\begin{center}
+  {\large\bfseries CCF Math\'ematiques --- BTS CIEL\,1\textsuperscript{re} ann\'ee}\\[4pt]
+  {\normalsize Tableau r\'ecapitulatif des comp\'etences \'evalu\'ees par question}\\[2pt]
+  {\small Lyc\'ee Victor Hugo -- Colomiers \quad|\quad \'Epreuve E3 -- Sous-\'epreuve U31 \quad|\quad 04 mai 2026}
+\end{center}
+
+\vspace{6pt}
+
+\begin{longtable}{%
+  >{\centering\arraybackslash}p{\colQ}
+  >{\centering\arraybackslash}p{\colComp}
+  >{\small\raggedright\arraybackslash}p{\colJust}
+}
+
+\toprule
+\rowcolor{headerrow}
+\textbf{Q.} & \textbf{Comp\'etences \'evalu\'ees} & \textbf{Justification} \\
+\midrule
+\endfirsthead
+
+\toprule
+\rowcolor{headerrow}
+\textbf{Q.} & \textbf{Comp\'etences \'evalu\'ees} & \textbf{Justification} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+%------------------------------------------------------------
+\multicolumn{3}{l}{\cellcolor{partierow}\small\bfseries%
+  Partie A --- Contr\^ole qualit\'e} \\[2pt]
+%------------------------------------------------------------
+
+Q1  & \sinformer{} \modeliser
+    & Extraire les donn\'ees de probabilit\'e de l'\'enonc\'e et les
+      traduire sous forme d'un arbre de probabilit\'e. \\[4pt]
+
+Q2  & \calculer
+    & Application directe de la r\`egle de multiplication~:
+      $P(A \cap D) = P(A) \times P(D|A)$. \\[4pt]
+
+Q3  & \modeliser{} \calculer
+    & Traduire la situation par la formule des probabilit\'es totales
+      (mod\'eliser), puis effectuer le calcul num\'erique pour
+      v\'erifier le r\'esultat. \\[4pt]
+
+Q4  & \calculer{} \communiquer
+    & Calcul de la probabilit\'e conditionnelle par la formule de
+      Bayes~; la demande d'interpr\'etation contextuelle mobilise
+      \'egalement la comp\'etence communiquer. \\[4pt]
+
+Q5  & \sinformer
+    & Identifier et extraire les param\`etres $n$ et $p$ de la loi
+      binomiale \`a partir du contexte, sans calcul. \\[4pt]
+
+Q6  & \calculer
+    & Calcul de $P(X \geq 2)$ avec la loi binomiale \`a l'aide d'un
+      outil (calculatrice ou tableur). \\[4pt]
+
+Q7  & \raisonner
+    & D\'emontrer que $P(X \geq 1) \geq 0{,}9$ est \'equivalent \`a
+      $0{,}954^{n} \leq 0{,}1$~: cha\^{\i}nement rigoureux
+      d'inf\'erences alg\'ebriques. \\[4pt]
+
+Q8  & \chercher{} \communiquer
+    & Concevoir et mettre en {\oe}uvre une d\'emarche sur
+      G\'eog\'ebra pour r\'esoudre une in\'equation
+      (chercher)~; l'appel professeur exige d'expliquer
+      oralement la strat\'egie (communiquer). \\[8pt]
+
+%------------------------------------------------------------
+\multicolumn{3}{l}{\cellcolor{partierow}\small\bfseries%
+  Partie B --- Cas particulier ($a=0$, $b=5$, $k=0{,}5$)} \\[2pt]
+%------------------------------------------------------------
+
+Q9  & \sinformer{} \calculer
+    & Lire la fonction $f(t)=5\,\mathrm{e}^{-0{,}5t}$ pour
+      identifier la forme \`a d\'eriver~; appliquer les r\`egles
+      de d\'erivation pour v\'erifier l'expression de~$f'$. \\[4pt]
+
+Q10 & \raisonner
+    & D\'eduire le signe de $f'$ puis inf\'erer les variations
+      de~$f$~: raisonnement d\'eductif \`a partir du signe de
+      l'exponentielle. \\[8pt]
+
+%------------------------------------------------------------
+\multicolumn{3}{l}{\cellcolor{partierow}\small\bfseries%
+  Partie B --- Mod\'elisation g\'en\'erale (constantes inconnues)} \\[2pt]
+%------------------------------------------------------------
+
+Q11 & \sinformer{} \chercher{} \communiquer
+    & Extraire les deux conditions exp\'erimentales (s'informer)~;
+      concevoir une m\'ethode sur G\'eog\'ebra pour identifier $a$
+      et $b$ (chercher)~; expliquer la d\'emarche au professeur
+      (communiquer). \\[4pt]
+
+Q12 & \calculer
+    & Utiliser G\'eog\'ebra comme outil de calcul symbolique pour
+      obtenir l'expression factoris\'ee de~$f'$. \\[4pt]
+
+Q13 & \raisonner{} \communiquer
+    & Analyser le signe d'un produit de fonctions pour \'etablir les
+      variations de~$f$ (raisonner)~; le tableau de variations
+      compl\'et\'e est un acte de communication \'ecrite. \\[4pt]
+
+Q14 & \chercher
+    & R\'esoudre graphiquement ou num\'eriquement $f(t)<1$ sur
+      G\'eog\'ebra~: d\'emarche d'exp\'erimentation et de test. \\[4pt]
+
+Q15 & \calculer
+    & Calcul d'une primitive de $(at+b)\,\mathrm{e}^{-kt}$ par
+      int\'egration par parties~: mise en {\oe}uvre technique
+      d'une strat\'egie de calcul. \\[4pt]
+
+Q16 & \communiquer
+    & Choisir parmi quatre formules celle qui exprime correctement
+      une int\'egrale via une primitive~: la compr\'ehension doit
+      se manifester par un choix explicite. \\[4pt]
+
+Q17 & \modeliser
+    & Traduire \guillemotleft~\'energie moyenne sur
+      5\,ms~\guillemotright{} en expression math\'ematique
+      $\mu = \tfrac{1}{5}\times 40$~: la mise en \'equation est
+      l'enjeu principal. \\[8pt]
+
+%------------------------------------------------------------
+\multicolumn{3}{l}{\cellcolor{partierow}\small\bfseries%
+  Partie C --- Gestion d'une m\'emoire tampon} \\[2pt]
+%------------------------------------------------------------
+
+Q18 & \sinformer
+    & Lire la r\`egle de suppression de 10\,\% et la réécrire
+      sous forme de r\'ecurrence $u_{n+1}=0{,}9\,u_n$~:
+      extraction et organisation de l'information. \\[4pt]
+
+Q19 & \raisonner
+    & Identifier la nature g\'eom\'etrique de la suite \`a partir
+      de la r\'ecurrence~: $q$ constant $\Rightarrow$ suite
+      g\'eom\'etrique. \\[4pt]
+
+Q20 & \calculer
+    & \'Ecrire l'expression g\'en\'erale $u_n = 200 \times 0{,}9^n$
+      en substituant les valeurs identifi\'ees~: application directe
+      de la formule. \\[4pt]
+
+Q21 & \modeliser
+    & Compl\'eter l'algorithme en traduisant la condition $u < 1$
+      et la mise \`a jour $u \leftarrow 0{,}9\,u$ en
+      instructions~: mod\'elisation sous forme de programme. \\[4pt]
+
+Q22 & \chercher
+    & Choisir librement la m\'ethode (logarithme, algorithme,
+      G\'eog\'ebra) pour d\'eterminer $n$~: proposer et tester une
+      strat\'egie de r\'esolution. \\
+
+\bottomrule
+\end{longtable}
+
+\vspace{6pt}
+
+\noindent\textbf{L\'egende~:}\quad
+\sinformer\quad
+\chercher\quad
+\modeliser\quad
+\raisonner\quad
+\calculer\quad
+\communiquer
+
+\vspace{4pt}
+\noindent{\small\textit{R\'ef\'erentiel~: Bulletin officiel
+  n$^{\circ}$\,27 du 4~juillet~2013 --- Annexe~II,
+  capacit\'es et comp\'etences BTS.}}
+
+\end{document}
