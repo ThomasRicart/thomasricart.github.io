@@ -76,31 +76,50 @@ def lettre_vers_nombre(lettre):
 def nombre_vers_lettre(nombre):
     return ALPHABET[nombre % 26]
 
+### CHIFFREMENT
 def produit_hill(matrice, bloc_nombres):
-    """Effectue le calcul matriciel ligne par colonne modulo 26"""
+    """Effectue le calcul matriciel ligne par colonne modulo 26
+    Correspond au chiffrement de bloc_nombre par matrice"""
     # TODO : Implémenter le calcul de y1 et y2
-    y1 = (matrice[0][0] * bloc_nombres[0] + matrice[0][1] * bloc_nombres[1]) % 26
-    y2 = (matrice[1][0] * bloc_nombres[0] + matrice[1][1] * bloc_nombres[1]) % 26
+    y1 = 0 # A modifier
+    y2 = 0 # A modifier
     return [y1, y2]
 
+def test_produit_hill():
+    print(f'--- Test de la fonction produit_hill---')
+    print(f'La clef est {CLE_K}')
+    print(f'Le bloc nombre est [0, 2]')
+    print(f'Le produit de hill doit être [6, 10]')
+    print(f'Analyse de ce que renvoie la fonction:')
+    return produit_hill(CLE_K, [0,2])
+
+
+### TRAITEMENT DU MESSAGE
 def traiter_message(message, matrice):
     message = message.upper().replace(" ", "")
-    
+
     # TODO : Gérer les messages de longueur impaire
-    if len(message) % 2 != 0:
-        message += "X"
-    
+    # Si le message est de longueur impaire, on lui ajoute la lettre 'X' à la fin
+    # A compléter
+
+
     resultat = ""
     for i in range(0, len(message), 2):
         # TODO : Extraire le bloc, transformer et convertir en texte
-        paire_lettres = message[i:i+2]
-        nombres_clairs = [lettre_vers_nombre(paire_lettres[0]), lettre_vers_nombre(paire_lettres[1])]
-        
-        nombres_transformes = produit_hill(matrice, nombres_clairs)
-        
-        resultat += nombre_vers_lettre(nombres_transformes[0])
-        resultat += nombre_vers_lettre(nombres_transformes[1])
-        
+        # Extraire le bloc de deux lettres
+        paire_lettres = 'AA'    # A modifier
+
+        # Liste de nombres en clairs
+        nombres_clairs = [0, 0] # A modifier
+
+        # Liste de nombres transformés par le poduit de hill
+        nombres_transformes = [0, 0]    # A modifier
+
+        # Liste de lettres transformées
+        lettres_transformees = ['A', 'A']   # A modifier
+
+        # Ajout des nouvelles lettres au résultat
+        resultat = resultat + 'A' # A modifier
     return resultat
 
 # --- ZONE DE TESTS ---
@@ -108,6 +127,8 @@ def traiter_message(message, matrice):
 print(f"Chiffrement de 'CODE' : {traiter_message('CODE', CLE_K)}")
 
 # 2. DEFI : Déchiffrer le message secret "CPZP"
-# secret = traiter_message("CPZP", CLE_INV)
-# print(f"Le mot secret est : {secret}")`
+secret = traiter_message("CPZP", CLE_INV)
+print(f"Le mot secret est : {secret}")
+# ==========================================================
+
 ```
