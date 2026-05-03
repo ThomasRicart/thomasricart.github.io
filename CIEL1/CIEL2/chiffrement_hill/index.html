@@ -3871,17 +3871,29 @@ Pour chiffrer un bloc <span class="arithmatex">\(P = \begin{pmatrix} x_1 \\ x_2 
 <p><em>À réaliser avant de passer sur ordinateur.</em></p>
 <p>On donne la matrice clé <span class="arithmatex">\(K = \begin{pmatrix} 3 &amp; 3 \\ 2 &amp; 5 \end{pmatrix}\)</span> et sa matrice inverse <span class="arithmatex">\(K^{-1} = \begin{pmatrix} 15 &amp; 17 \\ 20 &amp; 9 \end{pmatrix}\)</span>.</p>
 <p><strong>Question 1 : Chiffrement manuel</strong>
-1. Convertir le bloc de lettres <strong>"CO"</strong> en nombres <span class="arithmatex">\(x_1\)</span> et <span class="arithmatex">\(x_2\)</span>. (C=2, O=14).
-2. Calculez le vecteur chiffré <span class="arithmatex">\(C\)</span> :
-   - <span class="arithmatex">\(y_1 = (3 \times x_1 + 3 \times x_2) \pmod{26}\)</span>
-   - <span class="arithmatex">\(y_2 = (2 \times x_1 + 5 \times x_2) \pmod{26}\)</span>
-3. Quel est le bloc chiffré (en lettres) ?</p>
+1. Convertir le bloc de lettres <strong>"CO"</strong> en nombres <span class="arithmatex">\(x_1\)</span> et <span class="arithmatex">\(x_2\)</span>. (C=2, O=14).</p>
+<ol>
+<li>Calculez le vecteur chiffré <span class="arithmatex">\(C\)</span> :</li>
+<li><span class="arithmatex">\(y_1 = (3 \times x_1 + 3 \times x_2) \pmod{26}\)</span></li>
+<li>
+<p><span class="arithmatex">\(y_2 = (2 \times x_1 + 5 \times x_2) \pmod{26}\)</span></p>
+</li>
+<li>
+<p>Quel est le bloc chiffré (en lettres) ?</p>
+</li>
+</ol>
 <p><strong>Question 2 : Déchiffrement manuel</strong>
-On reçoit le bloc chiffré <strong>"WW"</strong> (soit le vecteur <span class="arithmatex">\(C = \begin{pmatrix} 22 \\ 22 \end{pmatrix}\)</span>). Utilisons <span class="arithmatex">\(K^{-1}\)</span> pour décoder :
-1. Calculez les valeurs d'origine <span class="arithmatex">\(x_1\)</span> et <span class="arithmatex">\(x_2\)</span> :
-   - <span class="arithmatex">\(x_1 = (15 \times 22 + 17 \times 22) \pmod{26}\)</span>
-   - <span class="arithmatex">\(x_2 = (20 \times 22 + 9 \times 22) \pmod{26}\)</span>
-2. Vérifiez que vous retrouvez bien les nombres correspondant à <strong>"CO"</strong>.</p>
+On reçoit le bloc chiffré <strong>"WW"</strong> (soit le vecteur <span class="arithmatex">\(C = \begin{pmatrix} 22 \\ 22 \end{pmatrix}\)</span>). Utilisons <span class="arithmatex">\(K^{-1}\)</span> pour décoder :</p>
+<ol>
+<li>Calculez les valeurs d'origine <span class="arithmatex">\(x_1\)</span> et <span class="arithmatex">\(x_2\)</span> :</li>
+<li><span class="arithmatex">\(x_1 = (15 \times 22 + 17 \times 22) \pmod{26}\)</span></li>
+<li>
+<p><span class="arithmatex">\(x_2 = (20 \times 22 + 9 \times 22) \pmod{26}\)</span></p>
+</li>
+<li>
+<p>Vérifiez que vous retrouvez bien les nombres correspondant à <strong>"CO"</strong>.</p>
+</li>
+</ol>
 <blockquote>
 <p><em>Astuce : Pour le modulo sur de grands nombres, divisez par 26 et gardez le reste.</em></p>
 </blockquote>
