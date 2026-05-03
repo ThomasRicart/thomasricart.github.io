@@ -36,17 +36,22 @@ On donne la matrice clé $K = \begin{pmatrix} 3 & 3 \\ 2 & 5 \end{pmatrix}$ et s
 
 **Question 1 : Chiffrement manuel**
 1. Convertir le bloc de lettres **"CO"** en nombres $x_1$ et $x_2$. (C=2, O=14).
+
 2. Calculez le vecteur chiffré $C$ :
    - $y_1 = (3 \times x_1 + 3 \times x_2) \pmod{26}$
    - $y_2 = (2 \times x_1 + 5 \times x_2) \pmod{26}$
+
 3. Quel est le bloc chiffré (en lettres) ?
 
 **Question 2 : Déchiffrement manuel**
 On reçoit le bloc chiffré **"WW"** (soit le vecteur $C = \begin{pmatrix} 22 \\ 22 \end{pmatrix}$). Utilisons $K^{-1}$ pour décoder :
+
 1. Calculez les valeurs d'origine $x_1$ et $x_2$ :
    - $x_1 = (15 \times 22 + 17 \times 22) \pmod{26}$
    - $x_2 = (20 \times 22 + 9 \times 22) \pmod{26}$
+
 2. Vérifiez que vous retrouvez bien les nombres correspondant à **"CO"**.
+
    > *Astuce : Pour le modulo sur de grands nombres, divisez par 26 et gardez le reste.*
 
 ---
