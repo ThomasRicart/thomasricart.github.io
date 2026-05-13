@@ -1,0 +1,85 @@
+% chktex-file 44 32 36 38 18 11 8 26
+
+
+\medskip
+
+\exods{0}
+%AN1J2 exo3
+
+\section*{PARTIE A}
+
+\medskip
+
+\begin{enumerate}[resume=monDS]
+    \item Justifier que l’attribut \verb|Num_Objet| peut être choisi comme clé primaire de la table \verb|Gaia|.
+
+
+\begin{blocvisible}[height=3.]
+    L’attribut \verb|Num_Objet| peut être choisi comme clé primaire de la table \verb|Gaia| car il identifie de manière unique chaque objet cartographié. En effet, chaque objet a un numéro d’identification unique, ce qui garantit que les valeurs de \verb|Num_Objet| sont distinctes pour chaque enregistrement de la table. De plus, cet attribut est stable et ne change pas au fil du temps, ce qui en fait un bon candidat pour une clé primaire.
+\end{blocvisible}
+    \item Proposer le schéma relationnel de la table \verb|Type| en soulignant la clé primaire.
+
+\begin{blocvisible}[height=1.3]
+\verb|Type (Type_Objet : String, Libelle : String)| où \verb|Type_Objet| est la clé primaire de la table.
+\end{blocvisible}
+\end{enumerate}
+
+
+
+\medskip
+\thispagestyle{DS_LP}
+
+\section*{PARTIE B}
+
+\medskip
+
+\begin{enumerate}[resume=monDS]
+    \item Expliquer pourquoi le code SQL suivant ne fonctionne pas: 
+    
+    \verb|INSERT INTO Type VALUES ('BD', 'Trou Noir');|
+    \begin{blocvisible}[height=2.]
+Cette requête échoue à cause d'une violation de contrainte d'unicité (ou d'intégrité de clé primaire). La valeur \verb|'BD'| existe déjà dans la table \verb|Type| (associée à \verb|'Naine Brune'|). Comme \verb|Type_Objet| est la clé primaire, on ne peut pas insérer deux lignes avec la même valeur pour ce champ.
+    \end{blocvisible}
+
+    \item Indiquer le résultat de la requête suivante exécutée sur l'extrait présenté: 
+    
+    \verb|SELECT Nom_Objet, Parallaxe FROM Gaia WHERE Type_Objet = 'Planet';|   
+
+\begin{blocvisible}[height=2.]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Nom Objet} & \textbf{Parallaxe} \\
+\hline
+\textbf{Proxima Cen b} & 768,067 \\
+\hline
+\textbf{Lalande 21185 b} & 392,753 \\
+\hline  
+\end{tabular}
+\end{center}
+
+\end{blocvisible}
+
+\item Écrire la requête qui permet de récupérer le nom du système, le nom de l’objet et le libellé du type pour des objets ayant une parallaxe supérieure à 400 millisecondes d’arc et étant des \verb|'Étoile'|.
+
+    \begin{blocvisible}[height=2.5]
+\begin{verbatim}
+SELECT Gaia.Nom_Systeme, Gaia.Nom_Objet, Type.Libelle_Objet 
+FROM Gaia 
+JOIN Type ON Gaia.Type_Objet = Type.Type_Objet
+WHERE Gaia.Parallaxe > 400 AND Type.Type_Objet = 'Etoile';
+\end{verbatim}
+
+    \end{blocvisible}
+\item Le chercheur a besoin du nom, du libellé de leur type, de la déclinaison et de la parallaxe de tous les objets du système stellaire Alpha du Centaure ( \verb|'alf Cen'| ). Écrire la requête qui permet d’extraire ces informations de la base de données.
+
+    \begin{blocvisible}[height=2.5]
+\begin{verbatim}
+SELECT Gaia.Nom_Objet, Type.Libelle_Objet, Gaia.Declinaison, Gaia.Parallaxe 
+FROM Gaia 
+JOIN Type ON Gaia.Type_Objet = Type.Type_Objet
+WHERE Gaia.Nom_Systeme = 'alf Cen';
+\end{verbatim}
+
+    \end{blocvisible}
+\end{enumerate}

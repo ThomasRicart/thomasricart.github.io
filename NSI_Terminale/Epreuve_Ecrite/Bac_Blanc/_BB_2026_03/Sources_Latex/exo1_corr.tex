@@ -1,0 +1,194 @@
+% chktex-file 44 32 36 38 18 11 8 26
+
+\pagestyle{DS_FP}
+%\NomPrenomNote{}
+
+\bigskip
+
+\exods{0}
+%%% POLYNESIE 2025 - J1 - exo1
+
+\section*{PARTIE A}
+
+\begin{enumerate}[series=monDS]
+    \item Donner l'ordre de parcours des sommets du graphe.\hfill \reponseLigne[3cm]{ABCEDF}
+
+    \item Donner la table de routage de F à l’initialisation du protocole RIP.
+
+    \begin{blocvisible}[height=1.5]
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Routeur} & \textbf{Nombre de sauts} & \textbf{Prochain routeur} \\
+\hline
+\textbf{D} & 1 & -- \\
+\hline
+\end{tabular}
+\end{center}
+\end{blocvisible}
+
+
+    \item Donner la table de routage de A après une première itération de RIP (deux réponses sont possibles).
+    
+     \begin{blocvisible}[height=3.]
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Routeur} & \textbf{Nombre de sauts} & \textbf{Prochain routeur} \\
+\hline
+\textbf{B} & 1 & -- \\
+\hline
+\textbf{C} & 1 & -- \\
+\hline
+\textbf{E} & 1 & -- \\
+\hline
+\textbf{D} & 2 & E ou C \\
+\hline
+\end{tabular}
+\end{center}
+\end{blocvisible}
+    \item Donner le numéro de l’itération de RIP à partir duquel les tables des routeurs du réseau ne varient plus. \hfill 
+\begin{blocvisible}[height=1]
+    Les tables de routage ne varient plus à partir de la troisième itération de RIP.
+
+\end{blocvisible}
+
+
+
+    \item Donner la nouvelle table de routage de A après stabilisation de RIP (deux réponses sont possibles).
+
+    \begin{blocvisible}[height=3.5]
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Routeur} & \textbf{Nombre de sauts} & \textbf{Prochain routeur} \\
+\hline
+\textbf{B} & 1 & -- \\
+\hline
+\textbf{C} & 1 & -- \\
+\hline
+\textbf{E} & 1 & -- \\
+\hline
+\textbf{D} & 2 & E ou C \\
+\hline
+\textbf{F} & 3 & E ou C\\
+\hline
+\end{tabular}
+\end{center}
+\end{blocvisible}
+\end{enumerate}
+
+
+\section*{PARTIE B}
+
+    \begin{enumerate}[series=monDS, resume]
+        \item Compléter le code de la méthode \verb|relie|.
+
+        \begin{blocvisible}[height=4.5]
+
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def relie(self, autre): 
+    if autre not in self.voisins: 
+        self.voisins.append(autre) 
+        self.nb_sauts[autre] = 1 
+        self.prochain[autre] = None 
+        if self not in autre.voisins: 
+            autre.relie(self)
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+
+        \item Écrire la méthode \verb|relie_liste| de la classe \verb|Routeur| qui prend en paramètre une liste de routeurs \verb|lst| et qui relie le routeur \verb|self| à chacun des routeurs de la liste \verb|lst|.
+        
+        \begin{blocvisible}[height=2.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def relie_liste(self, lst):
+    for autre in lst: 
+        self.relie(autre)
+    \end{CodePythontexAlt}
+\end{blocvisible}
+
+
+    
+\item Écrire les instructions manquantes pour relier les routeurs de manière à obtenir le graphe de la figure \ref{reseau_exo1}.
+
+\begin{blocvisible}[height=2.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+A.relie_liste([B, C, E]) 
+D.relie_liste([C, E, F])
+C.relie(E) 
+
+\end{CodePythontexAlt}
+
+\end{blocvisible}
+
+    \item Compléter le code de la méthode \verb|met_a_jour_table| ci-dessus.
+    
+    \begin{blocvisible}[height=4.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def met_a_jour_table(self, autre):
+    for r in autre.nb_sauts: 
+        if r != self: 
+            if (r not in self.nb_sauts or self.nb_sauts[r] > \
+                                        autre.nb_sauts[r] + 1): 
+                self.nb_sauts[r] = autre.nb_sauts[r] + 1 
+                self.prochain[r] = autre.nom
+\end{CodePythontexAlt}
+\end{blocvisible}
+
+\medskip
+    \item Écrire la méthode \verb|itere_rip| qui prend en paramètre le routeur \verb|self| et met à jour sa table de routage lorsqu’il reçoit la table de routage de chacun des routeurs présents dans la liste de ses voisins.
+\begin{blocvisible}[height=2.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{} 
+def itere_rip(self): 
+    for autre in self.voisins: 
+        self.met_a_jour_table(autre)
+\end{CodePythontexAlt}
+    
+\end{blocvisible}
+    \medskip
+    \item Écrire une fonction qui prend en paramètre une liste de routeurs \verb|l_routeurs| et qui réalise une itération du protocole RIP pour tous les routeurs de \verb|l_routeurs|.
+\begin{blocvisible}[height=2.5]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{} 
+def iteration_rip(l_routeurs):
+    for r in l_routeurs:
+        r.itere_rip()
+\end{CodePythontexAlt}
+    
+\end{blocvisible}
+
+    \item Écrire une version modifiée du code de la méthode \verb|itere_rip| de la classe \verb|Routeur| de telle sorte que celle-ci renvoie \verb|True| dans le cas où le routeur \verb|self| a procédé à une modification de sa table de routage au cours de lexécution de la méthode \verb|itere_rip|, et \verb|False| sinon.
+
+\begin{blocvisible}[height=4.]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def itere_rip(self): 
+    modifie = False
+    for autre in self.voisins: 
+        if self.met_a_jour_table(autre):
+            modifie = True
+    return modifie
+\end{CodePythontexAlt}
+\end{blocvisible}
+
+\begin{minipage}{0.44\textwidth}
+        \item Compléter le code du programme principal afin que celui-ci mette à jour les tables de routage des routeurs présents dans la liste \verb|liste_routeurs| jusqu’à ce qu’il ne soit plus nécessaire de faire des mises à jour des tables de routage.
+
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+
+
+\begin{blocvisible}[height=4.]
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+
+modifie = True
+while modifie:
+    modifie = False
+    for r in liste_routeurs:
+        if r.itere_rip():
+            modifie = True
+\end{CodePythontexAlt}
+\end{blocvisible}
+\end{minipage}
+\end{enumerate}

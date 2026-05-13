@@ -1,0 +1,237 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+%\def\visibleornot{visible}    % visible or invisible
+\ifdefined\visibleornot\else\def\visibleornot{invisible}\fi
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{3}
+\def\ptsexoB{2}
+\def\ptsexoC{1}
+\def\ptsexoD{2}
+\def\ptsexoE{2}
+
+\begin{document}
+
+\def\level{Premiere}  % Classe à droite
+\def\course{NSI}
+\def\chaptername{Les dictionnaires} % Titre au centre
+\def\docname{DS\quad}        % Identifiant à gauche
+
+\pagestyle{DS_LP}
+
+\NomPrenomNote{}
+
+\bigskip
+
+
+%%=============================================================
+\exods{\ptsexoA} 
+
+\textbf{Compréhension et Vocabulaire}: Un développeur utilise un dictionnaire pour stocker l'inventaire d'un joueur :
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+inventaire = {"potions": 5, "pieces": 150, "epee": 1}
+\end{CodePythontexAlt}
+
+\begin{enumerate}
+    \item Que renvoie la commande \verb|type(inventaire)|? \hfill \reponseLigne[5cm]{dict}
+    \item Dans le couple \texttt{"pieces": 150}, identifiez la clé et la valeur. \hfill \reponseLigne[5cm]{clé: "pieces", valeur: 150}
+    \item Quelle instruction permet d'afficher le nombre de \texttt{"potions"}? \hfill \reponseLigne[5cm]{inventaire["potions"]}
+    \item Le joueur achète une potion supplémentaire. Écrivez l'instruction qui met à jour la quantité de potions à \texttt{6}. \hfill \reponseLigne[7cm]{inventaire["potions"] = 6}
+    \item Le joueur ramasse un nouvel objet: \texttt{"bouclier"} (quantité 1). Écrivez l'instruction permettant d'ajouter cet élément au dictionnaire. \hfill \reponseLigne[7cm]{inventaire["bouclier"] = 1}
+\end{enumerate}
+
+%%=============================================================
+\exods{\ptsexoB} 
+
+On considère un dictionnaire de produits et leurs prix en euros :
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+catalogue = {"Clavier": 45, "Souris": 25, "Ecran": 180, "Tapis": 15}
+\end{CodePythontexAlt}
+
+\begin{enumerate}
+    \item Ecrire un script Python qui affiche le nom et le prix de chaque produit du catalogue.
+
+
+    L'affichage doit être au format : \texttt{Produit: Prix euros} (exemple : \texttt{Clavier: 45 euros}).
+
+
+    \begin{blocvisible}[height=3]
+            {\quad }
+          \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+for produit, prix in catalogue.items():
+    print(f"{produit}: {prix} euros")
+
+    \end{CodePythontexAlt}
+        \end{blocvisible}
+  
+
+    \medskip
+\item Compléter le script Python pour qu'il affiche uniquement les \textbf{noms} des produits dont le prix est \textbf{inférieur à 30 euros}.
+
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+for ......... , ......... in catalogue. ............:
+    if ............... :
+        print(produit)
+
+    \end{CodePythontexAlt}
+
+    \begin{blocvisible}[height=3]
+            {\quad }
+          \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+for produit, prix in catalogue.items():
+    if prix < 30:
+        print(produit)
+
+    \end{CodePythontexAlt}
+        \end{blocvisible}
+
+\end{enumerate}
+
+
+\pagebreak
+
+%%=============================================================
+\exods{\ptsexoC} 
+
+Compléter cet algorithme qui permet de compter les occurrences de chaque caractère dans une chaîne.
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+texte = "abracadabra"
+frequences = {}
+
+for caractere in texte:
+    if caractere in ...................:
+        frequences[caractere] = ...................
+    else:
+        frequences[caractere] = ...................
+
+print(frequences) # Doit afficher {'a': 5, 'b': 2, 'r': 2, 'c': 1, 'd': 1}
+\end{CodePythontexAlt}
+
+\begin{blocvisible}[height=3.2]
+            {\quad }
+          \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+    if caractere in frequences:
+        frequences[caractere] = frequences[caractere] + 1
+    else:
+        frequences[caractere] = 1
+    \end{CodePythontexAlt}
+        \end{blocvisible}
+
+%%=============================================================
+\exods{\ptsexoD} 
+
+\textbf{Structures Complexes : Bibliothèque}: On utilise une liste de dictionnaires pour gérer des livres :
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+biblio = [
+    {"titre": "1984", "auteur": "Orwell", "disponible": True},
+    {"titre": "Dune", "auteur": "Herbert", "disponible": False},
+    {"titre": "Fondation", "auteur": "Asimov", "disponible": True}  ]
+\end{CodePythontexAlt}
+
+\begin{enumerate}
+    \item Quelle instruction permet d'accéder au dictionnaire du livre "Dune" ? \hfill \reponseLigne[5cm]{biblio[1]}
+    \item Que renvoie l'instruction \texttt{biblio[2]["auteur"]} ? \hfill \reponseLigne[5cm]{Asimov}
+    \item \textbf{Écriture de fonction} : Complétez la fonction ci-dessous qui renvoie \texttt{True} si un livre est disponible, et \texttt{False} sinon.
+\end{enumerate}
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+def est_dispo(titre_recherche, table_livres):
+    ''' Renvoie True si le livre est disponible, False sinon.
+    titre_recherche : le titre du livre a chercher (str)
+    table_livres : une liste de dictionnaires representant les livres (list)
+    '''
+    for livre in table_livres:
+        if livre["titre"] == ..........:
+            return ..........["disponible"]
+    return "Livre non reference"
+\end{CodePythontexAlt}
+
+\begin{blocvisible}[height=2.4]
+            {\quad }
+          \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+        if livre["titre"] == titre_recherche:
+            return livre["disponible"]
+    \end{CodePythontexAlt}
+        \end{blocvisible}
+\pagebreak
+
+\exods{\ptsexoE} \medskip
+
+On s'intéresse aux notes obtenues par des étudiants. Ces notes sont rangées dans un dictionnaire de dictionnaires de ce type:
+
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
+notes = {
+    "Alice": {"Maths": 15, "NSI": 18, "Histoire": 12},
+    "Bob": {"Maths": 10, "NSI": 14, "Histoire": 16},
+    "Charlie": {"Maths": 20, "NSI": 19, "Histoire": 17}
+}
+\end{CodePythontexAlt}
+
+\begin{enumerate}
+    \item Quelle instruction permet d'afficher la note de Bob en NSI ? \hfill \reponseLigne[5cm]{notes["Bob"]["NSI"]}
+    \item Écrire une fonction qui calcule la moyenne d'un étudiant donné. La fonction doit prendre en paramètre le nom de l'étudiant et le dictionnaire des notes, et renvoyer la moyenne.
+    
+\begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+    def moyenne(nom_etudiant, table_notes):
+        ''' Renvoie la moyenne de l'etudiant.
+        nom_etudiant : le nom de l'etudiant (str)
+        table_notes : un dictionnaire de dictionnaires representant les notes
+        '''
+
+
+
+
+
+
+
+
+
+
+
+    assert moyenne("Alice", notes) == 15.0
+    assert moyenne("Bob", notes) == 13.34
+    assert moyenne("Charlie", notes) == 18.67
+    \end{CodePythontexAlt}
+    \item Écrire une fonction qui renvoie le nom de l'étudiant ayant la meilleure moyenne générale. La fonction doit prendre en paramètre le dictionnaire des notes, et renvoyer le nom de l'étudiant avec la meilleure moyenne.
+    
+    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+    def meilleur_etudiant(table_notes):
+        ''' Renvoie le nom de l'etudiant ayant la meilleure moyenne.
+        table_notes : un dictionnaire de dictionnaires representant les notes
+        '''
+
+
+
+
+
+
+
+
+    assert meilleur_etudiant(notes) == "Charlie"
+    \end{CodePythontexAlt}
+
+    
+\end{enumerate}
+
+\end{document}
