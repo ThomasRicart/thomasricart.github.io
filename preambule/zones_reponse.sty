@@ -49,7 +49,7 @@
     outer arc=2pt,
     colback=gray!10,        % Fond gris identique à blocvisible
     colframe=black,         % Bordure noire
-    boxrule=0.5pt,          % Épaisseur de bordure identique
+    boxrule=1.2pt,          % Épaisseur de bordure identique
     left=2pt, right=2pt, top=1pt, bottom=1pt, % Marges internes réduites
     before upper=\strut     % Assure une hauteur constante
 }
@@ -95,3 +95,32 @@
 
 \usepackage{pifont}
 \usepackage{alterqcm}
+
+% 1. On définit un style commun pour éviter la répétition
+\tcbset{
+    monStyleBloc/.style={
+        enhanced,
+        breakable,
+        colback=white,
+        colframe=black!70,
+        listing only, % Indispensable pour que tcolorbox traite le contenu comme du code
+    }
+}
+
+% 2. Création de l'environnement avec \NewTCBListing
+% #1 = options de géométrie (ex: height=4cm)
+% #2 = contenu élève
+\NewTCBListing{blocvisiblexx}{ O{} m }{
+    monStyleBloc,
+    #1,
+    % Condition logique tcolorbox
+    code={
+        \ifdefstring{\visibleornot}{visible}{
+            % Mode PROF : on affiche le contenu du listing
+        }{
+            % Mode ÉLÈVE : on remplace le contenu par l'argument #2
+            \tcbset{listing engine=none, after upper={#2}, invisible}
+            % Note : 'invisible' cache le texte du listing mais garde le cadre
+        }
+    }
+}
