@@ -46,18 +46,18 @@
 %%%%%%%%%%%%%%%%%%%%%ùù Devoirs %%%%%%
 \newcounter{nexods}
 \setcounter{nexods}{0}
-\newcommand{\exods}[1]{
+\newcommand{\exods}[2]{
 \refstepcounter{nexods}
   \ifthenelse{#1 = 1}{%
     % Si le paramètre est égal à 1
-	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \hfill \fbox{\qquad\qquad \texttt{\textbf{/1 point}\;}}
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \quad #2 \hfill \fbox{\qquad\qquad \texttt{\textbf{/1 point}\;}}
   }{%
     \ifthenelse{#1 > 1}{%
       % Si le paramètre est égal à 2
-	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \hfill \fbox{\qquad\qquad \texttt{\textbf{/#1 points}}}
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \quad #2 \hfill \fbox{\qquad\qquad \texttt{\textbf{/#1 points}}}
     }{%
       % Sinon
-	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \par
+	\fbox{\textbf{\texttt{Exercice  \thenexods \, $\blacktriangleright$}}} \quad #2\par
     }%
   }%
   \rule{0.96\linewidth}{1pt}

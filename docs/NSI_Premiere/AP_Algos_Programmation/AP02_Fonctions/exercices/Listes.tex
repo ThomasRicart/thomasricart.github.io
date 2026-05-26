@@ -1,0 +1,179 @@
+\documentclass[11pt, a4paper]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Appel des packages dans le dossier preambule
+\def\packagepath{../../../../../preambule}   % path du package princial
+
+\usepackage{\packagepath/page_layout} % <--- Nouveau
+\usepackage{\packagepath/config_info}
+\usepackage{\packagepath/cadres_cours}
+\usepackage{\packagepath/zones_reponse}
+\usepackage{\packagepath/config_ds}
+\usepackage{\packagepath/config_maths}
+
+% --- PILOTAGE ---
+%\def\visibleornot{visible}    % visible or invisible
+\ifdefined\visibleornot\else\def\visibleornot{invisible}\fi
+
+
+\def\documentpath{./Sources_Latex}
+\graphicspath{{./Images/}}
+
+
+\def\ptsexoA{0}
+
+
+
+\begin{document}
+
+\def\level{Premiere}  % Classe à droite
+\def\course{Maths}
+\def\chaptername{Suites Arithmétiques} % Titre au centre
+\def\docname{\quad}        % Identifiant à gauche
+
+\pagestyle{DS_LP}
+
+\emph{Objectif: Modéliser une suite arithmétique et automatiser le calcul de ses termes à l'aide du langage Python}
+
+\subsubsection{Partie 1: Etude Mathématique}
+
+On considère une suite arithmétique $(u_n)$ de premier terme $u_0=-8$ et de raison $r=3$.
+
+\begin{enumerate}
+    \item Rappeler la relation de récurrence qui permet de passer d'un terme au suivant pour la suite $(u_n)$.
+    \item Calculer les 5 premiers termes de la suite $(u_n)$.
+    \item Donner une formule explicite pour le terme général $u_n$ de la suite
+    \item Calculer $u_{100}$ à l'aide de la formule explicite.
+\end{enumerate}
+
+\subsubsection{Partie 2: Utilisation d'un algorithme}
+
+\begin{easybox}[L'affectation en python]
+ 
+    Pour stocker une valeur, on utilise une \textbf{variable}. L'instruction suivante signifie \og{} mettre la valeur $-8$ dnas la variable nommée $u$ \fg{}.
+
+
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+        # Affectation de la valeur -8 à la variable u
+        u = -8
+        \end{CodePythontexAlt}
+
+        Il est possible de modifier la valeur d'une variable et de reaffecter cette nouvelle valeur à la même variable. L'ancienne valeur est alors écrasée.
+
+        
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+        # La variable u est remplacée par la valeur de u + 3
+        u = u + 3
+            
+    \end{CodePythontexAlt}
+\end{easybox}
+
+
+\begin{easybox}[Les listes en python]
+ 
+\begin{itemize}
+    \item La \textbf{liste}: c'est une structure de données qui permet de stocker plusieurs valeurs dans une même variable. Les éléments d'une liste sont ordonnés et peuvent être de types différents.
+
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=16cm,Centre,PremLigne=1]{}
+# Création d'une liste vide
+ma_liste = []
+
+# Création d'une liste avec des éléments
+ma_liste = [2, 5, 8, 11]
+
+# Ajout d'un élément à la fin de la liste
+ma_liste.append(14)
+# la liste devient [2, 5, 8, 11, 14]
+
+
+    \end{CodePythontexAlt}
+
+
+    \medskip
+
+    \item La \textbf{boucle for}: Pour répéter une action on utilise une boucle:
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=16cm,Centre,PremLigne=1]{}
+# la boucle est effectuée 10 fois (de 0 à 9)
+for i in range(10):
+    # affichage de la valeur de i à chaque itération
+    print(i)    
+
+\end{CodePythontexAlt}
+
+\end{itemize}
+
+
+\end{easybox}
+
+\pagebreak
+
+
+\begin{enumerate}
+    \item Compléter le code suivant afin qu'il génère les 5 premiers termes de la suite et les stocke dans une liste nommée \verb|liste_termes|.
+    
+
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+# Initialisation de la liste pour stocker les termes de la suite
+liste_termes = ............
+# Premier terme de la suite
+u = ............
+# Raison de la suite
+r = ............
+
+# Boucle pour calculer les 5 premiers termes de la suite
+for i in range(............):
+    # Ajouter le terme actuel à la liste des termes
+    ............
+    # Calculer le terme suivant en utilisant la relation de récurrence
+    ............
+
+print(liste_termes)  # Affiche les 5 premiers termes de la suite
+    \end{CodePythontexAlt}
+    
+    \medskip
+
+    \item Tester votre code en le recopiant dans un environnement Python.
+
+
+\item Vérifier que les termes affichés dans la console correspondent bien à ceux calculés à la partie 1.
+\end{enumerate}
+
+\subsubsection{Partie 3: Pour aller plus loin}
+
+\begin{easybox}[Utilisation des valeurs d'une liste]
+    Il est possible d'accéder à un élément d'une liste en utilisant son indice. L'indice du premier élément d'une liste est 0, celui du deuxième élément est 1, etc.    
+    \begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+# Création d'une liste de termes
+liste_termes = [-8, -5, -2, 1, 4]
+
+# Accès à l'élément d'indice 0 (le premier élément de la liste)
+print(liste_termes[0])  # Affiche -8
+
+# Accès à l'élément d'indice 2 (le troisième élément de la liste)
+print(liste_termes[2])  # Affiche -2
+    \end{CodePythontexAlt}
+    
+\end{easybox}
+\begin{enumerate}
+    \item En vous inspirant du code précédent, compléter votre code afin de calculer la somme des termes contenus dans la liste que vous venez de créer.
+
+\begin{CodePythontexAlt}[TaillePolice = \large, Largeur=17cm,Centre,PremLigne=1]{}
+# Initialisation de la variable pour stocker la somme
+somme = ............
+
+# Boucle pour parcourir les termes de la liste et les additionner
+for i in range(............):
+    # Ajouter le terme actuel à la somme
+    somme = ........................
+
+print(somme)  # Affiche la somme des termes de la suite
+\end{CodePythontexAlt}
+    
+\medskip
+
+\item Calculer la somme des 5 premiers termes de la suite à l'aide de la formule de la somme d'une suite arithmétique et vérifier que le résultat est le même que celui obtenu à l'aide du code python.
+\end{enumerate}
+\end{document}
