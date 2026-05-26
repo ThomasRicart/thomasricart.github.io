@@ -1,0 +1,90 @@
+% chktex-file 44 32 36 38 18 11 8 26
+
+
+\medskip
+
+\exods{0}
+%AN1J2 exo3
+
+\emph{Cet exercice porte sur les bases de données relationnelles et le langage SQL.}
+
+L’énoncé de cet exercice utilise les mots du langage SQL suivant :
+
+\verb|DELETE, FROM, INSERT INTO, JOIN, SELECT, SET, UPDATE, VALUES, WHERE.|
+
+\par 
+Les clés primaires seront soulignées et les clés étrangères seront précédées d’un \verb|#|.\par
+
+Le satellite GAIA a pour mission de cartographier un très grand nombre d’objets
+autour du Système Solaire. Régulièrement un catalogue est produit pour publier les
+données obtenues. Il est disponible sous différents formats dont par exemple sous forme
+de fichier \verb|csv|. \verb|Num_Objet| identifie chaque objet cartographié de manière unique.
+
+\begin{table}[h]
+\centering
+\includegraphics[width = 0.9\linewidth]{donnees_astro.png}
+\caption{Données Astronomiques sur les Systèmes Stellaires Proches}
+\label{tab:astronomie}
+\end{table}
+
+Pour manipuler plus facilement les données, un chercheur utilise un système de base de données relationnelle, dans lequel il crée le schéma relationnel de la table Gaia :
+
+\begin{verbatim}
+Gaia (
+    Num_Objet : Int, Num_Systeme : Int, Nom_Systeme : String, Type_Objet : String, 
+    Nom_Objet : String, Ascension_Droite : Real, Declinaison : Real, Parallaxe : Real, 
+    Nom_SIMBAD : String)
+\end{verbatim}
+
+\medskip
+
+\section*{PARTIE A}
+
+\medskip
+
+\begin{enumerate}[resume=monDS]
+    \item Justifier que l’attribut \verb|Num_Objet| peut être choisi comme clé primaire de la table \verb|Gaia|.
+\end{enumerate}
+
+Le type de l’objet ( \verb|Type_Objet| ) n’est pas une information directement compréhensible et le chercheur décide de créer une nouvelle table appelée \verb|Type|. La clé primaire est \verb|Type_Objet|.\par
+
+Soit la table \verb|Type| suivante :
+
+\begin{table}[h]
+\centering
+\includegraphics[width = 0.4\linewidth]{donnees2.png}
+\caption{Table Type}
+\label{tab:type}
+\end{table}
+
+\begin{enumerate}[resume=monDS]
+    \item Proposer le schéma relationnel de la table \verb|Type| en soulignant la clé primaire.
+\end{enumerate}
+
+Dans ce qui suit, la table \verb|Gaia| a été modifiée de manière à ce que le champ \verb|Type_Objet| soit une clé étrangère associée à la clé primaire de même nom de la table \verb|Type|.
+
+
+\medskip
+\thispagestyle{DS_LP}
+
+\section*{PARTIE B}
+
+\medskip
+
+\begin{enumerate}[resume=monDS]
+    \item Expliquer pourquoi le code SQL suivant ne fonctionne pas :
+    
+    \begin{verbatim}
+INSERT INTO Type VALUES ('BD', 'Trou Noir') ;
+    \end{verbatim}
+
+    \item Indiquer le résultat de la requête suivante exécutée sur l’extrait présenté :
+    
+    \begin{verbatim}
+SELECT Nom_Objet, Parallaxe FROM Gaia WHERE Type_Objet = 'Planet';    \end{verbatim}
+
+
+\item Écrire la requête qui permet de récupérer le nom du système, le nom de l’objet et le libellé du type pour des objets ayant une parallaxe supérieure à 400 millisecondes d’arc et étant des \verb|'Étoile'|.
+\item Le chercheur a besoin du nom, du libellé de leur type, de la déclinaison et de la parallaxe de tous les objets du système stellaire Alpha du Centaure ( \verb|'alf Cen'| ). Écrire la requête qui permet d’extraire ces informations de la base de données.
+
+\end{enumerate}
