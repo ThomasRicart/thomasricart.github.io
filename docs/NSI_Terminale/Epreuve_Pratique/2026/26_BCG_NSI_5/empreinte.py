@@ -9,6 +9,7 @@ def chargement_json(nom_fichier):
     with open(nom_fichier, "r", encoding="utf8") as curseur:
         return json.load(curseur)
 
+sortie = chargement_json('empreinte_ada_agr.json')
 
 def sauvegarde_json(dictionnaire, nom_fichier):
     """Sauvegarde le contenu d'un dictionnaire dans un fichier JSON"""
@@ -29,8 +30,16 @@ def est_dictionnaire(objet):
 def total_simple(empreinte):
     """Fonction qui renvoie l'empreinte carbone totale d'un dictionnaire associant
     une empreinte carbone à des noms de catégories"""
-    pass
+    total = 0
+    for cat in empreinte.keys():
+        total = total + empreinte[cat]
+    return total
 
+
+def test_total_simple():
+    dictionnaire_empreintes = chargement_json('empreinte_ada_agr.json')
+    total_empreinte = total_simple(dictionnaire_empreintes)
+    return total_empreinte
 
 ### Deuxième fonction : il faut la récursivité pour le cas des sous-catégories
 ### Cf fichier `empreinte_ada.json`
