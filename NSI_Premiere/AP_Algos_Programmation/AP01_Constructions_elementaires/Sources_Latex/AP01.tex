@@ -15,12 +15,15 @@
 
 \begin{minipage}{0.48\linewidth}
 	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1, Lignes=false,]{}
-    a = 10
+    x = 10
     \end{CodePythontexAlt}
 \end{minipage}\hfill{}
-\begin{minipage}{0.48\linewidth}
-\begin{scratch}
+\begin{minipage}{0.38\linewidth}
+    \begin{center}
+    \begin{scratch}
 \blocklook{Affecter à \selectmenu{x} la valeur \ovalnum{10}}\end{scratch}
+    \end{center}
+
 \end{minipage}
 \end{easybox}
 
@@ -41,7 +44,7 @@
     \hline
     Bonne variable & \verb+ma_variable+ \\ \hline
     Mauvaise variable & \verb+Ma_variable+,  \verb+ma variable+, \verb+1_variable+, \verb+ variable@+ \\ \hline
-    A éviter    & \verb+Variable non explicites+ \\ \hline
+    A éviter    & \verb+Variable non explicites+ (\verb|a|, \verb|x|, \verb|u| etc)\\ \hline
     \end{tabular}
 \end{exemple}
 
@@ -55,17 +58,20 @@
     \end{CodePythontexAlt}
 \end{minipage}\hfill{}
 \begin{minipage}{0.48\linewidth}
-\begin{scratch}
+        \begin{center}
+    \begin{scratch}
 \blocklook{Afficher la valeur de \selectmenu{x}}\end{scratch}
+    \end{center}
+
 \end{minipage}
 \end{easybox}
 
 \begin{easybox}{Les types de variables en Python}
 	\begin{itemize}
-		\item \textbf{int}: pour les nombres entiers (ex: 1, 42, -5)
-		\item \textbf{float}: pour les nombres à virgule flottante (ex: 3.14, -0.001)
-		\item \textbf{str}: pour les chaînes de caractères (ex: "Bonjour", 'Python')
-		\item \textbf{bool}: pour les valeurs booléennes (ex: True, False)
+		\item \textbf{int}: pour les nombres entiers (ex: $1$, $42$, $-5$)
+		\item \textbf{float}: pour les nombres à virgule flottante (ex: $3.14$, $-0.01$). La virgule est représentée par un point.
+		\item \textbf{str}: pour les chaînes de caractères (ex: \verb|"Bonjour"|, \verb|'Python'|)
+		\item \textbf{bool}: pour les valeurs booléennes (ex: \verb|True|, \verb|False|)
 	\end{itemize}
 \end{easybox}
 
@@ -102,15 +108,15 @@ b = False
 	\begin{minipage}{0.43\linewidth}
 		\begin{itemize}[]
         \item[] \texttt{+} \quad  addition:  \verb~5 + 3~ donne 8
-        \item[] \texttt{-} \quad  soustraction \verb~5 - 3~ donne 2
-        \item[] \texttt{*} \quad  multiplication \verb~5 * 3~ donne 15
-        \item[] \texttt{/} \quad  division \verb~6 / 2~ donne 3.0 (\texttt{float})
+        \item[] \texttt{-} \quad  soustraction: \verb~5 - 3~ donne 2
+        \item[] \texttt{*} \quad  multiplication: \verb~5 * 3~ donne 15
+        \item[] \texttt{/} \quad  division: \verb~6 / 2~ donne 3.0 (\texttt{float})
 \end{itemize}
 	\end{minipage}\hfill{}
 	\begin{minipage}{0.55\linewidth}
 \begin{itemize}[]
-        \item[] \texttt{**} \quad  puissance \verb~2 ** 3~ donne 8
-        \item[] \texttt{\%} \quad  reste de la division entière \texttt{7 \% 3} donne 1
+        \item[] \texttt{**} \quad  puissance: \verb~2 ** 3~ donne 8
+        \item[] \texttt{\%} \quad  reste de la division entière: \texttt{7 \% 3} donne 1
         \item[] \texttt{//} \quad  quotient de la division entière \texttt{7 // 3} donne 2
     \end{itemize}
 	\end{minipage}
@@ -198,7 +204,7 @@ b = False
 \begin{easybox}{indexation des chaines de caractères}{}
     
     \begin{minipage}{0.5\linewidth}
- Les chaines de caractères peuvent être vues comme un ensemble de caractères ``collés`` les uns aux autres
+ Les chaines de caractères peuvent être vues comme un ensemble de caractères \og{}collés\fg{} les uns aux autres
 
     Chaque caractère d'une chaine de caractères est indexé: 
     il y a un index qui donne sa position dans la chaine       
@@ -221,14 +227,14 @@ b = False
     
 
     \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[ Label=false]{}
+        \begin{ConsolePythontex}[Label=false]{}
             mot = 'Bonjour'
             mot[0]
             mot[4]
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}[t]{0.48\linewidth}
-        \begin{ConsolePythontex}[ Label=false]{}
+        \begin{ConsolePythontex}[Label=false]{}
 mot = 'Bonjour'
 n = len(mot)
 n
@@ -243,7 +249,7 @@ mot[-1]
     \begin{itemize}
         \item[] \texttt{+} \quad pour la concaténation:  \verb~'Bonjour' + ' a tous'~ donne \verb~'Bonjour a tous'~
         \item[] \texttt{*} \quad pour la répétition:  \verb~'Bonjour' * 3~ donne \verb~'BonjourBonjourBonjour'~
-        \item[] \texttt{[]} \quad pour l'indexation:  \verb~'Bonjour'[0]~ donne \verb~'B'~
+        \item[] \texttt{[ ]} \quad pour l'indexation:  \verb~'Bonjour'[0]~ donne \verb~'B'~
         \item[] \texttt{in} \quad pour le test d'appartenance:  \verb~'on' in 'Bonjour'~ donne \verb~True~
         \item[] \texttt{not in} \quad pour le test d'appartenance:  \verb~'on' not in 'Bonjour'~ donne \verb~False~
         \item[] \texttt{len()} \quad pour la longueur:  \verb~len('Bonjour')~ donne \verb~7~
@@ -276,9 +282,9 @@ mot[-1]
 \bigskip
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{p{2cm}|p{13cm}}
-        \texttt{[a:b]} & conserve les caractères d'indice \texttt{[a:b]}:  \verb~'Bonjour'[1:4]~ donne \verb~'onj'~ \\
-        \texttt{[a:]} & conserve les caractères d'indice \texttt{[a:]}:  \verb~'Bonjour'[3:]~ donne \verb~'jour'~ \\
-        \texttt{[:b]} & conserve les caractères d'indice \texttt{[:b]}:  \verb~'Bonjour'[:3]~ donne \verb~'Bon'~ \\
+        \texttt{[a:b]} & conserve les caractères d'indice \texttt{[a:b[}:  \verb~'Bonjour'[1:4]~ donne \verb~'onj'~ \\
+        \texttt{[a:]} & conserve les caractères d'indice \texttt{[a:fin]}:  \verb~'Bonjour'[3:]~ donne \verb~'jour'~ \\
+        \texttt{[:b]} & conserve les caractères d'indice \texttt{[debut:b[}:  \verb~'Bonjour'[:3]~ donne \verb~'Bon'~ \\
         \texttt{[::-1]} & inverse les caractères:  \verb~'Bonjour'[::-1]~ donne \verb~'ruojnoB'~ \\
         \texttt{[1:-1]} & élimine le premier et dernier caractère:  \verb~'Bonjour'[1:-1]~ donne \verb~'onjou'~ \\
     \end{tabular}
@@ -350,6 +356,14 @@ mot[-1]
 	\medskip
 
     \begin{minipage}{0.32\linewidth}
+         \begin{ConsolePythontex}[ Label=false]{}
+a = True
+c = not a
+c
+        \end{ConsolePythontex}
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
         \begin{ConsolePythontex}[ Label=false]{}
 a = True
 b = False
@@ -358,17 +372,11 @@ c
         \end{ConsolePythontex}
     \end{minipage}\hfill
     \begin{minipage}{0.32\linewidth}
+       
         \begin{ConsolePythontex}[ Label=false]{}
 a = True
 b = False
 c = a or b
-c
-        \end{ConsolePythontex}
-    \end{minipage}\hfill
-    \begin{minipage}{0.32\linewidth}
-        \begin{ConsolePythontex}[ Label=false]{}
-a = True
-c = not a
 c
         \end{ConsolePythontex}
     \end{minipage}    
