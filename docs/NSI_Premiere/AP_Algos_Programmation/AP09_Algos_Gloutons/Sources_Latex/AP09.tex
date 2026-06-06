@@ -12,12 +12,11 @@ Les \textbf{algorithmes gloutons} répondent à des problèmes d'optimisation. L
 
 \section{Problème de rendu de monnaie}
 
-L'exemple classique d'application d'un algorithme glouton est le problème du \textbf{rendu de monnaie}. L'objectif est, à partir d'un système de monnaie, de trouver comment rendre une somme de façon optimale, c'est-à-dire avec le moins de pièces et de billets possible.
-
+L'exemple classique d'application d'un algorithme glouton est le problème du \textbf{rendu de monnaie}. L'objectif est de rendre une somme en un nombre de pièces minimal.
 \medskip
 
-\begin{exemple}[]{}
-On considère une système monétaire \verb+SYSTEME = [500, 200, 100, 50, 20, 10, 5, 2, 1]+. La question est de savoir comment rendre une somme particulière. Dans un premier temps, on renverra une liste des billets ou pièces à rendre. On peut de façon naïve déployer cet algorithme:
+\begin{exemple}[Problème du rendu de monnaie]{}
+On considère une système \verb+SYSTEME = [500, 200, 100, 50, 20, 10, 5, 2, 1]+. 
 
 \begin{enumerate}
 	\item Tant que la somme à rendre est supérieure à 0
@@ -36,14 +35,14 @@ On considère une système monétaire \verb+SYSTEME = [500, 200, 100, 50, 20, 10
 	\item Implémenter cette fonction en python
 	
 	
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 def rendre_monnaie1(systeme:list, somme:int)->list:
     ''' Renvoie la liste des pièces à rendre '''
     i = 0					# Indice de la pièce actuelle
     choix = []				# Liste de choix
-    while somme > 0:
-        if somme >= SYSTEME[i]:
-            somme -= SYSTEME[i]
+    while ............:
+        if somme >= ............:
+            somme -= ............
             ...
         else:
             ...
@@ -75,11 +74,11 @@ assert rendre_monnaie1(SYSTEME, 674) == [500, 100, 50, 20, 2, 2]
 
 \end{tabular}
 
-\item Modifier cet algorithme en prenant un système sous forme de dictionnaire. Chaque clé du dictionnaire correspond à une pièce ou un billet et la valeur associée correspond au nombre de pièces ou de billets disponibles.
+\item Modifier cet algorithme en prenant un système sous forme d'une liste de liste. Chaque sous liste comporte deux éléments: La valeur de la pièce et le nombre de pièces disponibles.
 
-Par exemple: \verb+SYSTEME2 = {500: 1, 200: 1, 100: 1, 50: 2, 20: 2, 10: 2, 5: 3, 2: 6, 1: 4}+
+Ex: \verb+SYSTEME2 = [[500,1], [200,1], [100,1], [50,2], [20,2], [10,2], [5,3], [2,6], [1,4]]+
 
-Attention, il faudra vérifier que le système permet de rendre la somme à rendre
+Attention, il faudra vérifier que le système permet de rendre la somme à rendre.
 
 \end{enumerate}
 \end{exercice_cours}

@@ -11,12 +11,9 @@ Abrégé en \textbf{KNN} (K-nearest neighbors), cet algorithme cherche à prédi
 \end{definition}
 
 
-\begin{exemple}[]{}
-
 
 Par exemple, imaginons qu'un pixel soit manquant dans une image. L'algorithme va prédire la couleur de ce pixel en fonction de la couleur des pixels voisins.
 
-\end{exemple}
 
 
 L'algorithme KNN est un algorithme d'\textbf{apprentissage} (Machine Learning) supervisé. C'est-à-dire qu'à partir d'un ensemble des données étiquetées, il va pouvoir prédire l'étiquette d'une donnée inconnue.
@@ -37,14 +34,20 @@ Tout d'abord, il nous faut avoir un ensemble de données d'apprentissage. Chaque
 
 Nous avons un individu non identifié, c'est à dire de \textbf{classe inconnue}, dont on possède cependant les caractéristiques. L'objectif est de classifier cet individu en regardant ses k plus proches voisins.
 
-\section{Exemple} 
 
+\begin{minipage}{0.48\linewidth}
+	\section{Exemple} 
 
-Voici la représentation de deux classes: les carrés et les disques. En représentant leurs caractéristiques graphiquement, on obtient la répartition ci-dessous. Un individus de classe inconnue possédant ces mêmes caractéristiques, est représenté par le triangle.
+	Voici la représentation de deux classes: les carrés et les disques. En représentant leurs caractéristiques graphiquement, on obtient la répartition ci-dessous. Un individus de classe inconnue possédant ces mêmes caractéristiques, est représenté par le triangle.
+
+\end{minipage}\hfill{}
+\begin{minipage}{0.48\linewidth}
 
 \begin{center}
 \includegraphics[scale=1.6]{knn_ex_perso.jpg}
 \end{center}
+\end{minipage}
+
 \medskip
 
 

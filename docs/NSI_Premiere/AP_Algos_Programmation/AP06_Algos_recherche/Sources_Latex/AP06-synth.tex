@@ -7,25 +7,21 @@
 \makeheader{} % Affiche le bandeau
 
 
-\begin{definition}[Notion de complexité d'un algorithme]{}
 
-	\begin{minipage}{0.63\linewidth}
-			La complexité s'exprime en utilisant la notation \textbf{O} (grand O) et se déterminer en fonction de la taille de l'entrée du problème. On se place toujours dans le \textbf{pire des cas}
-
-	\end{minipage}\hfill
-	\begin{minipage}{0.35\linewidth}
-			\includegraphics[width = 0.95\linewidth]{classes-de-complexité.jpg}
-
-	\end{minipage}
-
-\end{definition}
-
-
+	\begin{minipage}{0.5\linewidth}
 \begin{definition}[Notion de terminaison d'un algorithme]{}
 	Un algorithme est dit \textbf{terminant} s'il s'arrête après un nombre fini d'étapes pour toute entrée donnée. 	
 
 La condition d'arrêt est appelée \textbf{variant de boucle}.	
-\end{definition}
+
+	\end{definition}
+
+	\end{minipage}\hfill
+	\begin{minipage}{0.49\linewidth}
+			\includegraphics[width = 0.99\linewidth]{Figure_1.png}
+
+	\end{minipage}
+
 
 \begin{definition}[Le variant de boucle]{}
 	Un \textbf{variant de boucle} est une quantité qui est modifiée à chaque itération d'une boucle et qui permet de garantir la terminaison de l'algorithme. Pour qu'un variant de boucle soit efficace, il doit être:
@@ -45,10 +41,10 @@ La condition d'arrêt est appelée \textbf{variant de boucle}.
 \begin{definition}[Algorithme dichotomique]{}
 	
 \begin{minipage}{0.39\linewidth}
-	\includegraphics[width = 1\linewidth]{Binary_search_into_array}
+	\includegraphics[width = 1\linewidth]{05230_chap07_03.png}
 \end{minipage}\hfill
 \begin{minipage}{0.59\linewidth}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 			def recherche_dichotomique(val, L):	
 			i_deb = 0
 				i_fin = len(L) - 1
