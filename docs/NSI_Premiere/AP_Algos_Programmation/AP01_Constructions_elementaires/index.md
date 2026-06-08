@@ -6,6 +6,7 @@ Introduction aux bases du langage Python : variables, types de données et logiq
 
 ---
 
+
 ## 📂 Ressources du Chapitre
 
 Accédez ici à l'ensemble des documents de cours et aux outils de révision interactive.

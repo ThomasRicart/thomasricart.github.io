@@ -15,7 +15,7 @@
 \usepackage{\packagepath/config_maths}
 
 % --- PILOTAGE ---
-%\def\visibleornot{visible}    % visible or invisible
+%\def\visibleornot{invisible}    % visible or invisible
 \ifdefined\visibleornot\else\def\visibleornot{visible}\fi
 
 
@@ -62,40 +62,19 @@
     \reponseLigne[0.8\linewidth]{\texttt{L[left:right] est triée et contient x si x est présent}}
     \item Quelle est la complexité de cet algorithme? \hfill\reponseLigne[3cm]{$O(\log n)$}  
 
+    \item Combien de valeurs sont examinees lors d’un appel à 
+    
+    \verb|recherche_dichotomique|([1, 3, 4, 6, 9, 12, 14, 15],9)| et quelle est la valeur renvoyée ?
+    
+            \reponseLigne[0.8\linewidth]{}
 
-    \end{enumerate}
+    \item Même question pour \verb|recherche_dichotomique([1, 3, 4, 6, 9, 12, 14, 15], 7)|.
+
+            \reponseLigne[0.8\linewidth]{}
+
+\end{enumerate}
 
 \end{exercice_cours}
-
-\begin{exercice_cours}[On considère le code suivant: ]{}
-    
-    \begin{enumerate}
-\begin{minipage}{0.75\linewidth}
-        \item Quel est le variant de boucle? \hfill\reponseLigne[3cm]{\texttt{n - i}}
-        \item Justifier que la boucle termine. \hfill
-        
-        \begin{blocvisible}[height=1.5]
-            A chaque itération, i est augmenté de 2, donc i finit par dépasser n.
-        \end{blocvisible}
-        \item Quelle est la complexité de cet algorithme? \hfill\reponseLigne[3cm]{\texttt{O(n)}}
-        \item Qu'affiche ce code si \texttt{L = [10, 20, 30, 40, 50]}? \hfill\reponseLigne[3cm]{\texttt{10, 30, 50}}
-    
-    \end{minipage}\hfill{}
-    \begin{minipage}{0.24\linewidth}
-        \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
-    i = 0
-    n = len(L)
-    while i < n:
-        print(L[i])
-        i += 2
-    \end{CodePythontexAlt}
-\end{minipage}
-
-    \end{enumerate} 
-
-       
-\end{exercice_cours}
-
 
 
 \begin{minipage}{0.48\linewidth}
@@ -108,7 +87,6 @@
 
     \end{minipage}\hfill
     \begin{minipage}{0.48\linewidth}
-\begin{blocvisible}[height=4]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 def recherche(elt, L):
     for x in L:
@@ -117,7 +95,6 @@ def recherche(elt, L):
         else:
             return False
     \end{CodePythontexAlt}
-\end{blocvisible}
     \end{minipage}
 
 
@@ -129,13 +106,11 @@ def recherche(elt, L):
 
     \end{minipage}\hfill
     \begin{minipage}{0.48\linewidth}
-\begin{blocvisible}[height=3.]
     \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=true,PremLigne=1]{}
 i = 10
 while i > 0:
     print(i)
     \end{CodePythontexAlt}
-\end{blocvisible}
     \end{minipage}
 
     
