@@ -41,7 +41,7 @@
 \begin{exercice_cours}[Indiquer ce qui est affiché par les instructions suivantes:
 ]{}
     
-\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 dico = {'nom': 'Dupont', 'age': 30, 'ville': 'Paris', 'enfants': ['Alice', 'Bob']}
 \end{CodePythontexAlt}
 
@@ -73,7 +73,7 @@ dico = {'nom': 'Dupont', 'age': 30, 'ville': 'Paris', 'enfants': ['Alice', 'Bob'
 
 \begin{exercice_cours}[On considère le dictionnaire suivant: ]{}
     
-    \begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+    \begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 dico = {'a': 1, 'b': 2, 'c': 3}
 \end{CodePythontexAlt}
 
@@ -90,7 +90,7 @@ Ecrire les instructions permettant
 
 \begin{exercice_cours}[On considère la liste suivante: ]{}
     
-\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 L = ['Alice', 'Bob', 'Charlie', 'David']
 \end{CodePythontexAlt}
 
@@ -101,7 +101,7 @@ Ecrire une fonction \verb|longueur_mot(L)| qui renvoie un dictionnaire dont:
 \end{itemize}
 
 
-        \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
     def longueur_mot(L):
         
     
@@ -123,7 +123,7 @@ Ecrire une fonction \verb|longueur_mot(L)| qui renvoie un dictionnaire dont:
     
 Dans cet exercice, on gère une petite guilde de guerriers. Le dictionnaire guilde contient le nom des joueurs en clés et leur niveau en valeurs.
 
-\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,Lignes=false,PremLigne=1]{}
 guilde = {
     "Aethelgard": 42,
     "Slythe": 15,
@@ -136,7 +136,7 @@ guilde = {
 \begin{enumerate}
     \item Ecrire une fonction \verb|liste_de_noms(guilde)| qui renvoie la liste des noms des joueurs. \hfill
     
-    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false]{}
+    \begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,Lignes=false]{}
 def liste_de_noms(guilde):
 
 
@@ -152,7 +152,7 @@ assert liste_de_noms(guilde) == ["Aethelgard", "Slythe", "Valeria",
 
     \item Ecrire une fonction \verb|niveau_moyen(guilde)| qui renvoie le niveau moyen des joueurs de la guilde. \hfill
 
-    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false]{}
+    \begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,Lignes=false]{}
 def niveau_moyen(guilde):
 
 
@@ -166,7 +166,7 @@ assert niveau_moyen(guilde) == 26.0
 
 \item Ecrire une fonction \verb|listes_elite(guilde)| qui renvoie un dictionnaire contenant uniquement les joueurs de niveau supérieur ou égal à 30. \hfill
 
-    \begin{CodePythontexAlt}[TaillePolice=\large, Largeur=1\linewidth,Centre,Lignes=false]{}
+    \begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,Lignes=false]{}
 def listes_elite(guilde):
 
 

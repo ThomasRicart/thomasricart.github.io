@@ -12,28 +12,25 @@
 	\begin{easybox}{La boucle FOR en python}
 
 				\begin{minipage}[b]{0.33\linewidth}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 for i in range(0, 7):
 	print(i, end=" ")
-# affichage: 
 # 0 1 2 3 4 5 6
 	
 				\end{CodePythontexAlt}
 		\end{minipage}\hfill
 		\begin{minipage}[b]{0.33\linewidth}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 for i in range(2, 7):
 	print(i, end=" ")
-# affichage: 
 # 2 3 4 5 6
 					
 				\end{CodePythontexAlt}
 		\end{minipage}\hfill
 		 \begin{minipage}[b]{0.33\linewidth}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1,Lignes=false,]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 for i in range(5):
 	print(i, end=" ")
-# affichage: 
 # 0 1 2 3 4
 	
 				\end{CodePythontexAlt}
@@ -43,7 +40,7 @@ for i in range(5):
 	\begin{easybox}{Itération sur une chaine de caractères}{}
 	
 	\begin{minipage}{0.48\linewidth}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1]{}
 	mot = 'Hello'
 	for i in range(0, len(mot)):
 		print(mot[i])
@@ -51,7 +48,7 @@ for i in range(5):
 	\end{CodePythontexAlt}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1]{}
 	mot = 'Hello'
 	for lettre in mot:
 		print(lettre)	
@@ -65,7 +62,7 @@ for i in range(5):
 	\begin{easybox}{Algorithmes de Recherche dans un itérable}
 	
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 				def est_present(mot, lettre_cherchee):
 					for lettre in mot:
 						if lettre == lettre_cherchee:
@@ -75,7 +72,7 @@ for i in range(5):
 		
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 				def est_present(mot, lettre_cherchee):
 					for i in range(len(mot)):
 						if mot[i] == lettre_cherchee:
@@ -90,7 +87,7 @@ for i in range(5):
 	\begin{easybox}{Algorithmes de comptage dans un itérable}
 		
 		\begin{minipage}{0.48\linewidth}
-			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+			\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 			def compte(mot, lettre_cherchee):
 				c = 0
 				for lettre in mot:
@@ -102,7 +99,7 @@ for i in range(5):
 	
 		\end{minipage}\hfill
 		\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 			def compte(mot, lettre_cherchee):
 				c = 0
 				for i in range(len(mot)):
@@ -118,7 +115,7 @@ for i in range(5):
 	\end{easybox}
 
 	\begin{easybox}{Algorithmes de somme}
-			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
+			\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 			def somme(n):
 				''' Renvoie la somme des entiers de 1 à n inclus'''
 				s = 0
@@ -133,14 +130,14 @@ for i in range(5):
 
 
 		%\section{La boucle WHILE}
-
+\pagebreak
 
 		\begin{easybox}{Prototypage de la boucle WHILE en python}
 	\verb|condition1| est un booléen qui est évalué à chaque tour de boucle.  Tant que \verb|condition1| \verb|True|, on effectue les instructions de la boucle. Lorsque \verb|condition1| devient \verb|False|, on sort de la boucle.
 
 	
 	\begin{minipage}{0.48\linewidth}
-			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+			\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1]{}
 			n = 0
 			u = 1
 			while u < 1000:
@@ -152,7 +149,7 @@ for i in range(5):
 				
 		\end{minipage}\hfill
 		\begin{minipage}{0.48\linewidth}
-			\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+			\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1]{}
 			mot = 'abracadabra'
 			c = 0
 			trouve = False

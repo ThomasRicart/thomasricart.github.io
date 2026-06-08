@@ -22,7 +22,7 @@ Elément & \verb|T[0]| & \verb|T[1]| & \verb|T[2]| & \verb|T[3]| & \verb|T[4]| &
 
 	\begin{minipage}{0.48\linewidth}
 \begin{easybox}{Accéder aux éléments d'une liste}{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 print(ma_liste[0]) 	# Affiche: 1
 print(ma_liste[2])  # Affiche: 3
@@ -32,10 +32,10 @@ print(len(ma_liste))  # Affiche: 5
 \end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
 		\begin{easybox}{Modifier les éléments d'une liste}{}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [1, 2, 3]
 ma_liste[0] = 10 
-print(ma_liste) 	# Affiche: [10, 2, 3]
+print(ma_liste) # Affiche: [10, 2, 3]
 print(len(ma_liste))  # Affiche: 3
 		\end{CodePythontexAlt}
 	\end{easybox}
@@ -46,14 +46,14 @@ print(len(ma_liste))  # Affiche: 3
 
 
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [4, 8, 7, 9, 4]
 for i in range(0, len(ma_liste)):
 	print(ma_liste[i])
 		\end{CodePythontexAlt}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [4, 8, 7, 9, 4]
 for elt in ma_liste:
 	print(elt)
@@ -63,7 +63,7 @@ for elt in ma_liste:
 
 \begin{minipage}{0.48\linewidth}
 \begin{easybox}[Sommes des éléments d'une liste]{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 def somme(liste):
 	somme = 0
 	for elt in liste:
@@ -75,12 +75,12 @@ def somme(liste):
 \end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
 		\begin{easybox}{Recherche de maximum dans une liste}{}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 def maximum(liste):
 	maximum = liste[0]
-	for elt in liste:
-		if elt > maximum:
-			maximum = elt
+	for i in range(1, len(liste)):
+		if liste[i] > maximum:
+			maximum = liste[i]
 	return maximum
 \end{CodePythontexAlt}
 	\end{easybox}
@@ -88,7 +88,7 @@ def maximum(liste):
 
 	\begin{minipage}{0.48\linewidth}
 \begin{easybox}[Recherche présence d'un élément dans une liste]{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 def est_present(elt, liste):
 	for e in liste:
 		if e == elt:
@@ -99,7 +99,7 @@ def est_present(elt, liste):
 \end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
 \begin{easybox}[Vérification liste triée]{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 def est_triee(liste):
 	for i in range(0, len(liste)-1):
 		if liste[i] > liste[i+1]:
@@ -111,12 +111,11 @@ def est_triee(liste):
 			
 \begin{easybox}{Liste de listes}{}
 
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [[1, 2, 3], [4, 5], [7, 8, 9, 10]]
 print(len(ma_liste))	# Affiche: 3
 print(len(ma_liste[1])) # Affiche: 2
 print(ma_liste[0]) 		# Affiche: [1, 2, 3]
-print(ma_liste[1])		# Affiche: [4, 5]
 print(ma_liste[2])		# Affiche: [7, 8, 9, 10]
 print(ma_liste[0][1]) 	# Affiche: 2
 print(ma_liste[1][1]) 	# Affiche: 5
@@ -129,9 +128,9 @@ print(ma_liste[2][0]) 	# Affiche: 7
 
 \pagebreak
 
-\begin{minipage}{0.47\linewidth}
-\begin{easybox}[Sommes des éléments d'une liste de listes]{}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+\begin{minipage}{0.44\linewidth}
+\begin{easybox}[Sommes dans une liste de listes]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 def somme(matrice):
 	somme = 0
 	for liste in matrice:
@@ -142,9 +141,9 @@ def somme(matrice):
 		\end{CodePythontexAlt}
 \end{easybox}
 \end{minipage}\hfill
-	\begin{minipage}{0.51\linewidth}
+	\begin{minipage}{0.55\linewidth}
 		\begin{easybox}{Recherche de maximum liste de listes}{}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 def maximum(matrice):
 	maximum = matrice[0][0]
 	for i in range(0, len(matrice)):
@@ -168,7 +167,7 @@ def maximum(matrice):
 
 	\end{minipage}\hfill
 	\begin{minipage}{0.35\linewidth}
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 ma_liste.append(6)
 a = ma_liste.pop()
@@ -180,23 +179,19 @@ b = ma_liste.pop(2)
 \begin{easybox}{Créer une liste par itération}{}
 
 \begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = []
 for i in range(0, 5):
 	ma_liste.append(i)
-
-print(ma_liste)		
-# Affiche: [0, 1, 2, 3, 4]
+print(ma_liste)	# [0, 1, 2, 3, 4]
 		\end{CodePythontexAlt}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = []
 for i in range(0, 5):
 	ma_liste = [i] + ma_liste
-
-print(ma_liste)
-# Affiche: [4, 3, 2, 1, 0]
+print(ma_liste) # [4, 3, 2, 1, 0]
 		
 		\end{CodePythontexAlt}
 	\end{minipage}
@@ -204,10 +199,9 @@ print(ma_liste)
 
 \begin{easybox}{Créer une liste par compréhension}{}
 
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [i for i in range(0, 5)]
-print(ma_liste)
-# Affiche: [0, 1, 2, 3, 4]
+print(ma_liste) # Affiche: [0, 1, 2, 3, 4]
 		\end{CodePythontexAlt}
 		\end{easybox}
 
@@ -223,10 +217,10 @@ print(ma_liste)
 \begin{easybox}{Le slicing}{}
 	Le slicing permet de créer une nouvelle liste à partir d'une liste existante en sélectionnant une portion de cette liste.
 
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 print(ma_liste[1:4])	# Affiche: [2, 3, 4]
-print(ma_liste[:3])		# Affiche: [1, 2, 3]
+print(ma_liste[:3])	 # Affiche: [1, 2, 3]
 print(ma_liste[2:4])	# Affiche: [3, 4]
 		\end{CodePythontexAlt}
 \end{easybox}

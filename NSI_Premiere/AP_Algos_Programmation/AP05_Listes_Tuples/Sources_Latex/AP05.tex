@@ -34,19 +34,19 @@ Elément & \verb|T[0]| & \verb|T[1]| & \verb|T[2]| & \verb|T[3]| & \verb|T[4]| &
 \end{definition}
 \begin{easybox}{Créer une liste}{}
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 ma_liste = [1, 2, 3, 4, 5]
 		\end{CodePythontexAlt}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 ma_liste = ['a', 'b', 'c']
 		\end{CodePythontexAlt}
 	\end{minipage}
 
 	\smallskip
 
-		\begin{ConsolePythontex}[Label=false]{}
+\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 print(type(ma_liste))		# Une liste est de type 'list'
 		\end{ConsolePythontex}
@@ -58,14 +58,14 @@ print(type(ma_liste))		# Une liste est de type 'list'
 	\smallskip
 
 	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
+		\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 print(ma_liste[0]) 
 print(ma_liste[2]) 
 		\end{ConsolePythontex}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
+		\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 print(ma_liste[-1]) 
 print(ma_liste[-2])
@@ -77,14 +77,14 @@ print(ma_liste[-2])
 		Les éléments d'une liste peuvent être modifiés en utilisant leur indice.
 
 	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
+		\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 ma_liste[0] = 10
 print(ma_liste)
 		\end{ConsolePythontex}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
+		\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 ma_liste[4] = 20
 print(ma_liste)
@@ -96,13 +96,13 @@ print(ma_liste)
 	Pour connaitre le nombre d'éléments d'une liste, on utilise la fonction \verb|len()|.
 
 	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
+		\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 print(len(ma_liste))
 		\end{ConsolePythontex}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
+		\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = ['a', 'b', 'c']
 print(len(ma_liste))
 		\end{ConsolePythontex}
@@ -115,30 +115,27 @@ print(len(ma_liste))
 		\item Créer la liste suivante: \verb|[4, 8, 7, 9, 4]|
 		\item Afficher le nombre d'éléments de cette liste. (\emph{affiche 5})
 		\item Afficher le troisième élément de cette liste. (\emph{affiche 7})
-		\item Modifier le deuxième élément de cette liste pour qu'il soit égal à 10
-		\item Afficher la liste modifiée. (\emph{affiche [4, 10, 7, 9, 4]})
-		\item Modifier le dernier élément de cette liste pour qu'il soit égal à 5
-		\item Afficher la liste modifiée. (\emph{affiche [4, 10, 7, 9, 5]})
-		\item Modifier le premier éléments de la liste en le remplaçant par la somme du premier et du troisième élément de cette liste
-		\item Afficher la liste modifiée. (\emph{affiche [11, 10, 7, 9, 5]})
+		\item Modifier le deuxième élément de cette liste pour qu'il soit égal à 10. (\emph{affiche [4, 10, 7, 9, 4]})
+		\item Modifier le dernier élément de cette liste pour qu'il soit égal à 5. (\emph{affiche [4, 10, 7, 9, 5]})
+		\item Modifier le premier éléments de la liste en le remplaçant par la somme du premier et du troisième élément de cette liste. (\emph{affiche [11, 10, 7, 9, 5]})
 
 	\end{enumerate}
 \end{exercice_cours}
 
 \begin{easybox}{Itérer sur une liste avec une boucle FOR}{}
 
-	Comme pour les chaines de caractères, il est possible d'itérer sur les éléments d'une liste à l'aide d'une boucle \verb|FOR|.	
+	Comme pour les chaines de caractères, On peut itérer sur les éléments d'une liste à l'aide d'une boucle \verb|FOR|.	
 
 	\smallskip
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 ma_liste = [4, 8, 7, 9, 4]
 for i in range(0, len(ma_liste)):
 	print(ma_liste[i])
 		\end{CodePythontexAlt}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 ma_liste = [4, 8, 7, 9, 4]
 for elt in ma_liste:
 	print(elt)
@@ -151,7 +148,7 @@ for elt in ma_liste:
 	\begin{enumerate}
 		\item Ecrire une fonction \texttt{somme(liste)} qui renvoie la somme des éléments d'une liste de nombres.
 		
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def somme(liste):
 					''' Renvoie la somme des éléments de liste'''
 
@@ -161,13 +158,13 @@ for elt in ma_liste:
 
 
 
-					#
+				
 				assert somme([1, 2, 3, 4, 5]) == 15
 				assert somme([4, 8, 7, 9, 4]) == 32
 				\end{CodePythontexAlt}
 
 		\item Ecrire une fonction \texttt{maximum(liste)} qui renvoie le maximum des éléments d'une liste de nombres.
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def maximum(liste):
 					''' Renvoie le maximum des éléments de liste'''
 
@@ -179,14 +176,16 @@ for elt in ma_liste:
 
 
 
-					#
+				
+
+
 				assert maximum([1, 2, 3, 4, 5]) == 5
 				assert maximum([4, 8, 7, 9, 4]) == 9
 				\end{CodePythontexAlt}
 		\pagebreak
 
 		\item Ecrire une fonction \texttt{est\_present(elt,liste)} qui renvoie \texttt{True} si l'élément \texttt{elt} est présent dans la liste \texttt{liste}, et \texttt{False} sinon.
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def est_present(elt, liste):
 					''' Renvoie True si elt est dans liste et False sinon'''	
 
@@ -198,7 +197,7 @@ for elt in ma_liste:
 
 
 
-					#
+				
 				assert est_present(3, [1, 2, 3, 4, 5]) == True
 				assert est_present(6, [1, 2, 3, 4, 5]) == False
 				\end{CodePythontexAlt}
@@ -209,7 +208,7 @@ for elt in ma_liste:
 \begin{easybox}{Liste de listes}{}
 	Une liste peut contenir des éléments qui sont eux-mêmes des listes. On parle alors de liste de listes.
 
-		\begin{ConsolePythontex}[Label=false]{}
+\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [[1, 2, 3], [4, 5], [7, 8, 9, 10]]
 print(len(ma_liste))
 print(len(ma_liste[1]))
@@ -247,7 +246,7 @@ print(ma_liste[2][0])
 	\begin{enumerate}
 		\item Ecrire une fonction \texttt{somme\_liste\_de\_listes(liste)} qui renvoie la somme des éléments d'une liste de listes de nombres.
 		
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def somme_liste_de_listes(liste):
 					''' Renvoie la somme des éléments de liste'''
 
@@ -257,14 +256,12 @@ print(ma_liste[2][0])
 
 
 
-
-
-					#
+				
 				assert somme_liste_de_listes([[1, 2], [3, 4], [5, 6]]) == 21
 				\end{CodePythontexAlt}
 
 		\item Ecrire une fonction \texttt{maximum\_sous\_liste(liste)} qui renvoie la sous liste dont la somme des éléments est maximale.
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def maximum_sous_liste(liste):
 					''' Renvoie la sous liste dont la somme des éléments est max'''
 
@@ -276,8 +273,6 @@ print(ma_liste[2][0])
 
 
 
-
-					#
 				assert maximum_sous_liste([[3, 4, 16], [5, 6, 1, 8]]) == [3, 4, 16]
 				\end{CodePythontexAlt}
 	\end{enumerate}
@@ -291,7 +286,7 @@ print(ma_liste[2][0])
 \item \verb|pop(i)|: supprime et renvoie l'élément d'indice \verb|i| de la liste
 \end{itemize}
 
-\begin{ConsolePythontex}[Label=false]{}
+\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 ma_liste.append(6)
 print(ma_liste)
@@ -309,23 +304,19 @@ print(ma_liste)
 \begin{easybox}{Créer une liste par itération}{}
 
 \begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true,]{}
 ma_liste = []
 for i in range(0, 5):
 	ma_liste.append(i)
-
-print(ma_liste)		
-# Affiche: [0, 1, 2, 3, 4]
+print(ma_liste)	# [0, 1, 2, 3, 4]
 		\end{CodePythontexAlt}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1]{}
 ma_liste = []
 for i in range(0, 5):
 	ma_liste = [i] + ma_liste
-
-print(ma_liste)
-# Affiche: [4, 3, 2, 1, 0]
+print(ma_liste) # [4, 3, 2, 1, 0]
 		
 		\end{CodePythontexAlt}
 	\end{minipage}
@@ -333,10 +324,9 @@ print(ma_liste)
 
 \begin{easybox}{Créer une liste par compréhension}{}
 
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1]{}
 ma_liste = [i for i in range(0, 5)]
-print(ma_liste)
-# Affiche: [0, 1, 2, 3, 4]
+print(ma_liste)		# Affiche: [0, 1, 2, 3, 4]
 		\end{CodePythontexAlt}
 		\end{easybox}
 
@@ -344,7 +334,7 @@ print(ma_liste)
 
 	\begin{enumerate}
 		\item Ecrire une fonction \texttt{puissance\_2(n)} qui renvoie une liste contenant les puissances de 2 de 0 à n inclus.
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def puissance_2(n):
 					''' Renvoie une liste contenant les puissances de 2 de 0 à n '''
 
@@ -363,7 +353,7 @@ print(ma_liste)
 				\end{CodePythontexAlt}
 
 		\item Ecrire une fonction \texttt{est\_pair(liste)} qui renvoie une liste contenant les éléments de liste qui sont pairs.
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def est_pair(liste):
 					''' Renvoie une liste contenant les éléments pairs'''
 
@@ -386,7 +376,7 @@ print(ma_liste)
 
 		\item Ecrire une fonction \texttt{supprime\_element(liste, element)} qui supprime les éléments d'une liste en partant du dernier jusqu'à l'obtention du premier \verb|0|.
 		
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false,]{}
 				def supprime_element(liste):
 					''' Supprime les éléments de liste en partant du dernier 
 					jusqu'à l'obtention du premier 0'''
@@ -405,9 +395,22 @@ print(ma_liste)
 				\end{CodePythontexAlt}
 
 \item Ecrire une fonction \texttt{est\_triee(liste)} qui renvoie \texttt{True} si la liste \texttt{liste} est triée dans l'ordre croissant, et \texttt{False} sinon.
-					\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
-					assert est_triee([1, 2, 3, 4, 5]) == True
-					assert est_triee([5, 4, 3, 2, 1]) == False
+					\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+def est_triee(liste):
+	''' Renvoie True si liste est triée dans l'ordre croissant et False sinon'''
+
+
+
+
+
+
+
+
+
+					
+					
+assert est_triee([1, 2, 3, 4, 5]) == True
+assert est_triee([5, 4, 3, 2, 1]) == False
 					\end{CodePythontexAlt}
 					
 	\end{enumerate}
@@ -419,7 +422,7 @@ print(ma_liste)
 		\item La fonction \verb|random.shuffle(liste)| permet de mélanger les éléments d'une liste de manière aléatoire.
 	\end{itemize}
 
-	\begin{ConsolePythontex}[Label=false]{}
+\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 import random
 ma_liste = [1, 2, 3, 4, 5]
 print(random.choice(ma_liste))
@@ -432,7 +435,7 @@ print(ma_liste)
 \begin{easybox}{Le slicing}{}
 	Le slicing permet de créer une nouvelle liste à partir d'une liste existante en sélectionnant une portion de cette liste.
 
-	\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}
+	\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1]{}
 ma_liste = [1, 2, 3, 4, 5]
 print(ma_liste[1:4])
 # Affiche: [2, 3, 4]
@@ -443,7 +446,6 @@ print(ma_liste[2:])
 		\end{CodePythontexAlt}
 \end{easybox}
 
-\pagebreak
 
 \begin{easybox}{Les effets de bord sur les listes}{}
 	\begin{itemize}
@@ -451,7 +453,7 @@ print(ma_liste[2:])
 		\item Lorsque l'on affecte une liste à une variable, on crée une référence à cette liste. Si on modifie la liste via cette variable, la modification sera visible via toutes les variables qui font référence à cette liste.
 	\end{itemize}
 
-	\begin{ConsolePythontex}[Label=false]{}
+\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 ma_liste2 = ma_liste
 ma_liste2[0] = 10
@@ -461,7 +463,7 @@ print(ma_liste2)
 \end{easybox}
 
 Si on veut faire une vraie copie d'une liste, on peut utiliser la syntaxe suivante:
-	\begin{ConsolePythontex}[Label=false]{}
+	\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 ma_liste = [1, 2, 3, 4, 5]
 ma_liste2 = ma_liste[:]
 ma_liste2[0] = 10
@@ -472,7 +474,7 @@ print(ma_liste2)
 Lorsqu'on utilise des listes dans des fonctions, il faut faire attention aux effets de bord. Si on modifie une liste passée en argument d'une fonction, la modification sera visible à l'extérieur de la fonction.
 
 Dans cet exemple, il n'est pas utile de renvoyer la liste modifiée, car la modification est déjà visible à l'extérieur de la fonction.
-\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1]{}	
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true]{}	
 def ajoute_element(liste, element):
 	liste.append(element)
 
@@ -481,26 +483,74 @@ ajoute_element(ma_liste, 6)
 print(ma_liste)			# Affiche: [1, 2, 3, 4, 5, 6]
 		\end{CodePythontexAlt}
 
+		\pagebreak
+
 			\begin{exercice_cours}[Effets de bord et fonctions]{}
 	 Ecrire une fonction \texttt{decalage\_gauche(liste)} qui décale les éléments de la liste \texttt{liste} vers la gauche, en mettant le premier élément à la fin de la liste. La liste doit être modifiée en place.
-					\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+					\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
 					def decalage_gauche(liste):
 						''' Décale les éléments de liste vers la gauche '''
 
 
 
 
+
+
 						
 
-
-					#	
 					assert decalage_gauche([1, 2, 3, 4, 5]) == [2, 3, 4, 5, 1]
 					assert decalage_gauche([5, 4, 3, 2, 1]) == [4, 3, 2, 1, 5]
 					\end{CodePythontexAlt}
 
 			\end{exercice_cours}
+\begin{exercice_cours}[Les listes]{}
+
+Ecrire une fonction qui renvoie une nouvelle liste contenant la somme des éléments de deux listes de même longueur. La fonction doit vérifier que les deux listes ont la même longueur. Si les deux listes ne sont pas de même longueur, la liste la plus courte est complétée par des zéros jusqu'à ce qu'elle ait la même longueur que l'autre liste.
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+def somme_listes(L1, L2):
+	''' Renvoie une nouvelle liste contenant la somme des éléments de L1 et L2'''
+
+
+
+
+
+
+
+
+
+
+
+assert somme_listes([1, 2, 3], [4, 5, 6]) == [5, 7, 9]
+assert somme_listes([1, 2], [3, 4, 5]) == [4, 6, 5]
+\end{CodePythontexAlt}
+\end{exercice_cours}
 
 		\pagebreak
+
+		
+\begin{exercice_cours}[Les listes]{}
+
+	Ecire une fonction qui modifie une liste en remplaçant chaque élément par la sommede tous les éléments qui sont à sa droite. Par exemple, si la liste est \verb|[1, 2, 3, 4]|, la liste modifiée doit être \verb|[10, 9, 7, 4]|. La fonction doit modifier la liste en place.
+
+\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+def somme_droite(liste):
+	''' Modifie la liste en remplaçant chaque élément par la somme de tous 
+	les éléments à sa droite'''
+
+
+
+
+
+
+
+
+
+
+
+assert somme_droite([1, 2, 3, 4]) == [10, 9, 7, 4]
+assert somme_droite([5, 4, 3, 2, 1]) == [15, 10, 6, 3, 1]
+\end{CodePythontexAlt}
+\end{exercice_cours}
 
 		\section{Les tuples}
 
@@ -526,43 +576,22 @@ Elément	& \verb|T[0]| & \verb|T[1]| & \verb|T[2]| & \verb|T[3]| & \verb|T[4]| &
 	
 \begin{easybox}{Créer un tuple}{}
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true]{}
 mon_tuple = (1, 2, 3, 4, 5)
 		\end{CodePythontexAlt}
 	\end{minipage}\hfill
 	\begin{minipage}{0.48\linewidth}
-		\begin{CodePythontexAlt}[Largeur=1\linewidth,Centre,PremLigne=1, Lignes=false]{}
+		\begin{CodePythontexAlt}[TaillePolice=\normalsize, Largeur=1\linewidth,Centre,PremLigne=1, Lignes=true]{}
 mon_tuple = ('a', 'b', 'c')
 		\end{CodePythontexAlt}
 	\end{minipage}
 
 
-		\begin{ConsolePythontex}[Label=false]{}
+\begin{ConsolePythontex}[TaillePolice=\normalsize, Label=false]{}
 mon_tuple = (1, 2, 3, 4, 5)
 print(type(mon_tuple))		# Un tuple est de type 'tuple'
 		\end{ConsolePythontex}
 \end{easybox}
-
-\begin{easybox}{Accéder aux éléments d'un tuple}{}
-	Pour accéder à un élément d'un tuple, on utilise son indice. Les indices commencent à 0.
-
-	\smallskip
-
-	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
-mon_tuple = (1, 2, 3, 4, 5)
-print(mon_tuple[0]) 
-print(mon_tuple[2]) 
-		\end{ConsolePythontex}
-	\end{minipage}\hfill
-	\begin{minipage}{0.48\linewidth}
-		\begin{ConsolePythontex}[Label=false]{}
-mon_tuple = (1, 2, 3, 4, 5)
-print(mon_tuple[-1]) 
-print(mon_tuple[-2])
-		\end{ConsolePythontex}
-	\end{minipage}
-	\end{easybox}	
 
 	\begin{propriete}[Immutabilité des tuples]{}
 		Les éléments d'un tuple ne peuvent pas être modifiés après la création du tuple. Un tuple est une structure de donnée immuable.
