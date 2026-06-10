@@ -5,6 +5,6 @@ __pycache__/
 
 **/_*
 **/*.tex
-**/Images/
-**/assets/
-**/ressources/
+**/Images*
+**/assets*
+**/ressources*
