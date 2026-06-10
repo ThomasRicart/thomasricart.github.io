@@ -1,0 +1,5 @@
+processeur
+booléen
+ordinateur
+réseau
+caractère

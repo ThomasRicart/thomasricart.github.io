@@ -1,0 +1,409 @@
+\documentclass[a4paper,12pt,openany]{book}
+%\input{../../preambule/preambule}
+\input{preambule}
+% en-tête
+\rhead{\footnotesize{\textsf{1NSI}} }%droit
+%\lfoot{\footnotesize{textsf{}}}
+%\lhead{\footnotesize{\textsf{NOM - PRENOM}} }%droit
+\lhead{%
+    \ifthenelse{\value{page}=1}%
+    	{\textbf{NOM - PRENOM:}}%	{Cette note n'apparait pas sur la première page}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}\begin{huge}
+TP Dictionnaires
+\end{huge}\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\exo 
+
+On considère le dictionnaire suivant qui contient différents fruits ainsi que leurs quantités:
+
+\begin{lstlisting}[numbers = none]
+fruits = {"pommes": 8, "melons": 3, "poires": 6}
+\end{lstlisting}
+
+\begin{enumerate}
+	\item Quelle instruction permet d'afficher le nombre de poires? \dotfill
+	
+	\medskip
+	
+	\item On a acheté 16 clémentines et utilisé 4 pommes pour faire une tarte. Quelles instructions permettent de mettre à jour le dictionnaire ? \dotfill
+	
+	\medskip
+	
+	
+\end{enumerate}
+
+\bigskip
+
+\exo Répondez aux questions suivantes
+
+\begin{enumerate}
+	\item Qu'affiche le programme suivant ?
+	\begin{lstlisting}[numbers = none]
+fruits = {'pommes': 4, 'melons': 3, 'poires': 6, 'clémentines': 16}
+for c in fruits.keys():
+    print(c)
+\end{lstlisting}
+
+	\item Qu'affiche le programme suivant ?
+
+\begin{lstlisting}[numbers = none]
+fruits = {'pommes': 4, 'melons': 3, 'poires': 6, 'clémentines': 16}
+for cle, valeur in fruits.items():
+    print(cle, "->", valeur)
+\end{lstlisting}
+
+	\item Qu'affiche le programme suivant ?
+
+
+\begin{lstlisting}[numbers = none]
+fruits = {'pommes': 4, 'melons': 3, 'poires': 6, 'clémentines': 16}
+for v in fruits.values():
+    print(v)
+\end{lstlisting}
+\end{enumerate}
+
+\bigskip
+
+\exo 
+
+\begin{enumerate}
+	\item Écrivez une fonction qui affiche les éléments de la liste des courses en considérant le dictionnaire suivant.
+	
+	\begin{lstlisting}[numbers = none]
+fruits = {'pommes': 4, 'melons': 3, 'poires': 6, 'clémentines': 16}
+def liste_courses(fruits):
+	# à compléter
+
+	''' Affichage 
+	pommes : 4
+	melons : 3
+	poires : 6 '''
+\end{lstlisting}
+
+	\item Écrivez une fonction \verb+mise_a_jour_liste(fruit,nombre)+ qui prend en paramètre une chaine de caractère \verb+ fruit + et un nombre entier et qui met à jour la liste de course. Si le fruit existe, on met à jour le nombre et s'il n'existe pas on l'ajoute à la liste de course
+	\medskip
+	
+	\item Ecrivez une fonction \verb+mise_a_jour2(fruit,nb)+ qui prend en paramètre une chaine de caractère \verb+ fruit + et un nombre entier et qui met à jour la liste de course. Si le fruit n'existe pas la valeur retournée est False. Sinon on met à jour le nombre en lui additionnant \verb+ nb +
+	\medskip
+	
+	\item On considère qu'il faut ajouter un fruit sur la liste des courses s'il en reste 4 ou moins. Ecrivez une fonction \verb+mise_a_jour3(fruit)+ qui répond à ce problème.
+	\medskip
+	
+	
+	
+\end{enumerate}
+
+\bigskip
+
+
+\exo
+
+On considère la variable \verb+personnages+ suivante qui réunit quelques informations sur des personnalités (les âges sont fictifs, vous l'aurez compris).
+
+\begin{lstlisting}[numbers = none]
+personnages = [{'nom': 'Einstein', 'prénom': 'Albert', 'âge': '35', 'genre': 'm'},
+           {'nom': 'Hamilton', 'prénom': 'Margaret', 'âge': '23', 'genre': 'f'},
+           {'nom': 'Nelson', 'prénom': 'Ted', 'âge': '64', 'genre': 'm'},
+           {'nom': 'Curie', 'prénom': 'Marie', 'âge': '41', 'genre': 'f'}]
+\end{lstlisting}
+
+
+\begin{enumerate}
+	\item Quelle instruction permet d'afficher le dictionnaire de Ted Nelson ? \dotfill
+	
+	\item Quelle instruction permet d'afficher l'âge de Ted Nelson ? \dotfill
+	
+	\item Ecrire une fonction \verb+recherche_genre(personnages,genre)+ qui affiche uniquement les noms et prénoms des personnes du même genre.
+	
+\end{enumerate}
+
+\bigskip
+
+\exo  Quel est le mot de 6 lettres le plus présent dans Le tour du monde en 80 jours ?
+
+
+L'idée est désormais d'appliquer une fonction pour compter le nombre d'occurrences de chaque mot dans le texte du Tour du monde en 80 jours de Jules Verne.
+
+Commencez par télécharger le fichier texte de l'oeuvre sur le site info-mounier.fr. Par souci de simplification, le texte ne contient aucun signe de ponctuation. De manière générale, le site du Projet Gutenberg permet de récupérer librement le texte de plusieurs milliers d'oeuvres du domaine public : https://www.gutenberg.org.
+
+On va d'abord transformer ce fichier en un tableau de mots. Pour cela, il suffit d'ouvrir le texte de l'oeuvre, en lire le contenu sous la forme d'une unique chaîne de caractères avec la méthode read(), puis de la transformer en un tableau de mots grâce à la méthode split(), avant de fermer le fichier.
+
+\begin{lstlisting}[numbers = none]
+f = open("ltdme80j.txt", mode = "r", encoding = "utf-8")
+texte = f.read()
+tab = texte.split()
+f.close()
+#print(texte)
+print(tab)
+\end{lstlisting}
+
+\begin{enumerate}
+	\item Écrire une fonction \verb+ occurrence(tableau) + qui renvoie un dictionnaire contenant les lettres observées dans le tableau ainsi que leur nombre:
+	
+\begin{lstlisting}[numbers = none]
+>>> occurrences(['b', 'c', 'e', 'b', 'c', 'j', 'd', 'b', 'j', 'a', 'b'])
+
+{'b': 4, 'a': 1, 'c': 2, 'e': 1, 'j': 2, 'd': 1}	
+\end{lstlisting}
+
+\item Ecrivez une fonction \verb+mot_6_lettres_plus_frequent(d)+ qui renvoie le mot de 6 lettres les plus fréquent dans l'oeuvre de Jules Verne ainsi que son nombre d'occurence. (réponse : 'heures' avec 243 occurrences)
+
+\item Ecrire une fonction \verb+mot_plus_frequent(d, k)+ qui renvoie le mot de k lettres le plus présent dans le dictionnaire d.
+\end{enumerate}
+
+\end{document}
+
+\begin{lstlisting}[numbers = none]
+
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[numbers = none]
+def liste_courses(fruits):
+    # à compléter
+
+# TEST :
+fruits = {'pommes': 4, 'melons': 3, 'poires': 6, 'clémentines': 16}
+liste_courses(fruits)
+\end{lstlisting}
+On considère le script suivant:
+
+\begin{lstlisting}[numbers = none]
+for i in range(len(t)-1):
+	if t[i] > t[i+1]:
+	t[i] , t[i+1] = t[i+1] , t[i]
+\end{lstlisting}
+
+\begin{enumerate}
+	\item Quelle est la complexité de cet algorithme?
+	
+	\item Quelle est le contenu de la liste \verb+ t = [4, 3, 2, 1] + après l'exécution de cet algorithme?
+\suspend{enumerate}
+
+\bigskip
+
+\exo
+
+On considère le script suivant:
+
+\begin{lstlisting}[numbers = none]
+for i in range(len(t)):
+	for j in range(i):
+		print(t[j],end= " ")
+\end{lstlisting}
+
+\resume{enumerate}
+	\item Quelle est la complexité de cet algorithme?
+	
+	\item Quelle est l'affichage de cet algorithme pour   \verb+ t = [1, 4, 2, 3] +
+\suspend{enumerate}
+
+\bigskip
+
+\exo
+
+
+\resume{enumerate}
+\item Écrire une fonction nommée \verb+ recherche_lineaire(liste,valeur) + qui recherche une valeur dans une liste non triée. Chaque élément va être comparé à \verb+ valeur +\\
+
+Cette fonction renverra l'indice de la valeur si elle est trouvée et \verb+ False + sinon
+
+\vspace{5cm}
+
+\item Quelle est la complexité de cet algorithme? \dotfill\\
+
+\item L'algorithme linéaire trouvera plus facilement les éléments: (entourer la bonne réponse):
+
+	\begin{liste}
+		\item Les plus petits
+		\item Les plus grands
+		\item Au début de la liste
+	\end{liste}
+
+
+
+
+\suspend{enumerate}
+
+\bigskip
+\newpage
+
+\exo
+
+On considère l'algorithme de dichotomie suivant:
+
+\begin{lstlisting}
+def recherche_dichotomique(L:list,valeur:int):
+	''' Algorithme de recherche dichotomique '''
+    i_deb = 0
+    i_fin = len(L) - 1
+    while i_fin - i_deb >= 0:
+        i_cen = (i_deb + i_fin) // 2
+        if L[i_cen] == valeur:
+            return True
+        elif valeur > L[i_cen]:
+            i_deb = i_cen + 1
+        else:
+            i_fin = i_cen - 1
+    return False
+\end{lstlisting}
+
+\medskip
+
+\resume{enumerate}
+
+	\item Écrire la trace de cet algorithme lors de l'appel suivant:
+	
+\begin{lstlisting}[numbers = none]
+recherche_dichotomie([1, 6, 15, 20, 24], 8)
+
+
+\end{lstlisting}	
+
+\medskip
+
+Vous indiquerez
+
+\begin{liste}
+	\item 	Le numéro de la ligne active
+	\item les valeurs des différentes variables lorsqu'elles sont modifiées ou utilisées
+	L'état logique du WHILE, IF et ELIF (True ou False) lorsque ces lignes seront activées
+\end{liste}
+
+\medskip
+
+\includegraphics[scale=1.35]{tp01.ps}
+
+\medskip
+
+\item Quelle est la complexité de cet algorithme? \dotfill
+
+\item Quand on multiplie par deux la taille du tableau, combien fait-on d'itérations en plus? \dotfill
+
+
+\end{enumerate}
+
+\newpage
+
+\exo
+
+L'objectif de cet exercice est de déterminer la valeur qui annule une fonction, c'est à dire la valeur de $x$ telle que $f(x)=0$\\
+
+\begin{liste}
+	\item Télécharger le fichier \verb+tp_note.py+
+	\item Renommer ce fichier \verb+tp_note_NOM.py+
+	\item A la fin du TP vous déposerez ce fichier à l'endroit indiqué
+\end{liste}
+
+\medskip
+
+\begin{enumerate}
+	\item Créer une fonction \verb+ creation_abscisses(a:int,b:int)->list:+ qui renvoie une liste contenant tous les entiers compris entre $a$ et $b$ inclus.
+	
+\begin{lstlisting}[numbers = none]
+assert creation_abscisses(-3,3) == [-3, -2, -1, 0, 1, 2, 3]
+\end{lstlisting}		
+
+\medskip
+
+\item Créer une fonction \verb+ creation_ordonnees(abscisses:list,fonction)->list:+ qui renvoie une liste contenant toutes les images de chaque abscisses contenues dans la liste \verb+ abscisses +.
+	
+\begin{lstlisting}[numbers = none]
+assert creation_ordonnees([-3,-2,-1,0,1,2,3],f) == [-35,-12,-3,-2,-3,0,13]
+assert creation_ordonnees([-3,-2,-1,0,1,2,3],g) == [-89,-28,-5,-2,-1,16,67]
+\end{lstlisting}		
+
+\medskip
+\item Modifier la fonction \verb+ recherche_dichotomique(L:list,valeur:int) + afin qu'elle renvoie:
+
+\begin{liste}
+	\item L'indice ou se trouve \verb+ valeur + si cet élément est dans la liste \verb+ L +
+	\item False si cet élément n'appartient pas à la liste.
+\end{liste} 
+
+\medskip
+
+\item Écrire une fonction \verb+ recherche_zero(a:int,b:int,fonction) + qui renvoie l'abscisse $x$ telle que $f(x)=0$ en utilisant la fonction de recherche dichotomique.
+
+\begin{lstlisting}[numbers = none]
+assert recherche_zero(-3,3,f) == 5
+\end{lstlisting}
+
+\medskip
+
+
+\item Écrire une fonction \verb+ recherche_dichotomique2(L:list,valeur:int) + qui renvoie 
+
+\begin{liste}
+	\item L'indice où se trouve \verb+ valeur + si cet élément est dans la liste \verb+ L +
+	\item L'indice du dernier élément plus petit que \verb+ valeur +
+\end{liste} 
+
+\begin{lstlisting}[numbers = none]
+assert recherche_dichotomique2([-2,-1,2,4],0 == 1)
+\end{lstlisting}
+
+
+\medskip
+
+
+\end{enumerate}
+\end{document}	
+\begin{enumerate}
+	\item rer
+	\item dsdf
+\suspend{enumerate}
+
+\resume{enumerate}
+	\item dd
+	\item dsdq
+\end{enumerate}
+il existe 
+\newpage
+
+fdsfs
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+	\item rer
+	\item dsdf
+\suspend{enumerate}
+
+\resume{enumerate}
+	\item dd
+	\item dsdq
+\end{enumerate}
+
+
+\begin{liste}
+	\item
+\end{liste}
+%%% Vecteurs
+\vv{AB}
+\vv{#1}\Coor{#2}{#3}
+
+%%% Systemes
+Systèmes 2X2 $\Syst{2x+1=0}{3x-1=1}$
+
+Coordonnées $\Coor{2}{3}$
+Coordonnées $\CoorE{2}{3}{3}$
+
+\begin{pmatrix}
+   a_1 & b_1 \\
+   a_2 & b_2 
+\end{pmatrix}
+
+\intx{4}{5}f(x)\dx
+
+

@@ -1,0 +1,501 @@
+\documentclass[a4paper,10pt]{report}
+
+\def\packagepath{../../preambule}   % path du package princial
+\usepackage{\packagepath/preambule}    % utilisation du fichier de configuration
+
+\def\level{Première }              % Classe
+\def\course{NSI}              % Matière
+\def\eval{DS04 - CORRECTION}
+
+\def\visibleornot{visible}    % visible or invisible
+\def\documentpath{./Sources_Latex}
+\def\date{Jeudi 06 Octobre 2025}
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableau
+
+\def\ptsexoA{2}
+\def\ptsexoB{1}
+\def\ptsexoC{1}
+\def\ptsexoD{1}
+\def\ptsexoE{1}
+\def\ptsexoF{1}
+\def\ptsexoG{2}
+\def\ptsexoH{1}
+\def\ptsexoI{2}
+\def\ptsexoJ{2}
+\def\ptsexoK{1}
+
+\def\ptstotal{\ptsexoA+\ptsexoB}
+
+\usepackage{hyperref}
+
+\usetikzlibrary{shapes, arrows, positioning}
+\usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing}
+
+\tikzstyle{etat} = [draw, rounded corners=15pt, minimum width=2.5cm, minimum height=1.2cm, text centered, font=\bfseries]
+\tikzstyle{nouveau} = [etat, fill=blue!40]
+\tikzstyle{pret} = [etat, fill=green!60]
+\tikzstyle{elu} = [etat, fill=yellow!60]
+\tikzstyle{bloque} = [etat, fill=red!60]
+\tikzstyle{termine} = [etat, fill=white]
+\tikzstyle{fleche} = [thick, ->, >=stealth]
+
+\usepackage{float} % Permet d'utiliser [H]
+\usepackage[T1]{fontenc}
+\begin{document}
+
+\renewcommand{\labelitemi}{\textbullet}
+
+\pagestyle{DS_FP}          % Feuille de style fancy
+\NomPrenomNote{}
+
+
+\exods{\ptsexoA}
+
+Sans aucune justification, donner le nombre d'états possibles codables avec:
+
+\begin{enumerate}[1)]
+    \item 1 bit \dotfill{} \textcolor{red}{\textbf{2}}
+    \item 3 bits \dotfill{} \textcolor{red}{\textbf{8}}
+    \item 8 bits \dotfill{} \textcolor{red}{\textbf{256}}
+    \item n bits \dotfill{} \textcolor{red}{\textbf{$2^n$}}
+\end{enumerate}
+
+\medskip
+
+
+\begin{minipage}{0.49\linewidth}
+ \exods{\ptsexoB}
+
+   Convertir le nombre binaire suivant en décimal. Vous justifierez vos réponses.
+
+\begin{answer}{1}{5} 
+    \begin{center}
+        \verb|1010 0011|
+    \end{center}   
+\end{answer}
+
+\textcolor{red}{
+\textbf{Réponse :}
+\begin{align*}
+1010\,0011_2 &= 1 \times 2^7 + 0 \times 2^6 + 1 \times 2^5 + 0 \times 2^4 \\
+&\quad + 0 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0 \\
+&= 128 + 32 + 2 + 1 \\
+&= \textbf{163}_{10}
+\end{align*}
+}
+\end{minipage}\hfill
+\begin{minipage}{0.49\linewidth}
+     \exods{\ptsexoC}
+
+    Convertir le nombre décimal suivant en binaire. Vous justifierez vos réponses.
+\begin{answer}{1}{5} 
+    \begin{center}
+        \verb|159|
+    \end{center}   
+\end{answer}
+
+\textcolor{red}{
+\textbf{Réponse :} Divisions successives par 2
+\begin{align*}
+159 \div 2 &= 79 \text{ reste } \textbf{1} \\
+79 \div 2 &= 39 \text{ reste } \textbf{1} \\
+39 \div 2 &= 19 \text{ reste } \textbf{1} \\
+19 \div 2 &= 9 \text{ reste } \textbf{1} \\
+9 \div 2 &= 4 \text{ reste } \textbf{1} \\
+4 \div 2 &= 2 \text{ reste } \textbf{0} \\
+2 \div 2 &= 1 \text{ reste } \textbf{0} \\
+1 \div 2 &= 0 \text{ reste } \textbf{1}
+\end{align*}
+En lisant de bas en haut : \textbf{10011111}$_2$
+}
+\end{minipage}
+
+\medskip
+
+
+\begin{minipage}{0.49\linewidth}
+ \exods{\ptsexoD}
+
+   Convertir le nombre hexadécimal suivant en décimal. Vous justifierez vos réponses.
+
+\begin{answer}{1}{5} 
+    \begin{center}
+        \verb|AF|
+    \end{center}   
+\end{answer}
+
+\textcolor{red}{
+\textbf{Réponse :}
+\begin{align*}
+AF_{16} &= A \times 16^1 + F \times 16^0 \\
+&= 10 \times 16 + 15 \times 1 \\
+&= 160 + 15 \\
+&= \textbf{175}_{10}
+\end{align*}
+}
+\end{minipage}\hfill
+\begin{minipage}{0.49\linewidth}
+     \exods{\ptsexoE}
+
+Convertir le nombre binaire suivant en hexadécimal. Vous justifierez vos réponses.
+\begin{answer}{1}{5} 
+    \begin{center}
+        \verb|1110 0110|
+    \end{center}   
+\end{answer}
+
+\textcolor{red}{
+\textbf{Réponse :} Regroupement par 4 bits
+\begin{align*}
+1110\,0110_2 &\rightarrow \text{groupes : } 1110 \text{ et } 0110 \\
+1110_2 &= 8 + 4 + 2 = 14 = E_{16} \\
+0110_2 &= 4 + 2 = 6_{16} \\
+&\Rightarrow \textbf{E6}_{16}
+\end{align*}
+}
+\end{minipage}
+
+\medskip
+
+\exods{\ptsexoF}
+
+Effectuer l'addition binaire suivante:
+
+
+
+    \begin{answer}{1}{4} \begin{center}
+        \verb|10110111+1101110|
+\end{center}  \end{answer}
+
+\textcolor{red}{
+\textbf{Réponse :}
+\begin{verbatim}
+    1 1 1  1         (retenues)
+    1 0 1 1 0 1 1 1
+  +   1 1 0 1 1 1 0
+  -----------------
+  1 0 0 1 0 0 1 0 1
+\end{verbatim}
+\textbf{Résultat : 100100101}$_2$
+
+Vérification : $183 + 110 = 293_{10} = 100100101_2$ \checkmark
+}
+
+\pagebreak
+
+\exods{\ptsexoG}
+
+Expliquer simplement comment déterminer si un nombre binaire est pair ou impair. Justifier.
+
+    \begin{answer}{1}{3}    \end{answer}
+
+\textcolor{red}{
+\textbf{Réponse :}
+
+\textbf{Méthode :} Il suffit de regarder le \textbf{bit de poids faible} (le dernier bit, à droite).
+
+\begin{itemize}
+    \item Si le dernier bit est \textbf{0} $\rightarrow$ le nombre est \textbf{pair}
+    \item Si le dernier bit est \textbf{1} $\rightarrow$ le nombre est \textbf{impair}
+\end{itemize}
+
+\textbf{Justification :} En binaire, chaque position représente une puissance de 2. Toutes les puissances de 2 (sauf $2^0 = 1$) sont paires. Donc :
+\begin{itemize}
+    \item Si le bit de poids faible est 0, la somme ne contient que des multiples de 2 $\rightarrow$ nombre pair
+    \item Si le bit de poids faible est 1, on ajoute 1 à une somme paire $\rightarrow$ nombre impair
+\end{itemize}
+
+\textbf{Exemples :}
+\begin{itemize}
+    \item $1010_2 = 10_{10}$ (pair) $\rightarrow$ dernier bit = 0
+    \item $111_2 = 7_{10}$ (impair) $\rightarrow$ dernier bit = 1
+\end{itemize}
+}
+
+
+
+\medskip
+
+\exods{\ptsexoH}
+
+Ecrire une fonction \verb|est_pair(n)| qui prend en paramètre un nombre écrit en binaire (au format chaine de caractères) et renvoie \verb|True| si le nombre est pair et \verb|False| sinon.
+
+    \begin{answer}{1}{7} 
+\begin{verbatim}
+def est_pair(n):
+    ''' Renvoie True si n est pair et False sinon
+    n chaîne de caractères représentant un nombre binaire
+    sortie: bool '''
+
+
+
+
+
+
+
+
+
+assert est_pair('1010') == True    # 10 en décimal
+assert est_pair('111') == False    # 7 en décimal
+    \end{verbatim}
+
+    \end{answer}
+
+\textcolor{red}{
+\textbf{Correction :}
+\begin{verbatim}
+def est_pair(n):
+    ''' Renvoie True si n est pair et False sinon
+    n: chaîne de caractères représentant un nombre binaire
+    sortie: bool '''
+    return n[-1] == '0'
+\end{verbatim}
+\textbf{Explication :} On vérifie simplement si le dernier caractère de la chaîne est '0'.
+}
+
+\medskip
+
+\exods{\ptsexoI}
+
+Ecrire une fonction \verb|nb_bits(n)| qui prend en paramètre un entier naturel \verb|n| et renvoie le nombre de bits nécessaires pour l'écrire en binaire. Par exemple, \verb|nb_bits(5)| renvoie \verb|3| car $5 = 101_2$.
+
+On pourra par exemple compter le nombre de divisions entières par 2 nécessaires pour obtenir 0.
+    \begin{answer}{1}{9.2} 
+\begin{verbatim}
+def nb_bits(n):
+    ''' Renvoie le nombre de bits nécessaires pour écrire n en binaire 
+    n entier naturel (int)
+    sortie: int '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+assert nb_bits(5) == 3    # 5 = 101_2
+assert nb_bits(10) == 4   # 10 = 1010_2 
+assert nb_bits(16) == 5   # 16 = 10000_2
+    \end{verbatim}
+
+    \end{answer}
+
+\textcolor{red}{
+\textbf{Correction :}
+\begin{verbatim}
+def nb_bits(n):
+    ''' Renvoie le nombre de bits nécessaires pour écrire n en binaire
+    n: entier naturel (int)
+    sortie: int '''
+    if n == 0:
+        return 1
+    
+    compteur = 0
+    while n > 0:
+        n = n // 2
+        compteur += 1
+    
+    return compteur
+\end{verbatim}
+\textbf{Explication :} On divise successivement par 2 jusqu'à obtenir 0, en comptant le nombre d'itérations. Cas particulier : 0 nécessite 1 bit.
+}
+
+    \pagebreak
+
+    \exods{\ptsexoJ}
+
+Ecrire une fonction \verb|nb_uns(val_bin)| qui prend en paramètre une chaine de caractères \verb|val_bin| représentant un nombre binaire et qui renvoie le nombre de bits à 1 dans cette chaine.
+
+    \begin{answer}{1}{9}
+\begin{verbatim}
+def nb_uns(val_bin):
+    ''' Renvoie le nombre de bits à 1 dans val_bin
+    val_bin chaine de caractères représentant un nombre binaire
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+assert nb_uns('101010') == 3
+assert nb_uns('1111') == 4
+assert nb_uns('0000') == 0
+    \end{verbatim}
+
+    \end{answer}
+
+\textcolor{red}{
+\textbf{Correction :}
+\begin{verbatim}
+def nb_uns(val_bin):
+    ''' Renvoie le nombre de bits à 1 dans val_bin
+    val_bin: chaine de caractères représentant un nombre binaire
+    sortie: int '''
+    return val_bin.count('1')
+\end{verbatim}
+\textbf{Explication :} La méthode \verb|.count()| compte le nombre d'occurrences du caractère '1' dans la chaîne.
+
+\textbf{Alternative avec boucle :}
+\begin{verbatim}
+def nb_uns(val_bin):
+    compteur = 0
+    for bit in val_bin:
+        if bit == '1':
+            compteur += 1
+    return compteur
+\end{verbatim}
+}
+
+    \medskip
+
+     \exods{\ptsexoK}
+
+Ecrire une fonction \verb|multiplication(val_bin, puissance)| qui va multiplier un nombre binaire \verb|val_bin| (sous forme de chaine de caractères) par $2^{puissance}$ où \verb|puissance| est un entier naturel.
+    \begin{answer}{1}{10}
+\begin{verbatim}
+def multiplication(val_bin, puissance):
+    ''' Multiplie le nombre binaire val_bin par 2^puissance
+    val_bin chaine de caractères représentant un nombre binaire
+    puissance entier naturel (int)
+    sortie: str '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+assert multiplication('101', 3) == '101000'    # 5 * 2^3 = 40
+assert multiplication('111', 2) == '11100'     # 7 * 2^2 = 28
+assert multiplication('1001', 0) == '1001'     # 9 * 2^0 = 9
+    \end{verbatim}
+
+    \end{answer}
+
+\textcolor{red}{
+\textbf{Correction :}
+\begin{verbatim}
+def multiplication(val_bin, puissance):
+    ''' Multiplie le nombre binaire val_bin par 2^puissance
+    val_bin: chaine de caractères représentant un nombre binaire
+    puissance: entier naturel (int)
+    sortie: str '''
+    return val_bin + '0' * puissance
+\end{verbatim}
+\textbf{Explication :} Multiplier par $2^n$ en binaire revient à décaler le nombre vers la gauche de n positions, c'est-à-dire ajouter n zéros à droite.
+
+\textbf{Exemples :}
+\begin{itemize}
+    \item $101_2 \times 2^3 = 101000_2$ (on ajoute 3 zéros)
+    \item $111_2 \times 2^2 = 11100_2$ (on ajoute 2 zéros)
+\end{itemize}
+}
+
+    \pagebreak
+    \thispagestyle{DS_LP}
+
+\exods{0}
+
+    On dispose de deux chaines binaires \verb|A| et \verb|B| de même longueur (8 bits).
+
+    On veut produire une chaine binaire représentant leur somme.
+
+    Ecrire une fonction \verb|addition_binaire(A, B)| qui prend en paramètres les deux chaines binaires \verb|A| et \verb|B| et renvoie la chaine binaire représentant leur somme. On ne pourra pas convertir les valeurs en décimal avant de faire l'addition.
+
+\begin{answer}{1}{11} 
+\begin{verbatim}
+def addition_binaire(A, B):
+    ''' Renvoie la chaine binaire représentant la somme de A et B
+    A et B chaines de caractères représentant des nombres binaires de même longueur (8 bits)
+    sortie: str '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+assert addition_binaire('00011010', '00000101') == '00011111'    # 26 + 5 = 31
+assert addition_binaire('11111111', '00000001') == '100000000'    # 255 + 1 = 256
+assert addition_binaire('10101010', '01010101') == '11111111'    # 170 + 85 = 255
+    \end{verbatim}
+
+    \end{answer}
+
+\textcolor{red}{
+\textbf{Correction :}
+\begin{verbatim}
+def addition_binaire(A, B):
+    ''' Renvoie la chaine binaire représentant la somme de A et B
+    A et B: chaines de caractères représentant des nombres binaires 
+            de même longueur (8 bits)
+    sortie: str '''
+    resultat = ""
+    retenue = 0
+    
+    # On parcourt de droite à gauche
+    for i in range(len(A) - 1, -1, -1):
+        bit_a = int(A[i])
+        bit_b = int(B[i])
+        
+        somme = bit_a + bit_b + retenue
+        
+        resultat = str(somme % 2) + resultat
+        retenue = somme // 2
+    
+    # S'il reste une retenue à la fin
+    if retenue == 1:
+        resultat = '1' + resultat
+    
+    return resultat
+\end{verbatim}
+
+\textbf{Explication de l'algorithme :}
+\begin{enumerate}
+    \item On parcourt les bits de droite à gauche (indices décroissants)
+    \item Pour chaque position, on additionne les deux bits + la retenue précédente
+    \item Le bit résultat est \verb|somme % 2| (reste de la division par 2)
+    \item La nouvelle retenue est \verb|somme // 2| (quotient de la division par 2)
+    \item Si une retenue finale existe, on l'ajoute à gauche
+\end{enumerate}
+
+\textbf{Table d'addition binaire avec retenue :}
+\begin{verbatim}
+0 + 0 + 0 = 0 (retenue 0)    0 + 1 + 1 = 0 (retenue 1)
+0 + 0 + 1 = 1 (retenue 0)    1 + 0 + 0 = 1 (retenue 0)
+0 + 1 + 0 = 1 (retenue 0)    1 + 0 + 1 = 0 (retenue 1)
+1 + 1 + 0 = 0 (retenue 1)    1 + 1 + 1 = 1 (retenue 1)
+\end{verbatim}
+}
+
+\end{document}

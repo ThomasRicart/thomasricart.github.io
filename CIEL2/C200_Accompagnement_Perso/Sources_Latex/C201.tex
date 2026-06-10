@@ -15,6 +15,14 @@
 \end{itemize}
 \end{easybox}
 
+\begin{exercice_cours}[Pourcentages]{}
+\begin{enumerate}
+	\item Un article coûte 50 euros. Son prix est augmenté de 20\%. Quel est son nouveau prix?
+	\item Un article coûte 80 euros. Son prix est diminué de 15\%. Quel est son nouveau prix?
+	\item Un article coûte 120 euros. Son prix est augmenté de 10\%, puis diminué de 5\%. Quel est son nouveau prix?
+	\item Un article coûte 200 euros. Son prix est diminué de 25\%, puis augmenté de 30\%. Quel est son nouveau prix?
+\end{enumerate}
+\end{exercice_cours}
 \begin{easybox}[Probabilités]{}
 \begin{itemize}
 	\item La somme des probabilités de tous les événements élémentaires d'une expérience aléatoire est égale à 1: \fbox{$\sum P(E_i) = 1$}
@@ -33,6 +41,24 @@
 
 \end{itemize}
 \end{easybox}
+
+\begin{exercice_cours}[Probabilités]{}
+
+Une entreprise fabrique des objets qui peuvent être produit depuis la ligne de production $A$ ou la ligne de production $B$.
+
+\begin{itemize}
+	\item $60\%$ des objets sont produits par la ligne $A$ et $40\%$ par la ligne $B$.
+	\item $2\%$ des objets produits par la ligne $A$ sont défectueux, tandis que $5\%$ des objets produits par la ligne $B$ sont défectueux.
+\end{itemize}
+
+\begin{enumerate}
+		\item Construire un arbre de probabilités modélisant la situation.
+		\item Calculer la probabilité qu'un objet choisi au hasard provienne de la ligne $A$ et soit défectueux.
+		\item Calculer la probabilité qu'un objet choisi au hasard soit défectueux.
+		\item Sachant qu'un objet choisi au hasard est défectueux, calculer la probabilité qu'il provienne de la ligne $A$.
+\end{enumerate}
+
+\end{exercice_cours}
 
 \begin{easybox}[Répétitions d'épreuves]{}
 \begin{itemize}
@@ -63,7 +89,23 @@ Donc $X$ suit une loi binomiale de paramètres $n$ et $p$
 \end{minipage}
 \end{easybox}
 
-\pagebreak
+
+
+\begin{exercice_cours}[Répétition d'épreuves]{}
+
+	On prélève au hasard un objet dans une production. La probabilité que cet objet soit défectueux est de $0,03$. On répète cette expérience $n=20$ fois de manière identique et indépendante. Soit $X$ la variable aléatoire qui compte le nombre d'objets défectueux parmi les 20 prélevés.
+\begin{enumerate}
+	\item Quelle est la loi de probabilité suivie par $X$? Justifier votre réponse.
+	\item Calculer $P(X=0)$, $P(X=1)$ et $P(X \geq 2)$.
+	\item Calculer l'espérance, la variance et l'écart-type de $X$.
+	\item $n$ objets sont prélevés au hasard dans cette production. On suppose que la probabilité qu'un objet soit défectueux est toujours de $0,03$ et que les prélèvements sont indépendants. 
+
+Combien de fois doit-on répéter cette expérience pour que la probabilité d'obtenir au moins un objet défectueux soit supérieure à $0,95$?
+
+\end{enumerate}
+
+
+\end{exercice_cours}
 
 \begin{easybox}[Fonctions affines]{}
 
@@ -83,6 +125,16 @@ Donc $X$ suit une loi binomiale de paramètres $n$ et $p$
 
 \end{easybox}
 
+\begin{exercice_cours}[Fonctions affines]{}
+
+	\begin{enumerate}
+		\item Déterminer l'équation de la droite passant par les points $A(1, 2)$ et $B(3, 4)$.
+		\item Déterminer l'équation de la droite passant par les points $A(-1, 5)$ et de coeffidient directeur $-5$.
+		\item Le point $C(2, 3)$ appartient-il à la droite d'équation $y=-2x+7$?
+		\item Déterminer l'équation de la droite parallèle à la droite d'équation $y=3x-1$ et passant par le point $D(0, 4)$.
+	\end{enumerate}
+	
+\end{exercice_cours}
 
 \begin{easybox}[Fonctions polynôme du second degré ]{}
 
@@ -102,47 +154,23 @@ Donc $X$ suit une loi binomiale de paramètres $n$ et $p$
 
 \end{easybox}
 
-\begin{easybox}[Fonctions exponentielles]{}
+\begin{exercice_cours}[Fonctions polynôme du second degré]{}
 
-	\[f(x)=e^{x}\]
+	On considère la fonction $f$ définie par $f(x)=2x^2-3x+1$.
+	\begin{enumerate}
+		\item Etudier le signe de la fonction $f$.
+		\item Factoriser la fonction $f$
+		\item Déterminer les coordonnées du sommet de la parabole d'équation $y=f(x)$.
+		\item Déterminer les coordonnées des points d'intersection de la parabole d'équation $y=f(x)$ avec l'axe des abscisses.
+		\item Déterminer les coordonnées des points d'intersection de la parabole d'équation $y=f(x)$ avec l'axe des ordonnées.
+		\item Le point $A(1, 0)$ appartient-il à la parabole d'équation $y=f(x)$?
+		\item Déterminer l'équation de la droite tangente à la parabole d'équation $y=f(x)$ au point d'abscisse $x=1$.
+	\end{enumerate}
+	
+\end{exercice_cours}
 
-	\begin{minipage}{0.48\linewidth}
-		\begin{itemize}
-		\item $f$ est strictement positive sur $\R$
-		\item $f$ est strictement croissante sur $\R$
-		\item $\e^0=1$
-		\item $\displaystyle\lim_{x \to +\infty} \e^x = +\infty$ et $\displaystyle\lim_{x \to -\infty} \e^x = 0$
-			\item $(\e^x)'=\e^x$ et $(\e^{u})' = u' \e^{u}$
-			\item $\e^{a+b}=\e^a \times \e^b$ et $\e^{-x}=\dfrac{1}{\e^x}$
-			\item $(e^x)^n=\e^{nx}$ 
-		\end{itemize}
-\end{minipage}\hfill{}
-	\begin{minipage}{0.48\linewidth}
-		\includegraphics[width = 0.95\linewidth]{rev05.png}
-	\end{minipage}
-\end{easybox}
+\pagebreak
 
-
-\begin{easybox}[Fonctions logarithmiques népérien]{}
-
-	\[f(x)=\ln(x)\]
-
-	\begin{minipage}{0.48\linewidth}
-		\begin{itemize}
-		\item $f$ est strictement positive sur $\R^*$
-		\item $f$ est strictement croissante sur $\R^*$
-		\item $\ln(1)=0$
-		\item $\displaystyle\lim_{x \to +\infty} \ln(x) = +\infty$ et $\displaystyle\lim_{x \to 0^+} \ln(x) = -\infty$
-			\item $(\ln(x))'=\dfrac{1}{x}$ et $(\ln(u))' = \dfrac{u'}{u}$
-			\item $\ln(a \times b)=\ln(a) + \ln(b)$ et $\ln(a^{-1})=-\ln(a)$
-			\item $(\ln(x))^n=\ln(x^n)$ 
-		\item $\ln(\e^x)=x$ et $\e^{\ln(x)}=x$
-		\end{itemize}
-\end{minipage}\hfill{}
-	\begin{minipage}{0.48\linewidth}
-		\includegraphics[width = 0.95\linewidth]{rev06.png}
-	\end{minipage}
-\end{easybox}
 
 \begin{easybox}[Dérivation]{}
 		\begin{itemize}
@@ -150,7 +178,7 @@ Donc $X$ suit une loi binomiale de paramètres $n$ et $p$
 			\item $f$ est croissante sur un intervalle $I$ si $f'(x) \geq 0$ pour tout $x \in I$
 			\item $f$ est décroissante sur un intervalle $I$ si $f'(x) \leq 0$ pour tout $x \in I$
 			\item $f$ est constante sur un intervalle $I$ si $f'(x) = 0$ pour tout $x \in I$	
-			\item $f$ admet un extremum local en $a$ si $f'(a)=0$ et que le signe de $f'$ change autour de $a$.
+			\item $f$ admet un extremum local en $a$ si $f'(a)=0$ et que $f'$ change de signe.
 		\end{itemize}
 		
 \begin{minipage}{0.48\linewidth}
@@ -193,6 +221,61 @@ $\ln(u)$ & $\frac{u'}{u}$ \\
 
 \end{easybox}
 
+\begin{exercice_cours}[On considère la fonction $f$ définie par $f(x)=x^3-6x^2+9x+1$.]{}
+
+	
+	\begin{enumerate}
+		\item Calculer la dérivée de $f$.
+		\item Déterminer les intervalles de croissance et de décroissance de $f$.
+		\item Déterminer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $x=1$.
+	\end{enumerate}
+\end{exercice_cours}
+
+\begin{easybox}[Fonctions exponentielles]{}
+
+	\[f(x)=e^{x}\]
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+		\item $f$ est strictement positive sur $\R$
+		\item $f$ est strictement croissante sur $\R$
+		\item $\e^0=1$
+		\item $\displaystyle\lim_{x \to +\infty} \e^x = +\infty$ et $\displaystyle\lim_{x \to -\infty} \e^x = 0$
+			\item $(\e^x)'=\e^x$ et $(\e^{u})' = u' \e^{u}$
+			\item $\e^{a+b}=\e^a \times \e^b$ et $\e^{-x}=\dfrac{1}{\e^x}$
+			\item $(e^x)^n=\e^{nx}$ 
+		\end{itemize}
+\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+		\includegraphics[width = 0.95\linewidth]{rev05.png}
+	\end{minipage}
+\end{easybox}
+
+
+
+
+\begin{easybox}[Fonctions logarithmiques népérien]{}
+
+	\[f(x)=\ln(x)\]
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{itemize}
+		\item $f$ est strictement positive sur $\R^*$
+		\item $f$ est strictement croissante sur $\R^*$
+		\item $\ln(1)=0$
+		\item $\displaystyle\lim_{x \to +\infty} \ln(x) = +\infty$ et $\displaystyle\lim_{x \to 0^+} \ln(x) = -\infty$
+			\item $(\ln(x))'=\dfrac{1}{x}$ et $(\ln(u))' = \dfrac{u'}{u}$
+			\item $\ln(a \times b)=\ln(a) + \ln(b)$ et $\ln(a^{-1})=-\ln(a)$
+			\item $(\ln(x))^n=\ln(x^n)$ 
+		\item $\ln(\e^x)=x$ et $\e^{\ln(x)}=x$
+		\end{itemize}
+\end{minipage}\hfill{}
+	\begin{minipage}{0.48\linewidth}
+		\includegraphics[width = 0.95\linewidth]{rev06.png}
+	\end{minipage}
+\end{easybox}
+
+
 \begin{easybox}[Primitives et intégration]{}
 
 	\begin{itemize}
@@ -205,18 +288,73 @@ $\ln(u)$ & $\frac{u'}{u}$ \\
 
 	\end{easybox}
 
+\begin{exercice_cours}[Fonctions exponentielles]{}
+
+La tension $f(t)$ (en volts) aux bornes d'un condensateur en fonction du temps $t$ en millisecondes est modélisé par la fonction $f(t)=(ax+b)\e^{-x}$.
+
+
+\begin{enumerate}
+	\item Déterminer les constantes $a$ et $b$ à partir des conditions suivantes: $f(0)=5$ volts et $f'(0)=1$
+	\item Calculer la dérivée de $f$ et déterminer les intervalles de croissance et de décroissance de $f$.
+
+	\item Calculer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $t=0$.
+	\item Déterminer pour quelle valeur de $t$ la tension devient inférieure à $1$ volt.
+	\item Calculer la valeur moyenne de $f$ sur l'intervalle $\ff{0}{5}$.
+\end{enumerate}
+
+\end{exercice_cours}
+
+
+
+
+
+\begin{exercice_cours}[Fonctions logarithmiques]{}
+
+Soit $f$ la fonction définie sur $\ff{1}{10}$ par $f(x)=a\ln(x)+bx$.
+
+\begin{enumerate}
+	\item Déterminer les constantes $a$ et $b$ telles que $f(1)=5$ et que le minimum est atteint pour $x=4$.
+	\item Calculer la dérivée de $f$ et déterminer les intervalles de croissance et de décroissance de $f$.
+	\item Déterminer pour quelles valeurs de $x$ la fonction $f$ est négative.
+	\item Calculer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $x=1$.
+	\item Calculer la valeur moyenne de $f$ sur l'intervalle $\ff{1}{10}$.
+\end{enumerate}
+
+\end{exercice_cours}
+
+
 	\begin{easybox}[Suites numériques]{}
 	\begin{itemize}
-		\item $u$ est une suite numérique si $u$ est une fonction définie sur $\N$ à valeurs dans $\R$: \fbox{$u: \N \to \R$}
-		\item $u$ est une suite \textbf{arithmétique} de \textbf{raison} $r$ si pour tout $n \in \N$, \fbox{$u_{n+1} = u_n + r$}. Alors $u_n = u_0 + nr$
-		\item $u$ est une suite \textbf{géométrique} de \textbf{raison} $q$ si pour tout $n \in \N$, \fbox{$u_{n+1} = q u_n$}. Alors $u_n = u_0 q^n$ 
-		\item $u$ est une suite définie par une relation de récurrence si pour tout $n \in \N$, \fbox{$u_{n+1} = f(u_n)$}.
+		\item $(u_n)$ est une suite \textbf{arithmétique} de \textbf{raison} $r$ si pour tout $n \in \N$, \fbox{$u_{n+1} = u_n + r$}. Alors \fbox{$u_n = u_0 + nr$}
+		\item $(u_n)$ est une suite \textbf{géométrique} de \textbf{raison} $q$ si pour tout $n \in \N$, \fbox{$u_{n+1} = q u_n$}. Alors \fbox{$u_n = u_0 q^n$} 
+		\item $(u_n)$ est une suite définie par une relation de récurrence si pour tout $n \in \N$, \fbox{$u_{n+1} = f(u_n)$}.
 	\end{itemize}
 \end{easybox}
 
 \begin{easybox}[Suites géométriques]{}
-\includegraphics[width=0.95\linewidth]{rev07.png}
+\includegraphics[width=0.99\linewidth]{rev07.png}
 \end{easybox}
+
+
+
+
+\begin{exercice_cours}[Suites numériques]{}
+	Soit $(u_n)$ la suite définie par $u_0=50$ et $u_{n+1}=0.8u_n+30$.
+\begin{enumerate}
+	\item Calculer $u_1$, $u_2$ et $u_3$.
+	\item Déterminer à partir de quelle valeur de $n$ la suite $(u_n)$ devient supérieure à $100$.
+	\item Montrer que la suite $(u_n)$ a pour limite $150$
+\end{enumerate}
+\end{exercice_cours}
+
+\begin{exercice_cours}[Suites géométriques]{}
+	Soit $(u_n)$ la suite définie par $u_0=3$ et $u_{n+1}=2u_n$.
+\begin{enumerate}
+	\item Calculer $u_1$, $u_2$ et $u_3$.
+	\item Exprimer $u_n$ en fonction de $n$.
+	\item Grâce à un algorithme, déterminer à partir de quelle valeur de $n$ la suite $(u_n)$ devient supérieure à $1000$.
+\end{enumerate}
+\end{exercice_cours}
 
 \begin{easybox}[Trigonométrie]{}
 	\includegraphics[width=0.95\linewidth]{03.jpg}
@@ -249,91 +387,3 @@ Résolution de l'équation $az^2+bz+c=0$:
 \end{easybox}
 
 \pagebreak
-
-\begin{exercice_cours}[Probabilités]{}
-
-Une entreprise fabrique des objets qui peuvent être produit depuis la ligne de production $A$ ou la ligne de production $B$.
-
-\begin{itemize}
-	\item $60\%$ des objets sont produits par la ligne $A$ et $40\%$ par la ligne $B$.
-	\item $2\%$ des objets produits par la ligne $A$ sont défectueux, tandis que $5\%$ des objets produits par la ligne $B$ sont défectueux.
-\end{itemize}
-
-\begin{enumerate}
-		\item Construire un arbre de probabilités modélisant la situation.
-		\item Calculer la probabilité qu'un objet choisi au hasard provienne de la ligne $A$ et soit défectueux.
-		\item Calculer la probabilité qu'un objet choisi au hasard soit défectueux.
-		\item Sachant qu'un objet choisi au hasard est défectueux, calculer la probabilité qu'il provienne de la ligne $A$.
-\end{enumerate}
-
-\end{exercice_cours}
-
-\begin{exercice_cours}[Répétition d'épreuves]{}
-
-	On prélève au hasard un objet dans une production. La probabilité que cet objet soit défectueux est de $0,03$. On répète cette expérience $n=20$ fois de manière identique et indépendante. Soit $X$ la variable aléatoire qui compte le nombre d'objets défectueux parmi les 20 prélevés.
-\begin{enumerate}
-	\item Quelle est la loi de probabilité suivie par $X$? Justifier votre réponse.
-	\item Calculer $P(X=0)$, $P(X=1)$ et $P(X \geq 2)$.
-	\item Calculer l'espérance, la variance et l'écart-type de $X$.
-	\item $n$ objets sont prélevés au hasard dans cette production. On suppose que la probabilité qu'un objet soit défectueux est toujours de $0,03$ et que les prélèvements sont indépendants. 
-
-Combien de fois doit-on répéter cette expérience pour que la probabilité d'obtenir au moins un objet défectueux soit supérieure à $0,95$?
-
-\end{enumerate}
-
-
-\end{exercice_cours}
-
-
-\begin{exercice_cours}[Fonctions exponentielles]{}
-
-La tension $u(t)$ (en volts) aux bornes d'un condensateur en fonction du temps $t$ en millisecondes est modélisé par la fonction $f(t)=(ax+b)\e^{-x}$.
-
-
-\begin{enumerate}
-	\item Déterminer les constantes $a$ et $b$ à partir des conditions suivantes:
-	\begin{itemize}
-		\item $f(0)=5$ volts
-		\item $f'(0)=1$
-	\end{itemize}
-	\item Calculer la dérivée de $f$ et déterminer les intervalles de croissance et de décroissance de $f$.
-
-	\item Calculer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $t=0$.
-	\item Déterminer pour quelle valeur de $t$ la tension devient inférieure à $1$ volt.
-	\item Calculer la valeur moyenne de $f$ sur l'intervalle $\ff{0}{5}$.
-\end{enumerate}
-
-\end{exercice_cours}
-
-
-\begin{exercice_cours}[Fonctions logarithmiques]{}
-
-Soit $f$ la fonction définie sur $\ff{1}{10}$ par $f(x)=a\ln(x)+bx$.
-
-\begin{enumerate}
-	\item Déterminer les constantes $a$ et $b$ telles que $f(1)=5$ et que le minimum est atteint pour $x=4$.
-	\item Calculer la dérivée de $f$ et déterminer les intervalles de croissance et de décroissance de $f$.
-	\item Déterminer pour quelles valeurs de $x$ la fonction $f$ est négative.
-	\item Calculer l'équation de la tangente à la courbe représentative de $f$ au point d'abscisse $x=1$.
-	\item Calculer la valeur moyenne de $f$ sur l'intervalle $\ff{1}{10}$.
-\end{enumerate}
-
-\end{exercice_cours}
-
-\begin{exercice_cours}[Suites numériques]{}
-	Soit $(u_n)$ la suite définie par $u_0=50$ et $u_{n+1}=0.8u_n+30$.
-\begin{enumerate}
-	\item Calculer $u_1$, $u_2$ et $u_3$.
-	\item Déterminer à partir de quelle valeur de $n$ la suite $(u_n)$ devient supérieure à $100$.
-	\item Montrer que la suite $(u_n)$ a pour limite $150$
-\end{enumerate}
-\end{exercice_cours}
-
-\begin{exercice_cours}[Suites géométriques]{}
-	Soit $(u_n)$ la suite définie par $u_0=3$ et $u_{n+1}=2u_n$.
-\begin{enumerate}
-	\item Calculer $u_1$, $u_2$ et $u_3$.
-	\item Exprimer $u_n$ en fonction de $n$.
-	\item Grâce à un algorithme, déterminer à partir de quelle valeur de $n$ la suite $(u_n)$ devient supérieure à $1000$.
-\end{enumerate}
-\end{exercice_cours}

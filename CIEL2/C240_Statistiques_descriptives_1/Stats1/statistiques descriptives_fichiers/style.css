@@ -1,0 +1,953 @@
+body {
+    background-color: rgba(255, 255, 255);
+    /*padding-top: 100px;*/
+    counter-reset: numexo;
+    /*numero d'exercices*/
+    counter-reset: numcom;
+    /*numero de remarques*/
+    counter-reset: numdef;
+    /*numero de definition*/
+    counter-reset: numprop;
+    /*numero de propriété*/
+    counter-reset: numth;
+    /*numero de theoreme*/
+    counter-reset: nummeth;
+    /*numero des méthodes*/
+    counter-reset: nump;
+    /*numero de partie*/
+    counter-reset: numsp;
+    /*numero de sous partie*/
+    counter-reset: numex;
+    /*numero d'exemples'*/
+    counter-reset: numqcm;
+    /*numero des QCM*/
+    counter-reset: numco;
+    /*numero d'exemples'*/
+    counter-reset: numbil;
+    /*numero des bilans'*/
+    counter-reset: numexobac;
+    /*numero des exercices de bac'*/
+    counter-reset: numtest;
+    /*numero des tests'*/
+    padding-bottom: 400px;
+    /* teinte de police : #527394 */
+}
+
+h2 {
+    counter-increment: nump;
+    counter-reset: numsp;
+}
+
+h2:before {
+    content: counter(nump) ". ";
+}
+
+h3 {
+    counter-increment: numsp;
+}
+
+h3:before {
+    content: counter(nump)"." counter(numsp)". ";
+}
+
+table {
+    /*mise en forme des tableaux*/
+    width: auto;
+    /* S'adapte au contenu */
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    /*Mise en forme des cellules du tableau*/
+    border: 1px solid black;
+    /*width: 3%;*/
+    padding: 5px;
+    text-align: center;
+}
+
+.requi {
+    /*prérequis*/
+    border-left: 3px solid rgb(190, 13, 111);
+    background-color: rgb(199, 179, 190);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.requi:before {
+    content: "Prérequis ";
+    color: rgb(190, 13, 111);
+    font-weight: bold;
+}
+
+.hist {
+    /*pour l'histoire des sciences*/
+    background-image: url(parch.jpg);
+    padding: 10px 50px 20px 10px;
+    border: 2px solid rgb(230, 188, 52);
+    margin-bottom: 1em;
+}
+
+.hist:before {
+    content: "Un peu d'histoire... ";
+    display: block;
+    width: 400px;
+    height: 40px;
+    text-decoration: underline;
+}
+
+.cul {
+    /*pour la culture des sciences*/
+    background-image: url(cul.jpg);
+    padding: 10px 50px 20px 10px;
+    background-size: 40%;
+    margin-bottom: 1em;
+}
+
+.cul:before {
+    content: "Soif de culture";
+    font: italic small-caps bold 16px/2 cursive;
+}
+
+.sean {
+    /*pour le cahier de texte*/
+    counter-increment: numdef;
+    border-left: 3px solid rgb(168, 180, 114);
+    background-color: rgb(240, 252, 231);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.sean:before {
+    content: "Séance du ";
+    text-decoration: underline;
+}
+
+.todo {
+    /*pour donner les devoirs à faire*/
+    counter-increment: numdef;
+    border-left: 3px solid rgb(182, 64, 113);
+    background-color: rgb(248, 222, 236);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.todo:before {
+    content: "à faire pour le ";
+    color: rgb(182, 64, 113);
+    font-weight: bold;
+}
+
+.def {
+    /*définitions*/
+    counter-increment: numdef;
+    border-left: 3px solid blue;
+    background-color: rgb(231, 233, 252);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.def:before {
+    content: "Définition " counter(numdef);
+    color: blue;
+    display: block;
+    width: 400px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.meth {
+    /*methode*/
+    counter-increment: nummeth;
+    border-left: 3px solid rgb(255, 136, 0);
+    background-color: rgb(255, 231, 209);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.meth:before {
+    content: "Méthode " counter(nummeth);
+    color: rgb(255, 136, 0);
+    display: block;
+    width: 400px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.prop {
+    /*propriété*/
+    counter-increment: numprop;
+    border-left: 3px solid green;
+    background-color: rgb(223, 244, 223);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.prop:before {
+    content: "Propriété " counter(numprop);
+    color: green;
+    display: block;
+    width: 400px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.th {
+    /*théorème*/
+    counter-increment: numth;
+    border-left: 3px solid red;
+    background-color: rgb(255, 239, 239);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.th:before {
+    content: "Théorème " counter(numth);
+    color: red;
+    display: block;
+    width: 400px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.cor {
+    /*corollaire*/
+    counter-increment: numco;
+    border-left: 3px solid red;
+    background-color: rgb(255, 239, 239);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.cor:before {
+    content: "Corollaire " counter(numco);
+    color: red;
+    font-weight: bold;
+}
+
+.demo {
+    /*démonstration*/
+    border-left: 3px solid rgb(124, 72, 120);
+    border-bottom: 3px solid rgb(124, 72, 120);
+    background-color: rgb(218, 208, 216);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.demo:before {
+    content: "Démonstration  ";
+    font-weight: bold;
+    display: block;
+    width: 400px;
+    height: 40px;
+    color: rgb(124, 72, 120);
+}
+
+.bil {
+    /*bilan*/
+    counter-increment: numbil;
+    border-left: 3px solid rgb(215, 13, 247);
+    background-color: rgb(238, 205, 243);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.bil:before {
+    content: "Bilan " counter(numbil);
+    color: blue;
+    display: block;
+    width: 400px;
+    height: 40px;
+    font-weight: bold;
+}
+
+.exo {
+    /*exercices*/
+    counter-increment: numexo;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: rgb(252, 252, 252);
+    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.exo:before {
+    content: "Exercice " counter(numexo) ".";
+    display: block;
+    width: 400px;
+    height: 40px;
+    text-decoration: underline;
+}
+
+.exobac {
+    /*exercices*/
+    counter-increment: numexobac;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: rgb(140, 175, 250);
+    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.exobac:before {
+    content: "Extrait du baccalauréat n° " counter(numexobac) ".";
+    display: block;
+    width: 400px;
+    height: 40px;
+    text-decoration: underline;
+}
+
+.warning {
+    /*attention*/
+    color: red;
+    background-color: pink;
+    animation: allblink 2s infinite;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-top: 2em;
+    border-left: 4px solid red;
+    margin-bottom: 2em;
+}
+
+@keyframes allblink {
+    0% {}
+
+    50% {
+        color: green;
+        background-color: lightgreen;
+    }
+}
+
+.debloc {
+    /*code de déblocage*/
+    padding: 15px;
+    background-color: rgb(230, 230, 230);
+    margin-top: 20px;
+    border-left: 2px solid rgb(150, 150, 150);
+}
+
+.correc {
+    /*correction*/
+    padding: 15px;
+    background-color: rgb(230, 248, 220);
+    margin: 20px;
+    border: 2px dotted rgb(44, 146, 3);
+}
+
+.correc:before {
+    content: "Code valide. Voici une correction possible : ";
+    display: block;
+}
+
+/*Correction de certains exercices de renforcement*/
+.correc_renf {
+    padding: 15px;
+    background-color: rgb(230, 248, 220);
+    margin: 20px;
+    border: 2px dotted rgb(44, 146, 3);
+}
+
+.correc_renf:before {
+    content: "Voici une correction possible : ";
+    display: block;
+}
+
+
+
+/*Pour afficher des aides par code*/
+/*Utilisés dans le Concours Général*/
+.aides {
+    padding: 15px;
+    background-color: rgb(230, 248, 220);
+    margin: 0px 20px 20px 20px;
+    border: 2px dotted rgb(44, 146, 3);
+}
+.aides_affiche {
+    background-color: rgb(230, 248, 220);
+    display: inline;
+}
+/*Utilisés en NSI*/
+.aide_clic{
+    padding: 15px;
+    background-color: rgb(252, 226, 244);
+    margin: 0px 20px 20px 20px;
+    border: 2px dotted rgb(252, 111, 221);
+}
+
+
+.btn-plus {
+    /*plus d'explications*/
+    color: #fff;
+    background-color: #673ff5;
+    margin-bottom: 20px !important;
+}
+
+.qcm {
+    /*exercices*/
+    counter-increment: numqcm;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: rgb(240, 220, 252);
+    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.qcm:before {
+    content: "Q.C.M. " counter(numqcm) " :";
+    display: block;
+    width: 400px;
+    height: 40px;
+    text-decoration: underline;
+}
+
+.test {
+    /*exercices*/
+    counter-increment: numtest;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: rgb(207, 184, 220);
+    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.test:before {
+    content: "autotest " counter(numtest) " :";
+    display: block;
+    width: 400px;
+    height: 40px;
+    text-decoration: underline;
+}
+/*Pour un effet de zoom par 2 lorsque l'on maintient un clic droit sur une image (pas de classe nécessaire ici)*/
+img {
+    transition: -webkit-transform 0.25s ease; /*pour l'effet de zoom progressif*/
+}
+img:active {
+    /*Deux lignes pour centrer l'image lors du zoom*/
+    display: block;
+    margin: auto;
+    -webkit-transform: scale(2);/*zoom par 2 pour safari et Chrome*/
+    transform: scale(2);/*zoom par 2 pour tous les autres navigateurs*/
+}
+
+/*.expe {}*/
+
+.expe:after {
+    content: url(p3.jpg)
+}
+
+/*.fonda {}*/
+
+.fonda:after {
+    content: url(p1.jpg)
+}
+
+/*.confi {}*/
+
+.confi:after {
+    content: url(p2.jpg)
+}
+
+/*.exp {}*/
+
+.exp:before {
+    background: url(p3.jpg);
+    background-size: 75px 28px;
+    background-repeat: no-repeat;
+    background-position: top 0px left 100px;
+}
+
+/*.ar {}*/
+
+.ar:before {
+    background: url(p5.png);
+    background-size: 75px 28px;
+    background-repeat: no-repeat;
+    background-position: top 0px left 100px;
+}
+
+/*.dem {}*/
+
+.dem:before {
+    background: url(p5.jpg);
+    background-size: 75px 28px;
+    background-repeat: no-repeat;
+    background-position: top 0px left 100px;
+}
+
+/*.conf {}*/
+
+.conf:before {
+    background: url(p2.jpg);
+    background-size: 75px 28px;
+    background-repeat: no-repeat;
+    background-position: top 0px left 100px;
+}
+
+/*.fond {}*/
+
+.fond:before {
+    background: url(p1.jpg);
+    background-size: 75px 28px;
+    background-repeat: no-repeat;
+    background-position: top 0px left 100px;
+}
+
+/*.renf {}*/
+
+.renf:before {
+    background: url(p4.jpg);
+    background-size: 75px 28px;
+    background-repeat: no-repeat;
+    background-position: top 0px left 100px;
+}
+
+.exow {
+    /*exercices de warm up*/
+    counter-increment: numexo;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+    background-color: rgb(252, 252, 252);
+    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.exow:before {
+    content: "Challenge " counter(numexo) ".";
+    display: block;
+    width: 400px;
+    height: 40px;
+    text-decoration: underline;
+
+
+    /* test pour animation opposition deux couleurs
+
+    background-color: red;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9) 40%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 60%);
+    color: white;
+    height: 100%;
+    width:100%;
+    -moz-animation-name: move_separateur;
+    -moz-animation-duration: 4s;
+    -moz-animation-delay: 0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite ;
+    -moz-animation-direction: alternate;
+    animation-name: move_separateur;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate;
+    /*animation: move_separateur 4s linear 0s alternate infinite ; forme condensée
+    -webkit-animation: 4s linear 0s infinite alternate move_separateur; /*Pour Chrome et Safari
+
+    @keyframes move_separateur{
+        from {
+            margin-left: 100%;
+        }
+
+        to {
+            margin-left: 120%;
+        }
+    }
+
+    /*Pour Chrome et Safari
+    @-webkit-keyframes move_separateur{
+        from {
+            margin-left: -100%;
+        }
+
+        to {
+            margin-left: 300%;
+        }
+    }*/
+
+
+}
+
+
+.sav {
+    /*balise Bilan indiquer ce qu'il y a à savoir*/
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    font-style: italic;
+    background-color: rgb(240, 160, 240);
+}
+
+.sav:before {
+    content: "Savoir ";
+    text-decoration: underline;
+}
+
+.sf {
+    /*balise Bilan indiquer ce qu'il y a à savoir faire*/
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    font-style: italic;
+    background-color: rgb(238, 212, 248);
+}
+
+.sf:before {
+    content: "Savoir Faire  ";
+    text-decoration: underline;
+}
+
+.algo {
+    /*algorithmes*/
+    background-color: rgb(243, 204, 217);
+    border-left: 2px solid red;
+    margin-bottom: 1em;
+}
+
+.com {
+    /*à utiliser pour mettre un commentaire ou une remarque*/
+    counter-increment: numcom;
+    border: 2px outset;
+    background-color: rgb(255, 236, 211);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.com:before {
+    content: "Remarque(s) " counter(numcom) " : ";
+    display: block;
+    width: 400px;
+    height: 40px;
+    text-decoration: underline;
+}
+
+.pouce {
+    /*un peit coup de pousse...*/
+    border: 2px outset;
+    background-color: rgb(255, 194, 243);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 10px;
+}
+
+.pouce:before {
+    content: "Coup de pouce \01F44D";
+    display: block;
+    width: 400px;
+    height: 20px;
+    text-decoration: underline;
+}
+
+.indic {
+    /*à utiliser pour mettre une indication*/
+    border: 2px outset;
+    background-color: rgb(206, 205, 205);
+    font-size: 24px
+}
+
+.val {
+    /*à utiliser pour mettre en valeur un élément du texte*/
+    font-weight: bolder;
+    font-family: "Gill Sans", sans-serif;
+    background: content-box radial-gradient(rgb(231, 230, 125), rgb(240, 101, 110));
+}
+
+.enc {
+    /*à utiliser plutôt avec span pour encadrer et étiqueter expert au autre*/
+    border: 2px solid rgb(128, 26, 0);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 2px;
+}
+
+.ex {
+    /*exemples*/
+    counter-increment: numex;
+    border-left: 3px solid rgb(148, 237, 240);
+    background-color: rgb(243, 253, 251);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+.ex:before {
+    content: "Exemple " counter(numex) ". ";
+    display: block;
+    width: 400px;
+    height: 40px;
+}
+
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+.navbar .container .navbar-brand {
+    font-size: 17px;
+}
+
+.test {
+    /*algorithmes*/
+    background-color: rgb(159, 255, 185);
+    border-left: 2px solid rgb(1, 141, 20);
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+
+/* pour gérer des tableaux : https://www.zonecss.fr/faq/les-tableaux-et-les-css.html */
+
+.tableau {
+    table-layout: fixed;
+    /*seule la première ligne du tableau est prise en compte pour calculer la taille de chaque colonne*/
+    width: 100%;
+    border-collapse: collapse;
+    /* Fusion des bordures des cellules du tableau HTML entre elles */
+    text-align: center;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    border: medium solid rgb(0, 0, 0);
+}
+
+.tableau th {
+    border: thin solid rgb(0, 0, 0);
+    /*padding: 5px;  Toutes les balises TH du tableau auront une marge intérieure*/
+    background-color: rgb(177, 203, 204);
+    vertical-align: middle;
+    /* Toutes les balises TH du tableau auront un alignement vertical centré , sinon changer en top ou bottom*/
+    text-align: center;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    font-weight: bold;
+}
+
+.tableau td {
+    border: thin solid rgb(0, 0, 0);
+}
+
+.tableau_invisible {
+    border: 0px;
+}
+
+/* tableau sans chevauchement des noms : class tableau mais avec table-layout à auto*/
+.tableadapte {
+    table-layout: auto;
+    /*seule la première ligne du tableau est prise en compte pour calculer la taille de chaque colonne*/
+    width: 100%;
+    border-collapse: collapse;
+    /* Fusion des bordures des cellules du tableau HTML entre elles */
+    text-align: center;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    border: medium solid rgb(0, 0, 0);
+}
+
+.tableadapte th {
+    border: thin solid rgb(0, 0, 0);
+    /*padding: 5px;  Toutes les balises TH du tableau auront une marge intérieure*/
+    background-color: rgb(177, 203, 204);
+    vertical-align: middle;
+    /* Toutes les balises TH du tableau auront un alignement vertical centré , sinon changer en top ou bottom*/
+    text-align: center;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    font-weight: bold;
+}
+
+.tableadapte td {
+    border: thin solid rgb(0, 0, 0);
+}
+
+.tableau_invisible {
+    border: 0px;
+}
+
+#retour_haut {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    bottom: 60px;
+    right: 40px;
+}
+
+.bon {
+    color: forestgreen;
+}
+
+.erreur {
+    color: red;
+}
+
+.tableau_inv {
+    table-layout: auto;
+    /* fixed : seule la première ligne du tableau est prise en compte pour calculer la taille de chaque colonne*/
+    width: 100%;
+    margin-left: auto;
+    text-align: start;
+    /* Les cellules du tableau présenteront un alignement horizontal à droite (sinon center, left ou right ou justify*/
+    border: 0px;
+}
+
+
+/*Création d'une classe entité pour la base de données */
+
+.ent {
+    table-layout: fixed;
+    /*seule la première ligne du tableau est prise en compte pour calculer la taille de chaque colonne*/
+    width: 150px;
+    border-collapse: collapse;
+    /* Fusion des bordures des cellules du tableau HTML entre elles */
+    text-align: left;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    border: medium solid rgb(0, 0, 0);
+}
+
+.ent .id {
+    border: thin solid rgb(0, 0, 0);
+    background-color: rgb(177, 203, 204);
+    vertical-align: middle;
+    /* Toutes les balises TH du tableau auront un alignement vertical centré , sinon changer en top ou bottom*/
+    text-align: left;
+}
+
+.ent th {
+    /* border: thin solid rgb(0, 0, 0);*/
+    border: 0;
+    /*padding: 5px;  Toutes les balises TH du tableau auront une marge intérieure*/
+    background-color: rgb(177, 203, 204);
+    vertical-align: middle;
+    /* Toutes les balises TH du tableau auront un alignement vertical centré , sinon changer en top ou bottom*/
+    text-align: left;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    /* font-weight: bold; */
+}
+
+.ent td {
+    border: thin solid rgb(0, 0, 0);
+}
+
+.ent thead th {
+    background-color: rgb(116, 147, 148);
+}
+
+.asso {
+    table-layout: auto;
+    /*seule la première ligne du tableau est prise en compte pour calculer la taille de chaque colonne*/
+    width: 100px;
+    border-collapse: separate;
+    /* Fusion des bordures des cellules du tableau HTML entre elles */
+    text-align: left;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    border-style: dashed double none rgb(0, 0, 0);
+}
+
+.asso th {
+    /* border: thin solid rgb(0, 0, 0);*/
+    border: 0;
+    padding: 5px;
+    /*Toutes les balises TH du tableau auront une marge intérieure*/
+    background-color: rgb(180, 204, 177);
+    vertical-align: middle;
+    /* Toutes les balises TH du tableau auront un alignement vertical centré , sinon changer en top ou bottom*/
+    text-align: left;
+    /* Les cellules du tableau présenteront un alignement horizontal centré (sinon right, left ou justify*/
+    /* font-weight: bold; */
+}
+
+.asso td {
+    border: thin solid rgb(0, 0, 0);
+}
+
+.asso thead th {
+    background-color: rgb(97, 141, 97);
+}
+
+.mln {
+    position: relative;
+    bottom: 12px;
+}
+
+
+.english2 {
+    background: url(english.jpg) center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 50px 20px 10px;
+    border: 2px solid rgb(15, 73, 233, 0.3);
+    margin-bottom: 1em;
+    opacity: 0.7;
+    filter: contrast(2);
+}
+
+.exo_english {
+    /*exercices en anglais*/
+    /*counter-increment: numexo;
+     border-left: 4px solid black;
+     border-bottom: 4px solid black;
+     margin-bottom: 1em;
+     font-size: 16px;
+     padding: 5px;*/
+    position: relative;
+}
+
+.exo_english::before {
+    content: "Exercice n° " counter(numexo) ".";
+    color: black;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    filter: contrast(2);
+    background-image: url(english.webp);
+    background-repeat: repeat;
+    background-position: 0% 0;
+    background-size: contain;
+    /* cover si adapatation au contenant sans duplication*/
+}
+
+.englishtext {
+    position: relative;
+}
+
+.flex{/* pour gérer les flexbox*/
+    display: flex; /* pour que le conteneur de cette classe soit flexible*/
+    flex-direction: row; /*direction principal de disposition des éléments : en ligne de gauche à droite. Valeur par défaut */
+    flex-wrap: wrap; /*Pour permettre une adaptation à la largeur : retour à la ligne si pas assez de place*/
+}
+
+.flex > * {/*Pour imposer aux enfants de réduire leur taille pour qu'au moins deux tiennent sur une ligne*/
+    flex: 1 1;
+  }
+
+code.python-language i {
+    /*Pour empêcher la sélection de l'icône de copie du code python */
+  user-select: none;
+  -webkit-user-select: none; /* pour Chrome, Safari */
+  -moz-user-select: none;    /* pour Firefox */
+  -ms-user-select: none;     /* pour IE/Edge */
+}
+
+/*
+.tag {
+    à utiliser pour mettre un commentaire ou une remarque
+    counter-increment: numcom;
+    border: 2px outset;
+    background-color: rgb(252, 247, 239);
+    padding: 5px;
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+*/

@@ -1,0 +1,159 @@
+\documentclass[a4paper,10pt]{report}
+
+\def\packagepath{../../preambule}   % path du package princial
+\usepackage{\packagepath/preambule}    % utilisation du fichier de configuration
+
+\def\level{Première }              % Classe
+\def\course{NSI}              % Matière
+\def\eval{DS02 - Fonctions - IF}
+
+\def\visibleornot{visible}    % visible or invisible
+\def\documentpath{./Sources_Latex}
+\def\date{Mardi 30 Septembre 2025}
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableau
+
+\def\ptsexoA{4}
+\def\ptsexoB{2}
+\def\ptsexoC{2}
+\def\ptsexoD{3}
+\def\ptsexoE{2}
+\def\ptsexoF{1}
+\def\ptsexoG{2}
+
+\def\ptstotal{\ptsexoA+\ptsexoB}
+
+\usepackage{hyperref}
+
+\usetikzlibrary{shapes, arrows, positioning}
+\usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing}
+
+\tikzstyle{etat} = [draw, rounded corners=15pt, minimum width=2.5cm, minimum height=1.2cm, text centered, font=\bfseries]
+\tikzstyle{nouveau} = [etat, fill=blue!40]
+\tikzstyle{pret} = [etat, fill=green!60]
+\tikzstyle{elu} = [etat, fill=yellow!60]
+\tikzstyle{bloque} = [etat, fill=red!60]
+\tikzstyle{termine} = [etat, fill=white]
+\tikzstyle{fleche} = [thick, ->, >=stealth]
+
+\usepackage{float} % Permet d'utiliser [H]
+\usepackage[T1]{fontenc}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+
+%\PageGardeSujetBac[Matiere = Numérique et Sciences Informatiques,
+%                  Session = 2025,
+%                  AffJour=false,
+%                  Duree = {3 heures 30},
+%                  DernierePage = \pageref{LastPage},
+%                  ModeExamen=false
+%                  ]
+\renewcommand{\labelitemi}{\textbullet} %pour éviter les tirets dans les "itemize" qui apportent confusion avec le signe moins.
+%% Début page de garde style BAC
+
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\PageGardeSujetBac[clés]
+
+\pagestyle{DS_FP}          % Feuille de style fancy
+\NomPrenomNote{}
+
+
+\exods{\ptsexoA}
+
+
+On considère la fonction \verb|ma_fonction| suivante.
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def ma_fonction(x, y):
+    ''' fonction renvoyant la somme de x et y si x est plus grand que y 
+    renvoie la différence sinon '''
+    if x > y:
+        sortie = x + y
+    else:
+        sortie = x - y 
+    return sortie
+\end{CodePythontexAlt}
+
+\begin{enumerate}
+    \item Quels sont les paramètres de la fonction \verb|ma_fonction|? \dotfill
+    \item Si je veux appliquer ma fonction aux valeurs 5 et 4. que dois-je taper dans la console Python? \dotfill
+    \item Comment se nomme la partie comprise entre les \verb|'''|? \dotfill
+    \item Remplir le tableau suivant lors de l'appel de la fonction \verb|ma_fonction(8, 5)|
+    
+    \begin{minipage}{0.6\linewidth}
+        \begin{itemize}
+        \item Dans la colonne ligne, indiquer à quelle ligne on se trouve
+        \item Dans la colonne IF indiquer True ou False suivant si la ligne 4 est vraie ou fausse;
+        \item Dans la colonne sortie, indiquer la valeur de la variable sortie.
+    \end{itemize}
+    \end{minipage}
+    \begin{minipage}{0.39\linewidth}
+         \begin{tabular}{|p{1.5cm}|p{1cm}|p{1.5cm}|}
+        \hline
+    Ligne & IF & sortie \\ \hline 
+    && \\ \hline       
+    && \\ \hline       
+    && \\ \hline       
+    && \\ \hline       
+    && \\ \hline       
+    \end{tabular}
+    \end{minipage}
+
+    
+   
+\end{enumerate}
+
+
+\bigskip
+
+\exods{\ptsexoB}
+
+Ecrire le code de la fonction \verb|moyenne(a, b, c)| qui renvoie la moyenne des valeurs $a$, $b$ et $c$.
+
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def moyenne(a, b, c):
+    ''' Renvoie la moyenne de a, b et c '''
+
+
+
+
+
+    #
+\end{CodePythontexAlt}
+
+
+\bigskip
+
+\exods{\ptsexoC}
+
+Ecrire le code de la fonction \verb|est_plus_long(mot1, mot2)| qui renvoie \verb|True| si \verb|mot1| est plus long que \verb|mot2| et False sinon.
+
+On supposera que \verb|mot1| et \verb|mot2| sont deux chaines de caractères. On utilisera obligatoirement un IF.
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def est_plus_long(mot1, mot2):
+    ''' Renvoie True si mot1 et plus long que mot2 et False sinon '''
+
+
+
+
+
+
+    #
+\end{CodePythontexAlt}
+
+
+\bigskip
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
