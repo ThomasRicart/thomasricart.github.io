@@ -2,6 +2,6 @@
 nav:
   - index.md
   - "Algos Programmation": 1NSI_AP_Algos_Programmation
-  - "Representation Trait Données": 1_NSI_RD_Representation_Traitement_Donnees
-  - "Archi Reseau Syst Exploit": 1_NSI_ARSE_Arch_Reseau_SE
+  - "Representation Trait Données": 1NSI_RD_Representation_Traitement_Donnees
+  - "Archi Reseau Syst Exploit": 1NSI_ARSE_Arch_Reseau_SE
 
