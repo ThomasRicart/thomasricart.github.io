@@ -1,0 +1,1548 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Windows 98 OS Only Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function sfcscanchkdelay()
+{
+    window.setTimeout("sfcscanchkdelay2()",1000)
+}
+function sfcscanchkdelay2()
+{
+    MM_showHideLayers('sfcscanfin','','show')
+}
+
+function arprogwspwdelay()
+{
+    window.setTimeout("arprogwspwdelay2()",1000)
+}
+function arprogwspwdelay2()
+{
+    MM_showHideLayers('arprogwspw','','hide')
+}
+
+function commmoddelay()
+{
+    window.setTimeout("commmoddelay2()",1500)
+}
+function commmoddelay2()
+{
+    MM_showHideLayers('moddiagmi','','show','commmod','','hide')
+}
+
+function newmodlookdelay()
+{
+    window.setTimeout("newmodlookdelay2()",1000)
+}
+function newmodlookdelay2()
+{
+    MM_showHideLayers('newmodqm','','show','newmodlook','','hide');newmodqmdelay()
+}
+
+function newmodqmdelay()
+{
+    window.setTimeout("newmodqmdelay2()",1500)
+}
+function newmodqmdelay2()
+{
+    MM_showHideLayers('newmodver','','show','newmodqm','','hide')
+}
+
+function htsplashdelay()
+{
+    window.setTimeout("htsplashdelay2()",1500)
+}
+function htsplashdelay2()
+{
+    MM_showHideLayers('htermnew','','show','htsplash','','hide')
+}
+
+function toiddialinitdelay()
+{
+    window.setTimeout("toiddialinitdelay2()",250)
+}
+function toiddialinitdelay2()
+{
+    MM_showHideLayers('toiddialdial','','show','toiddialinit','','hide');toiddialdialdelay()
+}
+
+function toiddialdialdelay()
+{
+    window.setTimeout("toiddialdialdelay2()",1000)
+}
+function toiddialdialdelay2()
+{
+    MM_showHideLayers('toiddialver','','show','toiddialdial','','hide');toiddialverdelay()
+}
+
+function toiddialverdelay()
+{
+    window.setTimeout("toiddialverdelay2()",500)
+}
+function toiddialverdelay2()
+{
+    MM_showHideLayers('toiddiallogon','','show','toiddialver','','hide');toiddiallogondelay()
+}
+
+function toiddiallogondelay()
+{
+    window.setTimeout("toiddiallogondelay2()",750)
+}
+function toiddiallogondelay2()
+{
+    MM_showHideLayers('toiddialconn','','show','dunicon','','show','toiddiallogon','','hide')
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#008080" style="margin: 0px;" onload="show_clock();
+MM_showHideLayers('loading','','hide','loadmsg','','hide','desktop','','show','taskbar','','show','clock','','show','mycomp','','hide','start','','hide','programs','','hide','accessories','','hide','communications','','hide','settings','','hide','find','','hide','findfiles','','hide','findfilesfound','','hide','run','','hide','sfcscan','','hide','sfcext','','hide','sfcscanchk','','hide','sfcscanfin','','hide','sfcextef','','hide','sfcextbf','','hide','sfcextdone','','hide','sfcsetset','','hide','sfcsetsc','','hide','sfcsetadv','','hide','foldoptgen','','hide','foldoptview1','','hide','foldoptview2','','hide','foldoptft','','hide','control','','hide','arprogiu','','hide','arprogwspw','','hide','arprogws','','hide','arprogwsdet','','hide','arprogsd','','hide','modgen','','hide','moddiag','','hide','modpropgen','','hide','modpropconn','','hide','modpropfwd','','hide','modpropconnps','','hide','modpropconnadv','','hide','moddiagdrv','','hide','moddiagmi','','hide','commmod','','hide','dialprop','','hide','dialpropnew','','hide','dialpropccard','','hide','dialpropccardnew','','hide','dialpropccardseq','','hide','newmodstart1','','hide','newmodstart2','','hide','newmodlook','','hide','newmodqm','','hide','newmodver','','hide','newmodddmanu','','hide','newmodddport','','hide','newmodfin','','hide','netconfcmn','','hide','netconfmfl','','hide','netconfnic','','hide','netconfdua','','hide','netconftcpnic','','hide','netconftcpdua','','hide','netconffpsmn','','hide','netident','','hide','netac','','hide','netconfaddcli','','hide','netconfaddadapt','','hide','netconfaddprot','','hide','netconfaddserv','','hide','netconfaddclisel','','hide','netconfaddadaptsel','','hide','netconfaddprotsel','','hide','netconfaddservsel','','hide','netconfcmnprop','','hide','netconfnicpropdt','','hide','netconfnicpropbind','','hide','netconfnicpropadv','','hide','netconfduapropdt','','hide','netconfduapropbind','','hide','netconfduapropadv','','hide','netconftcpnicpropipa','','hide','netconftcpnicpropwins','','hide','netconftcpnicpropgw','','hide','netconftcpnicpropdns','','hide','netconftcpnicpropbind','','hide','netconftcpnicpropadv','','hide','netconftcpnicpropnetb','','hide','netconftcpduapropinfo','','hide','netconftcpduapropipa','','hide','netconftcpduapropwins','','hide','netconftcpduapropgw','','hide','netconftcpduapropdns','','hide','netconftcpduapropbind','','hide','netconftcpduapropadv','','hide','netconftcpduapropnetb','','hide','netconffpsmnprop','','hide','netconffps','','hide','syspropgen','','hide','syspropdm','','hide','sysprophp','','hide','syspropperf','','hide','dun','','hide','dunconn','','hide','dunsetgen','','hide','newtoidname','','hide','newtoidpn','','hide','newtoidfin','','hide','toidrc','','hide','toid','','hide','toiddialprop','','hide','toidpropgen','','hide','toidpropst','','hide','toidpropscr','','hide','toidpropmul','','hide','toidpropconfgen','','hide','toidpropconfconn','','hide','toidpropconfopt','','hide','toidpropconffwd','','hide','toidpropsttcp','','hide','toiddialinit','','hide','toiddialdial','','hide','toiddialver','','hide','toiddiallogon','','hide','toiddialconn','','hide','dunicon','','hide','connstat','','hide','connstatdet','','hide','hyperterm','','hide','htsplash','','hide','htermnew','','hide','htermpn','','hide','htermps','','hide','hterm1','','hide','hterm2','','hide','hterm3','','hide','hterm4','','hide','hterm5','','hide');
+MM_preloadImages('loading.png','dticons.png','startbut.png','tbar.png','systray.png','mycomp.png','start.png','programs.png','accessories.png','communications.png','settings.png','find.png','findfiles.png','findfilesfound.png','run.png','sfcscan.png','sfcext.png','sfcscanchk.png','sfcscanfin.png','sfcextef.png','sfcextbf.png','sfcextdone.png','sfcsetset.png','sfcsetsc.png','sfcsetadv.png','foldoptgen.png','foldoptview1.png','foldoptview2.png','foldoptft.png','control.png','arprogiu.png','arprogwspw.png','arprogws.png','arprogwsdet.png','arprogsd.png','modgen.png','moddiag.png','modpropgen.png','modpropconn.png','modpropfwd.png','modpropconnps.png','modpropconnadv.png','moddiagdrv.png','moddiagmi.png','commmod.png','dialprop.png','dialpropnew.png','dialpropccard.png','dialpropccardnew.png','dialpropccardseq.png','newmodstart1.png','newmodstart2.png','newmodlook.png','newmodqm.png','newmodver.png','newmodddmanu.png','newmodddport.png','newmodfin.png','netconfcmn.png','netconfmfl.png','netconfnic.png','netconfdua.png','netconftcpnic.png','netconftcpdua.png','netconffpsmn.png','netident.png','netac.png','netconfaddcli.png','netconfaddadapt.png','netconfaddprot.png','netconfaddserv.png','netconfaddclisel.png','netconfaddadaptsel.png','netconfaddprotsel.png','netconfaddservsel.png','netconfcmnprop.png','netconfnicpropdt.png','netconfnicpropbind.png','netconfnicpropadv.png','netconfduapropdt.png','netconfduapropbind.png','netconfduapropadv.png','netconftcpnicpropipa.png','netconftcpnicpropwins.png','netconftcpnicpropgw.png','netconftcpnicpropdns.png','netconftcpnicpropbind.png','netconftcpnicpropadv.png','netconftcpnicpropnetb.png','netconftcpduapropinfo.png','netconftcpduapropipa.png','netconftcpduapropwins.png','netconftcpduapropgw.png','netconftcpduapropdns.png','netconftcpduapropbind.png','netconftcpduapropadv.png','netconftcpduapropnetb.png','netconffpsmnprop.png','netconffps.png','syspropgen.png','syspropdm.png','sysprophp.png','syspropperf.png','dun.png','dunconn.png','dunsetgen.png','newtoidname.png','newtoidpn.png','newtoidfin.png','toidrc.png','toid.png','toiddialprop.png','toidpropgen.png','toidpropst.png','toidpropscr.png','toidpropmul.png','toidpropconfgen.png','toidpropconfconn.png','toidpropconfopt.png','toidpropconffwd.png','toidpropsttcp.png','toiddialinit.png','toiddialdial.png','toiddialver.png','toiddiallogon.png','toiddialconn.png','dunicon.gif','connstat.png','connstatdet.png','hyperterm.png','htsplash.png','htermnew.png','htermpn.png','htermps.png','hterm1.png','hterm2.png','hterm3.png','hterm4.png','hterm5.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 225; height: 400; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="desktop" style="z-index: 1; left: 0px; top: 0px; position: absolute;">
+<img src="dticons.png" usemap="#dticons.png" width="73" height="366" border="0" alt="">
+<map name="dticons.png">
+<area shape="rect" coords="4,0,70,53" href="#" alt="My Computer" onclick="MM_showHideLayers('mycomp','','show')">
+</map>
+</div>
+
+<div id="taskbar" style="z-index: 99; left: 0px; top: 572px; position: absolute;">
+<img src="startbut.png" usemap="#startbut.png" width="58" height="28" border="0" alt=""><map name="startbut.png"><area shape="rect" coords="2,4,55,25" href="#" alt="Start" onclick="MM_showHideLayers('start','','show')"></map><img src="tbar.png" width="659" height="28" border="0" alt=""><img src="systray.png" width="83" height="28" border="0" alt="">
+</div>
+
+<div id="clock" style="z-index: 100; left: 760px; top: 579px; position: absolute;">
+<script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script>
+</div>
+
+<div id="mycomp" style="z-index: 10; left: 125px; top: 75px; position: absolute;">
+<img src="mycomp.png" usemap="#mycomp.png" width="500" height="390" border="0" alt="">
+<map name="mycomp.png">
+<area shape="rect" coords="478,6,493,19" href="#" alt="Close" onclick="MM_showHideLayers('mycomp','','hide')">
+<area shape="rect" coords="155,195,224,262" href="#" alt="Control Panel" onclick="MM_showHideLayers('control','','show')">
+<area shape="rect" coords="234,195,294,262" href="#" alt="Dial-Up Networking" onclick="MM_showHideLayers('dun','','show')">
+</map>
+</div>
+
+<div id="start" style="z-index: 100; left: 2px; top: 193px; position: absolute;" onmouseover="MM_showHideLayers('start','','show')" onmouseout="MM_showHideLayers('start','','hide')">
+<img src="start.png" usemap="#start.png" width="181" height="383" border="0" alt="">
+<map name="start.png">
+<area shape="rect" coords="24,44,178,83" href="#" alt="Programs" onmouseover="MM_showHideLayers('programs','','show')" onmouseout="MM_showHideLayers('programs','','hide')">
+<area shape="rect" coords="24,155,178,190" href="#" alt="Settings" onmouseover="MM_showHideLayers('settings','','show')" onmouseout="MM_showHideLayers('settings','','hide')">
+<area shape="rect" coords="24,191,178,226" href="#" alt="Find" onmouseover="MM_showHideLayers('find','','show')" onmouseout="MM_showHideLayers('find','','hide')">
+<area shape="rect" coords="24,263,178,301" href="#" alt="Run" onclick="MM_showHideLayers('run','','show','start','','hide')">
+<area shape="rect" coords="24,343,178,379" href="#" alt="Shut Down" onclick="window.close();">
+</map>
+</div>
+
+<div id="programs" style="z-index: 110; left: 178px; top: 237px; position: absolute;" onmouseover="MM_showHideLayers('start','','show','programs','','show')" onmouseout="MM_showHideLayers('start','','hide','programs','','hide')">
+<img src="programs.png" usemap="#programs.png" width="130" height="107" border="0" alt="">
+<map name="programs.png">
+<area shape="rect" coords="2,2,127,22" href="#" alt="Accessories" onmouseover="MM_showHideLayers('accessories','','show')" onmouseout="MM_showHideLayers('accessories','','hide')">
+</map>
+</div>
+
+<div id="accessories" style="z-index: 120; left: 303px; top: 237px; position: absolute;" onmouseover="MM_showHideLayers('start','','show','programs','','show','accessories','','show')" onmouseout="MM_showHideLayers('start','','hide','programs','','hide','accessories','','hide')">
+<img src="accessories.png" usemap="#accessories.png" width="122" height="167" border="0" alt="">
+<map name="accessories.png">
+<area shape="rect" coords="2,2,119,23" href="#" alt="Communications" onmouseover="MM_showHideLayers('communications','','show')" onmouseout="MM_showHideLayers('communications','','hide')">
+</map>
+</div>
+
+<div id="communications" style="z-index: 130; left: 420px; top: 237px; position: absolute;" onmouseover="MM_showHideLayers('start','','show','programs','','show','accessories','','show','communications','','show')" onmouseout="MM_showHideLayers('start','','hide','programs','','hide','accessories','','hide','communications','','hide')">
+<img src="communications.png" usemap="#communications.png" width="124" height="67" border="0" alt="">
+<map name="communications.png">
+<area shape="rect" coords="2,2,121,22" href="#" alt="Dial-Up Networking" onclick="MM_showHideLayers('dun','','show','start','','hide','programs','','hide','accessories','','hide','communications','','hide')">
+<area shape="rect" coords="2,23,121,42" href="#" alt="HyperTerminal" onclick="MM_showHideLayers('hyperterm','','show','start','','hide','programs','','hide','accessories','','hide','communications','','hide')">
+</map>
+</div>
+
+<div id="settings" style="z-index: 110; left: 178px; top: 345px; position: absolute;" onmouseover="MM_showHideLayers('start','','show','settings','','show')" onmouseout="MM_showHideLayers('start','','hide','settings','','hide')">
+<img src="settings.png" usemap="#settings.png" width="157" height="135" border="0" alt="">
+<map name="settings.png">
+<area shape="rect" coords="2,2,154,23" href="#" alt="Control Panel" onclick="MM_showHideLayers('control','','show','start','','hide','settings','','hide')">
+<area shape="rect" coords="2,63,154,83" href="#" alt="Folder Options" onclick="MM_showHideLayers('foldoptgen','','show','start','','hide','settings','','hide')">
+</map>
+</div>
+
+<div id="find" style="z-index: 110; left: 178px; top: 381px; position: absolute;" onmouseover="MM_showHideLayers('start','','show','find','','show')" onmouseout="MM_showHideLayers('start','','hide','find','','hide')">
+<img src="find.png" usemap="#find.png" width="112" height="87" border="0" alt="">
+<map name="find.png">
+<area shape="rect" coords="2,2,109,23" href="#" alt="Files or Folders" onclick="MM_showHideLayers('findfiles','','show','start','','hide','find','','hide')">
+</map>
+</div>
+
+<div id="findfiles" style="z-index: 100; left: 125px; top: 100px; position: absolute;">
+<img src="findfiles.png" usemap="#findfiles.png" width="484" height="237" border="0" alt="">
+<map name="findfiles.png">
+<area shape="rect" coords="462,6,477,19" href="#" alt="Close" onclick="MM_showHideLayers('findfiles','','hide')">
+<area shape="rect" coords="394,71,468,93" href="#" alt="Find Now" onclick="MM_showHideLayers('findfilesfound','','show','findfiles','','hide')">
+</map>
+</div>
+
+<div id="findfilesfound" style="z-index: 100; left: 125px; top: 100px; position: absolute;">
+<img src="findfilesfound.png" usemap="#findfilesfound.png" width="484" height="329" border="0" alt="">
+<map name="findfilesfound.png">
+<area shape="rect" coords="462,6,477,19" href="#" alt="Close" onclick="MM_showHideLayers('findfilesfound','','hide')">
+<area shape="rect" coords="394,127,468,149" href="#" alt="New Search" onclick="MM_showHideLayers('findfiles','','show','findfilesfound','','hide')">
+</map>
+</div>
+
+<div id="run" style="z-index: 100; left: 5px; top: 405px; position: absolute;">
+<img src="run.png" usemap="#run.png" width="347" height="163" border="0" alt="">
+<map name="run.png">
+<area shape="rect" coords="326,5,341,18" href="#" alt="Close" onclick="MM_showHideLayers('run','','hide')">
+<area shape="rect" coords="96,124,170,146" href="#" alt="OK" onclick="MM_showHideLayers('sfcscan','','show','run','','hide')">
+<area shape="rect" coords="177,124,251,146" href="#" alt="Cancel" onclick="MM_showHideLayers('run','','hide')">
+</map>
+</div>
+
+<div id="sfcscan" style="z-index: 100; left: 150px; top: 100px; position: absolute;">
+<img src="sfcscan.png" usemap="#sfcscan.png" width="423" height="342" border="0" alt="">
+<map name="sfcscan.png">
+<area shape="rect" coords="402,5,417,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcscan','','hide')">
+<area shape="circle" coords="43,159,5" href="#" alt="Extract One File" onclick="MM_showHideLayers('sfcext','','show','sfcscan','','hide')">
+<area shape="rect" coords="170,305,244,327" href="#" alt="Start" onclick="MM_showHideLayers('sfcscanchk','','show','sfcscan','','hide');sfcscanchkdelay()">
+<area shape="rect" coords="252,305,326,327" href="#" alt="Close" onclick="MM_showHideLayers('sfcscan','','hide')">
+<area shape="rect" coords="335,305,409,327" href="#" alt="Settings" onclick="MM_showHideLayers('sfcsetset','','show')">
+</map>
+</div>
+
+<div id="sfcext" style="z-index: 100; left: 150px; top: 100px; position: absolute;">
+<img src="sfcext.png" usemap="#sfcext.png" width="423" height="342" border="0" alt="">
+<map name="sfcext.png">
+<area shape="rect" coords="402,5,417,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcext','','hide')">
+<area shape="circle" coords="43,88,5" href="#" alt="Scan For Altered Files" onclick="MM_showHideLayers('sfcscan','','show','sfcext','','hide')">
+<area shape="rect" coords="170,305,244,327" href="#" alt="Start" onclick="MM_showHideLayers('sfcextef','','show')">
+<area shape="rect" coords="252,305,326,327" href="#" alt="Close" onclick="MM_showHideLayers('sfcext','','hide')">
+<area shape="rect" coords="335,305,409,327" href="#" alt="Settings" onclick="MM_showHideLayers('sfcsetset','','show')">
+</map>
+</div>
+
+<div id="sfcscanchk" style="z-index: 100; left: 150px; top: 100px; position: absolute;">
+<img src="sfcscanchk.png" width="423" height="342" border="0" alt="">
+</div>
+
+<div id="sfcscanfin" style="z-index: 110; left: 175px; top: 150px; position: absolute;">
+<img src="sfcscanfin.png" usemap="#sfcscanfin.png" width="318" height="119" border="0" alt="">
+<map name="sfcscanfin.png">
+<area shape="rect" coords="297,5,312,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcscan','','show','sfcscanchk','','hide','sfcscanfin','','hide')">
+<area shape="rect" coords="146,82,220,104" href="#" alt="OK" onclick="MM_showHideLayers('sfcscan','','show','sfcscanchk','','hide','sfcscanfin','','hide')">
+</map>
+</div>
+
+<div id="sfcextef" style="z-index: 110; left: 150px; top: 125px; position: absolute;">
+<img src="sfcextef.png" usemap="#sfcextef.png" width="420" height="214" border="0" alt="">
+<map name="sfcextef.png">
+<area shape="rect" coords="399,5,414,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcextef','','hide')">
+<area shape="rect" coords="245,175,319,197" href="#" alt="OK" onclick="MM_showHideLayers('sfcextbf','','show','sfcextef','','hide')">
+<area shape="rect" coords="330,175,404,197" href="#" alt="Cancel" onclick="MM_showHideLayers('sfcextef','','hide')">
+</map>
+</div>
+
+<div id="sfcextbf" style="z-index: 110; left: 125px; top: 150px; position: absolute;">
+<img src="sfcextbf.png" usemap="#sfcextbf.png" width="486" height="166" border="0" alt="">
+<map name="sfcextbf.png">
+<area shape="rect" coords="465,5,480,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcextbf','','hide')">
+<area shape="rect" coords="215,129,289,151" href="#" alt="OK" onclick="MM_showHideLayers('sfcextdone','','show','sfcextbf','','hide')">
+<area shape="rect" coords="306,129,380,151" href="#" alt="Skip" onclick="MM_showHideLayers('sfcextdone','','show','sfcextbf','','hide')">
+<area shape="rect" coords="398,129,472,151" href="#" alt="Cancel" onclick="MM_showHideLayers('sfcextbf','','hide')">
+</map>
+</div>
+
+<div id="sfcextdone" style="z-index: 110; left: 225px; top: 175px; position: absolute;">
+<img src="sfcextdone.png" usemap="#sfcextdone.png" width="267" height="119" border="0" alt="">
+<map name="sfcextdone.png">
+<area shape="rect" coords="96,82,170,104" href="#" alt="OK" onclick="MM_showHideLayers('sfcext','','show','sfcextdone','','hide')">
+</map>
+</div>
+
+<div id="sfcsetset" style="z-index: 110; left: 100px; top: 100px; position: absolute;">
+<img src="sfcsetset.png" usemap="#sfcsetset.png" width="428" height="430" border="0" alt="">
+<map name="sfcsetset.png">
+<area shape="rect" coords="407,5,422,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcsetset','','hide')">
+<area shape="rect" coords="62,31,141,49" href="#" alt="Search Criteria" onclick="MM_showHideLayers('sfcsetsc','','show','sfcsetset','','hide')">
+<area shape="rect" coords="142,31,202,49" href="#" alt="Advanced" onclick="MM_showHideLayers('sfcsetadv','','show','sfcsetset','','hide')">
+<area shape="rect" coords="182,397,256,419" href="#" alt="OK" onclick="MM_showHideLayers('sfcsetset','','hide')">
+<area shape="rect" coords="263,397,337,419" href="#" alt="Cancel" onclick="MM_showHideLayers('sfcsetset','','hide')">
+</map>
+</div>
+
+<div id="sfcsetsc" style="z-index: 110; left: 100px; top: 100px; position: absolute;">
+<img src="sfcsetsc.png" usemap="#sfcsetsc.png" width="428" height="430" border="0" alt="">
+<map name="sfcsetsc.png">
+<area shape="rect" coords="407,5,422,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcsetsc','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="Settings" onclick="MM_showHideLayers('sfcsetset','','show','sfcsetsc','','hide')">
+<area shape="rect" coords="143,31,202,49" href="#" alt="Advanced" onclick="MM_showHideLayers('sfcsetadv','','show','sfcsetsc','','hide')">
+<area shape="rect" coords="182,397,256,419" href="#" alt="OK" onclick="MM_showHideLayers('sfcsetsc','','hide')">
+<area shape="rect" coords="263,397,337,419" href="#" alt="Cancel" onclick="MM_showHideLayers('sfcsetsc','','hide')">
+</map>
+</div>
+
+<div id="sfcsetadv" style="z-index: 110; left: 100px; top: 100px; position: absolute;">
+<img src="sfcsetadv.png" usemap="#sfcsetadv.png" width="428" height="430" border="0" alt="">
+<map name="sfcsetadv.png">
+<area shape="rect" coords="407,5,422,18" href="#" alt="Close" onclick="MM_showHideLayers('sfcsetadv','','hide')">
+<area shape="rect" coords="11,31,60,49" href="#" alt="Settings" onclick="MM_showHideLayers('sfcsetset','','show','sfcsetadv','','hide')">
+<area shape="rect" coords="61,31,140,49" href="#" alt="Search Criteria" onclick="MM_showHideLayers('sfcsetsc','','show','sfcsetadv','','hide')">
+<area shape="rect" coords="182,397,256,419" href="#" alt="OK" onclick="MM_showHideLayers('sfcsetadv','','hide')">
+<area shape="rect" coords="263,397,337,419" href="#" alt="Cancel" onclick="MM_showHideLayers('sfcsetadv','','hide')">
+</map>
+</div>
+
+<div id="foldoptgen" style="z-index: 20; left: 150px; top: 50px; position: absolute;">
+<img src="foldoptgen.png" usemap="#foldoptgen.png" width="386" height="468" border="0" alt="">
+<map name="foldoptgen.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('foldoptgen','','hide')">
+<area shape="rect" coords="61,31,101,49" href="#" alt="View" onclick="MM_showHideLayers('foldoptview1','','show','foldoptgen','','hide')">
+<area shape="rect" coords="102,31,161,49" href="#" alt="File Types" onclick="MM_showHideLayers('foldoptft','','show','foldoptgen','','hide')">
+<area shape="rect" coords="140,435,214,457" href="#" alt="OK" onclick="MM_showHideLayers('foldoptgen','','hide')">
+<area shape="rect" coords="221,435,295,457" href="#" alt="Cancel" onclick="MM_showHideLayers('foldoptgen','','hide')">
+</map>
+</div>
+
+<div id="foldoptview1" style="z-index: 20; left: 150px; top: 50px; position: absolute;">
+<img src="foldoptview1.png" usemap="#foldoptview1.png" width="386" height="468" border="0" alt="">
+<map name="foldoptview1.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('foldoptview1','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('foldoptgen','','show','foldoptview1','','hide')">
+<area shape="rect" coords="103,31,161,49" href="#" alt="File Types" onclick="MM_showHideLayers('foldoptft','','show','foldoptview1','','hide')">
+<area shape="rect" coords="340,358,355,373" href="#" alt="Down" onclick="MM_showHideLayers('foldoptview2','','show','foldoptview1','','hide')">
+<area shape="rect" coords="140,435,214,457" href="#" alt="OK" onclick="MM_showHideLayers('foldoptview1','','hide')">
+<area shape="rect" coords="221,435,295,457" href="#" alt="Cancel" onclick="MM_showHideLayers('foldoptview1','','hide')">
+</map>
+</div>
+
+<div id="foldoptview2" style="z-index: 20; left: 150px; top: 50px; position: absolute;">
+<img src="foldoptview2.png" usemap="#foldoptview2.png" width="386" height="468" border="0" alt="">
+<map name="foldoptview2.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('foldoptview2','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('foldoptgen','','show','foldoptview2','','hide')">
+<area shape="rect" coords="103,31,161,49" href="#" alt="File Types" onclick="MM_showHideLayers('foldoptft','','show','foldoptview2','','hide')">
+<area shape="rect" coords="340,183,355,198" href="#" alt="Up" onclick="MM_showHideLayers('foldoptview1','','show','foldoptview2','','hide')">
+<area shape="rect" coords="140,435,214,457" href="#" alt="OK" onclick="MM_showHideLayers('foldoptview2','','hide')">
+<area shape="rect" coords="221,435,295,457" href="#" alt="Cancel" onclick="MM_showHideLayers('foldoptview2','','hide')">
+</map>
+</div>
+
+<div id="foldoptft" style="z-index: 20; left: 150px; top: 50px; position: absolute;">
+<img src="foldoptft.png" usemap="#foldoptft.png" width="386" height="468" border="0" alt="">
+<map name="foldoptft.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('foldoptft','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('foldoptgen','','show','foldoptft','','hide')">
+<area shape="rect" coords="60,31,100,49" href="#" alt="View" onclick="MM_showHideLayers('foldoptview1','','show','foldoptft','','hide')">
+<area shape="rect" coords="140,435,214,457" href="#" alt="OK" onclick="MM_showHideLayers('foldoptft','','hide')">
+<area shape="rect" coords="221,435,295,457" href="#" alt="Cancel" onclick="MM_showHideLayers('foldoptft','','hide')">
+</map>
+</div>
+
+<div id="control" style="z-index: 20; left: 75px; top: 75px; position: absolute;">
+<img src="control.png" usemap="#control.png" width="655" height="434" border="0" alt="">
+<map name="control.png">
+<area shape="rect" coords="633,6,648,19" href="#" alt="Close" onclick="MM_showHideLayers('control','','hide')">
+<area shape="rect" coords="273,120,348,190" href="#" alt="Add/Remove Programs" onclick="MM_showHideLayers('arprogiu','','show')">
+<area shape="rect" coords="436,191,486,265" href="#" alt="Modems" onclick="MM_showHideLayers('modgen','','show')">
+<area shape="rect" coords="211,266,261,340" href="#" alt="Network" onclick="MM_showHideLayers('netconfcmn','','show')">
+<area shape="rect" coords="214,341,258,407" href="#" alt="System" onclick="MM_showHideLayers('syspropgen','','show')">
+</map>
+</div>
+
+<div id="arprogiu" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="arprogiu.png" usemap="#arprogiu.png" width="367" height="460" border="0" alt="">
+<map name="arprogiu.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('arprogiu','','hide')">
+<area shape="rect" coords="96,31,181,49" href="#" alt="Windows Setup" onclick="MM_showHideLayers('arprogws','','show','arprogiu','','hide','arprogwspw','','show');arprogwspwdelay()">
+<area shape="rect" coords="182,31,251,49" href="#" alt="Startup Disk" onclick="MM_showHideLayers('arprogsd','','show','arprogiu','','hide')">
+<area shape="rect" coords="121,427,195,449" href="#" alt="OK" onclick="MM_showHideLayers('arprogiu','','hide')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="Cancel" onclick="MM_showHideLayers('arprogiu','','hide')">
+</map>
+</div>
+
+<div id="arprogwspw" style="z-index: 40; left: 225px; top: 200px; position: absolute;">
+<img src="arprogwspw.png" width="239" height="90" border="0" alt="">
+</div>
+
+<div id="arprogws" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="arprogws.png" usemap="#arprogws.png" width="367" height="460" border="0" alt="">
+<map name="arprogws.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('arprogws','','hide')">
+<area shape="rect" coords="11,31,93,49" href="#" alt="Install/Uninstall" onclick="MM_showHideLayers('arprogiu','','show','arprogws','','hide')">
+<area shape="rect" coords="183,31,251,49" href="#" alt="Startup Disk" onclick="MM_showHideLayers('arprogsd','','show','arprogws','','hide')">
+<area shape="rect" coords="253,344,332,366" href="#" alt="Details" onclick="MM_showHideLayers('arprogwsdet','','show')">
+<area shape="rect" coords="121,427,195,449" href="#" alt="OK" onclick="MM_showHideLayers('arprogws','','hide')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="Cancel" onclick="MM_showHideLayers('arprogws','','hide')">
+</map>
+</div>
+
+<div id="arprogwsdet" style="z-index: 40; left: 175px; top: 75px; position: absolute;">
+<img src="arprogwsdet.png" usemap="#arprogwsdet.png" width="347" height="412" border="0" alt="">
+<map name="arprogwsdet.png">
+<area shape="rect" coords="326,5,341,18" href="#" alt="Close" onclick="MM_showHideLayers('arprogwsdet','','hide')">
+<area shape="rect" coords="177,375,251,397" href="#" alt="OK" onclick="MM_showHideLayers('arprogwsdet','','hide')">
+<area shape="rect" coords="258,375,332,397" href="#" alt="Cancel" onclick="MM_showHideLayers('arprogwsdet','','hide')">
+</map>
+</div>
+
+<div id="arprogsd" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="arprogsd.png" usemap="#arprogsd.png" width="367" height="460" border="0" alt="">
+<map name="arprogsd.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('arprogsd','','hide')">
+<area shape="rect" coords="11,31,94,49" href="#" alt="Install/Uninstall" onclick="MM_showHideLayers('arprogiu','','show','arprogsd','','hide')">
+<area shape="rect" coords="95,31,180,49" href="#" alt="Windows Setup" onclick="MM_showHideLayers('arprogws','','show','arprogsd','','hide','arprogwspw','','show');arprogwspwdelay()">
+<area shape="rect" coords="121,427,195,449" href="#" alt="OK" onclick="MM_showHideLayers('arprogsd','','hide')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="Cancel" onclick="MM_showHideLayers('arprogsd','','hide')">
+</map>
+</div>
+
+<div id="modgen" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="modgen.png" usemap="#modgen.png" width="344" height="400" border="0" alt="">
+<map name="modgen.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('modgen','','hide')">
+<area shape="rect" coords="61,31,126,49" href="#" alt="Diagnostics" onclick="MM_showHideLayers('moddiag','','show','modgen','','hide')">
+<area shape="rect" coords="24,184,116,206" href="#" alt="Add" onclick="MM_showHideLayers('newmodstart1','','show')">
+<area shape="rect" coords="226,184,318,206" href="#" alt="Properties" onclick="MM_showHideLayers('modpropgen','','show')">
+<area shape="rect" coords="109,308,252,330" href="#" alt="Dialing Properties" onclick="MM_showHideLayers('dialprop','','show')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('modgen','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('modgen','','hide')">
+</map>
+</div>
+
+<div id="moddiag" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="moddiag.png" usemap="#moddiag.png" width="344" height="400" border="0" alt="">
+<map name="moddiag.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('moddiag','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('modgen','','show','moddiag','','hide')">
+<area shape="rect" coords="24,249,116,271" href="#" alt="Driver" onclick="MM_showHideLayers('moddiagdrv','','show')">
+<area shape="rect" coords="124,249,218,271" href="#" alt="More Info" onclick="MM_showHideLayers('commmod','','show');commmoddelay()">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('moddiag','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('moddiag','','hide')">
+</map>
+</div>
+
+<div id="modpropgen" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="modpropgen.png" usemap="#modpropgen.png" width="344" height="400" border="0" alt="">
+<map name="modpropgen.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('modpropgen','','hide')">
+<area shape="rect" coords="61,31,125,49" href="#" alt="Connection" onclick="MM_showHideLayers('modpropconn','','show','modpropgen','','hide')">
+<area shape="rect" coords="126,31,189,49" href="#" alt="Forwarding" onclick="MM_showHideLayers('modpropfwd','','show','modpropgen','','hide')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('modpropgen','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('modpropgen','','hide')">
+</map>
+</div>
+
+<div id="modpropconn" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="modpropconn.png" usemap="#modpropconn.png" width="344" height="400" border="0" alt="">
+<map name="modpropconn.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('modpropconn','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('modpropgen','','show','modpropconn','','hide')">
+<area shape="rect" coords="127,31,189,49" href="#" alt="Forwarding" onclick="MM_showHideLayers('modpropfwd','','show','modpropconn','','hide')">
+<area shape="rect" coords="24,322,128,344" href="#" alt="Port Settings" onclick="MM_showHideLayers('modpropconnps','','show')">
+<area shape="rect" coords="216,322,320,344" href="#" alt="Advanced" onclick="MM_showHideLayers('modpropconnadv','','show')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('modpropconn','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('modpropconn','','hide')">
+</map>
+</div>
+
+<div id="modpropfwd" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="modpropfwd.png" usemap="#modpropfwd.png" width="344" height="400" border="0" alt="">
+<map name="modpropfwd.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('modpropfwd','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('modpropgen','','show','modpropfwd','','hide')">
+<area shape="rect" coords="60,31,124,49" href="#" alt="Connection" onclick="MM_showHideLayers('modpropconn','','show','modpropfwd','','hide')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('modpropfwd','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('modpropfwd','','hide')">
+</map>
+</div>
+
+<div id="modpropconnps" style="z-index: 50; left: 150px; top: 150px; position: absolute;">
+<img src="modpropconnps.png" usemap="#modpropconnps.png" width="462" height="210" border="0" alt="">
+<map name="modpropconnps.png">
+<area shape="rect" coords="441,5,456,18" href="#" alt="Close" onclick="MM_showHideLayers('modpropconnps','','hide')">
+<area shape="rect" coords="371,42,445,64" href="#" alt="OK" onclick="MM_showHideLayers('modpropconnps','','hide')">
+<area shape="rect" coords="371,72,445,94" href="#" alt="Cancel" onclick="MM_showHideLayers('modpropconnps','','hide')">
+</map>
+</div>
+
+<div id="modpropconnadv" style="z-index: 50; left: 175px; top: 100px; position: absolute;">
+<img src="modpropconnadv.png" usemap="#modpropconnadv.png" width="371" height="308" border="0" alt="">
+<map name="modpropconnadv.png">
+<area shape="rect" coords="350,5,365,18" href="#" alt="Close" onclick="MM_showHideLayers('modpropconnadv','','hide')">
+<area shape="rect" coords="189,271,269,293" href="#" alt="OK" onclick="MM_showHideLayers('modpropconnadv','','hide')">
+<area shape="rect" coords="276,271,356,293" href="#" alt="Cancel" onclick="MM_showHideLayers('modpropconnadv','','hide')">
+</map>
+</div>
+
+<div id="moddiagdrv" style="z-index: 40; left: 225px; top: 150px; position: absolute;">
+<img src="moddiagdrv.png" usemap="#moddiagdrv.png" width="290" height="127" border="0" alt="">
+<map name="moddiagdrv.png">
+<area shape="rect" coords="269,5,284,18" href="#" alt="Close" onclick="MM_showHideLayers('moddiagdrv','','hide')">
+<area shape="rect" coords="107,90,181,112" href="#" alt="OK" onclick="MM_showHideLayers('moddiagdrv','','hide')">
+</map>
+</div>
+
+<div id="moddiagmi" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="moddiagmi.png" usemap="#moddiagmi.png" width="366" height="399" border="0" alt="">
+<map name="moddiagmi.png">
+<area shape="rect" coords="138,362,227,384" href="#" alt="OK" onclick="MM_showHideLayers('moddiagmi','','hide')">
+</map>
+</div>
+
+<div id="commmod" style="z-index: 40; left: 225px; top: 150px; position: absolute;">
+<img src="commmod.png" width="290" height="127" border="0" alt="">
+</div>
+
+<div id="dialprop" style="z-index: 40; left: 175px; top: 50px; position: absolute;">
+<img src="dialprop.png" usemap="#dialprop.png" width="386" height="468" border="0" alt="">
+<map name="dialprop.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('dialprop','','hide')">
+<area shape="rect" coords="171,75,232,97" href="#" alt="New" onclick="MM_showHideLayers('dialpropnew','','show')">
+<area shape="rect" coords="268,335,342,357" href="#" alt="Calling Card" onclick="MM_showHideLayers('dialpropccard','','show')">
+<area shape="rect" coords="140,435,214,457" href="#" alt="OK" onclick="MM_showHideLayers('dialprop','','hide')">
+<area shape="rect" coords="221,435,295,457" href="#" alt="Cancel" onclick="MM_showHideLayers('dialprop','','hide')">
+</map>
+</div>
+
+<div id="dialpropnew" style="z-index: 50; left: 275px; top: 200px; position: absolute;">
+<img src="dialpropnew.png" usemap="#dialpropnew.png" width="162" height="100" border="0" alt="">
+<map name="dialpropnew.png">
+<area shape="rect" coords="44,63,118,85" href="#" alt="OK" onclick="MM_showHideLayers('dialpropnew','','hide')">
+</map>
+</div>
+
+<div id="dialpropccard" style="z-index: 50; left: 200px; top: 100px; position: absolute;">
+<img src="dialpropccard.png" usemap="#dialpropccard.png" width="366" height="366" border="0" alt="">
+<map name="dialpropccard.png">
+<area shape="rect" coords="345,5,360,18" href="#" alt="Close" onclick="MM_showHideLayers('dialpropccard','','hide')">
+<area shape="rect" coords="216,32,278,55" href="#" alt="New" onclick="MM_showHideLayers('dialpropccardnew','','show')">
+<area shape="rect" coords="33,274,167,297" href="#" alt="Long Distance Calls" onclick="MM_showHideLayers('dialpropccardseq','','show')">
+<area shape="rect" coords="191,274,325,297" href="#" alt="International Calls" onclick="MM_showHideLayers('dialpropccardseq','','show')">
+<area shape="rect" coords="206,331,273,353" href="#" alt="OK" onclick="MM_showHideLayers('dialpropccard','','hide')">
+<area shape="rect" coords="288,331,355,353" href="#" alt="Cancel" onclick="MM_showHideLayers('dialpropccard','','hide')">
+</map>
+</div>
+
+<div id="dialpropccardnew" style="z-index: 60; left: 250px; top: 175px; position: absolute;">
+<img src="dialpropccardnew.png" usemap="#dialpropccardnew.png" width="246" height="127" border="0" alt="">
+<map name="dialpropccardnew.png">
+<area shape="rect" coords="225,5,240,18" href="#" alt="Close" onclick="MM_showHideLayers('dialpropccardnew','','hide')">
+<area shape="rect" coords="69,85,143,107" href="#" alt="OK" onclick="MM_showHideLayers('dialpropccardnew','','hide')">
+<area shape="rect" coords="152,85,226,107" href="#" alt="Cancel" onclick="MM_showHideLayers('dialpropccardnew','','hide')">
+</map>
+</div>
+
+<div id="dialpropccardseq" style="z-index: 60; left: 150px; top: 100px; position: absolute;">
+<img src="dialpropccardseq.png" usemap="#dialpropccardseq.png" width="479" height="415" border="0" alt="">
+<map name="dialpropccardseq.png">
+<area shape="rect" coords="458,5,473,18" href="#" alt="Close" onclick="MM_showHideLayers('dialpropccardseq','','hide')">
+<area shape="rect" coords="303,376,377,398" href="#" alt="OK" onclick="MM_showHideLayers('dialpropccardseq','','hide')">
+<area shape="rect" coords="393,376,467,398" href="#" alt="Cancel" onclick="MM_showHideLayers('dialpropccardseq','','hide')">
+</map>
+</div>
+
+<div id="newmodstart1" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodstart1.png" usemap="#newmodstart1.png" width="441" height="323" border="0" alt="">
+<map name="newmodstart1.png">
+<area shape="rect" coords="152,180,164,192" href="#" alt="Don't Detect Modem" onclick="MM_showHideLayers('newmodstart2','','show','newmodstart1','','hide')">
+<area shape="rect" coords="268,287,342,309" href="#" alt="Next" onclick="MM_showHideLayers('newmodlook','','show','newmodstart1','','hide');newmodlookdelay()">
+<area shape="rect" coords="353,287,427,309" href="#" alt="Cancel" onclick="MM_showHideLayers('newmodstart1','','hide')">
+</map>
+</div>
+
+<div id="newmodstart2" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodstart2.png" usemap="#newmodstart2.png" width="441" height="323" border="0" alt="">
+<map name="newmodstart2.png">
+<area shape="rect" coords="152,180,164,192" href="#" alt="Detect Modem" onclick="MM_showHideLayers('newmodstart1','','show','newmodstart2','','hide')">
+<area shape="rect" coords="268,287,342,309" href="#" alt="Next" onclick="MM_showHideLayers('newmodddmanu','','show','newmodstart2','','hide')">
+<area shape="rect" coords="353,287,427,309" href="#" alt="Cancel" onclick="MM_showHideLayers('newmodstart2','','hide')">
+</map>
+</div>
+
+<div id="newmodlook" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodlook.png" width="441" height="323" border="0" alt="">
+</div>
+
+<div id="newmodqm" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodqm.png" width="441" height="323" border="0" alt="">
+</div>
+
+<div id="newmodver" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodver.png" usemap="#newmodver.png" width="441" height="321" border="0" alt="">
+<map name="newmodver.png">
+<area shape="rect" coords="420,5,435,18" href="#" alt="Close" onclick="MM_showHideLayers('newmodver','','hide')">
+<area shape="rect" coords="270,284,344,306" href="#" alt="Next" onclick="MM_showHideLayers('newmodfin','','show','newmodver','','hide')">
+<area shape="rect" coords="353,284,427,306" href="#" alt="Cancel" onclick="MM_showHideLayers('newmodver','','hide')">
+</map>
+</div>
+
+<div id="newmodddmanu" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodddmanu.png" usemap="#newmodddmanu.png" width="441" height="323" border="0" alt="">
+<map name="newmodddmanu.png">
+<area shape="rect" coords="193,287,267,309" href="#" alt="Back" onclick="MM_showHideLayers('newmodstart2','','show','newmodddmanu','','hide')">
+<area shape="rect" coords="268,287,342,309" href="#" alt="Next" onclick="MM_showHideLayers('newmodddport','','show','newmodddmanu','','hide')">
+<area shape="rect" coords="353,287,427,309" href="#" alt="Cancel" onclick="MM_showHideLayers('newmodddmanu','','hide')">
+</map>
+</div>
+
+<div id="newmodddport" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodddport.png" usemap="#newmodddport.png" width="441" height="323" border="0" alt="">
+<map name="newmodddport.png">
+<area shape="rect" coords="193,287,267,309" href="#" alt="Back" onclick="MM_showHideLayers('newmodddmanu','','show','newmodddport','','hide')">
+<area shape="rect" coords="268,287,342,309" href="#" alt="Next" onclick="MM_showHideLayers('newmodfin','','show','newmodddport','','hide')">
+<area shape="rect" coords="353,287,427,309" href="#" alt="Cancel" onclick="MM_showHideLayers('newmodddport','','hide')">
+</map>
+</div>
+
+<div id="newmodfin" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="newmodfin.png" usemap="#newmodfin.png" width="441" height="323" border="0" alt="">
+<map name="newmodfin.png">
+<area shape="rect" coords="268,287,342,309" href="#" alt="Finish" onclick="MM_showHideLayers('newmodfin','','hide')">
+</map>
+</div>
+
+<div id="netconfcmn" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netconfcmn.png" usemap="#netconfcmn.png" width="367" height="460" border="0" alt="">
+<map name="netconfcmn.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfcmn','','hide')">
+<area shape="rect" coords="86,31,156,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netconfcmn','','hide')">
+<area shape="rect" coords="157,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netconfcmn','','hide')">
+<area shape="rect" coords="30,104,320,120" href="#" alt="Microsoft Family Logon" onclick="MM_showHideLayers('netconfmfl','','show','netconfcmn','','hide')">
+<area shape="rect" coords="30,121,320,137" href="#" alt="NIC" onclick="MM_showHideLayers('netconfnic','','show','netconfcmn','','hide')">
+<area shape="rect" coords="30,138,320,155" href="#" alt="Dial-Up Adapter" onclick="MM_showHideLayers('netconfdua','','show','netconfcmn','','hide')">
+<area shape="rect" coords="321,157,336,172" href="#" alt="Down" onclick="MM_showHideLayers('netconftcpnic','','show','netconfcmn','','hide')">
+<area shape="rect" coords="28,210,126,232" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddcli','','show')">
+<area shape="rect" coords="240,210,338,232" href="#" alt="Properties" onclick="MM_showHideLayers('netconfcmnprop','','show')">
+<area shape="rect" coords="28,292,174,317" href="#" alt="File and Print Sharing" onclick="MM_showHideLayers('netconffps','','show')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netconfcmn','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfcmn','','hide')">
+</map>
+</div>
+
+<div id="netconfmfl" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netconfmfl.png" usemap="#netconfmfl.png" width="367" height="460" border="0" alt="">
+<map name="netconfmfl.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfmfl','','hide')">
+<area shape="rect" coords="86,31,156,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netconfmfl','','hide')">
+<area shape="rect" coords="157,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netconfmfl','','hide')">
+<area shape="rect" coords="30,87,320,103" href="#" alt="Client for Microsoft Networks" onclick="MM_showHideLayers('netconfcmn','','show','netconfmfl','','hide')">
+<area shape="rect" coords="30,121,320,137" href="#" alt="NIC" onclick="MM_showHideLayers('netconfnic','','show','netconfmfl','','hide')">
+<area shape="rect" coords="30,138,320,155" href="#" alt="Dial-Up Adapter" onclick="MM_showHideLayers('netconfdua','','show','netconfmfl','','hide')">
+<area shape="rect" coords="321,157,336,172" href="#" alt="Down" onclick="MM_showHideLayers('netconftcpnic','','show','netconfmfl','','hide')">
+<area shape="rect" coords="28,210,126,232" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddcli','','show')">
+<area shape="rect" coords="28,292,174,317" href="#" alt="File and Print Sharing" onclick="MM_showHideLayers('netconffps','','show')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netconfmfl','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfmfl','','hide')">
+</map>
+</div>
+
+<div id="netconfnic" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netconfnic.png" usemap="#netconfnic.png" width="367" height="460" border="0" alt="">
+<map name="netconfnic.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfnic','','hide')">
+<area shape="rect" coords="86,31,156,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netconfnic','','hide')">
+<area shape="rect" coords="157,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netconfnic','','hide')">
+<area shape="rect" coords="30,87,320,103" href="#" alt="Client for Microsoft Networks" onclick="MM_showHideLayers('netconfcmn','','show','netconfnic','','hide')">
+<area shape="rect" coords="30,104,320,120" href="#" alt="Microsoft Family Logon" onclick="MM_showHideLayers('netconfmfl','','show','netconfnic','','hide')">
+<area shape="rect" coords="30,138,320,155" href="#" alt="Dial-Up Adapter" onclick="MM_showHideLayers('netconfdua','','show','netconfnic','','hide')">
+<area shape="rect" coords="321,157,336,172" href="#" alt="Down" onclick="MM_showHideLayers('netconftcpnic','','show','netconfnic','','hide')">
+<area shape="rect" coords="28,210,126,232" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddcli','','show')">
+<area shape="rect" coords="240,210,338,232" href="#" alt="Properties" onclick="MM_showHideLayers('netconfnicpropdt','','show')">
+<area shape="rect" coords="28,292,174,317" href="#" alt="File and Print Sharing" onclick="MM_showHideLayers('netconffps','','show')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netconfnic','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfnic','','hide')">
+</map>
+</div>
+
+<div id="netconfdua" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netconfdua.png" usemap="#netconfdua.png" width="367" height="460" border="0" alt="">
+<map name="netconfdua.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfdua','','hide')">
+<area shape="rect" coords="86,31,156,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netconfdua','','hide')">
+<area shape="rect" coords="157,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netconfdua','','hide')">
+<area shape="rect" coords="30,87,320,103" href="#" alt="Client for Microsoft Networks" onclick="MM_showHideLayers('netconfcmn','','show','netconfdua','','hide')">
+<area shape="rect" coords="30,104,320,120" href="#" alt="Microsoft Family Logon" onclick="MM_showHideLayers('netconfmfl','','show','netconfdua','','hide')">
+<area shape="rect" coords="30,121,320,137" href="#" alt="NIC" onclick="MM_showHideLayers('netconfnic','','show','netconfdua','','hide')">
+<area shape="rect" coords="321,157,336,172" href="#" alt="Down" onclick="MM_showHideLayers('netconftcpnic','','show','netconfdua','','hide')">
+<area shape="rect" coords="28,210,126,232" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddcli','','show')">
+<area shape="rect" coords="240,210,338,232" href="#" alt="Properties" onclick="MM_showHideLayers('netconfduapropdt','','show')">
+<area shape="rect" coords="28,292,174,317" href="#" alt="File and Print Sharing" onclick="MM_showHideLayers('netconffps','','show')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netconfdua','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfdua','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnic" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnic.png" usemap="#netconftcpnic.png" width="367" height="460" border="0" alt="">
+<map name="netconftcpnic.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnic','','hide')">
+<area shape="rect" coords="86,31,156,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netconftcpnic','','hide')">
+<area shape="rect" coords="157,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netconftcpnic','','hide')">
+<area shape="rect" coords="30,138,320,154" href="#" alt="TCP/IP -> Dial-Up Adapter" onclick="MM_showHideLayers('netconftcpdua','','show','netconftcpnic','','hide')">
+<area shape="rect" coords="30,155,320,172" href="#" alt="File and printer sharing for Microsoft Networks" onclick="MM_showHideLayers('netconffpsmn','','show','netconftcpnic','','hide')">
+<area shape="rect" coords="321,87,336,102" href="#" alt="Up" onclick="MM_showHideLayers('netconfcmn','','show','netconftcpnic','','hide')">
+<area shape="rect" coords="28,210,126,232" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddcli','','show')">
+<area shape="rect" coords="240,210,338,232" href="#" alt="Properties" onclick="MM_showHideLayers('netconftcpnicpropipa','','show')">
+<area shape="rect" coords="28,292,174,317" href="#" alt="File and Print Sharing" onclick="MM_showHideLayers('netconffps','','show')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnic','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnic','','hide')">
+</map>
+</div>
+
+<div id="netconftcpdua" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpdua.png" usemap="#netconftcpdua.png" width="367" height="460" border="0" alt="">
+<map name="netconftcpdua.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpdua','','hide')">
+<area shape="rect" coords="86,31,156,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netconftcpdua','','hide')">
+<area shape="rect" coords="157,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netconftcpdua','','hide')">
+<area shape="rect" coords="30,120,320,137" href="#" alt="TCP/IP -> NIC" onclick="MM_showHideLayers('netconftcpnic','','show','netconftcpdua','','hide')">
+<area shape="rect" coords="30,155,320,172" href="#" alt="File and printer sharing for Microsoft Networks" onclick="MM_showHideLayers('netconffpsmn','','show','netconftcpdua','','hide')">
+<area shape="rect" coords="321,87,336,102" href="#" alt="Up" onclick="MM_showHideLayers('netconfcmn','','show','netconftcpdua','','hide')">
+<area shape="rect" coords="28,210,126,232" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddcli','','show')">
+<area shape="rect" coords="240,210,338,232" href="#" alt="Properties" onclick="MM_showHideLayers('netconftcpduapropinfo','','show')">
+<area shape="rect" coords="28,292,174,317" href="#" alt="File and Print Sharing" onclick="MM_showHideLayers('netconffps','','show')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpdua','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpdua','','hide')">
+</map>
+</div>
+
+<div id="netconffpsmn" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netconffpsmn.png" usemap="#netconffpsmn.png" width="367" height="460" border="0" alt="">
+<map name="netconffpsmn.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netconffpsmn','','hide')">
+<area shape="rect" coords="86,31,156,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netconffpsmn','','hide')">
+<area shape="rect" coords="157,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netconffpsmn','','hide')">
+<area shape="rect" coords="30,120,320,137" href="#" alt="TCP/IP -> NIC" onclick="MM_showHideLayers('netconftcpnic','','show','netconffpsmn','','hide')">
+<area shape="rect" coords="30,138,320,154" href="#" alt="TCP/IP -> Dial-Up Adapter" onclick="MM_showHideLayers('netconftcpdua','','show','netconffpsmn','','hide')">
+<area shape="rect" coords="321,87,336,102" href="#" alt="Up" onclick="MM_showHideLayers('netconfcmn','','show','netconffpsmn','','hide')">
+<area shape="rect" coords="28,210,126,232" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddcli','','show')">
+<area shape="rect" coords="240,210,338,232" href="#" alt="Properties" onclick="MM_showHideLayers('netconffpsmnprop','','show')">
+<area shape="rect" coords="28,292,174,317" href="#" alt="File and Print Sharing" onclick="MM_showHideLayers('netconffps','','show')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netconffpsmn','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netconffpsmn','','hide')">
+</map>
+</div>
+
+<div id="netident" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netident.png" usemap="#netident.png" width="367" height="460" border="0" alt="">
+<map name="netident.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netident','','hide')">
+<area shape="rect" coords="11,31,83,49" href="#" alt="Configuration" onclick="MM_showHideLayers('netconfcmn','','show','netident','','hide')">
+<area shape="rect" coords="158,31,239,49" href="#" alt="Access Control" onclick="MM_showHideLayers('netac','','show','netident','','hide')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netident','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netident','','hide')">
+</map>
+</div>
+
+<div id="netac" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="netac.png" usemap="#netac.png" width="367" height="460" border="0" alt="">
+<map name="netac.png">
+<area shape="rect" coords="346,5,361,18" href="#" alt="Close" onclick="MM_showHideLayers('netac','','hide')">
+<area shape="rect" coords="11,31,84,49" href="#" alt="Configuration" onclick="MM_showHideLayers('netconfcmn','','show','netac','','hide')">
+<area shape="rect" coords="85,31,155,49" href="#" alt="Identification" onclick="MM_showHideLayers('netident','','show','netac','','hide')">
+<area shape="rect" coords="202,427,276,449" href="#" alt="OK" onclick="MM_showHideLayers('netac','','hide')">
+<area shape="rect" coords="283,427,357,449" href="#" alt="Cancel" onclick="MM_showHideLayers('netac','','hide')">
+</map>
+</div>
+
+<div id="netconfaddcli" style="z-index: 40; left: 200px; top: 100px; position: absolute;">
+<img src="netconfaddcli.png" usemap="#netconfaddcli.png" width="395" height="197" border="0" alt="">
+<map name="netconfaddcli.png">
+<area shape="rect" coords="374,5,389,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddcli','','hide')">
+<area shape="rect" coords="17,69,285,84" href="#" alt="Adapter" onclick="MM_showHideLayers('netconfaddadapt','','show','netconfaddcli','','hide')">
+<area shape="rect" coords="17,85,285,99" href="#" alt="Protocol" onclick="MM_showHideLayers('netconfaddprot','','show','netconfaddcli','','hide')">
+<area shape="rect" coords="17,100,285,117" href="#" alt="Service" onclick="MM_showHideLayers('netconfaddserv','','show','netconfaddcli','','hide')">
+<area shape="rect" coords="299,51,379,73" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddclisel','','show','netconfaddcli','','hide')">
+<area shape="rect" coords="299,81,379,103" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddcli','','hide')">
+</map>
+</div>
+
+<div id="netconfaddadapt" style="z-index: 40; left: 200px; top: 100px; position: absolute;">
+<img src="netconfaddadapt.png" usemap="#netconfaddadapt.png" width="395" height="197" border="0" alt="">
+<map name="netconfaddadapt.png">
+<area shape="rect" coords="374,5,389,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddadapt','','hide')">
+<area shape="rect" coords="17,53,285,68" href="#" alt="Client" onclick="MM_showHideLayers('netconfaddcli','','show','netconfaddadapt','','hide')">
+<area shape="rect" coords="17,85,285,99" href="#" alt="Protocol" onclick="MM_showHideLayers('netconfaddprot','','show','netconfaddadapt','','hide')">
+<area shape="rect" coords="17,100,285,117" href="#" alt="Service" onclick="MM_showHideLayers('netconfaddserv','','show','netconfaddadapt','','hide')">
+<area shape="rect" coords="299,51,379,73" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddadaptsel','','show','netconfaddadapt','','hide')">
+<area shape="rect" coords="299,81,379,103" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddadapt','','hide')">
+</map>
+</div>
+
+<div id="netconfaddprot" style="z-index: 40; left: 200px; top: 100px; position: absolute;">
+<img src="netconfaddprot.png" usemap="#netconfaddprot.png" width="395" height="197" border="0" alt="">
+<map name="netconfaddprot.png">
+<area shape="rect" coords="374,5,389,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddprot','','hide')">
+<area shape="rect" coords="17,53,285,68" href="#" alt="Client" onclick="MM_showHideLayers('netconfaddcli','','show','netconfaddprot','','hide')">
+<area shape="rect" coords="17,69,285,84" href="#" alt="Adapter" onclick="MM_showHideLayers('netconfaddadapt','','show','netconfaddprot','','hide')">
+<area shape="rect" coords="17,100,285,117" href="#" alt="Service" onclick="MM_showHideLayers('netconfaddserv','','show','netconfaddprot','','hide')">
+<area shape="rect" coords="299,51,379,73" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddprotsel','','show','netconfaddprot','','hide')">
+<area shape="rect" coords="299,81,379,103" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddprot','','hide')">
+</map>
+</div>
+
+<div id="netconfaddserv" style="z-index: 40; left: 200px; top: 100px; position: absolute;">
+<img src="netconfaddserv.png" usemap="#netconfaddserv.png" width="395" height="197" border="0" alt="">
+<map name="netconfaddserv.png">
+<area shape="rect" coords="374,5,389,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddserv','','hide')">
+<area shape="rect" coords="17,53,285,68" href="#" alt="Client" onclick="MM_showHideLayers('netconfaddcli','','show','netconfaddserv','','hide')">
+<area shape="rect" coords="17,69,285,84" href="#" alt="Adapter" onclick="MM_showHideLayers('netconfaddadapt','','show','netconfaddserv','','hide')">
+<area shape="rect" coords="17,85,285,100" href="#" alt="Protocol" onclick="MM_showHideLayers('netconfaddprot','','show','netconfaddserv','','hide')">
+<area shape="rect" coords="299,51,379,73" href="#" alt="Add" onclick="MM_showHideLayers('netconfaddservsel','','show','netconfaddserv','','hide')">
+<area shape="rect" coords="299,81,379,103" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddserv','','hide')">
+</map>
+</div>
+
+<div id="netconfaddclisel" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="netconfaddclisel.png" usemap="#netconfaddclisel.png" width="441" height="322" border="0" alt="">
+<map name="netconfaddclisel.png">
+<area shape="rect" coords="420,5,435,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddclisel','','hide')">
+<area shape="rect" coords="272,285,346,307" href="#" alt="OK" onclick="MM_showHideLayers('netconfaddclisel','','hide')">
+<area shape="rect" coords="353,285,427,307" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddclisel','','hide')">
+</map>
+</div>
+
+<div id="netconfaddadaptsel" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="netconfaddadaptsel.png" usemap="#netconfaddadaptsel.png" width="441" height="322" border="0" alt="">
+<map name="netconfaddadaptsel.png">
+<area shape="rect" coords="420,5,435,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddadaptsel','','hide')">
+<area shape="rect" coords="272,285,346,307" href="#" alt="OK" onclick="MM_showHideLayers('netconfaddadaptsel','','hide')">
+<area shape="rect" coords="353,285,427,307" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddadaptsel','','hide')">
+</map>
+</div>
+
+<div id="netconfaddprotsel" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="netconfaddprotsel.png" usemap="#netconfaddprotsel.png" width="441" height="322" border="0" alt="">
+<map name="netconfaddprotsel.png">
+<area shape="rect" coords="420,5,435,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddprotsel','','hide')">
+<area shape="rect" coords="272,285,346,307" href="#" alt="OK" onclick="MM_showHideLayers('netconfaddprotsel','','hide')">
+<area shape="rect" coords="353,285,427,307" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddprotsel','','hide')">
+</map>
+</div>
+
+<div id="netconfaddservsel" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="netconfaddservsel.png" usemap="#netconfaddservsel.png" width="441" height="322" border="0" alt="">
+<map name="netconfaddservsel.png">
+<area shape="rect" coords="420,5,435,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfaddservsel','','hide')">
+<area shape="rect" coords="272,285,346,307" href="#" alt="OK" onclick="MM_showHideLayers('netconfaddservsel','','hide')">
+<area shape="rect" coords="353,285,427,307" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfaddservsel','','hide')">
+</map>
+</div>
+
+<div id="netconfcmnprop" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconfcmnprop.png" usemap="#netconfcmnprop.png" width="344" height="400" border="0" alt="">
+<map name="netconfcmnprop.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfcmnprop','','hide')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('netconfcmnprop','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfcmnprop','','hide')">
+</map>
+</div>
+
+<div id="netconfnicpropdt" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconfnicpropdt.png" usemap="#netconfnicpropdt.png" width="356" height="419" border="0" alt="">
+<map name="netconfnicpropdt.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfnicpropdt','','hide')">
+<area shape="rect" coords="79,31,129,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconfnicpropbind','','show','netconfnicpropdt','','hide')">
+<area shape="rect" coords="130,31,190,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconfnicpropadv','','show','netconfnicpropdt','','hide')">
+<area shape="rect" coords="191,386,265,408" href="#" alt="OK" onclick="MM_showHideLayers('netconfnicpropdt','','hide')">
+<area shape="rect" coords="272,386,346,408" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfnicpropdt','','hide')">
+</map>
+</div>
+
+<div id="netconfnicpropbind" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconfnicpropbind.png" usemap="#netconfnicpropbind.png" width="356" height="419" border="0" alt="">
+<map name="netconfnicpropbind.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfnicpropbind','','hide')">
+<area shape="rect" coords="11,31,76,49" href="#" alt="Driver Type" onclick="MM_showHideLayers('netconfnicpropdt','','show','netconfnicpropbind','','hide')">
+<area shape="rect" coords="131,31,190,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconfnicpropadv','','show','netconfnicpropbind','','hide')">
+<area shape="rect" coords="191,386,265,408" href="#" alt="OK" onclick="MM_showHideLayers('netconfnicpropbind','','hide')">
+<area shape="rect" coords="272,386,346,408" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfnicpropbind','','hide')">
+</map>
+</div>
+
+<div id="netconfnicpropadv" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconfnicpropadv.png" usemap="#netconfnicpropadv.png" width="356" height="419" border="0" alt="">
+<map name="netconfnicpropadv.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfnicpropadv','','hide')">
+<area shape="rect" coords="11,31,77,49" href="#" alt="Driver Type" onclick="MM_showHideLayers('netconfnicpropdt','','show','netconfnicpropadv','','hide')">
+<area shape="rect" coords="78,31,128,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconfnicpropbind','','show','netconfnicpropadv','','hide')">
+<area shape="rect" coords="191,386,265,408" href="#" alt="OK" onclick="MM_showHideLayers('netconfnicpropadv','','hide')">
+<area shape="rect" coords="272,386,346,408" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfnicpropadv','','hide')">
+</map>
+</div>
+
+<div id="netconfduapropdt" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconfduapropdt.png" usemap="#netconfduapropdt.png" width="356" height="419" border="0" alt="">
+<map name="netconfduapropdt.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfduapropdt','','hide')">
+<area shape="rect" coords="79,31,129,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconfduapropbind','','show','netconfduapropdt','','hide')">
+<area shape="rect" coords="130,31,190,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconfduapropadv','','show','netconfduapropdt','','hide')">
+<area shape="rect" coords="191,386,265,408" href="#" alt="OK" onclick="MM_showHideLayers('netconfduapropdt','','hide')">
+<area shape="rect" coords="272,386,346,408" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfduapropdt','','hide')">
+</map>
+</div>
+
+<div id="netconfduapropbind" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconfduapropbind.png" usemap="#netconfduapropbind.png" width="356" height="419" border="0" alt="">
+<map name="netconfduapropbind.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfduapropbind','','hide')">
+<area shape="rect" coords="11,31,76,49" href="#" alt="Driver Type" onclick="MM_showHideLayers('netconfduapropdt','','show','netconfduapropbind','','hide')">
+<area shape="rect" coords="131,31,190,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconfduapropadv','','show','netconfduapropbind','','hide')">
+<area shape="rect" coords="191,386,265,408" href="#" alt="OK" onclick="MM_showHideLayers('netconfduapropbind','','hide')">
+<area shape="rect" coords="272,386,346,408" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfduapropbind','','hide')">
+</map>
+</div>
+
+<div id="netconfduapropadv" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconfduapropadv.png" usemap="#netconfduapropadv.png" width="356" height="419" border="0" alt="">
+<map name="netconfduapropadv.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconfduapropadv','','hide')">
+<area shape="rect" coords="11,31,77,49" href="#" alt="Driver Type" onclick="MM_showHideLayers('netconfduapropdt','','show','netconfduapropadv','','hide')">
+<area shape="rect" coords="78,31,128,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconfduapropbind','','show','netconfduapropadv','','hide')">
+<area shape="rect" coords="191,386,265,408" href="#" alt="OK" onclick="MM_showHideLayers('netconfduapropadv','','hide')">
+<area shape="rect" coords="272,386,346,408" href="#" alt="Cancel" onclick="MM_showHideLayers('netconfduapropadv','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnicpropipa" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnicpropipa.png" usemap="#netconftcpnicpropipa.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpnicpropipa.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpnicpropbind','','show','netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpnicpropadv','','show','netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpnicpropnetb','','show','netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="11,50,113,67" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpnicpropdns','','show','netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="114,50,170,67" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpnicpropgw','','show','netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="171,50,278,67" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpnicpropwins','','show','netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnicpropipa','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnicpropipa','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnicpropwins" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnicpropwins.png" usemap="#netconftcpnicpropwins.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpnicpropwins.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpnicpropbind','','show','netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpnicpropadv','','show','netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpnicpropnetb','','show','netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="11,50,113,67" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpnicpropdns','','show','netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="114,50,169,67" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpnicpropgw','','show','netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="281,50,344,67" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpnicpropipa','','show','netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnicpropwins','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnicpropwins','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnicpropgw" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnicpropgw.png" usemap="#netconftcpnicpropgw.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpnicpropgw.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpnicpropbind','','show','netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpnicpropadv','','show','netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpnicpropnetb','','show','netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="11,50,112,67" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpnicpropdns','','show','netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="172,50,279,67" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpnicpropwins','','show','netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="280,50,344,67" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpnicpropipa','','show','netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnicpropgw','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnicpropgw','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnicpropdns" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnicpropdns.png" usemap="#netconftcpnicpropdns.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpnicpropdns.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpnicpropbind','','show','netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpnicpropadv','','show','netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpnicpropnetb','','show','netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="115,50,170,67" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpnicpropgw','','show','netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="171,50,279,67" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpnicpropwins','','show','netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="280,50,344,67" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpnicpropipa','','show','netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnicpropdns','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnicpropdns','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnicpropbind" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnicpropbind.png" usemap="#netconftcpnicpropbind.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpnicpropbind.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="11,31,113,49" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpnicpropdns','','show','netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="114,31,170,49" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpnicpropgw','','show','netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="171,31,279,49" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpnicpropwins','','show','netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="280,31,344,49" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpnicpropipa','','show','netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="120,50,235,67" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpnicpropadv','','show','netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="236,50,344,67" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpnicpropnetb','','show','netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnicpropbind','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnicpropbind','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnicpropadv" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnicpropadv.png" usemap="#netconftcpnicpropadv.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpnicpropadv.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="11,31,113,49" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpnicpropdns','','show','netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="114,31,170,49" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpnicpropgw','','show','netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="171,31,279,49" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpnicpropwins','','show','netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="280,31,344,49" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpnicpropipa','','show','netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="11,50,117,67" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpnicpropbind','','show','netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="237,50,344,67" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpnicpropnetb','','show','netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnicpropadv','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnicpropadv','','hide')">
+</map>
+</div>
+
+<div id="netconftcpnicpropnetb" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpnicpropnetb.png" usemap="#netconftcpnicpropnetb.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpnicpropnetb.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="11,31,113,49" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpnicpropdns','','show','netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="114,31,170,49" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpnicpropgw','','show','netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="171,31,279,49" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpnicpropwins','','show','netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="280,31,344,49" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpnicpropipa','','show','netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="11,50,118,67" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpnicpropbind','','show','netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="119,50,234,67" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpnicpropadv','','show','netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpnicpropnetb','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpnicpropnetb','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropinfo" style="z-index: 40; left: 150px; top: 125px; position: absolute;">
+<img src="netconftcpduapropinfo.png" usemap="#netconftcpduapropinfo.png" width="500" height="191" border="0" alt="">
+<map name="netconftcpduapropinfo.png">
+<area shape="rect" coords="212,154,286,176" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropipa','','show','netconftcpduapropinfo','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropipa" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpduapropipa.png" usemap="#netconftcpduapropipa.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpduapropipa.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpduapropipa','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpduapropbind','','show','netconftcpduapropipa','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpduapropadv','','show','netconftcpduapropipa','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpduapropnetb','','show','netconftcpduapropipa','','hide')">
+<area shape="rect" coords="11,50,113,67" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpduapropdns','','show','netconftcpduapropipa','','hide')">
+<area shape="rect" coords="114,50,170,67" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpduapropgw','','show','netconftcpduapropipa','','hide')">
+<area shape="rect" coords="171,50,278,67" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpduapropwins','','show','netconftcpduapropipa','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropipa','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpduapropipa','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropwins" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpduapropwins.png" usemap="#netconftcpduapropwins.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpduapropwins.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpduapropwins','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpduapropbind','','show','netconftcpduapropwins','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpduapropadv','','show','netconftcpduapropwins','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpduapropnetb','','show','netconftcpduapropwins','','hide')">
+<area shape="rect" coords="11,50,113,67" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpduapropdns','','show','netconftcpduapropwins','','hide')">
+<area shape="rect" coords="114,50,169,67" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpduapropgw','','show','netconftcpduapropwins','','hide')">
+<area shape="rect" coords="281,50,344,67" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpduapropipa','','show','netconftcpduapropwins','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropwins','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpduapropwins','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropgw" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpduapropgw.png" usemap="#netconftcpduapropgw.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpduapropgw.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpduapropgw','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpduapropbind','','show','netconftcpduapropgw','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpduapropadv','','show','netconftcpduapropgw','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpduapropnetb','','show','netconftcpduapropgw','','hide')">
+<area shape="rect" coords="11,50,112,67" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpduapropdns','','show','netconftcpduapropgw','','hide')">
+<area shape="rect" coords="172,50,279,67" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpduapropwins','','show','netconftcpduapropgw','','hide')">
+<area shape="rect" coords="280,50,344,67" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpduapropipa','','show','netconftcpduapropgw','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropgw','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpduapropgw','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropdns" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpduapropdns.png" usemap="#netconftcpduapropdns.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpduapropdns.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpduapropdns','','hide')">
+<area shape="rect" coords="11,31,118,49" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpduapropbind','','show','netconftcpduapropdns','','hide')">
+<area shape="rect" coords="119,31,235,49" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpduapropadv','','show','netconftcpduapropdns','','hide')">
+<area shape="rect" coords="236,31,344,49" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpduapropnetb','','show','netconftcpduapropdns','','hide')">
+<area shape="rect" coords="115,50,170,67" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpduapropgw','','show','netconftcpduapropdns','','hide')">
+<area shape="rect" coords="171,50,279,67" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpduapropwins','','show','netconftcpduapropdns','','hide')">
+<area shape="rect" coords="280,50,344,67" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpduapropipa','','show','netconftcpduapropdns','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropdns','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpduapropdns','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropbind" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpduapropbind.png" usemap="#netconftcpduapropbind.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpduapropbind.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpduapropbind','','hide')">
+<area shape="rect" coords="11,31,113,49" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpduapropdns','','show','netconftcpduapropbind','','hide')">
+<area shape="rect" coords="114,31,170,49" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpduapropgw','','show','netconftcpduapropbind','','hide')">
+<area shape="rect" coords="171,31,279,49" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpduapropwins','','show','netconftcpduapropbind','','hide')">
+<area shape="rect" coords="280,31,344,49" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpduapropipa','','show','netconftcpduapropbind','','hide')">
+<area shape="rect" coords="120,50,235,67" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpduapropadv','','show','netconftcpduapropbind','','hide')">
+<area shape="rect" coords="236,50,344,67" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpduapropnetb','','show','netconftcpduapropbind','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropbind','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpduapropbind','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropadv" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpduapropadv.png" usemap="#netconftcpduapropadv.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpduapropadv.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpduapropadv','','hide')">
+<area shape="rect" coords="11,31,113,49" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpduapropdns','','show','netconftcpduapropadv','','hide')">
+<area shape="rect" coords="114,31,170,49" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpduapropgw','','show','netconftcpduapropadv','','hide')">
+<area shape="rect" coords="171,31,279,49" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpduapropwins','','show','netconftcpduapropadv','','hide')">
+<area shape="rect" coords="280,31,344,49" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpduapropipa','','show','netconftcpduapropadv','','hide')">
+<area shape="rect" coords="11,50,117,67" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpduapropbind','','show','netconftcpduapropadv','','hide')">
+<area shape="rect" coords="237,50,344,67" href="#" alt="NetBIOS" onclick="MM_showHideLayers('netconftcpduapropnetb','','show','netconftcpduapropadv','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropadv','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpduapropadv','','hide')">
+</map>
+</div>
+
+<div id="netconftcpduapropnetb" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconftcpduapropnetb.png" usemap="#netconftcpduapropnetb.png" width="356" height="437" border="0" alt="">
+<map name="netconftcpduapropnetb.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="11,31,113,49" href="#" alt="DNS Configuration" onclick="MM_showHideLayers('netconftcpduapropdns','','show','netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="114,31,170,49" href="#" alt="Gateway" onclick="MM_showHideLayers('netconftcpduapropgw','','show','netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="171,31,279,49" href="#" alt="WINS Configuration" onclick="MM_showHideLayers('netconftcpduapropwins','','show','netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="280,31,344,49" href="#" alt="IP Address" onclick="MM_showHideLayers('netconftcpduapropipa','','show','netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="11,50,118,67" href="#" alt="Bindings" onclick="MM_showHideLayers('netconftcpduapropbind','','show','netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="119,50,234,67" href="#" alt="Advanced" onclick="MM_showHideLayers('netconftcpduapropadv','','show','netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="191,404,265,426" href="#" alt="OK" onclick="MM_showHideLayers('netconftcpduapropnetb','','hide')">
+<area shape="rect" coords="272,404,346,426" href="#" alt="Cancel" onclick="MM_showHideLayers('netconftcpduapropnetb','','hide')">
+</map>
+</div>
+
+<div id="netconffpsmnprop" style="z-index: 40; left: 200px; top: 50px; position: absolute;">
+<img src="netconffpsmnprop.png" usemap="#netconffpsmnprop.png" width="356" height="419" border="0" alt="">
+<map name="netconffpsmnprop.png">
+<area shape="rect" coords="335,5,350,18" href="#" alt="Close" onclick="MM_showHideLayers('netconffpsmnprop','','hide')">
+<area shape="rect" coords="191,386,265,408" href="#" alt="OK" onclick="MM_showHideLayers('netconffpsmnprop','','hide')">
+<area shape="rect" coords="272,386,346,408" href="#" alt="Cancel" onclick="MM_showHideLayers('netconffpsmnprop','','hide')">
+</map>
+</div>
+
+<div id="netconffps" style="z-index: 40; left: 225px; top: 150px; position: absolute;">
+<img src="netconffps.png" usemap="#netconffps.png" width="336" height="166" border="0" alt="">
+<map name="netconffps.png">
+<area shape="rect" coords="315,5,330,18" href="#" alt="Close" onclick="MM_showHideLayers('netconffps','','hide')">
+<area shape="rect" coords="161,124,235,146" href="#" alt="OK" onclick="MM_showHideLayers('netconffps','','hide')">
+<area shape="rect" coords="243,124,317,146" href="#" alt="Cancel" onclick="MM_showHideLayers('netconffps','','hide')">
+</map>
+</div>
+
+<div id="syspropgen" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="syspropgen.png" usemap="#syspropgen.png" width="410" height="448" border="0" alt="">
+<map name="syspropgen.png">
+<area shape="rect" coords="389,5,404,18" href="#" alt="Close" onclick="MM_showHideLayers('syspropgen','','hide')">
+<area shape="rect" coords="61,31,150,49" href="#" alt="Device Manager" onclick="MM_showHideLayers('syspropdm','','show','syspropgen','','hide')">
+<area shape="rect" coords="151,31,245,49" href="#" alt="Hardware Profiles" onclick="MM_showHideLayers('sysprophp','','show','syspropgen','','hide')">
+<area shape="rect" coords="246,31,317,49" href="#" alt="Performance" onclick="MM_showHideLayers('syspropperf','','show','syspropgen','','hide')">
+<area shape="rect" coords="245,415,319,437" href="#" alt="OK" onclick="MM_showHideLayers('syspropgen','','hide')">
+<area shape="rect" coords="326,415,400,437" href="#" alt="Cancel" onclick="MM_showHideLayers('syspropgen','','hide')">
+</map>
+</div>
+
+<div id="syspropdm" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="syspropdm.png" usemap="#syspropdm.png" width="410" height="448" border="0" alt="">
+<map name="syspropdm.png">
+<area shape="rect" coords="389,5,404,18" href="#" alt="Close" onclick="MM_showHideLayers('syspropdm','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('syspropgen','','show','syspropdm','','hide')">
+<area shape="rect" coords="152,31,245,49" href="#" alt="Hardware Profiles" onclick="MM_showHideLayers('sysprophp','','show','syspropdm','','hide')">
+<area shape="rect" coords="246,31,317,49" href="#" alt="Performance" onclick="MM_showHideLayers('syspropperf','','show','syspropdm','','hide')">
+<area shape="rect" coords="245,415,319,437" href="#" alt="OK" onclick="MM_showHideLayers('syspropdm','','hide')">
+<area shape="rect" coords="326,415,400,437" href="#" alt="Cancel" onclick="MM_showHideLayers('syspropdm','','hide')">
+</map>
+</div>
+
+<div id="sysprophp" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="sysprophp.png" usemap="#sysprophp.png" width="410" height="448" border="0" alt="">
+<map name="sysprophp.png">
+<area shape="rect" coords="389,5,404,18" href="#" alt="Close" onclick="MM_showHideLayers('sysprophp','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('syspropgen','','show','sysprophp','','hide')">
+<area shape="rect" coords="60,31,149,49" href="#" alt="Device Manager" onclick="MM_showHideLayers('syspropdm','','show','sysprophp','','hide')">
+<area shape="rect" coords="247,31,317,49" href="#" alt="Performance" onclick="MM_showHideLayers('syspropperf','','show','sysprophp','','hide')">
+<area shape="rect" coords="245,415,319,437" href="#" alt="OK" onclick="MM_showHideLayers('sysprophp','','hide')">
+<area shape="rect" coords="326,415,400,437" href="#" alt="Cancel" onclick="MM_showHideLayers('sysprophp','','hide')">
+</map>
+</div>
+
+<div id="syspropperf" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="syspropperf.png" usemap="#syspropperf.png" width="410" height="448" border="0" alt="">
+<map name="syspropperf.png">
+<area shape="rect" coords="389,5,404,18" href="#" alt="Close" onclick="MM_showHideLayers('syspropperf','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('syspropgen','','show','syspropperf','','hide')">
+<area shape="rect" coords="60,31,150,49" href="#" alt="Device Manager" onclick="MM_showHideLayers('syspropdm','','show','syspropperf','','hide')">
+<area shape="rect" coords="151,31,244,49" href="#" alt="Hardware Profiles" onclick="MM_showHideLayers('sysprophp','','show','syspropperf','','hide')">
+<area shape="rect" coords="245,415,319,437" href="#" alt="OK" onclick="MM_showHideLayers('syspropperf','','hide')">
+<area shape="rect" coords="326,415,400,437" href="#" alt="Cancel" onclick="MM_showHideLayers('syspropperf','','hide')">
+</map>
+</div>
+
+<div id="dun" style="z-index: 20; left: 150px; top: 150px; position: absolute;">
+<img src="dun.png" usemap="#dun.png" width="382" height="230" border="0" alt="">
+<map name="dun.png">
+<area shape="rect" coords="360,6,375,19" href="#" alt="Close" onclick="MM_showHideLayers('dun','','hide')">
+<area shape="rect" coords="209,26,284,45" href="#" alt="Connections" onmouseover="MM_showHideLayers('dunconn','','show')" onmouseout="MM_showHideLayers('dunconn','','hide')">
+<area shape="rect" coords="11,120,75,187" href="#" alt="Make New Connection" onclick="MM_showHideLayers('newtoidname','','show')">
+<area shape="rect" coords="86,120,150,187" href="#" alt="ISP Connection" onclick="MM_showHideLayers('toidrc','','show')">
+</map>
+</div>
+
+<div id="dunconn" style="z-index: 30; left: 359px; top: 195px; position: absolute;" onmouseover="MM_showHideLayers('dunconn','','show')" onmouseout="MM_showHideLayers('dunconn','','hide')">
+<img src="dunconn.png" usemap="#dunconn.png" width="166" height="66" border="0" alt="">
+<map name="dunconn.png">
+<area shape="rect" coords="2,20,163,39" href="#" alt="Make New Connection" onclick="MM_showHideLayers('newtoidname','','show','dunconn','','hide')">
+<area shape="rect" coords="2,42,163,63" href="#" alt="Settings" onclick="MM_showHideLayers('dunsetgen','','show','dunconn','','hide')">
+</map>
+</div>
+
+<div id="dunsetgen" style="z-index: 30; left: 200px; top: 50px; position: absolute;">
+<img src="dunsetgen.png" usemap="#dunsetgen.png" width="344" height="447" border="0" alt="">
+<map name="dunsetgen.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('dunsetgen','','hide')">
+<area shape="rect" coords="179,414,253,436" href="#" alt="OK" onclick="MM_showHideLayers('dunsetgen','','hide')">
+<area shape="rect" coords="260,414,334,436" href="#" alt="Cancel" onclick="MM_showHideLayers('dunsetgen','','hide')">
+</map>
+</div>
+
+<div id="newtoidname" style="z-index: 30; left: 150px; top: 125px; position: absolute;">
+<img src="newtoidname.png" usemap="#newtoidname.png" width="441" height="323" border="0" alt="">
+<map name="newtoidname.png">
+<area shape="rect" coords="314,155,426,177" href="#" alt="Configure" onclick="MM_showHideLayers('toidpropconfgen','','show')">
+<area shape="rect" coords="267,287,342,309" href="#" alt="Next" onclick="MM_showHideLayers('newtoidpn','','show','newtoidname','','hide')">
+<area shape="rect" coords="353,287,427,309" href="#" alt="Cancel" onclick="MM_showHideLayers('newtoidname','','hide')">
+</map>
+</div>
+
+<div id="newtoidpn" style="z-index: 30; left: 150px; top: 125px; position: absolute;">
+<img src="newtoidpn.png" usemap="#newtoidpn.png" width="441" height="323" border="0" alt="">
+<map name="newtoidpn.png">
+<area shape="rect" coords="193,287,267,309" href="#" alt="Back" onclick="MM_showHideLayers('newtoidname','','show','newtoidpn','','hide')">
+<area shape="rect" coords="268,287,342,309" href="#" alt="Next" onclick="MM_showHideLayers('newtoidfin','','show','newtoidpn','','hide')">
+<area shape="rect" coords="353,287,427,309" href="#" alt="Cancel" onclick="MM_showHideLayers('newtoidpn','','hide')">
+</map>
+</div>
+
+<div id="newtoidfin" style="z-index: 30; left: 150px; top: 125px; position: absolute;">
+<img src="newtoidfin.png" usemap="#newtoidfin.png" width="441" height="323" border="0" alt="">
+<map name="newtoidfin.png">
+<area shape="rect" coords="193,287,267,309" href="#" alt="Back" onclick="MM_showHideLayers('newtoidpn','','show','newtoidfin','','hide')">
+<area shape="rect" coords="268,287,342,309" href="#" alt="Finish" onclick="MM_showHideLayers('newtoidfin','','hide')">
+<area shape="rect" coords="353,287,427,309" href="#" alt="Cancel" onclick="MM_showHideLayers('newtoidfin','','hide')">
+</map>
+</div>
+
+<div id="toidrc" style="z-index: 30; left: 252px; top: 281px; position: absolute;">
+<img src="toidrc.png" usemap="#toidrc.png" width="122" height="109" border="0" alt="">
+<map name="toidrc.png">
+<area shape="rect" coords="2,2,119,22" href="#" alt="Connect" onclick="MM_showHideLayers('toid','','show','toidrc','','hide')">
+<area shape="rect" coords="2,85,119,106" href="#" alt="Properties" onclick="MM_showHideLayers('toidpropgen','','show','toidrc','','hide')">
+</map>
+</div>
+
+<div id="toid" style="z-index: 30; left: 175px; top: 125px; position: absolute;">
+<img src="toid.png" usemap="#toid.png" width="360" height="301" border="0" alt="">
+<map name="toid.png">
+<area shape="rect" coords="339,5,354,18" href="#" alt="Close" onclick="MM_showHideLayers('toid','','hide')">
+<area shape="rect" coords="255,217,340,239" href="#" alt="Dial Properties" onclick="MM_showHideLayers('toiddialprop','','show')">
+<area shape="rect" coords="168,258,250,280" href="#" alt="Connect" onclick="MM_showHideLayers('toiddialinit','','show','toid','','hide');toiddialinitdelay()">
+<area shape="rect" coords="258,258,340,280" href="#" alt="Cancel" onclick="MM_showHideLayers('toid','','hide')">
+</map>
+</div>
+
+<div id="toiddialprop" style="z-index: 40; left: 175px; top: 50px; position: absolute;">
+<img src="toiddialprop.png" usemap="#toiddialprop.png" width="386" height="468" border="0" alt="">
+<map name="toiddialprop.png">
+<area shape="rect" coords="365,5,380,18" href="#" alt="Close" onclick="MM_showHideLayers('toiddialprop','','hide')">
+<area shape="rect" coords="171,75,232,97" href="#" alt="New" onclick="MM_showHideLayers('dialpropnew','','show')">
+<area shape="rect" coords="268,335,342,357" href="#" alt="Calling Card" onclick="MM_showHideLayers('dialpropccard','','show')">
+<area shape="rect" coords="140,435,214,457" href="#" alt="OK" onclick="MM_showHideLayers('toiddialprop','','hide')">
+<area shape="rect" coords="221,435,295,457" href="#" alt="Cancel" onclick="MM_showHideLayers('toiddialprop','','hide')">
+</map>
+</div>
+
+<div id="toidpropgen" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropgen.png" usemap="#toidpropgen.png" width="344" height="427" border="0" alt="">
+<map name="toidpropgen.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropgen','','hide')">
+<area shape="rect" coords="61,31,134,49" href="#" alt="Server Types" onclick="MM_showHideLayers('toidpropst','','show','toidpropgen','','hide')">
+<area shape="rect" coords="135,31,187,49" href="#" alt="Scripting" onclick="MM_showHideLayers('toidpropscr','','show','toidpropgen','','hide')">
+<area shape="rect" coords="188,31,237,49" href="#" alt="Multilink" onclick="MM_showHideLayers('toidpropmul','','show','toidpropgen','','hide')">
+<area shape="rect" coords="199,308,300,330" href="#" alt="Configure" onclick="MM_showHideLayers('toidpropconfgen','','show')">
+<area shape="rect" coords="179,394,253,416" href="#" alt="OK" onclick="MM_showHideLayers('toidpropgen','','hide')">
+<area shape="rect" coords="260,394,334,416" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropgen','','hide')">
+</map>
+</div>
+
+<div id="toidpropst" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropst.png" usemap="#toidpropst.png" width="344" height="427" border="0" alt="">
+<map name="toidpropst.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropst','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('toidpropgen','','show','toidpropst','','hide')">
+<area shape="rect" coords="136,31,187,49" href="#" alt="Scripting" onclick="MM_showHideLayers('toidpropscr','','show','toidpropst','','hide')">
+<area shape="rect" coords="188,31,237,49" href="#" alt="Multilink" onclick="MM_showHideLayers('toidpropmul','','show','toidpropst','','hide')">
+<area shape="rect" coords="184,339,288,361" href="#" alt="TCP/IP Settings" onclick="MM_showHideLayers('toidpropsttcp','','show')">
+<area shape="rect" coords="179,394,253,416" href="#" alt="OK" onclick="MM_showHideLayers('toidpropst','','hide')">
+<area shape="rect" coords="260,394,334,416" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropst','','hide')">
+</map>
+</div>
+
+<div id="toidpropscr" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropscr.png" usemap="#toidpropscr.png" width="344" height="427" border="0" alt="">
+<map name="toidpropscr.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropscr','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('toidpropgen','','show','toidpropscr','','hide')">
+<area shape="rect" coords="60,31,133,49" href="#" alt="Server Types" onclick="MM_showHideLayers('toidpropst','','show','toidpropscr','','hide')">
+<area shape="rect" coords="189,31,237,49" href="#" alt="Multilink" onclick="MM_showHideLayers('toidpropmul','','show','toidpropscr','','hide')">
+<area shape="rect" coords="179,394,253,416" href="#" alt="OK" onclick="MM_showHideLayers('toidpropscr','','hide')">
+<area shape="rect" coords="260,394,334,416" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropscr','','hide')">
+</map>
+</div>
+
+<div id="toidpropmul" style="z-index: 30; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropmul.png" usemap="#toidpropmul.png" width="344" height="427" border="0" alt="">
+<map name="toidpropmul.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropmul','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('toidpropgen','','show','toidpropmul','','hide')">
+<area shape="rect" coords="60,31,134,49" href="#" alt="Server Types" onclick="MM_showHideLayers('toidpropst','','show','toidpropmul','','hide')">
+<area shape="rect" coords="135,31,186,49" href="#" alt="Scripting" onclick="MM_showHideLayers('toidpropscr','','show','toidpropmul','','hide')">
+<area shape="rect" coords="179,394,253,416" href="#" alt="OK" onclick="MM_showHideLayers('toidpropmul','','hide')">
+<area shape="rect" coords="260,394,334,416" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropmul','','hide')">
+</map>
+</div>
+
+<div id="toidpropconfgen" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropconfgen.png" usemap="#toidpropconfgen.png" width="344" height="400" border="0" alt="">
+<map name="toidpropconfgen.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropconfgen','','hide')">
+<area shape="rect" coords="61,31,125,49" href="#" alt="Connection" onclick="MM_showHideLayers('toidpropconfconn','','show','toidpropconfgen','','hide')">
+<area shape="rect" coords="126,31,173,49" href="#" alt="Options" onclick="MM_showHideLayers('toidpropconfopt','','show','toidpropconfgen','','hide')">
+<area shape="rect" coords="174,31,237,49" href="#" alt="Forwarding" onclick="MM_showHideLayers('toidpropconffwd','','show','toidpropconfgen','','hide')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('toidpropconfgen','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropconfgen','','hide')">
+</map>
+</div>
+
+<div id="toidpropconfconn" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropconfconn.png" usemap="#toidpropconfconn.png" width="344" height="400" border="0" alt="">
+<map name="toidpropconfconn.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropconfconn','','hide')">
+<area shape="rect" coords="11,31,58,49" href="#" alt="General" onclick="MM_showHideLayers('toidpropconfgen','','show','toidpropconfconn','','hide')">
+<area shape="rect" coords="127,31,173,49" href="#" alt="Options" onclick="MM_showHideLayers('toidpropconfopt','','show','toidpropconfconn','','hide')">
+<area shape="rect" coords="174,31,237,49" href="#" alt="Forwarding" onclick="MM_showHideLayers('toidpropconffwd','','show','toidpropconfconn','','hide')">
+<area shape="rect" coords="24,322,128,344" href="#" alt="Port Settings" onclick="MM_showHideLayers('modpropconnps','','show')">
+<area shape="rect" coords="216,322,320,344" href="#" alt="Advanced" onclick="MM_showHideLayers('modpropconnadv','','show')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('toidpropconfconn','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropconfconn','','hide')">
+</map>
+</div>
+
+<div id="toidpropconfopt" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropconfopt.png" usemap="#toidpropconfopt.png" width="344" height="400" border="0" alt="">
+<map name="toidpropconfopt.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropconfopt','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('toidpropconfgen','','show','toidpropconfopt','','hide')">
+<area shape="rect" coords="60,31,124,49" href="#" alt="Connection" onclick="MM_showHideLayers('toidpropconfconn','','show','toidpropconfopt','','hide')">
+<area shape="rect" coords="175,31,237,49" href="#" alt="Forwarding" onclick="MM_showHideLayers('toidpropconffwd','','show','toidpropconfopt','','hide')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('toidpropconfopt','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropconfopt','','hide')">
+</map>
+</div>
+
+<div id="toidpropconffwd" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropconffwd.png" usemap="#toidpropconffwd.png" width="344" height="400" border="0" alt="">
+<map name="toidpropconffwd.png">
+<area shape="rect" coords="323,5,338,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropconffwd','','hide')">
+<area shape="rect" coords="11,31,59,49" href="#" alt="General" onclick="MM_showHideLayers('toidpropconfgen','','show','toidpropconffwd','','hide')">
+<area shape="rect" coords="60,31,125,49" href="#" alt="Connection" onclick="MM_showHideLayers('toidpropconfconn','','show','toidpropconffwd','','hide')">
+<area shape="rect" coords="126,31,172,49" href="#" alt="Options" onclick="MM_showHideLayers('toidpropconfopt','','show','toidpropconffwd','','hide')">
+<area shape="rect" coords="179,367,253,389" href="#" alt="OK" onclick="MM_showHideLayers('toidpropconffwd','','hide')">
+<area shape="rect" coords="260,367,334,389" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropconffwd','','hide')">
+</map>
+</div>
+
+<div id="toidpropsttcp" style="z-index: 40; left: 200px; top: 75px; position: absolute;">
+<img src="toidpropsttcp.png" usemap="#toidpropsttcp.png" width="309" height="415" border="0" alt="">
+<map name="toidpropsttcp.png">
+<area shape="rect" coords="288,5,303,18" href="#" alt="Close" onclick="MM_showHideLayers('toidpropsttcp','','hide')">
+<area shape="rect" coords="131,376,205,398" href="#" alt="OK" onclick="MM_showHideLayers('toidpropsttcp','','hide')">
+<area shape="rect" coords="212,376,286,398" href="#" alt="Cancel" onclick="MM_showHideLayers('toidpropsttcp','','hide')">
+</map>
+</div>
+
+<div id="toiddialinit" style="z-index: 30; left: 200px; top: 200px; position: absolute;">
+<img src="toiddialinit.png" width="327" height="94" border="0" alt="">
+</div>
+
+<div id="toiddialdial" style="z-index: 30; left: 200px; top: 200px; position: absolute;">
+<img src="toiddialdial.png" width="327" height="94" border="0" alt="">
+</div>
+
+<div id="toiddialver" style="z-index: 30; left: 200px; top: 200px; position: absolute;">
+<img src="toiddialver.png" width="327" height="94" border="0" alt="">
+</div>
+
+<div id="toiddiallogon" style="z-index: 30; left: 200px; top: 200px; position: absolute;">
+<img src="toiddiallogon.png" width="327" height="94" border="0" alt="">
+</div>
+
+<div id="toiddialconn" style="z-index: 30; left: 175px; top: 125px; position: absolute;">
+<img src="toiddialconn.png" usemap="#toiddialconn.png" width="440" height="259" border="0" alt="">
+<map name="toiddialconn.png">
+<area shape="rect" coords="419,5,434,18" href="#" alt="Close" onclick="MM_showHideLayers('toiddialconn','','hide')">
+<area shape="rect" coords="204,220,293,242" href="#" alt="Close" onclick="MM_showHideLayers('toiddialconn','','hide')">
+</map>
+</div>
+
+<div id="dunicon" style="z-index: 100; left: 698px; top: 572px; position: absolute;">
+<img src="dunicon.gif" usemap="#dunicon.gif" width="59" height="28" border="0" alt="">
+<map name="dunicon.gif">
+<area shape="rect" coords="40,5,57,24" href="#" alt="Connection Status" onclick="MM_showHideLayers('connstat','','show')">
+</map>
+</div>
+
+<div id="connstat" style="z-index: 50; left: 225px; top: 175px; position: absolute;">
+<img src="connstat.png" usemap="#connstat.png" width="327" height="131" border="0" alt="">
+<map name="connstat.png">
+<area shape="rect" coords="306,5,321,18" href="#" alt="Close" onclick="MM_showHideLayers('connstat','','hide')">
+<area shape="rect" coords="236,35,309,57" href="#" alt="OK" onclick="MM_showHideLayers('connstat','','hide')">
+<area shape="rect" coords="236,64,310,86" href="#" alt="Disconnect" onclick="MM_showHideLayers('connstat','','hide','dunicon','','hide')">
+<area shape="rect" coords="236,94,310,116" href="#" alt="Details" onclick="MM_showHideLayers('connstatdet','','show','connstat','','hide')">
+</map>
+</div>
+
+<div id="connstatdet" style="z-index: 50; left: 225px; top: 175px; position: absolute;">
+<img src="connstatdet.png" usemap="#connstatdet.png" width="327" height="259" border="0" alt="">
+<map name="connstatdet.png">
+<area shape="rect" coords="306,5,321,18" href="#" alt="Close" onclick="MM_showHideLayers('connstatdet','','hide')">
+<area shape="rect" coords="236,35,309,57" href="#" alt="OK" onclick="MM_showHideLayers('connstatdet','','hide')">
+<area shape="rect" coords="236,64,310,86" href="#" alt="Disconnect" onclick="MM_showHideLayers('connstatdet','','hide','dunicon','','hide')">
+<area shape="rect" coords="236,94,310,116" href="#" alt="No Details" onclick="MM_showHideLayers('connstat','','show','connstatdet','','hide')">
+</map>
+</div>
+
+<div id="hyperterm" style="z-index: 20; left: 150px; top: 100px; position: absolute;">
+<img src="hyperterm.png" usemap="#hyperterm.png" width="499" height="398" border="0" alt="">
+<map name="hyperterm.png">
+<area shape="rect" coords="477,6,492,19" href="#" alt="Close" onclick="MM_showHideLayers('hyperterm','','hide')">
+<area shape="rect" coords="150,191,227,253" href="#" alt="Hypertrm.exe" onclick="MM_showHideLayers('htsplash','','show');htsplashdelay()">
+</map>
+</div>
+
+<div id="htsplash" style="z-index: 30; left: 200px; top: 150px; position: absolute;">
+<img src="htsplash.png" width="322" height="267" border="0" alt="">
+</div>
+
+<div id="htermnew" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="htermnew.png" usemap="#htermnew.png" width="458" height="410" border="0" alt="">
+<map name="htermnew.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('htermnew','','hide')">
+<area shape="rect" coords="227,310,301,332" href="#" alt="OK" onclick="MM_showHideLayers('htermpn','','show','htermnew','','hide')">
+</map>
+</div>
+
+<div id="htermpn" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="htermpn.png" usemap="#htermpn.png" width="458" height="410" border="0" alt="">
+<map name="htermpn.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('htermpn','','hide')">
+<area shape="rect" coords="209,314,283,336" href="#" alt="OK" onclick="MM_showHideLayers('htermps','','show','htermpn','','hide')">
+</map>
+</div>
+
+<div id="htermps" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="htermps.png" usemap="#htermps.png" width="458" height="410" border="0" alt="">
+<map name="htermps.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('htermps','','hide')">
+<area shape="rect" coords="86,323,196,345" href="#" alt="Advanced" onclick="MM_showHideLayers('modpropconnps','','show')">
+<area shape="rect" coords="154,372,228,394" href="#" alt="OK" onclick="MM_showHideLayers('hterm1','','show','htermps','','hide')">
+</map>
+</div>
+
+<div id="hterm1" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="hterm1.png" usemap="#hterm1.png" width="458" height="410" border="0" alt="">
+<map name="hterm1.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('hterm1','','hide')">
+<area shape="rect" coords="17,83,424,374" href="#" alt="Click To Continue" onclick="MM_showHideLayers('hterm2','','show','hterm1','','hide')">
+</map>
+</div>
+
+<div id="hterm2" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="hterm2.png" usemap="#hterm2.png" width="458" height="410" border="0" alt="">
+<map name="hterm2.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('hterm2','','hide')">
+<area shape="rect" coords="17,83,424,374" href="#" alt="Click To Continue" onclick="MM_showHideLayers('hterm3','','show','hterm2','','hide')">
+</map>
+</div>
+
+<div id="hterm3" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="hterm3.png" usemap="#hterm3.png" width="458" height="410" border="0" alt="">
+<map name="hterm3.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('hterm3','','hide')">
+<area shape="rect" coords="17,83,424,374" href="#" alt="Click To Continue" onclick="MM_showHideLayers('hterm4','','show','hterm3','','hide')">
+</map>
+</div>
+
+<div id="hterm4" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="hterm4.png" usemap="#hterm4.png" width="458" height="410" border="0" alt="">
+<map name="hterm4.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('hterm4','','hide')">
+<area shape="rect" coords="17,83,424,374" href="#" alt="Click To Continue" onclick="MM_showHideLayers('hterm5','','show','hterm4','','hide')">
+</map>
+</div>
+
+<div id="hterm5" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="hterm5.png" usemap="#hterm5.png" width="458" height="410" border="0" alt="">
+<map name="hterm5.png">
+<area shape="rect" coords="436,6,451,19" href="#" alt="Close" onclick="MM_showHideLayers('hterm5','','hide')">
+</map>
+</div>
+
+</body>
+</html>

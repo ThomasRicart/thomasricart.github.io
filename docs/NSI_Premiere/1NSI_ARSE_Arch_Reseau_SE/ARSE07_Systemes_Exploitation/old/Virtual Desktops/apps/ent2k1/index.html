@@ -1,0 +1,823 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Entourage 2001 Mac Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#34B2CD" style="margin: 0px;" onload="show_clock();	
+MM_showHideLayers('loading','','hide','loadmsg','','hide','clock','','show','dticons','','show','cstrip','','show','ent2k1','','show','ent2k1finder','','show','ent2k1appmenu','','hide','ent2k1file','','hide','ent2k1edit','','hide','ent2k1view','','hide','ent2k1msg','','hide','ent2k1form','','hide','ent2k1tool','','hide','ent2k1win','','hide','ent2k1scr','','hide','ent2k1help','','hide','ent2k1filenew','','hide','ent2k1editpref','','hide','ent2k1toolrs','','hide','ent2k1about','','hide','ent2k1sidentconf','','hide','ent2k1sident','','hide','ent2k1newident','','hide','ent2k1genprefgen','','hide','ent2k1genprefab','','hide','ent2k1genprefcal','','hide','ent2k1genpreffont','','hide','ent2k1genprefspell','','hide','ent2k1genprefnot','','hide','ent2k1mnprefread','','hide','ent2k1mnprefcomp','','hide','ent2k1mnprefcompao','','hide','ent2k1mnprefrf','','hide','ent2k1mnprefview','','hide','ent2k1mnprefprox','','hide','ent2k1mnprefproxset','','hide','ent2k1acac','','hide','ent2k1acaf','','hide','ent2k1junkmail','','hide','ent2k1maillist','','hide','ent2k1maillistedml','','hide','ent2k1maillistedadv','','hide','ent2k1rulemail','','hide','ent2k1rulenews','','hide','ent2k1rulemailed','','hide','ent2k1rulemailedsel1','','hide','ent2k1rulemailedsel2','','hide','ent2k1rulemailedsel3','','hide','ent2k1rulemailedsel4','','hide','ent2k1rulenewsed','','hide','ent2k1rulenewsedsel1','','hide','ent2k1rulenewsedsel2','','hide','ent2k1rulenewsedsel3','','hide','ent2k1rulenewsedsel4','','hide','ent2k1rulenewsedsel5','','hide','ent2k1ds','','hide','ent2k1sig','','hide','ent2k1siged','','hide','ent2k1sch','','hide','ent2k1sched','','hide','ent2k1schedsel1','','hide','ent2k1schedsel2','','hide','ent2k1schedsel3','','hide','ent2k1schedao','','hide','ent2k1newmsg1','','hide','ent2k1newmsg2','','hide','ent2k1newmsgenc','','hide','ent2k1accmail','','hide','ent2k1accnews','','hide','ent2k1accds','','hide','ent2k1accnew','','hide','ent2k1accmailnew','','hide','ent2k1accmailasname','','hide','ent2k1accmailasemail','','hide','ent2k1accmailasserv','','hide','ent2k1accmailaslogon','','hide','ent2k1accmailasfin','','hide','ent2k1accmailedas','','hide','ent2k1accmailedopt','','hide','ent2k1accmailedasaro','','hide','ent2k1accmailedasaso','','hide','ent2k1accnewsasname','','hide','ent2k1accnewsasserv','','hide','ent2k1accnewsasfin','','hide','ent2k1accnewsedas','','hide','ent2k1accnewsedopt','','hide','ent2k1accnewsedasaro','','hide','ent2k1accdsasserv','','hide','ent2k1accdsasfin','','hide','ent2k1accdsedas','','hide','ent2k1accdsedopt','','hide','ent2k1accdsedasao','','hide');
+MM_preloadImages('loading.png','dticons.png','cstrip.png','ent2k1.png','ent2k1finder.png','ent2k1appmenu.png','ent2k1file.png','ent2k1edit.png','ent2k1view.png','ent2k1msg.png','ent2k1form.png','ent2k1tool.png','ent2k1win.png','ent2k1scr.png','ent2k1help.png','ent2k1filenew.png','ent2k1editpref.png','ent2k1toolrs.png','ent2k1about.png','ent2k1sidentconf.png','ent2k1sident.png','ent2k1newident.png','ent2k1genprefgen.png','ent2k1genprefab.png','ent2k1genprefcal.png','ent2k1genpreffont.png','ent2k1genprefspell.png','ent2k1genprefnot.png','ent2k1mnprefread.png','ent2k1mnprefcomp.png','ent2k1mnprefcompao.png','ent2k1mnprefrf.png','ent2k1mnprefview.png','ent2k1mnprefprox.png','ent2k1mnprefproxset.png','ent2k1acac.png','ent2k1acaf.png','ent2k1junkmail.png','ent2k1maillist.png','ent2k1maillistedml.png','ent2k1maillistedadv.png','ent2k1rulemail.png','ent2k1rulenews.png','ent2k1rulemailed.png','ent2k1rulemailedsel1.png','ent2k1rulemailedsel2.png','ent2k1rulemailedsel3.png','ent2k1rulemailedsel4.png','ent2k1rulenewsed.png','ent2k1rulenewsedsel1.png','ent2k1rulenewsedsel2.png','ent2k1rulenewsedsel3.png','ent2k1rulenewsedsel4.png','ent2k1rulenewsedsel5.png','ent2k1ds.png','ent2k1sig.png','ent2k1siged.png','ent2k1sch.png','ent2k1sched.png','ent2k1schedsel1.png','ent2k1schedsel2.png','ent2k1schedsel3.png','ent2k1schedao.png','ent2k1newmsg1.png','ent2k1newmsg2.png','ent2k1newmsgenc.png','ent2k1accmail.png','ent2k1accnews.png','ent2k1accds.png','ent2k1accnew.png','ent2k1accmailnew.png','ent2k1accmailasname.png','ent2k1accmailasemail.png','ent2k1accmailasserv.png','ent2k1accmailaslogon.png','ent2k1accmailasfin.png','ent2k1accmailedas.png','ent2k1accmailedopt.png','ent2k1accmailedasaro.png','ent2k1accmailedasaso.png','ent2k1accnewsasname.png','ent2k1accnewsasserv.png','ent2k1accnewsasfin.png','ent2k1accnewsedas.png','ent2k1accnewsedopt.png','ent2k1accnewsedasaro.png','ent2k1accdsasserv.png','ent2k1accdsasfin.png','ent2k1accdsedas.png','ent2k1accdsedopt.png','ent2k1accdsedasao.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 300; height: 300; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="clock" style="z-index: 120; left: 558px; top: 2px; position: absolute;">
+<b><script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script></b>
+</div>
+
+<div id="dticons" style="z-index: 1; left: 695px; top: 20px; position: absolute;">
+<img src="dticons.png" width="105" height="580" border="0" alt="">
+</div>
+
+<div id="cstrip" style="z-index: 1; left: 0px; top: 576px; position: absolute;">
+<img src="cstrip.png" width="514" height="24" border="0" alt="">
+</div>
+
+<div id="ent2k1" style="z-index: 10; left: 15px; top: 23px; position: absolute;">
+<img src="ent2k1.png" usemap="#ent2k1.png" width="770" height="550" border="0" alt="">
+<map name="ent2k1.png">
+<area shape="rect" coords="6,22,65,45" href="#" alt="New" onclick="MM_showHideLayers('ent2k1newmsg1','','show')">
+</map>
+</div>
+
+<div id="ent2k1finder" style="z-index: 110; left: 0px; top: 0px; position: absolute;">
+<img src="ent2k1finder.png" usemap="#ent2k1finder.png" width="800" height="20" border="0" alt="">
+<map name="ent2k1finder.png">
+<area shape="rect" coords="9,0,37,19" href="#" alt="Apple" onmouseover="MM_showHideLayers('ent2k1appmenu','','show')" onmouseout="MM_showHideLayers('ent2k1appmenu','','hide')">
+<area shape="rect" coords="37,0,72,19" href="#" alt="File" onmouseover="MM_showHideLayers('ent2k1file','','show')" onmouseout="MM_showHideLayers('ent2k1file','','hide')">
+<area shape="rect" coords="72,0,109,19" href="#" alt="Edit" onmouseover="MM_showHideLayers('ent2k1edit','','show')" onmouseout="MM_showHideLayers('ent2k1edit','','hide')">
+<area shape="rect" coords="109,0,153,19" href="#" alt="View" onmouseover="MM_showHideLayers('ent2k1view','','show')" onmouseout="MM_showHideLayers('ent2k1view','','hide')">
+<area shape="rect" coords="153,0,223,19" href="#" alt="Message" onmouseover="MM_showHideLayers('ent2k1msg','','show')" onmouseout="MM_showHideLayers('ent2k1msg','','hide')">
+<area shape="rect" coords="223,0,281,19" href="#" alt="Format" onmouseover="MM_showHideLayers('ent2k1form','','show')" onmouseout="MM_showHideLayers('ent2k1form','','hide')">
+<area shape="rect" coords="281,0,327,19" href="#" alt="Tools" onmouseover="MM_showHideLayers('ent2k1tool','','show')" onmouseout="MM_showHideLayers('ent2k1tool','','hide')">
+<area shape="rect" coords="327,0,391,19" href="#" alt="Window" onmouseover="MM_showHideLayers('ent2k1win','','show')" onmouseout="MM_showHideLayers('ent2k1win','','hide')">
+<area shape="rect" coords="391,0,419,19" href="#" alt="Script" onmouseover="MM_showHideLayers('ent2k1scr','','show')" onmouseout="MM_showHideLayers('ent2k1scr','','hide')">
+<area shape="rect" coords="419,0,459,19" href="#" alt="Help" onmouseover="MM_showHideLayers('ent2k1help','','show')" onmouseout="MM_showHideLayers('ent2k1help','','hide')">
+</map>
+</div>
+
+<div id="ent2k1appmenu" style="z-index: 110; left: 9px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1appmenu','','show')" onmouseout="MM_showHideLayers('ent2k1appmenu','','hide')">
+<img src="ent2k1appmenu.png" usemap="#ent2k1appmenu.png" width="212" height="313" border="0" alt="">
+<map name="ent2k1appmenu.png">
+<area shape="rect" coords="2,2,208,18" href="#" alt="About Microsoft Entourage" onclick="MM_showHideLayers('ent2k1about','','show','ent2k1appmenu','','hide')">
+</map>
+</div>
+
+<div id="ent2k1file" style="z-index: 110; left: 37px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1file','','show')" onmouseout="MM_showHideLayers('ent2k1file','','hide')">
+<img src="ent2k1file.png" usemap="#ent2k1file.png" width="189" height="311" border="0" alt="">
+<map name="ent2k1file.png">
+<area shape="rect" coords="2,21,185,39" href="#" alt="New" onmouseover="MM_showHideLayers('ent2k1filenew','','show')" onmouseout="MM_showHideLayers('ent2k1filenew','','hide')">
+<area shape="rect" coords="2,275,185,292" href="#" alt="Switch Identity" onclick="MM_showHideLayers('ent2k1sidentconf','','show','ent2k1file','','hide')">
+<area shape="rect" coords="2,292,185,307" href="#" alt="Quit" onclick="window.close();">
+</map>
+</div>
+
+<div id="ent2k1edit" style="z-index: 110; left: 72px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1edit','','show')" onmouseout="MM_showHideLayers('ent2k1edit','','hide')">
+<img src="ent2k1edit.png" usemap="#ent2k1edit.png" width="204" height="349" border="0" alt="">
+<map name="ent2k1edit.png">
+<area shape="rect" coords="2,329,200,345" href="#" alt="Preferences" onmouseover="MM_showHideLayers('ent2k1editpref','','show')" onmouseout="MM_showHideLayers('ent2k1editpref','','hide')">
+</map>
+</div>
+
+<div id="ent2k1view" style="z-index: 110; left: 109px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1view','','show')" onmouseout="MM_showHideLayers('ent2k1view','','hide')">
+<img src="ent2k1view.png" width="194" height="235" border="0" alt="">
+</div>
+
+<div id="ent2k1msg" style="z-index: 110; left: 153px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1msg','','show')" onmouseout="MM_showHideLayers('ent2k1msg','','hide')">
+<img src="ent2k1msg.png" width="188" height="337" border="0" alt="">
+</div>
+
+<div id="ent2k1form" style="z-index: 110; left: 223px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1form','','show')" onmouseout="MM_showHideLayers('ent2k1form','','hide')">
+<img src="ent2k1form.png" width="171" height="251" border="0" alt="">
+</div>
+
+<div id="ent2k1tool" style="z-index: 110; left: 281px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1tool','','show')" onmouseout="MM_showHideLayers('ent2k1tool','','hide')">
+<img src="ent2k1tool.png" usemap="#ent2k1tool.png" width="200" height="337" border="0" alt="">
+<map name="ent2k1tool.png">
+<area shape="rect" coords="2,2,196,17" href="#" alt="Run Schedule" onmouseover="MM_showHideLayers('ent2k1toolrs','','show')" onmouseout="MM_showHideLayers('ent2k1toolrs','','hide')">
+<area shape="rect" coords="2,70,196,88" href="#" alt="AutoCorrect" onclick="MM_showHideLayers('ent2k1acac','','show','ent2k1tool','','hide')">
+<area shape="rect" coords="2,199,196,216" href="#" alt="Junk Mail Filter" onclick="MM_showHideLayers('ent2k1junkmail','','show','ent2k1tool','','hide')">
+<area shape="rect" coords="2,216,196,232" href="#" alt="Mailing List Manager" onclick="MM_showHideLayers('ent2k1maillist','','show','ent2k1tool','','hide')">
+<area shape="rect" coords="2,232,196,248" href="#" alt="Rules" onclick="MM_showHideLayers('ent2k1rulemail','','show','ent2k1tool','','hide')">
+<area shape="rect" coords="2,269,196,286" href="#" alt="Directory Services" onclick="MM_showHideLayers('ent2k1ds','','show','ent2k1tool','','hide')">
+<area shape="rect" coords="2,286,196,302" href="#" alt="Signatures" onclick="MM_showHideLayers('ent2k1sig','','show','ent2k1tool','','hide')">
+<area shape="rect" coords="2,302,196,318" href="#" alt="Schedules" onclick="MM_showHideLayers('ent2k1sch','','show','ent2k1tool','','hide')">
+<area shape="rect" coords="2,318,196,333" href="#" alt="Accounts" onclick="MM_showHideLayers('ent2k1accmail','','show','ent2k1tool','','hide')">
+</map>
+</div>
+
+<div id="ent2k1win" style="z-index: 110; left: 327px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1win','','show')" onmouseout="MM_showHideLayers('ent2k1win','','hide')">
+<img src="ent2k1win.png" width="219" height="175" border="0" alt="">
+</div>
+
+<div id="ent2k1scr" style="z-index: 110; left: 391px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1scr','','show')" onmouseout="MM_showHideLayers('ent2k1scr','','hide')">
+<img src="ent2k1scr.png" width="244" height="99" border="0" alt="">
+</div>
+
+<div id="ent2k1help" style="z-index: 110; left: 419px; top: 19px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1help','','show')" onmouseout="MM_showHideLayers('ent2k1help','','hide')">
+<img src="ent2k1help.png" width="194" height="155" border="0" alt="">
+</div>
+
+<div id="ent2k1filenew" style="z-index: 120; left: 219px; top: 41px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1file','','show','ent2k1filenew','','show')" onmouseout="MM_showHideLayers('ent2k1file','','hide','ent2k1filenew','','hide')">
+<img src="ent2k1filenew.png" usemap="#ent2k1filenew.png" width="172" height="175" border="0" alt="">
+<map name="ent2k1filenew.png">
+<area shape="rect" coords="2,2,168,18" href="#" alt="Mail Message" onclick="MM_showHideLayers('ent2k1newmsg1','','show','ent2k1file','','hide','ent2k1filenew','','hide')">
+</map>
+</div>
+
+<div id="ent2k1editpref" style="z-index: 120; left: 269px; top: 349px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1edit','','show','ent2k1editpref','','show')" onmouseout="MM_showHideLayers('ent2k1edit','','hide','ent2k1editpref','','hide')">
+<img src="ent2k1editpref.png" usemap="#ent2k1editpref.png" width="170" height="35" border="0" alt="">
+<map name="ent2k1editpref.png">
+<area shape="rect" coords="2,2,166,16" href="#" alt="General" onclick="MM_showHideLayers('ent2k1genprefgen','','show','ent2k1edit','','hide','ent2k1editpref','','hide')">
+<area shape="rect" coords="2,16,166,31" href="#" alt="Mail &amp; News" onclick="MM_showHideLayers('ent2k1mnprefread','','show','ent2k1edit','','hide','ent2k1editpref','','hide')">
+</map>
+</div>
+
+<div id="ent2k1toolrs" style="z-index: 120; left: 474px; top: 26px; position: absolute;" onmouseover="MM_showHideLayers('ent2k1tool','','show','ent2k1toolrs','','show')" onmouseout="MM_showHideLayers('ent2k1tool','','hide','ent2k1toolrs','','hide')">
+<img src="ent2k1toolrs.png" usemap="#ent2k1toolrs.png" width="208" height="73" border="0" alt="">
+<map name="ent2k1toolrs.png">
+<area shape="rect" coords="2,53,204,69" href="#" alt="Edit Schedules" onclick="MM_showHideLayers('ent2k1sch','','show','ent2k1tool','','hide','ent2k1toolrs','','hide')">
+</map>
+</div>
+
+<div id="ent2k1about" style="z-index: 20; left: 200px; top: 70px; position: absolute;">
+<img src="ent2k1about.png" usemap="#ent2k1about.png" width="399" height="431" border="0" alt="">
+<map name="ent2k1about.png">
+<area shape="rect" coords="321,394,383,420" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1about','','hide')">
+</map>
+</div>
+
+<div id="ent2k1sidentconf" style="z-index: 20; left: 205px; top: 210px; position: absolute;">
+<img src="ent2k1sidentconf.png" usemap="#ent2k1sidentconf.png" width="393" height="157" border="0" alt="">
+<map name="ent2k1sidentconf.png">
+<area shape="rect" coords="235,120,298,139" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1sidentconf','','hide')">
+<area shape="rect" coords="309,117,378,142" href="#" alt="Switch" onclick="MM_showHideLayers('ent2k1sident','','show','ent2k1sidentconf','','hide','ent2k1','','hide')">
+</map>
+</div>
+
+<div id="ent2k1sident" style="z-index: 10; left: 220px; top: 155px; position: absolute;">
+<img src="ent2k1sident.png" usemap="#ent2k1sident.png" width="361" height="261" border="0" alt="">
+<map name="ent2k1sident.png">
+<area shape="rect" coords="261,51,346,70" href="#" alt="New" onclick="MM_showHideLayers('ent2k1newident','','show')">
+<area shape="rect" coords="261,176,346,195" href="#" alt="Quit" onclick="window.close();">
+<area shape="rect" coords="258,201,349,226" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1','','show','ent2k1sident','','hide')">
+</map>
+</div>
+
+<div id="ent2k1newident" style="z-index: 20; left: 240px; top: 225px; position: absolute;">
+<img src="ent2k1newident.png" usemap="#ent2k1newident.png" width="322" height="120" border="0" alt="">
+<map name="ent2k1newident.png">
+<area shape="rect" coords="131,86,210,105" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1newident','','hide')">
+<area shape="rect" coords="222,83,307,108" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1newident','','hide')">
+</map>
+</div>
+
+<div id="ent2k1genprefgen" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1genprefgen.png" usemap="#ent2k1genprefgen.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1genprefgen.png">
+<area shape="poly" coords="78,43,86,27,155,27,163,43" href="#" alt="Address Book" onclick="MM_showHideLayers('ent2k1genprefab','','show','ent2k1genprefgen','','hide')">
+<area shape="poly" coords="164,43,172,27,220,27,228,43" href="#" alt="Calendar" onclick="MM_showHideLayers('ent2k1genprefcal','','show','ent2k1genprefgen','','hide')">
+<area shape="poly" coords="229,43,237,27,269,27,277,43" href="#" alt="Fonts" onclick="MM_showHideLayers('ent2k1genpreffont','','show','ent2k1genprefgen','','hide')">
+<area shape="poly" coords="278,43,286,27,332,27,340,43" href="#" alt="Spelling" onclick="MM_showHideLayers('ent2k1genprefspell','','show','ent2k1genprefgen','','hide')">
+<area shape="poly" coords="341,43,349,27,412,27,420,43" href="#" alt="Notification" onclick="MM_showHideLayers('ent2k1genprefnot','','show','ent2k1genprefgen','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1genprefgen','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1genprefgen','','hide')">
+</map>
+</div>
+
+<div id="ent2k1genprefab" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1genprefab.png" usemap="#ent2k1genprefab.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1genprefab.png">
+<area shape="poly" coords="19,43,27,27,69,27,77,43" href="#" alt="General" onclick="MM_showHideLayers('ent2k1genprefgen','','show','ent2k1genprefab','','hide')">
+<area shape="poly" coords="164,43,172,27,220,27,228,43" href="#" alt="Calendar" onclick="MM_showHideLayers('ent2k1genprefcal','','show','ent2k1genprefab','','hide')">
+<area shape="poly" coords="229,43,237,27,269,27,277,43" href="#" alt="Fonts" onclick="MM_showHideLayers('ent2k1genpreffont','','show','ent2k1genprefab','','hide')">
+<area shape="poly" coords="278,43,286,27,332,27,340,43" href="#" alt="Spelling" onclick="MM_showHideLayers('ent2k1genprefspell','','show','ent2k1genprefab','','hide')">
+<area shape="poly" coords="341,43,349,27,412,27,420,43" href="#" alt="Notification" onclick="MM_showHideLayers('ent2k1genprefnot','','show','ent2k1genprefab','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1genprefab','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1genprefab','','hide')">
+</map>
+</div>
+
+<div id="ent2k1genprefcal" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1genprefcal.png" usemap="#ent2k1genprefcal.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1genprefcal.png">
+<area shape="poly" coords="19,43,27,27,69,27,77,43" href="#" alt="General" onclick="MM_showHideLayers('ent2k1genprefgen','','show','ent2k1genprefcal','','hide')">
+<area shape="poly" coords="78,43,86,27,155,27,163,43" href="#" alt="Address Book" onclick="MM_showHideLayers('ent2k1genprefab','','show','ent2k1genprefcal','','hide')">
+<area shape="poly" coords="229,43,237,27,269,27,277,43" href="#" alt="Fonts" onclick="MM_showHideLayers('ent2k1genpreffont','','show','ent2k1genprefcal','','hide')">
+<area shape="poly" coords="278,43,286,27,332,27,340,43" href="#" alt="Spelling" onclick="MM_showHideLayers('ent2k1genprefspell','','show','ent2k1genprefcal','','hide')">
+<area shape="poly" coords="341,43,349,27,412,27,420,43" href="#" alt="Notification" onclick="MM_showHideLayers('ent2k1genprefnot','','show','ent2k1genprefcal','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1genprefcal','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1genprefcal','','hide')">
+</map>
+</div>
+
+<div id="ent2k1genpreffont" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1genpreffont.png" usemap="#ent2k1genpreffont.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1genpreffont.png">
+<area shape="poly" coords="19,43,27,27,69,27,77,43" href="#" alt="General" onclick="MM_showHideLayers('ent2k1genprefgen','','show','ent2k1genpreffont','','hide')">
+<area shape="poly" coords="78,43,86,27,155,27,163,43" href="#" alt="Address Book" onclick="MM_showHideLayers('ent2k1genprefab','','show','ent2k1genpreffont','','hide')">
+<area shape="poly" coords="164,43,172,27,220,27,228,43" href="#" alt="Calendar" onclick="MM_showHideLayers('ent2k1genprefcal','','show','ent2k1genpreffont','','hide')">
+<area shape="poly" coords="278,43,286,27,332,27,340,43" href="#" alt="Spelling" onclick="MM_showHideLayers('ent2k1genprefspell','','show','ent2k1genpreffont','','hide')">
+<area shape="poly" coords="341,43,349,27,412,27,420,43" href="#" alt="Notification" onclick="MM_showHideLayers('ent2k1genprefnot','','show','ent2k1genpreffont','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1genpreffont','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1genpreffont','','hide')">
+</map>
+</div>
+
+<div id="ent2k1genprefspell" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1genprefspell.png" usemap="#ent2k1genprefspell.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1genprefspell.png">
+<area shape="poly" coords="19,43,27,27,69,27,77,43" href="#" alt="General" onclick="MM_showHideLayers('ent2k1genprefgen','','show','ent2k1genprefspell','','hide')">
+<area shape="poly" coords="78,43,86,27,155,27,163,43" href="#" alt="Address Book" onclick="MM_showHideLayers('ent2k1genprefab','','show','ent2k1genprefspell','','hide')">
+<area shape="poly" coords="164,43,172,27,220,27,228,43" href="#" alt="Calendar" onclick="MM_showHideLayers('ent2k1genprefcal','','show','ent2k1genprefspell','','hide')">
+<area shape="poly" coords="229,43,237,27,269,27,277,43" href="#" alt="Fonts" onclick="MM_showHideLayers('ent2k1genpreffont','','show','ent2k1genprefspell','','hide')">
+<area shape="poly" coords="341,43,349,27,412,27,420,43" href="#" alt="Notification" onclick="MM_showHideLayers('ent2k1genprefnot','','show','ent2k1genprefspell','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1genprefspell','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1genprefspell','','hide')">
+</map>
+</div>
+
+<div id="ent2k1genprefnot" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1genprefnot.png" usemap="#ent2k1genprefnot.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1genprefnot.png">
+<area shape="poly" coords="19,43,27,27,69,27,77,43" href="#" alt="General" onclick="MM_showHideLayers('ent2k1genprefgen','','show','ent2k1genprefnot','','hide')">
+<area shape="poly" coords="78,43,86,27,155,27,163,43" href="#" alt="Address Book" onclick="MM_showHideLayers('ent2k1genprefab','','show','ent2k1genprefnot','','hide')">
+<area shape="poly" coords="164,43,172,27,220,27,228,43" href="#" alt="Calendar" onclick="MM_showHideLayers('ent2k1genprefcal','','show','ent2k1genprefnot','','hide')">
+<area shape="poly" coords="229,43,237,27,269,27,277,43" href="#" alt="Fonts" onclick="MM_showHideLayers('ent2k1genpreffont','','show','ent2k1genprefnot','','hide')">
+<area shape="poly" coords="278,43,286,27,332,27,340,43" href="#" alt="Spelling" onclick="MM_showHideLayers('ent2k1genprefspell','','show','ent2k1genprefnot','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1genprefnot','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1genprefnot','','hide')">
+</map>
+</div>
+
+<div id="ent2k1mnprefread" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1mnprefread.png" usemap="#ent2k1mnprefread.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1mnprefread.png">
+<area shape="poly" coords="64,43,72,27,119,27,127,43" href="#" alt="Compose" onclick="MM_showHideLayers('ent2k1mnprefcomp','','show','ent2k1mnprefread','','hide')">
+<area shape="poly" coords="128,43,136,27,225,27,233,43" href="#" alt="Reply &amp; Forward" onclick="MM_showHideLayers('ent2k1mnprefrf','','show','ent2k1mnprefread','','hide')">
+<area shape="poly" coords="234,43,242,27,271,27,279,43" href="#" alt="View" onclick="MM_showHideLayers('ent2k1mnprefview','','show','ent2k1mnprefread','','hide')">
+<area shape="poly" coords="280,43,288,27,332,27,340,43" href="#" alt="Proxies" onclick="MM_showHideLayers('ent2k1mnprefprox','','show','ent2k1mnprefread','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1mnprefread','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1mnprefread','','hide')">
+</map>
+</div>
+
+<div id="ent2k1mnprefcomp" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1mnprefcomp.png" usemap="#ent2k1mnprefcomp.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1mnprefcomp.png">
+<area shape="poly" coords="19,43,27,27,55,27,63,43" href="#" alt="Read" onclick="MM_showHideLayers('ent2k1mnprefread','','show','ent2k1mnprefcomp','','hide')">
+<area shape="poly" coords="128,43,136,27,225,27,233,43" href="#" alt="Reply &amp; Forward" onclick="MM_showHideLayers('ent2k1mnprefrf','','show','ent2k1mnprefcomp','','hide')">
+<area shape="poly" coords="234,43,242,27,271,27,279,43" href="#" alt="View" onclick="MM_showHideLayers('ent2k1mnprefview','','show','ent2k1mnprefcomp','','hide')">
+<area shape="poly" coords="280,43,288,27,332,27,340,43" href="#" alt="Proxies" onclick="MM_showHideLayers('ent2k1mnprefprox','','show','ent2k1mnprefcomp','','hide')">
+<area shape="rect" coords="38,222,235,244" href="#" alt="Attachment Options" onclick="MM_showHideLayers('ent2k1mnprefcompao','','show')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1mnprefcomp','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1mnprefcomp','','hide')">
+</map>
+</div>
+
+<div id="ent2k1mnprefcompao" style="z-index: 30; left: 197px; top: 296px; position: absolute;">
+<img src="ent2k1mnprefcompao.png" usemap="#ent2k1mnprefcompao.png" width="379" height="171" border="0" alt="">
+<map name="ent2k1mnprefcompao.png">
+<area shape="rect" coords="6,6,13,13" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1mnprefcompao','','hide')">
+</map>
+</div>
+
+<div id="ent2k1mnprefrf" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1mnprefrf.png" usemap="#ent2k1mnprefrf.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1mnprefrf.png">
+<area shape="poly" coords="19,43,27,27,55,27,63,43" href="#" alt="Read" onclick="MM_showHideLayers('ent2k1mnprefread','','show','ent2k1mnprefrf','','hide')">
+<area shape="poly" coords="64,43,72,27,119,27,127,43" href="#" alt="Compose" onclick="MM_showHideLayers('ent2k1mnprefcomp','','show','ent2k1mnprefrf','','hide')">
+<area shape="poly" coords="234,43,242,27,271,27,279,43" href="#" alt="View" onclick="MM_showHideLayers('ent2k1mnprefview','','show','ent2k1mnprefrf','','hide')">
+<area shape="poly" coords="280,43,288,27,332,27,340,43" href="#" alt="Proxies" onclick="MM_showHideLayers('ent2k1mnprefprox','','show','ent2k1mnprefrf','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1mnprefrf','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1mnprefrf','','hide')">
+</map>
+</div>
+
+<div id="ent2k1mnprefview" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1mnprefview.png" usemap="#ent2k1mnprefview.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1mnprefview.png">
+<area shape="poly" coords="19,43,27,27,55,27,63,43" href="#" alt="Read" onclick="MM_showHideLayers('ent2k1mnprefread','','show','ent2k1mnprefview','','hide')">
+<area shape="poly" coords="64,43,72,27,119,27,127,43" href="#" alt="Compose" onclick="MM_showHideLayers('ent2k1mnprefcomp','','show','ent2k1mnprefview','','hide')">
+<area shape="poly" coords="128,43,136,27,225,27,233,43" href="#" alt="Reply &amp; Forward" onclick="MM_showHideLayers('ent2k1mnprefrf','','show','ent2k1mnprefview','','hide')">
+<area shape="poly" coords="280,43,288,27,332,27,340,43" href="#" alt="Proxies" onclick="MM_showHideLayers('ent2k1mnprefprox','','show','ent2k1mnprefview','','hide')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1mnprefview','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1mnprefview','','hide')">
+</map>
+</div>
+
+<div id="ent2k1mnprefprox" style="z-index: 20; left: 160px; top: 75px; position: absolute;">
+<img src="ent2k1mnprefprox.png" usemap="#ent2k1mnprefprox.png" width="477" height="426" border="0" alt="">
+<map name="ent2k1mnprefprox.png">
+<area shape="poly" coords="19,43,27,27,55,27,63,43" href="#" alt="Read" onclick="MM_showHideLayers('ent2k1mnprefread','','show','ent2k1mnprefprox','','hide')">
+<area shape="poly" coords="64,43,72,27,119,27,127,43" href="#" alt="Compose" onclick="MM_showHideLayers('ent2k1mnprefcomp','','show','ent2k1mnprefprox','','hide')">
+<area shape="poly" coords="128,43,136,27,225,27,233,43" href="#" alt="Reply &amp; Forward" onclick="MM_showHideLayers('ent2k1mnprefrf','','show','ent2k1mnprefprox','','hide')">
+<area shape="poly" coords="234,43,242,27,271,27,279,43" href="#" alt="View" onclick="MM_showHideLayers('ent2k1mnprefview','','show','ent2k1mnprefprox','','hide')">
+<area shape="rect" coords="376,91,455,111" href="#" alt="Settings" onclick="MM_showHideLayers('ent2k1mnprefproxset','','show')">
+<area shape="rect" coords="376,118,455,138" href="#" alt="Settings" onclick="MM_showHideLayers('ent2k1mnprefproxset','','show')">
+<area shape="rect" coords="376,145,455,165" href="#" alt="Settings" onclick="MM_showHideLayers('ent2k1mnprefproxset','','show')">
+<area shape="rect" coords="302,395,373,414" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1mnprefprox','','hide')">
+<area shape="rect" coords="382,392,459,417" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1mnprefprox','','hide')">
+</map>
+</div>
+
+<div id="ent2k1mnprefproxset" style="z-index: 30; left: 535px; top: 165px; position: absolute;">
+<img src="ent2k1mnprefproxset.png" usemap="#ent2k1mnprefproxset.png" width="249" height="91" border="0" alt="">
+<map name="ent2k1mnprefproxset.png">
+<area shape="rect" coords="2,2,9,9" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1mnprefproxset','','hide')">
+</map>
+</div>
+
+<div id="ent2k1acac" style="z-index: 20; left: 165px; top: 110px; position: absolute;">
+<img src="ent2k1acac.png" usemap="#ent2k1acac.png" width="473" height="354" border="0" alt="">
+<map name="ent2k1acac.png">
+<area shape="poly" coords="100,53,108,37,230,37,238,53" href="#" alt="AutoFormat As You Type" onclick="MM_showHideLayers('ent2k1acaf','','show','ent2k1acac','','hide')">
+<area shape="rect" coords="298,319,369,338" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1acac','','hide')">
+<area shape="rect" coords="378,316,455,341" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1acac','','hide')">
+</map>
+</div>
+
+<div id="ent2k1acaf" style="z-index: 20; left: 165px; top: 110px; position: absolute;">
+<img src="ent2k1acaf.png" usemap="#ent2k1acaf.png" width="473" height="354" border="0" alt="">
+<map name="ent2k1acaf.png">
+<area shape="poly" coords="19,53,27,37,91,37,99,53" href="#" alt="AutoCorrect" onclick="MM_showHideLayers('ent2k1acac','','show','ent2k1acaf','','hide')">
+<area shape="rect" coords="298,319,369,338" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1acaf','','hide')">
+<area shape="rect" coords="378,316,455,341" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1acaf','','hide')">
+</map>
+</div>
+
+<div id="ent2k1junkmail" style="z-index: 20; left: 210px; top: 70px; position: absolute;">
+<img src="ent2k1junkmail.png" usemap="#ent2k1junkmail.png" width="381" height="428" border="0" alt="">
+<map name="ent2k1junkmail.png">
+<area shape="rect" coords="226,393,283,412" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1junkmail','','hide')">
+<area shape="rect" coords="289,390,352,415" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1junkmail','','hide')">
+</map>
+</div>
+
+<div id="ent2k1maillist" style="z-index: 20; left: 235px; top: 110px; position: absolute;">
+<img src="ent2k1maillist.png" usemap="#ent2k1maillist.png" width="333" height="349" border="0" alt="">
+<map name="ent2k1maillist.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1maillist','','hide')">
+<area shape="rect" coords="6,22,56,46" href="#" alt="New" onclick="MM_showHideLayers('ent2k1maillistedml','','show')">
+<area shape="rect" coords="59,22,106,46" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1maillistedml','','show')">
+</map>
+</div>
+
+<div id="ent2k1maillistedml" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ent2k1maillistedml.png" usemap="#ent2k1maillistedml.png" width="437" height="460" border="0" alt="">
+<map name="ent2k1maillistedml.png">
+<area shape="poly" coords="102,75,110,59,159,59,167,75" href="#" alt="Advanced" onclick="MM_showHideLayers('ent2k1maillistedadv','','show','ent2k1maillistedml','','hide')">
+<area shape="rect" coords="257,427,328,446" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1maillistedml','','hide')">
+<area shape="rect" coords="339,424,416,449" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1maillistedml','','hide')">
+</map>
+</div>
+
+<div id="ent2k1maillistedadv" style="z-index: 30; left: 180px; top: 55px; position: absolute;">
+<img src="ent2k1maillistedadv.png" usemap="#ent2k1maillistedadv.png" width="437" height="460" border="0" alt="">
+<map name="ent2k1maillistedadv.png">
+<area shape="poly" coords="20,75,28,59,93,59,101,75" href="#" alt="Mailing List" onclick="MM_showHideLayers('ent2k1maillistedml','','show','ent2k1maillistedadv','','hide')">
+<area shape="rect" coords="257,427,328,446" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1maillistedadv','','hide')">
+<area shape="rect" coords="339,424,416,449" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1maillistedadv','','hide')">
+</map>
+</div>
+
+<div id="ent2k1rulemail" style="z-index: 20; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1rulemail.png" usemap="#ent2k1rulemail.png" width="413" height="349" border="0" alt="">
+<map name="ent2k1rulemail.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1rulemail','','hide')">
+<area shape="rect" coords="6,22,65,46" href="#" alt="New" onclick="MM_showHideLayers('ent2k1rulemailed','','show')">
+<area shape="rect" coords="68,22,115,46" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1rulemailed','','show')">
+<area shape="poly" coords="248,67,256,51,286,51,294,67" href="#" alt="News" onclick="MM_showHideLayers('ent2k1rulenews','','show','ent2k1rulemail','','hide')">
+</map>
+</div>
+
+<div id="ent2k1rulenews" style="z-index: 20; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1rulenews.png" usemap="#ent2k1rulenews.png" width="413" height="349" border="0" alt="">
+<map name="ent2k1rulenews.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1rulenews','','hide')">
+<area shape="rect" coords="6,22,65,46" href="#" alt="New" onclick="MM_showHideLayers('ent2k1rulenewsed','','show')">
+<area shape="rect" coords="68,22,115,46" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1rulenewsed','','show')">
+<area shape="poly" coords="13,67,21,51,75,51,83,67" href="#" alt="Mail (POP)" onclick="MM_showHideLayers('ent2k1rulemail','','show','ent2k1rulenews','','hide')">
+</map>
+</div>
+
+<div id="ent2k1rulemailed" style="z-index: 30; left: 130px; top: 130px; position: absolute;">
+<img src="ent2k1rulemailed.png" usemap="#ent2k1rulemailed.png" width="537" height="310" border="0" alt="">
+<map name="ent2k1rulemailed.png">
+<area shape="rect" coords="463,80,481,95" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulemailedsel1','','show')">
+<area shape="rect" coords="122,109,140,124" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulemailedsel2','','show')">
+<area shape="rect" coords="254,109,272,124" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulemailedsel3','','show')">
+<area shape="rect" coords="152,190,170,205" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulemailedsel4','','show')">
+<area shape="rect" coords="361,268,428,287" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1rulemailed','','hide','ent2k1rulemailedsel1','','hide','ent2k1rulemailedsel2','','hide','ent2k1rulemailedsel3','','hide','ent2k1rulemailedsel4','','hide')">
+<area shape="rect" coords="438,265,511,290" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1rulemailed','','hide','ent2k1rulemailedsel1','','hide','ent2k1rulemailedsel2','','hide','ent2k1rulemailedsel3','','hide','ent2k1rulemailedsel4','','hide')">
+</map>
+</div>
+
+<div id="ent2k1rulemailedsel1" style="z-index: 40; left: 442px; top: 210px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulemailedsel1','','hide')">
+<img src="ent2k1rulemailedsel1.png" width="154" height="51" border="0" alt="">
+</div>
+
+<div id="ent2k1rulemailedsel2" style="z-index: 40; left: 157px; top: 221px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulemailedsel2','','hide')">
+<img src="ent2k1rulemailedsel2.png" width="141" height="321" border="0" alt="">
+</div>
+
+<div id="ent2k1rulemailedsel3" style="z-index: 40; left: 278px; top: 239px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulemailedsel3','','hide')">
+<img src="ent2k1rulemailedsel3.png" width="130" height="195" border="0" alt="">
+</div>
+
+<div id="ent2k1rulemailedsel4" style="z-index: 40; left: 157px; top: 284px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulemailedsel4','','hide')">
+<img src="ent2k1rulemailedsel4.png" width="156" height="315" border="0" alt="">
+</div>
+
+<div id="ent2k1rulenewsed" style="z-index: 30; left: 130px; top: 115px; position: absolute;">
+<img src="ent2k1rulenewsed.png" usemap="#ent2k1rulenewsed.png" width="537" height="340" border="0" alt="">
+<map name="ent2k1rulenewsed.png">
+<area shape="rect" coords="166,56,184,71" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulenewsedsel1','','show')">
+<area shape="rect" coords="463,101,481,116" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulenewsedsel2','','show')">
+<area shape="rect" coords="122,130,140,145" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulenewsedsel3','','show')">
+<area shape="rect" coords="254,130,272,145" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulenewsedsel4','','show')">
+<area shape="rect" coords="152,215,170,230" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1rulenewsedsel5','','show')">
+<area shape="rect" coords="365,301,432,320" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1rulenewsed','','hide','ent2k1rulenewsedsel1','','hide','ent2k1rulenewsedsel2','','hide','ent2k1rulenewsedsel3','','hide','ent2k1rulenewsedsel4','','hide','ent2k1rulenewsedsel5','','hide')">
+<area shape="rect" coords="442,298,515,323" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1rulenewsed','','hide','ent2k1rulenewsedsel1','','hide','ent2k1rulenewsedsel2','','hide','ent2k1rulenewsedsel3','','hide','ent2k1rulenewsedsel4','','hide','ent2k1rulenewsedsel5','','hide')">
+</map>
+</div>
+
+<div id="ent2k1rulenewsedsel1" style="z-index: 40; left: 208px; top: 171px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulenewsedsel1','','hide')">
+<img src="ent2k1rulenewsedsel1.png" width="107" height="87" border="0" alt="">
+</div>
+
+<div id="ent2k1rulenewsedsel2" style="z-index: 40; left: 442px; top: 216px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulenewsedsel2','','hide')">
+<img src="ent2k1rulenewsedsel2.png" width="154" height="51" border="0" alt="">
+</div>
+
+<div id="ent2k1rulenewsedsel3" style="z-index: 40; left: 157px; top: 227px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulenewsedsel3','','hide')">
+<img src="ent2k1rulenewsedsel3.png" width="98" height="69" border="0" alt="">
+</div>
+
+<div id="ent2k1rulenewsedsel4" style="z-index: 40; left: 278px; top: 245px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulenewsedsel4','','hide')">
+<img src="ent2k1rulenewsedsel4.png" width="130" height="195" border="0" alt="">
+</div>
+
+<div id="ent2k1rulenewsedsel5" style="z-index: 40; left: 157px; top: 306px; position: absolute;" onclick="MM_showHideLayers('ent2k1rulenewsedsel5','','hide')">
+<img src="ent2k1rulenewsedsel5.png" width="156" height="255" border="0" alt="">
+</div>
+
+<div id="ent2k1ds" style="z-index: 20; left: 135px; top: 95px; position: absolute;">
+<img src="ent2k1ds.png" usemap="#ent2k1ds.png" width="529" height="381" border="0" alt="">
+<map name="ent2k1ds.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1ds','','hide')">
+</map>
+</div>
+
+<div id="ent2k1sig" style="z-index: 20; left: 235px; top: 110px; position: absolute;">
+<img src="ent2k1sig.png" usemap="#ent2k1sig.png" width="333" height="349" border="0" alt="">
+<map name="ent2k1sig.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1sig','','hide')">
+<area shape="rect" coords="6,22,56,45" href="#" alt="New" onclick="MM_showHideLayers('ent2k1siged','','show')">
+<area shape="rect" coords="59,22,106,45" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1siged','','show')">
+</map>
+</div>
+
+<div id="ent2k1siged" style="z-index: 30; left: 90px; top: 140px; position: absolute;">
+<img src="ent2k1siged.png" usemap="#ent2k1siged.png" width="617" height="294" border="0" alt="">
+<map name="ent2k1siged.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1siged','','hide')">
+</map>
+</div>
+
+<div id="ent2k1sch" style="z-index: 20; left: 125px; top: 95px; position: absolute;">
+<img src="ent2k1sch.png" usemap="#ent2k1sch.png" width="548" height="379" border="0" alt="">
+<map name="ent2k1sch.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1sch','','hide')">
+<area shape="rect" coords="6,22,56,45" href="#" alt="New" onclick="MM_showHideLayers('ent2k1sched','','show')">
+<area shape="rect" coords="59,22,106,45" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1sched','','show')">
+</map>
+</div>
+
+<div id="ent2k1sched" style="z-index: 30; left: 130px; top: 120px; position: absolute;">
+<img src="ent2k1sched.png" usemap="#ent2k1sched.png" width="538" height="330" border="0" alt="">
+<map name="ent2k1sched.png">
+<area shape="rect" coords="132,109,150,124" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1schedsel1','','show')">
+<area shape="rect" coords="367,109,385,124" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1schedsel2','','show')">
+<area shape="rect" coords="152,210,170,225" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1schedsel3','','show')">
+<area shape="rect" coords="335,235,482,252" href="#" alt="Account Options" onclick="MM_showHideLayers('ent2k1schedao','','show')">
+<area shape="rect" coords="360,288,427,307" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1sched','','hide','ent2k1schedsel1','','hide','ent2k1schedsel2','','hide','ent2k1schedsel3','','hide')">
+<area shape="rect" coords="443,285,516,310" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1sched','','hide','ent2k1schedsel1','','hide','ent2k1schedsel2','','hide','ent2k1schedsel3','','hide')">
+</map>
+</div>
+
+<div id="ent2k1schedsel1" style="z-index: 40; left: 157px; top: 181px; position: absolute;" onclick="MM_showHideLayers('ent2k1schedsel1','','hide')">
+<img src="ent2k1schedsel1.png" width="124" height="75" border="0" alt="">
+</div>
+
+<div id="ent2k1schedsel2" style="z-index: 40; left: 396px; top: 229px; position: absolute;" onclick="MM_showHideLayers('ent2k1schedsel2','','hide')">
+<img src="ent2k1schedsel2.png" width="104" height="39" border="0" alt="">
+</div>
+
+<div id="ent2k1schedsel3" style="z-index: 40; left: 157px; top: 306px; position: absolute;" onclick="MM_showHideLayers('ent2k1schedsel3','','hide')">
+<img src="ent2k1schedsel3.png" width="128" height="87" border="0" alt="">
+</div>
+
+<div id="ent2k1schedao" style="z-index: 40; left: 464px; top: 354px; position: absolute;">
+<img src="ent2k1schedao.png" usemap="#ent2k1schedao.png" width="328" height="76" border="0" alt="">
+<map name="ent2k1schedao.png">
+<area shape="rect" coords="6,6,13,13" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1schedao','','hide')">
+</map>
+</div>
+
+<div id="ent2k1newmsg1" style="z-index: 20; left: 60px; top: 70px; position: absolute;">
+<img src="ent2k1newmsg1.png" usemap="#ent2k1newmsg1.png" width="680" height="432" border="0" alt="">
+<map name="ent2k1newmsg1.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1newmsg1','','hide')">
+<area shape="rect" coords="96,54,103,61" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1newmsg2','','show','ent2k1newmsg1','','hide')">
+</map>
+</div>
+
+<div id="ent2k1newmsg2" style="z-index: 20; left: 60px; top: 70px; position: absolute;">
+<img src="ent2k1newmsg2.png" usemap="#ent2k1newmsg2.png" width="680" height="432" border="0" alt="">
+<map name="ent2k1newmsg2.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1newmsg2','','hide')">
+<area shape="rect" coords="96,53,669,91" href="#" alt="Add Receipients" onclick="MM_showHideLayers('ent2k1newmsg1','','show','ent2k1newmsg2','','hide')">
+<area shape="rect" coords="95,214,594,237" href="#" alt="Encoding" onclick="MM_showHideLayers('ent2k1newmsgenc','','show')">
+</map>
+</div>
+
+<div id="ent2k1newmsgenc" style="z-index: 30; left: 154px; top: 283px; position: absolute;">
+<img src="ent2k1newmsgenc.png" usemap="#ent2k1newmsgenc.png" width="379" height="171" border="0" alt="">
+<map name="ent2k1newmsgenc.png">
+<area shape="rect" coords="6,6,13,13" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1newmsgenc','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmail" style="z-index: 20; left: 235px; top: 110px; position: absolute;">
+<img src="ent2k1accmail.png" usemap="#ent2k1accmail.png" width="333" height="349" border="0" alt="">
+<map name="ent2k1accmail.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmail','','hide')">
+<area shape="rect" coords="6,22,53,46" href="#" alt="New" onclick="MM_showHideLayers('ent2k1accmailnew','','show')">
+<area shape="rect" coords="53,22,65,46" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1accnew','','show')">
+<area shape="rect" coords="68,22,115,46" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1accmailedas','','show')">
+<area shape="poly" coords="57,67,65,51,96,51,104,67" href="#" alt="News" onclick="MM_showHideLayers('ent2k1accnews','','show','ent2k1accmail','','hide')">
+<area shape="poly" coords="105,67,113,51,207,51,215,67" href="#" alt="Directory Service" onclick="MM_showHideLayers('ent2k1accds','','show','ent2k1accmail','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnews" style="z-index: 20; left: 235px; top: 110px; position: absolute;">
+<img src="ent2k1accnews.png" usemap="#ent2k1accnews.png" width="333" height="349" border="0" alt="">
+<map name="ent2k1accnews.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accnews','','hide')">
+<area shape="rect" coords="6,22,53,46" href="#" alt="New" onclick="MM_showHideLayers('ent2k1accnewsasname','','show')">
+<area shape="rect" coords="53,22,65,46" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1accnew','','show')">
+<area shape="rect" coords="68,22,115,46" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1accnewsedas','','show')">
+<area shape="poly" coords="13,67,21,51,48,51,56,67" href="#" alt="Mail" onclick="MM_showHideLayers('ent2k1accmail','','show','ent2k1accnews','','hide')">
+<area shape="poly" coords="105,67,113,51,207,51,215,67" href="#" alt="Directory Service" onclick="MM_showHideLayers('ent2k1accds','','show','ent2k1accnews','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accds" style="z-index: 20; left: 235px; top: 110px; position: absolute;">
+<img src="ent2k1accds.png" usemap="#ent2k1accds.png" width="333" height="349" border="0" alt="">
+<map name="ent2k1accds.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accds','','hide')">
+<area shape="rect" coords="6,22,53,46" href="#" alt="New" onclick="MM_showHideLayers('ent2k1accdsasserv','','show')">
+<area shape="rect" coords="53,22,65,46" href="#" alt="Select" onclick="MM_showHideLayers('ent2k1accnew','','show')">
+<area shape="rect" coords="68,22,115,46" href="#" alt="Edit" onclick="MM_showHideLayers('ent2k1accdsedas','','show')">
+<area shape="poly" coords="13,67,21,51,48,51,56,67" href="#" alt="Mail" onclick="MM_showHideLayers('ent2k1accmail','','show','ent2k1accds','','hide')">
+<area shape="poly" coords="57,67,65,51,96,51,104,67" href="#" alt="News" onclick="MM_showHideLayers('ent2k1accnews','','show','ent2k1accds','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnew" style="z-index: 30; left: 244px; top: 136px; position: absolute;">
+<img src="ent2k1accnew.png" usemap="#ent2k1accnew.png" width="126" height="42" border="0" alt="">
+<map name="ent2k1accnew.png">
+<area shape="rect" coords="2,2,122,13" href="#" alt="Mail" onclick="MM_showHideLayers('ent2k1accmailnew','','show','ent2k1accnew','','hide')">
+<area shape="rect" coords="2,13,122,26" href="#" alt="News" onclick="MM_showHideLayers('ent2k1accnewsasname','','show','ent2k1accnew','','hide')">
+<area shape="rect" coords="2,26,122,38" href="#" alt="Directory Service" onclick="MM_showHideLayers('ent2k1accdsasserv','','show','ent2k1accnew','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailnew" style="z-index: 30; left: 245px; top: 215px; position: absolute;">
+<img src="ent2k1accmailnew.png" usemap="#ent2k1accmailnew.png" width="315" height="138" border="0" alt="">
+<map name="ent2k1accmailnew.png">
+<area shape="rect" coords="16,99,95,118" href="#" alt="Assist Me" onclick="MM_showHideLayers('ent2k1accmailasname','','show','ent2k1accmailnew','','hide')">
+<area shape="rect" coords="126,99,205,118" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1accmailnew','','hide')">
+<area shape="rect" coords="213,96,298,121" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1accmailedas','','show','ent2k1accmailnew','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailasname" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accmailasname.png" usemap="#ent2k1accmailasname.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accmailasname.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmailasname','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accmailnew','','show','ent2k1accmailasname','','hide')">
+<area shape="rect" coords="370,325,388,343" href="#" alt="Next" onclick="MM_showHideLayers('ent2k1accmailasemail','','show','ent2k1accmailasname','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailasemail" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accmailasemail.png" usemap="#ent2k1accmailasemail.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accmailasemail.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmailasemail','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accmailnew','','show','ent2k1accmailasemail','','hide')">
+<area shape="rect" coords="332,325,350,343" href="#" alt="Back" onclick="MM_showHideLayers('ent2k1accmailasname','','show','ent2k1accmailasemail','','hide')">
+<area shape="rect" coords="370,325,388,343" href="#" alt="Next" onclick="MM_showHideLayers('ent2k1accmailasserv','','show','ent2k1accmailasemail','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailasserv" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accmailasserv.png" usemap="#ent2k1accmailasserv.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accmailasserv.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmailasserv','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accmailedas','','show','ent2k1accmailasserv','','hide')">
+<area shape="rect" coords="332,325,350,343" href="#" alt="Back" onclick="MM_showHideLayers('ent2k1accmailasemail','','show','ent2k1accmailasserv','','hide')">
+<area shape="rect" coords="370,325,388,343" href="#" alt="Next" onclick="MM_showHideLayers('ent2k1accmailaslogon','','show','ent2k1accmailasserv','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailaslogon" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accmailaslogon.png" usemap="#ent2k1accmailaslogon.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accmailaslogon.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmailaslogon','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accmailedas','','show','ent2k1accmailaslogon','','hide')">
+<area shape="rect" coords="332,325,350,343" href="#" alt="Back" onclick="MM_showHideLayers('ent2k1accmailasserv','','show','ent2k1accmailaslogon','','hide')">
+<area shape="rect" coords="370,325,388,343" href="#" alt="Next" onclick="MM_showHideLayers('ent2k1accmailasfin','','show','ent2k1accmailaslogon','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailasfin" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accmailasfin.png" usemap="#ent2k1accmailasfin.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accmailasfin.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmailasfin','','hide')">
+<area shape="rect" coords="319,270,389,295" href="#" alt="Finish" onclick="MM_showHideLayers('ent2k1accmailasfin','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accmailedas','','show','ent2k1accmailasfin','','hide')">
+<area shape="rect" coords="332,325,350,343" href="#" alt="Back" onclick="MM_showHideLayers('ent2k1accmailaslogon','','show','ent2k1accmailasfin','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailedas" style="z-index: 30; left: 220px; top: 75px; position: absolute;">
+<img src="ent2k1accmailedas.png" usemap="#ent2k1accmailedas.png" width="363" height="422" border="0" alt="">
+<map name="ent2k1accmailedas.png">
+<area shape="poly" coords="117,43,125,27,167,27,175,43" href="#" alt="Options" onclick="MM_showHideLayers('ent2k1accmailedopt','','show','ent2k1accmailedas','','hide')">
+<area shape="rect" coords="117,255,336,275" href="#" alt="Advanced Receiving Options" onclick="MM_showHideLayers('ent2k1accmailedasaro','','show')">
+<area shape="rect" coords="118,326,337,346" href="#" alt="Advanced Sending Options" onclick="MM_showHideLayers('ent2k1accmailedasaso','','show')">
+<area shape="rect" coords="199,390,270,409" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1accmailedas','','hide')">
+<area shape="rect" coords="274,387,351,412" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1accmailedas','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailedopt" style="z-index: 30; left: 220px; top: 75px; position: absolute;">
+<img src="ent2k1accmailedopt.png" usemap="#ent2k1accmailedopt.png" width="363" height="422" border="0" alt="">
+<map name="ent2k1accmailedopt.png">
+<area shape="poly" coords="15,43,23,27,108,27,116,43" href="#" alt="Account Settings" onclick="MM_showHideLayers('ent2k1accmailedas','','show','ent2k1accmailedopt','','hide')">
+<area shape="rect" coords="199,390,270,409" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1accmailedopt','','hide')">
+<area shape="rect" coords="274,387,351,412" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1accmailedopt','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailedasaro" style="z-index: 40; left: 336px; top: 329px; position: absolute;">
+<img src="ent2k1accmailedasaro.png" usemap="#ent2k1accmailedasaro.png" width="304" height="89" border="0" alt="">
+<map name="ent2k1accmailedasaro.png">
+<area shape="rect" coords="2,2,9,9" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmailedasaro','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accmailedasaso" style="z-index: 40; left: 337px; top: 363px; position: absolute;">
+<img src="ent2k1accmailedasaso.png" usemap="#ent2k1accmailedasaso.png" width="284" height="236" border="0" alt="">
+<map name="ent2k1accmailedasaso.png">
+<area shape="rect" coords="2,2,9,9" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accmailedasaso','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnewsasname" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accnewsasname.png" usemap="#ent2k1accnewsasname.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accnewsasname.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accnewsasname','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accnewsedas','','show','ent2k1accnewsasname','','hide')">
+<area shape="rect" coords="370,325,388,343" href="#" alt="Next" onclick="MM_showHideLayers('ent2k1accnewsasserv','','show','ent2k1accnewsasname','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnewsasserv" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accnewsasserv.png" usemap="#ent2k1accnewsasserv.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accnewsasserv.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accnewsasserv','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accnewsedas','','show','ent2k1accnewsasserv','','hide')">
+<area shape="rect" coords="332,325,350,343" href="#" alt="Back" onclick="MM_showHideLayers('ent2k1accnewsasname','','show','ent2k1accnewsasserv','','hide')">
+<area shape="rect" coords="370,325,388,343" href="#" alt="Next" onclick="MM_showHideLayers('ent2k1accnewsasfin','','show','ent2k1accnewsasserv','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnewsasfin" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accnewsasfin.png" usemap="#ent2k1accnewsasfin.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accnewsasfin.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accnewsasfin','','hide')">
+<area shape="rect" coords="321,270,391,295" href="#" alt="Finish" onclick="MM_showHideLayers('ent2k1accnewsasfin','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accnewsedas','','show','ent2k1accnewsasfin','','hide')">
+<area shape="rect" coords="332,325,350,343" href="#" alt="Back" onclick="MM_showHideLayers('ent2k1accnewsasserv','','show','ent2k1accnewsasfin','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnewsedas" style="z-index: 30; left: 220px; top: 75px; position: absolute;">
+<img src="ent2k1accnewsedas.png" usemap="#ent2k1accnewsedas.png" width="363" height="422" border="0" alt="">
+<map name="ent2k1accnewsedas.png">
+<area shape="poly" coords="117,43,125,27,167,27,175,43" href="#" alt="Options" onclick="MM_showHideLayers('ent2k1accnewsedopt','','show','ent2k1accnewsedas','','hide')">
+<area shape="rect" coords="118,269,337,289" href="#" alt="Advanced Receiving Options" onclick="MM_showHideLayers('ent2k1accnewsedasaro','','show')">
+<area shape="rect" coords="16,390,96,409" href="#" alt="Assist Me" onclick="MM_showHideLayers('ent2k1accnewsasname','','show','ent2k1accnewsedas','','hide')">
+<area shape="rect" coords="199,390,270,409" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1accnewsedas','','hide')">
+<area shape="rect" coords="274,387,351,412" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1accnewsedas','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnewsedopt" style="z-index: 30; left: 220px; top: 75px; position: absolute;">
+<img src="ent2k1accnewsedopt.png" usemap="#ent2k1accnewsedopt.png" width="363" height="422" border="0" alt="">
+<map name="ent2k1accnewsedopt.png">
+<area shape="poly" coords="15,43,23,27,108,27,116,43" href="#" alt="Account Settings" onclick="MM_showHideLayers('ent2k1accnewsedas','','show','ent2k1accnewsedopt','','hide')">
+<area shape="rect" coords="16,390,96,409" href="#" alt="Assist Me" onclick="MM_showHideLayers('ent2k1accnewsasname','','show','ent2k1accnewsedopt','','hide')">
+<area shape="rect" coords="199,390,270,409" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1accnewsedopt','','hide')">
+<area shape="rect" coords="274,387,351,412" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1accnewsedopt','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accnewsedasaro" style="z-index: 40; left: 337px; top: 343px; position: absolute;">
+<img src="ent2k1accnewsedasaro.png" usemap="#ent2k1accnewsedasaro.png" width="304" height="74" border="0" alt="">
+<map name="ent2k1accnewsedasaro.png">
+<area shape="rect" coords="2,2,9,9" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accnewsedasaro','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accdsasserv" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accdsasserv.png" usemap="#ent2k1accdsasserv.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accdsasserv.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accdsasserv','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accdsedas','','show','ent2k1accdsasserv','','hide')">
+<area shape="rect" coords="370,325,388,343" href="#" alt="Next" onclick="MM_showHideLayers('ent2k1accdsasfin','','show','ent2k1accdsasserv','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accdsasfin" style="z-index: 30; left: 195px; top: 110px; position: absolute;">
+<img src="ent2k1accdsasfin.png" usemap="#ent2k1accdsasfin.png" width="407" height="354" border="0" alt="">
+<map name="ent2k1accdsasfin.png">
+<area shape="rect" coords="5,5,15,15" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accdsasfin','','hide')">
+<area shape="rect" coords="321,270,391,295" href="#" alt="Finish" onclick="MM_showHideLayers('ent2k1accdsasfin','','hide')">
+<area shape="rect" coords="11,325,171,343" href="#" alt="Configure account manually" onclick="MM_showHideLayers('ent2k1accdsedas','','show','ent2k1accdsasfin','','hide')">
+<area shape="rect" coords="332,325,350,343" href="#" alt="Back" onclick="MM_showHideLayers('ent2k1accdsasserv','','show','ent2k1accdsasfin','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accdsedas" style="z-index: 30; left: 220px; top: 75px; position: absolute;">
+<img src="ent2k1accdsedas.png" usemap="#ent2k1accdsedas.png" width="363" height="422" border="0" alt="">
+<map name="ent2k1accdsedas.png">
+<area shape="poly" coords="117,43,125,27,167,27,175,43" href="#" alt="Options" onclick="MM_showHideLayers('ent2k1accdsedopt','','show','ent2k1accdsedas','','hide')">
+<area shape="rect" coords="117,189,336,209" href="#" alt="Advanced Options" onclick="MM_showHideLayers('ent2k1accdsedasao','','show')">
+<area shape="rect" coords="16,390,96,409" href="#" alt="Assist Me" onclick="MM_showHideLayers('ent2k1accdsasserv','','show','ent2k1accdsedas','','hide')">
+<area shape="rect" coords="199,390,270,409" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1accdsedas','','hide')">
+<area shape="rect" coords="274,387,351,412" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1accdsedas','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accdsedopt" style="z-index: 30; left: 220px; top: 75px; position: absolute;">
+<img src="ent2k1accdsedopt.png" usemap="#ent2k1accdsedopt.png" width="363" height="422" border="0" alt="">
+<map name="ent2k1accdsedopt.png">
+<area shape="poly" coords="15,43,23,27,108,27,116,43" href="#" alt="Account Settings" onclick="MM_showHideLayers('ent2k1accdsedas','','show','ent2k1accdsedopt','','hide')">
+<area shape="rect" coords="16,390,96,409" href="#" alt="Assist Me" onclick="MM_showHideLayers('ent2k1accdsasserv','','show','ent2k1accdsedopt','','hide')">
+<area shape="rect" coords="199,390,270,409" href="#" alt="Cancel" onclick="MM_showHideLayers('ent2k1accdsedopt','','hide')">
+<area shape="rect" coords="274,387,351,412" href="#" alt="OK" onclick="MM_showHideLayers('ent2k1accdsedopt','','hide')">
+</map>
+</div>
+
+<div id="ent2k1accdsedasao" style="z-index: 40; left: 336px; top: 263px; position: absolute;">
+<img src="ent2k1accdsedasao.png" usemap="#ent2k1accdsedasao.png" width="304" height="74" border="0" alt="">
+<map name="ent2k1accdsedasao.png">
+<area shape="rect" coords="2,2,9,9" href="#" alt="Close" onclick="MM_showHideLayers('ent2k1accdsedasao','','hide')">
+</map>
+</div>
+
+</body>
+</html>

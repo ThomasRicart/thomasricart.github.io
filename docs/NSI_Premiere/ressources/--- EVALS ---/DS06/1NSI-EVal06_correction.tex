@@ -1,0 +1,297 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+%\usepackage{ProfLycee}
+% Définitions des variables
+\newcommand{\class}{1NSI}
+\newcommand{\datee}{28 janvier 2025}
+
+\usepackage{../../../preambule/preambule}
+
+
+% *** Réglage des headers ***
+%\newcommand{\classe}{1NSI}
+%\newcommand{\date}{28 janvier 2025}
+%\fancyhead[L]{1NSI --- Lycée Victor Hugo}
+%\fancyhead[R]{28 janvier 2025}
+% *** Réglage des headers ***
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% A RANGER %%%%%%%%%%%%%%%%%%%%%%ù
+
+
+\pagestyle{DS_FP}
+\fancyhead[C]{Devoir 6 - CORRECTION}
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\begin{center}
+%  {\scshape\LARGE Devoir surveillé \No6\par}
+%  \vspace{0.5cm}
+%\end{center}
+\NomPrenomNote{}
+
+\begin{exerciceinterro}{\hspace{2cm}\dotfill/\fbox{2 points}}{}
+
+
+
+\begin{enumerate}
+	
+\begin{minipage}{0.55\linewidth}
+ \item  Compléter la modélisation de l'architecture de Von Neumann suivante avec les mots:
+ 
+ \medskip
+ 
+ 
+ \fbox{ \texttt{Mémoires}} \qquad  \fbox{\texttt{Unité arithmétique et Logique}}
+ 
+ \fbox{\texttt{Périphériques}} \qquad   \fbox{\texttt{Unité de contrôle }}
+	
+
+\item Quelles sont les caractéristiques des mémoires volatiles. Donner un exemple:
+
+\zrr{2.}{10}{La mémoire volatile perd les informations lors de la mise hors tension (RAM) au contraire de la mémoire non-volatile (ROM, Mémoire de masse...)}
+\end{minipage} \hfill
+\begin{minipage}{0.42\linewidth}
+\begin{center}
+		\includegraphics[scale=0.48]{archi-vneumann.jpg}
+	\end{center}
+\end{minipage}
+\end{enumerate}
+
+
+\end{exerciceinterro}
+
+
+\medskip
+\begin{exerciceinterro}{\hspace{2cm}\dotfill/\fbox{2 points}}{}
+
+On considère la liste suivante:
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+liste = [6, 9, 8, 5]
+\end{CodePythontexAlt}
+
+
+\begin{enumerate}
+
+\item Donner la commande permettant d'insérer la valeur \verb+7+ à la suite de la liste de manière à obtenir:
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+[6, 9, 8, 5, 7]
+\end{CodePythontexAlt}
+
+
+
+\item Donner la commande permettant de modifier la valeur 8 de manière à la remplacer par \verb+-1+ et obtenir 
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+[6, 9, -1, 5, 7]
+\end{CodePythontexAlt}
+
+
+
+\end{enumerate}
+
+\begin{ConsolePythontex}[Largeur=14cm,Label=false,Centre,TaillePolice = \normalsize, 
+]{}
+liste = [6, 9, 8, 5]
+# Question 1
+liste.append(7)
+print(liste)
+# Question 2
+liste[2] = -1
+print(liste)
+\end{ConsolePythontex}
+
+
+\end{exerciceinterro}
+
+
+\begin{exerciceinterro}{\hspace{2cm}\dotfill/\fbox{2 points}}{}
+
+On considère le dictionnaire suivant:
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+dico = {'Alice' : 7, 'Bob' : 9}
+\end{CodePythontexAlt}
+
+
+\begin{enumerate}
+\item Donner la commande permettant d'afficher la valeur correspondante à la clé \verb+'Bob'+
+
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+print(dico['Bob'])
+\end{CodePythontexAlt}
+\item Donner la commande permettant d'ajouter la clé \verb+'Charlie'+ avec la valeur \verb+4+ et obtenir 
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+dico['Charlie'] = 4
+assert dico == {'Alice' : 7, 'Bob' : 9, 'Charlie' : 4}
+\end{CodePythontexAlt}
+
+\end{enumerate}
+
+\end{exerciceinterro}
+
+\medskip
+
+\newpage
+\pagestyle{DS_LP}
+
+
+\begin{exerciceinterro}{\hspace{2cm}\dotfill/\fbox{1 points}}{}
+
+
+ Compléter la fonction \verb+renvoie_liste_valeurs(dico)+ qui prend un dictionnaire en paramètre et renvoie une liste contenant toutes les valeurs du dictionnaire. On utilisera obligatoirement une boucle.
+
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+def renvoie_liste_valeurs(dico):
+	''' dico (dict)  dictionnaire {str : int}
+	sortie (list) une liste de valeurs entières (int) '''
+
+	sortie = [ ] # Initialisation de la variable de sortie
+	for cle, val in dico.items():
+		sortie.append(val)	
+
+dico = {'Alice':7, 'Bob':9, 'Charlie':7, 'David':10}	
+assert renvoie_liste_valeurs(dico) == [7, 9, 7, 10]
+	
+\end{CodePythontexAlt}
+
+\end{exerciceinterro}
+
+\begin{exerciceinterro}{\hspace{2cm}\dotfill/\fbox{3 points}}{}
+
+\begin{enumerate}
+	\item Compléter la fonction \verb+est_positifs(L)+ qui prend une liste de valeurs entières et renvoie \verb+True+ si toutes ces valeurs sont positives ou nulles et \verb+False+ sinon.
+	
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+def est_positifs(L):
+    for elt in L:
+    		if not (elt >= 0):
+    			return False
+    	return True    
+	
+assert est_positifs([6, 8, -3, 9]) == False
+assert est_positifs([6, 8, 3, 9]) == True
+\end{CodePythontexAlt}
+	
+
+\item Compléter la fonction \verb+renvoie_cle_val_positives(dico)+ qui renvoie une liste contenant les clés de \verb+dico+ dont les valeurs sont toutes positives. On utilisera la fonction \verb+est_positifs(L)+.
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+def renvoie_cle_val_positives(dico):
+	''' Renvoie une liste contenant les clés de dico dont 
+	les valeurs sont des listes d'entiers tous positifs ou nuls '''
+	
+	sortie = [ ]	
+	for cle, val in dico.items():
+		if est_positifs(val):
+			sortie.append(cle)
+	return sortie	
+	
+dico1 = {'Alice' : [5, 8, 6], 'Bob' : [6, -5, 8], 'Charlie' : [9, 4]}	
+assert renvoie_cle_val_positives(dico1) == ['Alice', 'Charlie']
+\end{CodePythontexAlt}
+\end{enumerate}
+
+\end{exerciceinterro}
+\end{document}
+
+
+ Compléter la fonction \verb+renvoie_liste_valeurs(dico)+ qui prend un dictionnaire en paramètre et renvoie une liste contenant toutes les valeurs du dictionnaire. On utilisera obligatoirement une boucle.
+
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+def renvoie_liste_valeurs(dico):
+	''' Renvoie une liste contenant les valeurs présentes dans dico '''
+	sortie = [ ] # Initialisation de la variable de sortie
+	for cle, val in dico.items():
+		sortie.append(val)
+	return sortie		
+	
+dico = {'Alice':7, 'Bob':9, 'Charlie':7, 'David':10}	
+assert renvoie_liste_valeurs(dico) == [7, 9, 7, 10]
+	
+\end{CodePythontexAlt}
+
+\end{exerciceinterro}
+
+\begin{exerciceinterro}{\hspace{2cm}\dotfill/3 points}{}
+
+\begin{enumerate}
+	\item Compléter la fonction \verb+est_positifs(L)+ qui prend une liste de valeurs entières et renvoie \verb+True+ si toutes ces valeurs sont positives ou nulles et \verb+False+ sinon.
+	
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+def est_positifs(L):
+	''' Renvoies True si tous les éléments de L sont positifs ou nuls / False sinon '''
+    for elt in L:
+    		if elt < 0:
+    			return False
+    	return True   
+	
+assert est_positifs([6, 8, -3, 9]) == False
+assert est_positifs([6, 8, 3, 9]) == True
+\end{CodePythontexAlt}
+	
+
+\item Compléter la fonction \verb+renvoie_cle_val_positives(dico)+ qui renvoie une liste contenant les clés de \verb+dico+ dont les valeurs sont toutes positives. On utilisera la fonction \verb+est_positifs(L)+ codée précédemment (même si vous n'avez pas réussi à la coder correctement)
+
+\begin{CodePythontexAlt}[Largeur=17cm,
+TaillePolice = \normalsize, 
+EspacementVertical = 1.2,
+Lignes=false]{}
+def renvoie_cle_val_positives(dico):
+	''' Renvoie une liste contenant les clés de dico dont 
+	les valeurs sont des listes d'entiers tous positifs ou nuls '''
+	sortie = [ ]
+	for cle, val in dico.items():
+		if est_positif(val):
+			sortie.append(cle)
+	return sortie	
+	
+dico1 = {'Alice' : [5, 8, 6], 'Bob' : [6, -5, 8], 'Charlie' : [9, 4]}	
+assert renvoie_cle_val_positives(dico1) == ['Alice', 'Charlie']
+\end{CodePythontexAlt}
+\end{enumerate}
+
+\end{exerciceinterro}
+\end{document}

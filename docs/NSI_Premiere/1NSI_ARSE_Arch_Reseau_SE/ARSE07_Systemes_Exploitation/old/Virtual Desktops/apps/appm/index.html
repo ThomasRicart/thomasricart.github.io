@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Apple Mail (Mac OS X) Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#4966AA" style="margin: 0px;" onload="show_clock();	
+MM_showHideLayers('loading','','hide','loadmsg','','hide','clock','','show','dticons','','show','dock','','show','mail','','show','mailfinder','','show','mailappmenu','','hide','mailmail','','hide','mailfile','','hide','mailedit','','hide','mailview','','hide','mailmbox','','hide','mailmsg','','hide','mailform','','hide','mailwin','','hide','mailhelp','','hide','mailmailjm','','hide','mailviewshow','','hide','mailmboxshow','','hide','mailabout','','hide','mailmailjmreset','','hide','mailnewmsg','','hide','mailsmall','','hide','mailmboxtab','','hide','mailprefacc','','hide','mailpreffc','','hide','mailprefview','','hide','mailprefcomp','','hide','mailprefsig','','hide','mailprefrule','','hide','mailprefaccedai','','hide','mailprefaccedaiopt','','hide','mailprefaccedsm','','hide','mailprefaccedadv','','hide','mailprefcompcl','','hide','mailprefcompcled','','hide','mailprefsiged','','hide','mailprefruleed','','hide','mailprefruleedsel1','','hide','mailprefruleedsel2','','hide','mailprefruleedsel3','','hide','mailprefruleedsel4','','hide');
+MM_preloadImages('loading.png','dticons.png','dock.png','mail.png','mailfinder.png','mailappmenu.png','mailmail.png','mailfile.png','mailedit.png','mailview.png','mailmbox.png','mailmsg.png','mailform.png','mailwin.png','mailhelp.png','mailmailjm.png','mailviewshow.png','mailmboxshow.png','mailabout.png','mailmailjmreset.png','mailnewmsg.png','mailsmall.png','mailmboxtab.png','mailprefacc.png','mailpreffc.png','mailprefview.png','mailprefcomp.png','mailprefsig.png','mailprefrule.png','mailprefaccedai.png','mailprefaccedaiopt.png','mailprefaccedsm.png','mailprefaccedadv.png','mailprefcompcl.png','mailprefcompcled.png','mailprefsiged.png','mailprefruleed.png','mailprefruleedsel1.png','mailprefruleedsel2.png','mailprefruleedsel3.png','mailprefruleedsel4.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 225; height: 400; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="clock" style="z-index: 100; left: 686px; top: 2px; position: absolute;">
+<b><script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script></b>
+</div>
+
+<div id="dticons" style="z-index: 1; left: 692px; top: 36px; position: absolute;">
+<img src="dticons.png" usemap="#dticons.png" width="71" height="67" border="0" alt="">
+<map name="dticons.png">
+<area shape="rect" coords="0,0,70,66" href="#" alt="Hard Disk" onclick="MM_showHideLayers('harddisk','','show')">
+</map>
+</div>
+
+<div id="dock" style="z-index: 1; left: 91px; top: 525px; position: absolute;">
+<img src="dock.png" width="618" height="75" border="0" alt="">
+</div>
+
+<div id="mail" style="z-index: 20; left: 15px; top: 35px; position: absolute;">
+<img src="mail.png" usemap="#mail.png" width="770" height="550" border="0" alt="">
+<map name="mail.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="219,23,281,77" href="#" alt="Compose" onclick="MM_showHideLayers('mailnewmsg','','show')">
+<area shape="rect" coords="281,23,347,77" href="#" alt="Mailboxes" onclick="MM_showHideLayers('mailsmall','','show','mailmboxtab','','show','mail','','hide')">
+</map>
+</div>
+
+<div id="mailfinder" style="z-index: 99; left: 0px; top: 0px; position: absolute;">
+<img src="mailfinder.png" usemap="#mailfinder.png" width="800" height="23" border="0" alt="">
+<map name="mailfinder.png">
+<area shape="rect" coords="10,0,45,22" href="#" alt="Apple" onmouseover="MM_showHideLayers('mailappmenu','','show')" onmouseout="MM_showHideLayers('mailappmenu','','hide')">
+<area shape="rect" coords="45,0,94,22" href="#" alt="Mail" onmouseover="MM_showHideLayers('mailmail','','show')" onmouseout="MM_showHideLayers('mailmail','','hide')">
+<area shape="rect" coords="94,0,136,22" href="#" alt="File" onmouseover="MM_showHideLayers('mailfile','','show')" onmouseout="MM_showHideLayers('mailfile','','hide')">
+<area shape="rect" coords="136,0,180,22" href="#" alt="Edit" onmouseover="MM_showHideLayers('mailedit','','show')" onmouseout="MM_showHideLayers('mailedit','','hide')">
+<area shape="rect" coords="180,0,230,22" href="#" alt="View" onmouseover="MM_showHideLayers('mailview','','show')" onmouseout="MM_showHideLayers('mailview','','hide')">
+<area shape="rect" coords="230,0,302,22" href="#" alt="Mailbox" onmouseover="MM_showHideLayers('mailmbox','','show')" onmouseout="MM_showHideLayers('mailmbox','','hide')">
+<area shape="rect" coords="302,0,379,22" href="#" alt="Message" onmouseover="MM_showHideLayers('mailmsg','','show')" onmouseout="MM_showHideLayers('mailmsg','','hide')">
+<area shape="rect" coords="379,0,445,22" href="#" alt="Format" onmouseover="MM_showHideLayers('mailform','','show')" onmouseout="MM_showHideLayers('mailform','','hide')">
+<area shape="rect" coords="445,0,516,22" href="#" alt="Window" onmouseover="MM_showHideLayers('mailwin','','show')" onmouseout="MM_showHideLayers('mailwin','','hide')">
+<area shape="rect" coords="516,0,564,22" href="#" alt="Help" onmouseover="MM_showHideLayers('mailhelp','','show')" onmouseout="MM_showHideLayers('mailhelp','','hide')">
+</map>
+</div>
+
+<div id="mailappmenu" style="z-index: 110; left: 10px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailappmenu','','show')" onmouseout="MM_showHideLayers('mailappmenu','','hide')">
+<img src="mailappmenu.png" width="223" height="279" border="0" alt="">
+</div>
+
+<div id="mailmail" style="z-index: 110; left: 45px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailmail','','show')" onmouseout="MM_showHideLayers('mailmail','','hide')">
+<img src="mailmail.png" usemap="#mailmail.png" width="186" height="210" border="0" alt="">
+<map name="mailmail.png">
+<area shape="rect" coords="1,4,184,22" href="#" alt="About Mail" onclick="MM_showHideLayers('mailabout','','show','mailmail','','hide')">
+<area shape="rect" coords="1,22,184,42" href="#" alt="Preferences" onclick="MM_showHideLayers('mailprefacc','','show','mailmail','','hide')">
+<area shape="rect" coords="1,54,184,74" href="#" alt="Junk Mail" onmouseover="MM_showHideLayers('mailmailjm','','show')" onmouseout="MM_showHideLayers('mailmailjm','','hide')">
+<area shape="rect" coords="1,184,184,206" href="#" alt="Quit Mail" onclick="window.close();">
+</map>
+</div>
+
+<div id="mailfile" style="z-index: 110; left: 94px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailfile','','show')" onmouseout="MM_showHideLayers('mailfile','','hide')">
+<img src="mailfile.png" usemap="#mailfile.png" width="231" height="224" border="0" alt="">
+<map name="mailfile.png">
+<area shape="rect" coords="1,4,229,24" href="#" alt="New Message" onclick="MM_showHideLayers('mailnewmsg','','show','mailfile','','hide')">
+</map>
+</div>
+
+<div id="mailedit" style="z-index: 110; left: 136px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailedit','','show')" onmouseout="MM_showHideLayers('mailedit','','hide')">
+<img src="mailedit.png" width="279" height="393" border="0" alt="">
+</div>
+
+<div id="mailview" style="z-index: 110; left: 180px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailview','','show')" onmouseout="MM_showHideLayers('mailview','','hide')">
+<img src="mailview.png" usemap="#mailview.png" width="257" height="267" border="0" alt="">
+<map name="mailview.png">
+<area shape="rect" coords="1,142,255,163" href="#" alt="Show" onmouseover="MM_showHideLayers('mailviewshow','','show')" onmouseout="MM_showHideLayers('mailviewshow','','hide')">
+</map>
+</div>
+
+<div id="mailmbox" style="z-index: 110; left: 230px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailmbox','','show')" onmouseout="MM_showHideLayers('mailmbox','','hide')">
+<img src="mailmbox.png" usemap="#mailmbox.png" width="251" height="310" border="0" alt="">
+<map name="mailmbox.png">
+<area shape="rect" coords="1,191,249,211" href="#" alt="Show" onmouseover="MM_showHideLayers('mailmboxshow','','show')" onmouseout="MM_showHideLayers('mailmboxshow','','hide')">
+</map>
+</div>
+
+<div id="mailmsg" style="z-index: 110; left: 302px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailmsg','','show')" onmouseout="MM_showHideLayers('mailmsg','','hide')">
+<img src="mailmsg.png" width="276" height="355" border="0" alt="">
+</div>
+
+<div id="mailform" style="z-index: 110; left: 379px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailform','','show')" onmouseout="MM_showHideLayers('mailform','','hide')">
+<img src="mailform.png" width="241" height="160" border="0" alt="">
+</div>
+
+<div id="mailwin" style="z-index: 110; left: 445px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailwin','','show')" onmouseout="MM_showHideLayers('mailwin','','hide')">
+<img src="mailwin.png" width="218" height="217" border="0" alt="">
+</div>
+
+<div id="mailhelp" style="z-index: 110; left: 516px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('mailhelp','','show')" onmouseout="MM_showHideLayers('mailhelp','','hide')">
+<img src="mailhelp.png" width="188" height="60" border="0" alt="">
+</div>
+
+<div id="mailmailjm" style="z-index: 120; left: 229px; top: 72px; position: absolute;" onmouseover="MM_showHideLayers('mailmail','','show','mailmailjm','','show')" onmouseout="MM_showHideLayers('mailmail','','hide','mailmailjm','','hide')">
+<img src="mailmailjm.png" usemap="#mailmailjm.png" width="112" height="129" border="0" alt="">
+<map name="mailmailjm.png">
+<area shape="rect" coords="1,103,110,123" href="#" alt="Reset" onclick="MM_showHideLayers('mailmailjmreset','','show','mailmail','','hide','mailmailjm','','hide')">
+</map>
+</div>
+
+<div id="mailviewshow" style="z-index: 120; left: 435px; top: 160px; position: absolute;" onmouseover="MM_showHideLayers('mailview','','show','mailviewshow','','show')" onmouseout="MM_showHideLayers('mailview','','hide','mailviewshow','','hide')">
+<img src="mailviewshow.png" width="239" height="117" border="0" alt="">
+</div>
+
+<div id="mailmboxshow" style="z-index: 120; left: 479px; top: 210px; position: absolute;" onmouseover="MM_showHideLayers('mailmbox','','show','mailmboxshow','','show')" onmouseout="MM_showHideLayers('mailmbox','','hide','mailmboxshow','','hide')">
+<img src="mailmboxshow.png" width="120" height="124" border="0" alt="">
+</div>
+
+<div id="mailabout" style="z-index: 30; left: 250px; top: 200px; position: absolute;">
+<img src="mailabout.png" usemap="#mailabout.png" width="286" height="202" border="0" alt="">
+<map name="mailabout.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailabout','','hide')">
+</map>
+</div>
+
+<div id="mailmailjmreset" style="z-index: 30; left: 200px; top: 200px; position: absolute;">
+<img src="mailmailjmreset.png" usemap="#mailmailjmreset.png" width="422" height="172" border="0" alt="">
+<map name="mailmailjmreset.png">
+<area shape="rect" coords="230,131,306,151" href="#" alt="No" onclick="MM_showHideLayers('mailmailjmreset','','hide')">
+<area shape="rect" coords="323,131,399,151" href="#" alt="Yes" onclick="MM_showHideLayers('mailmailjmreset','','hide')">
+</map>
+</div>
+
+<div id="mailnewmsg" style="z-index: 30; left: 150px; top: 75px; position: absolute;">
+<img src="mailnewmsg.png" usemap="#mailnewmsg.png" width="526" height="460" border="0" alt="">
+<map name="mailnewmsg.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailnewmsg','','hide')">
+<area shape="rect" coords="1,23,45,77" href="#" alt="Send" onclick="MM_showHideLayers('mailnewmsg','','hide')">
+</map>
+</div>
+
+<div id="mailsmall" style="z-index: 20; left: 15px; top: 35px; position: absolute;">
+<img src="mailsmall.png" usemap="#mailsmall.png" width="570" height="550" border="0" alt="">
+<map name="mailsmall.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="219,23,281,77" href="#" alt="Compose" onclick="MM_showHideLayers('mailnewmsg','','show')">
+<area shape="rect" coords="281,23,347,77" href="#" alt="Mailboxes" onclick="MM_showHideLayers('mail','','show','mailsmall','','hide','mailmboxtab','','hide')">
+</map>
+</div>
+
+<div id="mailmboxtab" style="z-index: 25; left: 584px; top: 57px; position: absolute;">
+<img src="mailmboxtab.png" width="201" height="513" border="0" alt="">
+</div>
+
+<div id="mailprefacc" style="z-index: 30; left: 150px; top: 100px; position: absolute;">
+<img src="mailprefacc.png" usemap="#mailprefacc.png" width="488" height="290" border="0" alt="">
+<map name="mailprefacc.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailprefacc','','hide')">
+<area shape="rect" coords="67,23,156,77" href="#" alt="Fonts &amp; Colors" onclick="MM_showHideLayers('mailpreffc','','show','mailprefacc','','hide')">
+<area shape="rect" coords="156,23,210,77" href="#" alt="Viewing" onclick="MM_showHideLayers('mailprefview','','show','mailprefacc','','hide')">
+<area shape="rect" coords="210,23,282,77" href="#" alt="Composing" onclick="MM_showHideLayers('mailprefcomp','','show','mailprefacc','','hide')">
+<area shape="rect" coords="282,23,348,77" href="#" alt="Signatures" onclick="MM_showHideLayers('mailprefsig','','show','mailprefacc','','hide')">
+<area shape="rect" coords="348,23,393,77" href="#" alt="Rules" onclick="MM_showHideLayers('mailprefrule','','show','mailprefacc','','hide')">
+<area shape="rect" coords="363,95,469,115" href="#" alt="Add Account" onclick="MM_showHideLayers('mailprefaccedai','','show')">
+<area shape="rect" coords="363,127,469,147" href="#" alt="Edit" onclick="MM_showHideLayers('mailprefaccedai','','show')">
+</map>
+</div>
+
+<div id="mailpreffc" style="z-index: 30; left: 150px; top: 100px; position: absolute;">
+<img src="mailpreffc.png" usemap="#mailpreffc.png" width="486" height="342" border="0" alt="">
+<map name="mailpreffc.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailpreffc','','hide')">
+<area shape="rect" coords="1,23,67,77" href="#" alt="Accounts" onclick="MM_showHideLayers('mailprefacc','','show','mailpreffc','','hide')">
+<area shape="rect" coords="156,23,210,77" href="#" alt="Viewing" onclick="MM_showHideLayers('mailprefview','','show','mailpreffc','','hide')">
+<area shape="rect" coords="210,23,282,77" href="#" alt="Composing" onclick="MM_showHideLayers('mailprefcomp','','show','mailpreffc','','hide')">
+<area shape="rect" coords="282,23,348,77" href="#" alt="Signatures" onclick="MM_showHideLayers('mailprefsig','','show','mailpreffc','','hide')">
+<area shape="rect" coords="348,23,393,77" href="#" alt="Rules" onclick="MM_showHideLayers('mailprefrule','','show','mailpreffc','','hide')">
+</map>
+</div>
+
+<div id="mailprefview" style="z-index: 30; left: 150px; top: 100px; position: absolute;">
+<img src="mailprefview.png" usemap="#mailprefview.png" width="465" height="241" border="0" alt="">
+<map name="mailprefview.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailprefview','','hide')">
+<area shape="rect" coords="1,23,67,77" href="#" alt="Accounts" onclick="MM_showHideLayers('mailprefacc','','show','mailprefview','','hide')">
+<area shape="rect" coords="67,23,156,77" href="#" alt="Fonts &amp; Colors" onclick="MM_showHideLayers('mailpreffc','','show','mailprefview','','hide')">
+<area shape="rect" coords="210,23,282,77" href="#" alt="Composing" onclick="MM_showHideLayers('mailprefcomp','','show','mailprefview','','hide')">
+<area shape="rect" coords="282,23,348,77" href="#" alt="Signatures" onclick="MM_showHideLayers('mailprefsig','','show','mailprefview','','hide')">
+<area shape="rect" coords="348,23,393,77" href="#" alt="Rules" onclick="MM_showHideLayers('mailprefrule','','show','mailprefview','','hide')">
+</map>
+</div>
+
+<div id="mailprefcomp" style="z-index: 30; left: 150px; top: 100px; position: absolute;">
+<img src="mailprefcomp.png" usemap="#mailprefcomp.png" width="486" height="347" border="0" alt="">
+<map name="mailprefcomp.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailprefcomp','','hide')">
+<area shape="rect" coords="1,23,67,77" href="#" alt="Accounts" onclick="MM_showHideLayers('mailprefacc','','show','mailprefcomp','','hide')">
+<area shape="rect" coords="67,23,156,77" href="#" alt="Fonts &amp; Colors" onclick="MM_showHideLayers('mailpreffc','','show','mailprefcomp','','hide')">
+<area shape="rect" coords="156,23,210,77" href="#" alt="Viewing" onclick="MM_showHideLayers('mailprefview','','show','mailprefcomp','','hide')">
+<area shape="rect" coords="282,23,348,77" href="#" alt="Signatures" onclick="MM_showHideLayers('mailprefsig','','show','mailprefcomp','','hide')">
+<area shape="rect" coords="348,23,393,77" href="#" alt="Rules" onclick="MM_showHideLayers('mailprefrule','','show','mailprefcomp','','hide')">
+<area shape="rect" coords="349,173,459,190" href="#" alt="Configure LDAP" onclick="MM_showHideLayers('mailprefcompcl','','show')">
+</map>
+</div>
+
+<div id="mailprefsig" style="z-index: 30; left: 150px; top: 100px; position: absolute;">
+<img src="mailprefsig.png" usemap="#mailprefsig.png" width="488" height="310" border="0" alt="">
+<map name="mailprefsig.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailprefsig','','hide')">
+<area shape="rect" coords="1,23,67,77" href="#" alt="Accounts" onclick="MM_showHideLayers('mailprefacc','','show','mailprefsig','','hide')">
+<area shape="rect" coords="67,23,156,77" href="#" alt="Fonts &amp; Colors" onclick="MM_showHideLayers('mailpreffc','','show','mailprefsig','','hide')">
+<area shape="rect" coords="156,23,210,77" href="#" alt="Viewing" onclick="MM_showHideLayers('mailprefview','','show','mailprefsig','','hide')">
+<area shape="rect" coords="210,23,282,77" href="#" alt="Composing" onclick="MM_showHideLayers('mailprefcomp','','show','mailprefsig','','hide')">
+<area shape="rect" coords="348,23,393,77" href="#" alt="Rules" onclick="MM_showHideLayers('mailprefrule','','show','mailprefsig','','hide')">
+<area shape="rect" coords="355,95,469,115" href="#" alt="Add Signature" onclick="MM_showHideLayers('mailprefsiged','','show')">
+<area shape="rect" coords="355,127,469,147" href="#" alt="Edit" onclick="MM_showHideLayers('mailprefsiged','','show')">
+</map>
+</div>
+
+<div id="mailprefrule" style="z-index: 30; left: 150px; top: 100px; position: absolute;">
+<img src="mailprefrule.png" usemap="#mailprefrule.png" width="488" height="271" border="0" alt="">
+<map name="mailprefrule.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="MM_showHideLayers('mailprefrule','','hide')">
+<area shape="rect" coords="1,23,67,77" href="#" alt="Accounts" onclick="MM_showHideLayers('mailprefacc','','show','mailprefrule','','hide')">
+<area shape="rect" coords="67,23,156,77" href="#" alt="Fonts &amp; Colors" onclick="MM_showHideLayers('mailpreffc','','show','mailprefrule','','hide')">
+<area shape="rect" coords="156,23,210,77" href="#" alt="Viewing" onclick="MM_showHideLayers('mailprefview','','show','mailprefrule','','hide')">
+<area shape="rect" coords="210,23,282,77" href="#" alt="Composing" onclick="MM_showHideLayers('mailprefcomp','','show','mailprefrule','','hide')">
+<area shape="rect" coords="282,23,348,77" href="#" alt="Signatures" onclick="MM_showHideLayers('mailprefsig','','show','mailprefrule','','hide')">
+<area shape="rect" coords="372,95,470,115" href="#" alt="Add Rule" onclick="MM_showHideLayers('mailprefruleed','','show')">
+<area shape="rect" coords="372,127,470,147" href="#" alt="Edit" onclick="MM_showHideLayers('mailprefruleed','','show')">
+</map>
+</div>
+
+<div id="mailprefaccedai" style="z-index: 40; left: 182px; top: 123px; position: absolute;">
+<img src="mailprefaccedai.png" usemap="#mailprefaccedai.png" width="424" height="434" border="0" alt="">
+<map name="mailprefaccedai.png">
+<area shape="rect" coords="184,20,297,39" href="#" alt="Special Mailboxes" onclick="MM_showHideLayers('mailprefaccedsm','','show','mailprefaccedai','','hide')">
+<area shape="rect" coords="298,20,368,39" href="#" alt="Advanced" onclick="MM_showHideLayers('mailprefaccedadv','','show','mailprefaccedai','','hide')">
+<area shape="rect" coords="281,330,372,347" href="#" alt="Options" onclick="MM_showHideLayers('mailprefaccedaiopt','','show')">
+<area shape="rect" coords="248,397,321,414" href="#" alt="Cancel" onclick="MM_showHideLayers('mailprefaccedai','','hide')">
+<area shape="rect" coords="330,397,403,414" href="#" alt="OK" onclick="MM_showHideLayers('mailprefaccedai','','hide')">
+</map>
+</div>
+
+<div id="mailprefaccedaiopt" style="z-index: 50; left: 200px; top: 150px; position: absolute;">
+<img src="mailprefaccedaiopt.png" usemap="#mailprefaccedaiopt.png" width="362" height="306" border="0" alt="">
+<map name="mailprefaccedaiopt.png">
+<area shape="rect" coords="186,265,255,285" href="#" alt="Cancel" onclick="MM_showHideLayers('mailprefaccedaiopt','','hide')">
+<area shape="rect" coords="270,265,339,285" href="#" alt="OK" onclick="MM_showHideLayers('mailprefaccedaiopt','','hide')">
+</map>
+</div>
+
+<div id="mailprefaccedsm" style="z-index: 40; left: 182px; top: 123px; position: absolute;">
+<img src="mailprefaccedsm.png" usemap="#mailprefaccedsm.png" width="424" height="434" border="0" alt="">
+<map name="mailprefaccedsm.png">
+<area shape="rect" coords="54,20,182,39" href="#" alt="Account Information" onclick="MM_showHideLayers('mailprefaccedai','','show','mailprefaccedsm','','hide')">
+<area shape="rect" coords="298,20,368,39" href="#" alt="Advanced" onclick="MM_showHideLayers('mailprefaccedadv','','show','mailprefaccedsm','','hide')">
+<area shape="rect" coords="248,397,321,414" href="#" alt="Cancel" onclick="MM_showHideLayers('mailprefaccedsm','','hide')">
+<area shape="rect" coords="330,397,402,414" href="#" alt="OK" onclick="MM_showHideLayers('mailprefaccedsm','','hide')">
+</map>
+</div>
+
+<div id="mailprefaccedadv" style="z-index: 40; left: 182px; top: 123px; position: absolute;">
+<img src="mailprefaccedadv.png" usemap="#mailprefaccedadv.png" width="424" height="434" border="0" alt="">
+<map name="mailprefaccedadv.png">
+<area shape="rect" coords="54,20,183,39" href="#" alt="Account Information" onclick="MM_showHideLayers('mailprefaccedai','','show','mailprefaccedadv','','hide')">
+<area shape="rect" coords="184,20,296,39" href="#" alt="Special Mailboxes" onclick="MM_showHideLayers('mailprefaccedsm','','show','mailprefaccedadv','','hide')">
+<area shape="rect" coords="248,397,321,414" href="#" alt="Cancel" onclick="MM_showHideLayers('mailprefaccedadv','','hide')">
+<area shape="rect" coords="331,397,402,414" href="#" alt="OK" onclick="MM_showHideLayers('mailprefaccedadv','','hide')">
+</map>
+</div>
+
+<div id="mailprefcompcl" style="z-index: 40; left: 189px; top: 123px; position: absolute;">
+<img src="mailprefcompcl.png" usemap="#mailprefcompcl.png" width="408" height="307" border="0" alt="">
+<map name="mailprefcompcl.png">
+<area shape="rect" coords="218,214,287,234" href="#" alt="Edit" onclick="MM_showHideLayers('mailprefcompcled','','show')">
+<area shape="rect" coords="302,214,371,234" href="#" alt="Add" onclick="MM_showHideLayers('mailprefcompcled','','show')">
+<area shape="rect" coords="310,267,379,287" href="#" alt="Close" onclick="MM_showHideLayers('mailprefcompcl','','hide')">
+</map>
+</div>
+
+<div id="mailprefcompcled" style="z-index: 50; left: 225px; top: 125px; position: absolute;">
+<img src="mailprefcompcled.png" usemap="#mailprefcompcled.png" width="311" height="283" border="0" alt="">
+<map name="mailprefcompcled.png">
+<area shape="rect" coords="135,242,204,262" href="#" alt="Cancel" onclick="MM_showHideLayers('mailprefcompcled','','hide')">
+<area shape="rect" coords="219,242,288,262" href="#" alt="Save" onclick="MM_showHideLayers('mailprefcompcled','','hide')">
+</map>
+</div>
+
+<div id="mailprefsiged" style="z-index: 40; left: 158px; top: 123px; position: absolute;">
+<img src="mailprefsiged.png" usemap="#mailprefsiged.png" width="473" height="245" border="0" alt="">
+<map name="mailprefsiged.png">
+<area shape="rect" coords="293,205,362,225" href="#" alt="Cancel" onclick="MM_showHideLayers('mailprefsiged','','hide')">
+<area shape="rect" coords="378,205,447,225" href="#" alt="OK" onclick="MM_showHideLayers('mailprefsiged','','hide')">
+</map>
+</div>
+
+<div id="mailprefruleed" style="z-index: 40; left: 116px; top: 123px; position: absolute;">
+<img src="mailprefruleed.png" usemap="#mailprefruleed.png" width="556" height="218" border="0" alt="">
+<map name="mailprefruleed.png">
+<area shape="rect" coords="74,50,91,67" href="#" alt="Select" onclick="MM_showHideLayers('mailprefruleedsel1','','show')">
+<area shape="rect" coords="162,81,179,98" href="#" alt="Select" onclick="MM_showHideLayers('mailprefruleedsel2','','show')">
+<area shape="rect" coords="302,81,319,98" href="#" alt="Select" onclick="MM_showHideLayers('mailprefruleedsel3','','show')">
+<area shape="rect" coords="189,145,206,162" href="#" alt="Select" onclick="MM_showHideLayers('mailprefruleedsel4','','show')">
+<area shape="rect" coords="380,181,453,198" href="#" alt="Cancel" onclick="MM_showHideLayers('mailprefruleed','','hide')">
+<area shape="rect" coords="463,181,534,198" href="#" alt="OK" onclick="MM_showHideLayers('mailprefruleed','','hide')">
+</map>
+</div>
+
+<div id="mailprefruleedsel1" style="z-index: 50; left: 135px; top: 170px; position: absolute;" onclick="MM_showHideLayers('mailprefruleedsel1','','hide')">
+<img src="mailprefruleedsel1.png" width="66" height="40" border="0" alt="">
+</div>
+
+<div id="mailprefruleedsel2" style="z-index: 50; left: 146px; top: 201px; position: absolute;" onclick="MM_showHideLayers('mailprefruleedsel2','','hide')">
+<img src="mailprefruleedsel2.png" width="220" height="304" border="0" alt="">
+</div>
+
+<div id="mailprefruleedsel3" style="z-index: 50; left: 291px; top: 201px; position: absolute;" onclick="MM_showHideLayers('mailprefruleedsel3','','hide')">
+<img src="mailprefruleedsel3.png" width="138" height="88" border="0" alt="">
+</div>
+
+<div id="mailprefruleedsel4" style="z-index: 50; left: 146px; top: 133px; position: absolute;" onclick="MM_showHideLayers('mailprefruleedsel4','','hide')">
+<img src="mailprefruleedsel4.png" width="170" height="216" border="0" alt="">
+</div>
+
+</body>
+</html>

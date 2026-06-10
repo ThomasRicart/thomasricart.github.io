@@ -1,0 +1,99 @@
+\input{/home/mbenjamin/Documents/Lycee/LateX/head.tex}
+
+% Mise en page
+\usepackage[left=1.5cm, right=2.0cm, top=1.5cm, bottom=1.5cm]{geometry}
+
+% Numerotation des pages / la derniere
+\makeatletter
+\renewcommand{\@evenfoot}%
+        {}%\thepage \slash \pageref{LastPage}}
+\renewcommand{\@oddfoot}{\@evenfoot}
+\makeatother
+
+% En-tête
+\renewcommand{\chapitre}{Statistiques à 2 variables }
+\renewcommand{\seance}{Introduction}
+\renewcommand{\classe}{CIEL 2}
+
+
+
+\begin{document}
+
+{\bf Nom, Prénom : \makebox[0.5\linewidth]{\dotfill} \hfill CIEL2} \\
+
+{\centering \color{red} \bf \large TP Stats2 -- Intro \\}
+
+
+\vspace*{0.5cm}
+
+On donne ci-dessous le nombre d'étudiants diplômés d'un Master en mathématiques et statistiques aux États-Unis$^1$ ainsi que le nombre de programmeurs informatiques en Californie$^2$ entre 2012 et 2021.
+
+\smallskip
+
+\hfill {\footnotesize $^1$ étude du Centre National pour les Statistiques sur l'Éducation (NCES) des États-Unis.}
+
+\hfill {\footnotesize $^2$ étude du Bureau des Statiques sur l'Emploi (BLS) des États-Unis.}
+
+\begin{center}
+\begin{tblr}{
+    colspec={lXXXXXXXXXX},
+    stretch=1,
+    cells={valign=m},
+    vlines,hlines,
+    row{1} = {bg = darkWhite},
+    column{1} = {bg = darkWhite}
+}
+	Année & 2012 & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020 & 2021 \\
+	Diplômés & 6246 & 6957 & 7273 & 7589 & 8451 & 9082 & 10443 & 11382 & 12041 & 12583 \\
+	Programmeurs & 41540 & 38750 & 37990 & 38650 & 	37570 & 34050 & 29740 & 24400 & 21800 & 23960
+\end{tblr}
+\end{center}
+
+\bigskip
+
+On va représenter ces données sur Géogebra à l'aide des manipulations suivantes :
+
+\begin{enumerate}
+	\item Dans le champs de saisie, taper : \texttt{s1:=\{2012,2013,\dots\}} en complétant les pointillés jusqu'à 2021.
+	
+	On dispose maintenant d'une première série \texttt{s1}.
+	\item On va maintenant saisir les autres données d'une autre manière.
+	
+	Dans \texttt{Affichage}, choisir \texttt{Tableur}
+	
+	\begin{enumerate}
+		\item Dans une première colonne (vous pouvez mettre le titre sur la première case), entrer les nombre de diplomés un à un.
+		
+		\item Dans une deuxième colonne, faire de même pour le nombre de programmeurs.
+		
+		\item Selectionner toutes les valeurs de la série diplomés puis : Clic droit > \texttt{Créer} > \texttt{Liste}
+		\item Faire de même avec la série des programmeurs.
+	\end{enumerate}
+	\item Pour créer un nuage de points :
+	
+	\begin{enumerate}
+		\item Dans le champs de saisie taper : \texttt{nuage = (s1,l1)}
+		
+		Vous venez de placer des points correspondants au nombre de dplomés en fonction de l'année (recadrer si besoin pour les visualiser)
+		\item Dans le tableau, selectionner l'ensemble des deux valeurs présentes dans les deux colonnes, puis : Clic droit > \texttt{Créer} > \texttt{Liste de points}
+		
+		{\it Avec cette méthode, tous les points ont obtenu un nom.}
+	\end{enumerate}
+	\item On souhaite connaître la moyenne des séries.
+	
+	\begin{enumerate}
+		\item Saisir \texttt{moyannee = moy(s1)}
+		\item De même, calculer la moyenne du nombre de diplomés.
+		\item Placer le point dont l'abscisse est la moyenne des années et l'ordonnée la moyenne du nombre de diplomés.
+		\item Selectionner l'ensemble des valeurs de la première colonne, puis dans le menu, choisir \texttt{Statistiques à une variable.}
+		
+		Plusieurs onglets apparaissent alors. Tester toutes les possibilités.
+		\item Selectionner l'ensemble des valeurs des deux colonnes, puis dans le menu, choisir \texttt{Statistiques à deux variables.}
+		
+		Plusieurs onglets apparaissent alors. Tester toutes les possibilités.
+	\end{enumerate}
+\end{enumerate}
+
+
+\end{document}
+

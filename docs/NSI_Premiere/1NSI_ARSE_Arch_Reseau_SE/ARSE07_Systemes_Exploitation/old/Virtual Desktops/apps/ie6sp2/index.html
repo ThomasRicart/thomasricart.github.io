@@ -1,0 +1,990 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Internet Explorer 6 SP2 Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#004E98" style="margin: 0px;" onload="show_clock();
+MM_showHideLayers('loading','','hide','loadmsg','','hide','taskbar','','show','clock','','show','ie6sp2','','show','ie6sp2file','','hide','ie6sp2edit','','hide','ie6sp2view','','hide','ie6sp2fav','','hide','ie6sp2tool','','hide','ie6sp2help','','hide','ie6sp2viewtool','','hide','ie6sp2toolpub','','hide','ie6sp2pubset','','hide','ie6sp2mao','','hide','ie6sp2about','','hide','ioptgen','','hide','ioptseciz','','hide','ioptsecli','','hide','ioptsects','','hide','ioptsecrs','','hide','ioptpriv','','hide','ioptcont','','hide','ioptconn','','hide','ioptprog','','hide','ioptadv1','','hide','ioptadv2','','hide','ioptadv3','','hide','ioptadv4','','hide','ioptadv5','','hide','ioptgendc','','hide','ioptgendf','','hide','ioptgenset','','hide','ioptgencol','','hide','ioptgenfont','','hide','ioptgenlang','','hide','ioptgenlangadd','','hide','ioptgenacc','','hide','ioptseclisite','','hide','ioptseclisiteadv','','hide','ioptsectssite','','hide','ioptsecrssite','','hide','ioptseccl1','','hide','ioptseccl2','','hide','ioptseccl3','','hide','ioptseccl4','','hide','ioptseccl5','','hide','ioptseccl6','','hide','ioptseccl7','','hide','ioptseccl8','','hide','ioptseccl9','','hide','ioptseccl10','','hide','ioptseccl11','','hide','ioptprivsite','','hide','ioptprivadv','','hide','ioptcontcacp','','hide','ioptcontcapass','','hide','ioptcontcarat','','hide','ioptcontcaas','','hide','ioptcontcagen','','hide','ioptcontcagencp','','hide','ioptcontcaadv','','hide','ioptcontcssl','','hide','ioptcontcert','','hide','ioptcontpub','','hide','ioptcontcertadv','','hide','ioptcontac','','hide','ioptcontmp','','hide','ioptconnaddtype1','','hide','ioptconnaddtype2','','hide','ioptconnaddtype3','','hide','ioptconnaddtype4','','hide','ioptconnaddtype1dev','','hide','ioptconnaddtype1pn','','hide','ioptconnaddtype1fin','','hide','ioptconnaddtype2pn','','hide','ioptconnaddtype2vpn','','hide','ioptconnaddtype2fin','','hide','ioptconnaddtype3dev','','hide','ioptconnaddtype3fin','','hide','ioptconnaddtype4fin','','hide','ioptconnset','','hide','ioptconnset2','','hide','ioptconnsetadv','','hide','ioptconnsetpadv','','hide','ioptconnlanset','','hide','ioptconnlanset2','','hide','ioptconnlansetadv','','hide');
+MM_preloadImages('loading.png','tbar.png','ie6sp2.png','ie6sp2file.png','ie6sp2edit.png','ie6sp2view.png','ie6sp2fav.png','ie6sp2tool.png','ie6sp2help.png','ie6sp2viewtool.png','ie6sp2toolpub.png','ie6sp2pubset.png','ie6sp2mao.png','ie6sp2about.png','ioptgen.png','ioptseciz.png','ioptsecli.png','ioptsects.png','ioptsecrs.png','ioptpriv.png','ioptcont.png','ioptconn.png','ioptprog.png','ioptadv1.png','ioptadv2.png','ioptadv3.png','ioptadv4.png','ioptadv5.png','ioptgendc.png','ioptgendf.png','ioptgenset.png','ioptgencol.png','ioptgenfont.png','ioptgenlang.png','ioptgenlangadd.png','ioptgenacc.png','ioptseclisite.png','ioptseclisiteadv.png','ioptsectssite.png','ioptsecrssite.png','ioptseccl1.png','ioptseccl2.png','ioptseccl3.png','ioptseccl4.png','ioptseccl5.png','ioptseccl6.png','ioptseccl7.png','ioptseccl8.png','ioptseccl9.png','ioptseccl10.png','ioptseccl11.png','ioptprivsite.png','ioptprivadv.png','ioptcontcacp.png','ioptcontcapass.png','ioptcontcarat.png','ioptcontcaas.png','ioptcontcagen.png','ioptcontcagencp.png','ioptcontcaadv.png','ioptcontcssl.png','ioptcontcert.png','ioptcontpub.png','ioptcontcertadv.png','ioptcontac.png','ioptcontmp.png','ioptconnaddtype1.png','ioptconnaddtype2.png','ioptconnaddtype3.png','ioptconnaddtype4.png','ioptconnaddtype1dev.png','ioptconnaddtype1pn.png','ioptconnaddtype1fin.png','ioptconnaddtype2pn.png','ioptconnaddtype2vpn.png','ioptconnaddtype2fin.png','ioptconnaddtype3dev.png','ioptconnaddtype3fin.png','ioptconnaddtype4fin.png','ioptconnset.png','ioptconnset2.png','ioptconnsetadv.png','ioptconnsetpadv.png','ioptconnlanset.png','ioptconnlanset2.png','ioptconnlansetadv.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 225; height: 400; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px; color: #FFFFFF;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px; color: #FFFFFF;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="taskbar" style="z-index: 99; left: 0px; top: 570px; position: absolute;">
+<img src="tbar.png" width="800" height="30" border="0" alt="">
+</div>
+
+<div id="clock" style="z-index: 100; left: 759px; top: 579px; position: absolute;">
+<script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script>
+</div>
+
+<div id="ie6sp2" style="z-index: 10; left: 0px; top: 0px; position: absolute;">
+<img src="ie6sp2.png" usemap="#ie6sp2.png" width="800" height="574" border="0" alt="">
+<map name="ie6sp2.png">
+<area shape="rect" coords="777,2,797,22" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="2,27,34,46" href="#" alt="File" onmouseover="MM_showHideLayers('ie6sp2file','','show')" onmouseout="MM_showHideLayers('ie6sp2file','','hide')">
+<area shape="rect" coords="34,27,68,46" href="#" alt="Edit" onmouseover="MM_showHideLayers('ie6sp2edit','','show')" onmouseout="MM_showHideLayers('ie6sp2edit','','hide')">
+<area shape="rect" coords="68,27,106,46" href="#" alt="View" onmouseover="MM_showHideLayers('ie6sp2view','','show')" onmouseout="MM_showHideLayers('ie6sp2view','','hide')">
+<area shape="rect" coords="106,27,167,46" href="#" alt="Favorites" onmouseover="MM_showHideLayers('ie6sp2fav','','show')" onmouseout="MM_showHideLayers('ie6sp2fav','','hide')">
+<area shape="rect" coords="167,27,208,46" href="#" alt="Tools" onmouseover="MM_showHideLayers('ie6sp2tool','','show')" onmouseout="MM_showHideLayers('ie6sp2tool','','hide')">
+<area shape="rect" coords="208,27,245,46" href="#" alt="Help" onmouseover="MM_showHideLayers('ie6sp2help','','show')" onmouseout="MM_showHideLayers('ie6sp2help','','hide')">
+</map>
+</div>
+
+<div id="ie6sp2file" style="z-index: 20; left: 2px; top: 46px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2file','','show')" onmouseout="MM_showHideLayers('ie6sp2file','','hide')">
+<img src="ie6sp2file.png" usemap="#ie6sp2file.png" width="183" height="254" border="0" alt="">
+<map name="ie6sp2file.png">
+<area shape="rect" coords="1,233,181,252" href="#" alt="Close" onclick="window.close();">
+</map>
+</div>
+
+<div id="ie6sp2edit" style="z-index: 20; left: 34px; top: 46px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2edit','','show')" onmouseout="MM_showHideLayers('ie6sp2edit','','hide')">
+<img src="ie6sp2edit.png" width="186" height="109" border="0" alt="">
+</div>
+
+<div id="ie6sp2view" style="z-index: 20; left: 68px; top: 46px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2view','','show')" onmouseout="MM_showHideLayers('ie6sp2view','','hide')">
+<img src="ie6sp2view.png" usemap="#ie6sp2view.png" width="151" height="220" border="0" alt="">
+<map name="ie6sp2view.png">
+<area shape="rect" coords="1,1,149,19" href="#" alt="Toolbars" onmouseover="MM_showHideLayers('ie6sp2viewtool','','show')" onmouseout="MM_showHideLayers('ie6sp2viewtool','','hide')">
+</map>
+</div>
+
+<div id="ie6sp2fav" style="z-index: 20; left: 106px; top: 46px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2fav','','show')" onmouseout="MM_showHideLayers('ie6sp2fav','','hide')">
+<img src="ie6sp2fav.png" width="153" height="111" border="0" alt="">
+</div>
+
+<div id="ie6sp2tool" style="z-index: 20; left: 167px; top: 46px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2tool','','show')" onmouseout="MM_showHideLayers('ie6sp2tool','','hide')">
+<img src="ie6sp2tool.png" usemap="#ie6sp2tool.png" width="142" height="143" border="0" alt="">
+<map name="ie6sp2tool.png">
+<area shape="rect" coords="1,19,140,37" href="#" alt="Pop-up Blocker" onmouseover="MM_showHideLayers('ie6sp2toolpub','','show')" onmouseout="MM_showHideLayers('ie6sp2toolpub','','hide')">
+<area shape="rect" coords="1,37,140,54" href="#" alt="Manage Add-ons" onclick="MM_showHideLayers('ie6sp2mao','','show','ie6sp2tool','','hide')">
+<area shape="rect" coords="1,118,140,141" href="#" alt="Internet Options" onclick="MM_showHideLayers('ioptgen','','show','ie6sp2tool','','hide')">
+</map>
+</div>
+
+<div id="ie6sp2help" style="z-index: 20; left: 208px; top: 46px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2help','','show')" onmouseout="MM_showHideLayers('ie6sp2help','','hide')">
+<img src="ie6sp2help.png" usemap="#ie6sp2help.png" width="159" height="117" border="0" alt="">
+<map name="ie6sp2help.png">
+<area shape="rect" coords="1,92,157,115" href="#" alt="About Internet Explorer" onclick="MM_showHideLayers('ie6sp2about','','show','ie6sp2help','','hide')">
+</map>
+</div>
+
+<div id="ie6sp2viewtool" style="z-index: 30; left: 213px; top: 46px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2view','','show','ie6sp2viewtool','','show')" onmouseout="MM_showHideLayers('ie6sp2view','','hide','ie6sp2viewtool','','hide')">
+<img src="ie6sp2viewtool.png" width="128" height="100" border="0" alt="">
+</div>
+
+<div id="ie6sp2toolpub" style="z-index: 30; left: 303px; top: 64px; position: absolute;" onmouseover="MM_showHideLayers('ie6sp2tool','','show','ie6sp2toolpub','','show')" onmouseout="MM_showHideLayers('ie6sp2tool','','hide','ie6sp2toolpub','','hide')">
+<img src="ie6sp2toolpub.png" usemap="#ie6sp2toolpub.png" width="169" height="40" border="0" alt="">
+<map name="ie6sp2toolpub.png">
+<area shape="rect" coords="1,19,167,38" href="#" alt="Pop-up Blocker Settings" onclick="MM_showHideLayers('ie6sp2pubset','','show','ie6sp2tool','','hide','ie6sp2toolpub','','hide')">
+</map>
+</div>
+
+<div id="ie6sp2pubset" style="z-index: 40; left: 185px; top: 45px; position: absolute;">
+<img src="ie6sp2pubset.png" usemap="#ie6sp2pubset.png" width="435" height="476" border="0" alt="">
+<map name="ie6sp2pubset.png">
+<area shape="rect" coords="409,5,429,25" href="#" alt="Close" onclick="MM_showHideLayers('ie6sp2pubset','','hide')">
+<area shape="rect" coords="340,444,412,464" href="#" alt="Close" onclick="MM_showHideLayers('ie6sp2pubset','','hide')">
+</map>
+</div>
+
+<div id="ie6sp2mao" style="z-index: 40; left: 115px; top: 5px; position: absolute;">
+<img src="ie6sp2mao.png" usemap="#ie6sp2mao.png" width="567" height="559" border="0" alt="">
+<map name="ie6sp2mao.png">
+<area shape="rect" coords="541,5,561,25" href="#" alt="Close" onclick="MM_showHideLayers('ie6sp2mao','','hide')">
+<area shape="rect" coords="480,521,552,541" href="#" alt="OK" onclick="MM_showHideLayers('ie6sp2mao','','hide')">
+</map>
+</div>
+
+<div id="ie6sp2about" style="z-index: 20; left: 195px; top: 105px; position: absolute;">
+<img src="ie6sp2about.png" usemap="#ie6sp2about.png" width="413" height="362" border="0" alt="">
+<map name="ie6sp2about.png">
+<area shape="rect" coords="387,5,407,25" href="#" alt="Close" onclick="MM_showHideLayers('ie6sp2about','','hide')">
+<area shape="rect" coords="319,290,391,310" href="#" alt="OK" onclick="MM_showHideLayers('ie6sp2about','','hide')">
+</map>
+</div>
+
+<div id="ioptgen" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptgen.png" usemap="#ioptgen.png" width="406" height="459" border="0" alt="">
+<map name="ioptgen.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgen','','hide')">
+<area shape="rect" coords="61,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptgen','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptgen','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptgen','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptgen','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptgen','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptgen','','hide')">
+<area shape="rect" coords="104,235,194,255" href="#" alt="Delete Cookies" onclick="MM_showHideLayers('ioptgendc','','show')">
+<area shape="rect" coords="203,235,280,255" href="#" alt="Delete Files" onclick="MM_showHideLayers('ioptgendf','','show')">
+<area shape="rect" coords="289,235,366,255" href="#" alt="Settings" onclick="MM_showHideLayers('ioptgenset','','show')">
+<area shape="rect" coords="25,379,106,399" href="#" alt="Colors" onclick="MM_showHideLayers('ioptgencol','','show')">
+<area shape="rect" coords="116,379,197,399" href="#" alt="Fonts" onclick="MM_showHideLayers('ioptgenfont','','show')">
+<area shape="rect" coords="208,379,289,399" href="#" alt="Languages" onclick="MM_showHideLayers('ioptgenlang','','show')">
+<area shape="rect" coords="299,379,379,399" href="#" alt="Accessibility" onclick="MM_showHideLayers('ioptgenacc','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptgen','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgen','','hide')">
+</map>
+</div>
+
+<div id="ioptseciz" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptseciz.png" usemap="#ioptseciz.png" width="406" height="459" border="0" alt="">
+<map name="ioptseciz.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseciz','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptseciz','','hide')">
+<area shape="rect" coords="111,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptseciz','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptseciz','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptseciz','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptseciz','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptseciz','','hide')">
+<area shape="rect" coords="101,90,175,162" href="#" alt="Local Intranet" onclick="MM_showHideLayers('ioptsecli','','show','ioptseciz','','hide')">
+<area shape="rect" coords="178,90,248,162" href="#" alt="Trusted Sites" onclick="MM_showHideLayers('ioptsects','','show','ioptseciz','','hide')">
+<area shape="rect" coords="259,90,317,162" href="#" alt="Restricted Sites" onclick="MM_showHideLayers('ioptsecrs','','show','ioptseciz','','hide')">
+<area shape="rect" coords="148,373,253,393" href="#" alt="Custom Level" onclick="MM_showHideLayers('ioptseccl1','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptseciz','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseciz','','hide')">
+</map>
+</div>
+
+<div id="ioptsecli" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptsecli.png" usemap="#ioptsecli.png" width="406" height="459" border="0" alt="">
+<map name="ioptsecli.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptsecli','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptsecli','','hide')">
+<area shape="rect" coords="111,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptsecli','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptsecli','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptsecli','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptsecli','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptsecli','','hide')">
+<area shape="rect" coords="40,90,86,162" href="#" alt="Internet" onclick="MM_showHideLayers('ioptseciz','','show','ioptsecli','','hide')">
+<area shape="rect" coords="178,90,248,162" href="#" alt="Trusted Sites" onclick="MM_showHideLayers('ioptsects','','show','ioptsecli','','hide')">
+<area shape="rect" coords="259,90,317,162" href="#" alt="Restricted Sites" onclick="MM_showHideLayers('ioptsecrs','','show','ioptsecli','','hide')">
+<area shape="rect" coords="295,186,376,206" href="#" alt="Sites" onclick="MM_showHideLayers('ioptseclisite','','show')">
+<area shape="rect" coords="148,373,253,393" href="#" alt="Custom Level" onclick="MM_showHideLayers('ioptseccl1','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptsecli','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptsecli','','hide')">
+</map>
+</div>
+
+<div id="ioptsects" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptsects.png" usemap="#ioptsects.png" width="406" height="459" border="0" alt="">
+<map name="ioptsects.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptsects','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptsects','','hide')">
+<area shape="rect" coords="111,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptsects','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptsects','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptsects','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptsects','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptsects','','hide')">
+<area shape="rect" coords="40,90,86,162" href="#" alt="Internet" onclick="MM_showHideLayers('ioptseciz','','show','ioptsects','','hide')">
+<area shape="rect" coords="101,90,175,162" href="#" alt="Local Intranet" onclick="MM_showHideLayers('ioptsecli','','show','ioptsects','','hide')">
+<area shape="rect" coords="259,90,317,162" href="#" alt="Restricted Sites" onclick="MM_showHideLayers('ioptsecrs','','show','ioptsects','','hide')">
+<area shape="rect" coords="295,186,376,206" href="#" alt="Sites" onclick="MM_showHideLayers('ioptsectssite','','show')">
+<area shape="rect" coords="148,373,253,393" href="#" alt="Custom Level" onclick="MM_showHideLayers('ioptseccl1','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptsects','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptsects','','hide')">
+</map>
+</div>
+
+<div id="ioptsecrs" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptsecrs.png" usemap="#ioptsecrs.png" width="406" height="459" border="0" alt="">
+<map name="ioptsecrs.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptsecrs','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="111,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="40,90,86,162" href="#" alt="Internet" onclick="MM_showHideLayers('ioptseciz','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="101,90,175,162" href="#" alt="Local Intranet" onclick="MM_showHideLayers('ioptsecli','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="178,90,248,162" href="#" alt="Trusted Sites" onclick="MM_showHideLayers('ioptsects','','show','ioptsecrs','','hide')">
+<area shape="rect" coords="295,186,376,206" href="#" alt="Sites" onclick="MM_showHideLayers('ioptsecrssite','','show')">
+<area shape="rect" coords="148,373,253,393" href="#" alt="Custom Level" onclick="MM_showHideLayers('ioptseccl1','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptsecrs','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptsecrs','','hide')">
+</map>
+</div>
+
+<div id="ioptpriv" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptpriv.png" usemap="#ioptpriv.png" width="406" height="459" border="0" alt="">
+<map name="ioptpriv.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptpriv','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptpriv','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptpriv','','hide')">
+<area shape="rect" coords="158,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptpriv','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptpriv','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptpriv','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptpriv','','hide')">
+<area shape="rect" coords="53,285,125,305" href="#" alt="Sites" onclick="MM_showHideLayers('ioptprivsite','','show')">
+<area shape="rect" coords="215,285,287,305" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptprivadv','','show')">
+<area shape="rect" coords="296,371,368,391" href="#" alt="Settings" onclick="MM_showHideLayers('ie6sp2pubset','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptpriv','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptpriv','','hide')">
+</map>
+</div>
+
+<div id="ioptcont" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptcont.png" usemap="#ioptcont.png" width="406" height="459" border="0" alt="">
+<map name="ioptcont.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcont','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptcont','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptcont','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptcont','','hide')">
+<area shape="rect" coords="207,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptcont','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptcont','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptcont','','hide')">
+<area shape="rect" coords="182,119,269,139" href="#" alt="Enable" onclick="MM_showHideLayers('ioptcontcacp','','show')">
+<area shape="rect" coords="278,119,365,139" href="#" alt="Settings" onclick="MM_showHideLayers('ioptcontcapass','','show')">
+<area shape="rect" coords="77,210,173,230" href="#" alt="Clear SSL State" onclick="MM_showHideLayers('ioptcontcssl','','show')">
+<area shape="rect" coords="182,210,269,230" href="#" alt="Certificates" onclick="MM_showHideLayers('ioptcontcert','','show')">
+<area shape="rect" coords="278,210,365,230" href="#" alt="Publishers" onclick="MM_showHideLayers('ioptcontpub','','show')">
+<area shape="rect" coords="278,282,365,302" href="#" alt="AutoComplete" onclick="MM_showHideLayers('ioptcontac','','show')">
+<area shape="rect" coords="278,345,365,365" href="#" alt="My Profile" onclick="MM_showHideLayers('ioptcontmp','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptcont','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcont','','hide')">
+</map>
+</div>
+
+<div id="ioptconn" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptconn.png" usemap="#ioptconn.png" width="406" height="459" border="0" alt="">
+<map name="ioptconn.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconn','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptconn','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptconn','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptconn','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptconn','','hide')">
+<area shape="rect" coords="278,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptconn','','hide')">
+<area shape="rect" coords="333,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptconn','','hide')">
+<area shape="rect" coords="289,124,367,144" href="#" alt="Add" onclick="MM_showHideLayers('ioptconnaddtype1','','show')">
+<area shape="rect" coords="289,181,367,201" href="#" alt="Settings" onclick="MM_showHideLayers('ioptconnset','','show')">
+<area shape="rect" coords="290,340,368,360" href="#" alt="LAN Settings" onclick="MM_showHideLayers('ioptconnlanset','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptconn','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconn','','hide')">
+</map>
+</div>
+
+<div id="ioptprog" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptprog.png" usemap="#ioptprog.png" width="406" height="459" border="0" alt="">
+<map name="ioptprog.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptprog','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptprog','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptprog','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptprog','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptprog','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptprog','','hide')">
+<area shape="rect" coords="334,38,391,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptadv1','','show','ioptprog','','hide')">
+<area shape="rect" coords="25,337,145,357" href="#" alt="Manage Add-ons" onclick="MM_showHideLayers('ie6sp2mao','','show')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptprog','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptprog','','hide')">
+</map>
+</div>
+
+<div id="ioptadv1" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptadv1.png" usemap="#ioptadv1.png" width="406" height="459" border="0" alt="">
+<map name="ioptadv1.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptadv1','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptadv1','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptadv1','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptadv1','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptadv1','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptadv1','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptadv1','','hide')">
+<area shape="rect" coords="363,331,377,346" href="#" alt="Down" onclick="MM_showHideLayers('ioptadv2','','show','ioptadv1','','hide')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptadv1','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptadv1','','hide')">
+</map>
+</div>
+
+<div id="ioptadv2" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptadv2.png" usemap="#ioptadv2.png" width="406" height="459" border="0" alt="">
+<map name="ioptadv2.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptadv2','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptadv2','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptadv2','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptadv2','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptadv2','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptadv2','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptadv2','','hide')">
+<area shape="rect" coords="363,93,377,108" href="#" alt="Up" onclick="MM_showHideLayers('ioptadv1','','show','ioptadv2','','hide')">
+<area shape="rect" coords="363,331,377,346" href="#" alt="Down" onclick="MM_showHideLayers('ioptadv3','','show','ioptadv2','','hide')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptadv2','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptadv2','','hide')">
+</map>
+</div>
+
+<div id="ioptadv3" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptadv3.png" usemap="#ioptadv3.png" width="406" height="459" border="0" alt="">
+<map name="ioptadv3.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptadv3','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptadv3','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptadv3','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptadv3','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptadv3','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptadv3','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptadv3','','hide')">
+<area shape="rect" coords="363,93,377,108" href="#" alt="Up" onclick="MM_showHideLayers('ioptadv2','','show','ioptadv3','','hide')">
+<area shape="rect" coords="363,331,377,346" href="#" alt="Down" onclick="MM_showHideLayers('ioptadv4','','show','ioptadv3','','hide')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptadv3','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptadv3','','hide')">
+</map>
+</div>
+
+<div id="ioptadv4" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptadv4.png" usemap="#ioptadv4.png" width="406" height="459" border="0" alt="">
+<map name="ioptadv4.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptadv4','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptadv4','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptadv4','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptadv4','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptadv4','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptadv4','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptadv4','','hide')">
+<area shape="rect" coords="363,93,377,108" href="#" alt="Up" onclick="MM_showHideLayers('ioptadv3','','show','ioptadv4','','hide')">
+<area shape="rect" coords="363,331,377,346" href="#" alt="Down" onclick="MM_showHideLayers('ioptadv5','','show','ioptadv4','','hide')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptadv4','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptadv4','','hide')">
+</map>
+</div>
+
+<div id="ioptadv5" style="z-index: 30; left: 195px; top: 55px; position: absolute;">
+<img src="ioptadv5.png" usemap="#ioptadv5.png" width="406" height="459" border="0" alt="">
+<map name="ioptadv5.png">
+<area shape="rect" coords="380,5,400,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptadv5','','hide')">
+<area shape="rect" coords="11,38,58,56" href="#" alt="General" onclick="MM_showHideLayers('ioptgen','','show','ioptadv5','','hide')">
+<area shape="rect" coords="60,38,108,56" href="#" alt="Security" onclick="MM_showHideLayers('ioptseciz','','show','ioptadv5','','hide')">
+<area shape="rect" coords="110,38,155,56" href="#" alt="Privacy" onclick="MM_showHideLayers('ioptpriv','','show','ioptadv5','','hide')">
+<area shape="rect" coords="157,38,204,56" href="#" alt="Content" onclick="MM_showHideLayers('ioptcont','','show','ioptadv5','','hide')">
+<area shape="rect" coords="206,38,275,56" href="#" alt="Connections" onclick="MM_showHideLayers('ioptconn','','show','ioptadv5','','hide')">
+<area shape="rect" coords="277,38,331,56" href="#" alt="Programs" onclick="MM_showHideLayers('ioptprog','','show','ioptadv5','','hide')">
+<area shape="rect" coords="363,93,377,108" href="#" alt="Up" onclick="MM_showHideLayers('ioptadv4','','show','ioptadv5','','hide')">
+<area shape="rect" coords="161,427,233,447" href="#" alt="OK" onclick="MM_showHideLayers('ioptadv5','','hide')">
+<area shape="rect" coords="242,427,314,447" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptadv5','','hide')">
+</map>
+</div>
+
+<div id="ioptgendc" style="z-index: 40; left: 260px; top: 225px; position: absolute;">
+<img src="ioptgendc.png" usemap="#ioptgendc.png" width="285" height="118" border="0" alt="">
+<map name="ioptgendc.png">
+<area shape="rect" coords="259,5,279,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgendc','','hide')">
+<area shape="rect" coords="117,82,189,102" href="#" alt="OK" onclick="MM_showHideLayers('ioptgendc','','hide')">
+<area shape="rect" coords="198,82,270,102" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgendc','','hide')">
+</map>
+</div>
+
+<div id="ioptgendf" style="z-index: 40; left: 245px; top: 205px; position: absolute;">
+<img src="ioptgendf.png" usemap="#ioptgendf.png" width="314" height="164" border="0" alt="">
+<map name="ioptgendf.png">
+<area shape="rect" coords="288,5,308,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgendf','','hide')">
+<area shape="rect" coords="145,128,217,148" href="#" alt="OK" onclick="MM_showHideLayers('ioptgendf','','hide')">
+<area shape="rect" coords="226,128,298,148" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgendf','','hide')">
+</map>
+</div>
+
+<div id="ioptgenset" style="z-index: 40; left: 225px; top: 105px; position: absolute;">
+<img src="ioptgenset.png" usemap="#ioptgenset.png" width="354" height="357" border="0" alt="">
+<map name="ioptgenset.png">
+<area shape="rect" coords="328,5,348,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgenset','','hide')">
+<area shape="rect" coords="186,321,258,341" href="#" alt="OK" onclick="MM_showHideLayers('ioptgenset','','hide')">
+<area shape="rect" coords="267,321,339,341" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgenset','','hide')">
+</map>
+</div>
+
+<div id="ioptgencol" style="z-index: 40; left: 205px; top: 175px; position: absolute;">
+<img src="ioptgencol.png" usemap="#ioptgencol.png" width="392" height="221" border="0" alt="">
+<map name="ioptgencol.png">
+<area shape="rect" coords="366,5,386,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgencol','','hide')">
+<area shape="rect" coords="223,184,295,204" href="#" alt="OK" onclick="MM_showHideLayers('ioptgencol','','hide')">
+<area shape="rect" coords="304,184,376,204" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgencol','','hide')">
+</map>
+</div>
+
+<div id="ioptgenfont" style="z-index: 40; left: 235px; top: 140px; position: absolute;">
+<img src="ioptgenfont.png" usemap="#ioptgenfont.png" width="326" height="295" border="0" alt="">
+<map name="ioptgenfont.png">
+<area shape="rect" coords="300,5,320,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgenfont','','hide')">
+<area shape="rect" coords="156,259,228,279" href="#" alt="OK" onclick="MM_showHideLayers('ioptgenfont','','hide')">
+<area shape="rect" coords="238,259,310,279" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgenfont','','hide')">
+</map>
+</div>
+
+<div id="ioptgenlang" style="z-index: 40; left: 230px; top: 130px; position: absolute;">
+<img src="ioptgenlang.png" usemap="#ioptgenlang.png" width="344" height="315" border="0" alt="">
+<map name="ioptgenlang.png">
+<area shape="rect" coords="318,5,338,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgenlang','','hide')">
+<area shape="rect" coords="256,202,328,222" href="#" alt="Add" onclick="MM_showHideLayers('ioptgenlangadd','','show')">
+<area shape="rect" coords="174,279,246,299" href="#" alt="OK" onclick="MM_showHideLayers('ioptgenlang','','hide')">
+<area shape="rect" coords="256,279,328,299" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgenlang','','hide')">
+</map>
+</div>
+
+<div id="ioptgenlangadd" style="z-index: 50; left: 240px; top: 120px; position: absolute;">
+<img src="ioptgenlangadd.png" usemap="#ioptgenlangadd.png" width="323" height="334" border="0" alt="">
+<map name="ioptgenlangadd.png">
+<area shape="rect" coords="297,5,317,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgenlangadd','','hide')">
+<area shape="rect" coords="154,298,226,318" href="#" alt="OK" onclick="MM_showHideLayers('ioptgenlangadd','','hide')">
+<area shape="rect" coords="235,298,307,318" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgenlangadd','','hide')">
+</map>
+</div>
+
+<div id="ioptgenacc" style="z-index: 40; left: 230px; top: 140px; position: absolute;">
+<img src="ioptgenacc.png" usemap="#ioptgenacc.png" width="345" height="295" border="0" alt="">
+<map name="ioptgenacc.png">
+<area shape="rect" coords="319,5,339,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptgenacc','','hide')">
+<area shape="rect" coords="175,259,247,279" href="#" alt="OK" onclick="MM_showHideLayers('ioptgenacc','','hide')">
+<area shape="rect" coords="258,259,330,279" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptgenacc','','hide')">
+</map>
+</div>
+
+<div id="ioptseclisite" style="z-index: 40; left: 210px; top: 185px; position: absolute;">
+<img src="ioptseclisite.png" usemap="#ioptseclisite.png" width="381" height="204" border="0" alt="">
+<map name="ioptseclisite.png">
+<area shape="rect" coords="355,5,375,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseclisite','','hide')">
+<area shape="rect" coords="132,171,204,191" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptseclisiteadv','','show')">
+<area shape="rect" coords="213,171,285,191" href="#" alt="OK" onclick="MM_showHideLayers('ioptseclisite','','hide')">
+<area shape="rect" coords="294,171,366,191" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseclisite','','hide')">
+</map>
+</div>
+
+<div id="ioptseclisiteadv" style="z-index: 50; left: 210px; top: 115px; position: absolute;">
+<img src="ioptseclisiteadv.png" usemap="#ioptseclisiteadv.png" width="384" height="342" border="0" alt="">
+<map name="ioptseclisiteadv.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseclisiteadv','','hide')">
+<area shape="rect" coords="208,303,280,323" href="#" alt="OK" onclick="MM_showHideLayers('ioptseclisiteadv','','hide')">
+<area shape="rect" coords="294,303,366,323" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseclisiteadv','','hide')">
+</map>
+</div>
+
+<div id="ioptsectssite" style="z-index: 40; left: 210px; top: 115px; position: absolute;">
+<img src="ioptsectssite.png" usemap="#ioptsectssite.png" width="384" height="342" border="0" alt="">
+<map name="ioptsectssite.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptsectssite','','hide')">
+<area shape="rect" coords="208,303,280,323" href="#" alt="OK" onclick="MM_showHideLayers('ioptsectssite','','hide')">
+<area shape="rect" coords="294,303,366,323" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptsectssite','','hide')">
+</map>
+</div>
+
+<div id="ioptsecrssite" style="z-index: 40; left: 210px; top: 115px; position: absolute;">
+<img src="ioptsecrssite.png" usemap="#ioptsecrssite.png" width="384" height="342" border="0" alt="">
+<map name="ioptsecrssite.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptsecrssite','','hide')">
+<area shape="rect" coords="208,303,280,323" href="#" alt="OK" onclick="MM_showHideLayers('ioptsecrssite','','hide')">
+<area shape="rect" coords="294,303,366,323" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptsecrssite','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl1" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl1.png" usemap="#ioptseccl1.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl1.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl1','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl2','','show','ioptseccl1','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl1','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl1','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl2" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl2.png" usemap="#ioptseccl2.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl2.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl2','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl1','','show','ioptseccl2','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl3','','show','ioptseccl2','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl2','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl2','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl3" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl3.png" usemap="#ioptseccl3.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl3.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl3','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl2','','show','ioptseccl3','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl4','','show','ioptseccl3','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl3','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl3','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl4" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl4.png" usemap="#ioptseccl4.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl4.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl4','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl3','','show','ioptseccl4','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl5','','show','ioptseccl4','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl4','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl4','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl5" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl5.png" usemap="#ioptseccl5.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl5.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl5','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl4','','show','ioptseccl5','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl6','','show','ioptseccl5','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl5','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl5','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl6" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl6.png" usemap="#ioptseccl6.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl6.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl6','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl5','','show','ioptseccl6','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl7','','show','ioptseccl6','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl6','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl6','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl7" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl7.png" usemap="#ioptseccl7.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl7.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl7','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl6','','show','ioptseccl7','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl8','','show','ioptseccl7','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl7','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl7','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl8" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl8.png" usemap="#ioptseccl8.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl8.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl8','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl7','','show','ioptseccl8','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl9','','show','ioptseccl8','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl8','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl8','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl9" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl9.png" usemap="#ioptseccl9.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl9.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl9','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl8','','show','ioptseccl9','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl10','','show','ioptseccl9','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl9','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl9','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl10" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl10.png" usemap="#ioptseccl10.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl10.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl10','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl9','','show','ioptseccl10','','hide')">
+<area shape="rect" coords="322,260,336,275" href="#" alt="Down" onclick="MM_showHideLayers('ioptseccl11','','show','ioptseccl10','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl10','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl10','','hide')">
+</map>
+</div>
+
+<div id="ioptseccl11" style="z-index: 40; left: 225px; top: 80px; position: absolute;">
+<img src="ioptseccl11.png" usemap="#ioptseccl11.png" width="353" height="412" border="0" alt="">
+<map name="ioptseccl11.png">
+<area shape="rect" coords="327,5,347,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptseccl11','','hide')">
+<area shape="rect" coords="322,62,336,77" href="#" alt="Up" onclick="MM_showHideLayers('ioptseccl10','','show','ioptseccl11','','hide')">
+<area shape="rect" coords="183,376,255,396" href="#" alt="OK" onclick="MM_showHideLayers('ioptseccl11','','hide')">
+<area shape="rect" coords="265,376,337,396" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptseccl11','','hide')">
+</map>
+</div>
+
+<div id="ioptprivsite" style="z-index: 40; left: 180px; top: 50px; position: absolute;">
+<img src="ioptprivsite.png" usemap="#ioptprivsite.png" width="441" height="468" border="0" alt="">
+<map name="ioptprivsite.png">
+<area shape="rect" coords="415,5,435,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptprivsite','','hide')">
+<area shape="rect" coords="352,431,424,451" href="#" alt="OK" onclick="MM_showHideLayers('ioptprivsite','','hide')">
+</map>
+</div>
+
+<div id="ioptprivadv" style="z-index: 40; left: 210px; top: 135px; position: absolute;">
+<img src="ioptprivadv.png" usemap="#ioptprivadv.png" width="378" height="302" border="0" alt="">
+<map name="ioptprivadv.png">
+<area shape="rect" coords="352,5,372,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptprivadv','','hide')">
+<area shape="rect" coords="208,266,280,286" href="#" alt="OK" onclick="MM_showHideLayers('ioptprivadv','','hide')">
+<area shape="rect" coords="291,266,363,286" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptprivadv','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcacp" style="z-index: 40; left: 230px; top: 120px; position: absolute;">
+<img src="ioptcontcacp.png" usemap="#ioptcontcacp.png" width="344" height="328" border="0" alt="">
+<map name="ioptcontcacp.png">
+<area shape="rect" coords="318,5,338,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcacp','','hide')">
+<area shape="rect" coords="85,300,157,320" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcacp','','hide')">
+<area shape="rect" coords="184,300,256,320" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcacp','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcapass" style="z-index: 40; left: 220px; top: 205px; position: absolute;">
+<img src="ioptcontcapass.png" usemap="#ioptcontcapass.png" width="356" height="165" border="0" alt="">
+<map name="ioptcontcapass.png">
+<area shape="rect" coords="330,5,350,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcapass','','hide')">
+<area shape="rect" coords="268,35,340,55" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcarat','','show','ioptcontcapass','','hide')">
+<area shape="rect" coords="268,63,340,83" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcapass','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcarat" style="z-index: 40; left: 200px; top: 60px; position: absolute;">
+<img src="ioptcontcarat.png" usemap="#ioptcontcarat.png" width="404" height="455" border="0" alt="">
+<map name="ioptcontcarat.png">
+<area shape="rect" coords="378,5,398,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcarat','','hide')">
+<area shape="rect" coords="60,38,141,56" href="#" alt="Approved Sites" onclick="MM_showHideLayers('ioptcontcaas','','show','ioptcontcarat','','hide')">
+<area shape="rect" coords="143,38,190,56" href="#" alt="General" onclick="MM_showHideLayers('ioptcontcagen','','show','ioptcontcarat','','hide')">
+<area shape="rect" coords="192,38,250,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptcontcaadv','','show','ioptcontcarat','','hide')">
+<area shape="rect" coords="159,423,231,443" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcarat','','hide')">
+<area shape="rect" coords="240,423,312,443" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcarat','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcaas" style="z-index: 40; left: 200px; top: 60px; position: absolute;">
+<img src="ioptcontcaas.png" usemap="#ioptcontcaas.png" width="404" height="455" border="0" alt="">
+<map name="ioptcontcaas.png">
+<area shape="rect" coords="378,5,398,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcaas','','hide')">
+<area shape="rect" coords="11,38,57,56" href="#" alt="Ratings" onclick="MM_showHideLayers('ioptcontcarat','','show','ioptcontcaas','','hide')">
+<area shape="rect" coords="144,38,190,56" href="#" alt="General" onclick="MM_showHideLayers('ioptcontcagen','','show','ioptcontcaas','','hide')">
+<area shape="rect" coords="192,38,250,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptcontcaadv','','show','ioptcontcaas','','hide')">
+<area shape="rect" coords="159,423,231,443" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcaas','','hide')">
+<area shape="rect" coords="240,423,312,443" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcaas','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcagen" style="z-index: 40; left: 200px; top: 60px; position: absolute;">
+<img src="ioptcontcagen.png" usemap="#ioptcontcagen.png" width="404" height="455" border="0" alt="">
+<map name="ioptcontcagen.png">
+<area shape="rect" coords="378,5,398,25" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcagen','','hide')">
+<area shape="rect" coords="11,38,57,56" href="#" alt="Ratings" onclick="MM_showHideLayers('ioptcontcarat','','show','ioptcontcagen','','hide')">
+<area shape="rect" coords="59,38,141,56" href="#" alt="Approved Sites" onclick="MM_showHideLayers('ioptcontcaas','','show','ioptcontcagen','','hide')">
+<area shape="rect" coords="193,38,250,56" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptcontcaadv','','show','ioptcontcagen','','hide')">
+<area shape="rect" coords="259,244,369,264" href="#" alt="Change Password" onclick="MM_showHideLayers('ioptcontcagencp','','show')">
+<area shape="rect" coords="159,423,231,443" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcagen','','hide')">
+<area shape="rect" coords="240,423,312,443" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcagen','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcagencp" style="z-index: 50; left: 230px; top: 155px; position: absolute;">
+<img src="ioptcontcagencp.png" usemap="#ioptcontcagencp.png" width="344" height="260" border="0" alt="">
+<map name="ioptcontcagencp.png">
+<area shape="rect" coords="318,5,338,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcagencp','','hide')">
+<area shape="rect" coords="85,232,157,252" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcagencp','','hide')">
+<area shape="rect" coords="184,232,256,252" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcagencp','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcaadv" style="z-index: 40; left: 200px; top: 60px; position: absolute;">
+<img src="ioptcontcaadv.png" usemap="#ioptcontcaadv.png" width="404" height="455" border="0" alt="">
+<map name="ioptcontcaadv.png">
+<area shape="rect" coords="378,5,398,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcaadv','','hide')">
+<area shape="rect" coords="11,38,57,56" href="#" alt="Ratings" onclick="MM_showHideLayers('ioptcontcarat','','show','ioptcontcaadv','','hide')">
+<area shape="rect" coords="59,38,141,56" href="#" alt="Approved Sites" onclick="MM_showHideLayers('ioptcontcaas','','show','ioptcontcaadv','','hide')">
+<area shape="rect" coords="143,38,190,56" href="#" alt="General" onclick="MM_showHideLayers('ioptcontcagen','','show','ioptcontcaadv','','hide')">
+<area shape="rect" coords="159,423,231,443" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcaadv','','hide')">
+<area shape="rect" coords="240,423,312,443" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcaadv','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcssl" style="z-index: 40; left: 265px; top: 220px; position: absolute;">
+<img src="ioptcontcssl.png" usemap="#ioptcontcssl.png" width="269" height="126" border="0" alt="">
+<map name="ioptcontcssl.png">
+<area shape="rect" coords="243,5,263,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcssl','','hide')">
+<area shape="rect" coords="97,90,169,110" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcssl','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcert" style="z-index: 40; left: 145px; top: 50px; position: absolute;">
+<img src="ioptcontcert.png" usemap="#ioptcontcert.png" width="509" height="471" border="0" alt="">
+<map name="ioptcontcert.png">
+<area shape="rect" coords="483,5,503,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcert','','hide')">
+<area shape="rect" coords="420,310,494,330" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptcontcertadv','','show')">
+<area shape="rect" coords="420,435,494,455" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcert','','hide')">
+</map>
+</div>
+
+<div id="ioptcontpub" style="z-index: 40; left: 145px; top: 50px; position: absolute;">
+<img src="ioptcontpub.png" usemap="#ioptcontpub.png" width="509" height="471" border="0" alt="">
+<map name="ioptcontpub.png">
+<area shape="rect" coords="483,5,503,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontpub','','hide')">
+<area shape="rect" coords="420,310,494,330" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptcontcertadv','','show')">
+<area shape="rect" coords="420,435,494,455" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontpub','','hide')">
+</map>
+</div>
+
+<div id="ioptcontcertadv" style="z-index: 50; left: 210px; top: 90px; position: absolute;">
+<img src="ioptcontcertadv.png" usemap="#ioptcontcertadv.png" width="384" height="386" border="0" alt="">
+<map name="ioptcontcertadv.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontcertadv','','hide')">
+<area shape="rect" coords="213,350,285,370" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontcertadv','','hide')">
+<area shape="rect" coords="297,350,369,370" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontcertadv','','hide')">
+</map>
+</div>
+
+<div id="ioptcontac" style="z-index: 40; left: 245px; top: 115px; position: absolute;">
+<img src="ioptcontac.png" usemap="#ioptcontac.png" width="315" height="338" border="0" alt="">
+<map name="ioptcontac.png">
+<area shape="rect" coords="289,5,309,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontac','','hide')">
+<area shape="rect" coords="144,301,216,321" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontac','','hide')">
+<area shape="rect" coords="228,301,300,321" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontac','','hide')">
+</map>
+</div>
+
+<div id="ioptcontmp" style="z-index: 40; left: 155px; top: 120px; position: absolute;">
+<img src="ioptcontmp.png" usemap="#ioptcontmp.png" width="489" height="334" border="0" alt="">
+<map name="ioptcontmp.png">
+<area shape="rect" coords="463,5,483,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptcontmp','','hide')">
+<area shape="rect" coords="168,298,240,318" href="#" alt="OK" onclick="MM_showHideLayers('ioptcontmp','','hide')">
+<area shape="rect" coords="247,298,319,318" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptcontmp','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype1" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype1.png" usemap="#ioptconnaddtype1.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype1.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype1','','hide')">
+<area shape="circle" coords="55,160,6" href="#" alt="Connect to Private Network through Internet" onclick="MM_showHideLayers('ioptconnaddtype2','','show','ioptconnaddtype1','','hide')">
+<area shape="circle" coords="55,201,6" href="#" alt="Connect Directly to Another PC" onclick="MM_showHideLayers('ioptconnaddtype3','','show','ioptconnaddtype1','','hide')">
+<area shape="circle" coords="55,240,6" href="#" alt="Connect via Broadband" onclick="MM_showHideLayers('ioptconnaddtype4','','show','ioptconnaddtype1','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype1dev','','show','ioptconnaddtype1','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype1','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype2" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype2.png" usemap="#ioptconnaddtype2.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype2.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype2','','hide')">
+<area shape="circle" coords="55,120,6" href="#" alt="Dial-up to Private Network" onclick="MM_showHideLayers('ioptconnaddtype1','','show','ioptconnaddtype2','','hide')">
+<area shape="circle" coords="55,201,6" href="#" alt="Connect Directly to Another PC" onclick="MM_showHideLayers('ioptconnaddtype3','','show','ioptconnaddtype2','','hide')">
+<area shape="circle" coords="55,240,6" href="#" alt="Connect via Broadband" onclick="MM_showHideLayers('ioptconnaddtype4','','show','ioptconnaddtype2','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype2pn','','show','ioptconnaddtype2','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype2','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype3" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype3.png" usemap="#ioptconnaddtype3.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype3.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype3','','hide')">
+<area shape="circle" coords="55,120,6" href="#" alt="Dial-up to Private Network" onclick="MM_showHideLayers('ioptconnaddtype1','','show','ioptconnaddtype3','','hide')">
+<area shape="circle" coords="55,160,6" href="#" alt="Connect to Private Network through Internet" onclick="MM_showHideLayers('ioptconnaddtype2','','show','ioptconnaddtype3','','hide')">
+<area shape="circle" coords="55,240,6" href="#" alt="Connect via Broadband" onclick="MM_showHideLayers('ioptconnaddtype4','','show','ioptconnaddtype3','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype3dev','','show','ioptconnaddtype3','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype3','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype4" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype4.png" usemap="#ioptconnaddtype4.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype4.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype4','','hide')">
+<area shape="circle" coords="55,120,6" href="#" alt="Dial-up to Private Network" onclick="MM_showHideLayers('ioptconnaddtype1','','show','ioptconnaddtype4','','hide')">
+<area shape="circle" coords="55,160,6" href="#" alt="Connect to Private Network through Internet" onclick="MM_showHideLayers('ioptconnaddtype2','','show','ioptconnaddtype4','','hide')">
+<area shape="circle" coords="55,201,6" href="#" alt="Connect Directly to Another PC" onclick="MM_showHideLayers('ioptconnaddtype3','','show','ioptconnaddtype4','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype4fin','','show','ioptconnaddtype4','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype4','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype1dev" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype1dev.png" usemap="#ioptconnaddtype1dev.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype1dev.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype1dev','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype1','','show','ioptconnaddtype1dev','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype1pn','','show','ioptconnaddtype1dev','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype1dev','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype1pn" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype1pn.png" usemap="#ioptconnaddtype1pn.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype1pn.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype1pn','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype1dev','','show','ioptconnaddtype1pn','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype1fin','','show','ioptconnaddtype1pn','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype1pn','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype1fin" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype1fin.png" usemap="#ioptconnaddtype1fin.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype1fin.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype1fin','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype1pn','','show','ioptconnaddtype1fin','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Finish" onclick="MM_showHideLayers('ioptconnset','','show','ioptconnaddtype1fin','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype1fin','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype2pn" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype2pn.png" usemap="#ioptconnaddtype2pn.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype2pn.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype2pn','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype2','','show','ioptconnaddtype2pn','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype2vpn','','show','ioptconnaddtype2pn','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype2pn','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype2vpn" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype2vpn.png" usemap="#ioptconnaddtype2vpn.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype2vpn.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype2vpn','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype2pn','','show','ioptconnaddtype2vpn','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype2fin','','show','ioptconnaddtype2vpn','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype2vpn','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype2fin" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype2fin.png" usemap="#ioptconnaddtype2fin.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype2fin.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype2fin','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype2vpn','','show','ioptconnaddtype2fin','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Finish" onclick="MM_showHideLayers('ioptconnset','','show','ioptconnaddtype2fin','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype2fin','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype3dev" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype3dev.png" usemap="#ioptconnaddtype3dev.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype3dev.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype3dev','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype3','','show','ioptconnaddtype3dev','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Next" onclick="MM_showHideLayers('ioptconnaddtype3fin','','show','ioptconnaddtype3dev','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype3dev','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype3fin" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype3fin.png" usemap="#ioptconnaddtype3fin.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype3fin.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype3fin','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype3dev','','show','ioptconnaddtype3fin','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Finish" onclick="MM_showHideLayers('ioptconnset','','show','ioptconnaddtype3fin','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype3fin','','hide')">
+</map>
+</div>
+
+<div id="ioptconnaddtype4fin" style="z-index: 40; left: 150px; top: 90px; position: absolute;">
+<img src="ioptconnaddtype4fin.png" usemap="#ioptconnaddtype4fin.png" width="503" height="392" border="0" alt="">
+<map name="ioptconnaddtype4fin.png">
+<area shape="rect" coords="477,5,497,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnaddtype4fin','','hide')">
+<area shape="rect" coords="256,357,328,377" href="#" alt="Back" onclick="MM_showHideLayers('ioptconnaddtype4','','show','ioptconnaddtype4fin','','hide')">
+<area shape="rect" coords="331,357,403,377" href="#" alt="Finish" onclick="MM_showHideLayers('ioptconnset','','show','ioptconnaddtype4fin','','hide')">
+<area shape="rect" coords="416,357,488,377" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnaddtype4fin','','hide')">
+</map>
+</div>
+
+<div id="ioptconnset" style="z-index: 40; left: 210px; top: 60px; position: absolute;">
+<img src="ioptconnset.png" usemap="#ioptconnset.png" width="384" height="451" border="0" alt="">
+<map name="ioptconnset.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnset','','hide')">
+<area shape="rect" coords="24,202,36,214" href="#" alt="Use Proxy Server" onclick="MM_showHideLayers('ioptconnset2','','show','ioptconnset','','hide')">
+<area shape="rect" coords="286,347,358,367" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptconnsetadv','','show')">
+<area shape="rect" coords="213,415,285,435" href="#" alt="OK" onclick="MM_showHideLayers('ioptconnset','','hide')">
+<area shape="rect" coords="297,415,369,435" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnset','','hide')">
+</map>
+</div>
+
+<div id="ioptconnset2" style="z-index: 40; left: 210px; top: 60px; position: absolute;">
+<img src="ioptconnset2.png" usemap="#ioptconnset2.png" width="384" height="451" border="0" alt="">
+<map name="ioptconnset2.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnset2','','hide')">
+<area shape="rect" coords="24,202,36,214" href="#" alt="Don't Use Proxy Server" onclick="MM_showHideLayers('ioptconnset','','show','ioptconnset2','','hide')">
+<area shape="rect" coords="286,232,358,252" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptconnsetpadv','','show')">
+<area shape="rect" coords="286,347,358,367" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptconnsetadv','','show')">
+<area shape="rect" coords="213,415,285,435" href="#" alt="OK" onclick="MM_showHideLayers('ioptconnset2','','hide')">
+<area shape="rect" coords="297,415,369,435" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnset2','','hide')">
+</map>
+</div>
+
+<div id="ioptconnsetadv" style="z-index: 50; left: 215px; top: 205px; position: absolute;">
+<img src="ioptconnsetadv.png" usemap="#ioptconnsetadv.png" width="369" height="156" border="0" alt="">
+<map name="ioptconnsetadv.png">
+<area shape="rect" coords="343,5,363,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnsetadv','','hide')">
+<area shape="rect" coords="282,41,354,61" href="#" alt="OK" onclick="MM_showHideLayers('ioptconnsetadv','','hide')">
+<area shape="rect" coords="282,69,354,89" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnsetadv','','hide')">
+</map>
+</div>
+
+<div id="ioptconnsetpadv" style="z-index: 50; left: 215px; top: 90px; position: absolute;">
+<img src="ioptconnsetpadv.png" usemap="#ioptconnsetpadv.png" width="368" height="394" border="0" alt="">
+<map name="ioptconnsetpadv.png">
+<area shape="rect" coords="342,5,362,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnsetpadv','','hide')">
+<area shape="rect" coords="198,360,270,380" href="#" alt="OK" onclick="MM_showHideLayers('ioptconnsetpadv','','hide')">
+<area shape="rect" coords="279,360,351,380" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnsetpadv','','hide')">
+</map>
+</div>
+
+<div id="ioptconnlanset" style="z-index: 40; left: 210px; top: 115px; position: absolute;">
+<img src="ioptconnlanset.png" usemap="#ioptconnlanset.png" width="384" height="339" border="0" alt="">
+<map name="ioptconnlanset.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnlanset','','hide')">
+<area shape="rect" coords="24,202,36,214" href="#" alt="Use Proxy Server" onclick="MM_showHideLayers('ioptconnlanset2','','show','ioptconnlanset','','hide')">
+<area shape="rect" coords="213,303,285,323" href="#" alt="OK" onclick="MM_showHideLayers('ioptconnlanset','','hide')">
+<area shape="rect" coords="297,303,369,323" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnlanset','','hide')">
+</map>
+</div>
+
+<div id="ioptconnlanset2" style="z-index: 40; left: 210px; top: 115px; position: absolute;">
+<img src="ioptconnlanset2.png" usemap="#ioptconnlanset2.png" width="384" height="339" border="0" alt="">
+<map name="ioptconnlanset2.png">
+<area shape="rect" coords="358,5,378,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnlanset2','','hide')">
+<area shape="rect" coords="24,202,36,214" href="#" alt="Don't Use Proxy Server" onclick="MM_showHideLayers('ioptconnlanset','','show','ioptconnlanset2','','hide')">
+<area shape="rect" coords="286,232,358,252" href="#" alt="Advanced" onclick="MM_showHideLayers('ioptconnlansetadv','','show')">
+<area shape="rect" coords="213,303,285,323" href="#" alt="OK" onclick="MM_showHideLayers('ioptconnlanset2','','hide')">
+<area shape="rect" coords="297,303,369,323" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnlanset2','','hide')">
+</map>
+</div>
+
+<div id="ioptconnlansetadv" style="z-index: 50; left: 215px; top: 90px; position: absolute;">
+<img src="ioptconnlansetadv.png" usemap="#ioptconnlansetadv.png" width="368" height="394" border="0" alt="">
+<map name="ioptconnlansetadv.png">
+<area shape="rect" coords="342,5,362,25" href="#" alt="Close" onclick="MM_showHideLayers('ioptconnlansetadv','','hide')">
+<area shape="rect" coords="198,360,270,380" href="#" alt="OK" onclick="MM_showHideLayers('ioptconnlansetadv','','hide')">
+<area shape="rect" coords="279,360,351,380" href="#" alt="Cancel" onclick="MM_showHideLayers('ioptconnlansetadv','','hide')">
+</map>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Internet Explorer 5.2 Mac (OS X) Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#4966AA" style="margin: 0px;" onload="show_clock();	
+MM_showHideLayers('loading','','hide','loadmsg','','hide','clock','','show','dticons','','show','dock','','show','ie52','','show','ie52finder','','show','ie52appmenu','','hide','ie52exp','','hide','ie52file','','hide','ie52edit','','hide','ie52view','','hide','ie52go','','hide','ie52fav','','hide','ie52tool','','hide','ie52win','','hide','ie52help','','hide','ie52about','','hide','ie52aboutsupp','','hide','ie52prefbd','','hide','ie52prefwc','','hide','ie52preflf','','hide','ie52prefsub','','hide','ie52prefjava','','hide','ie52prefie','','hide','ie52prefsec','','hide','ie52prefsziz','','hide','ie52prefrat','','hide','ie52prefadv','','hide','ie52preffac','','hide','ie52prefafp','','hide','ie52prefdo','','hide','ie52preffh','','hide','ie52prefcook','','hide','ie52prefph','','hide','ie52prefprox','','hide','ie52prefsp','','hide','ie52prefgen','','hide','ie52preflfadd','','hide','ie52prefsecsp','','hide','ie52prefszizzone','','hide','ie52prefszizset1','','hide','ie52prefszizset2','','hide','ie52prefszli','','hide','ie52prefszlizone','','hide','ie52prefszlias','','hide','ie52prefszliasadv','','hide','ie52prefszliset1','','hide','ie52prefszliset2','','hide','ie52prefszts','','hide','ie52prefsztszone','','hide','ie52prefsztsas','','hide','ie52prefsztsset1','','hide','ie52prefsztsset2','','hide','ie52prefszrs','','hide','ie52prefszrszone','','hide','ie52prefszrsas','','hide','ie52prefszrsset1','','hide','ie52prefszrsset2','','hide','ie52prefszasadd','','hide','ie52prefratcp','','hide','ie52prefratopt','','hide','ie52preffacadd','','hide','ie52preffhadd','','hide','ie52prefphadd','','hide');
+MM_preloadImages('loading.png','dticons.png','dock.png','ie52.png','ie52finder.png','ie52appmenu.png','ie52exp.png','ie52file.png','ie52edit.png','ie52view.png','ie52go.png','ie52fav.png','ie52tool.png','ie52win.png','ie52help.png','ie52about.png','ie52aboutsupp.png','ie52prefbd.png','ie52prefwc.png','ie52preflf.png','ie52prefsub.png','ie52prefjava.png','ie52prefie.png','ie52prefsec.png','ie52prefsziz.png','ie52prefrat.png','ie52prefadv.png','ie52preffac.png','ie52prefafp.png','ie52prefdo.png','ie52preffh.png','ie52prefcook.png','ie52prefph.png','ie52prefprox.png','ie52prefsp.png','ie52prefgen.png','ie52preflfadd.png','ie52prefsecsp.png','ie52prefszizzone.png','ie52prefszizset1.png','ie52prefszizset2.png','ie52prefszli.png','ie52prefszlizone.png','ie52prefszlias.png','ie52prefszliasadv.png','ie52prefszliset1.png','ie52prefszliset2.png','ie52prefszts.png','ie52prefsztszone.png','ie52prefsztsas.png','ie52prefsztsset1.png','ie52prefsztsset2.png','ie52prefszrs.png','ie52prefszrszone.png','ie52prefszrsas.png','ie52prefszrsset1.png','ie52prefszrsset2.png','ie52prefszasadd.png','ie52prefratcp.png','ie52prefratopt.png','ie52preffacadd.png','ie52preffhadd.png','ie52prefphadd.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 225; height: 400; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="clock" style="z-index: 100; left: 684px; top: 2px; position: absolute;">
+<b><script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script></b>
+</div>
+
+<div id="dticons" style="z-index: 1; left: 692px; top: 36px; position: absolute;">
+<img src="dticons.png" width="71" height="67" border="0" alt="">
+</div>
+
+<div id="dock" style="z-index: 1; left: 91px; top: 525px; position: absolute;">
+<img src="dock.png" width="618" height="75" border="0" alt="">
+</div>
+
+<div id="ie52" style="z-index: 20; left: 15px; top: 35px; position: absolute;">
+<img src="ie52.png" usemap="#ie52.png" width="770" height="550" border="0" alt="">
+<map name="ie52.png">
+<area shape="circle" coords="16,11,7" href="#" alt="Close" onclick="window.close();">
+</map>
+</div>
+
+<div id="ie52finder" style="z-index: 99; left: 0px; top: 0px; position: absolute;">
+<img src="ie52finder.png" usemap="#ie52finder.png" width="800" height="23" border="0" alt="">
+<map name="ie52finder.png">
+<area shape="rect" coords="10,0,45,22" href="#" alt="Apple" onmouseover="MM_showHideLayers('ie52appmenu','','show')" onmouseout="MM_showHideLayers('ie52appmenu','','hide')">
+<area shape="rect" coords="45,0,124,22" href="#" alt="Explorer" onmouseover="MM_showHideLayers('ie52exp','','show')" onmouseout="MM_showHideLayers('ie52exp','','hide')">
+<area shape="rect" coords="124,0,166,22" href="#" alt="File" onmouseover="MM_showHideLayers('ie52file','','show')" onmouseout="MM_showHideLayers('ie52file','','hide')">
+<area shape="rect" coords="166,0,210,22" href="#" alt="Edit" onmouseover="MM_showHideLayers('ie52edit','','show')" onmouseout="MM_showHideLayers('ie52edit','','hide')">
+<area shape="rect" coords="210,0,260,22" href="#" alt="View" onmouseover="MM_showHideLayers('ie52view','','show')" onmouseout="MM_showHideLayers('ie52view','','hide')">
+<area shape="rect" coords="260,0,297,22" href="#" alt="Go" onmouseover="MM_showHideLayers('ie52go','','show')" onmouseout="MM_showHideLayers('ie52go','','hide')">
+<area shape="rect" coords="297,0,377,22" href="#" alt="Favorites" onmouseover="MM_showHideLayers('ie52fav','','show')" onmouseout="MM_showHideLayers('ie52fav','','hide')">
+<area shape="rect" coords="377,0,433,22" href="#" alt="Tools" onmouseover="MM_showHideLayers('ie52tool','','show')" onmouseout="MM_showHideLayers('ie52tool','','hide')">
+<area shape="rect" coords="433,0,504,22" href="#" alt="Window" onmouseover="MM_showHideLayers('ie52win','','show')" onmouseout="MM_showHideLayers('ie52win','','hide')">
+<area shape="rect" coords="504,0,552,22" href="#" alt="Help" onmouseover="MM_showHideLayers('ie52help','','show')" onmouseout="MM_showHideLayers('ie52help','','hide')">
+</map>
+</div>
+
+<div id="ie52appmenu" style="z-index: 110; left: 10px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52appmenu','','show')" onmouseout="MM_showHideLayers('ie52appmenu','','hide')">
+<img src="ie52appmenu.png" width="223" height="279" border="0" alt="">
+</div>
+
+<div id="ie52exp" style="z-index: 110; left: 45px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52exp','','show')" onmouseout="MM_showHideLayers('ie52exp','','hide')">
+<img src="ie52exp.png" usemap="#ie52exp.png" width="229" height="210" border="0" alt="">
+<map name="ie52exp.png">
+<area shape="rect" coords="1,4,227,24" href="#" alt="About Internet Explorer" onclick="MM_showHideLayers('ie52about','','show','ie52exp','','hide')">
+<area shape="rect" coords="1,54,227,74" href="#" alt="Preferences" onclick="MM_showHideLayers('ie52prefbd','','show','ie52exp','','hide')">
+<area shape="rect" coords="1,186,227,206" href="#" alt="Quit Explorer" onclick="window.close();">
+</map>
+</div>
+
+<div id="ie52file" style="z-index: 110; left: 124px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52file','','show')" onmouseout="MM_showHideLayers('ie52file','','hide')">
+<img src="ie52file.png" width="180" height="286" border="0" alt="">
+</div>
+
+<div id="ie52edit" style="z-index: 110; left: 166px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52edit','','show')" onmouseout="MM_showHideLayers('ie52edit','','hide')">
+<img src="ie52edit.png" width="151" height="167" border="0" alt="">
+</div>
+
+<div id="ie52view" style="z-index: 110; left: 210px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52view','','show')" onmouseout="MM_showHideLayers('ie52view','','hide')">
+<img src="ie52view.png" width="205" height="343" border="0" alt="">
+</div>
+
+<div id="ie52go" style="z-index: 110; left: 260px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52go','','show')" onmouseout="MM_showHideLayers('ie52go','','hide')">
+<img src="ie52go.png" width="133" height="91" border="0" alt="">
+</div>
+
+<div id="ie52fav" style="z-index: 110; left: 297px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52fav','','show')" onmouseout="MM_showHideLayers('ie52fav','','hide')">
+<img src="ie52fav.png" width="328" height="299" border="0" alt="">
+</div>
+
+<div id="ie52tool" style="z-index: 110; left: 377px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52tool','','show')" onmouseout="MM_showHideLayers('ie52tool','','hide')">
+<img src="ie52tool.png" width="193" height="179" border="0" alt="">
+</div>
+
+<div id="ie52win" style="z-index: 110; left: 433px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52win','','show')" onmouseout="MM_showHideLayers('ie52win','','hide')">
+<img src="ie52win.png" width="241" height="210" border="0" alt="">
+</div>
+
+<div id="ie52help" style="z-index: 110; left: 504px; top: 22px; position: absolute;" onmouseover="MM_showHideLayers('ie52help','','show')" onmouseout="MM_showHideLayers('ie52help','','hide')">
+<img src="ie52help.png" width="206" height="48" border="0" alt="">
+</div>
+
+<div id="ie52about" style="z-index: 30; left: 175px; top: 50px; position: absolute;">
+<img src="ie52about.png" usemap="#ie52about.png" width="462" height="499" border="0" alt="">
+<map name="ie52about.png">
+<area shape="rect" coords="265,458,347,478" href="#" alt="Support" onclick="MM_showHideLayers('ie52aboutsupp','','show')">
+<area shape="rect" coords="362,458,439,478" href="#" alt="OK" onclick="MM_showHideLayers('ie52about','','hide')">
+</map>
+</div>
+
+<div id="ie52aboutsupp" style="z-index: 40; left: 100px; top: 100px; position: absolute;">
+<img src="ie52aboutsupp.png" usemap="#ie52aboutsupp.png" width="612" height="373" border="0" alt="">
+<map name="ie52aboutsupp.png">
+<area shape="rect" coords="542,344,599,364" href="#" alt="OK" onclick="MM_showHideLayers('ie52aboutsupp','','hide')">
+</map>
+</div>
+
+<div id="ie52prefbd" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefbd.png" usemap="#ie52prefbd.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefbd.png">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefbd','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefbd','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefbd','','hide')">
+</map>
+</div>
+
+<div id="ie52prefwc" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefwc.png" usemap="#ie52prefwc.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefwc.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefwc','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefwc','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefwc','','hide')">
+</map>
+</div>
+
+<div id="ie52preflf" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52preflf.png" usemap="#ie52preflf.png" width="527" height="392" border="0" alt="">
+<map name="ie52preflf.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52preflf','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52preflf','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52preflf','','hide')">
+<area shape="rect" coords="408,114,500,129" href="#" alt="Add" onclick="MM_showHideLayers('ie52preflfadd','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52preflf','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52preflf','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsub" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefsub.png" usemap="#ie52prefsub.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefsub.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefsub','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsub','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsub','','hide')">
+</map>
+</div>
+
+<div id="ie52prefjava" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefjava.png" usemap="#ie52prefjava.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefjava.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefjava','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefjava','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefjava','','hide')">
+</map>
+</div>
+
+<div id="ie52prefie" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefie.png" usemap="#ie52prefie.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefie.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefie','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefie','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefie','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefie','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefie','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsec" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefsec.png" usemap="#ie52prefsec.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefsec.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefsec','','hide')">
+<area shape="rect" coords="203,315,334,332" href="#" alt="Set Password" onclick="MM_showHideLayers('ie52prefsecsp','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsec','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsec','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsziz" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefsziz.png" usemap="#ie52prefsziz.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefsziz.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefsziz','','hide')">
+<area shape="rect" coords="384,57,401,75" href="#" alt="Select" onclick="MM_showHideLayers('ie52prefszizzone','','show')">
+<area shape="rect" coords="423,300,504,317" href="#" alt="Settings" onclick="MM_showHideLayers('ie52prefszizset1','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsziz','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsziz','','hide')">
+</map>
+</div>
+
+<div id="ie52prefrat" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefrat.png" usemap="#ie52prefrat.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefrat.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefrat','','hide')">
+<area shape="rect" coords="354,42,500,59" href="#" alt="Change Password" onclick="MM_showHideLayers('ie52prefratcp','','show')">
+<area shape="rect" coords="424,309,505,326" href="#" alt="Options" onclick="MM_showHideLayers('ie52prefratopt','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefrat','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefrat','','hide')">
+</map>
+</div>
+
+<div id="ie52prefadv" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefadv.png" usemap="#ie52prefadv.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefadv.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefadv','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefadv','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefadv','','hide')">
+</map>
+</div>
+
+<div id="ie52preffac" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52preffac.png" usemap="#ie52preffac.png" width="527" height="392" border="0" alt="">
+<map name="ie52preffac.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52preffac','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52preffac','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52preffac','','hide')">
+<area shape="rect" coords="180,315,261,332" href="#" alt="Add" onclick="MM_showHideLayers('ie52preffacadd','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52preffac','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52preffac','','hide')">
+</map>
+</div>
+
+<div id="ie52prefafp" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefafp.png" usemap="#ie52prefafp.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefafp.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Security Zones" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefafp','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefafp','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefafp','','hide')">
+</map>
+</div>
+
+<div id="ie52prefdo" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefdo.png" usemap="#ie52prefdo.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefdo.png">
+<area shape="rect" coords="13,195,139,213" href="#" alt="File Helpers" onclick="MM_showHideLayers('ie52preffh','','show','ie52prefdo','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Cookies" onclick="MM_showHideLayers('ie52prefcook','','show','ie52prefdo','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('ie52prefph','','show','ie52prefdo','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="Proxies" onclick="MM_showHideLayers('ie52prefprox','','show','ie52prefdo','','hide')">
+<area shape="rect" coords="13,285,139,303" href="#" alt="Site Passwords" onclick="MM_showHideLayers('ie52prefsp','','show','ie52prefdo','','hide')">
+<area shape="rect" coords="13,321,139,339" href="#" alt="General" onclick="MM_showHideLayers('ie52prefgen','','show','ie52prefdo','','hide')">
+<area shape="rect" coords="141,307,155,323" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefdo','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefdo','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefdo','','hide')">
+</map>
+</div>
+
+<div id="ie52preffh" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52preffh.png" usemap="#ie52preffh.png" width="527" height="392" border="0" alt="">
+<map name="ie52preffh.png">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Download Options" onclick="MM_showHideLayers('ie52prefdo','','show','ie52preffh','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Cookies" onclick="MM_showHideLayers('ie52prefcook','','show','ie52preffh','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('ie52prefph','','show','ie52preffh','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="Proxies" onclick="MM_showHideLayers('ie52prefprox','','show','ie52preffh','','hide')">
+<area shape="rect" coords="13,285,139,303" href="#" alt="Site Passwords" onclick="MM_showHideLayers('ie52prefsp','','show','ie52preffh','','hide')">
+<area shape="rect" coords="13,321,139,339" href="#" alt="General" onclick="MM_showHideLayers('ie52prefgen','','show','ie52preffh','','hide')">
+<area shape="rect" coords="141,307,155,323" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefbd','','show','ie52preffh','','hide')">
+<area shape="rect" coords="176,311,257,328" href="#" alt="Add" onclick="MM_showHideLayers('ie52preffhadd','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52preffh','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52preffh','','hide')">
+</map>
+</div>
+
+<div id="ie52prefcook" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefcook.png" usemap="#ie52prefcook.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefcook.png">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Download Options" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefcook','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="File Helpers" onclick="MM_showHideLayers('ie52preffh','','show','ie52prefcook','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('ie52prefph','','show','ie52prefcook','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="Proxies" onclick="MM_showHideLayers('ie52prefprox','','show','ie52prefcook','','hide')">
+<area shape="rect" coords="13,285,139,303" href="#" alt="Site Passwords" onclick="MM_showHideLayers('ie52prefsp','','show','ie52prefcook','','hide')">
+<area shape="rect" coords="13,321,139,339" href="#" alt="General" onclick="MM_showHideLayers('ie52prefgen','','show','ie52prefcook','','hide')">
+<area shape="rect" coords="141,307,155,323" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefcook','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefcook','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefcook','','hide')">
+</map>
+</div>
+
+<div id="ie52prefph" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefph.png" usemap="#ie52prefph.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefph.png">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Download Options" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefph','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="File Helpers" onclick="MM_showHideLayers('ie52preffh','','show','ie52prefph','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Cookies" onclick="MM_showHideLayers('ie52prefcook','','show','ie52prefph','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="Proxies" onclick="MM_showHideLayers('ie52prefprox','','show','ie52prefph','','hide')">
+<area shape="rect" coords="13,285,139,303" href="#" alt="Site Passwords" onclick="MM_showHideLayers('ie52prefsp','','show','ie52prefph','','hide')">
+<area shape="rect" coords="13,321,139,339" href="#" alt="General" onclick="MM_showHideLayers('ie52prefgen','','show','ie52prefph','','hide')">
+<area shape="rect" coords="141,307,155,323" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefph','','hide')">
+<area shape="rect" coords="176,301,257,318" href="#" alt="Add" onclick="MM_showHideLayers('ie52prefphadd','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefph','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefph','','hide')">
+</map>
+</div>
+
+<div id="ie52prefprox" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefprox.png" usemap="#ie52prefprox.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefprox.png">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Download Options" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefprox','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="File Helpers" onclick="MM_showHideLayers('ie52preffh','','show','ie52prefprox','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Cookies" onclick="MM_showHideLayers('ie52prefcook','','show','ie52prefprox','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('ie52prefph','','show','ie52prefprox','','hide')">
+<area shape="rect" coords="13,285,139,303" href="#" alt="Site Passwords" onclick="MM_showHideLayers('ie52prefsp','','show','ie52prefprox','','hide')">
+<area shape="rect" coords="13,321,139,339" href="#" alt="General" onclick="MM_showHideLayers('ie52prefgen','','show','ie52prefprox','','hide')">
+<area shape="rect" coords="141,307,155,323" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefprox','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefprox','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefprox','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsp" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefsp.png" usemap="#ie52prefsp.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefsp.png">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Download Options" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefsp','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="File Helpers" onclick="MM_showHideLayers('ie52preffh','','show','ie52prefsp','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Cookies" onclick="MM_showHideLayers('ie52prefcook','','show','ie52prefsp','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('ie52prefph','','show','ie52prefsp','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="Proxies" onclick="MM_showHideLayers('ie52prefprox','','show','ie52prefsp','','hide')">
+<area shape="rect" coords="13,321,139,339" href="#" alt="General" onclick="MM_showHideLayers('ie52prefgen','','show','ie52prefsp','','hide')">
+<area shape="rect" coords="141,307,155,323" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefsp','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsp','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsp','','hide')">
+</map>
+</div>
+
+<div id="ie52prefgen" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefgen.png" usemap="#ie52prefgen.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefgen.png">
+<area shape="rect" coords="13,177,139,195" href="#" alt="Download Options" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefgen','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="File Helpers" onclick="MM_showHideLayers('ie52preffh','','show','ie52prefgen','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Cookies" onclick="MM_showHideLayers('ie52prefcook','','show','ie52prefgen','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Protocol Helpers" onclick="MM_showHideLayers('ie52prefph','','show','ie52prefgen','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="Proxies" onclick="MM_showHideLayers('ie52prefprox','','show','ie52prefgen','','hide')">
+<area shape="rect" coords="13,285,139,303" href="#" alt="Site Passwords" onclick="MM_showHideLayers('ie52prefsp','','show','ie52prefgen','','hide')">
+<area shape="rect" coords="141,307,155,323" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefgen','','hide')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefgen','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefgen','','hide')">
+</map>
+</div>
+
+<div id="ie52preflfadd" style="z-index: 40; left: 200px; top: 100px; position: absolute;">
+<img src="ie52preflfadd.png" usemap="#ie52preflfadd.png" width="373" height="383" border="0" alt="">
+<map name="ie52preflfadd.png">
+<area shape="rect" coords="211,348,272,368" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52preflfadd','','hide')">
+<area shape="rect" coords="294,348,356,368" href="#" alt="Add" onclick="MM_showHideLayers('ie52preflfadd','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsecsp" style="z-index: 40; left: 200px; top: 200px; position: absolute;">
+<img src="ie52prefsecsp.png" usemap="#ie52prefsecsp.png" width="366" height="186" border="0" alt="">
+<map name="ie52prefsecsp.png">
+<area shape="rect" coords="211,153,278,173" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsecsp','','hide')">
+<area shape="rect" coords="294,153,349,173" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsecsp','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszizzone" style="z-index: 40; left: 327px; top: 121px; position: absolute;">
+<img src="ie52prefszizzone.png" usemap="#ie52prefszizzone.png" width="181" height="72" border="0" alt="">
+<map name="ie52prefszizzone.png">
+<area shape="rect" coords="0,0,180,18" href="#" alt="Local Intranet Zone" onclick="MM_showHideLayers('ie52prefszli','','show','ie52prefsziz','','hide','ie52prefszizzone','','hide')">
+<area shape="rect" coords="0,18,180,35" href="#" alt="Trusted Sites Zone" onclick="MM_showHideLayers('ie52prefszts','','show','ie52prefsziz','','hide','ie52prefszizzone','','hide')">
+<area shape="rect" coords="0,35,180,52" href="#" alt="Internet Zone" onclick="MM_showHideLayers('ie52prefszizzone','','hide')">
+<area shape="rect" coords="0,52,180,71" href="#" alt="Restricted Sites Zone" onclick="MM_showHideLayers('ie52prefszrs','','show','ie52prefsziz','','hide','ie52prefszizzone','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszizset1" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefszizset1.png" usemap="#ie52prefszizset1.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefszizset1.png">
+<area shape="rect" coords="393,281,407,297" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefszizset2','','show','ie52prefszizset1','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszizset1','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszizset1','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszizset2" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefszizset2.png" usemap="#ie52prefszizset2.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefszizset2.png">
+<area shape="rect" coords="393,265,407,281" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefszizset1','','show','ie52prefszizset2','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszizset2','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszizset2','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszli" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefszli.png" usemap="#ie52prefszli.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefszli.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefszli','','hide')">
+<area shape="rect" coords="384,57,401,75" href="#" alt="Select" onclick="MM_showHideLayers('ie52prefszlizone','','show')">
+<area shape="rect" coords="411,105,502,122" href="#" alt="Add Sites" onclick="MM_showHideLayers('ie52prefszlias','','show')">
+<area shape="rect" coords="423,300,504,317" href="#" alt="Settings" onclick="MM_showHideLayers('ie52prefszliset1','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszli','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszli','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszlizone" style="z-index: 40; left: 327px; top: 153px; position: absolute;">
+<img src="ie52prefszlizone.png" usemap="#ie52prefszlizone.png" width="181" height="72" border="0" alt="">
+<map name="ie52prefszlizone.png">
+<area shape="rect" coords="0,0,180,18" href="#" alt="Local Intranet Zone" onclick="MM_showHideLayers('ie52prefszlizone','','hide')">
+<area shape="rect" coords="0,18,180,35" href="#" alt="Trusted Sites Zone" onclick="MM_showHideLayers('ie52prefszts','','show','ie52prefszli','','hide','ie52prefszlizone','','hide')">
+<area shape="rect" coords="0,35,180,52" href="#" alt="Internet Zone" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefszli','','hide','ie52prefszlizone','','hide')">
+<area shape="rect" coords="0,52,180,71" href="#" alt="Restricted Sites Zone" onclick="MM_showHideLayers('ie52prefszrs','','show','ie52prefszli','','hide','ie52prefszlizone','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszlias" style="z-index: 40; left: 200px; top: 200px; position: absolute;">
+<img src="ie52prefszlias.png" usemap="#ie52prefszlias.png" width="362" height="191" border="0" alt="">
+<map name="ie52prefszlias.png">
+<area shape="rect" coords="15,156,107,176" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefszliasadv','','show')">
+<area shape="rect" coords="205,156,267,176" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszlias','','hide')">
+<area shape="rect" coords="283,156,345,176" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszlias','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszliasadv" style="z-index: 50; left: 175px; top: 125px; position: absolute;">
+<img src="ie52prefszliasadv.png" usemap="#ie52prefszliasadv.png" width="429" height="321" border="0" alt="">
+<map name="ie52prefszliasadv.png">
+<area shape="rect" coords="93,224,158,241" href="#" alt="Add" onclick="MM_showHideLayers('ie52prefszasadd','','show')">
+<area shape="rect" coords="272,286,334,306" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszliasadv','','hide')">
+<area shape="rect" coords="350,286,412,306" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszliasadv','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszliset1" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefszliset1.png" usemap="#ie52prefszliset1.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefszliset1.png">
+<area shape="rect" coords="393,281,407,296" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefszliset2','','show','ie52prefszliset1','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszliset1','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszliset1','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszliset2" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefszliset2.png" usemap="#ie52prefszliset2.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefszliset2.png">
+<area shape="rect" coords="393,265,407,281" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefszliset1','','show','ie52prefszliset2','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszliset2','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszliset2','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszts" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefszts.png" usemap="#ie52prefszts.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefszts.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefszts','','hide')">
+<area shape="rect" coords="384,57,401,75" href="#" alt="Select" onclick="MM_showHideLayers('ie52prefsztszone','','show')">
+<area shape="rect" coords="411,105,502,122" href="#" alt="Add Sites" onclick="MM_showHideLayers('ie52prefsztsas','','show')">
+<area shape="rect" coords="423,300,504,317" href="#" alt="Settings" onclick="MM_showHideLayers('ie52prefsztsset1','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszts','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszts','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsztszone" style="z-index: 40; left: 327px; top: 137px; position: absolute;">
+<img src="ie52prefsztszone.png" usemap="#ie52prefsztszone.png" width="181" height="72" border="0" alt="">
+<map name="ie52prefsztszone.png">
+<area shape="rect" coords="0,0,180,18" href="#" alt="Local Intranet Zone" onclick="MM_showHideLayers('ie52prefszli','','show','ie52prefszts','','hide','ie52prefsztszone','','hide')">
+<area shape="rect" coords="0,18,180,35" href="#" alt="Trusted Sites Zone" onclick="MM_showHideLayers('ie52prefsztszone','','hide')">
+<area shape="rect" coords="0,35,180,52" href="#" alt="Internet Zone" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefszts','','hide','ie52prefsztszone','','hide')">
+<area shape="rect" coords="0,52,180,71" href="#" alt="Restricted Sites Zone" onclick="MM_showHideLayers('ie52prefszrs','','show','ie52prefszts','','hide','ie52prefsztszone','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsztsas" style="z-index: 40; left: 175px; top: 125px; position: absolute;">
+<img src="ie52prefsztsas.png" usemap="#ie52prefsztsas.png" width="429" height="321" border="0" alt="">
+<map name="ie52prefsztsas.png">
+<area shape="rect" coords="93,224,158,241" href="#" alt="Add" onclick="MM_showHideLayers('ie52prefszasadd','','show')">
+<area shape="rect" coords="272,286,334,306" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsztsas','','hide')">
+<area shape="rect" coords="350,286,412,306" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsztsas','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsztsset1" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefsztsset1.png" usemap="#ie52prefsztsset1.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefsztsset1.png">
+<area shape="rect" coords="393,281,407,296" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefsztsset2','','show','ie52prefsztsset1','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsztsset1','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsztsset1','','hide')">
+</map>
+</div>
+
+<div id="ie52prefsztsset2" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefsztsset2.png" usemap="#ie52prefsztsset2.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefsztsset2.png">
+<area shape="rect" coords="393,265,407,281" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefsztsset1','','show','ie52prefsztsset2','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefsztsset2','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefsztsset2','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszrs" style="z-index: 30; left: 125px; top: 100px; position: absolute;">
+<img src="ie52prefszrs.png" usemap="#ie52prefszrs.png" width="527" height="392" border="0" alt="">
+<map name="ie52prefszrs.png">
+<area shape="rect" coords="13,51,139,69" href="#" alt="Browser Display" onclick="MM_showHideLayers('ie52prefbd','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,69,139,87" href="#" alt="Web Content" onclick="MM_showHideLayers('ie52prefwc','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,87,139,105" href="#" alt="Language/Fonts" onclick="MM_showHideLayers('ie52preflf','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,105,139,123" href="#" alt="Subscriptions" onclick="MM_showHideLayers('ie52prefsub','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,123,139,141" href="#" alt="Java" onclick="MM_showHideLayers('ie52prefjava','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,141,139,159" href="#" alt="Interface Extras" onclick="MM_showHideLayers('ie52prefie','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,159,139,177" href="#" alt="Security" onclick="MM_showHideLayers('ie52prefsec','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,195,139,213" href="#" alt="Ratings" onclick="MM_showHideLayers('ie52prefrat','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,213,139,231" href="#" alt="Advanced" onclick="MM_showHideLayers('ie52prefadv','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,249,139,267" href="#" alt="Forms AutoComplete" onclick="MM_showHideLayers('ie52preffac','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="13,267,139,285" href="#" alt="AutoFill Profile" onclick="MM_showHideLayers('ie52prefafp','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="141,323,155,337" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefdo','','show','ie52prefszrs','','hide')">
+<area shape="rect" coords="384,57,401,75" href="#" alt="Select" onclick="MM_showHideLayers('ie52prefszrszone','','show')">
+<area shape="rect" coords="411,105,502,122" href="#" alt="Add Sites" onclick="MM_showHideLayers('ie52prefszrsas','','show')">
+<area shape="rect" coords="423,300,504,317" href="#" alt="Settings" onclick="MM_showHideLayers('ie52prefszrsset1','','show')">
+<area shape="rect" coords="371,358,433,378" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszrs','','hide')">
+<area shape="rect" coords="448,358,510,378" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszrs','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszrszone" style="z-index: 40; left: 327px; top: 105px; position: absolute;">
+<img src="ie52prefszrszone.png" usemap="#ie52prefszrszone.png" width="181" height="72" border="0" alt="">
+<map name="ie52prefszrszone.png">
+<area shape="rect" coords="0,0,180,18" href="#" alt="Local Intranet Zone" onclick="MM_showHideLayers('ie52prefszli','','show','ie52prefszrs','','hide','ie52prefszrszone','','hide')">
+<area shape="rect" coords="0,18,180,35" href="#" alt="Trusted Sites Zone" onclick="MM_showHideLayers('ie52prefszts','','show','ie52prefszrs','','hide','ie52prefszrszone','','hide')">
+<area shape="rect" coords="0,35,180,52" href="#" alt="Internet Zone" onclick="MM_showHideLayers('ie52prefsziz','','show','ie52prefszrs','','hide','ie52prefszrszone','','hide')">
+<area shape="rect" coords="0,52,180,71" href="#" alt="Restricted Sites Zone" onclick="MM_showHideLayers('ie52prefszrszone','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszrsas" style="z-index: 40; left: 175px; top: 125px; position: absolute;">
+<img src="ie52prefszrsas.png" usemap="#ie52prefszrsas.png" width="429" height="321" border="0" alt="">
+<map name="ie52prefszrsas.png">
+<area shape="rect" coords="93,224,158,241" href="#" alt="Add" onclick="MM_showHideLayers('ie52prefszasadd','','show')">
+<area shape="rect" coords="272,286,334,306" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszrsas','','hide')">
+<area shape="rect" coords="350,286,412,306" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszrsas','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszrsset1" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefszrsset1.png" usemap="#ie52prefszrsset1.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefszrsset1.png">
+<area shape="rect" coords="393,281,407,296" href="#" alt="Down" onclick="MM_showHideLayers('ie52prefszrsset2','','show','ie52prefszrsset1','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszrsset1','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszrsset1','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszrsset2" style="z-index: 40; left: 175px; top: 100px; position: absolute;">
+<img src="ie52prefszrsset2.png" usemap="#ie52prefszrsset2.png" width="424" height="398" border="0" alt="">
+<map name="ie52prefszrsset2.png">
+<area shape="rect" coords="393,265,407,281" href="#" alt="Up" onclick="MM_showHideLayers('ie52prefszrsset1','','show','ie52prefszrsset2','','hide')">
+<area shape="rect" coords="267,363,329,383" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszrsset2','','hide')">
+<area shape="rect" coords="345,363,407,383" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszrsset2','','hide')">
+</map>
+</div>
+
+<div id="ie52prefszasadd" style="z-index: 60; left: 225px; top: 225px; position: absolute;">
+<img src="ie52prefszasadd.png" usemap="#ie52prefszasadd.png" width="333" height="117" border="0" alt="">
+<map name="ie52prefszasadd.png">
+<area shape="rect" coords="180,86,242,106" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefszasadd','','hide')">
+<area shape="rect" coords="258,86,320,106" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefszasadd','','hide')">
+</map>
+</div>
+
+<div id="ie52prefratcp" style="z-index: 40; left: 225px; top: 150px; position: absolute;">
+<img src="ie52prefratcp.png" usemap="#ie52prefratcp.png" width="323" height="254" border="0" alt="">
+<map name="ie52prefratcp.png">
+<area shape="rect" coords="166,219,228,239" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefratcp','','hide')">
+<area shape="rect" coords="244,219,306,239" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefratcp','','hide')">
+</map>
+</div>
+
+<div id="ie52prefratopt" style="z-index: 40; left: 175px; top: 175px; position: absolute;">
+<img src="ie52prefratopt.png" usemap="#ie52prefratopt.png" width="401" height="248" border="0" alt="">
+<map name="ie52prefratopt.png">
+<area shape="rect" coords="244,213,306,233" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefratopt','','hide')">
+<area shape="rect" coords="322,213,384,233" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefratopt','','hide')">
+</map>
+</div>
+
+<div id="ie52preffacadd" style="z-index: 40; left: 200px; top: 175px; position: absolute;">
+<img src="ie52preffacadd.png" usemap="#ie52preffacadd.png" width="363" height="196" border="0" alt="">
+<map name="ie52preffacadd.png">
+<area shape="rect" coords="206,161,268,181" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52preffacadd','','hide')">
+<area shape="rect" coords="284,161,346,181" href="#" alt="OK" onclick="MM_showHideLayers('ie52preffacadd','','hide')">
+</map>
+</div>
+
+<div id="ie52preffhadd" style="z-index: 40; left: 200px; top: 100px; position: absolute;">
+<img src="ie52preffhadd.png" usemap="#ie52preffhadd.png" width="372" height="409" border="0" alt="">
+<map name="ie52preffhadd.png">
+<area shape="rect" coords="215,374,277,394" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52preffhadd','','hide')">
+<area shape="rect" coords="293,374,355,394" href="#" alt="OK" onclick="MM_showHideLayers('ie52preffhadd','','hide')">
+</map>
+</div>
+
+<div id="ie52prefphadd" style="z-index: 40; left: 200px; top: 175px; position: absolute;">
+<img src="ie52prefphadd.png" usemap="#ie52prefphadd.png" width="376" height="206" border="0" alt="">
+<map name="ie52prefphadd.png">
+<area shape="rect" coords="219,171,281,191" href="#" alt="Cancel" onclick="MM_showHideLayers('ie52prefphadd','','hide')">
+<area shape="rect" coords="297,171,359,191" href="#" alt="OK" onclick="MM_showHideLayers('ie52prefphadd','','hide')">
+</map>
+</div>
+
+</body>
+</html>

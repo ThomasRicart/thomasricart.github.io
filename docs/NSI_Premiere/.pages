@@ -1,8 +1,7 @@
 
-arrange:
+nav:
   - index.md
-  - WEB_langage
-  - TC_Types_Construits
-  - AP_Algos_Programmation
-  - RD_Representation_Traitement_Donnees
-  - ARSE_Arch_Reseau_SE
+  - "Algos Programmation": 1NSI_AP_Algos_Programmation
+  - "Representation Trait Données": 1_NSI_RD_Representation_Traitement_Donnees
+  - "Archi Reseau Syst Exploit": 1_NSI_ARSE_Arch_Reseau_SE
+

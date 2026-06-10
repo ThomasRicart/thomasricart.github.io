@@ -1,0 +1,663 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Eudora 5 Virtual Desktop</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" type="text/javascript">
+<!--
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v3.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body bgcolor="#008080" style="margin: 0px;" onload="show_clock();
+MM_showHideLayers('loading','','hide','loadmsg','','hide','taskbar','','show','clock','','show','eud5','','show','eud5file','','hide','eud5edit','','hide','eud5mbox','','hide','eud5msg','','hide','eud5trans','','hide','eud5spec','','hide','eud5tool','','hide','eud5win','','hide','eud5help','','hide','eud5newmsg','','hide','eud5sigmenu','','hide','eud5sig','','hide','eud5filt','','hide','eud5filtsel1','','hide','eud5filtsel2','','hide','eud5filtsel3','','hide','eud5filtsel4','','hide','eud5ds','','hide','eud5dsmodnet','','hide','eud5dsmodatt','','hide','eud5dsmodattadd','','hide','eud5dsmodso','','hide','eud5dsmodlog','','hide','eud5stat','','hide','eud5optgs','','hide','eud5optchm','','hide','eud5optim','','hide','eud5optsm','','hide','eud5optcm','','hide','eud5optid','','hide','eud5optreply','','hide','eud5optatt','','hide','eud5optfont','','hide','eud5optdisp','','hide','eud5optvm','','hide','eud5optmbox','','hide','eud5optst','','hide','eud5optsc','','hide','eud5optac','','hide','eud5optdd','','hide','eud5optlab','','hide','eud5optga','','hide','eud5optbt','','hide','eud5optauto','','hide','eud5optew','','hide','eud5optmapi','','hide','eud5optan','','hide','eud5optaconf','','hide','eud5optkerb','','hide','eud5optmw','','hide','eud5optstat','','hide','eud5optmisc','','hide','eud5about','','hide');
+MM_preloadImages('loading.png','tbar.png','eud5.png','eud5file.png','eud5edit.png','eud5mbox.png','eud5msg.png','eud5trans.png','eud5spec.png','eud5tool.png','eud5win.png','eud5help.png','eud5newmsg.png','eud5sigmenu.png','eud5sig.png','eud5filt.png','eud5filtsel1.png','eud5filtsel2.png','eud5filtsel3.png','eud5filtsel4.png','eud5ds.png','eud5dsmodnet.png','eud5dsmodatt.png','eud5dsmodattadd.png','eud5dsmodso.png','eud5dsmodlog.png','eud5stat.png','eud5optgs.png','eud5optchm.png','eud5optim.png','eud5optsm.png','eud5optcm.png','eud5optid.png','eud5optreply.png','eud5optatt.png','eud5optfont.png','eud5optdisp.png','eud5optvm.png','eud5optmbox.png','eud5optst.png','eud5optsc.png','eud5optac.png','eud5optdd.png','eud5optlab.png','eud5optga.png','eud5optbt.png','eud5optauto.png','eud5optew.png','eud5optmapi.png','eud5optan.png','eud5optaconf.png','eud5optkerb.png','eud5optmw.png','eud5optstat.png','eud5optmisc.png','eud5about.png');
+return document.MM_returnValue;">
+
+<div id="loading" style="z-index: 499; left: 0px; top: 0px; position: absolute;">
+<img src="loading.png" width="800" height="600" border="0" alt="">
+</div>
+
+<div id="loadmsg" style="z-index: 500; left: 20px; top: 20px; width: 300; height: 300; position: absolute;">
+<center><span style="font-family: Arial; font-size: 24px;">Please Wait...</span></center><br>
+<span style="font-family: Arial; font-size: 13px;">Images for the virtual desktop are now being preloaded into RAM. When this is complete, you will be presented with the desktop and be able to browse all available options without the need for further loading.</span>
+</div>
+
+<div id="taskbar" style="z-index: 99; left: 0px; top: 572px; position: absolute;">
+<img src="tbar.png" width="800" height="28" border="0" alt="">
+</div>
+
+<div id="clock" style="z-index: 100; left: 760px; top: 579px; position: absolute;">
+<script language="javascript" type="text/javascript" src="clock.js">
+/*
+Live Clock Script-
+By Mark Plachetta (astro@bigpond.net.au) based on code from DynamicDrive.com
+For full source code, 100's more DHTML scripts, and Terms Of Use,
+visit http://www.dynamicdrive.com
+*/
+</script>
+</div>
+
+<div id="eud5" style="z-index: 10; left: 0px; top: 0px; position: absolute;">
+<img src="eud5.png" usemap="#eud5.png" width="800" height="576" border="0" alt="">
+<map name="eud5.png">
+<area shape="rect" coords="782,2,797,15" href="#" alt="Close" onclick="window.close();">
+<area shape="rect" coords="20,19,48,37" href="#" alt="File" onmouseover="MM_showHideLayers('eud5file','','show')" onmouseout="MM_showHideLayers('eud5file','','hide')">
+<area shape="rect" coords="48,19,78,37" href="#" alt="Edit" onmouseover="MM_showHideLayers('eud5edit','','show')" onmouseout="MM_showHideLayers('eud5edit','','hide')">
+<area shape="rect" coords="78,19,126,37" href="#" alt="Mailbox" onmouseover="MM_showHideLayers('eud5mbox','','show')" onmouseout="MM_showHideLayers('eud5mbox','','hide')">
+<area shape="rect" coords="126,19,181,37" href="#" alt="Message" onmouseover="MM_showHideLayers('eud5msg','','show')" onmouseout="MM_showHideLayers('eud5msg','','hide')">
+<area shape="rect" coords="181,19,232,37" href="#" alt="Transfer" onmouseover="MM_showHideLayers('eud5trans','','show')" onmouseout="MM_showHideLayers('eud5trans','','hide')">
+<area shape="rect" coords="232,19,279,37" href="#" alt="Special" onmouseover="MM_showHideLayers('eud5spec','','show')" onmouseout="MM_showHideLayers('eud5spec','','hide')">
+<area shape="rect" coords="279,19,317,37" href="#" alt="Tools" onmouseover="MM_showHideLayers('eud5tool','','show')" onmouseout="MM_showHideLayers('eud5tool','','hide')">
+<area shape="rect" coords="317,19,368,37" href="#" alt="Window" onmouseover="MM_showHideLayers('eud5win','','show')" onmouseout="MM_showHideLayers('eud5win','','hide')">
+<area shape="rect" coords="368,19,402,37" href="#" alt="Help" onmouseover="MM_showHideLayers('eud5help','','show')" onmouseout="MM_showHideLayers('eud5help','','hide')">
+<area shape="rect" coords="782,21,797,34" href="#" alt="Close" onclick="MM_showHideLayers('eud5newmsg','','hide','eud5sig','','hide','eud5filt','','hide','eud5filtsel1','','hide','eud5filtsel2','','hide','eud5filtsel3','','hide','eud5filtsel4','','hide','eud5ds','','hide','eud5stat','','hide')">
+<area shape="rect" coords="201,40,245,78" href="#" alt="New Message" onclick="MM_showHideLayers('eud5newmsg','','show')">
+<area shape="rect" coords="67,346,90,366" href="#" alt="Signatures" onclick="MM_showHideLayers('eud5sigmenu','','show')">
+</map>
+</div>
+
+<div id="eud5file" style="z-index: 30; left: 20px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5file','','show')" onmouseout="MM_showHideLayers('eud5file','','hide')">
+<img src="eud5file.png" usemap="#eud5file.png" width="203" height="306" border="0" alt="">
+<map name="eud5file.png">
+<area shape="rect" coords="2,282,200,303" href="#" alt="Exit" onclick="window.close();">
+</map>
+</div>
+
+<div id="eud5edit" style="z-index: 30; left: 48px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5edit','','show')" onmouseout="MM_showHideLayers('eud5edit','','hide')">
+<img src="eud5edit.png" width="232" height="366" border="0" alt="">
+</div>
+
+<div id="eud5mbox" style="z-index: 30; left: 78px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5mbox','','show')" onmouseout="MM_showHideLayers('eud5mbox','','hide')">
+<img src="eud5mbox.png" width="112" height="83" border="0" alt="">
+</div>
+
+<div id="eud5msg" style="z-index: 30; left: 126px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5msg','','show')" onmouseout="MM_showHideLayers('eud5msg','','hide')">
+<img src="eud5msg.png" usemap="#eud5msg.png" width="176" height="356" border="0" alt="">
+<map name="eud5msg.png">
+<area shape="rect" coords="2,2,173,20" href="#" alt="New Message" onclick="MM_showHideLayers('eud5newmsg','','show','eud5msg','','hide')">
+</map>
+</div>
+
+<div id="eud5trans" style="z-index: 30; left: 181px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5trans','','show')" onmouseout="MM_showHideLayers('eud5trans','','hide')">
+<img src="eud5trans.png" width="79" height="83" border="0" alt="">
+</div>
+
+<div id="eud5spec" style="z-index: 30; left: 232px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5spec','','show')" onmouseout="MM_showHideLayers('eud5spec','','hide')">
+<img src="eud5spec.png" width="215" height="212" border="0" alt="">
+</div>
+
+<div id="eud5tool" style="z-index: 30; left: 279px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5tool','','show')" onmouseout="MM_showHideLayers('eud5tool','','hide')">
+<img src="eud5tool.png" usemap="#eud5tool.png" width="169" height="318" border="0" alt="">
+<map name="eud5tool.png">
+<area shape="rect" coords="2,2,166,20" href="#" alt="Filters" onclick="MM_showHideLayers('eud5filt','','show','eud5tool','','hide')">
+<area shape="rect" coords="2,42,166,63" href="#" alt="Mailboxes" onclick="MM_showHideLayers('eud5sigmenu','','hide','eud5tool','','hide')">
+<area shape="rect" coords="2,96,166,114" href="#" alt="Signatures" onclick="MM_showHideLayers('eud5sigmenu','','show','eud5tool','','hide')">
+<area shape="rect" coords="2,199,166,217" href="#" alt="Directory Services" onclick="MM_showHideLayers('eud5ds','','show','eud5tool','','hide')">
+<area shape="rect" coords="2,239,166,262" href="#" alt="Statistics" onclick="MM_showHideLayers('eud5stat','','show','eud5tool','','hide')">
+<area shape="rect" coords="2,294,166,315" href="#" alt="Options" onclick="MM_showHideLayers('eud5optgs','','show','eud5tool','','hide')">
+</map>
+</div>
+
+<div id="eud5win" style="z-index: 30; left: 317px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5win','','show')" onmouseout="MM_showHideLayers('eud5win','','hide')">
+<img src="eud5win.png" width="162" height="117" border="0" alt="">
+</div>
+
+<div id="eud5help" style="z-index: 30; left: 368px; top: 37px; position: absolute;" onmouseover="MM_showHideLayers('eud5help','','show')" onmouseout="MM_showHideLayers('eud5help','','hide')">
+<img src="eud5help.png" usemap="#eud5help.png" width="176" height="178" border="0" alt="">
+<map name="eud5help.png">
+<area shape="rect" coords="2,154,173,175" href="#" alt="About Eudora" onclick="MM_showHideLayers('eud5about','','show','eud5help','','hide')">
+</map>
+</div>
+
+<div id="eud5newmsg" style="z-index: 20; left: 166px; top: 79px; position: absolute;">
+<img src="eud5newmsg.png" usemap="#eud5newmsg.png" width="634" height="474" border="0" alt="">
+<map name="eud5newmsg.png">
+<area shape="rect" coords="420,2,494,24" href="#" alt="Send" onclick="MM_showHideLayers('eud5newmsg','','hide')">
+</map>
+</div>
+
+<div id="eud5sigmenu" style="z-index: 20; left: 0px; top: 79px; position: absolute;">
+<img src="eud5sigmenu.png" usemap="#eud5sigmenu.png" width="166" height="297" border="0" alt="">
+<map name="eud5sigmenu.png">
+<area shape="rect" coords="9,21,84,36" href="#" alt="Display Signature" onclick="MM_showHideLayers('eud5sig','','show')">
+<area shape="rect" coords="16,267,40,287" href="#" alt="Mailboxes" onclick="MM_showHideLayers('eud5sigmenu','','hide')">
+</map>
+</div>
+
+<div id="eud5sig" style="z-index: 20; left: 166px; top: 79px; position: absolute;">
+<img src="eud5sig.png" width="634" height="474" border="0" alt="">
+</div>
+
+<div id="eud5filt" style="z-index: 20; left: 166px; top: 79px; position: absolute;">
+<img src="eud5filt.png" usemap="#eud5filt.png" width="634" height="474" border="0" alt="">
+<map name="eud5filt.png">
+<area shape="rect" coords="401,58,416,74" href="#" alt="Select" onclick="MM_showHideLayers('eud5filtsel1','','show')">
+<area shape="rect" coords="279,84,294,100" href="#" alt="Select" onclick="MM_showHideLayers('eud5filtsel2','','show')">
+<area shape="rect" coords="329,117,344,133" href="#" alt="Select" onclick="MM_showHideLayers('eud5filtsel3','','show')">
+<area shape="rect" coords="291,221,306,240" href="#" alt="Select" onclick="MM_showHideLayers('eud5filtsel4','','show')">
+<area shape="rect" coords="128,411,255,431" href="#" alt="Directory Services" onclick="MM_showHideLayers('eud5ds','','show','eud5filt','','hide','eud5filtsel1','','hide','eud5filtsel2','','hide','eud5filtsel3','','hide','eud5filtsel4','','hide')">
+</map>
+</div>
+
+<div id="eud5filtsel1" style="z-index: 30; left: 451px; top: 156px; position: absolute;" onclick="MM_showHideLayers('eud5filtsel1','','hide')">
+<img src="eud5filtsel1.png" width="134" height="119" border="0" alt="">
+</div>
+
+<div id="eud5filtsel2" style="z-index: 30; left: 344px; top: 182px; position: absolute;" onclick="MM_showHideLayers('eud5filtsel2','','hide')">
+<img src="eud5filtsel2.png" width="223" height="184" border="0" alt="">
+</div>
+
+<div id="eud5filtsel3" style="z-index: 30; left: 403px; top: 215px; position: absolute;" onclick="MM_showHideLayers('eud5filtsel3','','hide')">
+<img src="eud5filtsel3.png" width="110" height="54" border="0" alt="">
+</div>
+
+<div id="eud5filtsel4" style="z-index: 30; left: 344px; top: 132px; position: absolute;" onclick="MM_showHideLayers('eud5filtsel4','','hide')">
+<img src="eud5filtsel4.png" width="188" height="440" border="0" alt="">
+</div>
+
+<div id="eud5ds" style="z-index: 20; left: 166px; top: 79px; position: absolute;">
+<img src="eud5ds.png" usemap="#eud5ds.png" width="634" height="474" border="0" alt="">
+<map name="eud5ds.png">
+<area shape="rect" coords="354,368,413,387" href="#" alt="Modify" onclick="MM_showHideLayers('eud5dsmodnet','','show')">
+<area shape="rect" coords="262,411,324,431" href="#" alt="Filters" onclick="MM_showHideLayers('eud5filt','','show','eud5ds','','hide')">
+</map>
+</div>
+
+<div id="eud5dsmodnet" style="z-index: 30; left: 210px; top: 85px; position: absolute;">
+<img src="eud5dsmodnet.png" usemap="#eud5dsmodnet.png" width="383" height="400" border="0" alt="">
+<map name="eud5dsmodnet.png">
+<area shape="rect" coords="362,5,377,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5dsmodnet','','hide')">
+<area shape="rect" coords="64,31,118,49" href="#" alt="Attributes" onclick="MM_showHideLayers('eud5dsmodatt','','show','eud5dsmodnet','','hide')">
+<area shape="rect" coords="119,31,203,49" href="#" alt="Search Options" onclick="MM_showHideLayers('eud5dsmodso','','show','eud5dsmodnet','','hide')">
+<area shape="rect" coords="204,31,245,49" href="#" alt="Log" onclick="MM_showHideLayers('eud5dsmodlog','','show','eud5dsmodnet','','hide')">
+<area shape="rect" coords="137,367,211,389" href="#" alt="OK" onclick="MM_showHideLayers('eud5dsmodnet','','hide')">
+<area shape="rect" coords="218,367,292,389" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5dsmodnet','','hide')">
+</map>
+</div>
+
+<div id="eud5dsmodatt" style="z-index: 30; left: 210px; top: 85px; position: absolute;">
+<img src="eud5dsmodatt.png" usemap="#eud5dsmodatt.png" width="383" height="400" border="0" alt="">
+<map name="eud5dsmodatt.png">
+<area shape="rect" coords="362,5,377,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5dsmodatt','','hide')">
+<area shape="rect" coords="11,31,61,49" href="#" alt="Network" onclick="MM_showHideLayers('eud5dsmodnet','','show','eud5dsmodatt','','hide')">
+<area shape="rect" coords="120,31,203,49" href="#" alt="Search Options" onclick="MM_showHideLayers('eud5dsmodso','','show','eud5dsmodatt','','hide')">
+<area shape="rect" coords="204,31,245,49" href="#" alt="Log" onclick="MM_showHideLayers('eud5dsmodlog','','show','eud5dsmodatt','','hide')">
+<area shape="rect" coords="24,244,98,266" href="#" alt="Add" onclick="MM_showHideLayers('eud5dsmodattadd','','show')">
+<area shape="rect" coords="137,367,211,389" href="#" alt="OK" onclick="MM_showHideLayers('eud5dsmodatt','','hide')">
+<area shape="rect" coords="218,367,292,389" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5dsmodatt','','hide')">
+</map>
+</div>
+
+<div id="eud5dsmodattadd" style="z-index: 40; left: 260px; top: 165px; position: absolute;">
+<img src="eud5dsmodattadd.png" usemap="#eud5dsmodattadd.png" width="281" height="240" border="0" alt="">
+<map name="eud5dsmodattadd.png">
+<area shape="rect" coords="260,5,275,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5dsmodattadd','','hide')">
+<area shape="rect" coords="101,193,175,215" href="#" alt="OK" onclick="MM_showHideLayers('eud5dsmodattadd','','hide')">
+<area shape="rect" coords="188,193,262,215" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5dsmodattadd','','hide')">
+</map>
+</div>
+
+<div id="eud5dsmodso" style="z-index: 30; left: 210px; top: 85px; position: absolute;">
+<img src="eud5dsmodso.png" usemap="#eud5dsmodso.png" width="383" height="400" border="0" alt="">
+<map name="eud5dsmodso.png">
+<area shape="rect" coords="362,5,377,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5dsmodso','','hide')">
+<area shape="rect" coords="11,31,62,49" href="#" alt="Network" onclick="MM_showHideLayers('eud5dsmodnet','','show','eud5dsmodso','','hide')">
+<area shape="rect" coords="63,31,117,49" href="#" alt="Attributes" onclick="MM_showHideLayers('eud5dsmodatt','','show','eud5dsmodso','','hide')">
+<area shape="rect" coords="205,31,245,49" href="#" alt="Log" onclick="MM_showHideLayers('eud5dsmodlog','','show','eud5dsmodso','','hide')">
+<area shape="rect" coords="137,367,211,389" href="#" alt="OK" onclick="MM_showHideLayers('eud5dsmodso','','hide')">
+<area shape="rect" coords="218,367,292,389" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5dsmodso','','hide')">
+</map>
+</div>
+
+<div id="eud5dsmodlog" style="z-index: 30; left: 210px; top: 85px; position: absolute;">
+<img src="eud5dsmodlog.png" usemap="#eud5dsmodlog.png" width="383" height="400" border="0" alt="">
+<map name="eud5dsmodlog.png">
+<area shape="rect" coords="362,5,377,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5dsmodlog','','hide')">
+<area shape="rect" coords="11,31,62,49" href="#" alt="Network" onclick="MM_showHideLayers('eud5dsmodnet','','show','eud5dsmodlog','','hide')">
+<area shape="rect" coords="63,31,118,49" href="#" alt="Attributes" onclick="MM_showHideLayers('eud5dsmodatt','','show','eud5dsmodlog','','hide')">
+<area shape="rect" coords="119,31,202,49" href="#" alt="Search Options" onclick="MM_showHideLayers('eud5dsmodso','','show','eud5dsmodlog','','hide')">
+<area shape="rect" coords="137,367,211,389" href="#" alt="OK" onclick="MM_showHideLayers('eud5dsmodlog','','hide')">
+<area shape="rect" coords="218,367,292,389" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5dsmodlog','','hide')">
+</map>
+</div>
+
+<div id="eud5stat" style="z-index: 20; left: 166px; top: 79px; position: absolute;">
+<img src="eud5stat.png" width="634" height="474" border="0" alt="">
+</div>
+
+<div id="eud5optgs" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optgs.png" usemap="#eud5optgs.png" width="392" height="358" border="0" alt="">
+<map name="eud5optgs.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optgs','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Checking Mail" onclick="MM_showHideLayers('eud5optchm','','show','eud5optgs','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Incoming Mail" onclick="MM_showHideLayers('eud5optim','','show','eud5optgs','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Sending Mail" onclick="MM_showHideLayers('eud5optsm','','show','eud5optgs','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Composing Mail" onclick="MM_showHideLayers('eud5optcm','','show','eud5optgs','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optid','','show','eud5optgs','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optgs','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optgs','','hide')">
+</map>
+</div>
+
+<div id="eud5optchm" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optchm.png" usemap="#eud5optchm.png" width="392" height="358" border="0" alt="">
+<map name="eud5optchm.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optchm','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Getting Started" onclick="MM_showHideLayers('eud5optgs','','show','eud5optchm','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Incoming Mail" onclick="MM_showHideLayers('eud5optim','','show','eud5optchm','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Sending Mail" onclick="MM_showHideLayers('eud5optsm','','show','eud5optchm','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Composing Mail" onclick="MM_showHideLayers('eud5optcm','','show','eud5optchm','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optid','','show','eud5optchm','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optchm','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optchm','','hide')">
+</map>
+</div>
+
+<div id="eud5optim" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optim.png" usemap="#eud5optim.png" width="392" height="358" border="0" alt="">
+<map name="eud5optim.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optim','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Getting Started" onclick="MM_showHideLayers('eud5optgs','','show','eud5optim','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Checking Mail" onclick="MM_showHideLayers('eud5optchm','','show','eud5optim','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Sending Mail" onclick="MM_showHideLayers('eud5optsm','','show','eud5optim','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Composing Mail" onclick="MM_showHideLayers('eud5optcm','','show','eud5optim','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optid','','show','eud5optim','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optim','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optim','','hide')">
+</map>
+</div>
+
+<div id="eud5optsm" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optsm.png" usemap="#eud5optsm.png" width="392" height="358" border="0" alt="">
+<map name="eud5optsm.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optsm','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Getting Started" onclick="MM_showHideLayers('eud5optgs','','show','eud5optsm','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Checking Mail" onclick="MM_showHideLayers('eud5optchm','','show','eud5optsm','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Incoming Mail" onclick="MM_showHideLayers('eud5optim','','show','eud5optsm','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Composing Mail" onclick="MM_showHideLayers('eud5optcm','','show','eud5optsm','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optid','','show','eud5optsm','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optsm','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optsm','','hide')">
+</map>
+</div>
+
+<div id="eud5optcm" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optcm.png" usemap="#eud5optcm.png" width="392" height="358" border="0" alt="">
+<map name="eud5optcm.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optcm','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Getting Started" onclick="MM_showHideLayers('eud5optgs','','show','eud5optcm','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Checking Mail" onclick="MM_showHideLayers('eud5optchm','','show','eud5optcm','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Incoming Mail" onclick="MM_showHideLayers('eud5optim','','show','eud5optcm','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Sending Mail" onclick="MM_showHideLayers('eud5optsm','','show','eud5optcm','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optid','','show','eud5optcm','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optcm','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optcm','','hide')">
+</map>
+</div>
+
+<div id="eud5optid" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optid.png" usemap="#eud5optid.png" width="392" height="358" border="0" alt="">
+<map name="eud5optid.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optid','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Replying" onclick="MM_showHideLayers('eud5optreply','','show','eud5optid','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Attachments" onclick="MM_showHideLayers('eud5optatt','','show','eud5optid','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Fonts" onclick="MM_showHideLayers('eud5optfont','','show','eud5optid','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Display" onclick="MM_showHideLayers('eud5optdisp','','show','eud5optid','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optgs','','show','eud5optid','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optvm','','show','eud5optid','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optid','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optid','','hide')">
+</map>
+</div>
+
+<div id="eud5optreply" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optreply.png" usemap="#eud5optreply.png" width="392" height="358" border="0" alt="">
+<map name="eud5optreply.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optreply','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Internet Dialup" onclick="MM_showHideLayers('eud5optid','','show','eud5optreply','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Attachments" onclick="MM_showHideLayers('eud5optatt','','show','eud5optreply','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Fonts" onclick="MM_showHideLayers('eud5optfont','','show','eud5optreply','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Display" onclick="MM_showHideLayers('eud5optdisp','','show','eud5optreply','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optgs','','show','eud5optreply','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optvm','','show','eud5optreply','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optreply','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optreply','','hide')">
+</map>
+</div>
+
+<div id="eud5optatt" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optatt.png" usemap="#eud5optatt.png" width="392" height="358" border="0" alt="">
+<map name="eud5optatt.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optatt','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Internet Dialup" onclick="MM_showHideLayers('eud5optid','','show','eud5optatt','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Replying" onclick="MM_showHideLayers('eud5optreply','','show','eud5optatt','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Fonts" onclick="MM_showHideLayers('eud5optfont','','show','eud5optatt','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Display" onclick="MM_showHideLayers('eud5optdisp','','show','eud5optatt','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optgs','','show','eud5optatt','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optvm','','show','eud5optatt','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optatt','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optatt','','hide')">
+</map>
+</div>
+
+<div id="eud5optfont" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optfont.png" usemap="#eud5optfont.png" width="392" height="358" border="0" alt="">
+<map name="eud5optfont.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optfont','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Internet Dialup" onclick="MM_showHideLayers('eud5optid','','show','eud5optfont','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Replying" onclick="MM_showHideLayers('eud5optreply','','show','eud5optfont','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Attachments" onclick="MM_showHideLayers('eud5optatt','','show','eud5optfont','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Display" onclick="MM_showHideLayers('eud5optdisp','','show','eud5optfont','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optgs','','show','eud5optfont','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optvm','','show','eud5optfont','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optfont','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optfont','','hide')">
+</map>
+</div>
+
+<div id="eud5optdisp" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optdisp.png" usemap="#eud5optdisp.png" width="392" height="358" border="0" alt="">
+<map name="eud5optdisp.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optdisp','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Internet Dialup" onclick="MM_showHideLayers('eud5optid','','show','eud5optdisp','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Replying" onclick="MM_showHideLayers('eud5optreply','','show','eud5optdisp','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Attachments" onclick="MM_showHideLayers('eud5optatt','','show','eud5optdisp','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Fonts" onclick="MM_showHideLayers('eud5optfont','','show','eud5optdisp','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optgs','','show','eud5optdisp','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optvm','','show','eud5optdisp','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optdisp','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optdisp','','hide')">
+</map>
+</div>
+
+<div id="eud5optvm" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optvm.png" usemap="#eud5optvm.png" width="392" height="358" border="0" alt="">
+<map name="eud5optvm.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optvm','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Mailboxes" onclick="MM_showHideLayers('eud5optmbox','','show','eud5optvm','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Styled Text" onclick="MM_showHideLayers('eud5optst','','show','eud5optvm','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Spell Checking" onclick="MM_showHideLayers('eud5optsc','','show','eud5optvm','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Auto-completion" onclick="MM_showHideLayers('eud5optac','','show','eud5optvm','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optid','','show','eud5optvm','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optdd','','show','eud5optvm','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optvm','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optvm','','hide')">
+</map>
+</div>
+
+<div id="eud5optmbox" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optmbox.png" usemap="#eud5optmbox.png" width="392" height="358" border="0" alt="">
+<map name="eud5optmbox.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optmbox','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Viewing Mail" onclick="MM_showHideLayers('eud5optvm','','show','eud5optmbox','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Styled Text" onclick="MM_showHideLayers('eud5optst','','show','eud5optmbox','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Spell Checking" onclick="MM_showHideLayers('eud5optsc','','show','eud5optmbox','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Auto-completion" onclick="MM_showHideLayers('eud5optac','','show','eud5optmbox','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optid','','show','eud5optmbox','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optdd','','show','eud5optmbox','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optmbox','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optmbox','','hide')">
+</map>
+</div>
+
+<div id="eud5optst" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optst.png" usemap="#eud5optst.png" width="392" height="358" border="0" alt="">
+<map name="eud5optst.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optst','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Viewing Mail" onclick="MM_showHideLayers('eud5optvm','','show','eud5optst','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Mailboxes" onclick="MM_showHideLayers('eud5optmbox','','show','eud5optst','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Spell Checking" onclick="MM_showHideLayers('eud5optsc','','show','eud5optst','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Auto-completion" onclick="MM_showHideLayers('eud5optac','','show','eud5optst','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optid','','show','eud5optst','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optdd','','show','eud5optst','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optst','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optst','','hide')">
+</map>
+</div>
+
+<div id="eud5optsc" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optsc.png" usemap="#eud5optsc.png" width="392" height="358" border="0" alt="">
+<map name="eud5optsc.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optsc','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Viewing Mail" onclick="MM_showHideLayers('eud5optvm','','show','eud5optsc','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Mailboxes" onclick="MM_showHideLayers('eud5optmbox','','show','eud5optsc','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Styled Text" onclick="MM_showHideLayers('eud5optst','','show','eud5optsc','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Auto-completion" onclick="MM_showHideLayers('eud5optac','','show','eud5optsc','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optid','','show','eud5optsc','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optdd','','show','eud5optsc','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optsc','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optsc','','hide')">
+</map>
+</div>
+
+<div id="eud5optac" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optac.png" usemap="#eud5optac.png" width="392" height="358" border="0" alt="">
+<map name="eud5optac.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optac','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Viewing Mail" onclick="MM_showHideLayers('eud5optvm','','show','eud5optac','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Mailboxes" onclick="MM_showHideLayers('eud5optmbox','','show','eud5optac','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Styled Text" onclick="MM_showHideLayers('eud5optst','','show','eud5optac','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Spell Checking" onclick="MM_showHideLayers('eud5optsc','','show','eud5optac','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optid','','show','eud5optac','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optdd','','show','eud5optac','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optac','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optac','','hide')">
+</map>
+</div>
+
+<div id="eud5optdd" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optdd.png" usemap="#eud5optdd.png" width="392" height="358" border="0" alt="">
+<map name="eud5optdd.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optdd','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Labels" onclick="MM_showHideLayers('eud5optlab','','show','eud5optdd','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Getting Attention" onclick="MM_showHideLayers('eud5optga','','show','eud5optdd','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Background Tasks" onclick="MM_showHideLayers('eud5optbt','','show','eud5optdd','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Automation" onclick="MM_showHideLayers('eud5optauto','','show','eud5optdd','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optvm','','show','eud5optdd','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optew','','show','eud5optdd','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optdd','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optdd','','hide')">
+</map>
+</div>
+
+<div id="eud5optlab" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optlab.png" usemap="#eud5optlab.png" width="392" height="358" border="0" alt="">
+<map name="eud5optlab.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optlab','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Date Display" onclick="MM_showHideLayers('eud5optdd','','show','eud5optlab','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Getting Attention" onclick="MM_showHideLayers('eud5optga','','show','eud5optlab','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Background Tasks" onclick="MM_showHideLayers('eud5optbt','','show','eud5optlab','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Automation" onclick="MM_showHideLayers('eud5optauto','','show','eud5optlab','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optvm','','show','eud5optlab','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optew','','show','eud5optlab','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optlab','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optlab','','hide')">
+</map>
+</div>
+
+<div id="eud5optga" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optga.png" usemap="#eud5optga.png" width="392" height="358" border="0" alt="">
+<map name="eud5optga.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optga','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Date Display" onclick="MM_showHideLayers('eud5optdd','','show','eud5optga','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Labels" onclick="MM_showHideLayers('eud5optlab','','show','eud5optga','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Background Tasks" onclick="MM_showHideLayers('eud5optbt','','show','eud5optga','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Automation" onclick="MM_showHideLayers('eud5optauto','','show','eud5optga','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optvm','','show','eud5optga','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optew','','show','eud5optga','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optga','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optga','','hide')">
+</map>
+</div>
+
+<div id="eud5optbt" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optbt.png" usemap="#eud5optbt.png" width="392" height="358" border="0" alt="">
+<map name="eud5optbt.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optbt','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Date Display" onclick="MM_showHideLayers('eud5optdd','','show','eud5optbt','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Labels" onclick="MM_showHideLayers('eud5optlab','','show','eud5optbt','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Getting Attention" onclick="MM_showHideLayers('eud5optga','','show','eud5optbt','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Automation" onclick="MM_showHideLayers('eud5optauto','','show','eud5optbt','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optvm','','show','eud5optbt','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optew','','show','eud5optbt','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optbt','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optbt','','hide')">
+</map>
+</div>
+
+<div id="eud5optauto" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optauto.png" usemap="#eud5optauto.png" width="392" height="358" border="0" alt="">
+<map name="eud5optauto.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optauto','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Date Display" onclick="MM_showHideLayers('eud5optdd','','show','eud5optauto','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="Labels" onclick="MM_showHideLayers('eud5optlab','','show','eud5optauto','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Getting Attention" onclick="MM_showHideLayers('eud5optga','','show','eud5optauto','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Background Tasks" onclick="MM_showHideLayers('eud5optbt','','show','eud5optauto','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optvm','','show','eud5optauto','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optew','','show','eud5optauto','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optauto','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optauto','','hide')">
+</map>
+</div>
+
+<div id="eud5optew" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optew.png" usemap="#eud5optew.png" width="392" height="358" border="0" alt="">
+<map name="eud5optew.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optew','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="MAPI" onclick="MM_showHideLayers('eud5optmapi','','show','eud5optew','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Advanced Network" onclick="MM_showHideLayers('eud5optan','','show','eud5optew','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Auto Configure" onclick="MM_showHideLayers('eud5optaconf','','show','eud5optew','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Kerberos" onclick="MM_showHideLayers('eud5optkerb','','show','eud5optew','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optdd','','show','eud5optew','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optmw','','show','eud5optew','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optew','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optew','','hide')">
+</map>
+</div>
+
+<div id="eud5optmapi" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optmapi.png" usemap="#eud5optmapi.png" width="392" height="358" border="0" alt="">
+<map name="eud5optmapi.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optmapi','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Extra Warnings" onclick="MM_showHideLayers('eud5optew','','show','eud5optmapi','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Advanced Network" onclick="MM_showHideLayers('eud5optan','','show','eud5optmapi','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Auto Configure" onclick="MM_showHideLayers('eud5optaconf','','show','eud5optmapi','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Kerberos" onclick="MM_showHideLayers('eud5optkerb','','show','eud5optmapi','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optdd','','show','eud5optmapi','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optmw','','show','eud5optmapi','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optmapi','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optmapi','','hide')">
+</map>
+</div>
+
+<div id="eud5optan" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optan.png" usemap="#eud5optan.png" width="392" height="358" border="0" alt="">
+<map name="eud5optan.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optan','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Extra Warnings" onclick="MM_showHideLayers('eud5optew','','show','eud5optan','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="MAPI" onclick="MM_showHideLayers('eud5optmapi','','show','eud5optan','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Auto Configure" onclick="MM_showHideLayers('eud5optaconf','','show','eud5optan','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Kerberos" onclick="MM_showHideLayers('eud5optkerb','','show','eud5optan','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optdd','','show','eud5optan','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optmw','','show','eud5optan','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optan','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optan','','hide')">
+</map>
+</div>
+
+<div id="eud5optaconf" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optaconf.png" usemap="#eud5optaconf.png" width="392" height="358" border="0" alt="">
+<map name="eud5optaconf.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optaconf','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Extra Warnings" onclick="MM_showHideLayers('eud5optew','','show','eud5optaconf','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="MAPI" onclick="MM_showHideLayers('eud5optmapi','','show','eud5optaconf','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Advanced Network" onclick="MM_showHideLayers('eud5optan','','show','eud5optaconf','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Kerberos" onclick="MM_showHideLayers('eud5optkerb','','show','eud5optaconf','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optdd','','show','eud5optaconf','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optmw','','show','eud5optaconf','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optaconf','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optaconf','','hide')">
+</map>
+</div>
+
+<div id="eud5optkerb" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optkerb.png" usemap="#eud5optkerb.png" width="392" height="358" border="0" alt="">
+<map name="eud5optkerb.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optkerb','','hide')">
+<area shape="rect" coords="10,48,103,101" href="#" alt="Extra Warnings" onclick="MM_showHideLayers('eud5optew','','show','eud5optkerb','','hide')">
+<area shape="rect" coords="10,102,103,155" href="#" alt="MAPI" onclick="MM_showHideLayers('eud5optmapi','','show','eud5optkerb','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="Advanced Network" onclick="MM_showHideLayers('eud5optan','','show','eud5optkerb','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Auto Configure" onclick="MM_showHideLayers('eud5optaconf','','show','eud5optkerb','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optdd','','show','eud5optkerb','','hide')">
+<area shape="rect" coords="104,327,119,342" href="#" alt="Down" onclick="MM_showHideLayers('eud5optmw','','show','eud5optkerb','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optkerb','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optkerb','','hide')">
+</map>
+</div>
+
+<div id="eud5optmw" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optmw.png" usemap="#eud5optmw.png" width="392" height="358" border="0" alt="">
+<map name="eud5optmw.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optmw','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Statistics" onclick="MM_showHideLayers('eud5optstat','','show','eud5optmw','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Miscellaneous" onclick="MM_showHideLayers('eud5optmisc','','show','eud5optmw','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optew','','show','eud5optmw','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optmw','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optmw','','hide')">
+</map>
+</div>
+
+<div id="eud5optstat" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optstat.png" usemap="#eud5optstat.png" width="392" height="358" border="0" alt="">
+<map name="eud5optstat.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optstat','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="MoodWatch" onclick="MM_showHideLayers('eud5optmw','','show','eud5optstat','','hide')">
+<area shape="rect" coords="10,264,103,317" href="#" alt="Miscellaneous" onclick="MM_showHideLayers('eud5optmisc','','show','eud5optstat','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optew','','show','eud5optstat','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optstat','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optstat','','hide')">
+</map>
+</div>
+
+<div id="eud5optmisc" style="z-index: 30; left: 205px; top: 105px; position: absolute;">
+<img src="eud5optmisc.png" usemap="#eud5optmisc.png" width="392" height="358" border="0" alt="">
+<map name="eud5optmisc.png">
+<area shape="rect" coords="371,5,386,18" href="#" alt="Close" onclick="MM_showHideLayers('eud5optmisc','','hide')">
+<area shape="rect" coords="10,156,103,209" href="#" alt="MoodWatch" onclick="MM_showHideLayers('eud5optmw','','show','eud5optmisc','','hide')">
+<area shape="rect" coords="10,210,103,263" href="#" alt="Statistics" onclick="MM_showHideLayers('eud5optstat','','show','eud5optmisc','','hide')">
+<area shape="rect" coords="104,48,119,63" href="#" alt="Up" onclick="MM_showHideLayers('eud5optew','','show','eud5optmisc','','hide')">
+<area shape="rect" coords="176,326,250,348" href="#" alt="OK" onclick="MM_showHideLayers('eud5optmisc','','hide')">
+<area shape="rect" coords="275,326,349,348" href="#" alt="Cancel" onclick="MM_showHideLayers('eud5optmisc','','hide')">
+</map>
+</div>
+
+<div id="eud5about" style="z-index: 30; left: 145px; top: 100px; position: absolute;">
+<img src="eud5about.png" usemap="#eud5about.png" width="508" height="374" border="0" alt="">
+<map name="eud5about.png">
+<area shape="rect" coords="41,333,121,355" href="#" alt="Close" onclick="MM_showHideLayers('eud5about','','hide')">
+</map>
+</div>
+
+</body>
+</html>

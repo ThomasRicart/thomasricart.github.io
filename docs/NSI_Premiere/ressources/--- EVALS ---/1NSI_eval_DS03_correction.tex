@@ -1,0 +1,197 @@
+\documentclass[a4paper,10pt]{report}
+
+\def\packagepath{../../preambule}   % path du package princial
+\usepackage{\packagepath/preambule}    % utilisation du fichier de configuration
+
+\def\level{Première }              % Classe
+\def\course{NSI}              % Matière
+\def\eval{DS03}
+
+\def\visibleornot{visible}    % visible or invisible
+\def\documentpath{./Sources_Latex}
+\def\date{Mardi 14 Octobre 2025}
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableau
+
+\def\ptsexoA{2}
+\def\ptsexoB{2}
+\def\ptsexoC{2}
+\def\ptsexoD{2}
+\def\ptsexoE{2}
+\def\ptsexoF{2}
+\def\ptsexoG{2}
+
+\def\ptstotal{\ptsexoA+\ptsexoB}
+
+\usepackage{hyperref}
+
+\usetikzlibrary{shapes, arrows, positioning}
+\usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing}
+
+\tikzstyle{etat} = [draw, rounded corners=15pt, minimum width=2.5cm, minimum height=1.2cm, text centered, font=\bfseries]
+\tikzstyle{nouveau} = [etat, fill=blue!40]
+\tikzstyle{pret} = [etat, fill=green!60]
+\tikzstyle{elu} = [etat, fill=yellow!60]
+\tikzstyle{bloque} = [etat, fill=red!60]
+\tikzstyle{termine} = [etat, fill=white]
+\tikzstyle{fleche} = [thick, ->, >=stealth]
+
+\usepackage{float} % Permet d'utiliser [H]
+\usepackage[T1]{fontenc}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+
+%\PageGardeSujetBac[Matiere = Numérique et Sciences Informatiques,
+%                  Session = 2025,
+%                  AffJour=false,
+%                  Duree = {3 heures 30},
+%                  DernierePage = \pageref{LastPage},
+%                  ModeExamen=false
+%                  ]
+\renewcommand{\labelitemi}{\textbullet} %pour éviter les tirets dans les "itemize" qui apportent confusion avec le signe moins.
+%% Début page de garde style BAC
+
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\PageGardeSujetBac[clés]
+
+\pagestyle{DS_FP}          % Feuille de style fancy
+\NomPrenomNote{}
+
+
+\exods{\ptsexoA}
+
+
+On exécute le script python ci-dessous, que vaut le couple \verb|(a, b)| à la fin de l'exécution?
+
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def carre(a):
+    a = a * a
+    return a
+
+a = 2
+b = carre(a)
+\end{CodePythontexAlt}
+
+
+    \begin{answer}{1}{2.5}  
+    
+    \begin{itemize}
+        \item         \verb|a| vaut 2. En effet, cette variable n'est pas modifiée à l'extérieur de la fonction. C'est une variable globale qui est passée en paramètre.
+        \item \verb|b| vaut ce qui est renvoyé par la fonction \verb|carre| avec comme argument \verb|2|. Dans la fonction \verb|carre|, la variable \verb|a| est une variable locale qui est oubliée dès que la fonction renvoie une valeur (ici \verb|4|.)
+    \end{itemize}
+
+    \end{answer}
+
+\medskip
+
+\exods{\ptsexoB}
+
+La fonction \verb|ajoute(n, p)| calcule la somme de tous les entiers entre \verb|n| et \verb|p| inclus. On suppose \verb|n < p|.
+
+Compléter cette fonction
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def ajoute(n, p):
+    ''' Ajoute tous les entiers entre n et p inclus
+    n et p entiers (int) et n < p
+    sortie: entier '''
+    somme = 0 
+    for i in range(n, p+1):
+        somme = somme + i
+    return somme 
+
+assert ajoute(2, 4) == 9    # 2 + 3 + 4 = 9
+    \end{CodePythontexAlt}
+
+
+    \medskip
+
+\exods{\ptsexoC}
+
+Ecrire une fonction qui renvoie \verb|True| si \verb|a| est strictement supérieur à \verb|b| et \verb|False| sinon.
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def compare(a, b):
+    ''' Renvoie True si a strictement supérieur à b et False sinon
+    sortie: bool '''
+    if a > b:
+        return True
+    else:
+        return False
+
+def compare2(a, b):
+    return a > b
+
+assert compare(1, 5) == False
+assert compare(4, 2) == True
+    \end{CodePythontexAlt}
+
+ \pagebreak
+    \pagestyle{DS_LP}
+
+\exods{\ptsexoD}
+
+Ecrire une fonction \verb|est_present(lettre_cherchee, mot)| qui renvoie \verb|True| si \verb|lettre_cherchee| est dans \verb|mot|, \verb|False| sinon
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def est_present(lettre_cherchee, mot):
+    ''' Renvoie True si lettre_cerchee est dans mot et False sinon / sortie: bool '''
+    for lettre in mot:
+        if lettre == lettre_cherchee:
+            return True
+    return False
+
+assert est_present('a', 'bonjour') == False
+assert est_present('o', 'bonjour') == True
+assert est_present('n', 'bonjour') == True
+
+    \end{CodePythontexAlt}
+
+    \medskip
+
+    \exods{\ptsexoE}
+
+
+Ecrire une fonction \verb|compte_lettre_mot(lettre_cherchee, mot)| qui compte le nombre de \verb|lettre_cherchee| dans \verb|mot|
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+def compte_lettre_mot(lettre_cherchee, mot):
+    ''' Compte le nombre de lettre_cherchee dans mot / sortie: int '''
+    nb_lettre = 0
+    for lettre in mot:
+        if lettre == lettre_cherchee:
+            nb_lettre = nb_lettre + 1
+    return nb_lettre
+
+assert compte_lettre_mot('a', 'bonjour') == 0
+assert compte_lettre_mot('o', 'bonjour') == 2
+assert compte_lettre_mot('n', 'bonjour') == 1
+    \end{CodePythontexAlt}
+
+    \medskip
+
+    \exods{\ptsexoF}
+
+
+Ecrire une fonction \verb|supprime_voyelles(mot)| qui renvoie le \verb|mot| passé en paramètre auquel on a supprimé les voyelles.
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+
+VOYELLES = 'aeiouy'
+
+def supprime_voyelles(mot):
+    ''' Renvoie le mot entré en paramètre sans les voyelles / sortie: str '''
+    mot_modifie = ''
+    for lettre in mot:
+        if lettre not in VOYELLES:
+            mot_modifie = mot_modifie + lettre
+    return mot_modifie
+
+assert supprime_voyelles('bonjour') == 'bnjr'
+assert supprime_voyelles('html') == 'html'
+assert supprime_voyelles('eau') == ''
+    \end{CodePythontexAlt}
+
+
+\end{document}

@@ -1,0 +1,262 @@
+\documentclass[a4paper,10pt]{report}
+
+\def\packagepath{../../preambule}   % path du package princial
+\usepackage{\packagepath/preambule}    % utilisation du fichier de configuration
+
+\def\level{Première }              % Classe
+\def\course{NSI}              % Matière
+\def\eval{Codage des entiers relatifs}
+
+\def\visibleornot{visible}    % visible or invisible
+\def\documentpath{./Sources_Latex}
+\def\date{Mardi 08 Avril 2025}
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableau
+
+\def\ptsexoA{3}
+\def\ptsexoB{3}
+\def\ptsexoC{2}
+\def\ptsexoD{2}
+\def\ptstotal{\ptsexoA+\ptsexoB}
+
+\usepackage{hyperref}
+
+\usetikzlibrary{shapes, arrows, positioning}
+\usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing}
+
+\tikzstyle{etat} = [draw, rounded corners=15pt, minimum width=2.5cm, minimum height=1.2cm, text centered, font=\bfseries]
+\tikzstyle{nouveau} = [etat, fill=blue!40]
+\tikzstyle{pret} = [etat, fill=green!60]
+\tikzstyle{elu} = [etat, fill=yellow!60]
+\tikzstyle{bloque} = [etat, fill=red!60]
+\tikzstyle{termine} = [etat, fill=white]
+\tikzstyle{fleche} = [thick, ->, >=stealth]
+
+\usepackage{float} % Permet d'utiliser [H]
+\usepackage[T1]{fontenc}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+
+%\PageGardeSujetBac[Matiere = Numérique et Sciences Informatiques,
+%                  Session = 2025,
+%                  AffJour=false,
+%                  Duree = {3 heures 30},
+%                  DernierePage = \pageref{LastPage},
+%                  ModeExamen=false
+%                  ]
+\renewcommand{\labelitemi}{\textbullet} %pour éviter les tirets dans les "itemize" qui apportent confusion avec le signe moins.
+%% Début page de garde style BAC
+
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\PageGardeSujetBac[clés]
+
+\pagestyle{DS_FP}          % Feuille de style fancy
+\NomPrenomNote{}
+
+
+\exods{\ptsexoA}
+
+Répondre aux questions suivantes. Aucune justification n'est demandée.
+
+\begin{enumerate}
+    \item Avec 8 bits, combien de valeurs différentes peut-on coder? $2^8=256$ valeurs différentes.
+    \item Quelles sont les valeurs entières naturelles minimale et maximale codable sur 8 bits? $0$ et $255$.
+    \item Quelles sont les valeurs entières relatives minimale et maximale codable sur 8 bits? $-128$ et $127$.
+\end{enumerate}
+
+
+\exods{\ptsexoB}
+
+\begin{enumerate}
+    \item Ecrire l'algorithme de conversion d'un entier naturel compris entre 0 et 255 en binaire sur 8 bits. Vous pouvez écrire cet algorithme en pseudo-code ou en Python.
+    
+    \begin{answer}{1}{5.5 }
+        \begin{verbatim}
+def conversion_dec_to_bin(val_dec):
+    ''' Convertit un entier naturel en binaire sur 8 bits.
+    val_dec : int : entier naturel compris entre 0 et 255   
+    return : str : représentation binaire sur 8 bits de l'entier naturel'''
+    binaire = ''
+    # On effectue la conversion de l'entier décimal en binaire
+    for i in range(8):
+        reste = val_dec % 2
+        binaire = str(reste) + binaire
+        val_dec = val_dec // 2
+    
+    return binaire
+        
+        \end{verbatim}
+        
+        
+        
+        
+        \end{answer}
+
+    \item Donner l'algorithme de conversion d'un entier relatif en binaire sur 8 bits.
+    
+    Vous citerez les différentes étapes de l'algorithme sans le traduire en Python.
+    \begin{answer}{1}{10}
+    
+    \begin{itemize}
+        \item Méthode 1:
+        \begin{enumerate}
+            \item Si l'entier est positif, on le convertit en binaire sur 8 bits avec la méthode de la question 1.
+            \item Si l'entier est négatif,
+            \begin{itemize}
+                \item On prend la valeur absolue de l'entier.
+                \item On le convertit en binaire sur 8 bits avec la méthode de la question 1.
+                \item On inverse tous les bits du résultat.
+                \item On additionne 1 au résultat précédent.
+                \item On obtient le complément à 2 de l'entier.
+            \end{itemize}
+        \end{enumerate}
+        \item Méthode 2:
+        \begin{enumerate}
+            \item Si l'entier est positif, on le convertit en binaire sur 8 bits avec la méthode de la question 1.
+            \item Si l'entier est négatif,
+            \begin{itemize}
+                \item On prend la valeur absolue de l'entier.
+                \item On le convertit en binaire sur 8 bits avec la méthode de la question 1.
+                \item On recopie les bits de la droite vers la gauche jusqu'au premier '1' inclus
+                \item On inverse tous les bits à gauche du premier '1' inclus.
+                \item On obtient le complément à 2 de l'entier.
+            \end{itemize}
+        \end{enumerate}
+    \end{itemize}
+    \end{answer}
+
+    \item Par la méthode que vous avez explicité précédemment (question 2.), convertir les valeurs suivantes en binaire sur 8 bits:
+    
+    \begin{answer}{1}{1.5}
+    
+        \begin{minipage}[t]{0.33\linewidth}
+            \centering{$-24$}
+
+            Réponse: $11101000$
+        \end{minipage}
+        \begin{minipage}[t]{0.33\linewidth}
+            \centering{$-124$}
+
+            Réponse: $10000100$
+        \end{minipage}
+        \begin{minipage}[t]{0.33\linewidth}
+            \centering{$9$}
+
+            Réponse: $00001001$
+        \end{minipage}
+    
+    \end{answer}
+
+\end{enumerate}
+
+\newpage
+
+\thispagestyle{DS_LP}
+\exods{\ptsexoC}
+
+Ecrire la fonction \texttt{conversion\_relatif\_binaire} qui convertit un entier relatif en binaire sur 8 bits. Vous utiliserez les fonctons précédentes pour créer votre fonction. 
+    
+    \begin{answer}{1}{7}
+    \begin{verbatim}
+def conversion_relatif_binaire(val_entiere:int)->str:
+    ''' Convertit un entier relatif en binaire sur 8 bits. 
+    val_entiere : int : entier relatif compris entre -128 et 127
+    return : str : représentation binaire sur 8 bits de l'entier relatif'''
+
+    if val_entiere >= 0:
+        return conversion_entier_binaire(val_entiere)
+    else:
+        val_entiere =  - val_entiere
+        binaire = conversion_entier_binaire(val_entiere)
+
+        binaire_inverse = ''
+        for bit in binaire:
+            binaire_inverse += inverse_bit(bit)
+        return additionne_binaire(binaire_inverse, '00000001')
+
+\end{verbatim}
+    \end{answer}
+
+    \begin{answer}{1}{11}
+        \begin{verbatim}
+    def conversion_relatif_binaire(val_entiere:int)->str:
+        ''' Convertit un entier relatif en binaire sur 8 bits. 
+        val_entiere : int : entier relatif compris entre -128 et 127
+        return : str : représentation binaire sur 8 bits de l'entier relatif'''
+    
+        if val_entiere >= 0:
+            return conversion_entier_binaire(val_entiere)
+        else:
+            val_entiere =  - val_entiere
+            binaire = conversion_entier_binaire(val_entiere)
+            
+            resultat = ''
+            i = len(binaire) - 1
+            premier_1_trouve = False
+            # On parcourt le binaire de droite à gauche
+            while i >= 0:
+                bit = binaire[i]
+
+                if not premier_1_trouve:
+                    resultat = bit + resultat
+                    if bit == '1':
+                        premier_1_trouve = True
+                    else:
+                        resultat = inverse_bit(bit) + resultat
+                i -= 1
+                  \end{verbatim}
+        \end{answer}
+    
+    
+\exods{\ptsexoD}
+
+
+Entourer la ou les bonne(s) réponse(s)
+
+\begin{enumerate}
+    \item Que peut-on dire de l'entier relatif $1010001$ codé sur 8 bits en complément à deux ?
+    \begin{enumerate}[A)]
+        \begin{minipage}[t]{0.24\linewidth}
+        \item Cet entier est pair 
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.24\linewidth}
+            \item \fbox{Cet entier est négatif}
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.24\linewidth}
+            \item Cet entier est positif
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.24\linewidth}
+            \item Cet entier vaut $-12_{10}$
+        \end{minipage}
+    \end{enumerate}
+
+    \medskip
+
+    \item Si $1011$ est un entier signé sur 4 bits en complément à 2, alors sa valeur décimale est:
+        \begin{enumerate}[A)]
+        \begin{minipage}[t]{0.24\linewidth}
+        \item $-7$
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.24\linewidth}
+        \item \fbox{$-5$}
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.24\linewidth}
+        \item $5$       
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.24\linewidth}
+        \item $7$
+        \end{minipage}
+    \end{enumerate}
+\end{enumerate}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+

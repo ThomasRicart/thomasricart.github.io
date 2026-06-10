@@ -1,0 +1,409 @@
+\documentclass[a4paper,12pt,openany]{book}
+\input{../../preambule/preambule}
+
+% en-tête
+\rhead{\footnotesize{\textsf{1ère NSI}} }%droit
+\lhead{Nom - Prénom:}
+\begin{document}
+
+\begin{center}\begin{large}
+DS01 - Variables, expressions booléennes, fonctions, IF
+\end{large}\end{center}
+
+\exo \qquad Les types de variables \hfill
+(3 points)
+
+Pour chacune des questions suivantes, indiquer la réponse attendue
+
+\begin{enumerate}
+	\item La réponse à l'instruction \verb+ 1 == 3 + est:
+	\begin{enumerate}[A.]
+		\item un entier
+		\item un flottant
+		\item une chaine de caractère
+		\item un booléen
+	\end{enumerate}		
+	
+	\medskip
+	
+	\item Dans un programme Python, si \verb+ a = "8"+ et \verb+ b = 5+, que retourne ce programme en tapant \verb- a + b - ?
+	\begin{enumerate}[A.]
+		\item \verb+ '13'+
+		\item 13
+		\item \verb+False+
+		\item \verb+TypeError: must be str, not int+
+	\end{enumerate}
+	
+	\medskip
+	
+	\item Clément a 100 euros. Chaque semaine, il dépense 10\% de ce qu'il possède. Il souhaite savoir combien il possèdera au bout de 10 semaines. Le type de la variable représentant la somme de Clément est de type:
+	
+	\begin{enumerate}[A.]
+		\item \verb+int+
+		\item \verb+float+
+		\item \verb+str+
+		\item \verb+bool+
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\exo \qquad les valeurs booléennes \hfill
+(4 points)
+
+Dans chacun des cas, donnez la valeur du booléen \verb+rep+
+
+	On rappelle que l'écriture \verb+ a**2 + correspond en mathématiques à $a^2$.
+
+	\begin{lstlisting}
+x = 3
+rep = x**2 == 6
+\end{lstlisting}
+
+\bigskip
+
+	\begin{lstlisting}
+x , y , z = 3 , 4 , 5
+rep = x**2 + y**2 == z**2
+\end{lstlisting}
+
+\bigskip
+
+	\begin{lstlisting}
+a , b = 3 , 7
+rep = a**2>50 and b**2 < 50
+\end{lstlisting}
+
+\bigskip
+
+	\begin{lstlisting}
+a , b = 3 , 7
+rep = (a**2 > 50 and b**2 < 50) or (a**2 < 10 and b**2 > 10)
+
+\end{lstlisting}
+
+\newpage
+
+
+\exo \qquad Les fonctions \hfill
+(2 points)
+
+\begin{enumerate}
+	\item on définit la fonction suivante:
+	
+\begin{lstlisting}
+def f(x,y):
+	assert x!=0 , "La première valeur doit être non nulle"
+	x = x + y
+	y = x - y
+	x = x - y
+	return x
+
+\end{lstlisting}
+
+	\begin{enumerate}
+		\item Que renvoie la commande \verb+ f(0,3)+ ? \dotfill
+		\item Que renvoie la commande \verb+ f(7,3)+? \dotfill
+	\end{enumerate}
+
+\medskip
+
+\item On définit la fonction suivante:
+
+\begin{lstlisting}
+def g(a,b):
+	''' a et b sont deux entiers naturels '''
+	c = (a > b)
+	d = (c == False)
+	return (c,d)
+
+\end{lstlisting}
+
+\begin{enumerate}
+	\item quelles sont les valeurs de $c$ et de $d$ après l'appel \verb+ g(5,2)+?\dotfill
+	\item quelles sont les valeurs de $c$ et de $d$ après l'appel \verb+ g(2,5)+?\dotfill
+\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\exo \qquad Structure IF THEN \hfill
+(1 points)
+
+\begin{lstlisting}
+def h(a,b):
+	''' a et b sont deux entiers naturels '''
+	if a > b:
+		return 'a'
+	else:
+		return b
+
+\end{lstlisting}
+
+\begin{enumerate}
+	\item Que renvoie la commande \verb+ h(4,5)+? \dotfill
+	\item Que renvoie la commande \verb+ h(6,4)+? \dotfill
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\setcounter{nexo}{0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}\begin{large}
+Ds01 - Variables, expressions booléennes, fonctions, IF
+\end{large}\end{center}
+
+\exo \qquad Les types de variables\hfill
+(3 points)
+
+Pour chacune des questions suivantes, indiquer la réponse attendue
+
+\begin{enumerate}
+	\item La réponse à l'instruction \verb+ 1 == 3 + est:
+	\begin{enumerate}[A.]
+		\item un booléen
+		\item un entier
+		\item un flottant
+		\item une chaine de caractère
+	\end{enumerate}		
+	
+	\medskip
+	
+	\item Dans un programme Python, si \verb+ a = "8"+ et \verb+ b = "5"+, que retourne ce programme en tapant \verb- a + b - ?
+	\begin{enumerate}[A.]
+		\item \verb+ '85'+
+		\item 13
+		\item \verb+False+
+		\item \verb+TypeError: must be str, not int+
+	\end{enumerate}
+	
+	\medskip
+	
+	\item Clément a 100 euros. Chaque semaine, il dépense 10\% de ce qu'il possède. Il souhaite savoir combien il possèdera au bout de 10 semaines. Le type de la variable représentant la somme de Clément est de type:
+	
+	\begin{enumerate}[A.]
+		\item \verb+float+
+		\item \verb+int+
+		\item \verb+bool+
+		\item \verb+str+
+	\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\exo \qquad les valeurs booléennes\hfill
+(4 points)
+
+Dans chacun des cas, donnez la valeur du booléen \verb+rep+
+
+On rappelle que l'écriture \verb+ a**2 + correspond en mathématiques à $a^2$.
+
+	
+	\begin{lstlisting}
+x = 3
+rep = x**2 == 9
+\end{lstlisting}
+
+\bigskip
+
+	\begin{lstlisting}
+x , y , z = 3 , 4 , 5
+rep = x**2 + y**2 == z**2
+\end{lstlisting}
+
+\bigskip
+
+	\begin{lstlisting}
+a , b = 3 , 7
+rep = a**2 > 50 or b**2 < 50
+\end{lstlisting}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+
+	\begin{lstlisting}
+a , b = 3 , 7
+rep = (a**2 > 50 or b**2 < 50) and (a**2 < 10 or b**2 > 10)
+
+\end{lstlisting}
+
+\newpage
+
+\exo \qquad Les fonctions \hfill
+(2 points)
+
+\begin{enumerate}
+	\item on définit la fonction suivante:
+	
+\begin{lstlisting}
+def f(x,y):
+	assert x!=0 , "La première valeur doit être non nulle"
+	x = x + y
+	y = x - y
+	x = x - y
+	return x
+
+\end{lstlisting}
+
+	\begin{enumerate}
+		\item Que renvoie la commande \verb+ f(0,3)+ ? \dotfill
+		\item Que renvoie la commande \verb+ f(3,7)+? \dotfill
+	\end{enumerate}
+
+\medskip
+
+\item On définit la fonction suivante:
+
+\begin{lstlisting}
+def g(a,b):
+	''' a et b sont deux entiers naturels '''
+	c = (a > b)
+	d = (c == False)
+	return (c,d)
+
+\end{lstlisting}
+
+\begin{enumerate}
+	\item quelles sont les valeurs de $c$ et de $d$ après l'appel \verb+ g(2,6)+?\dotfill
+	\item quelles sont les valeurs de $c$ et de $d$ après l'appel \verb+ g(6,2)+?\dotfill
+\end{enumerate}
+\end{enumerate}
+
+\bigskip
+
+\exo \qquad Structure IF THEN\hfill
+(1 points)
+
+\begin{lstlisting}
+def h(a,b):
+	''' a et b sont deux entiers naturels '''
+	if a > b:
+		return a
+	else:
+		return 'b'
+
+\end{lstlisting}
+
+\begin{enumerate}
+	\item Que renvoie la commande \verb+ h(4,5)+? \dotfill
+	\item Que renvoie la commande \verb+ h(6,4)+? \dotfill
+
+\end{enumerate}
+
+
+  
+  \newpage
+  
+  
+  \begin{center}
+  {\LARGE CORRECTION - SUJET A}
+  \end{center}
+  
+\setcounter{nexo}{0}
+  
+  \exo
+  
+  \begin{enumerate}
+  	\item D. booléen
+  	\item D. \verb+ TypeError : must be str, not int+
+  	\item B. \verb+ float +
+  \end{enumerate}
+  
+  \medskip
+  
+  \exo 
+  
+  \begin{enumerate}
+  	\item \verb+ False +
+  	\item \verb+ True +
+  	\item \verb+ False +
+  	\item \verb+ True +
+  \end{enumerate}
+  
+  \medskip
+  
+  \exo
+  
+  \begin{enumerate}
+  \item 
+  	\begin{enumerate}
+  	\item \verb+ f(0,3) --> La première valeur doit être non nulle+
+  	\item \verb+ f(7,3) --> 3+
+  \end{enumerate}
+  
+  \medskip
+  
+  \item 
+  
+  \begin{enumerate}
+  	\item \verb+ g(5,2) --> True , False +
+  	\item \verb+ g(2,5) --> False , True+
+  \end{enumerate}
+  \end{enumerate}
+  
+  \medskip
+  
+  \exo
+  
+  \begin{enumerate}
+  	\item \verb+ h(4,5) --> 5+
+  	\item \verb+ h(6,4) --> a+
+  \end{enumerate}
+  
+  \bigskip
+  
+  \begin{center}
+  {\LARGE CORRECTION - SUJET B}
+  \end{center}
+  
+  \setcounter{nexo}{0}
+  
+ \exo
+  
+  \begin{enumerate}
+  	\item A. booléen
+  	\item D. \verb+ TypeError : must be str, not int+
+  	\item A. \verb+ float +
+  \end{enumerate}
+  
+  \medskip
+  
+  \exo 
+  
+  \begin{enumerate}
+  	\item \verb+ True +
+  	\item \verb+ True +
+  	\item \verb+ True +
+  	\item \verb+ True +
+  \end{enumerate}
+  
+  \medskip
+  
+  \exo
+  
+  \begin{enumerate}
+  \item 
+  \begin{enumerate}
+  	\item \verb+ f(0,3) --> La première valeur doit être non nulle+
+  	\item \verb+ f(3,7) --> 7+
+  \end{enumerate}
+  
+  \medskip
+  
+	\item   
+  \begin{enumerate}
+  	\item \verb+ g(2,6) --> False , True +
+  	\item \verb+ g(6,2) --> True , False+
+  \end{enumerate}
+  \end{enumerate}
+  \medskip
+  
+  \exo
+  
+  \begin{enumerate}
+  	\item \verb+ h(4,5) --> b+
+  	\item \verb+ h(6,4) --> 6+
+  \end{enumerate} 
+\end{document}

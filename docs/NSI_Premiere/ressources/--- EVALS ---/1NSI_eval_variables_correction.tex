@@ -1,0 +1,307 @@
+\documentclass[a4paper,10pt]{report}
+
+\def\packagepath{../../preambule}   % path du package princial
+\usepackage{\packagepath/preambule}    % utilisation du fichier de configuration
+
+\def\level{Première }              % Classe
+\def\course{NSI}              % Matière
+\def\eval{DS01 - Variables}
+
+\def\visibleornot{visible}    % visible or invisible
+\def\documentpath{./Sources_Latex}
+\def\date{Mardi 23 Septembre 2025}
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableau
+
+\def\ptsexoA{2}
+\def\ptsexoB{3}
+\def\ptsexoC{3}
+\def\ptsexoD{3}
+\def\ptsexoE{2}
+\def\ptsexoF{1}
+\def\ptsexoG{2}
+
+\def\ptstotal{\ptsexoA+\ptsexoB}
+
+\usepackage{hyperref}
+
+\usetikzlibrary{shapes, arrows, positioning}
+\usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing}
+
+\tikzstyle{etat} = [draw, rounded corners=15pt, minimum width=2.5cm, minimum height=1.2cm, text centered, font=\bfseries]
+\tikzstyle{nouveau} = [etat, fill=blue!40]
+\tikzstyle{pret} = [etat, fill=green!60]
+\tikzstyle{elu} = [etat, fill=yellow!60]
+\tikzstyle{bloque} = [etat, fill=red!60]
+\tikzstyle{termine} = [etat, fill=white]
+\tikzstyle{fleche} = [thick, ->, >=stealth]
+
+\usepackage{float} % Permet d'utiliser [H]
+\usepackage[T1]{fontenc}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+
+%\PageGardeSujetBac[Matiere = Numérique et Sciences Informatiques,
+%                  Session = 2025,
+%                  AffJour=false,
+%                  Duree = {3 heures 30},
+%                  DernierePage = \pageref{LastPage},
+%                  ModeExamen=false
+%                  ]
+\renewcommand{\labelitemi}{\textbullet} %pour éviter les tirets dans les "itemize" qui apportent confusion avec le signe moins.
+%% Début page de garde style BAC
+
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\PageGardeSujetBac[clés]
+
+\pagestyle{DS_FP}          % Feuille de style fancy
+\NomPrenomNote{}
+
+
+\exods{\ptsexoA}
+
+Indiquer si les noms de variables suivants sont pertinents ou non. Justifier votre réponse.
+
+\medskip
+
+\renewcommand{\arraystretch}{3.5}
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{7cm}|}
+        \hline
+        \textbf{Nom de variable} & \textbf{Pertinent} & \textbf{Non pertinent} &\textbf{Justification} \\ \hline
+    \verb|ma variable| &&X& Espace dans le nom de la variable \\ \hline
+    \verb|ma_variable77|&X&& \\ \hline
+    \verb|77ma_variable|&&X&Nom de variable commencant par un chiffre \\ \hline
+    \verb|ma_variable@77|&&X& Présence d'un caractère spécial dans le nom de la variable\\ \hline
+
+    \end{tabular}
+
+
+
+\bigskip
+
+\exods{\ptsexoB}
+
+    \renewcommand{\arraystretch}{1}
+
+Indiquer l'état des variables après l'exécution de chaque ligne d'instruction.
+
+\medskip
+
+\begin{minipage}{0.29\linewidth}
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+a = 3
+b = 5
+c = a + b
+a = b - 2
+b = c + 1
+d = a + b + c
+\end{CodePythontexAlt}
+
+\end{minipage}\hfill
+\begin{minipage}{0.66\linewidth}
+    
+    \medskip
+
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        Ligne& Valeur de a & Valeur de b &Valeur de c & Valeur de d\\ \hline
+        1&3&&&\\\hline
+        2&&5&&\\\hline
+        3&&&8&\\\hline
+        4&3&&&\\\hline
+        5&&9&&\\\hline
+        6&&&&20\\\hline
+
+
+    \end{tabular}
+\end{minipage}
+
+\bigskip
+
+\exods{\ptsexoC}
+
+Indiquer le type et la valeur de la variable \verb|a| après l'exécution de chacune des lignes. Si la ligne génère une erreur, indiquer "erreur".
+
+
+\begin{minipage}{0.49\linewidth}
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+a = 3
+a = a + 0.1
+a = "Bonjour"
+a = a + " tout le monde"
+a = True
+a = a + 1
+a = input('Entrer un nombre : ')
+a = '5'
+a = a + '2'
+a = int(a)
+a = float(a)
+
+\end{CodePythontexAlt}
+
+\end{minipage}\hfill
+\begin{minipage}{0.46\linewidth}
+    
+    \medskip
+
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|p{2cm}|p{5cm}|}
+        \hline
+        Ligne& Type de a & Valeur de a\\ \hline
+        1& \verb|int|&3\\\hline
+        2&float&3.1\\\hline
+        3&str&"Bonjour"\\\hline
+        4&str&"Bonjour tout le monde"\\\hline
+        5&bool&True\\\hline
+        6&ERREUR&\\\hline
+        7&str&\\\hline
+        8&str&'5'\\\hline
+        9&str&'52'\\\hline
+        10&int&52\\\hline
+        11&float&52.0\\\hline
+
+
+    \end{tabular}
+\end{minipage}
+
+
+\pagebreak
+\pagestyle{DS_LP}
+\exods{\ptsexoD}
+
+On considère le code suivant:
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+mot = 'Numerique'
+\end{CodePythontexAlt}
+
+
+Indiquer ce qui est affiché par les instructions suivantes. Si cela génère une erreur, indiquer "erreur".
+
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|p{3cm}|p{4cm}|}
+        \hline
+         Instruction & Affichage\\ \hline
+         \verb|mot[0]|&'N'\\\hline
+        \verb|mot[2]| &'m'\\\hline
+        \verb|mot[4]| &'r'\\\hline
+        \verb|mot[8]|&'e'\\\hline
+        \verb|len(mot)|&9\\\hline
+        \verb|mot + 'nsi'| &'Numeriquensi'\\\hline
+        
+        
+    \end{tabular}\hfill
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|p{3cm}|p{4cm}|}
+        \hline
+         Instruction & Affichage\\ \hline
+        \verb|'nsi' + mot|&'nsiNumerique'\\\hline
+        \verb|'u' in mot|&True\\\hline
+        \verb|'n' in mot|&False\\\hline
+        \verb|int(mot)|&ERREUR\\\hline
+        \verb|mot * 2| &'NumeriqueNumerique'\\\hline
+        \verb|mot[3] * 2| &'ee'\\\hline
+        
+        
+
+
+    \end{tabular}
+
+\bigskip
+
+\exods{\ptsexoE}
+
+On considère le code suivant:
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+a = True
+b = False
+\end{CodePythontexAlt}
+
+
+Indiquer ce qui est affiché par les instructions suivantes. Si cela génère une erreur, indiquer "erreur".
+
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|p{4cm}|p{3cm}|}
+        \hline
+         Instruction & Affichage\\ \hline
+         \verb|a and b|&False\\\hline
+        \verb|a or b| &True\\\hline
+        \verb|not a| &False\\\hline
+        \verb|a and (not b)|&True\\\hline
+        
+        
+    \end{tabular}\hfill
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|p{4cm}|p{3cm}|}
+        \hline
+         Instruction & Affichage\\ \hline
+        \verb|a or (not b)| &True\\\hline
+        \verb|a and (a or b)|&True\\\hline
+        \verb|b or (a and b)|&False\\\hline
+        \verb|a and (not(a and b))|&True\\\hline
+    \end{tabular}
+\bigskip
+
+
+\exods{\ptsexoF}
+
+On considère le code suivant:
+
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+a = 3
+b = 4
+\end{CodePythontexAlt}
+
+
+Indiquer ce qui est affiché par les instructions suivantes. Si cela génère une erreur, indiquer "erreur".
+
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|p{4cm}|p{3cm}|}
+        \hline
+         Instruction & Affichage\\ \hline
+         \verb|a == 3|&True\\\hline
+        \verb|a != 3| &False\\\hline
+        \verb|a > 3| &False\\\hline
+        
+        
+        
+    \end{tabular}\hfill
+\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|p{4cm}|p{3cm}|}
+        \hline
+         Instruction & Affichage\\ \hline
+        \verb|type(a) == str|&False\\\hline
+        \verb|a == 4 and a/0 == 1|&False\\\hline
+        \verb|a == 3 or a/0 == 1| &True\\\hline
+         \end{tabular}
+\bigskip
+
+
+\exods{\ptsexoG}
+
+Proposer un code Python permettant:
+
+\begin{enumerate}
+    \item de demander à un utilisateur son année de naissance.
+    \item de lui demander son prénom
+    \item de lui afficher le message suivant: "Bonjour \texttt{<prenom>}, tu as \texttt{<age>} ans." en remplaçant \verb|<age>| et \verb|<prenom>| par l'âge et le prénom de l'utilisateur. Par exemple:  \quad \verb|Bonjour Thomas, tu as 17 ans.|
+    \end{enumerate}
+    
+\begin{CodePythontexAlt}[TaillePolice=\large,Largeur=1\linewidth,Centre,PremLigne=1]{}
+anne = input('Entrer votre année de naissance : ')
+prenom = input('Entrer votre prénom : ')
+age = 2025 - int(anne)
+print('Bonjour ' + prenom + ', tu as ' + str(age) + ' ans.')
+\end{CodePythontexAlt}
+\end{document}
+
+
+
+
+
+
+
+

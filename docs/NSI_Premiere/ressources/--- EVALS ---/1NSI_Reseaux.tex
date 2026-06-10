@@ -1,0 +1,342 @@
+\documentclass[a4paper,10pt]{report}
+
+\def\packagepath{../../preambule}   % path du package princial
+\usepackage{\packagepath/preambule}    % utilisation du fichier de configuration
+
+\def\level{Première }              % Classe
+\def\course{NSI}              % Matière
+\def\eval{}
+
+\def\visibleornot{visible}    % visible or invisible
+\def\documentpath{./Sources_Latex}
+\def\date{Mardi 16 Décembre 2025}
+\renewcommand{\arraystretch}{1}  % Ecart dans les tableau
+
+\def\ptsexoA{4}
+\def\ptsexoB{2}
+\def\ptsexoC{3}
+\def\ptsexoD{1}
+\def\ptsexoE{2}
+\def\ptsexoF{4}
+\def\ptsexoG{4}
+\def\ptsexoH{2}
+\def\ptsexoI{2}
+\def\ptsexoJ{2}
+\def\ptsexoK{2}
+
+%\def\ptstotal{\ptsexoA+\ptsexoB+\ptsexoC+\ptsexoD}
+%\usepackage{pgf}
+\pgfmathtruncatemacro{\ptstotal}{\ptsexoA+\ptsexoB+\ptsexoC+\ptsexoD}
+\usepackage{hyperref}
+\usepackage{tasks}
+\usetikzlibrary{shapes, arrows, positioning}
+\usetikzlibrary{shapes.geometric, arrows, positioning, decorations.pathreplacing}
+
+\tikzstyle{etat} = [draw, rounded corners=15pt, minimum width=2.5cm, minimum height=1.2cm, text centered, font=\bfseries]
+\tikzstyle{nouveau} = [etat, fill=blue!40]
+\tikzstyle{pret} = [etat, fill=green!60]
+\tikzstyle{elu} = [etat, fill=yellow!60]
+\tikzstyle{bloque} = [etat, fill=red!60]
+\tikzstyle{termine} = [etat, fill=white]
+\tikzstyle{fleche} = [thick, ->, >=stealth]
+
+\usepackage{float} % Permet d'utiliser [H]
+\usepackage[T1]{fontenc}
+%\newcommand{\field}[2]{\TextField[width=#2]{#1}}
+
+%\newcommand{\Champ}[3][]{%
+    %\TextField[name=#2,width=#3,height=1.2em,#1]{}
+%}
+
+\begin{document}
+
+
+\begin{Form}
+
+\begin{center}
+%{\Large\bfseries Devoir Surveillé de Mathématiques}\\[0.5cm]
+{\large 
+Nom : \TextField[name=nom, width=4cm, bordercolor=red, backgroundcolor={0.85 0.90 1}]{} \hfill 
+Prénom : \TextField[name=prenom, width=4cm, bordercolor=red, backgroundcolor={0.85 0.90 1}]{} \hfill 
+Note : \TextField[name=notetotale, width=2cm, bordercolor={0 0 0}, backgroundcolor={0.9 0.9 0.9}, readonly=true, calculate={%
+var sum = 0;
+var count = 0;
+for(var i = 1; i <= 10; i++) {
+  var field = this.getField("note" + i);
+  if(field && field.value !== "") {
+    var val = parseFloat(field.value);
+    if(!isNaN(val)) {
+      sum += val;
+      count++;
+    }
+  }
+}
+if(count > 0) {
+  event.value = sum + " / \ptstotal";
+} else {
+  event.value = "";
+}
+}]{} }
+\end{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ù
+
+%\PageGardeSujetBac[Matiere = Numérique et Sciences Informatiques,
+%                  Session = 2025,
+%                  AffJour=false,
+%                  Duree = {3 heures 30},
+%                  DernierePage = \pageref{LastPage},
+%                  ModeExamen=false
+%                  ]
+\renewcommand{\labelitemi}{\textbullet} %pour éviter les tirets dans les "itemize" qui apportent confusion avec le signe moins.
+%% Début page de garde style BAC
+
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\PageGardeSujetBac[clés]
+\pagestyle{DS_FP}          % Feuille de style fancy
+%\NomPrenomNote{}
+
+%\cadreNom{}
+\appreciation{}
+
+\begin{center}
+\textbf{ ------ Consignes ------}
+\end{center}
+
+\medskip
+
+\begin{enumerate}[a)]
+    \item Vérifier que vous avez bien à l'intérieur les trois fichiers suivants:
+    \begin{itemize}
+        \item \verb|1NSI_internet.pdf|
+        \item \verb|1NSI_reseau01.pkt|
+        \item \verb|1NSI_reseau02.pkt|
+    \end{itemize}
+    \item Dans la barre de recherche de Windows chercher le logiciel nommé \verb|PDFXViewer|
+    \item Ouvrir ce logiciel.
+    \item \verb|Fichier/Ouvrir| et ouvrir le fichier \verb|1NSI_internet.pdf|. 
+    
+    (Ce PC $\rightarrow$ \verb|P:\ Espace personnel de xxx \ 1NSI-DSinternet| )
+    \item Vous pouvez alors modifier ce fichier PDF. N'oubliez pas de sauvegarder régulièrement.
+\end{enumerate}
+
+
+\bigskip
+
+%Exercice 1
+\exodst{\ptsexoA}
+
+
+
+Donner une définition des termes suivants:
+
+\begin{enumerate}
+    \item Adresse IP (ou adresse Réseau) \hfill \Bareme{} 
+    
+\longfield{3cm}
+
+\item Masque de sous réseau \hfill \Bareme{} 
+    
+\longfield{3cm}
+
+\item Serveur DHCP (Dynamic Host Configuration Protocol) \hfill \Bareme{}
+
+\longfield{3cm}
+
+\item Serveur DNS (Domain Name Systeme) \hfill \Bareme{}
+
+\longfield{3cm}
+\end{enumerate}
+
+
+\medskip
+
+%Exercice 2
+\exodst{\ptsexoB}
+
+Indiquer par une croix dans la case correspondante si les adresses IP suivantes peuvent être données à des appareils connectés::
+    
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|p{6cm}|c|c|}
+    \hline
+    \textbf{Adresse IP} & \textbf{Peut être donnée} & \textbf{Ne peut pas être donnée} \\
+    \hline
+    \verb|192.168.1.4.2| & \checkbox{} & \checkbox{} \\
+    \hline
+    \verb|192.168.1.4| & \checkbox{} & \checkbox{} \\
+    \hline
+    \verb|10.255.255.254| & \checkbox{} & \checkbox{} \\
+    \hline
+    \verb|192.168.1.255| & \checkbox{} & \checkbox{} \\
+    \hline
+\end{tabular}
+
+\medskip
+
+
+%Exercice 3
+\exodst{\ptsexoC}
+
+Voici la configuration réseau d'un appareil:
+
+\begin{center}
+    \includegraphics[width = 0.6\linewidth]{ipconfig2.png}
+\end{center}
+
+\begin{enumerate}
+    \item Indiquer l'adresse IP de cet appareil. \smallfield{} \hfill \Bareme{}
+    \item Indiquer le masque de sous-réseau de cet appareil. \smallfield{} \hfill \Bareme{}
+    \item Indiquer l'adresse IP de la passerelle par défaut. \smallfield{} \hfill \Bareme{}
+    \item Indiquer l'adresse MAC de cet appareil. \smallfield{} \hfill \Bareme{}
+    \item Indiquer l'adresse de ce réseau. \smallfield{} \hfill \Bareme{}
+    \item Indiquer l'adresse de Broadcast de ce réseau. \smallfield{} \hfill \Bareme{}
+\end{enumerate}
+
+\medskip
+
+%Exercice 4
+\exodst{\ptsexoD}
+
+On suppose que nous avons le réseau suivant:
+\begin{itemize}
+    \item adresse IP de ce réseau: \verb|192.168.1.0| avec un masque de sous réseau \verb|255.255.255.0|
+    
+\end{itemize}
+
+\begin{enumerate}
+    \item Indiquer la première adresse IP attribuable à un appareil de ce réseau. \smallfield{} \hfill \Bareme{}
+    \item Indiquer la dernière adresse IP attribuable à un appareil de ce réseau. \smallfield{} \hfill \Bareme{}
+    \item Indiquer le nombre d'appareil que l'on peut intégrer dans ce réseau. \smallfield{} \hfill \Bareme{}
+\end{enumerate}
+
+\medskip
+\pagebreak
+
+%Exercice 5
+\exodst{\ptsexoE}
+
+On suppose que nous avons le réseau suivant:
+\begin{itemize}
+    \item adresse IP de ce réseau: \verb|172.50.128.0/18|
+    
+\end{itemize}
+
+\begin{enumerate}
+    \item indiquer le masque de sous réseau en notation décimale pointée. (4 valeurs) \smallfield{} \hfill \Bareme{}
+    \item Indiquer la première adresse IP attribuable à un appareil de ce réseau. \smallfield{} \hfill \Bareme{}
+    \item Indiquer la dernière adresse IP attribuable à un appareil de ce réseau. \smallfield{} \hfill \Bareme{}
+    \item Indiquer le nombre d'appareil que l'on peut intégrer dans ce réseau. \smallfield{} \hfill \Bareme{}
+\end{enumerate}
+
+\medskip
+
+%Exercice 6
+\exodst{\ptsexoF}
+
+Dans cet exercice, nous utiliserons le fichier nommé \verb|1NSI_reseau01.pkt|.
+
+\begin{minipage}{0.6\linewidth}
+    \begin{enumerate}[a)]
+    \item Ouvrir le logiciel \verb|Packet Tracer|
+    \item Ouvrir le fichier \verb|1NSI_reseau01.pkt|
+    \item Vous devez obtenir le résultat suivant:
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}{0.37\linewidth}
+
+\includegraphics[width = 0.95\linewidth]{DS03_01.png}
+\end{minipage}
+
+\bigskip
+
+\begin{enumerate}
+    
+    \item Indiquer l'adresse du réseau dans lequel se trouve \verb|PC0|. \smallfield{}\hfill \Bareme{} 
+    \item Compléter l'adresse IP et le masque de sous-réseau de \verb|PC2| de manière à faire communiquer \verb|PC0| et \verb|PC2|. 
+    
+    Inscrire ici l'adresse que vous avez attribuée: \smallfield{} et le masque utilisé: \smallfield{}\hfill \Bareme{}  
+    \item Ajouter un routeur modèle \verb|1841| connecté au switch \verb|Switch0|. 
+    
+\includegraphics[width = 0.2\linewidth]{DS03_pk1.png} \qquad 
+\includegraphics[width = 0.2\linewidth]{DS03_pk2.png} \qquad 
+\includegraphics[width = 0.3\linewidth]{DS03_pk3.png}
+
+    Vous devriez maintenant obtenir le schéma suivant:
+
+    \begin{center}
+        \includegraphics[width = 0.6\linewidth]{DS03_02}
+    \end{center} 
+
+    \item Configurer ce routeur de manière à permettre la communication entre \verb|PC0| et le routeur \verb|1841|. On donnera au routeur la dernière adresse IP disponible dans le réseau de \verb|PC0|. (Attention à ne pas oublier d'allumer l'interface réseau du routeur).  
+    
+    Indiquer ici l'adresse que vous avez attribuée: \smallfield{}  \hfill \Bareme{}  
+    \item Vérifier que toutes les machines peuvent communiquer entre elles. \hfill \Bareme{} 
+    \item Sauvegarder votre travail.
+    
+    \bigskip
+
+     
+      
+        %\appelprof
+
+
+    
+
+
+\end{enumerate}
+
+\pagebreak
+
+%Exercice 7
+\exodst{\ptsexoG}
+
+\medskip
+
+Dans cet exercice, nous utiliserons le fichier nommé \verb|1NSI_reseau02.pkt|.
+
+    \begin{enumerate}[a)]
+    \item Ouvrir le logiciel \verb|Packet Tracer|
+    \item Ouvrir le fichier \verb|1NSI_reseau02.pkt|
+    \item Vous devez obtenir le résultat suivant:
+\end{enumerate}
+
+\includegraphics[width = 0.95\linewidth]{DS03_03.png}
+
+
+\begin{enumerate}
+    \item Vérifier que \verb|PC0| et \verb|PC1| peuvent communiquer entre eux. 
+    \item Vérifier que \verb|PC2|, \verb|PC3|, \verb|PC4| et le serveur \verb|DHCP| peuvent communiquer entre eux. 
+    \item Les machines du réseau de gauche (\verb|PC0|, \verb|PC1|) ont été configurées pour utiliser une adresse IP fixe (statique) et pour utiliser comme passerelle par défaut le routeur \verb|Routeur0|. Inscrire ici l'adresse IP de la passerelle par défaut en explorant les configurations réseaux des différentes machines du réseau de gauche: \smallfield{}\hfill \Bareme{} 
+    \item Les machines du réseau de droite (\verb|PC2|, \verb|PC3|, serveur DHCP) ont été configurées pour utiliser une adresse IP fixe (statique) et pour utiliser comme passerelle par défaut le routeur \verb|Routeur0|. Inscrire ici l'adresse IP de la passerelle par défaut en explorant les configurations réseaux des différentes machines du réseau de droite: \smallfield{}\hfill \Bareme{} 
+    \item Configurer les interfaces réseaux du routeur \verb|routeur0| en utilisant les adresses IP trouvées aux questions précédentes.
+    \item Vérifier que \verb|PC0| et \verb|PC3| peuvent communiquer entre eux.\hfill \Bareme{} 
+    \item Sauvegarder votre travail.
+    
+    \medskip
+
+    \item Le \verb|PC4| a été configuré en DHCP activé. Indiquer ici son adresse IP: \smallfield{}\hfill \Bareme{} 
+    \item Explorer la configuration réseau de cette machine et indiquer comment elle a obtenu son adresse IP.\hfill \Bareme{} 
+    
+    \longfield{4.5cm}
+  
+
+\end{enumerate}
+
+\medskip
+
+
+
+\end{Form}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
