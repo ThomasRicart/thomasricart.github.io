@@ -31,9 +31,12 @@ extra_css:
   - _environments/stylesheets/extra.css
   
 exclude_docs: |
-  _docs/*
-  **/old/*
-  *.zip
+  **/*.tex
+  **/Images/*
+  **/Sources_Latex/*
+  _*/
+  **/_*
+  
   
 theme:
   name: material
