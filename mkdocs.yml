@@ -30,10 +30,10 @@ extra_javascript:
 extra_css:
   - _environments/stylesheets/extra.css
   
-exclude_docs:
-  - "_docs/*"
-  - "**/old/*"
-  - "*.zip"
+exclude_docs: |
+  _docs/*
+  **/old/*
+  *.zip
   
 theme:
   name: material
