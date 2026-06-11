@@ -1,0 +1,91 @@
+Sine qua non - version 2
+Cadre : oui
+Couleur cadre : 12632256	16777215
+Orientation : portrait
+Axes invisibles	x	y	0	0
+Graduations incomplètes
+Graduations basées sur la grille
+Largeur en mm : 90
+Hauteur en mm : 64
+Marge gauche en mm : 15
+Marge haute en mm : 15
+Distance de l'axe Ox en mm : 65
+Distance de l'axe Oy en mm : 90
+Origine de l'axe Ox : 0	4	chiffres significatifs
+Origine de l'axe Oy : 0	4	chiffres significatifs
+Unité sur l'axe Ox : 1
+Format des unités sur Ox : normal
+Longueur de l'unité sur Ox en mm : 10
+Unité sur l'axe Oy : 1
+Format des unités sur Oy : normal
+Longueur de l'unité sur Oy en mm : 10
+Zoom (%) : 100
+Style grille : 0	5
+Couleur du repère : 0
+Couleur de la grille : 6250335
+Polices utilisées graduations-points : Courier New-Arial
+      taille  : 10-10
+      couleur : 0-0
+      style : normal-gras
+Nombre de textes : 0
+Nombre de fonctions : 0
+Nombre de courbes paramétrées : 0
+Pas de famille de fonctions
+Nombre de droites : 0
+Nombre d'objets graphiques : 0	1
+Pas de courbe définie point par point
+Données statistiques 1 variable non numérique
+   Titre de la série : 
+   Style du graphique : 0
+Times New Roman
+   Nombre de lignes : 0
+Données statistiques 1 variable (valeurs isolées)
+   Titre de la série : 
+   Style du graphique : 20
+Times New Roman
+   Couleur : 16777181
+   Nombre de lignes : 0
+Pas de données statistiques 1 variable (valeurs regroupées en classes)
+Pas de données statistiques 2 variables
+Pas de loi binômiale
+Pas de loi de Poisson
+Pas de loi normale
+Pas de suite numérique
+Pas d'intégrale
+Pas de courbe point par point lissée
+Pas de boîtes à moustaches multiples
+Pas de table de valeurs de fonctions
+Pas de table de valeurs de courbes paramétrées
+Pas d'inéquations
+Pas d'expressions LaTeX
+Pas de courbes en coordonnées polaires.
+Pas de courbe dérivée.
+Pas de courbe primitive.
+Échelle linéaire sur l'axe Ox
+Échelle linéaire sur l'axe Oy
+Pas de simulations statistiques.
+Arbre de probabilités
+   Nombre de branches : 6
+   Nombre d'étages : 2
+   Nombre de bouts : 4
+	1	A	,,,,,,
+	11	R	,,,,,,
+	12	&R	,,,,,,
+	2	B	,,,,,,
+	21	R	,,,,,,
+	22	&R	,,,,,,
+   Couleur des traits : 0
+   Épaisseur des traits : 0
+   Police des évènements : Times New Roman
+      taille : 12
+      couleur : 0
+      style : normal
+   Police des probabilités : Times New Roman
+      taille : 12
+      couleur : 0
+      style : normal
+   Présence de omega : non
+   Effacer repère : oui
+   Taille automatique : oui
+Pas de tableau de variations ou de signes.
+Pas de loi exponentielle
