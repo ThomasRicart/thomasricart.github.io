@@ -1,0 +1,25 @@
+<svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: 'Brush Script MT', 'Lucida Handwriting', cursive; font-weight: bold; font-style: italic; }
+      .subtitle { font-family: 'Segoe UI', Arial, sans-serif; font-weight: 600; letter-spacing: 3px; }
+    </style>
+  </defs>
+  
+  <!-- 7 Étoiles vertes distribuées autour du logo -->
+    
+  <!-- Texte principal - BLANC très clair et épais -->
+  <text x="250" y="170" class="title" font-size="90" font-weight="900" fill="#FFFFFF" stroke="none">
+    Lycée Victor Hugo
+  </text>
+  
+  <!-- Ligne décorative - BLANCHE -->
+  <line x1="250" y1="200" x2="750" y2="200" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Texte secondaire centré - BLANC très clair -->
+  <text x="500" y="250" class="subtitle" font-size="52" font-weight="700" fill="#FFFFFF" text-anchor="middle" stroke="none">
+    Colomiers
+  </text>
+  
+  
+</svg>
