@@ -3,3 +3,4 @@ collapse: true
 nav:
   - index.md
   - "C200 - AP" : C200_Accompagnement_Perso
+  - "C210 - Equations Différentielles": C210_Equations_Differentielles
