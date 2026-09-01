@@ -8,7 +8,7 @@ theme:
     - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
+    # - navigation.sections
     - navigation.indexes
     - search.suggest
     - toc.integrate   # <-- AJOUTER CETTE LIGNE
