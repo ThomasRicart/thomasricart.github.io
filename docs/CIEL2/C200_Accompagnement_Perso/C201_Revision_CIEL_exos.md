@@ -10,15 +10,15 @@ Cette série d'exercices couvre l'ensemble des modules du programme de révision
 ### Exercice 1.1 : Calculs de probabilités conditionnelles et arbre
 Dans un parc informatique d'une entreprise, 60% des ordinateurs sont des postes fixes et 40% sont des portables. 
 
-- 5% des ordinateurs fixes présentent une défaillance matérielle au cours de l'année.
+* 5% des ordinateurs fixes présentent une défaillance matérielle au cours de l'année.
 
-- 10% des ordinateurs portables présentent une défaillance matérielle au cours de l'année.
+* 10% des ordinateurs portables présentent une défaillance matérielle au cours de l'année.
 
 On choisit un ordinateur au hasard dans le parc. On note :
 
-- \(F\) : « L'ordinateur est un poste fixe »
+* \(F\) : « L'ordinateur est un poste fixe »
 
-- \(D\) : « L'ordinateur présente une défaillance »
+* \(D\) : « L'ordinateur présente une défaillance »
 
 1. Représenter la situation par un arbre pondéré.
 2. Calculer la probabilité que l'ordinateur soit fixe et présente une défaillance.
