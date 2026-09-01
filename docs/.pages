@@ -1,3 +1,5 @@
+collapse: true
+
 nav:
   - index.md
   - "⚪ CIEL2": CIEL2
