@@ -11,6 +11,7 @@ theme:
     - navigation.sections
     - navigation.indexes
     - search.suggest
+    - toc.integrate   # <-- AJOUTER CETTE LIGNE
 
 plugins:
   - search
