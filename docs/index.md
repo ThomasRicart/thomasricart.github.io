@@ -1,6 +1,3 @@
-# Bienvenue sur le site de cours
-
-
 <a href="https://thomasricart.github.io/NSI_Premiere/">
 <img src="./graphics/images/nsi_premiere.png" alt="Premiere NSI" width="20%">
 </a>
