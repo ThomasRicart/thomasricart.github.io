@@ -5,6 +5,7 @@ theme:
   name: material
   language: fr
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
@@ -29,18 +30,18 @@ extra_javascript:
 
 extra_css:
   - _environments/stylesheets/extra.css
-  
+
 exclude_docs: |
+  # Fichiers sources et temporaires
   **/*.tex
   **/Images/*
   **/Sources_Latex/*
   _*/
   **/_*
-  
-  
-theme:
-  name: material
-  features:
-    - navigation.instant
 
-  
+  # Dossiers ignorés pour le moment (compilation CIEL2 uniquement)
+  CIEL1/
+  Maths_Premiere/
+  NSI_Premiere/
+  NSI_Terminale/
+  SNT/
