@@ -1,3 +1,6 @@
-nav:
-  - index.md
-  - "C200 - AP" : C200_Accompagnement_Perso
+title: CIEL2
+collapse: true
+
+#nav:
+ # - index.md
+ # - "C200 - AP" : C200_Accompagnement_Perso
