@@ -5,3 +5,5 @@ arrange:
     - index.md
     - 1NSI_AP_Algos_Programmation
 
+rest: hide
+

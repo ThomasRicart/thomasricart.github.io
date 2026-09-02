@@ -1,3 +1,5 @@
-nav:
+title: "AP01 Constructions élémentaires"
+collapse: true
+
+arrange:
   - index.md
-  
