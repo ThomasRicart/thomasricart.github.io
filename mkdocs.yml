@@ -11,7 +11,7 @@ theme:
     # - navigation.sections
     - navigation.indexes
     - search.suggest
-    - toc.integrate   # <-- AJOUTER CETTE LIGNE
+    # - toc.integrate   # <-- AJOUTER CETTE LIGNE
 
 use_directory_urls: false
 
