@@ -10,3 +10,4 @@
 
 
 
+<a href="console-python.html">Accéder au labo Python</a>
