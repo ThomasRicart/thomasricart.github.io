@@ -5,12 +5,12 @@ collapse: true  # Le menu sera replié par défaut à gauche
 arrange:
   - index.md
   - AP01_Constructions_elementaires
-  - AP02_Fonctions
-  - AP03_Conditions_IF
-  - AP04_Boucles_FOR_WHILE
-  - AP05_Listes_Tuples
-  - AP06_Algos_recherche
-  - AP07_Dictionnaires
-  - AP08_Tri_Insertion_Selection
-  - AP09_Algos_Gloutons
-  - AP10_Algos_KNN
+  #- AP02_Fonctions
+  #- AP03_Conditions_IF
+  #- AP04_Boucles_FOR_WHILE
+  #- AP05_Listes_Tuples
+  #- AP06_Algos_recherche
+  #- AP07_Dictionnaires
+  #- AP08_Tri_Insertion_Selection
+  #- AP09_Algos_Gloutons
+  #- AP10_Algos_KNN
