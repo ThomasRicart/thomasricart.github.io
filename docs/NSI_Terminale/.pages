@@ -1,2 +1,6 @@
 title: "🔵 TNSI"
 collapse: true
+
+arrange:
+    - index.md
+    - "Révision": 26-Revision

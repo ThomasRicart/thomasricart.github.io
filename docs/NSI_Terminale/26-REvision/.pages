@@ -1,2 +1,5 @@
-nav:
+title: "Révisions"
+collapse: true
+
+arrange:
   - index.md
