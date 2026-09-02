@@ -46,5 +46,5 @@ exclude_docs: |
   CIEL1/
   Maths_Premiere/
   # NSI_Premiere/
-  NSI_Terminale/
+  # NSI_Terminale/
   SNT/
