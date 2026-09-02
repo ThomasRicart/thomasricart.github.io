@@ -13,6 +13,8 @@ theme:
     - search.suggest
     - toc.integrate   # <-- AJOUTER CETTE LIGNE
 
+use_directory_urls: false
+
 plugins:
   - search
   - awesome-pages
