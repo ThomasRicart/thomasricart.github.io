@@ -23,7 +23,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/a9d3-10504403) | **a9d3-10504403** | [Correction]()|
 
 ---
-[🚀 Ouvrir et exécuter le TP dans Basthon](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP01_Constructions_elementaires/AP01_ACT1-constructions_elementaires.ipynb){ .md-button .md-button--primary }
+[🚀 Ouvrir et exécuter le TP en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP01_Constructions_elementaires/AP01_ACT1-constructions_elementaires.ipynb){ .md-button .md-button--primary }
 ---
 
 ### 🧩 Concepts illustrés
