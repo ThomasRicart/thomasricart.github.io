@@ -43,6 +43,6 @@ exclude_docs: |
   # Dossiers ignorés pour le moment (compilation CIEL2 uniquement)
   CIEL1/
   Maths_Premiere/
-  NSI_Premiere/
+  # NSI_Premiere/
   NSI_Terminale/
   SNT/
