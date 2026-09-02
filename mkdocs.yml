@@ -34,6 +34,8 @@ extra_javascript:
 extra_css:
   - environments/stylesheets/extra.css
 
+extra:
+  generator: false
 exclude_docs: |
   # Fichiers sources et temporaires
   **/*.tex
