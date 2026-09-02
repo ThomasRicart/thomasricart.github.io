@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Quelle balise HTML permet d'écrire ou de lier du code JavaScript ?",
+    "options": ["&lt;js&gt;", "&lt;script&gt;", "&lt;javascript&gt;", "&lt;link&gt;"],
+    "answer": 1,
+    "feedback": "La balise &lt;script&gt; est utilisée pour inclure du code exécutable."
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour déclarer une variable dont la valeur peut changer ?",
+    "options": ["const", "var", "let", "static"],
+    "answer": 2,
+    "feedback": "En JS moderne, 'let' est privilégié pour les variables et 'const' pour les constantes."
+  },
+  {
+    "question": "Quelle méthode permet de récupérer un élément HTML unique via son ID ?",
+    "options": ["getElementByClass", "findId", "document.getElementById", "select()"],
+    "answer": 2,
+    "feedback": "C'est la méthode de base du DOM pour cibler un élément spécifique."
+  },
+  {
+    "question": "Quelle propriété permet de modifier le texte situé entre les balises d'un élément ?",
+    "options": ["value", "textContent", "src", "text-style"],
+    "answer": 1,
+    "feedback": "textContent (ou innerText) permet d'accéder au contenu textuel de l'élément."
+  },
+  {
+    "question": "Comment appelle-t-on le concept qui représente la page HTML comme un arbre d'objets ?",
+    "options": ["Le DNS", "Le DOM", "Le CSS", "Le JSON"],
+    "answer": 1,
+    "feedback": "DOM signifie Document Object Model."
+  },
+  {
+    "question": "Comment modifier la couleur de fond d'un élément 'elt' en JavaScript ?",
+    "options": ["elt.color = 'blue'", "elt.style.backgroundColor = 'blue'", "elt.css('blue')", "elt.background = 'blue'"],
+    "answer": 1,
+    "feedback": "On accède à l'objet 'style' puis à la propriété en camelCase (backgroundColor)."
+  },
+  {
+    "question": "Quel symbole utilise-t-on pour ajouter un commentaire sur une seule ligne en JavaScript ?",
+    "options": ["#", "&lt;!--", "/*", "//"],
+    "answer": 3,
+    "feedback": "// est utilisé pour les commentaires de fin de ligne en JS."
+  },
+  {
+    "question": "Quel événement est déclenché lorsqu'un utilisateur clique sur un bouton ?",
+    "options": ["onhover", "onclick", "onpress", "onload"],
+    "answer": 1,
+    "feedback": "L'attribut onclick permet d'exécuter une fonction lors d'un clic."
+  },
+  {
+    "question": "Que fait l'instruction : console.log('Hello') ?",
+    "options": ["Affiche un message sur la page", "Ouvre une fenêtre d'alerte", "Affiche un message dans la console de debug", "Ferme le navigateur"],
+    "answer": 2,
+    "feedback": "C'est l'outil indispensable du développeur pour tester ses variables."
+  },
+  {
+    "question": "Quelle est la bonne syntaxe pour appeler une fonction nommée 'maFonction' ?",
+    "options": ["call maFonction", "maFonction()", "maFonction[]", "run maFonction"],
+    "answer": 1,
+    "feedback": "On utilise le nom de la fonction suivi de parenthèses."
+  }
+]

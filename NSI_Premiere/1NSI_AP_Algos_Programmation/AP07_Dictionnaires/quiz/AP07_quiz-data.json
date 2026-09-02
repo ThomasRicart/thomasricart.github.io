@@ -1,0 +1,68 @@
+[
+  {
+    "question": "Quelle est la délimitation d'un dictionnaire en Python ?",
+    "options": ["[]", "()", "{}", "<>"],
+    "answer": 2,
+    "feedback": "Les dictionnaires utilisent les accolades <code>{}</code>."
+  },
+  {
+    "question": "Dans <code>d = {'un': 1, 'deux': 2}</code>, qu'est-ce que 'un' ?",
+    "options": ["Une valeur", "Une clé", "Un indice", "Une méthode"],
+    "answer": 1,
+    "feedback": "Dans une paire <code>clé: valeur</code>, l'élément avant les deux-points est la clé."
+  },
+  {
+    "question": "Que se passe-t-il si on affecte une valeur à une clé déjà existante ?",
+    "options": ["Python lève une erreur", "Le dictionnaire s'agrandit", "La valeur est ajoutée à la suite", "L'ancienne valeur est écrasée"],
+    "answer": 3,
+    "feedback": "Les clés sont uniques. Une nouvelle affectation sur une clé existante met à jour sa valeur."
+  },
+  {
+    "question": "Lequel de ces types ne peut PAS être une clé de dictionnaire ?",
+    "options": ["int", "str", "tuple", "list"],
+    "answer": 3,
+    "feedback": "Une clé doit être de type <strong>immuable</strong>. Les listes sont mutables, elles ne peuvent donc pas être des clés."
+  },
+  {
+    "question": "Quelle commande permet de supprimer la clé 'a' du dictionnaire <code>d</code> ?",
+    "options": ["d.remove('a')", "del d['a']", "d.delete('a')", "d.pop('a')"],
+    "answer": 1,
+    "feedback": "L'instruction <code>del</code> est la méthode standard pour supprimer une entrée."
+  },
+  {
+    "question": "Que renvoie la méthode <code>d.keys()</code> ?",
+    "options": ["Toutes les valeurs", "Toutes les clés", "Le nombre d'éléments", "La première clé"],
+    "answer": 1,
+    "feedback": "Elle renvoie une vue sur l'ensemble des clés du dictionnaire."
+  },
+  {
+    "question": "Comment vérifier si la clé 'nom' existe dans <code>d</code> ?",
+    "options": ["if 'nom' in d:", "if d.has('nom'):", "if d['nom'] == True:", "if 'nom' == d.keys():"],
+    "answer": 0,
+    "feedback": "Le mot-clé <code>in</code> teste par défaut la présence parmi les clés."
+  },
+  {
+    "question": "Que vaut <code>len(d)</code> si <code>d = {'a': 1, 'b': 2, 'a': 3}</code> ?",
+    "options": ["1", "2", "3", "Erreur"],
+    "answer": 1,
+    "feedback": "La clé 'a' est présente deux fois, donc la deuxième écrase la première. Il ne reste que deux paires."
+  },
+  {
+    "question": "Quelle méthode renvoie les couples (clé, valeur) sous forme de tuples ?",
+    "options": [".couples()", ".all()", ".items()", ".get()"],
+    "answer": 2,
+    "feedback": "<code>.items()</code> est indispensable pour parcourir clé et valeur simultanément dans une boucle."
+  },
+  {
+    "question": "Soit <code>d = {}</code>. Quelle instruction provoque une erreur ?",
+    "options": ["d['x'] = 1", "print(d['x'])", "len(d)", "d.clear()"],
+    "answer": 1,
+    "feedback": "Accéder à une clé qui n'existe pas lève une <code>KeyError</code>."
+  },
+  {
+    "question": "Que fait <code>d.clear()</code> ?",
+    "options": ["Supprime le dictionnaire", "Supprime les clés mais garde les valeurs", "Vide le dictionnaire de toutes ses paires", "Réinitialise les valeurs à zéro"],
+    "answer": 2,
+    "feedback": "<code>.clear()</code> vide le contenu mais l'objet dictionnaire existe toujours (il devient {})."
+  }
+]

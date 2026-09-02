@@ -1,0 +1,50 @@
+[
+    {
+        "recto": "Quelle est la définition d'une liste ?",
+        "verso": "C'est une structure de données contenant des éléments ordonnés, identifiés par des <strong>indices</strong> et entourés de crochets <code>[]</code>."
+    },
+    {
+        "recto": "À quelle valeur commence le premier indice d'une liste ou d'un tuple ?",
+        "verso": "Les indices commencent toujours à <strong>0</strong>."
+    },
+    {
+        "recto": "Que permet d'obtenir l'indice <code>-1</code> dans une liste ?",
+        "verso": "Il permet d'accéder au <strong>dernier élément</strong> de la structure."
+    },
+    {
+        "recto": "Quelle fonction Python permet de connaître le nombre d'éléments d'une liste ?",
+        "verso": "C'est la fonction <code>len()</code>."
+    },
+    {
+        "recto": "Que signifie le fait qu'une liste soit <strong>mutable</strong> ?",
+        "verso": "Cela signifie que son contenu peut être <strong>modifié</strong> après sa création (via son indice ou des méthodes)."
+    },
+    {
+        "recto": "Quelle est la différence syntaxique entre une liste et un tuple ?",
+        "verso": "La liste utilise des <strong>crochets []</strong> [cite: 12] alors que le tuple utilise des <strong>parenthèses ()</strong>."
+    },
+    {
+        "recto": "Quelle est la propriété principale d'un tuple concernant sa modification ?",
+        "verso": "Un tuple est <strong>immuable</strong> : ses éléments ne peuvent pas être modifiés après sa création."
+    },
+    {
+        "recto": "Quelle méthode permet d'ajouter un élément à la fin d'une liste ?",
+        "verso": "C'est la méthode <code>append(elt)</code>."
+    },
+    {
+        "recto": "À quoi sert la méthode <code>pop(i)</code> ?",
+        "verso": "Elle <strong>supprime et renvoie</strong> l'élément situé à l'indice <code>i</code>."
+    },
+    {
+        "recto": "Comment créer une copie indépendante d'une liste <code>L</code> pour éviter les effets de bord ?",
+        "verso": "En utilisant le slicing : <code>L_copie = L[:]</code>."
+    },
+    {
+        "recto": "Qu'est-ce qu'une 'liste de listes' ?",
+        "verso": "C'est une liste dont les éléments sont eux-mêmes des listes, permettant de représenter des structures comme des tableaux."
+    },
+    {
+        "recto": "Comment accède-t-on au chiffre 5 dans <code>M = [[1, 2], [5, 6]]</code> ?",
+        "verso": "En utilisant le double indiçage : <code>M[1][0]</code>."
+    }
+]

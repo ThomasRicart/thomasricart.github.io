@@ -1,0 +1,34 @@
+[
+    {
+        "recto": "Quel tri correspond à l'analogie du tri des cartes que l'on reçoit une par une ?",
+        "verso": "Le <strong>tri par insertion</strong>."
+    },
+    {
+        "recto": "Quel tri correspond à l'analogie du tri des cartes que l'on reçoit toutes d'un coup ?",
+        "verso": "Le <strong>tri par sélection</strong>."
+    },
+    {
+        "recto": "Qu'est-ce que la 'clé' dans un tri par insertion ?",
+        "verso": "C'est le premier élément de la partie non triée que l'on cherche à placer."
+    },
+    {
+        "recto": "Dans le tri par sélection, que fait-on après avoir trouvé le minimum de la liste non triée ?",
+        "verso": "On l'<strong>échange</strong> avec le premier élément de la liste non triée."
+    },
+    {
+        "recto": "Quelle est la complexité temporelle de ces deux algorithmes de tri ?",
+        "verso": "Une complexité <strong>quadratique</strong>, notée $O(n^2)$."
+    },
+    {
+        "recto": "Pourquoi le tri par sélection s'arrête-t-il quand la partie triée contient $n-1$ éléments ?",
+        "verso": "Parce que le dernier élément restant est alors forcément à sa place et donc trié."
+    },
+    {
+        "recto": "Que signifie un tri effectué 'en place' ?",
+        "verso": "Cela signifie que la fonction modifie directement la liste d'origine sans en créer une nouvelle."
+    },
+    {
+        "recto": "Dans votre code de tri par insertion, quelle est la condition pour continuer à décaler la clé vers la gauche ?",
+        "verso": "Il faut que le bord gauche ne soit pas atteint (<code>k > 0</code>) ET que la clé soit inférieure à l'élément de gauche."
+    }
+]

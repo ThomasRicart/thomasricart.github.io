@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Combien de valeurs différentes peut-on coder avec un seul bit ?",
+    "options": ["1", "2", "4", "8"],
+    "answer": 1,
+    "feedback": "Un bit peut prendre soit la valeur 0, soit la valeur 1, donc 2 états possibles."
+  },
+  {
+    "question": "Quelle est la valeur décimale du nombre binaire 1011 ?",
+    "options": ["7", "10", "11", "13"],
+    "answer": 2,
+    "feedback": "1x2³ + 0x2² + 1x2¹ + 1x2⁰ = 8 + 0 + 2 + 1 = 11."
+  },
+  {
+    "question": "Comment appelle-t-on un regroupement de 8 bits ?",
+    "options": ["Un quartet", "Un mot", "Un octet", "Un double"],
+    "answer": 2,
+    "feedback": "Un octet (ou byte en anglais) est composé de 8 bits, permettant de coder 256 valeurs."
+  },
+  {
+    "question": "En hexadécimal, quelle lettre représente la valeur décimale 12 ?",
+    "options": ["A", "B", "C", "D"],
+    "answer": 2,
+    "feedback": "A=10, B=11, C=12, D=13, E=14, F=15."
+  },
+  {
+    "question": "Pour convertir un nombre décimal en binaire, quelle opération utilise-t-on successivement ?",
+    "options": ["La multiplication par 2", "La division euclidienne par 2", "L'addition de puissances de 10", "La soustraction par 16"],
+    "answer": 1,
+    "feedback": "On effectue des divisions successives par 2 et on lit les restes de bas en haut."
+  },
+  {
+    "question": "Quelle est la valeur maximale codable sur 8 bits (un octet) ?",
+    "options": ["127", "128", "255", "256"],
+    "answer": 2,
+    "feedback": "Sur n bits, le max est 2^n - 1. Pour 8 bits : 2⁸ - 1 = 256 - 1 = 255."
+  },
+  {
+    "question": "Convertir le nombre hexadécimal A3 en décimal.",
+    "options": ["103", "163", "130", "30"],
+    "answer": 1,
+    "feedback": "A=10. Donc 10x16¹ + 3x16⁰ = 160 + 3 = 163."
+  },
+  {
+    "question": "Pour convertir directement du binaire vers l'hexadécimal, on regroupe les bits par :",
+    "options": ["2", "4", "8", "16"],
+    "answer": 1,
+    "feedback": "Chaque symbole hexadécimal correspond exactement à un groupe de 4 bits (un quartet)."
+  },
+  {
+    "question": "Que vaut 1000 en binaire après regroupement par 4 pour l'hexadécimal ?",
+    "options": ["4", "8", "F", "1"],
+    "answer": 1,
+    "feedback": "1x2³ + 0 + 0 + 0 = 8. En hexadécimal, c'est le chiffre 8."
+  },
+  {
+    "question": "Quel est l'état d'un transistor 'passant' en logique binaire ?",
+    "options": ["0", "1", "X", "OFF"],
+    "answer": 1,
+    "feedback": "Par convention, bloqué = 0 et passant = 1."
+  }
+]

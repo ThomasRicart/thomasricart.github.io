@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Quelle structure utilise-t-on pour exécuter un bloc de code seulement si une condition est vraie ?",
+    "options": ["La structure function", "La structure if", "La structure loop", "La structure const"],
+    "answer": 1,
+    "feedback": "Le mot-clé 'if' (si) est la base du branchement conditionnel en programmation."
+  },
+  {
+    "question": "Quel opérateur signifie 'supérieur ou égal' en JavaScript ?",
+    "options": ["=>", ">==", ">+", ">="],
+    "answer": 3,
+    "feedback": "L'ordre est important : d'abord le signe supérieur, puis le signe égal."
+  },
+  {
+    "question": "Quelle méthode permet d'ajouter une classe CSS à un élément HTML ?",
+    "options": ["element.addClass()", "element.style.add()", "element.classList.add()", "element.setClassName()"],
+    "answer": 2,
+    "feedback": "L'objet 'classList' contient toutes les méthodes pour manipuler les classes CSS."
+  },
+  {
+    "question": "Pourquoi utilise-t-on parseFloat() sur la valeur d'un curseur (input range) ?",
+    "options": ["Pour changer sa couleur", "Pour le transformer en nombre décimal", "Pour l'arrondir", "Pour l'effacer"],
+    "answer": 1,
+    "feedback": "Les formulaires renvoient du texte ; parseFloat permet de faire des calculs ou comparaisons mathématiques."
+  },
+  {
+    "question": "Dans un bloc if/else if/else, quand le code du bloc 'else' est-il exécuté ?",
+    "options": ["Toujours au début", "Si aucune des conditions précédentes n'est vraie", "Seulement si une erreur survient", "Si tout est vrai"],
+    "answer": 1,
+    "feedback": "Le 'else' est le choix par défaut quand aucune condition 'if' n'a été satisfaite."
+  },
+  {
+    "question": "Quel symbole signifie 'différent de' en JavaScript ?",
+    "options": ["<>", "not=", "==", "!="],
+    "answer": 3,
+    "feedback": "Le point d'exclamation représente la négation du symbole égal."
+  },
+  {
+    "question": "Quelle méthode permet de retirer une classe CSS spécifique ?",
+    "options": ["classList.remove()", "classList.delete()", "classList.clear()", "style.remove()"],
+    "answer": 0,
+    "feedback": "C'est l'inverse de la méthode .add()."
+  },
+  {
+    "question": "Comment appelle-t-on la valeur 'eteindre' envoyée ici : gererLumiere('eteindre') ?",
+    "options": ["Une variable locale", "Un événement", "Un argument (ou paramètre)", "Un sélecteur"],
+    "answer": 2,
+    "feedback": "C'est l'information transmise à la fonction pour qu'elle puisse agir de façon spécifique."
+  },
+  {
+    "question": "Que se passe-t-il si on ajoute la classe 'chaud' sans retirer la classe 'froid' ?",
+    "options": ["L'ordinateur plante", "Les styles peuvent entrer en conflit", "Le CSS est supprimé", "La page devient blanche"],
+    "answer": 1,
+    "feedback": "Les classes s'accumulent ; il faut 'nettoyer' l'élément pour éviter les bugs d'affichage."
+  },
+  {
+    "question": "À quoi sert la propriété .textContent ?",
+    "options": ["À changer la police", "À ajouter une image", "À modifier le texte d'une balise", "À créer un lien"],
+    "answer": 2,
+    "feedback": "C'est le moyen le plus simple de mettre à jour un affichage textuel dynamiquement."
+  }
+]

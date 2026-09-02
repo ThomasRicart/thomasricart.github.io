@@ -1,0 +1,42 @@
+[
+    {
+        "recto": "Comment appelle-t-on une boucle dont on connaît le nombre d'étapes à l'avance ?",
+        "verso": "Une boucle <strong>bornée</strong> (généralement une boucle <code>for</code>)."
+    },
+    {
+        "recto": "Que fait l'instruction <code>range(0, 7)</code> ?",
+        "verso": "Elle crée un itérateur qui va de <strong>0 à 6</strong> (7 valeurs au total, la borne supérieure est exclue)."
+    },
+    {
+        "recto": "Dans <code>for i in range(2, 6)</code>, quelles sont les valeurs successives de <code>i</code> ?",
+        "verso": "Les valeurs sont : <strong>2, 3, 4 et 5</strong>."
+    },
+    {
+        "recto": "Comment appelle-t-on la variable (souvent <code>i</code>) qui change à chaque tour de boucle ?",
+        "verso": "C'est un <strong>itérateur</strong> (ou compteur)."
+    },
+    {
+        "recto": "Quelle est la particularité d'une boucle <code>while</code> ?",
+        "verso": "C'est une boucle <strong>non-bornée</strong> : elle s'exécute tant qu'une condition est vraie."
+    },
+    {
+        "recto": "Que se passe-t-il si la condition d'un <code>while</code> ne devient jamais fausse ?",
+        "verso": "Le programme entre dans une <strong>boucle infinie</strong>."
+    },
+    {
+        "recto": "Où est placée la condition d'arrêt dans une boucle <code>while</code> ?",
+        "verso": "Elle est évaluée <strong>au début</strong> de chaque tour de boucle."
+    },
+    {
+        "recto": "Comment itérer directement sur les lettres du mot <code>'NSI'</code> ?",
+        "verso": "En utilisant : <code>for lettre in 'NSI':</code>."
+    },
+    {
+        "recto": "À quoi sert l'instruction <code>i = i + 1</code> dans un <code>while</code> ?",
+        "verso": "À <strong>incrémenter</strong> le compteur pour éviter une boucle infinie."
+    },
+    {
+        "recto": "Quelle fonction permet d'obtenir le nombre d'éléments d'une chaîne pour une boucle ?",
+        "verso": "La fonction <code>len()</code>."
+    }
+]

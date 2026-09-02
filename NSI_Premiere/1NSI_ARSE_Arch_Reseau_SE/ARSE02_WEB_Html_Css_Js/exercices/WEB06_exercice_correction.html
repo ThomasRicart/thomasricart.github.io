@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction : WEB06 – IHM Capteurs et Actionneurs</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #2c3e50; max-width: 850px; margin: 0 auto; padding: 30px; background-color: #f4f7f6; }
+        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 3px solid #e74c3c; padding-bottom: 10px; color: #c0392b; }
+        h2 { margin-top: 30px; color: #2980b9; border-left: 5px solid #2980b9; padding-left: 15px; }
+        .reponse { background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 8px; overflow-x: auto; line-height: 1.4; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #f8f9fa; }
+        .highlight { color: #f1c40f; font-weight: bold; }
+        footer { margin-top: 50px; text-align: center; font-style: italic; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Correction WEB06 - IHM : Capteurs et Actionneurs</h1>
+
+    <h2>Exercice 1 : La boucle de contrôle</h2>
+    <p>Comprendre l'interaction entre le système et le monde réel :</p>
+    
+    
+
+    <div class="reponse">
+        <ul>
+            <li><strong>Capteur :</strong> Mesure une grandeur physique (ex: température).</li>
+            <li><strong>Traitement :</strong> Analyse les données et prend une décision (JavaScript).</li>
+            <li><strong>Actionneur :</strong> Agit sur le monde réel (ex: allumer un ventilateur).</li>
+            <li><strong>Projet Dashboard :</strong> Le curseur (<code>input type="range"</code>) simule ici le <strong>Capteur</strong> (entrée de donnée).</li>
+        </ul>
+    </div>
+
+    <h2>Exercice 2 : Analyse des flux de données</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Composant</th>
+                <th>Flux</th>
+                <th>Rôle dans l'IHM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Capteur de température</td>
+                <td><span class="highlight">Entrant</span></td>
+                <td>Fournir la donnée brute au système.</td>
+            </tr>
+            <tr>
+                <td>Affichage LCD / Texte</td>
+                <td><span class="highlight">Sortant</span></td>
+                <td>Informer l'utilisateur visuellement.</td>
+            </tr>
+            <tr>
+                <td>Moteur de ventilation</td>
+                <td><span class="highlight">Sortant</span></td>
+                <td>Exécuter l'ordre de refroidissement.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Exercice 3 : Pilotage automatique d'un actionneur</h2>
+    <p>Code JavaScript pour automatiser la ventilation selon le seuil de 26°C :</p>
+    <pre>
+const affichageVentilo = document.getElementById("etat-ventilo");
+
+if (temp >= 26) {
+    affichageVentilo.textContent = "<span class="highlight">EN MARCHE</span>"; // Message d'activation
+    affichageVentilo.style.color = "<span class="highlight">blue</span>"; // Couleur d'alerte (froid)
+} else {
+    affichageVentilo.textContent = "ARRET";
+    affichageVentilo.style.color = "grey";
+}</pre>
+
+    <h2>Exercice 4 : Défi : L'IHM Bidirectionnelle</h2>
+    <div class="reponse">
+        <p><strong>1. Attribut HTML pour le clic :</strong> On utilise l'attribut <code>onclick</code>.</p>
+        
+        <p><strong>2. Fonction JavaScript "AUTO-CONFORT" :</strong></p>
+        <pre>
+function modeAutoConfort() {
+    // 1. On cible le curseur (input range) par son ID
+    const curseur = document.getElementById("temp-slider");
+
+    // 2. On règle la valeur à 21
+    curseur.value = <span class="highlight">21</span>;
+
+    // 3. On appelle la fonction de mise à jour du dashboard
+    mettreAJourDashboard();
+}</pre>
+    </div>
+
+    <footer>
+        NSI Première - Support de correction WEB06 (IHM)
+    </footer>
+</div>
+
+</body>
+</html>

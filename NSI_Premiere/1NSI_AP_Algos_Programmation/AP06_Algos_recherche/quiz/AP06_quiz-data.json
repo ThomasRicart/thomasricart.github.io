@@ -1,0 +1,64 @@
+[
+  {
+    "question": "Quelle est la complexité de la recherche naïve dans le pire des cas ?",
+    "options": ["O(1)", "O(n)", "O(n²)", "O(log n)"],
+    "answer": 1,
+    "feedback": "Dans le pire des cas, on doit parcourir les <strong>n</strong> éléments de la liste."
+  },
+  {
+    "question": "Quelle condition est nécessaire pour utiliser la recherche dichotomique ?",
+    "options": [
+      "La liste doit être triée",
+      "La liste doit être courte",
+      "La liste doit contenir des entiers",
+      "Aucune condition"
+    ],
+    "answer": 0,
+    "feedback": "La dichotomie repose sur le fait que la liste est <strong>triée</strong> pour éliminer une moitié à chaque étape."
+  },
+  {
+    "question": "À quoi sert un variant de boucle ?",
+    "options": [
+      "À prouver la correction",
+      "À calculer le résultat",
+      "À prouver la terminaison",
+      "À accélérer le code"
+    ],
+    "answer": 2,
+    "feedback": "Le variant assure que la boucle ne sera pas infinie et s'arrêtera après un nombre fini d'étapes."
+  },
+  {
+    "question": "Quel est le variant de boucle dans une recherche dichotomique ?",
+    "options": ["i_deb", "i_fin", "i_fin - i_deb", "L[i_cen]"],
+    "answer": 2,
+    "feedback": "C'est la distance entre les bornes qui <strong>décroît strictement</strong> à chaque itération."
+  },
+  {
+    "question": "Quelle est la complexité de la recherche dichotomique ?",
+    "options": ["O(n)", "O(n²)", "O(log n)", "O(1)"],
+    "answer": 2,
+    "feedback": "Comme on divise la taille du problème par 2 à chaque étape, la complexité est <strong>logarithmique</strong>."
+  },
+  {
+    "question": "Un invariant de boucle est une propriété qui est vraie :",
+    "options": [
+      "Seulement au début",
+      "Seulement à la fin",
+      "Avant et après chaque itération",
+      "Si la boucle est infinie"
+    ],
+    "answer": 2,
+    "feedback": "L'invariant permet de prouver la <strong>correction</strong> de l'algorithme par récurrence."
+  },
+   {
+    "question": "Si la taille de la liste double, le nombre d'étapes de la dichotomie :",
+    "options": [
+      "Double aussi",
+      "Reste identique",
+      "Augmente de 1",
+      "Augmente de n"
+    ],
+    "answer": 2,
+    "feedback": "Dans un algorithme logarithmique, doubler l'entrée n'ajoute qu'<strong>une seule étape</strong> de calcul."
+  }
+]
