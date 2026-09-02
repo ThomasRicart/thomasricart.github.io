@@ -28,11 +28,11 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
-  - _environments/javascripts/mathjax.js
+  - environments/javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
-  - _environments/stylesheets/extra.css
+  - environments/stylesheets/extra.css
 
 exclude_docs: |
   # Fichiers sources et temporaires
