@@ -1,7 +1,2 @@
-#title: Algorithmes et Programmation
-
-#collapse: true  # Le menu sera replié par défaut à gauche
-
-nav:
-  - index.md
-  - AP01_Constructions_elementaires
+title: Algorithmes et Programmation
+collapse: true

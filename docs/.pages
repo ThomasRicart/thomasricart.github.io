@@ -3,9 +3,9 @@ collapse: true
 
 arrange:
   - index.md
-  - "⚪ CIEL2": CIEL2
-  - "🔵 1NSI": NSI_Premiere
-  - "🔵 TNSI": NSI_Terminale
-  - "💾 Divers": Divers
+  - CIEL2
+  - NSI_Premiere
+  - NSI_Terminale
+  - Divers
 
 
