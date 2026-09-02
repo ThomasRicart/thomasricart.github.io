@@ -1,0 +1,29 @@
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+:root {
+  /* Définit la largeur maximale de la zone de contenu */
+  --md-typeset-table-fallback-width: 100%; 
+  --md-text-font-size: 0.8rem; /* Optionnel : réduit un peu la police si besoin */
+}
+
+.md-grid {
+  /* Par défaut c'est environ 60rem. On peut mettre 90% ou 100% */
+  max-width: 95%; 
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.md-content {
+  /* Supprime la limitation de largeur du texte à l'intérieur de la page */
+  max-width: none;
+  margin-left: 0; /* On remet à 0 car .md-grid gère déjà les marges */
+}
+
+/* Empêche les icônes de prendre toute la largeur et de sauter à la ligne */
+table img {
+    display: inline-block !important;
+    vertical-align: middle;
+    margin: 2px !important;
+}
