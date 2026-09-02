@@ -26,13 +26,6 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 [🚀 Ouvrir et exécuter le TP dans Basthon](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP01_Constructions_elementaires/AP01_ACT1-constructions_elementaires.ipynb){ .md-button .md-button--primary }
 ---
 
-<iframe 
-  src="https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP01_Constructions_elementaires/AP01_ACT1-constructions_elementaires.ipynb" 
-  width="100%" 
-  height="700px" 
-  style="border: 1px solid #ccc; border-radius: 8px;">
-</iframe>
-
 ### 🧩 Concepts illustrés
 ```python
 # 1. Affectation et calcul
