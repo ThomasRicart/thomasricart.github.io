@@ -39,19 +39,12 @@ extra:
 
 exclude_docs: |
   # 1. On ignore tout par défaut
-  *
-
-  # 2. On inclut uniquement la racine et les assets généraux
-  !index.md
-  !.pages
-  !environments/**
-  !graphics/**
-  !scripts/**
-
-  # 3. On inclut EXCLUSIVEMENT tes 3 dossiers cibles
-  !CIEL2/**
-  !NSI_Premiere/**
-  !NSI_Terminale/**
+  CIEL1/
+  Maths_Premiere/
+  SNT/
+  CIEL_RESSOURCES/
+  Divers/
+  2627-SNT
 
   # 4. Exclusions spécifiques dans ces 3 dossiers
   **/*.tex
