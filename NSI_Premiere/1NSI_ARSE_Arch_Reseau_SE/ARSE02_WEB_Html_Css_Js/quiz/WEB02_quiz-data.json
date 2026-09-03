@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Quel symbole utilise-t-on en CSS pour cibler un identifiant (attribut id) ?",
+    "options": [". (le point)", "# (le dièse)", "* (l'astérisque)", "@ (l'arobase)"],
+    "answer": 1,
+    "feedback": "Le symbole # est utilisé pour les identifiants uniques, tandis que le point (.) est utilisé pour les classes."
+  },
+  {
+    "question": "Quelle propriété permet de changer la couleur de fond d'un élément ?",
+    "options": ["color", "font-color", "background-color", "fill-color"],
+    "answer": 2,
+    "feedback": "background-color définit la couleur d'arrière-plan. La propriété 'color' ne change que la couleur du texte."
+  },
+  {
+    "question": "Dans le modèle de boîte, quel espace se situe entre le contenu et la bordure ?",
+    "options": ["margin", "padding", "spacing", "border-width"],
+    "answer": 1,
+    "feedback": "Le padding est la marge intérieure. La margin est la marge extérieure (au-delà de la bordure)."
+  },
+  {
+    "question": "Quelle valeur de la propriété 'display' permet d'utiliser le mode de mise en page flexible ?",
+    "options": ["block", "inline", "flex", "none"],
+    "answer": 2,
+    "feedback": "Flexbox (display: flex) est le standard moderne pour aligner et répartir les éléments facilement."
+  },
+  {
+    "question": "Comment écrit-on un commentaire en CSS ?",
+    "options": ["// commentaire", "&lt;!-- commentaire --&gt;", "/* commentaire */", "# commentaire"],
+    "answer": 2,
+    "feedback": "En CSS, les commentaires sont encadrés par /* et */. Les autres syntaxes sont pour JS, HTML ou Python."
+  },
+  {
+    "question": "Quelle propriété permet de rendre les coins d'une bordure arrondis ?",
+    "options": ["border-circle", "corner-radius", "border-radius", "box-style"],
+    "answer": 2,
+    "feedback": "border-radius permet d'arrondir les angles, par exemple 50% pour créer un cercle."
+  },
+  {
+    "question": "Quelle propriété CSS définit la police de caractère à utiliser ?",
+    "options": ["text-style", "font-family", "character-type", "font-weight"],
+    "answer": 1,
+    "feedback": "font-family permet de lister les polices souhaitées (ex: Arial, sans-serif)."
+  },
+  {
+    "question": "Que signifie le 'C' dans l'acronyme CSS ?",
+    "options": ["Computer", "Creative", "Cascading", "Color"],
+    "answer": 2,
+    "feedback": "Cascading (en cascade) signifie que les styles s'appliquent selon une hiérarchie de priorité."
+  },
+  {
+    "question": "Quelle pseudo-classe permet de modifier un élément lorsque l'utilisateur le survole avec la souris ?",
+    "options": [":active", ":focus", ":hover", ":visited"],
+    "answer": 2,
+    "feedback": "La pseudo-classe :hover est très utilisée pour animer les boutons ou les liens au passage du curseur."
+  },
+  {
+    "question": "Comment lie-t-on un fichier CSS externe dans le &lt;head&gt; du document HTML ?",
+    "options": ["&lt;css src='style.css'&gt;", "&lt;style href='style.css'&gt;", "&lt;link rel='stylesheet' href='style.css'&gt;", "&lt;script link='style.css'&gt;"],
+    "answer": 2,
+    "feedback": "La balise &lt;link&gt; est la méthode standard pour séparer le fond (HTML) de la forme (CSS)."
+  }
+]

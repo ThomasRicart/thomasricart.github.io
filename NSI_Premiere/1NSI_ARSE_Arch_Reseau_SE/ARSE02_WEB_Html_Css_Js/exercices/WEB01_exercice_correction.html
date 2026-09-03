@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction : WEB01 – Web – HTML</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #2c3e50; max-width: 850px; margin: 0 auto; padding: 30px; background-color: #f4f7f6; }
+        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { border-bottom: 3px solid #3498db; padding-bottom: 10px; color: #2980b9; }
+        h2 { margin-top: 30px; color: #d35400; border-left: 5px solid #d35400; padding-left: 15px; }
+        .reponse { background: #fdfdfd; border: 1px solid #eee; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        code { background: #f1f1f1; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 8px; overflow-x: auto; line-height: 1.4; }
+        footer { margin-top: 50px; text-align: center; font-style: italic; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Correction WEB01 - Interface Domotique</h1>
+
+    <h2>Exercice 1 : Analyse de code et vocabulaire</h2>
+    <div class="reponse">
+        <ul>
+            <li><strong>Balise double :</strong> <code>&lt;section&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;p&gt;</code> ou <code>&lt;a&gt;</code>.</li>
+            <li><strong>Balise orpheline :</strong> <code>&lt;img&gt;</code>.</li>
+            <li><strong>Attribut de la balise &lt;a&gt; :</strong> Nom : <code>href</code> | Valeur : <code>https://meteofrance.com</code>.</li>
+            <li><strong>Accessibilité (alt) :</strong> Cet attribut permet de décrire l'image pour les personnes malvoyantes (lecteurs d'écran) ou s'affiche si l'image ne peut pas être chargée.</li>
+        </ul>
+    </div>
+
+    <h2>Exercice 2 : Représentation du DOM</h2>
+    <p>Le document est structuré de manière hiérarchique (Arbre) :</p>
+    <div class="reponse">
+        <code>section</code> (id: meteo) <br>
+        ├── <code>h3</code> (Texte: "Previsions locales") <br>
+        ├── <code>p</code> <br>
+        │   ├── Texte: "Le ciel est " <br>
+        │   ├── <code>a</code> (Texte: "nuageux") <br>
+        │   └── Texte: "." <br>
+        └── <code>img</code> (Attributs: src, alt)
+    </div>
+
+    <h2>Exercice 3 & 4 : Structure et Missions</h2>
+    <p>Code HTML complet du Dashboard (Missions A, B et C incluses) :</p>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Mon Dashboard&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Gestionnaire de Maison&lt;/h1&gt;
+        &lt;a href="https://meteofrance.com"&gt;Voir la météo&lt;/a&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;!-- Mission A : Le Salon --&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Ambiance du Salon&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Luminosité : 300 lux&lt;/li&gt;
+                &lt;li&gt;Température : 19°C&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;img src="salon.jpg" alt="Photo du salon"&gt;
+        &lt;/section&gt;
+
+        &lt;!-- Mission B : Le Garage --&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Sécurité Garage&lt;/h2&gt;
+            &lt;button&gt;Ouvrir le portail&lt;/button&gt;
+            &lt;input type="password" placeholder="Entrez le code"&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;[Nom de l'élève] - Interface Domotique 2026&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+    <h2>Exercice 5 : Débogage "Cuisine"</h2>
+    <div class="reponse">
+        <p><strong>Erreurs identifiées :</strong></p>
+        <ol>
+            <li>La balise <code>&lt;h2&gt;</code> n'est pas fermée.</li>
+            <li>Mauvaise imbrication : <code>&lt;strong&gt;</code> doit être fermé avant <code>&lt;/p&gt;</code>.</li>
+            <li>Erreur de syntaxe : <code>&lt;p&gt;</code> utilisé au lieu de <code>&lt;/p&gt;</code> pour fermer le texte.</li>
+            <li>Élément de liste <code>&lt;li&gt;</code> non fermé (Cafetière).</li>
+            <li>Attribut <code>alt</code> manquant sur la balise image.</li>
+        </ol>
+        <p><strong>Code Corrigé :</strong></p>
+        <pre>
+&lt;section&gt;
+    &lt;h2&gt;Controle de la Cuisine&lt;/h2&gt;
+    &lt;p&gt;Le four est actuellement : &lt;strong&gt;allumé&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Lumiere : On&lt;/li&gt;
+        &lt;li&gt;Cafetiere : Off&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;img src="cuisine.jpg" alt="Aperçu de la cuisine"&gt; 
+&lt;/section&gt;</pre>
+    </div>
+
+    <footer>
+        NSI Première - Support de correction
+    </footer>
+</div>
+
+</body>
+</html>

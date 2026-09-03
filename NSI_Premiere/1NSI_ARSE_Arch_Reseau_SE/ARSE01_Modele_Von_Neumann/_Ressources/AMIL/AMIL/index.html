@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- Mirrored from www.fil.univ-lille1.fr/~levaire/amill1s1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Sep 2016 08:15:27 GMT by SALVA 22/02/2023-->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Amil: assembleur miniature pour l'informatique de
+licence</title>
+<script type="text/javascript" src="jquery.min-1.7.1.js"></script>
+<script type='text/javascript' src="amil.js"></script>
+<link rel="stylesheet" type="text/css" href="amil.css" />
+</head>
+
+<body>
+<div id="header">
+<span style="font-size:1.5em; font-weight:bold;">AMIL NSI Déodat</span>
+  <span style="float:right">
+<!--<a href="#" onclick="$('exemple').css('display: visible');"> exemples </a> &nbsp; &nbsp; 
+<select id="exemple" onchange="selectexemple();" style="display: none; position: relative; left: -100px; top: 24px">
+<option value="celsius-fahrenheit.amil">Celcius-Fahreheit</option>
+<option value="max2.amil">Max 2</option>
+<option value="puissance.amil">Puissance</option>
+<option value="tableaux-doubler.amil">Tableau-Doubler</option>
+<option value="fonction-double-score.amil">Fonction-Doubler score</option>
+<option value="recursivite-Factorielle.amil">Récursivité-Factorielle</option>
+</select>
+--> 
+<a href="aide.html" target="_blank">Tableau des mnémoniques</a> &nbsp; &nbsp; 
+Délai : <input type="text" value="10" size="3" id="delai" title="en dixièmes de seconde"/></span>
+</div>
+
+<div id="main">
+  <div id="memconteneur">
+    <pre id="mem">
+      <textarea>
+JMP 3
+7
+?
+WR 5 R1
+MOV 1 r0
+SUB r1 r0
+WR 1 r2
+JP r0 9
+WR 0 r2
+MOV r2 2 
+STOP
+      </textarea>
+
+<!--      <textarea>
+valeur 16 r7
+valeur 5 r0
+empiler r0
+empiler r7
+depiler r1
+depiler r2
+      </textarea>
+-->
+    </pre>
+    <div id="splitmem">		</div>
+  </div>
+  <div id="RI" class="reg">instruction</div>
+  <div id="CP" class="reg">1 </div>
+  <div id="R0" class="reg">0</div>
+  <div id="R1" class="reg">0</div>
+  <div id="R2" class="reg">0</div>
+  <div id="R3" class="reg">0</div>
+  <div id="R4" class="reg">0</div>
+  <div id="R5" class="reg">0</div>
+  <div id="R6" class="reg">0</div>
+  <div id="R7" class="reg">0</div>
+  <div id="runtimenav" class="boutons">
+    <div id="step">&nbsp;</div>
+    <div id="run">&nbsp;</div>
+    <div id="stop">&nbsp;</div>
+    <div id="reset">&nbsp;</div>
+  </div>
+  <div id="bus">
+    <div id="addressbus"></div>
+    <div id="datasbus"></div>
+  </div>
+
+<div id="showpile" style="position: absolute; top: 5px; left: 800px;"><a id="togglepile" onclick="togglepile()" href="#">Voir la pile</a>
+<div id="pile"></div> 
+
+</div>
+
+</div>
+
+
+</body>
+
+<!-- Mirrored from www.fil.univ-lille1.fr/~levaire/amill1s1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 04 Sep 2016 08:15:28 GMT 
+     by SALVA 22/02/2023 -->
+</html>

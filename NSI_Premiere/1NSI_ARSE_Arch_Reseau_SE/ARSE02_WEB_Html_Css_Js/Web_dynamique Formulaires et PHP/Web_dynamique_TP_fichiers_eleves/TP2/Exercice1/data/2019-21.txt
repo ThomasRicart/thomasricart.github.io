@@ -1,0 +1,13 @@
+1;10;Travail;Cours
+1;15;Travail;Cours
+2;8;Travail;Cours
+3;13;Rendez-vous;Proviseur
+4;18;Personnel;Piscine
+6;13;AFaire;Courses
+5;19;Autre;Cinéma
+5;11;Travail;Cours
+4;14;Rendez-vous;Proviseur
+7;12;Autre;Repas
+4;8;Travail;Cours
+2;18;Personnel;Piscine
+6;8;AFaire;Courir

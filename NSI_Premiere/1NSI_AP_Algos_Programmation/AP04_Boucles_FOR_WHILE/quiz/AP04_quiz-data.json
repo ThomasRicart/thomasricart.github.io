@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Comment appelle-t-on une boucle dont on connaît le nombre d'itérations à l'avance ?",
+    "options": ["Une boucle infinie", "Une boucle bornée", "Une boucle libre", "Une boucle conditionnelle"],
+    "answer": 1,
+    "feedback": "La boucle <code>FOR</code> est dite bornée car on sait à l'avance combien de tours elle va effectuer."
+  },
+  {
+    "question": "Que va afficher <code>for i in range(0, 5): print(i)</code> ?",
+    "options": ["0 1 2 3 4 5", "1 2 3 4 5", "0 1 2 3 4", "5 5 5 5 5"],
+    "answer": 2,
+    "feedback": "La fonction <code>range(a, b)</code> s'arrête juste avant la borne supérieure <code>b</code>."
+  },
+  {
+    "question": "Quel mot-clé définit une boucle qui s'exécute 'tant que' une condition est vraie ?",
+    "options": ["for", "if", "until", "while"],
+    "answer": 3,
+    "feedback": "On utilise <code>while</code> pour les boucles non bornées dont l'arrêt dépend d'une condition."
+  },
+  {
+    "question": "Dans <code>for i in range(2, 7)</code>, combien de tours de boucle seront effectués ?",
+    "options": ["7 tours", "2 tours", "5 tours", "9 tours"],
+    "answer": 2,
+    "feedback": "Le nombre de tours est égal à <code>b - a</code>, soit 7 - 2 = 5 tours."
+  },
+  {
+    "question": "Si on veut itérer sur chaque caractère d'une variable <code>mot</code> sans utiliser d'indice, quelle syntaxe utilise-t-on ?",
+    "options": ["for i in range(len(mot))", "for lettre in mot", "while lettre in mot", "for i in mot[indice]"],
+    "answer": 1,
+    "feedback": "La syntaxe <code>for element in itérable</code> permet d'accéder directement aux éléments."
+  },
+  {
+    "question": "Que se passe-t-il si la condition d'un <code>while</code> reste toujours True ?",
+    "options": ["Le programme s'arrête", "La boucle ne s'exécute pas", "C'est une boucle infinie", "Python affiche une erreur syntaxique"],
+    "answer": 2,
+    "feedback": "Si la condition ne devient jamais False, le programme boucle indéfiniment."
+  },
+  {
+    "question": "Quelle fonction permet de connaître la longueur d'une chaîne de caractères ?",
+    "options": ["length()", "size()", "count()", "len()"],
+    "answer": 3,
+    "feedback": "La fonction <code>len()</code> est utilisée pour obtenir le nombre d'éléments d'un itérable."
+  },
+  {
+    "question": "Dans une boucle <code>while</code>, quand la condition est-elle évaluée ?",
+    "options": ["Uniquement à la fin", "Au début de chaque tour", "Seulement au premier tour", "Une fois sur deux"],
+    "answer": 1,
+    "feedback": "La condition est testée avant chaque exécution du bloc d'instructions."
+  },
+  {
+    "question": "Que fait l'instruction <code>n = n + 1</code> dans une boucle ?",
+    "options": ["Elle efface n", "Elle incrémente le compteur n", "Elle crée une erreur", "Elle double la valeur de n"],
+    "answer": 1,
+    "feedback": "C'est une incrémentation, essentielle pour faire évoluer la condition d'une boucle <code>while</code>."
+  },
+  {
+    "question": "Quel est l'indice du premier caractère de la chaîne <code>'Hello'</code> ?",
+    "options": ["0", "1", "-1", "H"],
+    "answer": 0,
+    "feedback": "En Python, le premier élément d'un itérable est toujours à l'indice 0."
+  }
+]

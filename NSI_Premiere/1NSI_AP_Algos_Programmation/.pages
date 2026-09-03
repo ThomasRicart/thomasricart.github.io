@@ -1,0 +1,6 @@
+title: "AP - Algos et Programmation"
+collapse: true
+
+arrange:
+    - index.md
+    - AP01_Constructions_elementaires

@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Quel est le rôle principal du protocole HTTP dans le Web ?",
+    "options": ["Stocker des fichiers", "Permettre le dialogue entre client et serveur", "Crypter le disque dur", "Créer des images"],
+    "answer": 1,
+    "feedback": "HTTP (HyperText Transfer Protocol) est le langage de communication utilisé pour transmettre des ressources sur le Web."
+  },
+  {
+    "question": "Quelle balise HTML est utilisée pour créer une zone de saisie de données pour l'utilisateur ?",
+    "options": ["&lt;form&gt;", "&lt;input&gt;", "&lt;submit&gt;", "&lt;action&gt;"],
+    "answer": 1,
+    "feedback": "La balise &lt;input&gt; permet de créer différents champs (texte, nombre, etc.), tandis que &lt;form&gt; sert de conteneur global."
+  },
+  {
+    "question": "Dans un formulaire, quelle méthode affiche les données saisies directement dans l'URL ?",
+    "options": ["POST", "SEND", "GET", "INCLUDE"],
+    "answer": 2,
+    "feedback": "La méthode GET ajoute les données après un '?' dans l'URL, ce qui les rend visibles par l'utilisateur."
+  },
+  {
+    "question": "Pourquoi est-il fortement déconseillé d'envoyer un mot de passe avec la méthode GET ?",
+    "options": ["C'est trop lent", "Les données sont limitées en taille", "Les données apparaissent en clair dans l'URL", "Le serveur ne peut pas les lire"],
+    "answer": 2,
+    "feedback": "Avec GET, les données restent dans l'historique du navigateur et les logs du serveur, ce qui est une faille de sécurité majeure."
+  },
+  {
+    "question": "Quel attribut de la balise &lt;form&gt; définit l'URL de destination des données ?",
+    "options": ["method", "href", "src", "action"],
+    "answer": 3,
+    "feedback": "L'attribut 'action' indique au navigateur vers quelle page ou quel script envoyer les informations saisies."
+  },
+  {
+    "question": "Quel attribut est indispensable à un &lt;input&gt; pour que le serveur puisse identifier la donnée ?",
+    "options": ["id", "name", "class", "value"],
+    "answer": 1,
+    "feedback": "L'attribut 'name' sert d'étiquette. Sans lui, la donnée est envoyée mais le serveur ne sait pas à quoi elle correspond."
+  },
+  {
+    "question": "Quelle méthode HTTP doit-on privilégier pour l'envoi de fichiers lourds ?",
+    "options": ["GET", "POST", "LINK", "META"],
+    "answer": 1,
+    "feedback": "La méthode POST n'a pas de limite théorique de taille, contrairement à GET qui est limitée par la longueur maximale d'une URL."
+  },
+  {
+    "question": "Dans le modèle Client-Serveur, qui initie généralement la communication ?",
+    "options": ["Le Serveur", "La Base de données", "Le Client (Navigateur)", "Le fournisseur d'accès"],
+    "answer": 2,
+    "feedback": "C'est toujours le client qui envoie une 'Requête' ; le serveur y répond ensuite."
+  },
+  {
+    "question": "Que se passe-t-il si un formulaire ne possède pas de bouton &lt;input type='submit'&gt; ?",
+    "options": ["Il s'envoie automatiquement", "Il ne peut pas être validé par l'utilisateur", "Il devient invisible", "Il se transforme en lien"],
+    "answer": 1,
+    "feedback": "Le bouton de type 'submit' est le déclencheur indispensable pour envoyer les données au serveur."
+  },
+  {
+    "question": "Comment appelle-t-on la réponse du serveur si une page demandée n'existe pas ?",
+    "options": ["Erreur 200", "Erreur 500", "Erreur 404", "Erreur 301"],
+    "answer": 2,
+    "feedback": "Le code 404 est le code d'état HTTP standard indiquant que la ressource demandée est introuvable."
+  }
+]
