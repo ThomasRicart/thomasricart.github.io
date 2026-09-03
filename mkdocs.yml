@@ -39,18 +39,19 @@ extra:
 
 exclude_docs: |
   # 1. On ignore tout par défaut
-  2627-SNT
-  CIEL_RESSOURCES/
-  CIEL1/
-  Divers/
-  Maths_Complementaires
-  Maths_Premiere/
-  Ressources
-  SNT/
-  Terminale_COMP
+  2627-SNT/**
+  CIEL_RESSOURCES/**
+  CIEL1/**
+  Divers/**
+  Maths_Complementaires/**
+  Maths_Premiere/**
+  Ressources/**
+  SNT/**
+  Terminale_COMP/**
 
   # 4. Exclusions spécifiques dans ces 3 dossiers
   **/*.tex
   **/Sources_Latex/*
   _*/
   **/_*
+  **/*.zip
