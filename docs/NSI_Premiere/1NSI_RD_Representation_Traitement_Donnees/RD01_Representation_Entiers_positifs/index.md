@@ -20,6 +20,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/312b-10504483) | **312b-10504483** | [Correction]()|
 
 ---
+[🚀 Ouvrir et exécuter le TP en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_RD_Representation_Traitement_Donnees/RD01_Representation_Entiers_positifs/RD01_ACT1-Entiers_positifs.ipynb){ .md-button .md-button--primary }
 ---
 
 ### 🧩 Concepts illustrés
