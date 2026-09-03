@@ -5,4 +5,5 @@ arrange:
   - CIEL2
   - NSI_Premiere
   - NSI_Terminale
+  - Console: console.md   # <--- Ajoute cette ligne
 
