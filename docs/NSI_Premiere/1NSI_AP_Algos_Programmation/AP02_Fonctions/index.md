@@ -20,9 +20,12 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=140) | Exercices auto corrigés Spécifications  | |
 | [✏️ **Exercices 03**](https://raisintine.fr/chocolatine/question.php?idc=141) | Exercices auto corrigés Tests | |
 | [✏️ **Exercices 04**](https://raisintine.fr/chocolatine/question.php?idc=62) | Exercices auto corrigés Erreurs | |
-
 | [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/00c9-10504416) | **00c9-10504416** | [Correction]()|
 
+
+---
+[🚀 Ouvrir et exécuter le TP en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP02_Fonctions/AP02_ACT2-fonctions.ipynb){ .md-button .md-button--primary }
+---
 ---
 ---
 
