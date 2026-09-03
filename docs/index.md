@@ -27,3 +27,12 @@
   style="border: 1px solid #ccc; border-radius: 8px;">
 </iframe>
 ```
+
+[🔄 Réinitialiser / Ouvrir Basthon dans un nouvel onglet](https://console.basthon.fr/){ target="_blank" }
+
+<iframe 
+  src="https://console.basthon.fr/" 
+  width="100%" 
+  height="600px" 
+  style="border: 1px solid #ccc; border-radius: 8px;">
+</iframe>
