@@ -50,3 +50,11 @@ exclude_docs: |
   # NSI_Premiere/
   # NSI_Terminale/
   SNT/
+
+  ! index.md
+  ! CIEL2/**
+  ! environments
+  ! graphics
+  ! scripts
+  ! .pages
+  *
