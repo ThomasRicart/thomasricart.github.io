@@ -1,6 +1,0 @@
-title: "RD - Représentation de données"
-collapse: true
-
-arrange:
-    - index.md
-    - RD01_Representation_Entiers_positifs
