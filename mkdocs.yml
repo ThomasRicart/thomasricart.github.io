@@ -36,25 +36,26 @@ extra_css:
 
 extra:
   generator: false
+
 exclude_docs: |
-  # Fichiers sources et temporaires
+  # 1. On ignore tout par défaut
+  *
+
+  # 2. On réinclut la racine et les répertoires utiles
+  !index.md
+  !.pages
+  !environments/**
+  !graphics/**
+  !scripts/**
+
+  # 3. On réinclut uniquement les 3 dossiers voulus
+  !CIEL2/**
+  !NSI_Premiere/**
+  !NSI_Terminale/**
+
+  # 4. On réintroduit les exclusions fines au sein de ces dossiers
   **/*.tex
   **/Images/*
   **/Sources_Latex/*
   _*/
   **/_*
-
-  # Dossiers ignorés pour le moment (compilation CIEL2 uniquement)
-  CIEL1/
-  Maths_Premiere/
-  # NSI_Premiere/
-  # NSI_Terminale/
-  SNT/
-
-  ! index.md
-  ! CIEL2/**
-  ! environments
-  ! graphics
-  ! scripts
-  ! .pages
-  *
