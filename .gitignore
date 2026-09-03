@@ -1,12 +1,12 @@
 # Ignorer des dossiers spécifiques dans docs/
-docs/CIEL1/
-docs/Maths_Premiere/
-docs/SNT/
-docs/CIEL_RESSOURCES/
-docs/Divers/
-docs/2627-SNT/
-docs/Maths_Complementaires/
-docs/Terminale_COMP/
+docs/CIEL1/**
+docs/Maths_Premiere/**
+docs/SNT/**
+docs/CIEL_RESSOURCES/**
+docs/Divers/**
+docs/2627-SNT/**
+docs/Maths_Complementaires/**
+docs/Terminale_COMP/**
 
 # Ignorer des types de fichiers partout dans le projet
 *.zip
