@@ -41,21 +41,20 @@ exclude_docs: |
   # 1. On ignore tout par défaut
   *
 
-  # 2. On réinclut la racine et les répertoires utiles
+  # 2. On inclut uniquement la racine et les assets généraux
   !index.md
   !.pages
   !environments/**
   !graphics/**
   !scripts/**
 
-  # 3. On réinclut uniquement les 3 dossiers voulus
+  # 3. On inclut EXCLUSIVEMENT tes 3 dossiers cibles
   !CIEL2/**
   !NSI_Premiere/**
   !NSI_Terminale/**
 
-  # 4. On réintroduit les exclusions fines au sein de ces dossiers
+  # 4. Exclusions spécifiques dans ces 3 dossiers
   **/*.tex
-  **/Images/*
   **/Sources_Latex/*
   _*/
   **/_*
