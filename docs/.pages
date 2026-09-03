@@ -2,8 +2,8 @@ collapse: true
 
 arrange:
   - index.md
+  - console.md
   - CIEL2
   - NSI_Premiere
   - NSI_Terminale
-  - Console: console.md   # <--- Ajoute cette ligne
 

@@ -1,4 +1,9 @@
-# Console Basthon
+---
+title: Console
+---
+
+# Ma Console
+
 
 <iframe 
   src="https://console.basthon.fr/" 
