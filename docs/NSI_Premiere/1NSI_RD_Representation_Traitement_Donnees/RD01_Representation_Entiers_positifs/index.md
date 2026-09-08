@@ -18,6 +18,8 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [✏️ **Exercices 03**](https://raisintine.fr/chocolatine/question.php?idc=4) | Exercices autocorrigés Hexadécimal| |
 | [✏️ **Exercices 04**](https://raisintine.fr/chocolatine/question.php?idc=22) | Exercices autocorrigés Opérations binaires| |
 | [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/312b-10504483) | **312b-10504483** | [Correction]()|
+| [✏️ **Préparation évaluation**](./exercices/eval01_RD01_numeration_prepa_Sujet.pdf) | Exercices de préparation éval |[Correction](./exercices/eval01_RD01_numeration_prepa_Correction.pdf) |
+
 
 ---
 [🚀 Ouvrir et exécuter le TP en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_RD_Representation_Traitement_Donnees/RD01_Representation_Entiers_positifs/RD01_ACT1-Entiers_positifs.ipynb){ .md-button .md-button--primary }
