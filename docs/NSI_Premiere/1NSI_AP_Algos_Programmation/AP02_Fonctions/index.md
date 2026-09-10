@@ -24,8 +24,10 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 
 
 ---
-[🚀 Ouvrir et exécuter le TP en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP02_Fonctions/AP02_ACT2-fonctions.ipynb){ .md-button .md-button--primary }
----
+
+[🚀 Ouvrir et exécuter le TP en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP02_Fonctions/AP02_ACT1-fonctions.ipynb){ .md-button .md-button--primary }
+
+
 ---
 ---
 
