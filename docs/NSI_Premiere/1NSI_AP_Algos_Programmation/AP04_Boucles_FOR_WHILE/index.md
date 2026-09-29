@@ -22,9 +22,12 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📚 **Activité Capytale 2**](https://capytale2.ac-paris.fr/web/c/7054-10504439) | **7054-10504439** | [Correction]()|
 
 ---
+
 [🚀 Ouvrir et exécuter le TP1 en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP04_Boucles_FOR_WHILE/AP04_ACT1-boucles_FOR.ipynb){ .md-button .md-button--primary }
 
 [🚀 Ouvrir et exécuter le TP2 en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP04_Boucles_FOR_WHILE/AP04_ACT2-boucles_WHILE.ipynb){ .md-button .md-button--primary }
+
+
 ---
 
 ### 🧩 Concepts illustrés
