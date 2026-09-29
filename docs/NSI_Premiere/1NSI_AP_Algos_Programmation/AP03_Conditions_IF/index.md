@@ -18,7 +18,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | [📝 **Quiz**](./quiz/AP03_quiz.html)| Auto-évaluation rapide sur le chapitre. ||
 | [✏️ **Exercices 01**](./exercices/AP03_EXO1_Sujet.pdf) | Exercices d'application |[Correction](./exercices/AP03_EXO1_Correction.pdf) |
 | [✏️ **Exercices 02**](https://raisintine.fr/chocolatine/question.php?idc=48) | Exercices interactifs | |
-| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/985b-10504423) | **985b-10504423** | [Correction]()|
+| [📚 **Activité Capytale**](https://capytale2.ac-paris.fr/web/c/985b-10504423) | **985b-10504423** | [Correction](https://capytale2.ac-paris.fr/web/c/80c6-11904491/meo)|
 
 ---
 [🚀 Ouvrir et exécuter le TP en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Premiere/1NSI_AP_Algos_Programmation/AP03_Conditions_IF/AP03_ACT1-conditions.ipynb){ .md-button .md-button--primary }
