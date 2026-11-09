@@ -10,7 +10,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 | Support | Description | Corrections |
 | :--- | :--- | :--- |
 | [📕 **Cours**](./TNSI_LP02-Recursivite.pdf) | Le support de cours complet en version PDF. | |
-| [📚 **Activité Capytale 1**]() | **xxx** | [Correction]()|
+| [📚 **Activité Capytale 1**](https://capytale2.ac-paris.fr/web/c/c5eb-12669358/meo) | **c5eb-12669358** | [Correction]()|
 
 [🚀 Ouvrir et exécuter le TP 1 en local](https://notebook.basthon.fr/?from=https://thomasricart.github.io/NSI_Terminale/26-PR_Programmation/PR02_Recursivite/TNSI-LP02-TP-Recursivite.ipynb){ .md-button .md-button--primary }
 
