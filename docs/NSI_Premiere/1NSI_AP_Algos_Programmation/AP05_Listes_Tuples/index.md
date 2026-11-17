@@ -60,10 +60,10 @@ def afficher_liste_indices(liste):
 ```python
 # Algorithme 2 : Effectuer la somme des éléments d'une liste
 def somme_liste_elements(liste):
-    somme = 0
-    for element in liste:
-        somme = somme + element
-    return somme
+    somme = 0                   # Initialisation de la somme à 0
+    for element in liste:       # Parcours de chaque élément de la liste
+        somme = somme + element # Ajout de l'élément courant à la somme
+    return somme                # Retourne la somme totale des éléments de la liste
 
 def somme_liste_indices(liste):
     somme = 0
