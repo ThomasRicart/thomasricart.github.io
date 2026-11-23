@@ -14,3 +14,8 @@
 * [Exercice de synthèse POO 1](./Revision_POO_1/Exercice_synthese_POO.md) - [Correction](./Revision_POO_1/Exercice_synthese_POO_correction.md)
 * [Fiche de révision POO 1](./Revision_POO_1/BB01_revision_POO-1.pdf)
 
+
+## Recursivité
+
+* [Exercice de synthèse Recursivité 1](./Revision_Recursivite/Exercice_synthese_recursivite.md) - [Correction]()
+
