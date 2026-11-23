@@ -3000,12 +3000,11 @@
 </tr>
 </tbody>
 </table>
-<p>L'ordonnanceur applique l'algorithme du <strong>tourniquet</strong> avec un <strong>quantum de 3 unités de temps</strong>, selon les règles suivantes :</p>
+<p>L'ordonnanceur applique l'algorithme du <strong>tourniquet</strong> avec un <strong>quantum de 1 unité de temps</strong>, selon les règles suivantes :</p>
 <ol>
 <li>Les processus prêts sont rangés dans une <strong>file d'attente</strong>.</li>
-<li>Le processeur est attribué au premier processus de la file pendant <strong>au plus 3 unités de temps</strong>.</li>
-<li>Si le processus se termine avant la fin de son quantum, il libère aussitôt le processeur et le processus suivant démarre immédiatement.</li>
-<li>Si le quantum est écoulé et que le processus n'est pas terminé, il est <strong>remis à la fin de la file</strong>.</li>
+<li>Le processeur est attribué au premier processus de la file pendant <strong>1 unité de temps</strong> (le quantum).</li>
+<li>Au bout de cette unité de temps, si le processus n'est pas terminé, il est <strong>remis à la fin de la file</strong> ; s'il est terminé, il quitte le système.</li>
 <li>Si un nouveau processus arrive <strong>à l'instant même</strong> où un autre est interrompu, le nouvel arrivant est placé dans la file <strong>avant</strong> le processus interrompu.</li>
 <li>Le temps de changement de processus est négligé.</li>
 </ol>
@@ -3154,7 +3153,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Question 5</strong> (1 pt) — Donner l'état de chacun des cinq processus à l'instant t = 7 (pendant l'intervalle [7 ; 8[).</p>
+<p><strong>Question 5</strong> (1 pt) — Donner l'état de chacun des cinq processus aux instants t = 5 et t = 9 (pendant les intervalles [5 ; 6[ et [9 ; 10[).</p>
 <p><strong>Question 6</strong> (1 pt) — Le <strong>temps d'attente</strong> d'un processus est le temps total qu'il passe à l'état « prêt » (dans la file d'attente) :</p>
 <p>temps d'attente = (instant de fin − instant d'arrivée) − durée d'exécution.</p>
 <p>Calculer le temps d'attente de chaque processus, puis le temps d'attente moyen.</p>
@@ -3205,7 +3204,7 @@
 </ul>
 <p><strong>Question 14</strong> (2 pts) — Écrire la méthode <code>simuler(self)</code> qui exécute l'algorithme jusqu'à la fin de tous les processus et renvoie le chronogramme.</p>
 <p><em>Attention : la file peut être vide alors que certains processus ne sont pas encore arrivés. Le processeur est alors inactif : on ajoute <code>None</code> au chronogramme et l'horloge avance de 1.</em></p>
-<p><strong>Question 15</strong> (0,5 pt) — Écrire le programme principal qui crée l'ordonnanceur de quantum 3 avec les cinq processus de la partie B et affiche le résultat de <code>simuler()</code>. Donner la valeur affichée.</p>
+<p><strong>Question 15</strong> (0,5 pt) — Écrire le programme principal qui crée l'ordonnanceur de quantum 1 avec les cinq processus de la partie B et affiche le résultat de <code>simuler()</code>. Donner la valeur affichée.</p>
 <p><strong>Squelette fourni :</strong></p>
 <pre><code class="language-python">class RoundRobin:
     def __init__(self, quantum, processus):

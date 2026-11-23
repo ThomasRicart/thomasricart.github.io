@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#revision-nsi-round-robin-enonce" class="md-skip">
+        <a href="#revision-nsi-round-robin-corrige" class="md-skip">
           Aller au contenu
         </a>
       
@@ -2599,10 +2599,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#partie-a-etats-dun-processus-3-points" class="md-nav__link">
+  <a href="#partie-a-etats-dun-processus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie A — États d'un processus (3 points)
+        Partie A — États d'un processus
       
     </span>
   </a>
@@ -2610,10 +2610,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partie-b-chronogramme-5-points" class="md-nav__link">
+  <a href="#partie-b-chronogramme" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie B — Chronogramme (5 points)
+        Partie B — Chronogramme
       
     </span>
   </a>
@@ -2621,10 +2621,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partie-c-modelisation-dun-processus-4-points" class="md-nav__link">
+  <a href="#partie-c-classe-processus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie C — Modélisation d'un processus (4 points)
+        Partie C — Classe Processus
       
     </span>
   </a>
@@ -2632,13 +2632,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partie-d-modelisation-de-lordonnanceur-8-points" class="md-nav__link">
+  <a href="#partie-d-classe-roundrobin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie D — Modélisation de l'ordonnanceur (8 points)
+        Partie D — Classe RoundRobin
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Partie D — Classe RoundRobin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pour-tester-sur-machine-facultatif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour tester sur machine (facultatif)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreurs-frequentes-a-surveiller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes à surveiller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2852,10 +2880,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#partie-a-etats-dun-processus-3-points" class="md-nav__link">
+  <a href="#partie-a-etats-dun-processus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie A — États d'un processus (3 points)
+        Partie A — États d'un processus
       
     </span>
   </a>
@@ -2863,10 +2891,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partie-b-chronogramme-5-points" class="md-nav__link">
+  <a href="#partie-b-chronogramme" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie B — Chronogramme (5 points)
+        Partie B — Chronogramme
       
     </span>
   </a>
@@ -2874,10 +2902,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partie-c-modelisation-dun-processus-4-points" class="md-nav__link">
+  <a href="#partie-c-classe-processus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie C — Modélisation d'un processus (4 points)
+        Partie C — Classe Processus
       
     </span>
   </a>
@@ -2885,13 +2913,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partie-d-modelisation-de-lordonnanceur-8-points" class="md-nav__link">
+  <a href="#partie-d-classe-roundrobin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Partie D — Modélisation de l'ordonnanceur (8 points)
+        Partie D — Classe RoundRobin
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Partie D — Classe RoundRobin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pour-tester-sur-machine-facultatif" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour tester sur machine (facultatif)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreurs-frequentes-a-surveiller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreurs fréquentes à surveiller
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2912,15 +2968,13 @@
 
 
 
-<!-- ===================== ÉNONCÉ : DÉBUT ===================== -->
+<!-- ===================== CORRIGÉ : DÉBUT ===================== -->
 
-<h1 id="revision-nsi-round-robin-enonce"><span style="color:red">RÉVISION NSI — Round Robin</span> : énoncé</h1>
-<p><strong>Exercice (20 points)</strong> — Cet exercice porte sur la gestion des processus, la programmation orientée objet et les structures de données (files).</p>
-<p>Un système d'exploitation possède un <strong>ordonnanceur</strong> : il décide quel processus utilise le processeur. On étudie ici un ordonnanceur de type <strong>tourniquet</strong> (<em>round robin</em>) sur un processeur à un seul cœur.</p>
-<hr />
-<h2 id="partie-a-etats-dun-processus-3-points">Partie A — États d'un processus (3 points)</h2>
-<p><strong>Question 1</strong> (1 pt) — Donner le nom des états dans lesquels peut se trouver un processus au cours de sa vie.</p>
-<p><strong>Question 2</strong> (1,5 pt) — Recopier et compléter le tableau suivant. Chaque ligne décrit un événement et donne la transition correspondante (état de départ → état d'arrivée).</p>
+<h1 id="revision-nsi-round-robin-corrige"><span style="color:red">RÉVISION NSI — Round Robin</span> : corrigé</h1>
+<h2 id="partie-a-etats-dun-processus">Partie A — États d'un processus</h2>
+<p><strong>Question 1</strong></p>
+<p>Les états sont : <strong>Nouveau</strong> (création), <strong>Prêt</strong>, <strong>Élu</strong> (en cours d'exécution), <strong>Bloqué</strong> (en attente d'une ressource) et <strong>Terminé</strong>.</p>
+<p><strong>Question 2</strong></p>
 <table>
 <thead>
 <tr>
@@ -2936,80 +2990,40 @@
 <td style="text-align: center;">Prêt</td>
 </tr>
 <tr>
-<td>L'ordonnanceur donne le processeur au processus (mise en exécution)</td>
-<td style="text-align: center;">...</td>
-<td style="text-align: center;">...</td>
+<td>Mise en exécution</td>
+<td style="text-align: center;">Prêt</td>
+<td style="text-align: center;">Élu</td>
 </tr>
 <tr>
-<td>Le quantum de temps est écoulé, le processus n'est pas terminé</td>
-<td style="text-align: center;">...</td>
-<td style="text-align: center;">...</td>
+<td>Quantum écoulé, processus non terminé</td>
+<td style="text-align: center;">Élu</td>
+<td style="text-align: center;">Prêt</td>
 </tr>
 <tr>
-<td>Le processus demande une ressource qui n'est pas disponible (blocage)</td>
-<td style="text-align: center;">...</td>
-<td style="text-align: center;">...</td>
+<td>Blocage (ressource indisponible)</td>
+<td style="text-align: center;">Élu</td>
+<td style="text-align: center;">Bloqué</td>
 </tr>
 <tr>
-<td>La ressource attendue devient disponible (déblocage)</td>
-<td style="text-align: center;">...</td>
-<td style="text-align: center;">...</td>
+<td>Déblocage (ressource disponible)</td>
+<td style="text-align: center;">Bloqué</td>
+<td style="text-align: center;">Prêt</td>
 </tr>
 <tr>
-<td>Le processus a fini son exécution</td>
-<td style="text-align: center;">...</td>
-<td style="text-align: center;">...</td>
+<td>Fin de l'exécution</td>
+<td style="text-align: center;">Élu</td>
+<td style="text-align: center;">Terminé</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Question 3</strong> (0,5 pt)</p>
+<p><strong>Question 3</strong></p>
 <ul>
-<li>a) Un processus bloqué peut-il passer directement à l'état « élu » ? Justifier.</li>
-<li>b) Combien de processus peuvent être à l'état « élu » en même temps sur ce processeur ?</li>
+<li>a) <strong>Non.</strong> Un processus débloqué repasse d'abord à l'état « prêt ». Seul l'ordonnanceur peut ensuite l'élire.</li>
+<li>b) <strong>Un seul</strong> : le processeur n'a qu'un cœur, donc un seul processus s'exécute à un instant donné.</li>
 </ul>
 <hr />
-<h2 id="partie-b-chronogramme-5-points">Partie B — Chronogramme (5 points)</h2>
-<p>On considère cinq processus dont les caractéristiques sont données ci-dessous. Les durées et les instants sont exprimés en <strong>unités de temps</strong>.</p>
-<table>
-<thead>
-<tr>
-<th>Processus</th>
-<th style="text-align: center;">P1</th>
-<th style="text-align: center;">P2</th>
-<th style="text-align: center;">P3</th>
-<th style="text-align: center;">P4</th>
-<th style="text-align: center;">P5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Instant d'arrivée</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">6</td>
-</tr>
-<tr>
-<td>Durée d'exécution</td>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">4</td>
-</tr>
-</tbody>
-</table>
-<p>L'ordonnanceur applique l'algorithme du <strong>tourniquet</strong> avec un <strong>quantum de 3 unités de temps</strong>, selon les règles suivantes :</p>
-<ol>
-<li>Les processus prêts sont rangés dans une <strong>file d'attente</strong>.</li>
-<li>Le processeur est attribué au premier processus de la file pendant <strong>au plus 3 unités de temps</strong>.</li>
-<li>Si le processus se termine avant la fin de son quantum, il libère aussitôt le processeur et le processus suivant démarre immédiatement.</li>
-<li>Si le quantum est écoulé et que le processus n'est pas terminé, il est <strong>remis à la fin de la file</strong>.</li>
-<li>Si un nouveau processus arrive <strong>à l'instant même</strong> où un autre est interrompu, le nouvel arrivant est placé dans la file <strong>avant</strong> le processus interrompu.</li>
-<li>Le temps de changement de processus est négligé.</li>
-</ol>
-<p><strong>Question 4</strong> (3 pts) — Recopier et compléter le chronogramme ci-dessous en marquant d'une croix la case du processus élu pendant chaque unité de temps. La colonne <code>t</code> correspond à l'intervalle de temps [t ; t+1[.</p>
+<h2 id="partie-b-chronogramme">Partie B — Chronogramme</h2>
+<p><strong>Question 4</strong></p>
 <table>
 <thead>
 <tr>
@@ -3039,21 +3053,21 @@
 <tbody>
 <tr>
 <td>P1</td>
+<td style="text-align: center;">■</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -3063,14 +3077,14 @@
 <tr>
 <td>P2</td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -3088,23 +3102,23 @@
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 </tr>
 <tr>
 <td>P4</td>
@@ -3113,12 +3127,12 @@
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -3140,94 +3154,378 @@
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">■</td>
 <td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Question 5</strong> (1 pt) — Donner l'état de chacun des cinq processus à l'instant t = 7 (pendant l'intervalle [7 ; 8[).</p>
-<p><strong>Question 6</strong> (1 pt) — Le <strong>temps d'attente</strong> d'un processus est le temps total qu'il passe à l'état « prêt » (dans la file d'attente) :</p>
-<p>temps d'attente = (instant de fin − instant d'arrivée) − durée d'exécution.</p>
-<p>Calculer le temps d'attente de chaque processus, puis le temps d'attente moyen.</p>
+<p>Déroulement. La colonne « File » donne la file d'attente <strong>à l'instant t, avant l'élection</strong> (la tête de file est à gauche), nouveaux arrivants compris :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Instant t</th>
+<th>File</th>
+<th style="text-align: center;">Élu</th>
+<th style="text-align: center;">Reste à faire après</th>
+<th>Remarque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td>P1</td>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">4</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>P2, P1</td>
+<td style="text-align: center;">P2</td>
+<td style="text-align: center;">2</td>
+<td>P2 arrive à t = 1 : il passe <strong>avant</strong> P1 (règle 4)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>P1, P3, P2</td>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">3</td>
+<td>P3 arrive à t = 2 : il passe avant P2</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>P3, P2, P4, P1</td>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;">5</td>
+<td>P4 arrive à t = 3 : il passe avant P1</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>P2, P4, P1, P3</td>
+<td style="text-align: center;">P2</td>
+<td style="text-align: center;">1</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>P4, P1, P3, P2</td>
+<td style="text-align: center;">P4</td>
+<td style="text-align: center;">1</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td>P1, P3, P2, P5, P4</td>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">2</td>
+<td>P5 arrive à t = 6 : il passe avant P4</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td>P3, P2, P5, P4, P1</td>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;">4</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td>P2, P5, P4, P1, P3</td>
+<td style="text-align: center;">P2</td>
+<td style="text-align: center;">0</td>
+<td><strong>P2 terminé</strong> (fin à t = 9)</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td>P5, P4, P1, P3</td>
+<td style="text-align: center;">P5</td>
+<td style="text-align: center;">3</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td>P4, P1, P3, P5</td>
+<td style="text-align: center;">P4</td>
+<td style="text-align: center;">0</td>
+<td><strong>P4 terminé</strong> (fin à t = 11)</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td>P1, P3, P5</td>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">1</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td>P3, P5, P1</td>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;">3</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td>P5, P1, P3</td>
+<td style="text-align: center;">P5</td>
+<td style="text-align: center;">2</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td>P1, P3, P5</td>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">0</td>
+<td><strong>P1 terminé</strong> (fin à t = 15)</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td>P3, P5</td>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;">2</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td>P5, P3</td>
+<td style="text-align: center;">P5</td>
+<td style="text-align: center;">1</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">17</td>
+<td>P3, P5</td>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;">1</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td>P5, P3</td>
+<td style="text-align: center;">P5</td>
+<td style="text-align: center;">0</td>
+<td><strong>P5 terminé</strong> (fin à t = 19)</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td>P3</td>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;">0</td>
+<td><strong>P3 terminé</strong> (fin à t = 20)</td>
+</tr>
+</tbody>
+</table>
+<p>La durée totale est de 20 unités de temps : 5 + 3 + 6 + 2 + 4 = 20, donc le processeur n'a jamais été inactif.</p>
+<p><strong>Question 5</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Instant</th>
+<th style="text-align: center;">P1</th>
+<th style="text-align: center;">P2</th>
+<th style="text-align: center;">P3</th>
+<th style="text-align: center;">P4</th>
+<th style="text-align: center;">P5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">t = 5</td>
+<td style="text-align: center;">Prêt</td>
+<td style="text-align: center;">Prêt</td>
+<td style="text-align: center;">Prêt</td>
+<td style="text-align: center;"><strong>Élu</strong></td>
+<td style="text-align: center;"><strong>Nouveau</strong> (il n'arrive qu'à t = 6)</td>
+</tr>
+<tr>
+<td style="text-align: center;">t = 9</td>
+<td style="text-align: center;">Prêt</td>
+<td style="text-align: center;"><strong>Terminé</strong> (fin à t = 9)</td>
+<td style="text-align: center;">Prêt</td>
+<td style="text-align: center;">Prêt</td>
+<td style="text-align: center;"><strong>Élu</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Question 6</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Processus</th>
+<th style="text-align: center;">Fin</th>
+<th style="text-align: center;">Fin − arrivée</th>
+<th style="text-align: center;">Durée</th>
+<th style="text-align: center;">Temps d'attente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">P1</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">P2</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">P3</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">P4</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">P5</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">9</td>
+</tr>
+</tbody>
+</table>
+<p>Temps d'attente moyen = (10 + 5 + 12 + 6 + 9) / 5 = 42 / 5 = <strong>8,4 unités de temps</strong>.</p>
 <hr />
-<h2 id="partie-c-modelisation-dun-processus-4-points">Partie C — Modélisation d'un processus (4 points)</h2>
-<p>On modélise un processus par la classe <code>Processus</code>, dont les objets possèdent les attributs suivants :</p>
-<ul>
-<li><code>pid</code> : l'identifiant du processus (entier) ;</li>
-<li><code>arrivee</code> : son instant d'arrivée ;</li>
-<li><code>duree</code> : sa durée totale d'exécution ;</li>
-<li><code>reste_a_faire</code> : le nombre d'unités de temps qu'il lui reste à exécuter (initialement égal à <code>duree</code>) ;</li>
-<li><code>etat</code> : son état, une chaîne de caractères (<code>"Nouveau"</code>, <code>"Prêt"</code>, <code>"Élu"</code>, <code>"Bloqué"</code> ou <code>"Terminé"</code>), initialement <code>"Nouveau"</code>.</li>
-</ul>
-<p><strong>Question 7</strong> (2 pts) — Écrire le constructeur <code>__init__(self, pid, arrivee, duree)</code> de la classe <code>Processus</code>.</p>
-<p><strong>Question 8</strong> (1,5 pt) — Écrire les trois méthodes suivantes de la classe <code>Processus</code> :</p>
-<ul>
-<li><code>execute_un_cycle(self)</code> : met à jour <code>reste_a_faire</code> après l'exécution d'une unité de temps ;</li>
-<li><code>change_etat(self, nouvel_etat)</code> : change l'état du processus ;</li>
-<li><code>est_termine(self)</code> : renvoie <code>True</code> si le processus a fini son exécution, <code>False</code> sinon.</li>
-</ul>
-<p><strong>Question 9</strong> (0,5 pt) — Écrire l'instruction qui crée une liste <code>processus</code> contenant les cinq objets de la partie B, dans l'ordre de leur instant d'arrivée.</p>
+<h2 id="partie-c-classe-processus">Partie C — Classe <code>Processus</code></h2>
+<p><strong>Question 7</strong></p>
+<pre><code class="language-python">class Processus:
+    def __init__(self, pid, arrivee, duree):
+        &quot;&quot;&quot;Crée un processus à l'état Nouveau, avec toute sa durée restant à exécuter.&quot;&quot;&quot;
+        self.pid = pid
+        self.arrivee = arrivee
+        self.duree = duree
+        self.reste_a_faire = duree
+        self.etat = &quot;Nouveau&quot;
+</code></pre>
+<p><strong>Question 8</strong></p>
+<pre><code class="language-python">    def execute_un_cycle(self):
+        &quot;&quot;&quot;Met à jour le reste à faire après l'exécution d'une unité de temps.&quot;&quot;&quot;
+        self.reste_a_faire = self.reste_a_faire - 1
+
+    def change_etat(self, nouvel_etat):
+        &quot;&quot;&quot;Change l'état du processus avec la valeur passée en paramètre.&quot;&quot;&quot;
+        self.etat = nouvel_etat
+
+    def est_termine(self):
+        &quot;&quot;&quot;Renvoie True si le processus a fini son exécution, False sinon.&quot;&quot;&quot;
+        return self.reste_a_faire == 0
+</code></pre>
+<p><strong>Question 9</strong></p>
+<pre><code class="language-python">processus = [Processus(1, 0, 5), Processus(2, 1, 3), Processus(3, 2, 6),
+             Processus(4, 3, 2), Processus(5, 6, 4)]
+</code></pre>
 <hr />
-<h2 id="partie-d-modelisation-de-lordonnanceur-8-points">Partie D — Modélisation de l'ordonnanceur (8 points)</h2>
-<p>On modélise l'ordonnanceur par une classe <code>RoundRobin</code>. On dispose de la classe <code>File</code> dont l'interface est la suivante :</p>
-<ul>
-<li><code>File()</code> : crée et renvoie une file vide ;</li>
-<li><code>enfiler(self, e)</code> : ajoute l'élément <code>e</code> à la fin de la file ;</li>
-<li><code>defiler(self)</code> : renvoie, en le supprimant, le premier élément de la file ;</li>
-<li><code>est_vide(self)</code> : renvoie <code>True</code> si la file est vide, <code>False</code> sinon.</li>
-</ul>
-<p>Un objet de la classe <code>RoundRobin</code> possède les attributs suivants :</p>
-<ul>
-<li><code>quantum</code> : la durée du quantum (entier) ;</li>
-<li><code>a_venir</code> : la liste des processus qui ne sont pas encore arrivés, <strong>triée par instant d'arrivée croissant</strong> ;</li>
-<li><code>file</code> : la file (objet de type <code>File</code>) des processus à l'état « prêt » ;</li>
-<li><code>temps</code> : l'horloge du système (entier), initialement égale à 0 ;</li>
-<li><code>chronogramme</code> : la liste des <code>pid</code> des processus exécutés, un élément par unité de temps (la valeur <code>None</code> est utilisée si le processeur est inactif).</li>
-</ul>
-<p><strong>Question 10</strong> (1 pt) — Pourquoi une <strong>file</strong> est-elle la structure adaptée pour mémoriser les processus prêts ? Pourquoi une pile ne conviendrait-elle pas ?</p>
-<p><strong>Question 11</strong> (1 pt) — Écrire le constructeur <code>__init__(self, quantum, processus)</code>. Le paramètre <code>processus</code> est la liste de tous les processus, triée par instant d'arrivée. On veillera à ne pas modifier la liste passée en paramètre.</p>
-<p><strong>Question 12</strong> (1,5 pt) — Écrire la méthode <code>admettre_arrivees(self)</code> qui fait entrer dans la file, à l'état « prêt », tous les processus de <code>a_venir</code> dont l'instant d'arrivée est inférieur ou égal à l'horloge. On pourra utiliser <code>liste.pop(0)</code>.</p>
-<p><strong>Question 13</strong> (2 pts) — Écrire la méthode <code>executer(self, p)</code> qui fait exécuter le processus <code>p</code> (déjà retiré de la file) pendant un quantum au plus :</p>
-<ul>
-<li><code>p</code> passe à l'état « élu » ;</li>
-<li>à chaque unité de temps, son <code>pid</code> est ajouté au chronogramme, <code>p</code> exécute un cycle et l'horloge avance de 1 ;</li>
-<li>on s'arrête quand le quantum est écoulé <strong>ou</strong> quand <code>p</code> est terminé ;</li>
-<li>on admet alors les processus qui viennent d'arriver, puis <code>p</code> passe à l'état « terminé », ou bien à l'état « prêt » et il est remis à la fin de la file.</li>
-</ul>
-<p><strong>Question 14</strong> (2 pts) — Écrire la méthode <code>simuler(self)</code> qui exécute l'algorithme jusqu'à la fin de tous les processus et renvoie le chronogramme.</p>
-<p><em>Attention : la file peut être vide alors que certains processus ne sont pas encore arrivés. Le processeur est alors inactif : on ajoute <code>None</code> au chronogramme et l'horloge avance de 1.</em></p>
-<p><strong>Question 15</strong> (0,5 pt) — Écrire le programme principal qui crée l'ordonnanceur de quantum 3 avec les cinq processus de la partie B et affiche le résultat de <code>simuler()</code>. Donner la valeur affichée.</p>
-<p><strong>Squelette fourni :</strong></p>
+<h2 id="partie-d-classe-roundrobin">Partie D — Classe <code>RoundRobin</code></h2>
+<p><strong>Question 10</strong></p>
+<p>Dans le tourniquet, les processus sont servis <strong>dans l'ordre où ils sont arrivés</strong> dans la file : le premier arrivé est le premier servi (FIFO). Un processus interrompu est remis <strong>à la fin</strong>, ce qui garantit que tous les processus passent à tour de rôle. C'est exactement le fonctionnement d'une file (<code>enfiler</code> à la fin, <code>defiler</code> au début). Avec une pile (LIFO), le dernier arrivé serait toujours servi en premier : les processus les plus anciens risqueraient de ne jamais s'exécuter (famine).</p>
+<p><strong>Question 11</strong></p>
 <pre><code class="language-python">class RoundRobin:
     def __init__(self, quantum, processus):
         &quot;&quot;&quot;Crée un ordonnanceur de quantum donné pour la liste de processus
         (triée par instant d'arrivée).&quot;&quot;&quot;
-        ...
-
-    def admettre_arrivees(self):
-        &quot;&quot;&quot;Met dans la file, à l'état Prêt, les processus arrivés à l'instant courant.&quot;&quot;&quot;
-        ...
-
-    def executer(self, p):
-        &quot;&quot;&quot;Fait exécuter le processus p pendant un quantum au plus.&quot;&quot;&quot;
-        ...
-
-    def simuler(self):
-        &quot;&quot;&quot;Simule l'ordonnancement complet et renvoie le chronogramme.&quot;&quot;&quot;
-        ...
+        self.quantum = quantum
+        self.a_venir = list(processus)   # copie : la liste de l'appelant n'est pas modifiée
+        self.file = File()
+        self.temps = 0
+        self.chronogramme = []
 </code></pre>
-<!-- ===================== ÉNONCÉ : FIN ===================== -->
+<p><strong>Question 12</strong></p>
+<pre><code class="language-python">    def admettre_arrivees(self):
+        &quot;&quot;&quot;Met dans la file, à l'état Prêt, les processus arrivés à l'instant courant.&quot;&quot;&quot;
+        while self.a_venir != [] and self.a_venir[0].arrivee &lt;= self.temps:
+            p = self.a_venir.pop(0)
+            p.change_etat(&quot;Prêt&quot;)
+            self.file.enfiler(p)
+</code></pre>
+<p><strong>Question 13</strong></p>
+<pre><code class="language-python">    def executer(self, p):
+        &quot;&quot;&quot;Fait exécuter le processus p pendant un quantum au plus.&quot;&quot;&quot;
+        p.change_etat(&quot;Élu&quot;)
+        compteur = 0
+        while compteur &lt; self.quantum and not p.est_termine():
+            self.chronogramme.append(p.pid)
+            p.execute_un_cycle()
+            self.temps = self.temps + 1
+            compteur = compteur + 1
+        self.admettre_arrivees()          # les nouveaux arrivés passent AVANT p (règle 4)
+        if p.est_termine():
+            p.change_etat(&quot;Terminé&quot;)
+        else:
+            p.change_etat(&quot;Prêt&quot;)
+            self.file.enfiler(p)          # p est remis à la fin de la file
+</code></pre>
+<p>L'appel à <code>admettre_arrivees()</code> doit se faire <strong>avant</strong> la remise de <code>p</code> dans la file : c'est ce qui respecte la règle 4 (à t = 1, P2 passe avant P1 ; à t = 2, P3 avant P2 ; à t = 3, P4 avant P1 ; à t = 6, P5 avant P4).</p>
+<p><strong>Question 14</strong></p>
+<pre><code class="language-python">    def simuler(self):
+        &quot;&quot;&quot;Simule l'ordonnancement complet et renvoie le chronogramme.&quot;&quot;&quot;
+        self.admettre_arrivees()
+        while self.a_venir != [] or not self.file.est_vide():
+            if self.file.est_vide():
+                # aucun processus prêt : le processeur est inactif pendant une unité
+                self.chronogramme.append(None)
+                self.temps = self.temps + 1
+                self.admettre_arrivees()
+            else:
+                p = self.file.defiler()
+                self.executer(p)
+        return self.chronogramme
+</code></pre>
+<p><strong>Question 15</strong></p>
+<pre><code class="language-python">processus = [Processus(1, 0, 5), Processus(2, 1, 3), Processus(3, 2, 6),
+             Processus(4, 3, 2), Processus(5, 6, 4)]
+ordonnanceur = RoundRobin(1, processus)
+print(ordonnanceur.simuler())
+</code></pre>
+<p>Valeur affichée (une valeur par unité de temps, elle correspond au chronogramme de la question 4) :</p>
+<pre><code class="language-text">[1, 2, 1, 3, 2, 4, 1, 3, 2, 5, 4, 1, 3, 5, 1, 3, 5, 3, 5, 3]
+</code></pre>
+<h3 id="pour-tester-sur-machine-facultatif">Pour tester sur machine (facultatif)</h3>
+<p>Une écriture possible de la classe <code>File</code>, si elle n'est pas déjà définie :</p>
+<pre><code class="language-python">class File:
+    def __init__(self):
+        &quot;&quot;&quot;Crée une file vide.&quot;&quot;&quot;
+        self.contenu = []
 
-<hr />
+    def enfiler(self, e):
+        &quot;&quot;&quot;Ajoute l'élément e à la fin de la file.&quot;&quot;&quot;
+        self.contenu.append(e)
+
+    def defiler(self):
+        &quot;&quot;&quot;Renvoie et supprime le premier élément de la file.&quot;&quot;&quot;
+        return self.contenu.pop(0)
+
+    def est_vide(self):
+        &quot;&quot;&quot;Renvoie True si la file est vide, False sinon.&quot;&quot;&quot;
+        return self.contenu == []
+</code></pre>
+<h3 id="erreurs-frequentes-a-surveiller">Erreurs fréquentes à surveiller</h3>
+<ul>
+<li>Oublier la transition <strong>Élu → Prêt</strong> (fin de quantum) dans le tableau des états.</li>
+<li>Remettre le processus interrompu dans la file <strong>avant</strong> le nouvel arrivant (violation de la règle 4). Avec un quantum de 1, cette règle intervient quatre fois (t = 1, 2, 3 et 6) : la moindre erreur fausse tout le reste du chronogramme.</li>
+<li>Confondre l'état « Nouveau » (pas encore arrivé) et l'état « Prêt » (arrivé, dans la file).</li>
+<li>Oublier la remise à 0 du compteur du quantum à chaque nouveau processus élu.</li>
+<li>Ne pas traiter le cas de la file vide alors que des processus n'ont pas encore démarré : sans ce traitement, la boucle principale ne se termine jamais.</li>
+</ul>
+<!-- ===================== CORRIGÉ : FIN ===================== -->
 
 
 
