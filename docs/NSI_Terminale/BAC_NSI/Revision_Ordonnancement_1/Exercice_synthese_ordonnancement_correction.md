@@ -1,153 +1,246 @@
-<!-- ===================== ÉNONCÉ : DÉBUT ===================== -->
+<!-- ===================== CORRIGÉ : DÉBUT ===================== -->
 
-# <span style="color:red">RÉVISION NSI — Round Robin</span> : énoncé
+# <span style="color:red">RÉVISION NSI — Round Robin</span> : corrigé
 
-**Exercice (20 points)** — Cet exercice porte sur la gestion des processus, la programmation orientée objet et les structures de données (files).
+## Partie A — États d'un processus
 
-Un système d'exploitation possède un **ordonnanceur** : il décide quel processus utilise le processeur. On étudie ici un ordonnanceur de type **tourniquet** (*round robin*) sur un processeur à un seul cœur.
+**Question 1**
 
----
+Les états sont : **Nouveau** (création), **Prêt**, **Élu** (en cours d'exécution), **Bloqué** (en attente d'une ressource) et **Terminé**.
 
-## Partie A — États d'un processus (3 points)
-
-**Question 1** (1 pt) — Donner le nom des états dans lesquels peut se trouver un processus au cours de sa vie.
-
-**Question 2** (1,5 pt) — Recopier et compléter le tableau suivant. Chaque ligne décrit un événement et donne la transition correspondante (état de départ → état d'arrivée).
+**Question 2**
 
 | Événement | État de départ | État d'arrivée |
 |---|:---:|:---:|
 | Le processus est créé puis admis | Nouveau | Prêt |
-| L'ordonnanceur donne le processeur au processus (mise en exécution) | ... | ... |
-| Le quantum de temps est écoulé, le processus n'est pas terminé | ... | ... |
-| Le processus demande une ressource qui n'est pas disponible (blocage) | ... | ... |
-| La ressource attendue devient disponible (déblocage) | ... | ... |
-| Le processus a fini son exécution | ... | ... |
+| Mise en exécution | Prêt | Élu |
+| Quantum écoulé, processus non terminé | Élu | Prêt |
+| Blocage (ressource indisponible) | Élu | Bloqué |
+| Déblocage (ressource disponible) | Bloqué | Prêt |
+| Fin de l'exécution | Élu | Terminé |
 
-**Question 3** (0,5 pt)
+**Question 3**
 
-- a) Un processus bloqué peut-il passer directement à l'état « élu » ? Justifier.
-- b) Combien de processus peuvent être à l'état « élu » en même temps sur ce processeur ?
+- a) **Non.** Un processus débloqué repasse d'abord à l'état « prêt ». Seul l'ordonnanceur peut ensuite l'élire.
+- b) **Un seul** : le processeur n'a qu'un cœur, donc un seul processus s'exécute à un instant donné.
 
 ---
 
-## Partie B — Chronogramme (5 points)
+## Partie B — Chronogramme
 
-On considère cinq processus dont les caractéristiques sont données ci-dessous. Les durées et les instants sont exprimés en **unités de temps**.
-
-| Processus | P1 | P2 | P3 | P4 | P5 |
-|---|:---:|:---:|:---:|:---:|:---:|
-| Instant d'arrivée | 0 | 1 | 2 | 3 | 6 |
-| Durée d'exécution | 5 | 3 | 6 | 2 | 4 |
-
-L'ordonnanceur applique l'algorithme du **tourniquet** avec un **quantum de 3 unités de temps**, selon les règles suivantes :
-
-1. Les processus prêts sont rangés dans une **file d'attente**.
-2. Le processeur est attribué au premier processus de la file pendant **au plus 3 unités de temps**.
-3. Si le processus se termine avant la fin de son quantum, il libère aussitôt le processeur et le processus suivant démarre immédiatement.
-4. Si le quantum est écoulé et que le processus n'est pas terminé, il est **remis à la fin de la file**.
-5. Si un nouveau processus arrive **à l'instant même** où un autre est interrompu, le nouvel arrivant est placé dans la file **avant** le processus interrompu.
-6. Le temps de changement de processus est négligé.
-
-**Question 4** (3 pts) — Recopier et compléter le chronogramme ci-dessous en marquant d'une croix la case du processus élu pendant chaque unité de temps. La colonne `t` correspond à l'intervalle de temps [t ; t+1[.
+**Question 4**
 
 | |0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| P1 | | | | | | | | | | | | | | | | | | | | |
-| P2 | | | | | | | | | | | | | | | | | | | | |
-| P3 | | | | | | | | | | | | | | | | | | | | |
-| P4 | | | | | | | | | | | | | | | | | | | | |
-| P5 | | | | | | | | | | | | | | | | | | | | |
+| P1 |■| |■| | | |■| | | | |■| | |■| | | | | |
+| P2 | |■| | |■| | | |■| | | | | | | | | | | |
+| P3 | | | |■| | | |■| | | | |■| | |■| |■| |■|
+| P4 | | | | | |■| | | | |■| | | | | | | | | |
+| P5 | | | | | | | | | |■| | | |■| | |■| |■| |
 
-**Question 5** (1 pt) — Donner l'état de chacun des cinq processus à l'instant t = 7 (pendant l'intervalle [7 ; 8[).
+Déroulement. La colonne « File » donne la file d'attente **à l'instant t, avant l'élection** (la tête de file est à gauche), nouveaux arrivants compris :
 
-**Question 6** (1 pt) — Le **temps d'attente** d'un processus est le temps total qu'il passe à l'état « prêt » (dans la file d'attente) :
+| Instant t | File | Élu | Reste à faire après | Remarque |
+|:---:|---|:---:|:---:|---|
+| 0 | P1 | P1 | 4 | |
+| 1 | P2, P1 | P2 | 2 | P2 arrive à t = 1 : il passe **avant** P1 (règle 4) |
+| 2 | P1, P3, P2 | P1 | 3 | P3 arrive à t = 2 : il passe avant P2 |
+| 3 | P3, P2, P4, P1 | P3 | 5 | P4 arrive à t = 3 : il passe avant P1 |
+| 4 | P2, P4, P1, P3 | P2 | 1 | |
+| 5 | P4, P1, P3, P2 | P4 | 1 | |
+| 6 | P1, P3, P2, P5, P4 | P1 | 2 | P5 arrive à t = 6 : il passe avant P4 |
+| 7 | P3, P2, P5, P4, P1 | P3 | 4 | |
+| 8 | P2, P5, P4, P1, P3 | P2 | 0 | **P2 terminé** (fin à t = 9) |
+| 9 | P5, P4, P1, P3 | P5 | 3 | |
+| 10 | P4, P1, P3, P5 | P4 | 0 | **P4 terminé** (fin à t = 11) |
+| 11 | P1, P3, P5 | P1 | 1 | |
+| 12 | P3, P5, P1 | P3 | 3 | |
+| 13 | P5, P1, P3 | P5 | 2 | |
+| 14 | P1, P3, P5 | P1 | 0 | **P1 terminé** (fin à t = 15) |
+| 15 | P3, P5 | P3 | 2 | |
+| 16 | P5, P3 | P5 | 1 | |
+| 17 | P3, P5 | P3 | 1 | |
+| 18 | P5, P3 | P5 | 0 | **P5 terminé** (fin à t = 19) |
+| 19 | P3 | P3 | 0 | **P3 terminé** (fin à t = 20) |
 
-temps d'attente = (instant de fin − instant d'arrivée) − durée d'exécution.
+La durée totale est de 20 unités de temps : 5 + 3 + 6 + 2 + 4 = 20, donc le processeur n'a jamais été inactif.
 
-Calculer le temps d'attente de chaque processus, puis le temps d'attente moyen.
+**Question 5**
+
+| Instant | P1 | P2 | P3 | P4 | P5 |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| t = 5 | Prêt | Prêt | Prêt | **Élu** | **Nouveau** (il n'arrive qu'à t = 6) |
+| t = 9 | Prêt | **Terminé** (fin à t = 9) | Prêt | Prêt | **Élu** |
+
+**Question 6**
+
+| Processus | Fin | Fin − arrivée | Durée | Temps d'attente |
+|:---:|:---:|:---:|:---:|:---:|
+| P1 | 15 | 15 | 5 | 10 |
+| P2 | 9 | 8 | 3 | 5 |
+| P3 | 20 | 18 | 6 | 12 |
+| P4 | 11 | 8 | 2 | 6 |
+| P5 | 19 | 13 | 4 | 9 |
+
+Temps d'attente moyen = (10 + 5 + 12 + 6 + 9) / 5 = 42 / 5 = **8,4 unités de temps**.
 
 ---
 
-## Partie C — Modélisation d'un processus (4 points)
+## Partie C — Classe `Processus`
 
-On modélise un processus par la classe `Processus`, dont les objets possèdent les attributs suivants :
+**Question 7**
 
-- `pid` : l'identifiant du processus (entier) ;
-- `arrivee` : son instant d'arrivée ;
-- `duree` : sa durée totale d'exécution ;
-- `reste_a_faire` : le nombre d'unités de temps qu'il lui reste à exécuter (initialement égal à `duree`) ;
-- `etat` : son état, une chaîne de caractères (`"Nouveau"`, `"Prêt"`, `"Élu"`, `"Bloqué"` ou `"Terminé"`), initialement `"Nouveau"`.
+```python
+class Processus:
+    def __init__(self, pid, arrivee, duree):
+        """Crée un processus à l'état Nouveau, avec toute sa durée restant à exécuter."""
+        self.pid = pid
+        self.arrivee = arrivee
+        self.duree = duree
+        self.reste_a_faire = duree
+        self.etat = "Nouveau"
+```
 
-**Question 7** (2 pts) — Écrire le constructeur `__init__(self, pid, arrivee, duree)` de la classe `Processus`.
+**Question 8**
 
-**Question 8** (1,5 pt) — Écrire les trois méthodes suivantes de la classe `Processus` :
+```python
+    def execute_un_cycle(self):
+        """Met à jour le reste à faire après l'exécution d'une unité de temps."""
+        self.reste_a_faire = self.reste_a_faire - 1
 
-- `execute_un_cycle(self)` : met à jour `reste_a_faire` après l'exécution d'une unité de temps ;
-- `change_etat(self, nouvel_etat)` : change l'état du processus ;
-- `est_termine(self)` : renvoie `True` si le processus a fini son exécution, `False` sinon.
+    def change_etat(self, nouvel_etat):
+        """Change l'état du processus avec la valeur passée en paramètre."""
+        self.etat = nouvel_etat
 
-**Question 9** (0,5 pt) — Écrire l'instruction qui crée une liste `processus` contenant les cinq objets de la partie B, dans l'ordre de leur instant d'arrivée.
+    def est_termine(self):
+        """Renvoie True si le processus a fini son exécution, False sinon."""
+        return self.reste_a_faire == 0
+```
+
+**Question 9**
+
+```python
+processus = [Processus(1, 0, 5), Processus(2, 1, 3), Processus(3, 2, 6),
+             Processus(4, 3, 2), Processus(5, 6, 4)]
+```
 
 ---
 
-## Partie D — Modélisation de l'ordonnanceur (8 points)
+## Partie D — Classe `RoundRobin`
 
-On modélise l'ordonnanceur par une classe `RoundRobin`. On dispose de la classe `File` dont l'interface est la suivante :
+**Question 10**
 
-- `File()` : crée et renvoie une file vide ;
-- `enfiler(self, e)` : ajoute l'élément `e` à la fin de la file ;
-- `defiler(self)` : renvoie, en le supprimant, le premier élément de la file ;
-- `est_vide(self)` : renvoie `True` si la file est vide, `False` sinon.
+Dans le tourniquet, les processus sont servis **dans l'ordre où ils sont arrivés** dans la file : le premier arrivé est le premier servi (FIFO). Un processus interrompu est remis **à la fin**, ce qui garantit que tous les processus passent à tour de rôle. C'est exactement le fonctionnement d'une file (`enfiler` à la fin, `defiler` au début). Avec une pile (LIFO), le dernier arrivé serait toujours servi en premier : les processus les plus anciens risqueraient de ne jamais s'exécuter (famine).
 
-Un objet de la classe `RoundRobin` possède les attributs suivants :
-
-- `quantum` : la durée du quantum (entier) ;
-- `a_venir` : la liste des processus qui ne sont pas encore arrivés, **triée par instant d'arrivée croissant** ;
-- `file` : la file (objet de type `File`) des processus à l'état « prêt » ;
-- `temps` : l'horloge du système (entier), initialement égale à 0 ;
-- `chronogramme` : la liste des `pid` des processus exécutés, un élément par unité de temps (la valeur `None` est utilisée si le processeur est inactif).
-
-**Question 10** (1 pt) — Pourquoi une **file** est-elle la structure adaptée pour mémoriser les processus prêts ? Pourquoi une pile ne conviendrait-elle pas ?
-
-**Question 11** (1 pt) — Écrire le constructeur `__init__(self, quantum, processus)`. Le paramètre `processus` est la liste de tous les processus, triée par instant d'arrivée. On veillera à ne pas modifier la liste passée en paramètre.
-
-**Question 12** (1,5 pt) — Écrire la méthode `admettre_arrivees(self)` qui fait entrer dans la file, à l'état « prêt », tous les processus de `a_venir` dont l'instant d'arrivée est inférieur ou égal à l'horloge. On pourra utiliser `liste.pop(0)`.
-
-**Question 13** (2 pts) — Écrire la méthode `executer(self, p)` qui fait exécuter le processus `p` (déjà retiré de la file) pendant un quantum au plus :
-
-- `p` passe à l'état « élu » ;
-- à chaque unité de temps, son `pid` est ajouté au chronogramme, `p` exécute un cycle et l'horloge avance de 1 ;
-- on s'arrête quand le quantum est écoulé **ou** quand `p` est terminé ;
-- on admet alors les processus qui viennent d'arriver, puis `p` passe à l'état « terminé », ou bien à l'état « prêt » et il est remis à la fin de la file.
-
-**Question 14** (2 pts) — Écrire la méthode `simuler(self)` qui exécute l'algorithme jusqu'à la fin de tous les processus et renvoie le chronogramme.
-
-*Attention : la file peut être vide alors que certains processus ne sont pas encore arrivés. Le processeur est alors inactif : on ajoute `None` au chronogramme et l'horloge avance de 1.*
-
-**Question 15** (0,5 pt) — Écrire le programme principal qui crée l'ordonnanceur de quantum 3 avec les cinq processus de la partie B et affiche le résultat de `simuler()`. Donner la valeur affichée.
-
-**Squelette fourni :**
+**Question 11**
 
 ```python
 class RoundRobin:
     def __init__(self, quantum, processus):
         """Crée un ordonnanceur de quantum donné pour la liste de processus
         (triée par instant d'arrivée)."""
-        ...
-
-    def admettre_arrivees(self):
-        """Met dans la file, à l'état Prêt, les processus arrivés à l'instant courant."""
-        ...
-
-    def executer(self, p):
-        """Fait exécuter le processus p pendant un quantum au plus."""
-        ...
-
-    def simuler(self):
-        """Simule l'ordonnancement complet et renvoie le chronogramme."""
-        ...
+        self.quantum = quantum
+        self.a_venir = list(processus)   # copie : la liste de l'appelant n'est pas modifiée
+        self.file = File()
+        self.temps = 0
+        self.chronogramme = []
 ```
 
-<!-- ===================== ÉNONCÉ : FIN ===================== -->
+**Question 12**
 
----
+```python
+    def admettre_arrivees(self):
+        """Met dans la file, à l'état Prêt, les processus arrivés à l'instant courant."""
+        while self.a_venir != [] and self.a_venir[0].arrivee <= self.temps:
+            p = self.a_venir.pop(0)
+            p.change_etat("Prêt")
+            self.file.enfiler(p)
+```
+
+**Question 13**
+
+```python
+    def executer(self, p):
+        """Fait exécuter le processus p pendant un quantum au plus."""
+        p.change_etat("Élu")
+        compteur = 0
+        while compteur < self.quantum and not p.est_termine():
+            self.chronogramme.append(p.pid)
+            p.execute_un_cycle()
+            self.temps = self.temps + 1
+            compteur = compteur + 1
+        self.admettre_arrivees()          # les nouveaux arrivés passent AVANT p (règle 4)
+        if p.est_termine():
+            p.change_etat("Terminé")
+        else:
+            p.change_etat("Prêt")
+            self.file.enfiler(p)          # p est remis à la fin de la file
+```
+
+L'appel à `admettre_arrivees()` doit se faire **avant** la remise de `p` dans la file : c'est ce qui respecte la règle 4 (à t = 1, P2 passe avant P1 ; à t = 2, P3 avant P2 ; à t = 3, P4 avant P1 ; à t = 6, P5 avant P4).
+
+**Question 14**
+
+```python
+    def simuler(self):
+        """Simule l'ordonnancement complet et renvoie le chronogramme."""
+        self.admettre_arrivees()
+        while self.a_venir != [] or not self.file.est_vide():
+            if self.file.est_vide():
+                # aucun processus prêt : le processeur est inactif pendant une unité
+                self.chronogramme.append(None)
+                self.temps = self.temps + 1
+                self.admettre_arrivees()
+            else:
+                p = self.file.defiler()
+                self.executer(p)
+        return self.chronogramme
+```
+
+**Question 15**
+
+```python
+processus = [Processus(1, 0, 5), Processus(2, 1, 3), Processus(3, 2, 6),
+             Processus(4, 3, 2), Processus(5, 6, 4)]
+ordonnanceur = RoundRobin(1, processus)
+print(ordonnanceur.simuler())
+```
+
+Valeur affichée (une valeur par unité de temps, elle correspond au chronogramme de la question 4) :
+
+```text
+[1, 2, 1, 3, 2, 4, 1, 3, 2, 5, 4, 1, 3, 5, 1, 3, 5, 3, 5, 3]
+```
+
+### Pour tester sur machine (facultatif)
+
+Une écriture possible de la classe `File`, si elle n'est pas déjà définie :
+
+```python
+class File:
+    def __init__(self):
+        """Crée une file vide."""
+        self.contenu = []
+
+    def enfiler(self, e):
+        """Ajoute l'élément e à la fin de la file."""
+        self.contenu.append(e)
+
+    def defiler(self):
+        """Renvoie et supprime le premier élément de la file."""
+        return self.contenu.pop(0)
+
+    def est_vide(self):
+        """Renvoie True si la file est vide, False sinon."""
+        return self.contenu == []
+```
+
+### Erreurs fréquentes à surveiller
+
+- Oublier la transition **Élu → Prêt** (fin de quantum) dans le tableau des états.
+- Remettre le processus interrompu dans la file **avant** le nouvel arrivant (violation de la règle 4). Avec un quantum de 1, cette règle intervient quatre fois (t = 1, 2, 3 et 6) : la moindre erreur fausse tout le reste du chronogramme.
+- Confondre l'état « Nouveau » (pas encore arrivé) et l'état « Prêt » (arrivé, dans la file).
+- Oublier la remise à 0 du compteur du quantum à chaque nouveau processus élu.
+- Ne pas traiter le cas de la file vide alors que des processus n'ont pas encore démarré : sans ce traitement, la boucle principale ne se termine jamais.
+
+<!-- ===================== CORRIGÉ : FIN ===================== -->

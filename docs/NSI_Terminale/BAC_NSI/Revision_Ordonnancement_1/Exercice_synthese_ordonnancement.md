@@ -39,14 +39,13 @@ On considère cinq processus dont les caractéristiques sont données ci-dessous
 | Instant d'arrivée | 0 | 1 | 2 | 3 | 6 |
 | Durée d'exécution | 5 | 3 | 6 | 2 | 4 |
 
-L'ordonnanceur applique l'algorithme du **tourniquet** avec un **quantum de 3 unités de temps**, selon les règles suivantes :
+L'ordonnanceur applique l'algorithme du **tourniquet** avec un **quantum de 1 unité de temps**, selon les règles suivantes :
 
 1. Les processus prêts sont rangés dans une **file d'attente**.
-2. Le processeur est attribué au premier processus de la file pendant **au plus 3 unités de temps**.
-3. Si le processus se termine avant la fin de son quantum, il libère aussitôt le processeur et le processus suivant démarre immédiatement.
-4. Si le quantum est écoulé et que le processus n'est pas terminé, il est **remis à la fin de la file**.
-5. Si un nouveau processus arrive **à l'instant même** où un autre est interrompu, le nouvel arrivant est placé dans la file **avant** le processus interrompu.
-6. Le temps de changement de processus est négligé.
+2. Le processeur est attribué au premier processus de la file pendant **1 unité de temps** (le quantum).
+3. Au bout de cette unité de temps, si le processus n'est pas terminé, il est **remis à la fin de la file** ; s'il est terminé, il quitte le système.
+4. Si un nouveau processus arrive **à l'instant même** où un autre est interrompu, le nouvel arrivant est placé dans la file **avant** le processus interrompu.
+5. Le temps de changement de processus est négligé.
 
 **Question 4** (3 pts) — Recopier et compléter le chronogramme ci-dessous en marquant d'une croix la case du processus élu pendant chaque unité de temps. La colonne `t` correspond à l'intervalle de temps [t ; t+1[.
 
@@ -58,7 +57,7 @@ L'ordonnanceur applique l'algorithme du **tourniquet** avec un **quantum de 3 un
 | P4 | | | | | | | | | | | | | | | | | | | | |
 | P5 | | | | | | | | | | | | | | | | | | | | |
 
-**Question 5** (1 pt) — Donner l'état de chacun des cinq processus à l'instant t = 7 (pendant l'intervalle [7 ; 8[).
+**Question 5** (1 pt) — Donner l'état de chacun des cinq processus aux instants t = 5 et t = 9 (pendant les intervalles [5 ; 6[ et [9 ; 10[).
 
 **Question 6** (1 pt) — Le **temps d'attente** d'un processus est le temps total qu'il passe à l'état « prêt » (dans la file d'attente) :
 
@@ -124,7 +123,7 @@ Un objet de la classe `RoundRobin` possède les attributs suivants :
 
 *Attention : la file peut être vide alors que certains processus ne sont pas encore arrivés. Le processeur est alors inactif : on ajoute `None` au chronogramme et l'horloge avance de 1.*
 
-**Question 15** (0,5 pt) — Écrire le programme principal qui crée l'ordonnanceur de quantum 3 avec les cinq processus de la partie B et affiche le résultat de `simuler()`. Donner la valeur affichée.
+**Question 15** (0,5 pt) — Écrire le programme principal qui crée l'ordonnanceur de quantum 1 avec les cinq processus de la partie B et affiche le résultat de `simuler()`. Donner la valeur affichée.
 
 **Squelette fourni :**
 
