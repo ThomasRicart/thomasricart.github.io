@@ -753,6 +753,8 @@
           
         
       
+        
+      
     
     
     
@@ -785,6 +787,11 @@
 
             </a>
             
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
@@ -798,6 +805,96 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Corrections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Corrections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CIEL2/C220_Lois_continues/corrections/correction_exercice1_cours.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercice 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
               
             
           </ul>
@@ -2818,7 +2915,7 @@ assert est_triee([1, 4, 3]) == False
 assert compter_occurrences([1, 3, 2, 3, 3, 4], 3) == 3
 assert compter_occurrences([1, 2, 4], 3) == 0
 </code></pre>
-<p><strong>Question 8</strong> (2 pts) — Écrire une fonction récursive <code>somme_pairs(lst)</code> qui renvoie la somme de tous les nombres <strong>pairs</strong> présents dans la liste <code>lst</code> d'entiers (renvoyant <code>0</code> s'il n'y en a aucun).</p>
+<p><strong>Question 9</strong> (2 pts) — Écrire une fonction récursive <code>somme_pairs(lst)</code> qui renvoie la somme de tous les nombres <strong>pairs</strong> présents dans la liste <code>lst</code> d'entiers (renvoyant <code>0</code> s'il n'y en a aucun).</p>
 <pre><code class="language-python">def somme_pairs(lst):
     ''' Renvoie la somme des entiers pairs de lst.'''
 
@@ -2837,128 +2934,19 @@ assert somme_pairs([1, 3, 5]) == 0
 <li>si <code>tab[milieu] &lt; x</code>, on cherche dans la moitié droite ;</li>
 <li>sinon (<code>tab[milieu] &gt; x</code>), on cherche dans la moitié gauche.</li>
 </ul>
-<p><strong>Question 7</strong> (2 pt) — Écrire la fonction <code>recherche_dicho_rec(tab, x, gauche, droite)</code> qui renvoie un indice où <code>x</code> apparaît dans <code>tab[gauche : droite + 1]</code>, ou <code>-1</code> s'il n'y est pas.</p>
-<p><strong>Question 8</strong> (1,5 pt) — On considère <code>tab = [2, 5, 8, 12, 16, 23, 38]</code> et on appelle <code>recherche_dicho_rec(tab, 16, 0, 6)</code>. Donner la suite des valeurs prises par <code>gauche</code>, <code>droite</code> et <code>milieu</code> à chaque appel récursif, puis la valeur renvoyée.</p>
-<p><strong>Question 9</strong> (1,5 pt) — Expliquer pourquoi la taille de l'intervalle de recherche diminue strictement à chaque appel récursif lorsque l'on ne trouve pas <code>tab[milieu] == x</code>, et en déduire la terminaison de l'algorithme.</p>
+<p><strong>Question 10</strong> (2 pt) — Écrire la fonction <code>recherche_dicho_rec(tab, x, gauche, droite)</code> qui renvoie un indice où <code>x</code> apparaît dans <code>tab[gauche : droite + 1]</code>, ou <code>-1</code> s'il n'y est pas.
+```def recherche_dicho_rec(tab, x, gauche, droite):
+    ''' Recherche dichotomique récursive de x dans tab entre les indices gauche et droite.'''</p>
+<p>assert recherche_dicho_rec([2, 5, 8, 12, 16, 23, 38], 16, 0, 6) == 4
+assert recherche_dicho_rec([2, 5, 8, 12, 16, 23, 38], 2, 0, 6) == 0
+assert recherche_dicho_rec([2, 5, 8, 12, 16, 23, 38], 38, 0, 6) == 6
+assert recherche_dicho_rec([2, 5, 8, 12, 16, 23, 38], 99, 0, 6) == -1
+```</p>
+<p><strong>Question 11</strong> (1,5 pt) — On considère <code>tab = [2, 5, 8, 12, 16, 23, 38]</code> et on appelle <code>recherche_dicho_rec(tab, 16, 0, 6)</code>. Donner la suite des valeurs prises par <code>gauche</code>, <code>droite</code> et <code>milieu</code> à chaque appel récursif, puis la valeur renvoyée.</p>
+<p><strong>Question 12</strong> (1,5 pt) — Expliquer pourquoi la taille de l'intervalle de recherche diminue strictement à chaque appel récursif lorsque l'on ne trouve pas <code>tab[milieu] == x</code>, et en déduire la terminaison de l'algorithme.</p>
 <!-- ===================== ÉNONCÉ : FIN ===================== -->
 
 <hr />
-<!-- ===================== CORRIGÉ : DÉBUT ===================== -->
-
-<h1 id="synthese-recursivite-suites-listes-et-dichotomie-corrige"><span style="color:red">SYNTHÈSE RÉCURSIVITÉ — Suites, listes et dichotomie</span> : corrigé</h1>
-<h2 id="partie-1-recursivite-sur-une-suite-numerique">Partie 1 — Récursivité sur une suite numérique</h2>
-<p><strong>Question 1</strong></p>
-<ul>
-<li><span class="arithmatex">\(u_1 = 2 \times 3 - 1 = 5\)</span></li>
-<li><span class="arithmatex">\(u_2 = 2 \times 5 - 1 = 9\)</span></li>
-<li><span class="arithmatex">\(u_3 = 2 \times 9 - 1 = 17\)</span></li>
-</ul>
-<p><strong>Question 2</strong></p>
-<pre><code class="language-python">def terme(n):
-    &quot;&quot;&quot;Renvoie le terme u_n de la suite définie par u_0 = 3 et u_{k+1} = 2*u_k - 1.&quot;&quot;&quot;
-    if n == 0:
-        return 3
-    return 2 * terme(n - 1) - 1
-</code></pre>
-<p><strong>Question 3</strong></p>
-<p>Pour tout entier naturel <code>n</code> donné en entrée :</p>
-<ul>
-<li>si <code>n == 0</code>, le cas de base est atteint immédiatement sans appel récursif ;</li>
-<li>si <code>n &gt; 0</code>, chaque appel récursif fait diminuer <code>n</code> de <code>1</code> (<code>n - 1</code>). Comme <code>n</code> est un entier positif qui décroît strictement de <code>1</code> à chaque étape, il atteint nécessairement <code>0</code> en un nombre fini d'étapes (<code>n</code> appels), ce qui déclenche le cas de base et garantit la terminaison.</li>
-</ul>
-<hr />
-<h2 id="partie-2-recursivite-sur-des-listes">Partie 2 — Récursivité sur des listes</h2>
-<p><strong>Question 4</strong></p>
-<pre><code class="language-python">def est_triee(lst):
-    &quot;&quot;&quot;Renvoie True si lst est triée par ordre croissant (au sens large), False sinon.&quot;&quot;&quot;
-    if len(lst) &lt;= 1:
-        return True
-    if lst[0] &gt; lst[1]:
-        return False
-    return est_triee(lst[1:])
-</code></pre>
-<p><strong>Question 5</strong></p>
-<pre><code class="language-python">def compter_occurrences(lst, cible):
-    &quot;&quot;&quot;Renvoie le nombre de fois où cible apparaît dans lst.&quot;&quot;&quot;
-    if lst == []:
-        return 0
-    reste = compter_occurrences(lst[1:], cible)
-    if lst[0] == cible:
-        return 1 + reste
-    return reste
-</code></pre>
-<p><strong>Question 6</strong></p>
-<pre><code class="language-python">def somme_pairs(lst):
-    &quot;&quot;&quot;Renvoie la somme des entiers pairs de lst.&quot;&quot;&quot;
-    if lst == []:
-        return 0
-    reste = somme_pairs(lst[1:])
-    if lst[0] % 2 == 0:
-        return lst[0] + reste
-    return reste
-</code></pre>
-<hr />
-<h2 id="partie-3-synthese-recherche-dichotomique-recursive">Partie 3 — Synthèse : recherche dichotomique récursive</h2>
-<p><strong>Question 7</strong></p>
-<pre><code class="language-python">def recherche_dicho_rec(tab, x, gauche, droite):
-    &quot;&quot;&quot;Recherche dichotomique récursive de x dans tab entre les indices gauche et droite.&quot;&quot;&quot;
-    if gauche &gt; droite:
-        return -1
-    milieu = (gauche + droite) // 2
-    if tab[milieu] == x:
-        return milieu
-    if tab[milieu] &lt; x:
-        return recherche_dicho_rec(tab, x, milieu + 1, droite)
-    return recherche_dicho_rec(tab, x, gauche, milieu - 1)
-</code></pre>
-<p><strong>Question 8</strong></p>
-<p>Avec <code>tab = [2, 5, 8, 12, 16, 23, 38]</code> et <code>x = 16</code> :</p>
-<ul>
-<li><strong>Appel 1 :</strong> <code>gauche = 0</code>, <code>droite = 6</code> <span class="arithmatex">\(\implies\)</span> <code>milieu = (0 + 6) // 2 = 3</code>. <code>tab[3]</code> vaut <code>12</code> (<code>12 &lt; 16</code>) : appel suivant avec <code>gauche = 4</code>, <code>droite = 6</code>.</li>
-<li><strong>Appel 2 :</strong> <code>gauche = 4</code>, <code>droite = 6</code> <span class="arithmatex">\(\implies\)</span> <code>milieu = (4 + 6) // 2 = 5</code>. <code>tab[5]</code> vaut <code>23</code> (<code>23 &gt; 16</code>) : appel suivant avec <code>gauche = 4</code>, <code>droite = 4</code>.</li>
-<li><strong>Appel 3 :</strong> <code>gauche = 4</code>, <code>droite = 4</code> <span class="arithmatex">\(\implies\)</span> <code>milieu = (4 + 4) // 2 = 4</code>. <code>tab[4]</code> vaut <code>16</code> (<code>16 == 16</code>) : trouvé.</li>
-</ul>
-<p>La fonction renvoie <strong><code>4</code></strong>.</p>
-<p><strong>Question 9</strong></p>
-<p>Lorsque <code>tab[milieu] != x</code>, l'indice <code>milieu</code> est exclu du nouvel intervalle :</p>
-<ul>
-<li>soit <code>gauche</code> devient <code>milieu + 1</code> (strictement supérieur à l'ancien <code>gauche</code>, car <code>milieu &lt;= droite</code>) ;</li>
-<li>soit <code>droite</code> devient <code>milieu - 1</code> (strictement inférieur à l'ancien <code>droite</code>, car <code>gauche &lt;= milieu</code>).</li>
-</ul>
-<p>Dans les deux cas, la quantité <code>droite - gauche</code> diminue strictement d'au moins <code>1</code> à chaque appel récursif. Comme <code>droite - gauche</code> est un entier qui décroît strictement, on atteint nécessairement soit <code>tab[milieu] == x</code> (arrêt par succès), soit <code>gauche &gt; droite</code> (arrêt sur intervalle vide, renvoyant <code>-1</code>). L'algorithme termine donc toujours.</p>
-<h3 id="pour-tester-sur-machine-facultatif">Pour tester sur machine (facultatif)</h3>
-<pre><code class="language-python">assert terme(0) == 3
-assert terme(1) == 5
-assert terme(2) == 9
-assert terme(3) == 17
-
-assert est_triee([]) is True
-assert est_triee([7]) is True
-assert est_triee([1, 2, 2, 5]) is True
-assert est_triee([1, 4, 3]) is False
-
-assert compter_occurrences([1, 3, 2, 3, 3, 4], 3) == 3
-assert compter_occurrences([1, 2, 4], 3) == 0
-assert compter_occurrences([], 3) == 0
-
-assert somme_pairs([1, 2, 3, 4, 5, 6]) == 12
-assert somme_pairs([1, 3, 5]) == 0
-assert somme_pairs([]) == 0
-
-tab = [2, 5, 8, 12, 16, 23, 38]
-assert recherche_dicho_rec(tab, 16, 0, len(tab) - 1) == 4
-assert recherche_dicho_rec(tab, 2, 0, len(tab) - 1) == 0
-assert recherche_dicho_rec(tab, 38, 0, len(tab) - 1) == 6
-assert recherche_dicho_rec(tab, 99, 0, len(tab) - 1) == -1
-print(&quot;tous les tests passent&quot;)
-</code></pre>
-<h3 id="erreurs-frequentes-a-surveiller">Erreurs fréquentes à surveiller</h3>
-<ul>
-<li><strong>Oublier le cas de base</strong> ou ne pas faire décroître le paramètre (<code>terme(n)</code> au lieu de <code>terme(n - 1)</code>, ou <code>lst</code> au lieu de <code>lst[1:]</code>) : boucle infinie (<code>RecursionError</code>).</li>
-<li><strong>Oublier un cas limite sur une liste</strong> : par exemple tester <code>len(lst) == 0</code> au lieu de <code>len(lst) &lt;= 1</code> dans <code>est_triee</code>, ce qui provoquerait <code>IndexError: list index out of range</code> sur <code>lst[1]</code> pour une liste à un élément.</li>
-<li><strong>Inclure <code>milieu</code> dans le nouvel intervalle</strong> (<code>milieu</code> au lieu de <code>milieu + 1</code> ou <code>milieu - 1</code>) dans <code>recherche_dicho_rec</code> : lorsque <code>gauche == droite</code> et que <code>x</code> n'est pas présent, l'intervalle ne diminuerait plus et bouclerait indéfiniment.</li>
-</ul>
-<!-- ===================== CORRIGÉ : FIN ===================== -->
 
 
 
