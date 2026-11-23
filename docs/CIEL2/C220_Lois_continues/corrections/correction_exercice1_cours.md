@@ -2,12 +2,12 @@
 
 1. a. Montrer que X suit une loi binomiale de paramètres n et p.
 
-* "Expédier une lettre" est une expérience aléatoire à 2 issues:
+- "Expédier une lettre" est une expérience aléatoire à 2 issues:
     > succès $S$: la lettre est parvient à leur destinataire le lendemain de probabilite $p=0.7$\
     > échec $\bar{S}$: la lettre n'est pas parvient à leur destinataire le lendemain de probabilite $q=1-p=0.3$
-* On répète cette expérience $n=500$ fois de manière identique et indépendante. 
-* On note $X$ le nombre de succès (lettres parvenues à leur destinataire le lendemain) sur les $n$ expériences.
-* Ainsi, $X$ suit une loi binomiale de paramètres $n=500$ et $p=0.7$.
+- On répète cette expérience $n=500$ fois de manière identique et indépendante. 
+- On note $X$ le nombre de succès (lettres parvenues à leur destinataire le lendemain) sur les $n$ expériences.
+- Ainsi, $X$ suit une loi binomiale de paramètres $n=500$ et $p=0.7$.
 
 2. $P_0 = P(X \geq 375) = 0.0077$
 
