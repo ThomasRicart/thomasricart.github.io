@@ -1,4 +1,4 @@
-# C210 Equations Différentielles
+# C220 Lois continues
 
 | Nom du document | Contenu | Lien |
 | --- | --- | --- |
