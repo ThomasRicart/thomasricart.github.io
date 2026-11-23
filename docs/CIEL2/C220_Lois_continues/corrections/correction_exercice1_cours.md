@@ -16,9 +16,9 @@ $P_0 = P(X \geq 375) = 0.0077$
 <img src="image-3.png" alt="alt text" style="width:30%;">
 
 ### 3. a. 
-On a $n=500 > 50 $ et $p=0.7$. On a donc $np(1-p)=500*0.7*0.3=105$. Puisque $np(1-p) \geq 10$, on peut donc utiliser l'approximation par la loi normale.
+On a $n=500 > 50 $ et $p=0.7$. On a donc $np(1-p)=500\times 0.7\times 0.3=105$. Puisque $np(1-p) \geq 10$, on peut donc utiliser l'approximation par la loi normale.
 
-Cette loi normale a pour espérance $\mu = np = 500*0.7=350$ et pour écart-type $\sigma = \sqrt{np(1-p)} = \sqrt{105} \approx 10.25$.
+Cette loi normale a pour espérance $\mu = np = 500\times 0.7=350$ et pour écart-type $\sigma = \sqrt{np(1-p)} = \sqrt{105} \approx 10.25$.
 
 ### 3. b. 
 
