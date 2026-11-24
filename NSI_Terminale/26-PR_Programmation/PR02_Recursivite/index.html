@@ -2830,7 +2830,7 @@
         return 3 * suite_recurrente(n - 1) - 1
 </code></pre>
 <ol>
-<li>Implémenter la puissance d'un nombre. Par exemple, <span class="arithmatex">\(a^n\)</span> avec <span class="arithmatex">\(a\)</span> un nombre réel et <span class="arithmatex">\(n\)</span> un entier naturel.</li>
+<li>Implémenter la puissance d'un nombre. Par exemple, <span class="arithmatex">\(a^n\)</span> avec <span class="arithmatex">\(a\)</span> un nombre réel et <span class="arithmatex">\(n\)</span> un entier naturel.<br></li>
 </ol>
 <pre><code class="language-python">def puissance(a, n):
     if n == 0:
@@ -2839,7 +2839,7 @@
         return a * puissance(a, n - 1)
 </code></pre>
 <ol>
-<li>Implémenter la factorielle d'un nombre. Par exemple, <span class="arithmatex">\(n!\)</span> avec <span class="arithmatex">\(n\)</span> un entier naturel.</li>
+<li>Implémenter la factorielle d'un nombre. Par exemple, <span class="arithmatex">\(n!\)</span> avec <span class="arithmatex">\(n\)</span> un entier naturel.<br></li>
 </ol>
 <pre><code class="language-python">def factorielle(n):
     if n == 0:
@@ -2848,7 +2848,7 @@
         return n * factorielle(n - 1)
 </code></pre>
 <ol>
-<li>Implémenter la suite de Fibonacci. Par exemple, la suite <span class="arithmatex">\((F_n)\)</span> définie par <span class="arithmatex">\(F_0 = 0\)</span>, <span class="arithmatex">\(F_1 = 1\)</span> et <span class="arithmatex">\(F_{n} = F_{n-1} + F_{n-2}\)</span>.</li>
+<li>Implémenter la suite de Fibonacci. Par exemple, la suite <span class="arithmatex">\((F_n)\)</span> définie par <span class="arithmatex">\(F_0 = 0\)</span>, <span class="arithmatex">\(F_1 = 1\)</span> et <span class="arithmatex">\(F_{n} = F_{n-1} + F_{n-2}\)</span>.<br></li>
 </ol>
 <pre><code class="language-python">def fibonacci(n):
     if n == 0 or n == 1:
@@ -2857,7 +2857,7 @@
         return fibonacci(n - 1) + fibonacci(n - 2)
 </code></pre>
 <ol>
-<li>Implémenter le calcul des coefficients binomiaux. Par exemple, le coefficient binomial <span class="arithmatex">\(\binom{n}{k}\)</span> avec <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> des entiers naturels.</li>
+<li>Implémenter le calcul des coefficients binomiaux. Par exemple, le coefficient binomial <span class="arithmatex">\(\binom{n}{k}\)</span> avec <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> des entiers naturels.<br></li>
 </ol>
 <pre><code class="language-python">def coefficient_binomial(n, k):
     if k == 0 or k == n:
@@ -2868,7 +2868,7 @@
         return coefficient_binomial(n - 1, k - 1) + coefficient_binomial(n - 1, k)
 </code></pre>
 <ol>
-<li>Implémenter la fonction de somme des éléments d'une liste. Par exemple, la somme des éléments d'une liste <span class="arithmatex">\(L\)</span>.</li>
+<li>Implémenter la fonction de somme des éléments d'une liste. Par exemple, la somme des éléments d'une liste <span class="arithmatex">\(L\)</span>.<br></li>
 </ol>
 <pre><code class="language-python">
 def somme_liste(L):
@@ -2878,7 +2878,7 @@ def somme_liste(L):
         return L[0] + somme_liste(L[1:])
 </code></pre>
 <ol>
-<li>Implémenter la fonction qui retourne le maximum d'une liste. Par exemple, le maximum des éléments d'une liste <span class="arithmatex">\(L\)</span>.</li>
+<li>Implémenter la fonction qui retourne le maximum d'une liste. Par exemple, le maximum des éléments d'une liste <span class="arithmatex">\(L\)</span>.<br></li>
 </ol>
 <pre><code class="language-python">def maximum_liste(L):
     if len(L) == 1:
@@ -2887,7 +2887,7 @@ def somme_liste(L):
         return max(L[0], maximum_liste(L[1:]))
 </code></pre>
 <ol>
-<li>Fonction quotient(a, b) qui retourne le quotient de la division entière de a par b. </li>
+<li>Fonction quotient(a, b) qui retourne le quotient de la division entière de a par b. <br></li>
 </ol>
 <pre><code class="language-python">def quotient(a, b):
     if a &lt; b:
@@ -2896,7 +2896,7 @@ def somme_liste(L):
         return 1 + quotient(a - b, b)
 </code></pre>
 <ol>
-<li>Fonction reste(a, b) qui retourne le reste de la division entière de a par b.</li>
+<li>Fonction reste(a, b) qui retourne le reste de la division entière de a par b.<br></li>
 </ol>
 <pre><code class="language-python">def reste(a, b):
     if a &lt; b:
@@ -2905,7 +2905,7 @@ def somme_liste(L):
         return reste(a - b, b)
 </code></pre>
 <ol>
-<li>Implémenter la fonction qui teste si une chaine de caractères est un palindrome. Par exemple, tester si une chaine <span class="arithmatex">\(s\)</span> est un palindrome.</li>
+<li>Implémenter la fonction qui teste si une chaine de caractères est un palindrome. Par exemple, tester si une chaine <span class="arithmatex">\(s\)</span> est un palindrome.<br></li>
 </ol>
 <pre><code class="language-python">
 def est_palindrome(s):
@@ -2915,7 +2915,7 @@ def est_palindrome(s):
         return s[0] == s[-1] and est_palindrome(s[1:-1])
 </code></pre>
 <ol>
-<li>Exponentiation rapide. Par exemple, calculer <span class="arithmatex">\(a^n\)</span> avec <span class="arithmatex">\(a\)</span> un nombre réel et <span class="arithmatex">\(n\)</span> un entier naturel.</li>
+<li>Exponentiation rapide. Par exemple, calculer <span class="arithmatex">\(a^n\)</span> avec <span class="arithmatex">\(a\)</span> un nombre réel et <span class="arithmatex">\(n\)</span> un entier naturel.<br></li>
 </ol>
 <pre><code class="language-python">
 def exponentiation_rapide(a, n):
@@ -2927,7 +2927,7 @@ def exponentiation_rapide(a, n):
         return a * exponentiation_rapide(a, n //2) ** 2
 </code></pre>
 <ol>
-<li>Ecrire la fonction recherche(L, val) qui retourne True si val est dans la liste L et False sinon.</li>
+<li>Ecrire la fonction recherche(L, val) qui retourne True si val est dans la liste L et False sinon.<br></li>
 </ol>
 <pre><code class="language-python">def recherche(L, val):
     if len(L) == 0:
@@ -2936,7 +2936,7 @@ def exponentiation_rapide(a, n):
         return L[0] == val or recherche(L[1:], val)
 </code></pre>
 <ol>
-<li>Ecrire la fonction <code>hanoi(n, depart, arrivee, intermediaire)</code> qui affiche les déplacements nécessaires pour résoudre le problème des tours de Hanoï avec <code>n</code> disques. Le disque le plus grand est au départ et doit être déplacé vers l'arrivée en utilisant l'intermédiaire comme tour temporaire.</li>
+<li>Ecrire la fonction <code>hanoi(n, depart, arrivee, intermediaire)</code> qui affiche les déplacements nécessaires pour résoudre le problème des tours de Hanoï avec <code>n</code> disques. Le disque le plus grand est au départ et doit être déplacé vers l'arrivée en utilisant l'intermédiaire comme tour temporaire.<br></li>
 </ol>
 <pre><code class="language-python">def hanoi(n, depart, arrivee, intermediaire):
     if n == 0:
