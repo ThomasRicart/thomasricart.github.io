@@ -28,7 +28,7 @@ def suite_recurrente(n):
         return 3 * suite_recurrente(n - 1) - 1
 ```
 
-2. Implémenter la puissance d'un nombre. Par exemple, $a^n$ avec $a$ un nombre réel et $n$ un entier naturel.
+2. Implémenter la puissance d'un nombre. Par exemple, $a^n$ avec $a$ un nombre réel et $n$ un entier naturel.<br>
 
 ```python
 def puissance(a, n):
@@ -38,7 +38,7 @@ def puissance(a, n):
         return a * puissance(a, n - 1)
 ```
 
-3. Implémenter la factorielle d'un nombre. Par exemple, $n!$ avec $n$ un entier naturel.
+3. Implémenter la factorielle d'un nombre. Par exemple, $n!$ avec $n$ un entier naturel.<br>
 
 ```python   
 def factorielle(n):
@@ -48,7 +48,7 @@ def factorielle(n):
         return n * factorielle(n - 1)
 ```
 
-4. Implémenter la suite de Fibonacci. Par exemple, la suite $(F_n)$ définie par $F_0 = 0$, $F_1 = 1$ et $F_{n} = F_{n-1} + F_{n-2}$.
+4. Implémenter la suite de Fibonacci. Par exemple, la suite $(F_n)$ définie par $F_0 = 0$, $F_1 = 1$ et $F_{n} = F_{n-1} + F_{n-2}$.<br>
 
 ```python
 def fibonacci(n):
@@ -58,7 +58,7 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 ```
 
-5. Implémenter le calcul des coefficients binomiaux. Par exemple, le coefficient binomial $\binom{n}{k}$ avec $n$ et $k$ des entiers naturels.
+5. Implémenter le calcul des coefficients binomiaux. Par exemple, le coefficient binomial $\binom{n}{k}$ avec $n$ et $k$ des entiers naturels.<br>
 
 ```python
 def coefficient_binomial(n, k):
@@ -70,7 +70,7 @@ def coefficient_binomial(n, k):
         return coefficient_binomial(n - 1, k - 1) + coefficient_binomial(n - 1, k)
 ```
 
-6. Implémenter la fonction de somme des éléments d'une liste. Par exemple, la somme des éléments d'une liste $L$.
+6. Implémenter la fonction de somme des éléments d'une liste. Par exemple, la somme des éléments d'une liste $L$.<br>
 
 ```python
 
@@ -81,7 +81,7 @@ def somme_liste(L):
         return L[0] + somme_liste(L[1:])
 ``` 
 
-7. Implémenter la fonction qui retourne le maximum d'une liste. Par exemple, le maximum des éléments d'une liste $L$.
+7. Implémenter la fonction qui retourne le maximum d'une liste. Par exemple, le maximum des éléments d'une liste $L$.<br>
 
 ```python
 def maximum_liste(L):
@@ -91,7 +91,7 @@ def maximum_liste(L):
         return max(L[0], maximum_liste(L[1:]))
 ```
 
-8. Fonction quotient(a, b) qui retourne le quotient de la division entière de a par b. 
+8. Fonction quotient(a, b) qui retourne le quotient de la division entière de a par b. <br>
 
 ```python
 def quotient(a, b):
@@ -101,7 +101,7 @@ def quotient(a, b):
         return 1 + quotient(a - b, b)
 ```
 
-9. Fonction reste(a, b) qui retourne le reste de la division entière de a par b.
+9. Fonction reste(a, b) qui retourne le reste de la division entière de a par b.<br>
 
 ```python
 def reste(a, b):
@@ -111,7 +111,7 @@ def reste(a, b):
         return reste(a - b, b)
 ```
 
-10. Implémenter la fonction qui teste si une chaine de caractères est un palindrome. Par exemple, tester si une chaine $s$ est un palindrome.
+10. Implémenter la fonction qui teste si une chaine de caractères est un palindrome. Par exemple, tester si une chaine $s$ est un palindrome.<br>
 
 ```python
 
@@ -122,7 +122,7 @@ def est_palindrome(s):
         return s[0] == s[-1] and est_palindrome(s[1:-1])
 ```
 
-11. Exponentiation rapide. Par exemple, calculer $a^n$ avec $a$ un nombre réel et $n$ un entier naturel.
+11. Exponentiation rapide. Par exemple, calculer $a^n$ avec $a$ un nombre réel et $n$ un entier naturel.<br>
 
 ```python
 
@@ -135,7 +135,7 @@ def exponentiation_rapide(a, n):
         return a * exponentiation_rapide(a, n //2) ** 2
 ``` 
 
-12. Ecrire la fonction recherche(L, val) qui retourne True si val est dans la liste L et False sinon.
+12. Ecrire la fonction recherche(L, val) qui retourne True si val est dans la liste L et False sinon.<br>
 
 ```python
 def recherche(L, val):
@@ -145,7 +145,7 @@ def recherche(L, val):
         return L[0] == val or recherche(L[1:], val)
 ```
 
-13. Ecrire la fonction `hanoi(n, depart, arrivee, intermediaire)` qui affiche les déplacements nécessaires pour résoudre le problème des tours de Hanoï avec `n` disques. Le disque le plus grand est au départ et doit être déplacé vers l'arrivée en utilisant l'intermédiaire comme tour temporaire.
+13. Ecrire la fonction `hanoi(n, depart, arrivee, intermediaire)` qui affiche les déplacements nécessaires pour résoudre le problème des tours de Hanoï avec `n` disques. Le disque le plus grand est au départ et doit être déplacé vers l'arrivée en utilisant l'intermédiaire comme tour temporaire.<br>
 
 ```python
 def hanoi(n, depart, arrivee, intermediaire):
