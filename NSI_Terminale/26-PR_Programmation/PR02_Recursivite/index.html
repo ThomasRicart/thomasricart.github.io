@@ -2887,6 +2887,24 @@ def somme_liste(L):
         return max(L[0], maximum_liste(L[1:]))
 </code></pre>
 <ol>
+<li>Fonction quotient(a, b) qui retourne le quotient de la division entière de a par b. </li>
+</ol>
+<pre><code class="language-python">def quotient(a, b):
+    if a &lt; b:
+        return 0
+    else:
+        return 1 + quotient(a - b, b)
+</code></pre>
+<ol>
+<li>Fonction reste(a, b) qui retourne le reste de la division entière de a par b.</li>
+</ol>
+<pre><code class="language-python">def reste(a, b):
+    if a &lt; b:
+        return a
+    else:
+        return reste(a - b, b)
+</code></pre>
+<ol>
 <li>Implémenter la fonction qui teste si une chaine de caractères est un palindrome. Par exemple, tester si une chaine <span class="arithmatex">\(s\)</span> est un palindrome.</li>
 </ol>
 <pre><code class="language-python">
@@ -2895,6 +2913,38 @@ def est_palindrome(s):
         return True
     else:
         return s[0] == s[-1] and est_palindrome(s[1:-1])
+</code></pre>
+<ol>
+<li>Exponentiation rapide. Par exemple, calculer <span class="arithmatex">\(a^n\)</span> avec <span class="arithmatex">\(a\)</span> un nombre réel et <span class="arithmatex">\(n\)</span> un entier naturel.</li>
+</ol>
+<pre><code class="language-python">
+def exponentiation_rapide(a, n):
+    if n == 0:
+        return 1
+    elif n % 2 == 0:
+        return exponentiation_rapide(a, n // 2) ** 2
+    else:
+        return a * exponentiation_rapide(a, n //2) ** 2
+</code></pre>
+<ol>
+<li>Ecrire la fonction recherche(L, val) qui retourne True si val est dans la liste L et False sinon.</li>
+</ol>
+<pre><code class="language-python">def recherche(L, val):
+    if len(L) == 0:
+        return False
+    else:
+        return L[0] == val or recherche(L[1:], val)
+</code></pre>
+<ol>
+<li>Ecrire la fonction <code>hanoi(n, depart, arrivee, intermediaire)</code> qui affiche les déplacements nécessaires pour résoudre le problème des tours de Hanoï avec <code>n</code> disques. Le disque le plus grand est au départ et doit être déplacé vers l'arrivée en utilisant l'intermédiaire comme tour temporaire.</li>
+</ol>
+<pre><code class="language-python">def hanoi(n, depart, arrivee, intermediaire):
+    if n == 0:
+        return
+    else:
+        hanoi(n - 1, depart, intermediaire, arrivee)
+        print(f&quot;Déplacer le disque de {depart} vers {arrivee}&quot;)
+        hanoi(n - 1, intermediaire, arrivee, depart)
 </code></pre>
 <h2 id="-">---</h2>
 <h3 id="concepts-illustres">🧩 Concepts illustrés</h3>
