@@ -18,7 +18,7 @@ Accédez ici à l'ensemble des documents de cours et aux outils de révision int
 
 Algorithmes à connaitre:
 
-1. Implémenter une suite récurrente. Par exemple, la suite $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = 3 u_n - 1$.<br>
+1. Implémenter une suite récurrente. Par exemple, la suite $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = 3 u_n - 1$.  
 
 ```python
 def suite_recurrente(n):
@@ -29,7 +29,7 @@ def suite_recurrente(n):
 ```
 <br>
 
-2. Implémenter la puissance d'un nombre. Par exemple, $a^n$ avec $a$ un nombre réel et $n$ un entier naturel.<br>
+2. Implémenter la puissance d'un nombre. Par exemple, $a^n$ avec $a$ un nombre réel et $n$ un entier naturel.  
 
 ```python
 def puissance(a, n):
