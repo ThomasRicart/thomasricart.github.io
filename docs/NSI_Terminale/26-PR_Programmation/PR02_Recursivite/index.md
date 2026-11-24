@@ -27,6 +27,7 @@ def suite_recurrente(n):
     else:
         return 3 * suite_recurrente(n - 1) - 1
 ```
+<br>
 
 2. Implémenter la puissance d'un nombre. Par exemple, $a^n$ avec $a$ un nombre réel et $n$ un entier naturel.<br>
 
